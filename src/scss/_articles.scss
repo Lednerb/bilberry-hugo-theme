@@ -1,0 +1,182 @@
+article {
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    width: 700px;
+    position: relative;
+
+    // :before and :after to generate the < pointer
+    &:before {
+        content: "";
+        display: block;
+        border: 11px solid transparent;
+        border-right-color: #ddd;
+        position: absolute;
+        top: 49px;
+        left: -22px;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        border: 10px solid transparent;
+        border-right-color: #FFF;
+        position: absolute;
+        top: 50px;
+        left: -20px;
+    }
+
+    .content {
+        padding: 2em;
+
+        h3 {
+            font-size: 2.0em;
+            margin-bottom: 0.25em;
+        }
+
+        .meta {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            font-size: 0.825em;
+            color: #999;
+            padding-bottom: 2.5%;
+            border-bottom: 3px double #EEE;
+            margin-bottom: 4.5%;
+
+            .categories, .author {
+                &:before {
+                    content: " / ";
+                    margin: 0 1rem;
+                }
+
+                a:not(:last-child):after {
+                    content: ", ";
+                }
+            }
+        }
+
+        a.more {
+            display: block;
+            margin: 2.5rem 0;
+            margin-bottom: 1rem;
+            color: $highlight-color;
+            font-size: 1.125em;
+            text-decoration: none;
+
+            &:hover {
+                color: #999;
+            }
+        }
+    }
+
+    // Quotes
+    &.quote {
+        background-color: $special-article-color;
+
+        &:after {
+            border-right-color: $special-article-color;
+        }
+
+        blockquote {
+            padding: 5.5%;
+            margin: 0;
+            text-align: center;
+            color: #FFF;
+            background: none;
+            font-size: 1.2em;
+
+            p {
+                line-height: 170%;
+                font-size: 1.10em;
+            }
+
+            cite {
+                font-family: $headline-font;
+                font-weight: 600;
+                text-transform: uppercase;
+                line-height: 140%;
+
+                font-size: 0.725em;
+                text-align: center;
+                letter-spacing: 1px;
+
+                &:before {
+                    content: "— ";
+                }
+            }
+        }
+    }
+
+    // Video
+    &.video {
+        .responsive-video {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio*/
+            padding-top: 0px;
+            height: 0;
+            overflow: hidden;
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    // Audio
+    &.audio {
+        .responsive-audio {
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+
+    // Link
+    &.link {
+        background-color: $special-article-color;
+        min-height: 7em;
+
+        &:after {
+            border-right-color: $special-article-color;
+        }
+
+        &:hover {
+            background-color: $highlight-color;
+            transition: all 0.3s ease-in-out;
+
+            &:after {
+                border-right-color: $highlight-color;
+                transition: all 0.3s ease-in-out
+            }
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            h4 {
+                font-variant: small-caps;
+                font-size: 2em;
+                margin: 2rem;
+            }
+
+            p {
+                margin: 2em;
+                margin-top: 0;
+            }
+        }
+    }
+}

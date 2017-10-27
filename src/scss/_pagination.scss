@@ -1,0 +1,32 @@
+.paginator {
+    display: flex;
+    margin-left: 100px;
+    margin-top: 75px;
+    padding-bottom: 1em;
+
+    .fa {
+        margin: 0 0.25em;
+    }
+
+    a {
+        border-radius: 4px;
+        padding: 1em 2em;
+        text-decoration: none;
+        font-weight: bold;
+        background-color: #B4B4B4;
+        color: #fff;
+
+        &:hover {
+            background-color: $highlight-color;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &.older {
+            margin-right: auto;
+        }
+
+        &.newer {
+            margin-left: auto;
+        }
+    }
+}

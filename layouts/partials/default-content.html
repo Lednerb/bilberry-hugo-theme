@@ -1,0 +1,25 @@
+<div class="content">
+    <h3><a href="{{ .URL }}">{{ .Title }}</a></h3>
+    <div class="meta">
+        <span class="date">{{ .PublishDate.Format "January 2, 2006" }}</span>
+
+        {{ with .Params.categories }}
+            <span class="categories">
+                {{ range . }}
+                    <a href="/categories/{{ . | urlize }}">{{ . }}</a>
+                {{ end }}
+            </span>
+        {{ end }}
+
+        {{ with .Params.author }}
+            <span class="author"><a href="/authors/{{ . | urlize }}">{{ . }}</a></span>
+        {{ end }}
+    </div>
+
+    {{ .Summary }}
+
+    {{ if .Truncated }}
+        <a href="{{ .URL }}" class="more">Continue reading</a>
+    {{ end }}
+
+</div>

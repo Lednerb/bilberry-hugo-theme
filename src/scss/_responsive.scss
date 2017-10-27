@@ -1,0 +1,50 @@
+@media (max-width: 834px) {
+
+    header {
+        width: 100%;
+
+        .container {
+            padding: 0 1em;
+        }
+    }
+
+    .bubble {
+        display: none !important;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .container:before, .container:after {
+        display: none !important;
+    }
+
+    .main article {
+        margin: 0 1.5em;
+        width: 100%;
+
+        &:before, &:after {
+            display: none !important;
+        }
+    }
+
+    .main .paginator {
+        margin: 1.5em;
+        margin-top: 50px;
+    }
+
+    footer .container {
+        padding: 4rem 1.5em;
+        flex-direction: column;
+
+        div {
+            width: 100%;
+            margin: 0 !important;
+        }
+    }
+
+    .credits .container {
+        padding: 4rem 1.5em;
+    }
+}

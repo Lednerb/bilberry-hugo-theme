@@ -1,0 +1,75 @@
+<footer>
+    <div class="container">
+
+        <div class="recent-posts">
+            <strong>Recent posts</strong>
+
+            {{ with .Pages }}
+                <ul>
+                {{ range first 5 . }}
+                    <li>
+                        <a href="{{ .URL }}">{{ .Title }}</a>
+                    </li>
+                {{ end }}
+                </ul>
+            {{ end }}
+        </div>
+
+        <div class="categories">
+            <strong>Categories</strong>
+
+            {{ with .Site.Taxonomies.categories }}
+                <ul>
+                {{ range $name, $taxonomy := . }}
+                    <li>
+                        <a href="/categories/{{ $name | urlize }}">{{ $name | humanize }} ({{ $taxonomy.Count }})</a>
+                    </li>
+                {{ end }}
+                </ul>
+            {{ end }}
+        </div>
+
+        <div class="social-media">
+            <strong>Social media</strong>
+
+            {{ with .Site.Params.facebook }}
+                <a href="{{ . }}" target="_blank"><i class="fa fa-facebook"></i></a>
+            {{ end }}
+            {{ with .Site.Params.twitter }}
+                <a href="{{ . }}" target="_blank"><i class="fa fa-twitter"></i></a>
+            {{ end }}
+            {{ with .Site.Params.googleplus }}
+                <a href="{{ . }}" target="_blank"><i class="fa fa-google-plus-official"></i></a>
+            {{ end }}
+            {{ with .Site.Params.pinterest }}
+                <a href="{{ . }}" target="_blank"><i class="fa fa-pinterest"></i></a>
+            {{ end }}
+            {{ with .Site.Params.instagram }}
+                <a href="{{ . }}" target="_blank"><i class="fa fa-instagram"></i></a>
+            {{ end }}
+            {{ with .Site.Params.tumblr }}
+                <a href="{{ . }}" target="_blank"><i class="fa fa-tumblr"></i></a>
+            {{ end }}
+            {{ with .Site.Params.youtube }}
+                <a href="{{ . }}" target="_blank"><i class="fa fa-youtube"></i></a>
+            {{ end }}
+            {{ with .Site.Params.vimeo }}
+                <a href="{{ . }}" target="_blank"><i class="fa fa-vimeo"></i></a>
+            {{ end }}
+            {{ with .Site.Params.github }}
+                <a href="{{ . }}" target="_blank"><i class="fa fa-github"></i></a>
+            {{ end }}
+        </div>
+    </div>
+</footer>
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            Copyright &copy; 2017 <a href="https://github.com/Lednerb/gohugo-theme-bilberry" target="_blank">Bilberry</a>
+        </div>
+        <div class="author">
+            Theme by <a href="https://github.com/Lednerb" target="_blank">Lednerb</a>
+        </div>
+    </div>
+</div>

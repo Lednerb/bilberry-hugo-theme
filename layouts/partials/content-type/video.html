@@ -1,0 +1,18 @@
+<a class="bubble" href="{{ .URL }}">
+    <i class="fa fa-fw fa-video-camera"></i>
+</a>
+
+<article class="video">
+
+    {{ if and (isset .Params "youtube") (ne .Params.youtube "") }}
+        <div class="responsive-video youtube">
+            <iframe src="https://www.youtube-nocookie.com/embed/{{ .Params.youtube }}?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    {{ else if and (isset .Params "vimeo") (ne .Params.vimeo "") }}
+        <div class="responsive-video vimeo">
+            <iframe src="https://player.vimeo.com/video/{{ .Params.vimeo }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    {{ end }}
+
+    {{ partial "default-content.html" . }}
+</article>

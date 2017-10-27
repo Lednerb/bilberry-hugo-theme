@@ -1,0 +1,37 @@
+@import "_variables";
+
+body {
+    background-color: #f1f1f1;
+    font-family: $content-font;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, .title, .subtitle {
+    font-family: $headline-font;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: $highlight-color;
+    }
+}
+
+.container {
+    width: $site-width;
+}
+
+@import "_header";
+
+@import "_main";
+
+@import "_articles";
+
+@import "_pagination";
+
+@import "_footer";
+
+@import "_responsive";
