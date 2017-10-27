@@ -1,0 +1,77 @@
+/* do not group these rules */
+*::-webkit-input-placeholder {
+    color: #ccc;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #ccc;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #ccc;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #ccc;
+}
+
+nav {
+    background: $special-article-color;
+    color: #fff;
+    display: none;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+
+        li {
+            margin-bottom: 0;
+
+            a {
+                display: flex;
+                padding: 1em 1.5em;
+                text-align: center;
+
+                &:hover {
+                    color: inherit;
+                    background-color: lighten($special-article-color, 10);
+                }
+            }
+        }
+    }
+
+    .search {
+        margin-left: auto;
+        width: 45%;
+        position: relative;
+
+        i {
+            position: absolute;
+            left: 1em;
+            top: 10px;
+        }
+
+        input {
+            margin: 0;
+            background: transparent;
+            border: none;
+            color: #eee;
+            padding-left: 2.75em;
+            letter-spacing: 0.05em;
+            width: 100%;
+            background-color: lighten($special-article-color, 5);
+
+            &:hover, &:focus {
+                background-color: lighten($special-article-color, 10);
+                border: none;
+            }
+        }
+    }
+}

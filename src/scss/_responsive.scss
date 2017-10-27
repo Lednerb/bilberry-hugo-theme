@@ -1,10 +1,46 @@
 @media (max-width: 834px) {
 
+    nav .container {
+        flex-direction: column-reverse;
+        padding: 0 1.5em;
+
+        .topnav {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0.5em;
+            width: 100%;
+
+            li {
+                width: 100%;
+            }
+
+            a {
+                padding: 0.75em 0;
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .search {
+            margin: 0.5em 1.5em;
+            width: 100%;
+
+            input {
+                width: 100%;
+            }
+        }
+    }
+
     header {
         width: 100%;
 
         .container {
             padding: 0 1em;
+        }
+
+        .toggler {
+            right: 1.5em;
         }
     }
 

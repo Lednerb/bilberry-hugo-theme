@@ -1,0 +1,16 @@
+<nav>
+    <div class="container">
+        <ul class="topnav">
+            {{ range where .Pages ".Type" "page" }}
+                <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+
+        {{ if and (isset .Site.Params "algolia_search") (eq .Site.Params.algolia_search true) }}
+        <div class="search">
+            <i class="fa fa-search"></i>
+            <input type="text" placeholder="Search ...">
+        </div>
+        {{ end }}
+    </div>
+</nav>

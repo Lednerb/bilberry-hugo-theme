@@ -1780,6 +1780,99 @@ a:hover {
   width: 800px;
 }
 
+/* do not group these rules */
+
+*::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+*:-moz-placeholder {
+  /* FF 4-18 */
+  color: #ccc;
+}
+
+*::-moz-placeholder {
+  /* FF 19+ */
+  color: #ccc;
+}
+
+*:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #ccc;
+}
+
+nav {
+  background: #2D3642;
+  color: #fff;
+  display: none;
+}
+
+nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+nav ul li {
+  margin-bottom: 0;
+}
+
+nav ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em 1.5em;
+  text-align: center;
+}
+
+nav ul li a:hover {
+  color: inherit;
+  background-color: #424f60;
+}
+
+nav .search {
+  margin-left: auto;
+  width: 45%;
+  position: relative;
+}
+
+nav .search i {
+  position: absolute;
+  left: 1em;
+  top: 10px;
+}
+
+nav .search input {
+  margin: 0;
+  background: transparent;
+  border: none;
+  color: #eee;
+  padding-left: 2.75em;
+  letter-spacing: 0.05em;
+  width: 100%;
+  background-color: #374251;
+}
+
+nav .search input:hover,
+nav .search input:focus {
+  background-color: #424f60;
+  border: none;
+}
+
 header {
   background-color: #1d1f38;
   color: #fff;
@@ -1803,6 +1896,7 @@ header .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
 }
 
 header .container:after {
@@ -1875,6 +1969,18 @@ header .titles {
 
 header .titles h3 {
   margin-bottom: 0;
+}
+
+header .toggler {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #2D3642;
+  padding: 0.375em 0.75em;
+  font-size: 1.125em;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  cursor: pointer;
 }
 
 .main {
@@ -2175,7 +2281,7 @@ article.link a p {
 footer {
   border-top: 3px solid #EEE;
   border-bottom: 3px solid #EEE;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 footer .container {
@@ -2261,12 +2367,58 @@ footer .container .social-media a:hover {
 }
 
 @media (max-width: 834px) {
+  nav .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 0 1.5em;
+  }
+
+  nav .container .topnav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0.5em;
+    width: 100%;
+  }
+
+  nav .container .topnav li {
+    width: 100%;
+  }
+
+  nav .container .topnav a {
+    padding: 0.75em 0;
+    display: block;
+    width: 100%;
+  }
+
+  nav .container .search {
+    margin: 0.5em 1.5em;
+    width: 100%;
+  }
+
+  nav .container .search input {
+    width: 100%;
+  }
+
   header {
     width: 100%;
   }
 
   header .container {
     padding: 0 1em;
+  }
+
+  header .toggler {
+    right: 1.5em;
   }
 
   .bubble {

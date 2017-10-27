@@ -11,6 +11,9 @@
         <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}{{ end }}</title>
     </head>
     <body>
+
+        {{ partial "topnav.html" . }}
+
         {{ partial "header.html" . }}
 
         <div class="main container">
