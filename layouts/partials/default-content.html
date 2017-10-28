@@ -12,14 +12,17 @@
         {{ end }}
 
         {{ with .Params.author }}
-            <span class="author"><a href="/authors/{{ . | urlize }}">{{ . }}</a></span>
+            <span class="author"><a href="/author/{{ . | urlize }}">{{ . }}</a></span>
         {{ end }}
     </div>
 
-    {{ .Summary }}
+    {{ if .Scratch.Get "singlePage" }}
+        {{ .Content }}
+    {{ else }}
+        {{ .Summary }}
 
-    {{ if .Truncated }}
-        <a href="{{ .URL }}" class="more">Continue reading</a>
+        {{ if .Truncated }}
+            <a href="{{ .URL }}" class="more">Continue reading</a>
+        {{ end }}
     {{ end }}
-
 </div>

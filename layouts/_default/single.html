@@ -1,1 +1,11 @@
-single.html
+{{ define "main" }}
+    {{ .Scratch.Set "singlePage" true }} <!-- SET singlePage variable -->
+    <div class="article-wrapper u-cf">
+        {{  if or (fileExists (print "layouts/partials/content-type/" .Type ".html") ) (fileExists (print "themes/bilberry/layouts/partials/content-type/" .Type ".html")) }}
+            {{ partial (print "content-type/" .Type) . }}
+        {{ else }}
+            {{ partial "content-type/article" . }}
+        {{ end }}
+    </div>
+    {{ .Scratch.Set "singlePage" false }} <!-- RESET singlePage variable -->
+{{ end }}
