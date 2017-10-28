@@ -1,7 +1,7 @@
 <nav>
     <div class="container">
         <ul class="topnav">
-            {{ range where .Pages ".Type" "page" }}
+            {{ range where (where .Site.Pages ".Type" "page") ".IsPage" true }}
                 <li><a href="{{ .URL }}">{{ .Title }}</a></li>
             {{ end }}
         </ul>
