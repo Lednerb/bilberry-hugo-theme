@@ -1,6 +1,6 @@
 <!-- Include AlgoliaSearch JS Client and autocomplete.js library -->
-<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.29.0/autocomplete.jquery.min.js" integrity="sha256-qUqrH6CxKeU+3ClSSiq0GGnYjoKmfLhNO4tFoTCay5c=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/3.24.5/algoliasearch.min.js" integrity="sha256-vUvLcn3X0cXhote4PNwW6d+fzjJR0hoD+yGFeVaElew=" crossorigin="anonymous"></script>
 
 <script>
     var client = algoliasearch({{ .Site.Params.algolia_appId }}, {{ .Site.Params.algolia_apiKey}});
