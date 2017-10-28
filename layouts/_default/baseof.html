@@ -27,7 +27,21 @@
 
         {{ template "_internal/google_analytics_async.html" . }}
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment-with-locales.min.js" integrity="sha256-TbOIe++NbC9P3KTtUMJ5wcROlBdnRqrPleLdpPg3xxE=" crossorigin="anonymous"></script>
         <script src="{{ "dist/theme.js" | relURL }}"></script>
+
+        <script>
+            $(document).ready(function() {
+                $(".moment").each(function() {
+                    $(this).text(
+                        moment( $(this).text() )
+                            .locale( {{ .Site.Language.Lang }} )
+                            .format('LL')
+                    );
+                });
+            })
+        </script>
+
         {{ if and (isset .Site.Params "algolia_search") (eq .Site.Params.algolia_search true) }}
             {{ partial "algolia-search" . }}
         {{ end }}
