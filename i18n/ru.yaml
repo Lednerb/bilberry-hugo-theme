@@ -1,0 +1,10 @@
+- id: categories
+  translation: "категории"
+- id: socialMedia
+  translation: "социальные медиа"
+- id: latestPosts
+  translation: "Новые сообщения"
+- id: search
+  translation: "искать ..."
+- id: noSearchResults
+  translation: "Ничего не найдено."

@@ -1,0 +1,10 @@
+- id: categories
+  translation: "Categories"
+- id: socialMedia
+  translation: "Social media"
+- id: latestPosts
+  translation: "Latest posts"
+- id: search
+  translation: "Search ..."
+- id: noSearchResults
+  translation: "Nothing found."

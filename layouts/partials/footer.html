@@ -1,7 +1,7 @@
 <footer>
     <div class="container">
         <div class="recent-posts">
-            <strong>Recent posts</strong>
+            <strong>{{ i18n "latestPosts" }}</strong>
                 <ul>
                 {{ range where (first 5 .Site.Pages.ByPublishDate.Reverse) ".Kind" "page" }}
                     <li>
@@ -12,7 +12,7 @@
         </div>
 
         <div class="categories">
-            <strong>Categories</strong>
+            <strong>{{ i18n "categories" }}</strong>
 
             {{ with .Site.Taxonomies.categories }}
                 <ul>
@@ -26,7 +26,7 @@
         </div>
 
         <div class="social-media">
-            <strong>Social media</strong>
+            <strong>{{ i18n "socialMedia" }}</strong>
 
             {{ with .Site.Params.facebook }}
                 <a href="{{ . }}" target="_blank"><i class="fa fa-facebook"></i></a>
