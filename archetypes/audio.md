@@ -3,6 +3,7 @@ title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
 draft: true
 
+categories: []
 author: ""
 
 # Set your audio url for
