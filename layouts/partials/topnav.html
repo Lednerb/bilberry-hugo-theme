@@ -7,9 +7,10 @@
         </ul>
 
         {{ if and (isset .Site.Params "algolia_search") (eq .Site.Params.algolia_search true) }}
-        <div class="search">
+
+         <div id="search-box" class="search">
             <i class="fa fa-search"></i>
-            <input type="text" placeholder="Search ...">
+            <input id="search" type="text" placeholder="Search ...">
         </div>
         {{ end }}
     </div>

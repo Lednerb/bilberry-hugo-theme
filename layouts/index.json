@@ -1,0 +1,22 @@
+{{- $.Scratch.Add "index" slice -}}
+
+{{- range where .Pages "Type" "not in"  (slice "page" "json") -}}
+
+    {{- .Scratch.Set "iconClass" "fa-pencil" -}}
+    {{- if eq .Type "quote" -}}
+        {{- .Scratch.Set "iconClass" "fa-quote-right" -}}
+    {{- else if eq .Type "link" -}}
+        {{- .Scratch.Set "iconClass" "fa-link" -}}
+    {{- else if eq .Type "video" -}}
+        {{- .Scratch.Set "iconClass" "fa-video-camera" -}}
+    {{- else if or (eq .Type "gallery") (eq .Type "picture") -}}
+        {{- .Scratch.Set "iconClass" "fa-camera" -}}
+    {{- else if eq .Type "audio" -}}
+        {{- .Scratch.Set "iconClass" "fa-music" -}}
+    {{- end -}}
+
+    {{- $.Scratch.Add "index" (dict "url" .RelPermalink "title" .Title "content" .Plain "tags" .Params.tags "categories" .Params.tags "author" .Params.author "type" .Type "iconClass" (.Scratch.Get "iconClass") "objectID" .URL ) -}}
+
+{{- end -}}
+
+{{- $.Scratch.Get "index" | jsonify -}}

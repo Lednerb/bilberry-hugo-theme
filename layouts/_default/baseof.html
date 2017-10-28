@@ -7,22 +7,30 @@
 
         <link rel="stylesheet" href="{{ "dist/theme.css" | relURL }}">
 
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.2.1/dist/instantsearch.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.2.1/dist/instantsearch-theme-algolia.min.css">
+
+
         {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
         <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}{{ end }}</title>
     </head>
     <body>
+        {{ partial "topnav" . }}
 
-        {{ partial "topnav.html" . }}
-
-        {{ partial "header.html" . }}
+        {{ partial "header" . }}
 
         <div class="main container">
             {{ block "main" . }}{{ end }}
         </div>
 
-        {{ partial "footer.html" . }}
+        {{ partial "footer" . }}
+
+        {{ template "_internal/google_analytics_async.html" . }}
 
         <script src="{{ "dist/theme.js" | relURL }}"></script>
-        {{ template "_internal/google_analytics_async.html" . }}
+        {{ if and (isset .Site.Params "algolia_search") (eq .Site.Params.algolia_search true) }}
+            {{ partial "algolia-search" . }}
+        {{ end }}
+
     </body>
 </html>

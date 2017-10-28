@@ -1,0 +1,53 @@
+<!-- Include AlgoliaSearch JS Client and autocomplete.js library -->
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+
+<script>
+    var client = algoliasearch({{ .Site.Params.algolia_appId }}, {{ .Site.Params.algolia_apiKey}});
+    var index = client.initIndex({{ .Site.Params.algolia_indexName }});
+
+    index.setSettings({
+      searchableAttributes: [
+        'title',
+        'categories,tags',
+        'author',
+        'content',
+        'type'
+      ]
+    });
+
+    $('#search').autocomplete({ hint: false, autoselect: true, debug: true },
+      [
+        {
+          source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+          displayKey: function(suggestion) {
+            return suggestion.title || suggestion.author
+          },
+          templates: {
+            suggestion: function(suggestion) {
+              return "<span class='title'>"
+                + suggestion.title
+                + "</span>"
+                + "<span class='fa fa-fw " + suggestion.iconClass + "'>"
+                + "</span>"
+              ;
+            },
+            empty: function() {
+              return "<span class='empty'>Nothing found.</span>"
+            },
+            footer: function() {
+              return '<div class="branding">Powered by <img src="https://www.algolia.com/static_assets/images/press/downloads/algolia-logo-light.svg" /></div>'
+            }
+
+          },
+        }
+      ])
+      .on('autocomplete:selected', function(event, suggestion, dataset) {
+        window.location = (suggestion.url);
+      })
+      .keypress(function (event, suggestion) {
+        if (event.which == 13) {
+          window.location = (suggestion.url);
+        }
+      });
+</script>

@@ -1804,7 +1804,6 @@ a:hover {
 nav {
   background: #2D3642;
   color: #fff;
-  display: none;
 }
 
 nav .container {
@@ -1821,14 +1820,14 @@ nav .container {
 
 nav ul {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   margin: 0;
+  max-width: 500px;
 }
 
 nav ul li {
   margin-bottom: 0;
+  float: left;
 }
 
 nav ul li a {
@@ -1847,13 +1846,19 @@ nav ul li a:hover {
 nav .search {
   margin-left: auto;
   width: 45%;
+  min-width: 300px;
   position: relative;
+}
+
+nav .search input {
+  font-family: "Lato", sans-serif;
 }
 
 nav .search i {
   position: absolute;
   left: 1em;
   top: 10px;
+  z-index: 40;
 }
 
 nav .search input {
@@ -1862,7 +1867,6 @@ nav .search input {
   border: none;
   color: #eee;
   padding-left: 2.75em;
-  letter-spacing: 0.05em;
   width: 100%;
   background-color: #374251;
 }
@@ -1871,6 +1875,116 @@ nav .search input:hover,
 nav .search input:focus {
   background-color: #424f60;
   border: none;
+}
+
+nav .search .algolia-autocomplete {
+  width: 100%;
+  color: #444;
+}
+
+nav .search .algolia-autocomplete .aa-dropdown-menu {
+  width: 100%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+nav .search .algolia-autocomplete .aa-dropdown-menu .empty {
+  padding: 0.5em 1em;
+  display: block;
+}
+
+nav .search .algolia-autocomplete .aa-dropdown-menu .branding {
+  font-size: 0.75em;
+  text-align: right;
+  padding: 0.5em 1em;
+  background-color: #f1f1f1;
+}
+
+nav .search .algolia-autocomplete .aa-dropdown-menu .branding img {
+  width: 3.5em;
+  position: relative;
+  top: 0.1em;
+}
+
+nav .search .algolia-autocomplete .aa-suggestion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .search .algolia-autocomplete .aa-suggestion .type {
+  text-transform: capitalize;
+  font-size: 0.75em;
+  line-height: 2em;
+}
+
+nav .search .algolia-autocomplete .aa-suggestion .fa {
+  font-size: 1em;
+  color: #888;
+  position: relative;
+  top: 0.3em;
+}
+
+nav .search .aa-input-container {
+  display: inline-block;
+  position: relative;
+}
+
+nav .search .aa-input-search {
+  width: 300px;
+  padding: 12px 28px 12px 12px;
+  border: 1px solid #e4e4e4;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+nav .search .aa-input-search::-webkit-search-decoration,
+nav .search .aa-input-search::-webkit-search-cancel-button,
+nav .search .aa-input-search::-webkit-search-results-button,
+nav .search .aa-input-search::-webkit-search-results-decoration {
+  display: none;
+}
+
+nav .search .aa-input-icon {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  fill: #e4e4e4;
+  pointer-events: none;
+}
+
+nav .search .aa-dropdown-menu {
+  background-color: #fff;
+  border: 1px solid rgba(228, 228, 228, 0.6);
+  min-width: 300px;
+  margin-top: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav .search .aa-suggestion {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+nav .search .aa-suggestion + .aa-suggestion {
+  border-top: 1px solid rgba(228, 228, 228, 0.6);
+}
+
+nav .search .aa-suggestions-category {
+  border-bottom: 1px solid rgba(228, 228, 228, 0.6);
+  border-top: 1px solid rgba(228, 228, 228, 0.6);
+  padding: 6px 12px;
 }
 
 header {

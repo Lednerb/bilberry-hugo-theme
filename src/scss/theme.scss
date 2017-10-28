@@ -24,16 +24,16 @@ a {
     width: $site-width;
 }
 
-@import "_topnav";
+@import "topnav";
 
-@import "_header";
+@import "header";
 
-@import "_main";
+@import "main";
 
-@import "_articles";
+@import "articles";
 
-@import "_pagination";
+@import "pagination";
 
-@import "_footer";
+@import "footer";
 
-@import "_responsive";
+@import "responsive";
