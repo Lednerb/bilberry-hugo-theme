@@ -56,6 +56,10 @@
         display: none !important;
     }
 
+    .main {
+        margin-bottom: 0;
+    }
+
     .main article {
         margin: 0 1.5em;
         width: 100%;
@@ -63,6 +67,10 @@
         &:before, &:after {
             display: none !important;
         }
+    }
+
+    .main #disqus_thread {
+        margin: 0 1.5em;
     }
 
     .main .paginator {
@@ -73,6 +81,7 @@
     footer .container {
         padding: 4rem 1.5em;
         flex-direction: column;
+        text-align: center;
 
         div {
             width: 100%;

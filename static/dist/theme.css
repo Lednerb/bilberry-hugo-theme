@@ -2568,6 +2568,10 @@ footer .container .social-media a:hover {
     display: none !important;
   }
 
+  .main {
+    margin-bottom: 0;
+  }
+
   .main article {
     margin: 0 1.5em;
     width: 100%;
@@ -2576,6 +2580,10 @@ footer .container .social-media a:hover {
   .main article:before,
   .main article:after {
     display: none !important;
+  }
+
+  .main #disqus_thread {
+    margin: 0 1.5em;
   }
 
   .main .paginator {
@@ -2589,6 +2597,7 @@ footer .container .social-media a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    text-align: center;
   }
 
   footer .container div {
