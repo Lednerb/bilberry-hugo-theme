@@ -34,6 +34,11 @@
         min-height: 90px;
         position: relative;
 
+        // Move the left circle all the way down to the end of the article-wrapper
+        &.single {
+            padding-bottom: 2.5em;
+        }
+
         .bubble {
             position: absolute;
             left: 25px;
