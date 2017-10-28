@@ -18,12 +18,14 @@
 nav {
     background: $special-article-color;
     color: #fff;
-    // display: none;
+    display: none;
 
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0.25em 0;
+        min-height: 65px;
     }
 
     ul {
@@ -88,8 +90,7 @@ nav {
 
             .aa-dropdown-menu {
                 width: 100%;
-                border-bottom-left-radius: 4px;
-                border-bottom-right-radius: 4px;
+                border-radius: 4px;
 
                 .empty {
                     padding: 0.5em 1em;
@@ -114,6 +115,12 @@ nav {
             .aa-suggestion {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
+                background-color: #fafafa;
+
+                &:hover, &:focus {
+                    background-color: #f4f4f4;
+                }
 
                 .type {
                     text-transform: capitalize;
@@ -124,8 +131,6 @@ nav {
                 .fa {
                     font-size: 1em;
                     color: #888;
-                    position: relative;
-                    top: 0.3em;
                 }
             }
 

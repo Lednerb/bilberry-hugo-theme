@@ -1804,6 +1804,7 @@ a:hover {
 nav {
   background: #2D3642;
   color: #fff;
+  display: none;
 }
 
 nav .container {
@@ -1816,6 +1817,8 @@ nav .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0.25em 0;
+  min-height: 65px;
 }
 
 nav ul {
@@ -1884,8 +1887,7 @@ nav .search .algolia-autocomplete {
 
 nav .search .algolia-autocomplete .aa-dropdown-menu {
   width: 100%;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-radius: 4px;
 }
 
 nav .search .algolia-autocomplete .aa-dropdown-menu .empty {
@@ -1913,6 +1915,15 @@ nav .search .algolia-autocomplete .aa-suggestion {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fafafa;
+}
+
+nav .search .algolia-autocomplete .aa-suggestion:hover,
+nav .search .algolia-autocomplete .aa-suggestion:focus {
+  background-color: #f4f4f4;
 }
 
 nav .search .algolia-autocomplete .aa-suggestion .type {
@@ -1924,8 +1935,6 @@ nav .search .algolia-autocomplete .aa-suggestion .type {
 nav .search .algolia-autocomplete .aa-suggestion .fa {
   font-size: 1em;
   color: #888;
-  position: relative;
-  top: 0.3em;
 }
 
 nav .search .aa-input-container {
@@ -2021,7 +2030,7 @@ header .container:after {
   top: 50px;
   width: 2px;
   height: 100%;
-  background: #efefef;
+  background: rgba(255, 255, 255, 0.1);
   z-index: 1;
 }
 
@@ -2174,6 +2183,7 @@ header .toggler {
 
 article {
   border-radius: 4px;
+  overflow: hidden;
   background-color: #fff;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -2439,6 +2449,7 @@ footer .container ul li {
 
 footer .container ul a {
   padding-left: 0;
+  display: inline-block;
   -webkit-transition: padding-left 0.3s ease-in-out;
   transition: padding-left 0.3s ease-in-out;
   color: #5c8b59;

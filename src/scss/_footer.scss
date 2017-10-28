@@ -38,6 +38,7 @@ footer {
 
             a {
                 padding-left: 0;
+                display: inline-block;
                 transition: padding-left 0.3s ease-in-out;
                 color: $highlight-color;
                 font-family: $content-font;
