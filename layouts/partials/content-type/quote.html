@@ -5,6 +5,6 @@
 <article class="quote">
     <blockquote>
         {{ .Content }}
-        <cite>{{ .Params.author }}</cite>
+        <cite><a href="/author/{{ .Params.author | urlize }}">{{ .Params.author }}</a></cite>
     </blockquote>
 </article>
