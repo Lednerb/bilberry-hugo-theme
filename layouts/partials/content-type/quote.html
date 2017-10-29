@@ -3,6 +3,9 @@
 </a>
 
 <article class="quote">
+    {{ with .Params.featuredImage }}
+        <img src="{{ . }}" class="featured-image" alt="">
+    {{ end }}
     <blockquote>
         {{ .Content }}
         <cite><a href="/author/{{ .Params.author | urlize }}">{{ .Params.author }}</a></cite>

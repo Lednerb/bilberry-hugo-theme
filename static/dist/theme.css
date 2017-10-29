@@ -2215,6 +2215,14 @@ article:after {
   left: -20px;
 }
 
+article .featured-image {
+  width: 100%;
+}
+
+article .featured-image img {
+  width: 100%;
+}
+
 article .content {
   padding: 2em;
 }
@@ -2267,6 +2275,21 @@ article.quote:after {
   border-right-color: #2D3642;
 }
 
+article.quote a:hover {
+  color: inherit;
+  font-size: 1.1em;
+}
+
+article.quote .featured-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0.25;
+}
+
 article.quote blockquote {
   padding: 5.5%;
   margin: 0;
@@ -2274,6 +2297,8 @@ article.quote blockquote {
   color: #FFF;
   background: none;
   font-size: 1.2em;
+  position: relative;
+  z-index: 10;
 }
 
 article.quote blockquote p {
@@ -2337,6 +2362,16 @@ article.link:hover:after {
   transition: all 0.3s ease-in-out;
 }
 
+article.link .featured-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0.25;
+}
+
 article.link a {
   color: #fff;
   text-decoration: none;
@@ -2357,6 +2392,8 @@ article.link a {
   top: 0;
   width: 100%;
   height: 100%;
+  position: relative;
+  z-index: 10;
 }
 
 article.link a h4 {

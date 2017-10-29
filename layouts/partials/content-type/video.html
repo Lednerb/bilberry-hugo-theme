@@ -3,14 +3,16 @@
 </a>
 
 <article class="video">
+    {{ partial "featured-image" . }}
 
-    {{ if and (isset .Params "youtube") (ne .Params.youtube "") }}
+    {{ with .Params.youtube }}
         <div class="responsive-video youtube">
-            <iframe src="https://www.youtube-nocookie.com/embed/{{ .Params.youtube }}?rel=0" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube-nocookie.com/embed/{{ . }}?rel=0" frameborder="0" allowfullscreen></iframe>
         </div>
-    {{ else if and (isset .Params "vimeo") (ne .Params.vimeo "") }}
+    {{ end }}
+    {{ with .Params.vimeo }}
         <div class="responsive-video vimeo">
-            <iframe src="https://player.vimeo.com/video/{{ .Params.vimeo }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="https://player.vimeo.com/video/{{ . }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
     {{ end }}
 
