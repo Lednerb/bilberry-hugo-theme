@@ -11,8 +11,8 @@
         </a>
         <div class="titles">
             <h3 class="title"><a href="/">{{ .Site.Title }}</a></h3>
-            {{ if (ne .Site.Params.Subtitle "") }}
-                <span class="subtitle">{{ .Site.Params.Subtitle }}</span>
+            {{ with .Site.Params.Subtitle }}
+                <span class="subtitle">{{ . }}</span>
             {{ end }}
         </div>
 
