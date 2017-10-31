@@ -7,6 +7,14 @@ $site-width: 800px;
 $headline-font: Raleway, "Helvetica Neue", sans-serif;
 $content-font: 'Lato', sans-serif;
 
+@font-face {
+  font-family: 'flexslider-icon';
+  src: url('/fonts/flexslider-icon.eot');
+  src: url('/fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('/fonts/flexslider-icon.woff') format('woff'), url('/fonts/flexslider-icon.ttf') format('truetype'), url('/fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 @mixin featuredImage() {
     .featured-image {

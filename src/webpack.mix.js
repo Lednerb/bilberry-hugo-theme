@@ -7,10 +7,13 @@ mix.js('js/theme.js', 'tmp/')
         'node_modules/normalize.css/normalize.css',
         'node_modules/skeleton-css/css/skeleton.css',
         'node_modules/font-awesome/css/font-awesome.min.css',
+        'node_modules/flexslider/flexslider.css',
+        'node_modules/highlight.js/styles/zenburn.css',
         '../static/dist/theme.css'
     ], '../static/dist/theme.css')
    .copy('tmp/theme.js', '../static/dist/')
-   .copy('node_modules/font-awesome/fonts', '../static/fonts/');
+   .copy('node_modules/font-awesome/fonts', '../static/fonts/')
+   .copy('node_modules/flexslider/fonts', '../static/fonts/');
 
 // Full API
 // mix.js(src, output);

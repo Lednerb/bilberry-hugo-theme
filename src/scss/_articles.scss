@@ -3,7 +3,7 @@ article {
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    width: 700px;
+    width: $site-width - 100px;
     position: relative;
 
     // :before and :after to generate the < pointer
@@ -77,6 +77,26 @@ article {
                 color: #999;
             }
         }
+
+        blockquote {
+            background-color: #f6f6f6;
+            font-family: $headline-font;
+            margin: 1.5em 0;
+            padding: 2em;
+            border-left: 0.5em solid #ededed;
+            font-size: 1.1em;
+
+            cite {
+                text-transform: uppercase;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 0.9em;
+            }
+
+            p:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 
     // Quotes
@@ -121,6 +141,24 @@ article {
 
                 &:before {
                     content: "— ";
+                }
+            }
+        }
+    }
+
+    // Gallery
+    &.gallery {
+        .flexslider {
+            margin: 0;
+            border: 0;
+
+            .flex-direction-nav a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                &:before {
+                    color: rgba(255, 255, 255, 0.9);
                 }
             }
         }
