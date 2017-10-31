@@ -8,3 +8,7 @@
   translation: "искать ..."
 - id: noSearchResults
   translation: "Ничего не найдено."
+- id: olderPosts
+  translation: "старшие должности"
+- id: newerPosts
+  translation: "Новые сообщения"

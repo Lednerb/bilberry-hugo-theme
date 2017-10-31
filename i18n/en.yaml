@@ -8,3 +8,7 @@
   translation: "Search ..."
 - id: noSearchResults
   translation: "Nothing found."
+- id: olderPosts
+  translation: "Older posts"
+- id: newerPosts
+  translation: "Newer posts"
