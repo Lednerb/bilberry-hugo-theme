@@ -99,6 +99,18 @@ article {
         }
     }
 
+    .tags {
+        background: transparentize($base-color, 0.90);
+        padding: 1em 2em;
+        font-family: monospace;
+        font-size: 0.9em;
+
+        a:not(:last-child):after {
+            content: " / ";
+            color: #222 !important;
+        }
+    }
+
     // Quotes
     &.quote {
         background-color: $special-article-color;

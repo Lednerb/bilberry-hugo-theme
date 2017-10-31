@@ -3009,6 +3009,18 @@ article .content blockquote p:last-child {
   margin-bottom: 0;
 }
 
+article .tags {
+  background: rgba(29, 31, 56, 0.1);
+  padding: 1em 2em;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+article .tags a:not(:last-child):after {
+  content: " / ";
+  color: #222 !important;
+}
+
 article.quote {
   background-color: #2D3642;
 }
