@@ -12,3 +12,5 @@
   translation: "старшие должности"
 - id: newerPosts
   translation: "Новые сообщения"
+- id: footnoteReturnText
+  translation: "[вернуть]"

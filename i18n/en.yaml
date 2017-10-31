@@ -12,3 +12,5 @@
   translation: "Older posts"
 - id: newerPosts
   translation: "Newer posts"
+- id: footnoteReturnText
+  translation: "[return]"

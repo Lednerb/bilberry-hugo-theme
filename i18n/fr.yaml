@@ -12,3 +12,5 @@
   translation: "Articles plus anciens"
 - id: newerPosts
   translation: "Articles plus récents"
+- id: footnoteReturnText
+  translation: "[revenir]"
