@@ -8,5 +8,6 @@ gallery: [
     '/images/picture2.jpg',
     ]
 categories: []
+tags: []
 author: ""
 ---

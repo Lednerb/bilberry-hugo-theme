@@ -5,8 +5,8 @@ draft: true
 
 featuredImage: ""
 categories: []
+tags: []
 
 # Set your external url
 link: "https://github.com/Lednerb/gohugo-theme-bilberry"
 ---
-
