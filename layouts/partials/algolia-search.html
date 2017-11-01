@@ -6,16 +6,6 @@
     var client = algoliasearch({{ .Site.Params.algolia_appId }}, {{ .Site.Params.algolia_apiKey}});
     var index = client.initIndex({{ .Site.Params.algolia_indexName }});
 
-    index.setSettings({
-      searchableAttributes: [
-        'title',
-        'categories,tags',
-        'author',
-        'content',
-        'type'
-      ]
-    });
-
     $('#search').autocomplete({ hint: false, autoselect: true, debug: false },
       [
         {
