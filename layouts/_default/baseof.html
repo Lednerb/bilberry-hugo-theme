@@ -3,6 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="author" content="{{ .Site.Params.author }}">
+        <meta name="description" content="{{ .Site.Params.description }}">
+        <meta name="keywords" content="{{ .Site.Params.keywords }}">
         {{ .Hugo.Generator }}
 
         <link rel="stylesheet" href="{{ "dist/theme.css" | relURL }}">
@@ -14,7 +18,7 @@
         {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
         <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}{{ end }}</title>
     </head>
-    <body>
+    <body class="bilberry-hugo-theme">
         {{ partial "topnav" . }}
 
         {{ partial "header" . }}
