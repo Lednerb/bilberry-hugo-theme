@@ -113,27 +113,33 @@ nav {
             }
 
             .aa-suggestion {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background-color: #fafafa;
+                span {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: #fafafa;
 
-                &:hover, &:focus {
-                    background-color: #f4f4f4;
-                }
+                    &:hover, &:focus {
+                        background-color: #f4f4f4;
+                    }
 
-                .type {
-                    text-transform: capitalize;
-                    font-size: 0.75em;
-                    line-height: 2em;
-                }
+                    .title {
+                        max-width: 315px;
+                    }
 
-                .fa {
-                    font-size: 1em;
-                    color: #888;
+                    &.entry.category, &.entry.tag, &.entry.author {
+                        .title {
+                            text-transform: capitalize;
+                        }
+                    }
+
+                    .fa {
+                        font-size: 1em;
+                        color: #888;
+                        text-align: right;
+                    }
                 }
             }
-
 
         }
 

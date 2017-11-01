@@ -16,7 +16,7 @@
       ]
     });
 
-    $('#search').autocomplete({ hint: false, autoselect: true, debug: true },
+    $('#search').autocomplete({ hint: false, autoselect: true, debug: false },
       [
         {
           source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
@@ -25,12 +25,11 @@
           },
           templates: {
             suggestion: function(suggestion) {
-              return "<span class='title'>"
-                + suggestion.title
-                + "</span>"
-                + "<span class='fa fa-fw " + suggestion.iconClass + "'>"
-                + "</span>"
-              ;
+                return "<span class='entry " + suggestion.type + "'>"
+                      + "<span class='title'>" + suggestion.title + "</span>"
+                      + "<span class='fa fa-fw " + suggestion.iconClass + "'></span>"
+                  + "</span>"
+                ;
             },
             empty: function() {
               return "<span class='empty'>{{ i18n "noSearchResults" }}</span>"

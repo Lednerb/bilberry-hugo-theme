@@ -2630,7 +2630,7 @@ nav .search .algolia-autocomplete .aa-dropdown-menu .branding img {
   top: 0.1em;
 }
 
-nav .search .algolia-autocomplete .aa-suggestion {
+nav .search .algolia-autocomplete .aa-suggestion span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2643,20 +2643,25 @@ nav .search .algolia-autocomplete .aa-suggestion {
   background-color: #fafafa;
 }
 
-nav .search .algolia-autocomplete .aa-suggestion:hover,
-nav .search .algolia-autocomplete .aa-suggestion:focus {
+nav .search .algolia-autocomplete .aa-suggestion span:hover,
+nav .search .algolia-autocomplete .aa-suggestion span:focus {
   background-color: #f4f4f4;
 }
 
-nav .search .algolia-autocomplete .aa-suggestion .type {
-  text-transform: capitalize;
-  font-size: 0.75em;
-  line-height: 2em;
+nav .search .algolia-autocomplete .aa-suggestion span .title {
+  max-width: 315px;
 }
 
-nav .search .algolia-autocomplete .aa-suggestion .fa {
+nav .search .algolia-autocomplete .aa-suggestion span.entry.category .title,
+nav .search .algolia-autocomplete .aa-suggestion span.entry.tag .title,
+nav .search .algolia-autocomplete .aa-suggestion span.entry.author .title {
+  text-transform: capitalize;
+}
+
+nav .search .algolia-autocomplete .aa-suggestion span .fa {
   font-size: 1em;
   color: #888;
+  text-align: right;
 }
 
 nav .search .aa-input-container {
