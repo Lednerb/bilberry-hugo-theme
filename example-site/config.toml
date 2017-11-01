@@ -1,0 +1,57 @@
+title = "My cool new Blog"
+baseURL = "https://lednerb.de"
+theme = "bilberry-hugo-theme"
+
+DefaultContentLanguage = "en"
+enableRobotsTXT = true
+googleAnalytics = ""
+
+disqusShortname = "bilberry-hugo-theme"
+
+[params]
+  # Favicon for the browser's favorites and tabs
+  favicon = "" # set a favicon icon
+
+  # Description and meta data for the search engines
+  author = "Lednerb"
+  description = "Bilberry Premium Theme for Hugo."
+  keywords = "Post types,i18n,Multi-Language,Social media,Algolia search,Disqus comments"
+
+  # How many articles should be displayed at once?
+  paginate = 7
+
+  # Enable / Disable algolia search
+  algolia_search    = true
+  algolia_appId     = "Y2C4RWMPXW"
+  algolia_apiKey    = "50ea7f8c41c0ad233926e0be2b769ed1"
+  algolia_indexName = "default-content"
+
+  # Header configuration
+    # your subtitle if you want to use any
+    subtitle = "Hello World! This is the wounderful subtitle"
+
+    # if you want to use gravatar for the header image
+    gravatarEMail = ""
+
+    # set an path to the image file you want to use | overwrites gravatar
+    customImage = ""
+
+  # social media profile urls for the footer links
+  facebook   = ""
+  twitter    = "https://twitter.com/TheRealLednerb"
+  googleplus = ""
+  pinterest  = ""
+  instagram  = ""
+  tumblr     = ""
+  youtube    = ""
+  vimeo      = ""
+  github     = "https://github.com/Lednerb"
+
+[taxonomies]
+  author   = "author"
+  tag      = "tags"
+  category = "categories"
+
+[outputs]
+  home = [ "HTML", "JSON"]
+  page = [ "HTML"]
