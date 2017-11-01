@@ -16,7 +16,7 @@
         {{ end }}
     </div>
 
-    {{ if .Scratch.Get "singlePage" }}
+    {{ if or (.Scratch.Get "singlePage") (.Params.noSummary) }}
         {{ .Content }}
     {{ else }}
         {{ .Summary }}
