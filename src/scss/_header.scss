@@ -30,13 +30,17 @@ header {
         border-radius: 50%;
         width: 90px;
         height: 90px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         border: 5px #efefef solid;
         position: relative;
         color: #efefef;
         z-index: 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            border: 0;
+        }
 
         &:hover {
             .overlay {

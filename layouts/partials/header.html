@@ -1,14 +1,16 @@
 <header>
     <div class="container">
-        <a href="/" class="logo">
-            {{ if (ne .Site.Params.customImage "") }}
-                <img src="{{ .Site.Params.customImage }}" alt="">
-            {{ else }}
-                <img src="https://www.gravatar.com/avatar/{{ md5 .Site.Params.gravatarEMail }}?d=mm&size=200" alt="">
-            {{ end }}
+        <div class="logo">
+            <a href="/" class="logo">
+                {{ if (ne .Site.Params.customImage "") }}
+                    <img src="{{ .Site.Params.customImage }}" alt="">
+                {{ else }}
+                    <img src="https://www.gravatar.com/avatar/{{ md5 .Site.Params.gravatarEMail }}?d=mm&size=200" alt="">
+                {{ end }}
 
-            <span class="overlay"><i class="fa fa-home"></i></span>
-        </a>
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
         <div class="titles">
             <h3 class="title"><a href="/">{{ .Site.Title }}</a></h3>
             {{ with .Site.Params.Subtitle }}
