@@ -3,7 +3,7 @@
         <div class="recent-posts">
             <strong>{{ i18n "latestPosts" }}</strong>
                 <ul>
-                {{ range where (first 5 .Site.Pages.ByPublishDate.Reverse) ".Kind" "page" }}
+                {{ range where (where (first 5 .Site.Pages.ByPublishDate.Reverse) ".Kind" "page") ".Type" "ne" "page" }}
                     <li>
                         <a href="{{ .URL }}">{{ .Title }}</a>
                     </li>
