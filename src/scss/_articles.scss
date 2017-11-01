@@ -41,6 +41,10 @@ article {
         h3 {
             font-size: 2.0em;
             margin-bottom: 0.25em;
+
+            a {
+                font-style: normal;
+            }
         }
 
         .meta {
@@ -53,6 +57,10 @@ article {
             padding-bottom: 2.5%;
             border-bottom: 3px double #EEE;
             margin-bottom: 4.5%;
+
+            a {
+                font-style: normal;
+            }
 
             .categories, .author {
                 &:before {
