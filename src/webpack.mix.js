@@ -1,8 +1,11 @@
 let mix = require('laravel-mix');
 
-mix.js('js/theme.js', 'tmp/')
-   .sass('scss/theme.scss', '../static/dist/')
-   .combine([
+mix.setPublicPath('../static/dist')
+    .js('js/theme.js', 'theme.js')
+    .sass('scss/theme.scss', 'theme.css')
+    .copy('node_modules/font-awesome/fonts', '../static/dist/fonts')
+    .copy('node_modules/flexslider/fonts', '../static/dist/fonts')
+    .combine([
         'scss/fonts.css',
         'node_modules/normalize.css/normalize.css',
         'node_modules/skeleton-css/css/skeleton.css',
@@ -11,9 +14,7 @@ mix.js('js/theme.js', 'tmp/')
         'node_modules/highlight.js/styles/zenburn.css',
         '../static/dist/theme.css'
     ], '../static/dist/theme.css')
-   .copy('tmp/theme.js', '../static/dist/')
-   .copy('node_modules/font-awesome/fonts', '../static/fonts/')
-   .copy('node_modules/flexslider/fonts', '../static/fonts/');
+    .version();
 
 // Full API
 // mix.js(src, output);

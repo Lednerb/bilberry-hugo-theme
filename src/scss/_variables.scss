@@ -9,12 +9,19 @@ $content-font: 'Lato', sans-serif;
 
 @font-face {
   font-family: 'flexslider-icon';
-  src: url('/fonts/flexslider-icon.eot');
-  src: url('/fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('/fonts/flexslider-icon.woff') format('woff'), url('/fonts/flexslider-icon.ttf') format('truetype'), url('/fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+  src: url('/dist/fonts/flexslider-icon.eot');
+  src: url('/dist/fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('/dist/fonts/flexslider-icon.woff') format('woff'), url('/dist/fonts/flexslider-icon.ttf') format('truetype'), url('/dist/fonts/flexslider-icon.svg#flexslider-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('/dist/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('/dist/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('/dist/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('/dist/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('/dist/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('/dist/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @mixin featuredImage() {
     .featured-image {
