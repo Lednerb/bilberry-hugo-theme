@@ -4,7 +4,6 @@
 
 <article class="gallery">
     {{ if and (isset .Params "gallery") (ne .Params.gallery "") }}
-    <a href="{{ .URL }}">
     <div class="flexslider">
         <ul class="slides">
         {{ range .Params.gallery }}
@@ -12,7 +11,6 @@
         {{ end }}
         </ul>
     </div>
-    </a>
     {{ end }}
 
     {{ partial "default-content" . }}
