@@ -22,7 +22,7 @@
         {{ .Summary }}
 
         {{ if .Truncated }}
-            <a href="{{ .URL }}" class="more">Continue reading</a>
+            <a href="{{ .URL }}" class="more">{{ i18n "continueReading" }}</a>
         {{ end }}
     {{ end }}
 </div>

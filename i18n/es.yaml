@@ -14,3 +14,5 @@
   translation: "publicaciones más nuevas"
 - id: footnoteReturnText
   translation: "[regreso]"
+- id: continueReading
+  translation: "sigue leyendo"

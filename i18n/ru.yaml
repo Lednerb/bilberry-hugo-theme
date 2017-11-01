@@ -14,3 +14,5 @@
   translation: "Новые сообщения"
 - id: footnoteReturnText
   translation: "[вернуть]"
+- id: continueReading
+  translation: "продолжить чтение"
