@@ -1,5 +1,5 @@
 title = "My cool new Blog"
-baseURL = "https://lednerb.de"
+baseURL = "https://example.com"
 theme = "bilberry-hugo-theme"
 
 DefaultContentLanguage = "en"
