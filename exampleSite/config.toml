@@ -15,7 +15,7 @@ disqusShortname = "bilberry-hugo-theme"
   # Description and meta data for the search engines
   author = "Lednerb"
   description = "Bilberry Premium Theme for Hugo."
-  keywords = "Post types,i18n,Multi-Language,Social media,Algolia search,Disqus comments"
+  keywords = "blog,personal,responsive,search,font awesome,pages,posts,multilingual,highlight.js,syntax highlighting,premium,shortcuts"
 
   # How many articles should be displayed at once?
   paginate = 7
@@ -53,5 +53,5 @@ disqusShortname = "bilberry-hugo-theme"
   category = "categories"
 
 [outputs]
-  home = [ "HTML", "JSON"]
-  page = [ "HTML"]
+  home = [ "HTML", "JSON" ]
+  page = [ "HTML" ]
