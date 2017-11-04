@@ -73,7 +73,7 @@ All options you can and should customize are commented so it should be no proble
 
 ### Algolia Search
 Bilberry includes a convenient search functionality for your site.
-You can test it at the demo site.
+You can test it on the demo site.
 Just click on the navigation bar at the top right of the header.
 
 #### Setup
@@ -113,7 +113,7 @@ hugo new quote/edward-snowden-about-privacy.md
 
 `article` is the default post type if you want to use another type of content as the predefined.
 
-Just discover the entries from the exampleSite to get an overview over the great possibilities, Bilberry gives you ;-)
+Just discover the entries from the `exampleSite` folder to get an overview of the great possibilities Bilberry provides ;-)
 
 ### Pages and External Links
 The post type `page` is the only one that appears in the top navigation (when you click on the navigation button on the top right).
@@ -152,7 +152,7 @@ Bilberry is inspired by the [WordPress theme Lingonberry](http://www.andersnoren
 
 Bilberry is a theme for the great [HUGO static site generator](https://gohugo.io).
 
-A big thank you goes to [@Ipstenu](https://github.com/Ipstenu) for his help in [this thread](https://discourse.gohugo.io/t/search-index-json-file-for-lunr-js/6286/5?u=lednerb) that helped me to create the `index.json` for the algolia file.
+A big thank you goes to [@Ipstenu](https://github.com/Ipstenu) for his help in [this thread](https://discourse.gohugo.io/t/search-index-json-file-for-lunr-js/6286/5?u=lednerb) that helped me to create the `index.json` for the algolia export.
 
 ## License
 The Bilberry Theme for HUGO is licensed under the MIT license.
