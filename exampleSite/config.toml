@@ -2,10 +2,15 @@ title = "My cool new Blog"
 baseURL = "https://example.com"
 theme = "bilberry-hugo-theme"
 
-DefaultContentLanguage = "en"
 enableRobotsTXT = true
+
+# Change to your content language. Supported values: en, de, es, fr, ru
+DefaultContentLanguage = "en"
+
+# Enable / Disable Google Analytics statistics for your site
 googleAnalytics = ""
 
+# Enable / Disable comments on the articles via Disqus.
 disqusShortname = "bilberry-hugo-theme"
 
 [params]
@@ -47,6 +52,7 @@ disqusShortname = "bilberry-hugo-theme"
   vimeo      = ""
   github     = "https://github.com/Lednerb"
 
+# don't change anything here
 [taxonomies]
   author   = "author"
   tag      = "tags"
