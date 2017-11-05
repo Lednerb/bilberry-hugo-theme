@@ -29,8 +29,15 @@ git clone https://github.com/Lednerb/bilberry-hugo-theme.git
 - Copy the example content to your new site
 
 ```sh
-cp -r bilberry-hugo-theme/example-site ../
+cp -r bilberry-hugo-theme/exampleSite/* ../
+```
+
+- Test the installation
+
+```sh
+cd ../
+hugo server -D
 ```
 
 - Configure the `config.toml` file according to your needs
-- run `hugo server -D` to view your new site on your local machine
+- Start blogging
