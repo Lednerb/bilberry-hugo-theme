@@ -44,11 +44,9 @@ hugo new site my-new-blog
 ```
 cd my-new-blog/themes
 git clone https://github.com/Lednerb/bilberry-hugo-theme.git
-
-# If you don't use git, you can download and extract this theme
-# manually into the themes folder.
-# Please ensure that the folder is renamed to "bilberry-hugo-theme"
 ```
+If you don't use git, you can download and extract this theme manually into the themes folder. <br>
+Please ensure that the folder is renamed to "bilberry-hugo-theme"
 
 - Copy example content and default config file for a quick start
 ```
