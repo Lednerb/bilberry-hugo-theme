@@ -13,7 +13,7 @@ Bilberry is an adaption that comes with different optimizations and little featu
 
 If you like this theme and/or use it for commercial purposes, please support me!
 
-<a href="https://www.patreon.com/Lednerb" target="_blank"><img src="https://github.com/Lednerb/bilberry-hugo-theme/raw/master/images/patreon-button.png" height="40" alt="Become a Patron"></a>
+<a href="https://www.patreon.com/Lednerb" target="patreon"><img src="https://github.com/Lednerb/bilberry-hugo-theme/raw/master/images/patreon-button.png" height="40" alt="Become a Patron"></a>
 
 
 ## Table of Contents
@@ -52,8 +52,6 @@ Please ensure that the folder is renamed to "bilberry-hugo-theme"
 ```
 cp -r bilberry-hugo-theme/exampleSite/* ../
 ```
-
-- Delete the `default.md` file in the `archetypes` folder
 
 - Test and configure your site
 ```
