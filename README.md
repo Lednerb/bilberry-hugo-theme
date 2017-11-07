@@ -1,6 +1,6 @@
 ## Bilberry Hugo Theme
 
-[![GitHub downloads](https://img.shields.io/github/downloads/Lednerb/bilberry-hugo-theme/total.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme)
+[![GitHub downloads](https://github-api.lednerb.de/api/Lednerb/bilberry-hugo-theme/badge/github/clones.svg)](https://github.com/Lednerb/bilberry-hugo-theme)
 [![GitHub version](https://img.shields.io/github/release/Lednerb/bilberry-hugo-theme/all.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/releases)
 [![License](https://img.shields.io/github/license/Lednerb/bilberry-hugo-theme.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/blob/master/LICENSE.md)
 [![GitHub stars](https://img.shields.io/github/stars/Lednerb/bilberry-hugo-theme.svg?style=social&label=Stars)](https://github.com/Lednerb/bilberry-hugo-theme)
