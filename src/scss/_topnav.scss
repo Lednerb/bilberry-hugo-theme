@@ -20,6 +20,10 @@ nav {
     color: #fff;
     display: none;
 
+    &.permanentTopNav {
+      display: block;
+    }
+
     .container {
         display: flex;
         justify-content: space-between;

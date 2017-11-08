@@ -41,6 +41,9 @@ disqusShortname = "bilberry-hugo-theme"
     # set an path to the image file you want to use | overwrites gravatar
     customImage = ""
 
+    # always display the top navigation (with pages and search) on non-mobile screens
+    permanentTopNav = true
+
   # social media profile urls for the footer links
   facebook   = ""
   twitter    = "https://twitter.com/TheRealLednerb"

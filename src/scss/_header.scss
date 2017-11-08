@@ -87,5 +87,9 @@ header {
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
         cursor: pointer;
+
+        &.permanentTopNav {
+            display: none;
+        }
     }
 }

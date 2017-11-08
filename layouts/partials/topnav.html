@@ -1,4 +1,8 @@
+{{ if eq .Site.Params.permanentTopNav true}}
+<nav class="permanentTopNav">
+{{ else }}
 <nav>
+{{ end }}
     <div class="container">
         <ul class="topnav">
             {{ range where (where .Site.Pages ".Type" "page") ".IsPage" true }}
