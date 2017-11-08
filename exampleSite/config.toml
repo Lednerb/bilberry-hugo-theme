@@ -42,7 +42,7 @@ disqusShortname = "bilberry-hugo-theme"
     customImage = ""
 
     # always display the top navigation (with pages and search) on non-mobile screens
-    permanentTopNav = true
+    permanentTopNav = false
 
   # social media profile urls for the footer links
   facebook   = ""
