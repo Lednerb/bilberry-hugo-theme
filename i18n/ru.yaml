@@ -1,18 +1,18 @@
 - id: categories
-  translation: "категории"
+  translation: "Темы"
 - id: socialMedia
-  translation: "социальные медиа"
+  translation: "Я в соцсетях"
 - id: latestPosts
-  translation: "Новые сообщения"
+  translation: "Свежие записи"
 - id: search
-  translation: "искать ..."
+  translation: "Поиск..."
 - id: noSearchResults
   translation: "Ничего не найдено."
 - id: olderPosts
-  translation: "старшие должности"
+  translation: "Старые записи"
 - id: newerPosts
-  translation: "Новые сообщения"
+  translation: "Новые записи"
 - id: footnoteReturnText
-  translation: "[вернуть]"
+  translation: "[Назад]"
 - id: continueReading
-  translation: "продолжить чтение"
+  translation: "Читать далее..."

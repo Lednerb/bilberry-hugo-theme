@@ -15,6 +15,16 @@
             <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url={{ . }}&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
         </div>
     {{ end }}
+    {{ with .Params.tunein }}
+        <div class="responsive-audio tunein">
+            <iframe src="https://tunein.com/embed/player/{{ . }}/" style="width:100%; height:100px;" scrolling="no" frameborder="no"></iframe>
+        </div>
+    {{ end }}
+    {{ with .Params.mixcloud }}
+        <div class="responsive-audio mixcloud">
+            <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=/{{ . }}/" frameborder="0" ></iframe>
+        </div>
+    {{ end }}
 
     {{ partial "default-content" . }}
     {{ partial "tag-footer" . }}
