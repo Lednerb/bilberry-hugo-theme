@@ -7,10 +7,10 @@ categories: ['Music']
 tags: ['Kilez More', 'Truth Rap']
 
 # Set your audio url for
-spotify:    spotify:track:0qDZPJGUALZC7vSahlekhu
+spotify:    "spotify:track:0qDZPJGUALZC7vSahlekhu"
 soundcloud: ""     # https://soundcloud.com/lightbooks/alchemist-08-new-world-order-snip
-tunein:            # t117894382
-mixcloud: ""       # scienceforthepeople/445-ai-ant-intelligence
+tunein:     ""     # t117894382
+mixcloud:   ""     # scienceforthepeople/445-ai-ant-intelligence
 ---
 With the `audio` post type you can easily integrate a Spotify, SoundCloud, TuneIn or Mixcloud player to your post.
 
