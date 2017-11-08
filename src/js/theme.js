@@ -7,16 +7,17 @@ $(document).ready(function() {
     $(".toggler").click(function () {
         $("nav").slideToggle();
         $("#search").autocomplete("val", "");
-        $("#search").focus();
     });
 
     $(document).keyup(function (e) {
         if (e.keyCode === 27) {
-            $("nav").slideUp();
+            if ( ! $("nav").hasClass('permanentTopNav') )
+                $("nav").slideUp();
             $("#search").autocomplete("val", "");
         }
         else if (e.keyCode === 83){
-            $("nav").slideDown();
+            if ( ! $("nav").hasClass('permanentTopNav') )
+                $("nav").slideDown();
             $("#search").focus();
         }
     })

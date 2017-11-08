@@ -18,7 +18,11 @@
             {{ end }}
         </div>
 
+        {{ if .Site.Params.permanentTopNav }}
+        <div class="toggler permanentTopNav">
+        {{ else }}
         <div class="toggler">
+        {{ end }}
             <i class="fa fa-bars" aria-hidden="true"></i>
         </div>
     </div>
