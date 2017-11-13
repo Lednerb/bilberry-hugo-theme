@@ -29,10 +29,10 @@ If you like this theme and/or use it for commercial purposes, please support me!
     - [Disqus Comments](#disqus-comments)
     - [Responsive Design](#responsive-design)
     - [Permanent Top Navigation](#permanent-top-navigation)
-- [About the Author](#about-the-author)
+- [Custom Post Types](#custom-post-types)
 - [Credits](#credits)
 - [License](#license)
-- [Support Me and this Theme](#support-me-and-this-theme)
+- [Support Me and This Theme](#support-me-and-this-theme)
 
 
 ## Quick Start
@@ -147,6 +147,25 @@ Bilberry is optimized for desktop and mobile devices (tablets and smartphones).
 If you want to permanently display the top navigation with the algolia search bar and the `page` entries, you can set the `permanentTopNav` option to `true` in your site's config file.
 
 Note that on mobile devices the navigation will still be collapsed because otherwise, the navigation menu hides the essential parts of your site.
+
+## Custom Post Types
+If you want to add a custom post type to change the icon in the bubble on the left column you can simply create those as you want to.
+
+If you want to create a `book` post type for example, you can do the following:
+
+1. Copy the default `themes/bilberry-hugo-theme/layouts/partials/content-type/article.html` to your site's `layouts/partials/content-type/` folder.
+2. Rename the file to your custom post type. A proper name in the _book scenario_ would be `book.html`
+3. Customize the file. <br> You can change the icon in the bubble with another [Font Awesome Icon](http://fontawesome.io/icons/). <br> In the _book scenario_ we would change the `fa-pencil` class to `fa-book`:
+`<i class="fa fa-fw fa-book"></i>`
+
+4. Create your new posts with the post type prefix: `hugo new book/a-very-cool-book.md`
+5. Done.
+
+--------------
+
+If you want to change the default post types (e.g. don't use the pencil icon on `article` or default type, but another one) copy the original file to your local `layouts/partials/content-type/` directory and edit it there. <br>
+Otherwise your changes would be overwritten when you update to the latest theme version.
+
 
 ## Credits
 Bilberry is inspired by the [WordPress theme Lingonberry](http://www.andersnoren.se/teman/lingonberry-wordpress-theme/), created by Anders Norén.
