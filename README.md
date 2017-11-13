@@ -149,9 +149,9 @@ If you want to permanently display the top navigation with the algolia search ba
 Note that on mobile devices the navigation will still be collapsed because otherwise, the navigation menu hides the essential parts of your site.
 
 ## Custom Post Types
-If you want to add a custom post type to change the icon in the bubble on the left column you can simply create those as you want to.
+If you want to add a custom post type to change the icon in the bubble on the left column you can simply create those as you wish.
 
-If you want to create a `book` post type for example, you can do the following:
+If you want to create a `book` post type, for example, you can do the following:
 
 1. Copy the default `themes/bilberry-hugo-theme/layouts/partials/content-type/article.html` to your site's `layouts/partials/content-type/` folder.
 2. Rename the file to your custom post type. A proper name in the _book scenario_ would be `book.html`
@@ -161,10 +161,14 @@ If you want to create a `book` post type for example, you can do the following:
 4. Create your new posts with the post type prefix: `hugo new book/a-very-cool-book.md`
 5. Done.
 
+If you want to use custom Front Matter variables, create a `book.md` archetype in your `archetypes/` directory.
+
+You can find further information in the official HUGO docs.
+
 --------------
 
-If you want to change the default post types (e.g. don't use the pencil icon on `article` or default type, but another one) copy the original file to your local `layouts/partials/content-type/` directory and edit it there. <br>
-Otherwise your changes would be overwritten when you update to the latest theme version.
+If you want to change the default post types (e.g., don't use the pencil icon on the `article` or default type, but another one) copy the original file to your local `layouts/partials/content-type/` directory and edit it there. <br>
+Otherwise, your changes would be overwritten when you update to the latest theme version.
 
 
 ## Credits
