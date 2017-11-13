@@ -1,7 +1,7 @@
 <header>
     <div class="container">
         <div class="logo">
-            <a href="{{ .Site.BaseURL }}" class="logo">
+            <a href="/" class="logo">
                 {{ if (ne .Site.Params.customImage "") }}
                     <img src="{{ .Site.Params.customImage }}" alt="">
                 {{ else }}
@@ -12,7 +12,7 @@
             </a>
         </div>
         <div class="titles">
-            <h3 class="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h3>
+            <h3 class="title"><a href="/">{{ .Site.Title }}</a></h3>
             {{ with .Site.Params.Subtitle }}
                 <span class="subtitle">{{ . }}</span>
             {{ end }}
