@@ -28,6 +28,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
     - [Manual Summary Breaks](#manual-summary-breaks)
     - [Disqus Comments](#disqus-comments)
     - [Responsive Design](#responsive-design)
+    - [Permanent Top Navigation](#permanent-top-navigation)
 - [About the Author](#about-the-author)
 - [Credits](#credits)
 - [License](#license)
@@ -142,6 +143,10 @@ You can manage and moderate the comments either on your website or at the disqus
 ### Responsive Design
 Bilberry is optimized for desktop and mobile devices (tablets and smartphones).
 
+### Permanent Top Navigation
+If you want to permanently display the top navigation with the algolia search bar and the `page` entries, you can set the `permanentTopNav` option to `true` in your site's config file.
+
+Note that on mobile devices the navigation will still be collapsed because otherwise, the navigation menu hides the essential parts of your site.
 
 ## Credits
 Bilberry is inspired by the [WordPress theme Lingonberry](http://www.andersnoren.se/teman/lingonberry-wordpress-theme/), created by Anders Norén.
