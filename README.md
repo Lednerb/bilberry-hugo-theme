@@ -187,7 +187,7 @@ If you want to change any colors or fonts, you have follow these steps:
 2. Install [yarn](https://yarnpkg.com/en/docs/install)
 3. `cd themes/bilberry-hugo-theme/src`
 4. Run `yarn install` to install all necessary dependencies
-5. Modify the `scss/_variables.scss` file to customize your colors. <br> If you want to change the header-color just edit the `$base-color` variable
+5. Modify the `scss/_variables.scss` file to customize your colors. <br> If you want to change the header's color just edit the `$base-color` variable
 6. After finishing your changes, run `yarn run production` to produce your customized stylesheets
 7. Done
 
@@ -197,7 +197,7 @@ Now you have to modify the `scss/_variables.scss` and set the `$headline-font` a
 
 Follow the steps 1-7 to implement your custom font to your site.
 
-_Note:_ You don't have to upload the `node_modules` folders to your webspace, this is only created and needed to generate your customized stylesheets.
+_Note:_ You don't have to upload the `node_modules` folder to your webspace, this is only created and needed to generate your customized stylesheets.
 
 
 ## Credits
