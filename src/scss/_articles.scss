@@ -1,7 +1,7 @@
 article {
     border-radius: 4px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: $article-background-color;
     box-shadow: 0 1px 2px rgba(0,0,0,0.2);
     width: ($site-width - 100px);
     position: relative;
@@ -53,9 +53,9 @@ article {
             letter-spacing: 1px;
             margin-bottom: 2rem;
             font-size: 0.825em;
-            color: #999;
+            color: $meta-text-color;
             padding-bottom: 2.5%;
-            border-bottom: 3px double #EEE;
+            border-bottom: 3px double $meta-border-color;
             margin-bottom: 4.5%;
 
             a {
@@ -88,7 +88,7 @@ article {
             font-style: normal;
 
             &:hover {
-                color: #999;
+                color: $continue-reading-hover-color;
             }
         }
 
@@ -121,16 +121,16 @@ article {
 
         a:not(:last-child):after {
             content: " / ";
-            color: #222 !important;
+            color: $text-color !important;
         }
     }
 
     // Quotes
     &.quote {
-        background-color: $special-article-color;
+        background-color: $special-color;
 
         &:after {
-            border-right-color: $special-article-color;
+            border-right-color: $special-color;
         }
 
         a:hover {
@@ -220,11 +220,11 @@ article {
 
     // Link
     &.link {
-        background-color: $special-article-color;
+        background-color: $special-color;
         min-height: 7em;
 
         &:after {
-            border-right-color: $special-article-color;
+            border-right-color: $special-color;
         }
 
         &:hover {

@@ -1,23 +1,26 @@
 /* do not group these rules */
 *::-webkit-input-placeholder {
-    color: #ccc;
+    color: darken($nav-text-color, 10);
 }
+
 *:-moz-placeholder {
     /* FF 4-18 */
-    color: #ccc;
+    color: darken($nav-text-color, 10);
 }
+
 *::-moz-placeholder {
     /* FF 19+ */
-    color: #ccc;
+    color: darken($nav-text-color, 10);
 }
+
 *:-ms-input-placeholder {
     /* IE 10+ */
-    color: #ccc;
+    color: darken($nav-text-color, 10);
 }
 
 nav {
-    background: $special-article-color;
-    color: #fff;
+    background: $nav-background-color;
+    color: $nav-text-color;
     display: none;
 
     &.permanentTopNav {
@@ -49,7 +52,7 @@ nav {
 
                 &:hover {
                     color: inherit;
-                    background-color: lighten($special-article-color, 10);
+                    background-color: lighten($nav-background-color, 10);
                 }
             }
         }
@@ -77,20 +80,20 @@ nav {
             margin: 0;
             background: transparent;
             border: none;
-            color: #eee;
+            color: $nav-text-color;
             padding-left: 2.75em;
             width: 100%;
-            background-color: lighten($special-article-color, 5);
+            background-color: lighten($nav-background-color, 5);
 
             &:hover, &:focus {
-                background-color: lighten($special-article-color, 10);
+                background-color: lighten($nav-background-color, 10);
                 border: none;
             }
         }
 
         .algolia-autocomplete {
             width: 100%;
-            color: #444;
+            color: $algolia-search-box-color;
 
             .aa-dropdown-menu {
                 width: 100%;
@@ -105,7 +108,7 @@ nav {
                     font-size: 0.75em;
                     text-align: right;
                     padding: 0.5em 1em;
-                    background-color: #f1f1f1;
+                    background-color: $page-background-color;
 
                     img {
                         width: 3.5em;
@@ -121,10 +124,10 @@ nav {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    background-color: #fafafa;
+                    background-color: $algolia-search-box-background-color;
 
                     &:hover, &:focus {
-                        background-color: #f4f4f4;
+                        background-color: darken($algolia-search-box-background-color, 2);
                     }
 
                     .title {
@@ -139,64 +142,66 @@ nav {
 
                     .fa {
                         font-size: 1em;
-                        color: #888;
+                        color: $algolia-search-box-icon-color;
                         text-align: right;
                     }
                 }
             }
-
         }
 
+        .aa-input-container {
+            display: inline-block;
+            position: relative;
+        }
 
+        .aa-input-search {
+            width: 300px;
+            padding: 12px 28px 12px 12px;
+            border: 1px solid $algolia-border-color;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
 
-.aa-input-container {
-  display: inline-block;
-  position: relative;
-}
-.aa-input-search {
-  width: 300px;
-  padding: 12px 28px 12px 12px;
-  border: 1px solid #e4e4e4;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-.aa-input-search::-webkit-search-decoration, .aa-input-search::-webkit-search-cancel-button,
-.aa-input-search::-webkit-search-results-button, .aa-input-search::-webkit-search-results-decoration {
-  display: none;
-}
-.aa-input-icon {
-  height: 16px;
-  width: 16px;
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  fill: #e4e4e4;
-  pointer-events: none;
-}
-.aa-dropdown-menu {
-  background-color: #fff;
-  border: 1px solid rgba(228, 228, 228, 0.6);
-  min-width: 300px;
-  margin-top: 10px;
-  box-sizing: border-box;
-}
-.aa-suggestion {
-  padding: 6px 12px;
-  cursor: pointer;
-}
-.aa-suggestion + .aa-suggestion {
-  border-top: 1px solid rgba(228, 228, 228, 0.6);
-}
-.aa-suggestions-category {
-  border-bottom: 1px solid rgba(228, 228, 228, 0.6);
-  border-top: 1px solid rgba(228, 228, 228, 0.6);
-  padding: 6px 12px;
-}
+        .aa-input-search::-webkit-search-decoration, .aa-input-search::-webkit-search-cancel-button,
+        .aa-input-search::-webkit-search-results-button, .aa-input-search::-webkit-search-results-decoration {
+            display: none;
+        }
 
+        .aa-input-icon {
+            height: 16px;
+            width: 16px;
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+            fill: $algolia-border-color;
+            pointer-events: none;
+        }
 
+        .aa-dropdown-menu {
+            background-color: #fff;
+            border: 1px solid rgba($algolia-border-color, 0.6);
+            min-width: 300px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .aa-suggestion {
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+
+        .aa-suggestion + .aa-suggestion {
+            border-top: 1px solid rgba($algolia-border-color, 0.6);
+        }
+
+        .aa-suggestions-category {
+            border-bottom: 1px solid rgba($algolia-border-color, 0.6);
+            border-top: 1px solid rgba($algolia-border-color, 0.6);
+            padding: 6px 12px;
+        }
     }
 }
