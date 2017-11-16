@@ -43,8 +43,8 @@
             position: absolute;
             left: 25px;
             top: 85px;
-            background-color: #ccc;
-            border: 3px solid #fff;
+            background-color: $bubble-background-color;
+            border: 3px solid $bubble-color;
             width: 45px;
             height: 45px;
             display: flex;
@@ -53,7 +53,7 @@
             border-radius: 50%;
             z-index: 10;
             text-decoration: none;
-            color: #fff;
+            color: $bubble-color;
             transition: all 0.3s ease-in-out;
 
             .fa {

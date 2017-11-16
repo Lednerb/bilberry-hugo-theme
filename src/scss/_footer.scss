@@ -1,7 +1,7 @@
 footer {
-    border-top: 3px solid #EEE;
-    border-bottom: 3px solid #EEE;
-    background-color: rgba(255, 255, 255, 0.5);
+    border-top: 3px solid $footer-border-color;
+    border-bottom: 3px solid $footer-border-color;
+    background-color: $footer-background-color;
 
     .container {
         padding: 4rem 0;
@@ -24,7 +24,7 @@ footer {
 
         strong {
             text-transform: uppercase;
-            color: #444;
+            color: $footer-headline-color;
             padding-bottom: 0.75em;
         }
 
