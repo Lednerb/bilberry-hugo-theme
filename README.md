@@ -30,6 +30,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
     - [Responsive Design](#responsive-design)
     - [Permanent Top Navigation](#permanent-top-navigation)
 - [Custom Post Types](#custom-post-types)
+- [Custom colors and fonts](#custom-colors-and-fonts)
 - [Credits](#credits)
 - [License](#license)
 - [Support Me and This Theme](#support-me-and-this-theme)
@@ -68,12 +69,14 @@ All options you can and should customize are commented so it should be no proble
 
 ## Features
 
+
 ### Algolia Search
 Bilberry includes a convenient search functionality for your site.
 You can test it on the demo site.
 Just click on the navigation bar at the top right of the header.
 
-#### Setup
+
+### Setup
 If you do not want to use the search functionality set `algolia_search = false` in your `config.toml` file.
 
 If you want to include the algolia search for your site, you have to follow these steps:
@@ -84,7 +87,8 @@ If you want to include the algolia search for your site, you have to follow thes
 4. Switch over to `API Keys` and copy your `Application ID`, `Search-Only API Key` and chosen `Index name` to your `config.toml` file.
 5. Ensure that `algolia_search = true` is set.
 
-#### Update the search index
+
+### Update the search index
 You have to repeat this step every time you change a post or publish a new one to update the search index.
 
 1. Publish your changes via the `hugo` command.
@@ -93,10 +97,12 @@ You have to repeat this step every time you change a post or publish a new one t
 4. Paste the copied text from the `index.json` file.
 5. Done.
 
+
 ### Keyboard Shortcuts
 If you want to start a search on your blog simply type `s` and the search menu will open.
 
 To close it again you can enter `esc` at any time.
+
 
 ### Post Types
 Bilberry comes with a bunch of predefined post types.
@@ -111,6 +117,7 @@ hugo new quote/edward-snowden-about-privacy.md
 `article` is the default post type if you want to use another type of content as the predefined.
 
 Just discover the entries from the `exampleSite` folder to get an overview of the great possibilities Bilberry provides ;-)
+
 
 ### Pages and External Links
 The post type `page` is the only one that appears in the top navigation (when you click on the navigation button on the top right).
@@ -171,6 +178,28 @@ If you want to change the default post types (e.g., don't use the pencil icon on
 Otherwise, your changes would be overwritten when you update to the latest theme version.
 
 
+# Custom colors and fonts
+Bilberry uses SCSS for styling and a Webpack-based workflow to dynamically create the combined and compresses production-ready stylesheets.
+
+If you want to change any colors or fonts, you have follow these steps:
+
+1. Install this theme to your `themes` directory
+2. Install [yarn](https://yarnpkg.com/en/docs/install)
+3. `cd themes/bilberry-hugo-theme/src`
+4. Run `yarn install` to install all necessary dependencies
+5. Modify the `scss/_variables.scss` file to customize your colors. <br> If you want to change the header-color just edit the `$base-color` variable
+6. After finishing your changes, run `yarn run production` to produce your customized stylesheets
+7. Done
+
+If you 're going to change the default fonts (e.g., lack of support for Cyrillic languages), you can use some of the [Google Fonts](https://fonts.google.com).
+Select your favorite fonts and copy the `@import url('...');` directive to the `src/css/fonts.css` file.
+Now you have to modify the `scss/_variables.scss` and set the `$headline-font` and `$content-font` to the selected ones.
+
+Follow the steps 1-7 to implement your custom font to your site.
+
+_Note:_ You don't have to upload the `node_modules` folders to your webspace, this is only created and needed to generate your customized stylesheets.
+
+
 ## Credits
 Bilberry is inspired by the [WordPress theme Lingonberry](http://www.andersnoren.se/teman/lingonberry-wordpress-theme/), created by Anders Norén.
 
@@ -178,8 +207,10 @@ Bilberry is a theme for the great [HUGO static site generator](https://gohugo.io
 
 A big thank you goes to [@Ipstenu](https://github.com/Ipstenu) for his help in [this thread](https://discourse.gohugo.io/t/search-index-json-file-for-lunr-js/6286/5?u=lednerb) that helped me to create the `index.json` for the algolia export.
 
+
 ## License
 The Bilberry Theme for HUGO is licensed under the MIT license.
+
 
 ## Support Me and This Theme
 If you enjoy this theme (and especially if you make money with your blog) and want to use it for your site, please consider a small or generous monthly support towards me so I can keep up supporting and maintaining this theme in the future.
