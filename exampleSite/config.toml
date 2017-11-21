@@ -25,6 +25,9 @@ disqusShortname = "bilberry-hugo-theme"
   # How many articles should be displayed at once?
   paginate = 7
 
+  # Enable / Disable MathJax
+  enable_mathjax    = true
+
   # Enable / Disable algolia search
   algolia_search    = true
   algolia_appId     = "Y2C4RWMPXW"
