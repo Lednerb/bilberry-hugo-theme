@@ -62,6 +62,10 @@ cd ../
 hugo server -D
 ```
 
+__Important:__ <br>
+Do NOT change the name of the theme folder. <br>
+If you rename the folder the different post types will not work.
+
 
 ## Configuration
 To configure your site according to your needs, just open the `config.toml` file in your project folder and adjust the settings.
