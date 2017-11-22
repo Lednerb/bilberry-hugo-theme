@@ -100,8 +100,6 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# Yarn lockfile
-src/yarn.lock
 # dotenv environment variables file
 .env
 
