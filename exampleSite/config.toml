@@ -26,7 +26,7 @@ disqusShortname = "bilberry-hugo-theme"
   paginate = 7
 
   # Enable / Disable MathJax
-  enable_mathjax    = true
+  enable_mathjax    = false
 
   # Enable / Disable algolia search
   algolia_search    = true
