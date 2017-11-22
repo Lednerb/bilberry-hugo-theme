@@ -158,7 +158,7 @@ Note that on mobile devices the navigation will still be collapsed because other
 
 ### MathJAX Markup
 
-If you want to add [MathJAX](https://www.mathjax.org) markup support, set parameter `enable_mathjax` option to `true` in our site's config file.
+If you want to add [MathJAX](https://www.mathjax.org) markup support, set parameter `enable_mathjax` option to `true` in your site's config file.
 
 ## Custom Post Types
 If you want to add a custom post type to change the icon in the bubble on the left column you can simply create those as you wish.
