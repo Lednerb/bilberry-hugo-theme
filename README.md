@@ -29,6 +29,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
     - [Disqus Comments](#disqus-comments)
     - [Responsive Design](#responsive-design)
     - [Permanent Top Navigation](#permanent-top-navigation)
+    - [MathJAX Markup](#mathjax-markup)
 - [Custom Post Types](#custom-post-types)
 - [Custom colors and fonts](#custom-colors-and-fonts)
 - [Credits](#credits)
@@ -154,6 +155,10 @@ Bilberry is optimized for desktop and mobile devices (tablets and smartphones).
 If you want to permanently display the top navigation with the algolia search bar and the `page` entries, you can set the `permanentTopNav` option to `true` in your site's config file.
 
 Note that on mobile devices the navigation will still be collapsed because otherwise, the navigation menu hides the essential parts of your site.
+
+### MathJAX Markup
+
+If you want to add [MathJAX](https://www.mathjax.org) markup support, set parameter `enable_mathjax` option to `true` in your site's config file.
 
 ## Custom Post Types
 If you want to add a custom post type to change the icon in the bubble on the left column you can simply create those as you wish.
