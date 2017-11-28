@@ -9,6 +9,9 @@
         <meta name="keywords" content="{{ .Site.Params.keywords }}">
         {{ .Hugo.Generator }}
 
+        <link rel="icon" type="image/png" href="{{ "/favicon-32x32.png" | relURL }}" sizes="32x32">
+        <link rel="icon" type="image/png" href="{{ "/favicon-16x16.png" | relURL }}" sizes="16x16">
+
         <link rel="stylesheet" href="{{ "dist/theme.css" | relURL }}">
 
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.2.1/dist/instantsearch.min.css">
@@ -30,7 +33,7 @@
         {{ partial "footer" . }}
 
         {{ template "_internal/google_analytics_async.html" . }}
-        
+
         {{ if and (isset .Site.Params "enable_mathjax") (eq .Site.Params.enable_mathjax true) }}
         {{ partial "mathjax" . }}
         {{ end }}
