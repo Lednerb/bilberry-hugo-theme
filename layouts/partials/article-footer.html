@@ -1,0 +1,24 @@
+<div class="footer">
+
+    {{ if isset .Params "tags" }}
+        {{ if gt (len .Params.tags ) 0 }}
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            {{ range .Params.tags }}
+                <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+    {{ end }}
+
+    {{ if .IsTranslated }}
+    <div class="languages">
+        <i class="fa fa-language"></i>
+
+        {{ range .Translations }}
+            <a href="{{ .Permalink }}">{{ .Lang }}</a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+</div>
