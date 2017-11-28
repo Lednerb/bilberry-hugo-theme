@@ -7,7 +7,7 @@
         <ul class="topnav">
             {{ range where (where .Site.Pages ".Type" "page") ".IsPage" true }}
                 {{ if and (isset .Params "link") (ne .Params.link "") }}
-                    <li><a href="{{ .Params.link | relURL }}">{{ .Title }}</a></li>
+                    <li><a href="{{ .Params.link | relURL }}" target="{{ .Params.target }}">{{ .Title }}</a></li>
                 {{ else }}
                     <li><a href="{{ .URL }}">{{ .Title }}</a></li>
                 {{ end }}
