@@ -113,15 +113,47 @@ article {
         }
     }
 
-    .tags {
+    .footer {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
         background: transparentize($base-color, 0.90);
-        padding: 1em 2em;
+
         font-family: monospace;
         font-size: 0.9em;
 
-        a:not(:last-child):after {
-            content: " / ";
-            color: $text-color !important;
+        .tags {
+            display: flex;
+            align-items: center;
+            margin: 1em 2em;
+
+            .links {
+                margin-left: 0.75em;
+                a:not(:last-child):after {
+                    content: " / ";
+                    color: $text-color !important;
+                }
+            }
+        }
+
+        .languages {
+            display: flex;
+            align-items: center;
+            margin: 1em 2em;
+            white-space: nowrap;
+
+            .fa {
+                font-size: 1.5em;
+            }
+
+            .links {
+                margin-left: 0.75em;
+                a:not(:last-child):after {
+                    content: " | ";
+                    color: $text-color !important;
+                }
+            }
         }
     }
 

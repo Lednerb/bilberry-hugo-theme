@@ -4,9 +4,11 @@
         {{ if gt (len .Params.tags ) 0 }}
         <div class="tags">
             <i class="fa fa-tags"></i>
-            {{ range .Params.tags }}
-                <a href="/tags/{{ . | urlize }}">{{ . }}</a>
-            {{ end }}
+            <div class="links">
+                {{ range .Params.tags }}
+                    <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+                {{ end }}
+            </div>
         </div>
         {{ end }}
     {{ end }}
@@ -14,10 +16,11 @@
     {{ if .IsTranslated }}
     <div class="languages">
         <i class="fa fa-language"></i>
-
-        {{ range .Translations }}
-            <a href="{{ .Permalink }}">{{ .Lang }}</a>
-        {{ end }}
+        <div class="links">
+            {{ range .Translations }}
+                <a href="{{ .Permalink }}">{{ .Lang }}</a>
+            {{ end }}
+        </div>
     </div>
     {{ end }}
 
