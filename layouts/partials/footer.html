@@ -61,7 +61,7 @@
 
             {{ if .Translations }}
             <div class="languages">
-                <strong>Other Languages</strong>
+                <strong>{{ i18n "otherLanguages" }}</strong>
                 {{ range .Translations }}
                     <a href="{{ .URL }}">{{ .Language }}</a>
                 {{ end }}

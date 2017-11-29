@@ -16,3 +16,5 @@
   translation: "[return]"
 - id: continueReading
   translation: "Continue reading"
+- id: otherLanguages
+  translation: "Other languages"
