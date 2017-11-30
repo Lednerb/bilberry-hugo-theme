@@ -75,13 +75,14 @@ footer {
                 a {
                     text-transform: uppercase;
                     color: $highlight-color;
+                    letter-spacing: 0.1em;
 
                     &:hover {
                         color: $text-color;
                     }
 
                     &:not(:last-child):after {
-                        content: " / ";
+                        content: " | ";
                         color: $text-color !important;
                     }
                 }

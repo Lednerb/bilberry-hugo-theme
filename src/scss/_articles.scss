@@ -149,6 +149,10 @@ article {
 
             .links {
                 margin-left: 0.75em;
+                text-transform: uppercase;
+                font-family: $content-font;
+                letter-spacing: 0.1em;
+
                 a:not(:last-child):after {
                     content: " | ";
                     color: $text-color !important;

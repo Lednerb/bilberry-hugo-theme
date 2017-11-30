@@ -18,6 +18,16 @@
             {{ end }}
         </div>
 
+        {{ if .Translations }}
+            {{ if.Site.Params.headerLanguageChooser }}
+                <div class="languages">
+                    {{ range .Translations }}
+                        <a href="{{ .URL }}">{{ .Language }}</a>
+                    {{ end }}
+                </div>
+            {{ end }}
+        {{ end }}
+
         {{ if .Site.Params.permanentTopNav }}
         <div class="toggler permanentTopNav">
         {{ else }}

@@ -49,6 +49,9 @@ disqusShortname = "bilberry-hugo-theme"
     # always display the top navigation (with pages and search) on non-mobile screens
     permanentTopNav = false
 
+    # show a language chooser in the header
+    headerlanguageChooser = false
+
   # social media profile urls for the footer links
   facebook   = ""
   twitter    = "https://twitter.com/TheRealLednerb"
