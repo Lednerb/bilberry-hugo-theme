@@ -9,7 +9,11 @@
     $('#search').autocomplete({ hint: false, autoselect: true, debug: false },
       [
         {
-          source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+          {{ if .Site.Params.algolia_currentLanguageOnly }}
+            source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5, filters: 'language: {{ .Lang }}' }),
+          {{ else }}
+            source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 10 }),
+          {{ end }}
           displayKey: function(suggestion) {
             return suggestion.title || suggestion.author
           },
