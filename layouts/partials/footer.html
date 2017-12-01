@@ -18,7 +18,7 @@
                 <ul>
                 {{ range $name, $taxonomy := . }}
                     <li>
-                        <a href="/categories/{{ $name | urlize }}">{{ $name | humanize }} ({{ $taxonomy.Count }})</a>
+                        <a href="{{ (print "/categories/" ($name | urlize)) | relLangURL }}">{{ $name | humanize }} ({{ $taxonomy.Count }})</a>
                     </li>
                 {{ end }}
                 </ul>

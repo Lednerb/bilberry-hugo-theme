@@ -6,7 +6,7 @@
         {{ with .Params.categories }}
             <span class="categories">
                 {{ range . }}
-                    <a href="/categories/{{ . | urlize }}">{{ . }}</a>
+                    <a href="{{ (print "/categories/" ( . | urlize)) | relLangURL }}">{{ . }}</a>
                 {{ end }}
             </span>
         {{ end }}

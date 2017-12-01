@@ -6,7 +6,7 @@
             <i class="fa fa-tags"></i>
             <div class="links">
                 {{ range .Params.tags }}
-                    <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+                    <a href="{{ (print "/tags/" (. | urlize)) | relLangURL }}">{{ . }}</a>
                 {{ end }}
             </div>
         </div>
