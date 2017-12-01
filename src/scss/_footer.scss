@@ -77,6 +77,10 @@ footer {
                     color: $highlight-color;
                     letter-spacing: 0.1em;
 
+                    &.active {
+                        font-weight: bold;
+                    }
+
                     &:hover {
                         color: $text-color;
                     }

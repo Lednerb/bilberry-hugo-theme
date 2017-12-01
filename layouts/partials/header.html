@@ -18,14 +18,17 @@
             {{ end }}
         </div>
 
-        {{ if .Translations }}
-            {{ if.Site.Params.headerLanguageChooser }}
-                <div class="languages">
-                    {{ range .Translations }}
-                        <a href="{{ .URL }}">{{ .Language }}</a>
+        {{ if gt .Site.Languages 1}}
+            {{- $.Scratch.Set "language" .Language -}}
+            <div class="languages">
+                {{ range .Site.Languages }}
+                    {{ if eq ($.Scratch.Get "language") . }}
+                        <a href="{{ . | relURL }}" class="active">{{ . }}</a>
+                    {{ else }}
+                        <a href="{{ . | relURL }}">{{ . }}</a>
                     {{ end }}
-                </div>
-            {{ end }}
+                {{ end }}
+            </div>
         {{ end }}
 
         {{ if .Site.Params.permanentTopNav }}

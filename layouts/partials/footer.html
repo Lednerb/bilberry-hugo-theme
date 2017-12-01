@@ -59,13 +59,18 @@
                 {{ end }}
             </div>
 
-            {{ if .Translations }}
-            <div class="languages">
-                <strong>{{ i18n "otherLanguages" }}</strong>
-                {{ range .Translations }}
-                    <a href="{{ .URL }}">{{ .Language }}</a>
-                {{ end }}
-            </div>
+            {{ if gt .Site.Languages 1}}
+                {{- $.Scratch.Set "language" .Language -}}
+                <div class="languages">
+                    <strong>{{ i18n "otherLanguages" }}</strong>
+                    {{ range .Site.Languages }}
+                        {{ if eq ($.Scratch.Get "language") . }}
+                            <a href="{{ . | relURL }}" class="active">{{ . }}</a>
+                        {{ else }}
+                            <a href="{{ . | relURL }}">{{ . }}</a>
+                        {{ end }}
+                    {{ end }}
+                </div>
             {{ end }}
         </div>
     </div>

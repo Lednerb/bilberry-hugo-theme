@@ -92,6 +92,10 @@ header {
             color: $page-background-color;
             letter-spacing: 0.1em;
 
+            &.active {
+                font-weight: bold;
+            }
+
             &:not(:last-child):after {
                 content: " | ";
                 color: inherit;
