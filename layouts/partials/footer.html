@@ -59,7 +59,7 @@
                 {{ end }}
             </div>
 
-            {{ if gt .Site.Languages 1}}
+            {{ if gt .Site.Languages 1 }}
                 {{- $.Scratch.Set "language" .Language -}}
                 <div class="languages">
                     <strong>{{ i18n "otherLanguages" }}</strong>
