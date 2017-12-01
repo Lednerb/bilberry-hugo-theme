@@ -3,7 +3,7 @@ title: "Kilez More - New World Order"
 date: 2017-11-01T16:12:47+01:00
 
 featuredImage: ""
-categories: ['Music']
+categories: ['Musik']
 tags: ['Kilez More', 'Truth Rap']
 
 # Set your audio url for
@@ -13,6 +13,6 @@ tunein:     ""     # t117894382
 mixcloud:   ""     # scienceforthepeople/445-ai-ant-intelligence
 ---
 
-With the `audio` post type you can easily integrate a Spotify, SoundCloud, TuneIn or Mixcloud player to your post.
+Mit dem `audio` Post Type kann sehr einfach ein Spotify, SoundCloud, TuneIn oder Mixcloud Player integriert werden.
 
-If you don't want to embed sound but use a header image you can set it with the `featuredImage` option in your markdown file.
+Falls kein Player integriert werden soll, kann optional ein Titelbild mit Hilfe der `featuredImage` Option in der Markdown Datei verwendet werden.

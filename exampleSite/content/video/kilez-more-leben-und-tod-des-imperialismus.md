@@ -1,5 +1,5 @@
 ---
-title: "Kilez More - Leben und Tod des Imperialismus"
+title: "Kilez More - Life And Death Of The Hegemony"
 date: 2017-11-01T16:23:40+01:00
 
 featuredImage: ""
