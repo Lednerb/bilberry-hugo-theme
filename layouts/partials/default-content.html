@@ -12,7 +12,7 @@
         {{ end }}
 
         {{ with .Params.author }}
-            <span class="author"><a href="/author/{{ . | urlize }}">{{ . }}</a></span>
+            <span class="author"><a href="{{ (print "/author/" (. | urlize)) | relLangURL }}">{{ . }}</a></span>
         {{ end }}
     </div>
 
