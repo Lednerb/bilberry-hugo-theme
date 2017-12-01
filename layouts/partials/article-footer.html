@@ -1,16 +1,18 @@
+{{ with .Params.tags }}
 <div class="footer">
+{{ else }}
+<div class="footer no-tags">
+{{ end }}
 
-    {{ if isset .Params "tags" }}
-        {{ if gt (len .Params.tags ) 0 }}
+    {{ with .Params.tags }}
         <div class="tags">
             <i class="fa fa-tags"></i>
             <div class="links">
-                {{ range .Params.tags }}
+                {{ range . }}
                     <a href="{{ (print "/tags/" (. | urlize)) | relLangURL }}">{{ . }}</a>
                 {{ end }}
             </div>
         </div>
-        {{ end }}
     {{ end }}
 
     {{ if .IsTranslated }}

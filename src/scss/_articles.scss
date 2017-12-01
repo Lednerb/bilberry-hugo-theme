@@ -123,6 +123,10 @@ article {
         font-family: monospace;
         font-size: 0.9em;
 
+        &.no-tags {
+            flex-direction: row-reverse;
+        }
+
         .tags {
             display: flex;
             align-items: center;
