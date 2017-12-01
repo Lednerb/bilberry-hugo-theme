@@ -9,4 +9,6 @@
     {{ with .Params.link }}
         <script>window.location = {{ . | relURL }}</script>
     {{ end }}
+
+    {{ partial "article-footer" . }}
 </article>
