@@ -32,6 +32,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
     - [MathJAX Markup](#mathjax-markup)
 - [Custom Post Types](#custom-post-types)
 - [Custom colors and fonts](#custom-colors-and-fonts)
+- [CSS and JS modules](#css-and-js-modules)
 - [Credits](#credits)
 - [License](#license)
 - [Support Me and This Theme](#support-me-and-this-theme)
@@ -207,6 +208,12 @@ Now you have to modify the `scss/_variables.scss` and set the `$headline-font` a
 Follow the steps 1-7 to implement your custom font to your site.
 
 _Note:_ You don't have to upload the `node_modules` folder to your webspace, this is only created and needed to generate your customized stylesheets.
+
+
+# CSS and JS modules
+This theme supports hot-swappable CSS and JavaSript extentions. Modules can be specified using the `(css|js)_modules` list parameter. Modules can be specified either relative to the `static` directory (e.g. `exampleSite/static/css/custom.css`) or as a URL.
+
+Modules are imported in the order they appear in the list, and immediately after the default Bilberry CSS and JS files are imported.
 
 
 ## Credits
