@@ -17,7 +17,7 @@ disqusShortname = "bilberry-hugo-theme"
   # Favicon for the browser's favorites and tabs
   favicon = "" # set a favicon icon
 
-  # Custom JS / CSS modules that will be imported by the template.
+  # Custom CSS / JS modules that will be imported by the template.
   # Files are relative to the static/ directory or a URL.
   # Files are imported in the order they appear here, after
   # theme.css and theme.js, respectively.

@@ -211,7 +211,7 @@ _Note:_ You don't have to upload the `node_modules` folder to your webspace, thi
 
 
 # CSS and JS modules
-This theme supports hot-swappable CSS and JavaSript extentions. Modules can be specified using the `(css|js)_modules` list parameter. Modules can be specified either relative to the `static` directory (e.g. `exampleSite/static/css/custom.css`) or as a URL.
+This theme supports hot-swappable CSS and JavaScript extentions. Modules can be specified using the `(css|js)_modules` list parameter. Modules can be specified either relative to the `static` directory (e.g. `exampleSite/static/css/custom.css`) or as a URL.
 
 Modules are imported in the order they appear in the list, and immediately after the default Bilberry CSS and JS files are imported.
 
