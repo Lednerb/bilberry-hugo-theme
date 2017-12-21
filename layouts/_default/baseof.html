@@ -18,6 +18,12 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.2.1/dist/instantsearch-theme-algolia.min.css">
 
 
+        {{ if isset .Site.Params "css_modules" }}
+            {{ range .Site.Params.css_modules }}
+                <link rel="stylesheet" href="{{ . | relURL }}">
+            {{ end }}
+        {{ end }}
+
         {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
         <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}{{ end }}</title>
     </head>
@@ -38,8 +44,14 @@
         {{ partial "mathjax" . }}
         {{ end }}
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment-with-locales.min.js" integrity="sha256-TbOIe++NbC9P3KTtUMJ5wcROlBdnRqrPleLdpPg3xxE=" crossorigin="anonymous"></script>
-        <script src="{{ "dist/theme.js" | relURL }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment-with-locales.min.js" integrity="sha256-TbOIe++NbC9P3KTtUMJ5wcROlBdnRqrPleLdpPg3xxE=" crossorigin="anonymous" type="application/javascript"></script>
+        <script src="{{ "dist/theme.js" | relURL }}" type="application/javascript"></script>
+
+        {{ if isset .Site.Params "js_modules" }}
+            {{ range .Site.Params.js_modules }}
+                <script src="{{ . | relURL }}" type="application/javascript"></script>
+            {{ end }}
+        {{ end }}
 
         <script>
             $(document).ready(function() {
