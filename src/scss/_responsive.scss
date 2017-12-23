@@ -61,6 +61,7 @@
 
     .container {
         width: 100%;
+        padding: 0;
     }
 
     .container:before, .container:after {
@@ -72,7 +73,7 @@
     }
 
     .main article {
-        margin: 0 1.5em;
+        margin: 0;
         width: 100%;
 
         &:before, &:after {
