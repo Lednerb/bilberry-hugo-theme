@@ -54,6 +54,14 @@ disqusShortname = "bilberry-hugo-theme"
     # always display the top navigation (with pages and search) on non-mobile screens
     permanentTopNav = false
 
+    # credits line configuration
+    copyrightBy = "by Lednerb"
+    copyrightUseCurrentYear = false  # set to true to always display the current year in the copyright
+    copyrightYearOverride = "2017"
+    copyrightUrl = "https://github.com/Lednerb"
+    creditsText = "Bilberry Hugo Theme"
+    creditsUrl = "https://github.com/Lednerb/bilberry-hugo-theme"
+
   # social media profile urls for the footer links
   facebook   = ""
   twitter    = "https://twitter.com/TheRealLednerb"
