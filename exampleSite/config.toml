@@ -64,6 +64,7 @@ disqusShortname = "bilberry-hugo-theme"
   youtube    = ""
   vimeo      = ""
   github     = "https://github.com/Lednerb"
+  xing       = ""
 
 # don't change anything here
 [taxonomies]
