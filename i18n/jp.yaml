@@ -16,3 +16,5 @@
   translation: "[戻る]"
 - id: continueReading
   translation: "続きを読む"
+- id: otherLanguages
+  translation: "他言語"
