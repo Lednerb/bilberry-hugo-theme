@@ -4,6 +4,7 @@ date: 2017-11-01T13:18:45+01:00
 author: "Lednerb"
 ---
 Bilberry is a premium theme for the [Hugo Static Website Builder](https://gohugo.io).
+
 It is full of little nice features, such as:
 
 - built-in integration for the wonderful [algolia search](https://algolia.com)

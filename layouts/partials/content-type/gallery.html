@@ -1,9 +1,19 @@
+{{ $images := .Resources.ByType "image" }}
+
 <a class="bubble" href="{{ .URL }}">
     <i class="fa fa-fw fa-camera"></i>
 </a>
 
 <article class="gallery">
-    {{ if and (isset .Params "gallery") (ne .Params.gallery "") }}
+    {{ if $images }}
+        <div class="flexslider">
+            <ul class="slides">
+            {{ range .Resources.ByType "image" }}
+                <li><img src="{{ .RelPermalink }}" /></li>
+            {{ end }}
+            </ul>
+        </div>
+    {{ else if and (isset .Params "gallery") (ne .Params.gallery "") }}
     <div class="flexslider">
         <ul class="slides">
         {{ range .Params.gallery }}

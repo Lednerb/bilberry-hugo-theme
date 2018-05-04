@@ -4,7 +4,7 @@ theme = "bilberry-hugo-theme"
 
 enableRobotsTXT = true
 
-# Change to your content language. Supported values: en, de, es, fr, ru
+# Change to one of your content languages definded at the end.
 DefaultContentLanguage = "en"
 
 # Enable / Disable Google Analytics statistics for your site
@@ -72,3 +72,11 @@ disqusShortname = "bilberry-hugo-theme"
 [outputs]
   home = [ "HTML", "JSON" ]
   page = [ "HTML" ]
+
+[Languages]
+  [Languages.en]
+    weight = 1
+  [Languages.de]
+    weight = 2
+    title = "Mein cooler neuer Blog"
+    subtitle = "Hallo Welt! Dies ist der epischste Untertitel aller Zeiten."

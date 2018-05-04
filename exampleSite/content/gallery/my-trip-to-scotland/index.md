@@ -2,13 +2,6 @@
 title: "My Trip to Scotland"
 date: 2017-11-01T18:01:26+01:00
 
-gallery: [
-    '/images/scotland5.jpg',
-    '/images/scotland1.jpg',
-    '/images/scotland2.jpg',
-    '/images/scotland3.jpg',
-    '/images/scotland4.jpg',
-    ]
 categories: ['Travelling', 'Holidays']
 tags: ['Scotland', 'Glennfinnan Viaduct', 'Eilean Donan Castle']
 author: "Lednerb"
