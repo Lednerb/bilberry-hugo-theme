@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.4.1] - 2018-05-05
+### Fixed
+- Broken links #72
+
 ## [1.4.0] - 2018-05-05
 ### Added
 - Support for Ukrain languge
@@ -38,6 +42,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 [Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.4.0...HEAD
+[1.4.1]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.4.0...1.4.1
 [1.4.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.3.0...1.4.0
 [1.3.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.2.2...1.3.0
 
