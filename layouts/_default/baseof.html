@@ -9,8 +9,8 @@
         <meta name="keywords" content="{{ .Site.Params.keywords }}">
         {{ .Hugo.Generator }}
 
-        <link rel="icon" type="image/png" href="{{ "/favicon-32x32.png" | relURL }}" sizes="32x32">
-        <link rel="icon" type="image/png" href="{{ "/favicon-16x16.png" | relURL }}" sizes="16x16">
+        <link rel="icon" type="image/png" href="{{ "/favicon-32x32.png" | absURL }}" sizes="32x32">
+        <link rel="icon" type="image/png" href="{{ "/favicon-16x16.png" | absURL }}" sizes="16x16">
 
         <link rel="stylesheet" href="{{ "dist/theme.css" | relURL }}">
 
@@ -20,7 +20,7 @@
 
         {{ if isset .Site.Params "css_modules" }}
             {{ range .Site.Params.css_modules }}
-                <link rel="stylesheet" href="{{ . | relURL }}">
+                <link rel="stylesheet" href="{{ . | absURL }}">
             {{ end }}
         {{ end }}
 
@@ -45,11 +45,11 @@
         {{ end }}
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment-with-locales.min.js" integrity="sha256-TbOIe++NbC9P3KTtUMJ5wcROlBdnRqrPleLdpPg3xxE=" crossorigin="anonymous" type="application/javascript"></script>
-        <script src="{{ "dist/theme.js" | relURL }}" type="application/javascript"></script>
+        <script src="{{ "dist/theme.js" | absURL }}" type="application/javascript"></script>
 
         {{ if isset .Site.Params "js_modules" }}
             {{ range .Site.Params.js_modules }}
-                <script src="{{ . | relURL }}" type="application/javascript"></script>
+                <script src="{{ . | absURL }}" type="application/javascript"></script>
             {{ end }}
         {{ end }}
 
