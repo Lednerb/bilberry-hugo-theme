@@ -6,7 +6,9 @@
     <div class="container">
         <ul class="topnav">
             {{ range where (where .Site.Pages ".Type" "page") ".IsPage" true }}
-                {{ if and (isset .Params "link") (ne .Params.link "") }}
+                {{ if .Params.excludeFromTopNav }}
+                    {{/* Do nothing */}}
+                {{ else if and (isset .Params "link") (ne .Params.link "") }}
                     <li><a href="{{ .Params.link | relURL }}" target="{{ .Params.target }}">{{ .Title }}</a></li>
                 {{ else }}
                     <li><a href="{{ .URL }}">{{ .Title }}</a></li>
