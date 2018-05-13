@@ -25,7 +25,11 @@
         {{ end }}
 
         {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
-        <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}{{ end }}</title>
+        <title>
+            {{ block "title" . }}
+                {{ .Site.Title }} | {{ if eq .Site.Title .Title }}{{ .Site.Params.subtitle }}{{ else }}{{ .Title }}{{ end }}
+            {{ end }}
+        </title>
     </head>
     <body class="bilberry-hugo-theme">
         {{ partial "topnav" . }}
