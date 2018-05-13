@@ -6,13 +6,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.4.1] - 2018-05-05
+## [1.5.0] - 2018-05-13
 ### Fixed
 - Broken links #72
 
+### Added
+- Support for Polish language, provided by @lkorzen
+
+### Changed
+- The site's subtitle will be used in the title on the homepage. Contributed by @marcelkraus
+
 ## [1.4.0] - 2018-05-05
 ### Added
-- Support for Ukrain languge
+- Support for Ukrain language
 - Support for CSS / JS extensions, submitted by @cripplet
 - Support for Xing as a social media link in the footer, contributed by @marcelkraus
 - `excludeFromTopNav` option for the `page` content type, requested in #60 by @AshleyByeUK
@@ -41,8 +47,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Some typos
 
 
-[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.4.0...HEAD
-[1.4.1]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.4.0...1.4.1
+[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.5.0...HEAD
+[1.5.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.4.0...1.5.0
 [1.4.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.3.0...1.4.0
 [1.3.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.2.2...1.3.0
 
