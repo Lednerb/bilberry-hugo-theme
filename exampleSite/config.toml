@@ -65,7 +65,7 @@ disqusShortname = "bilberry-hugo-theme"
   vimeo      = ""
   github     = "https://github.com/Lednerb"
   xing       = ""
-  linkedin   = "https://www.linkedin.com/in/pablo-domingo-rojo"
+  linkedin   = ""
 
 # don't change anything here
 [taxonomies]
