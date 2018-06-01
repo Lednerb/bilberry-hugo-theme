@@ -17,6 +17,7 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.2.1/dist/instantsearch.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.2.1/dist/instantsearch-theme-algolia.min.css">
 
+        {{ partial "twitter-card" . }}
 
         {{ if isset .Site.Params "css_modules" }}
             {{ range .Site.Params.css_modules }}
