@@ -1,15 +1,15 @@
 {{- $.Scratch.Add "index" slice -}}
 
 {{- range $name, $taxonomy := .Site.Taxonomies.categories -}}
-    {{- $.Scratch.Add "index" (dict "url" (print "/categories" ($name | relURL)) "title" ($name | humanize) "iconClass" "fa-folder" "type" "category" "objectID" (print "/categories" ($name | relURL) | md5) ) -}}
+    {{- $.Scratch.Add "index" (dict "url" (print "/categories/" $name | relURL) "title" ($name | humanize) "iconClass" "fa-folder" "type" "category" "objectID" (print "/categories" ($name | relURL) | md5) ) -}}
 {{- end -}}
 
 {{- range $name, $taxonomy := .Site.Taxonomies.author -}}
-    {{- $.Scratch.Add "index" (dict "url" (print "/author" ($name | relURL)) "title" ($name | humanize) "iconClass" "fa-user" "type" "author" "objectID" (print "/author" ($name | relURL) | md5) ) -}}
+    {{- $.Scratch.Add "index" (dict "url" (print "/author/" $name | relURL) "title" ($name | humanize) "iconClass" "fa-user" "type" "author" "objectID" (print "/author" ($name | relURL) | md5) ) -}}
 {{- end -}}
 
 {{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
-    {{- $.Scratch.Add "index" (dict "url" (print "/tags" ($name | relURL)) "title" ($name | humanize) "iconClass" "fa-tag" "type" "tag" "objectID" (print "/tags" ($name | relURL) | md5) ) -}}
+    {{- $.Scratch.Add "index" (dict "url" (print "/tags/" $name | relURL) "title" ($name | humanize) "iconClass" "fa-tag" "type" "tag" "objectID" (print "/tags" ($name | relURL) | md5) ) -}}
 {{- end -}}
 
 {{- range where .Pages "Type" "not in"  (slice "page" "json") -}}
