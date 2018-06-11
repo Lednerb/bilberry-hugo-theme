@@ -1,0 +1,31 @@
+{{ with .Params.twitter }}
+    <meta name="twitter:card" content="{{- .card -}}">
+    <meta name="twitter:site" content="{{- .site -}}">
+    {{ if ne .card "app" -}}
+    <meta name="twitter:title" content="{{- .title -}}">
+    <meta name="twitter:image" content="{{- .image -}}">
+    {{ with .image_alt -}}<meta name="twitter:image:alt" content="{{- . -}}">{{- end }}
+    {{- end }}
+    {{ with .creator -}}<meta name="twitter:creator" content="{{- . -}}">{{- end }}
+
+    {{- if eq .card "app" }}
+    {{ with .app_country }}<meta name="twitter:app:country" content="{{- . -}}">{{ end }}
+    {{ with .app_name_iphone }}<meta name="twitter:app:name:iphone" content="{{- . -}}">{{ end }}
+    {{ with .app_id_iphone }}<meta name="twitter:app:id:iphone" content="{{- . -}}">{{ end }}
+    {{ with .app_url_iphone }}<meta name="twitter:app:url:iphone" content="{{- . -}}">{{ end }}
+    {{ with .app_name_ipad }}<meta name="twitter:app:name:ipad" content="{{- . -}}">{{ end }}
+    {{ with .app_id_ipad }}<meta name="twitter:app:id:ipad" content="{{- . -}}">{{ end }}
+    {{ with .app_url_ipad }}<meta name="twitter:app:url:ipad" content="{{- . -}}">{{ end }}
+    {{ with .app_name_googleplay }}<meta name="twitter:app:name:googleplay" content="{{- . -}}">{{ end }}
+    {{ with .app_id_googleplay }}<meta name="twitter:app:id:googleplay" content="{{- . -}}">{{ end }}
+    {{ with .app_url_googleplay }}<meta name="twitter:app:url:googleplay" content="{{- . -}}">{{ end }}
+    {{- end }}
+
+    {{- if eq .card "player" }}
+    {{ with .player }}<meta name="twitter:player" content="{{- . -}}">{{ end }}
+    {{ with .player_width }}<meta name="twitter:player:width" content="{{- . -}}">{{ end }}
+    {{ with .player_height }}<meta name="twitter:player:height" content="{{- . -}}">{{ end }}
+    {{ with .player_stream }}<meta name="twitter:player:stream" content="{{- . -}}">{{ end }}
+    {{ with .player_stream_content_type }}<meta name="twitter:player:stream:content_type" content="{{- . -}}">{{ end }}
+    {{- end }}
+{{ end }}
