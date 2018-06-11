@@ -55,9 +55,14 @@ Please ensure that the folder is renamed to "bilberry-hugo-theme"
 cp -r bilberry-hugo-theme/exampleSite/* ../
 ```
 
-- Test and configure your site
+- Remove the default archetype
 ```
 cd ../
+rm archetypes/default.md
+```
+
+- Test and configure your site
+```
 hugo server -D
 ```
 
