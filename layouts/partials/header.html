@@ -18,7 +18,7 @@
             {{ end }}
         </div>
 
-        {{ if gt .Site.Languages 1}}
+    {{ if and (gt .Site.Languages 1) (.Site.Params.showHeaderLanguageChooser | default true) }}
             {{- $.Scratch.Set "language" .Language -}}
             <div class="languages">
                 {{ range .Site.Languages }}

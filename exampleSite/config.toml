@@ -57,7 +57,7 @@ disqusShortname = "bilberry-hugo-theme"
     permanentTopNav = false
 
     # show a language chooser in the header
-    headerlanguageChooser = false
+    showHeaderLanguageChooser = true
 
     # credits line configuration
     copyrightBy = "by Lednerb"
