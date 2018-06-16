@@ -2,7 +2,7 @@
     <div class="container">
         <div class="logo">
             <a href="{{ .Site.BaseURL | relLangURL }}" class="logo">
-                {{ if (ne .Site.Params.customImage "") }}
+                {{ if and (isset .Site.Params "customImage") (ne .Site.Params.customImage "") }}
                     <img src="{{ .Site.Params.customImage }}" alt="">
                 {{ else }}
                     <img src="https://www.gravatar.com/avatar/{{ md5 .Site.Params.gravatarEMail }}?d=mm&size=200" alt="">
@@ -12,7 +12,7 @@
             </a>
         </div>
         <div class="titles">
-            <h3 class="title"><a href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Title }}</a></h3>
+            <h3 class="title"><a href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Title | default "My cool new blog" }}</a></h3>
             {{ with .Site.Params.Subtitle }}
                 <span class="subtitle">{{ . }}</span>
             {{ end }}

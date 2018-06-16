@@ -68,6 +68,7 @@ disqusShortname = "bilberry-hugo-theme"
     creditsUrl = "https://github.com/Lednerb/bilberry-hugo-theme"
 
   # social media profile urls for the footer links
+  showSocialMedia = true
   facebook   = ""
   twitter    = "https://twitter.com/TheRealLednerb"
   googleplus = ""
@@ -80,7 +81,17 @@ disqusShortname = "bilberry-hugo-theme"
   xing       = ""
   linkedin   = ""
 
-# don't change anything here
+# customize your available languages for your multi-langual site
+# or delete the [Languages] blog to use the theme with only one supported language
+[Languages]
+  [Languages.en]
+    weight = 1
+  [Languages.de]
+    weight = 2
+    title = "Mein cooler neuer Blog"
+    subtitle = "Hallo Welt! Dies ist der epischste Untertitel aller Zeiten."
+
+# don't change anything below
 [taxonomies]
   author   = "author"
   tag      = "tags"
@@ -90,10 +101,3 @@ disqusShortname = "bilberry-hugo-theme"
   home = [ "HTML", "JSON" ]
   page = [ "HTML" ]
 
-[Languages]
-  [Languages.en]
-    weight = 1
-  [Languages.de]
-    weight = 2
-    title = "Mein cooler neuer Blog"
-    subtitle = "Hallo Welt! Dies ist der epischste Untertitel aller Zeiten."

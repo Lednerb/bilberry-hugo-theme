@@ -25,7 +25,7 @@
         {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
         <title>
             {{ block "title" . }}
-                {{ .Site.Title }} | {{ if eq .Site.Title .Title }}{{ .Site.Params.subtitle }}{{ else }}{{ .Title }}{{ end }}
+                {{ .Site.Title | default "My cool new blog" }} | {{ if eq .Site.Title .Title }}{{ .Site.Params.subtitle | default "Bilberry Theme" }}{{ else }}{{ .Title }}{{ end }}
             {{ end }}
         </title>
     </head>

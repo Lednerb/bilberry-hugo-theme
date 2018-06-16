@@ -26,6 +26,7 @@
         </div>
 
         <div class="right">
+            {{ if .Site.Params.showSocialMedia | default true }}
             <div class="social-media">
                 <strong>{{ i18n "socialMedia" }}</strong>
 
@@ -63,6 +64,7 @@
                     <a href="{{ . }}" target="_blank"><i class="fa fa-linkedin"></i></a>
                 {{ end }}
             </div>
+            {{ end }}
 
             {{ if gt .Site.Languages 1 }}
                 {{- $.Scratch.Set "language" .Language -}}
@@ -84,18 +86,18 @@
 <div class="credits">
     <div class="container">
         <div class="copyright">
-            <a href="{{ .Site.Params.copyrightUrl }}" target="_blank">
+            <a href="{{ .Site.Params.copyrightUrl | default "https://github.com/Lednerb" }}" target="_blank">
                 &copy;
                 {{ if .Site.Params.copyrightUseCurrentYear }}
                     {{ now.Year }}
                 {{ else }}
-                    {{ .Site.Params.copyrightYearOverride }}
+                    {{ .Site.Params.copyrightYearOverride | default 2018 }}
                 {{ end }}
-                {{ .Site.Params.copyrightBy }}
+                {{ .Site.Params.copyrightBy | default "by Lednerb" }}
             </a>
         </div>
         <div class="author">
-            <a href="{{ .Site.Params.creditsUrl }}" target="_blank">{{ .Site.Params.creditsText }}</a>
+            <a href="{{ .Site.Params.creditsUrl | default "https://github.com/Lednerb/bilberry-hugo-theme" }}" target="_blank">{{ .Site.Params.creditsText | default "Bilberry Hugo Theme" }}</a>
         </div>
     </div>
 </div>
