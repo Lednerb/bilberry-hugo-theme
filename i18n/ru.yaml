@@ -16,3 +16,5 @@
   translation: "[Назад]"
 - id: continueReading
   translation: "Читать далее..."
+- id: otherLanguages
+  translation: "Другие языки"

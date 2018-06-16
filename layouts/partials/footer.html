@@ -18,48 +18,64 @@
                 <ul>
                 {{ range $name, $taxonomy := . }}
                     <li>
-                        <a href="{{ "/categories/" | relURL }}{{ $name | urlize }}">{{ $name | humanize }} ({{ $taxonomy.Count }})</a>
+                        <a href="{{ (print "/categories/" ($name | urlize)) | relLangURL }}">{{ $name | humanize }} ({{ $taxonomy.Count }})</a>
                     </li>
                 {{ end }}
                 </ul>
             {{ end }}
         </div>
 
-        <div class="social-media">
-            <strong>{{ i18n "socialMedia" }}</strong>
+        <div class="right">
+            <div class="social-media">
+                <strong>{{ i18n "socialMedia" }}</strong>
 
-            {{ with .Site.Params.facebook }}
-                <a href="{{ . }}" target="_blank"><i class="fa fa-facebook"></i></a>
-            {{ end }}
-            {{ with .Site.Params.twitter }}
-                <a href="{{ . }}" target="_blank"><i class="fa fa-twitter"></i></a>
-            {{ end }}
-            {{ with .Site.Params.googleplus }}
-                <a href="{{ . }}" target="_blank"><i class="fa fa-google-plus-official"></i></a>
-            {{ end }}
-            {{ with .Site.Params.xing }}
-                <a href="{{ . }}" target="_blank"><i class="fa fa-xing"></i></a>
-            {{ end }}
-            {{ with .Site.Params.pinterest }}
-                <a href="{{ . }}" target="_blank"><i class="fa fa-pinterest"></i></a>
-            {{ end }}
-            {{ with .Site.Params.instagram }}
-                <a href="{{ . }}" target="_blank"><i class="fa fa-instagram"></i></a>
-            {{ end }}
-            {{ with .Site.Params.tumblr }}
-                <a href="{{ . }}" target="_blank"><i class="fa fa-tumblr"></i></a>
-            {{ end }}
-            {{ with .Site.Params.youtube }}
-                <a href="{{ . }}" target="_blank"><i class="fa fa-youtube"></i></a>
-            {{ end }}
-            {{ with .Site.Params.vimeo }}
-                <a href="{{ . }}" target="_blank"><i class="fa fa-vimeo"></i></a>
-            {{ end }}
-            {{ with .Site.Params.github }}
-                <a href="{{ . }}" target="_blank"><i class="fa fa-github"></i></a>
-            {{ end }}
-            {{ with .Site.Params.linkedin }}
-                <a href="{{ . }}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                {{ with .Site.Params.facebook }}
+                    <a href="{{ . }}" target="_blank"><i class="fa fa-facebook"></i></a>
+                {{ end }}
+                {{ with .Site.Params.twitter }}
+                    <a href="{{ . }}" target="_blank"><i class="fa fa-twitter"></i></a>
+                {{ end }}
+                {{ with .Site.Params.googleplus }}
+                    <a href="{{ . }}" target="_blank"><i class="fa fa-google-plus-official"></i></a>
+                {{ end }}
+                {{ with .Site.Params.xing }}
+                    <a href="{{ . }}" target="_blank"><i class="fa fa-xing"></i></a>
+                {{ end }}
+                {{ with .Site.Params.pinterest }}
+                    <a href="{{ . }}" target="_blank"><i class="fa fa-pinterest"></i></a>
+                {{ end }}
+                {{ with .Site.Params.instagram }}
+                    <a href="{{ . }}" target="_blank"><i class="fa fa-instagram"></i></a>
+                {{ end }}
+                {{ with .Site.Params.tumblr }}
+                    <a href="{{ . }}" target="_blank"><i class="fa fa-tumblr"></i></a>
+                {{ end }}
+                {{ with .Site.Params.youtube }}
+                    <a href="{{ . }}" target="_blank"><i class="fa fa-youtube"></i></a>
+                {{ end }}
+                {{ with .Site.Params.vimeo }}
+                    <a href="{{ . }}" target="_blank"><i class="fa fa-vimeo"></i></a>
+                {{ end }}
+                {{ with .Site.Params.github }}
+                    <a href="{{ . }}" target="_blank"><i class="fa fa-github"></i></a>
+                {{ end }}
+                {{ with .Site.Params.linkedin }}
+                    <a href="{{ . }}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                {{ end }}
+            </div>
+
+            {{ if gt .Site.Languages 1 }}
+                {{- $.Scratch.Set "language" .Language -}}
+                <div class="languages">
+                    <strong>{{ i18n "otherLanguages" }}</strong>
+                    {{ range .Site.Languages }}
+                        {{ if eq ($.Scratch.Get "language") . }}
+                            <a href="{{ . | relURL }}" class="active">{{ . }}</a>
+                        {{ else }}
+                            <a href="{{ . | relURL }}">{{ . }}</a>
+                        {{ end }}
+                    {{ end }}
+                </div>
             {{ end }}
         </div>
     </div>

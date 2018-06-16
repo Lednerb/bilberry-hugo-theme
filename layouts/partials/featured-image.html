@@ -4,4 +4,10 @@
             <img src="{{ (.Resources.GetMatch "featuredImage.*").RelPermalink }}" alt="">
         </a>
     </div>
+{{ else if and (isset .Params "featuredimage") (ne .Params.featuredImage "") }}
+    <div class="featured-image">
+        <a href="{{ .URL }}">
+            <img src="{{ .Params.featuredImage | relURL }}" alt="">
+        </a>
+    </div>
 {{ end }}

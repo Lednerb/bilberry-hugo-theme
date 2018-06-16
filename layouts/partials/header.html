@@ -1,7 +1,7 @@
 <header>
     <div class="container">
         <div class="logo">
-            <a href="{{ .Site.BaseURL }}" class="logo">
+            <a href="{{ .Site.BaseURL | relLangURL }}" class="logo">
                 {{ if (ne .Site.Params.customImage "") }}
                     <img src="{{ .Site.Params.customImage }}" alt="">
                 {{ else }}
@@ -12,11 +12,24 @@
             </a>
         </div>
         <div class="titles">
-            <h3 class="title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h3>
+            <h3 class="title"><a href="{{ .Site.BaseURL | relLangURL }}">{{ .Site.Title }}</a></h3>
             {{ with .Site.Params.Subtitle }}
                 <span class="subtitle">{{ . }}</span>
             {{ end }}
         </div>
+
+        {{ if gt .Site.Languages 1}}
+            {{- $.Scratch.Set "language" .Language -}}
+            <div class="languages">
+                {{ range .Site.Languages }}
+                    {{ if eq ($.Scratch.Get "language") . }}
+                        <a href="{{ . | relURL }}" class="active">{{ . }}</a>
+                    {{ else }}
+                        <a href="{{ . | relURL }}">{{ . }}</a>
+                    {{ end }}
+                {{ end }}
+            </div>
+        {{ end }}
 
         {{ if .Site.Params.permanentTopNav }}
         <div class="toggler permanentTopNav">

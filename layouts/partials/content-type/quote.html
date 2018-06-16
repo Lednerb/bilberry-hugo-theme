@@ -8,6 +8,6 @@
     {{ end }}
     <blockquote>
         {{ .Content }}
-        <cite><a href="{{ "/author/" | relURL }}{{ .Params.author | urlize }}">{{ .Params.author }}</a></cite>
+        <cite><a href="{{ (print "/author/" .Params.author | urlize) | relLangURL }}">{{ .Params.author }}</a></cite>
     </blockquote>
 </article>

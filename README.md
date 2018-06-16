@@ -95,13 +95,16 @@ If you want to include the algolia search for your site, you have to follow thes
 3. Switch over to `Indices` and create a new one.
 4. Switch over to `API Keys` and copy your `Application ID`, `Search-Only API Key` and chosen `Index name` to your `config.toml` file.
 5. Ensure that `algolia_search = true` is set.
+6. Check the next section [Update the search index](#update-the-search-index), follow the steps and come back again
+7. Back in your algolia index, switch to `DISPLAY` and select `language` in the `Attributes for faceting` option.
+8. Done.
 
 
 ### Update the search index
 You have to repeat this step every time you change a post or publish a new one to update the search index.
 
 1. Publish your changes via the `hugo` command.
-2. Head over to `http://your-site.com/index.json` and copy everything in there
+2. Head over to the `public/index.json` file and copy everything in there
 3. Login to your algolia account, open your index and click at `Add records manually`
 4. Paste the copied text from the `index.json` file.
 5. Done.

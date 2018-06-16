@@ -4,18 +4,26 @@
 
 <article class="gallery">
 
-    {{ if ne .Params.imageSlider false }}
-    <div class="flexslider">
-        <ul class="slides">
-        {{ range .Resources.ByType "image" }}
-            <li><img src="{{ .RelPermalink }}" /></li>
-        {{ end }}
-        </ul>
-    </div>
+    {{ if and (isset .Params "gallery") (ne .Params.gallery "") }}
+        <div class="flexslider">
+            <ul class="slides">
+            {{ range .Params.gallery }}
+                <li><img src="{{ . | relURL }}" /></li>
+            {{ end }}
+            </ul>
+        </div>
+    {{ else if ne .Params.imageSlider false }}
+        <div class="flexslider">
+            <ul class="slides">
+            {{ range .Resources.ByType "image" }}
+                <li><img src="{{ .RelPermalink }}" /></li>
+            {{ end }}
+            </ul>
+        </div>
     {{ else}}
         {{ partial "featured-image" . }}
     {{ end }}
 
     {{ partial "default-content" . }}
-    {{ partial "tag-footer" . }}
+    {{ partial "article-footer" . }}
 </article>

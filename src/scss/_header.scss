@@ -77,6 +77,32 @@ header {
         }
     }
 
+    .languages {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: $special-color;
+        padding: 0.25em 1em;
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+
+        a {
+            text-transform: uppercase;
+            font-size: 0.8em;
+            color: $page-background-color;
+            letter-spacing: 0.1em;
+
+            &.active {
+                font-weight: bold;
+            }
+
+            &:not(:last-child):after {
+                content: " | ";
+                color: inherit;
+            }
+        }
+    }
+
     .toggler {
         position: absolute;
         right: 0;
