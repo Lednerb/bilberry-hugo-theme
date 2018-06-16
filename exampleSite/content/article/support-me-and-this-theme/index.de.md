@@ -2,7 +2,6 @@
 title: "Unterstütze mich und dieses Theme"
 date: 2017-11-01T18:10:14+01:00
 
-categories: []
 tags: ['Patreon', 'Überleben', 'Einkommen', 'Support', 'Sag Danke!']
 author: "Lednerb"
 noSummary: true

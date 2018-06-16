@@ -2,7 +2,6 @@
 title: "Support Me and This Theme"
 date: 2017-11-01T18:10:14+01:00
 
-categories: []
 tags: ['Patreon', 'Survival', 'Income', 'Support', 'Say Thanks!']
 author: "Lednerb"
 noSummary: true
