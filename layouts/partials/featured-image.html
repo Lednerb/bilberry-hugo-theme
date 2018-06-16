@@ -1,7 +1,7 @@
-{{ if and (isset .Params "featuredimage") (ne .Params.featuredImage "") }}
+{{ if .Resources.GetMatch "featuredImage.*" }}
     <div class="featured-image">
         <a href="{{ .URL }}">
-            <img src="{{ .Params.featuredImage | relURL }}" alt="">
+            <img src="{{ (.Resources.GetMatch "featuredImage.*").RelPermalink }}" alt="">
         </a>
     </div>
 {{ end }}
