@@ -28,6 +28,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
     - [Responsive Design](#responsive-design)
     - [Permanent Top Navigation](#permanent-top-navigation)
     - [MathJAX Markup](#mathjax-markup)
+- [Custom 404 site](#custom-404-site)
 - [Custom Post Types](#custom-post-types)
 - [Custom colors and fonts](#custom-colors-and-fonts)
 - [CSS and JS modules](#css-and-js-modules)
@@ -85,7 +86,7 @@ You can test it on the demo site.
 Just click on the navigation bar at the top right of the header.
 
 
-### Setup
+#### Setup
 If you do not want to use the search functionality set `algolia_search = false` in your `config.toml` file.
 
 If you want to include the algolia search for your site, you have to follow these steps:
@@ -100,7 +101,7 @@ If you want to include the algolia search for your site, you have to follow thes
 8. Done.
 
 
-### Update the search index
+#### Update the search index
 You have to repeat this step every time you change a post or publish a new one to update the search index.
 
 1. Publish your changes via the `hugo` command.
@@ -171,6 +172,12 @@ Note that on mobile devices the navigation will still be collapsed because other
 
 If you want to add [MathJAX](https://www.mathjax.org) markup support, set parameter `enable_mathjax` option to `true` in your site's config file.
 
+## Custom 404 site
+If you want to customize your 404 site, copy the `themes/bilberry-hugo-theme/layouts/404.html` to your local `layouts/404.html` and edit the file.
+
+You can quickly change the message and / or the icon class for example.
+Otherwise, you can replace the whole content with your 404 site markup.
+
 ## Custom Post Types
 If you want to add a custom post type to change the icon in the bubble on the left column you can simply create those as you wish.
 
@@ -194,7 +201,7 @@ If you want to change the default post types (e.g., don't use the pencil icon on
 Otherwise, your changes would be overwritten when you update to the latest theme version.
 
 
-# Custom colors and fonts
+## Custom colors and fonts
 Bilberry uses SCSS for styling and a Webpack-based workflow to dynamically create the combined and compresses production-ready stylesheets.
 
 If you want to change any colors or fonts, you have follow these steps:
@@ -216,7 +223,7 @@ Follow the steps 1-7 to implement your custom font to your site.
 _Note:_ You don't have to upload the `node_modules` folder to your webspace, this is only created and needed to generate your customized stylesheets.
 
 
-# CSS and JS modules
+## CSS and JS modules
 This theme supports hot-swappable CSS and JavaScript extentions. Modules can be specified using the `(css|js)_modules` list parameter. Modules can be specified either relative to the `static` directory (e.g. `exampleSite/static/css/custom.css`) or as a URL.
 
 Modules are imported in the order they appear in the list, and immediately after the default Bilberry CSS and JS files are imported.
