@@ -1,5 +1,9 @@
 - id: categories
   translation: "カテゴリー"
+- id: authors
+  translation: "著者"
+- id: tags
+  translation: "タグ"
 - id: socialMedia
   translation: "ソーシャルメディア"
 - id: latestPosts

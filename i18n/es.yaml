@@ -1,5 +1,9 @@
 - id: categories
   translation: "Categorías"
+- id: authors
+  translation: "Autores"
+- id: tags
+  translation: "Tags"
 - id: socialMedia
   translation: "Medio social"
 - id: latestPosts
