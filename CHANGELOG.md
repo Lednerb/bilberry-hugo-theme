@@ -6,6 +6,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.7.0] - 2018-06-17 | :tada: Multi-Language Support :tada:
+### Added
+- __Multi-Language Support__ <br>
+  You can now have your blog and blog posts in many languages. <br>
+  The algolia search does also support a multi-language site.
+- Support for [Page Resources](http://gohugo.io/content-management/page-resources/)
+- Increased privacy by removing dependencies from CDNs and Google Fonts
+- Japanese language file, contributed by @chibikun
+- Easier `gallery` and `featuredImage` handling. See announcement in [1.6.0]
+- Instructions to customize `404.html` site (#46)
+- Default values to prevent rendering issues when `config.toml` variables are not set (#65)
+
+### Fixed
+- URLs for posts, categories, tags, and authors, thanks to @anhchungite
+- CSS import with different baseURL (#68)
+- Space for top-nav (#80)
+- Pages for the taxonomy overviews (categories, tags and authors) (#59)
+
+
 ## [1.6.0] - 2018-06-11
 ### Deprecated
 - `featuredImage: "/absolute/url/to/image"` parameter <br>
@@ -87,7 +106,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Some typos
 
 
-[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.6.0...master
+[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.7.0...master
+[1.7.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.6.0...1.7.0
 [1.6.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.5.0...1.6.0
 [1.5.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.4.0...1.5.0
 [1.4.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.3.0...1.4.0
