@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.7.1] - 2018-06-17 | Hotfix
+### Fixed
+- Broken links in favicon, algolia-logo and `theme.css`
+
+
 ## [1.7.0] - 2018-06-17 | :tada: Multi-Language Support :tada:
 ### Added
 - __Multi-Language Support__ <br>
@@ -106,7 +111,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Some typos
 
 
-[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.7.0...master
+[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.7.1...master
+[1.7.1]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.7.0...1.7.1
 [1.7.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.6.0...1.7.0
 [1.6.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.5.0...1.6.0
 [1.5.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.4.0...1.5.0
