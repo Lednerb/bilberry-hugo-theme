@@ -50,21 +50,54 @@ footer {
             }
         }
 
-        .social-media {
+        .right {
+            .social-media {
+
+                width: 100%;
+                margin-bottom: 2em;
+
+                a {
+                    font-size: 2em;
+                    margin: 0 0.5rem;
+                    color: #444;
+
+                    &:hover {
+                        color: $highlight-color;
+                    }
+                }
+            }
+
+            .languages {
+                width: 100%;
+
+                margin-left: 0;
+
+                a {
+                    text-transform: uppercase;
+                    color: $highlight-color;
+                    letter-spacing: 0.1em;
+
+                    &.active {
+                        font-weight: bold;
+                    }
+
+                    &:hover {
+                        color: $text-color;
+                    }
+
+                    &:not(:last-child):after {
+                        content: " | ";
+                        color: $text-color !important;
+                    }
+                }
+            }
+
             strong {
                 display: block;
             }
 
-            a {
-                font-size: 2em;
-                margin: 0 0.5rem;
-                color: #444;
-
-                &:hover {
-                    color: $highlight-color;
-                }
-            }
         }
+
     }
 }
 

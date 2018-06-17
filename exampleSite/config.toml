@@ -4,7 +4,7 @@ theme = "bilberry-hugo-theme"
 
 enableRobotsTXT = true
 
-# Change to your content language. Supported values: en, de, es, fr, ru
+# Change to one of your content languages definded at the end.
 DefaultContentLanguage = "en"
 
 # Enable / Disable Google Analytics statistics for your site
@@ -40,6 +40,8 @@ disqusShortname = "bilberry-hugo-theme"
   algolia_appId     = "Y2C4RWMPXW"
   algolia_apiKey    = "50ea7f8c41c0ad233926e0be2b769ed1"
   algolia_indexName = "default-content"
+    # Set this option to false if you want to search within all articles in all languages at once
+    algolia_currentLanguageOnly = true
 
   # Header configuration
     # your subtitle if you want to use any
@@ -54,6 +56,9 @@ disqusShortname = "bilberry-hugo-theme"
     # always display the top navigation (with pages and search) on non-mobile screens
     permanentTopNav = false
 
+    # show a language chooser in the header
+    showHeaderLanguageChooser = true
+
     # credits line configuration
     copyrightBy = "by Lednerb"
     copyrightUseCurrentYear = false  # set to true to always display the current year in the copyright
@@ -63,6 +68,7 @@ disqusShortname = "bilberry-hugo-theme"
     creditsUrl = "https://github.com/Lednerb/bilberry-hugo-theme"
 
   # social media profile urls for the footer links
+  showSocialMedia = true
   facebook   = ""
   twitter    = "https://twitter.com/TheRealLednerb"
   googleplus = ""
@@ -75,7 +81,17 @@ disqusShortname = "bilberry-hugo-theme"
   xing       = ""
   linkedin   = ""
 
-# don't change anything here
+# customize your available languages for your multi-langual site
+# or delete the [Languages] blog to use the theme with only one supported language
+[Languages]
+  [Languages.en]
+    weight = 1
+  [Languages.de]
+    weight = 2
+    title = "Mein cooler neuer Blog"
+    subtitle = "Hallo Welt! Dies ist der epischste Untertitel aller Zeiten."
+
+# don't change anything below
 [taxonomies]
   author   = "author"
   tag      = "tags"
@@ -84,3 +100,4 @@ disqusShortname = "bilberry-hugo-theme"
 [outputs]
   home = [ "HTML", "JSON" ]
   page = [ "HTML" ]
+

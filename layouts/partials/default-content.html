@@ -6,13 +6,13 @@
         {{ with .Params.categories }}
             <span class="categories">
                 {{ range . }}
-                    <a href="{{ "/categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+                    <a href="{{ (print "/categories/" ( . | urlize)) | relLangURL }}">{{ . }}</a>
                 {{ end }}
             </span>
         {{ end }}
 
         {{ with .Params.author }}
-            <span class="author"><a href="{{ "/author/" | relURL }}/{{ . | urlize }}">{{ . }}</a></span>
+            <span class="author"><a href="{{ (print "/author/" (. | urlize)) | relLangURL }}">{{ . }}</a></span>
         {{ end }}
     </div>
 

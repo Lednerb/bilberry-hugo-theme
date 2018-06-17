@@ -1,6 +1,12 @@
 window.$ = window.jQuery = require('jquery');
 
+require('autocomplete.js/dist/autocomplete.jquery.min.js');
+
 require('flexslider');
+require('instantsearch.js');
+window.moment = require('moment');
+window.algoliasearch = require('algoliasearch');
+
 const hljs = require('highlight.js');
 
 $(document).ready(function() {

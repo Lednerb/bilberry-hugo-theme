@@ -2,15 +2,13 @@
 title: "Support Me and This Theme"
 date: 2017-11-01T18:10:14+01:00
 
-featuredImage: "/images/patreon.png"
-categories: []
 tags: ['Patreon', 'Survival', 'Income', 'Support', 'Say Thanks!']
 author: "Lednerb"
 noSummary: true
 ---
 Hey there!
 
-This Premium Theme is published under an open source license so you can use it for your blog. It took me more than 40 hours of work to create one of the best Hugo themes out there.
+This Premium Theme is published under an open source license so you can use it for your blog. It took me more than 50 hours of work to create one of the best Hugo themes out there.
 
 If you enjoy this theme (and especially if you make money with your blog) and want to use it for your site, please consider a small or generous monthly support towards me so I can keep up supporting and maintaining this theme in the future.
 
@@ -30,7 +28,7 @@ You don't want to use Patreon? Just write me a short mail and we'll find a solut
       ltr = coded.charAt(i)
       link += (ltr)
     }
-    else {     
+    else {
       ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
       link += (key.charAt(ltr))
     }

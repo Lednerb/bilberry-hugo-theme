@@ -37,18 +37,19 @@ nav {
 
     ul {
         list-style: none;
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
         margin: 0;
-        max-width: 500px;
 
         li {
             margin-bottom: 0;
-            float: left;
+            display: flex;
 
             a {
-                display: flex;
-                padding: 1em 1.5em;
                 text-align: center;
+                padding: 1em 1.5em;
+                display: flex;
 
                 &:hover {
                     color: inherit;
@@ -61,7 +62,7 @@ nav {
     // Algolia-Search
     .search {
         margin-left: auto;
-        width: 45%;
+        // width: 45%;
         min-width: 300px;
         position: relative;
 

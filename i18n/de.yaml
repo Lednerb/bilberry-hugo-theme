@@ -1,5 +1,9 @@
 - id: categories
   translation: "Kategorien"
+- id: authors
+  translation: "Autoren"
+- id: tags
+  translation: "Tags"
 - id: socialMedia
   translation: "Social media"
 - id: latestPosts
@@ -16,3 +20,5 @@
   translation: "[zurück]"
 - id: continueReading
   translation: "Weiterlesen"
+- id: otherLanguages
+  translation: "Andere Sprachen"

@@ -1,0 +1,28 @@
+{{ with .Params.tags }}
+<div class="footer">
+{{ else }}
+<div class="footer no-tags">
+{{ end }}
+
+    {{ with .Params.tags }}
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                {{ range . }}
+                    <a href="{{ (print "/tags/" (. | urlize)) | relLangURL }}">{{ . }}</a>
+                {{ end }}
+            </div>
+        </div>
+    {{ end }}
+
+    {{ if .IsTranslated }}
+    <div class="languages">
+        <i class="fa fa-language"></i>
+        <div class="links">
+            {{ range .Translations }}
+                <a href="{{ .Permalink }}">{{ .Lang }}</a>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>

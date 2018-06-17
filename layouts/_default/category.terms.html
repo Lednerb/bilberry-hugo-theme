@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<div class="content">
+    <div class="article-wrapper u-cf single">
+        <a class="bubble" href="{{ "/categories/" | relLangURL}}">
+            <i class="fa fa-fw fa-list"></i>
+        </a>
+
+        <article class="article">
+            <div class="content">
+                <h3>{{ i18n "categories" }}</h3>
+                <hr>
+                <ul id="all-categories">
+                    {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+                        <li><a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize }} ({{ $taxonomy.Count }})</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+        </article>
+    </div>
+</div>
+{{ end }}

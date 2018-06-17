@@ -6,12 +6,13 @@ mix.setPublicPath('../static/dist')
     .copy('node_modules/font-awesome/fonts', '../static/dist/fonts')
     .copy('node_modules/flexslider/fonts', '../static/dist/fonts')
     .combine([
-        'css/fonts.css',
         'node_modules/normalize.css/normalize.css',
         'node_modules/skeleton-css/css/skeleton.css',
         'node_modules/font-awesome/css/font-awesome.min.css',
         'node_modules/flexslider/flexslider.css',
         'node_modules/highlight.js/styles/zenburn.css',
+        'node_modules/instantsearch.js/dist/instantsearch.min.css',
+        'node_modules/instantsearch.js/dist/instantsearch-theme-algolia.min.css',
         'css/fontface.css',
         '../static/dist/theme.css'
     ], '../static/dist/theme.css')
