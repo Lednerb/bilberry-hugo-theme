@@ -39,7 +39,7 @@ article {
         padding: 2em;
 
         h3 {
-            font-size: 2.0em;
+            font-size: 1.75em;
             margin-bottom: 0.25em;
 
             a {
@@ -120,7 +120,7 @@ article {
         justify-content: space-between;
         background: transparentize($base-color, 0.90);
 
-        font-family: monospace;
+        font-family: $article-footer-font;
         font-size: 0.9em;
 
         &.no-tags {
