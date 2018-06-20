@@ -5,7 +5,7 @@
 {{ end }}
     <div class="container">
         <ul class="topnav">
-            {{ range where (where .Site.Pages ".Type" "page") ".IsPage" true }}
+            {{ range where (where .Site.Pages.ByWeight ".Type" "page") ".IsPage" true }}
                 {{ if .Params.excludeFromTopNav }}
                     {{/* Do nothing */}}
                 {{ else if and (isset .Params "link") (ne .Params.link "") }}
