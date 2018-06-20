@@ -1,0 +1,24 @@
+- id: categories
+  translation: "Kategorier"
+- id: authors
+  translation: "Forfattere"
+- id: tags
+  translation: "Tags"
+- id: socialMedia
+  translation: "Sociale medier"
+- id: latestPosts
+  translation: "Seneste indlæg"
+- id: search
+  translation: "Søg ..."
+- id: noSearchResults
+  translation: "Intet fundet."
+- id: olderPosts
+  translation: "Ældre indlæg"
+- id: newerPosts
+  translation: "Nyere indlæg"
+- id: footnoteReturnText
+  translation: "[retur]"
+- id: continueReading
+  translation: "Fortsæt med at læse"
+- id: otherLanguages
+  translation: "Andre sprog"
