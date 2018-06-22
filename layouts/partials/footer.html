@@ -30,17 +30,17 @@
 
         <div class="right">
             {{ if .Site.Params.showSocialMedia | default true }}
-            <div class="social-media">
+            <div class="external-profiles">
                 <strong>{{ i18n "socialMedia" }}</strong>
 
                 {{ with .Site.Params.facebook }}
-                    <a href="{{ . }}" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="{{ . }}" target="_blank"><i class="fa fa-facebook-adblock-proof"></i></a>
                 {{ end }}
                 {{ with .Site.Params.twitter }}
-                    <a href="{{ . }}" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="{{ . }}" target="_blank"><i class="fa fa-twitter-adblock-proof"></i></a>
                 {{ end }}
                 {{ with .Site.Params.googleplus }}
-                    <a href="{{ . }}" target="_blank"><i class="fa fa-google-plus-official"></i></a>
+                    <a href="{{ . }}" target="_blank"><i class="fa fa-google-plus-official-adblock-proof"></i></a>
                 {{ end }}
                 {{ with .Site.Params.xing }}
                     <a href="{{ . }}" target="_blank"><i class="fa fa-xing"></i></a>
@@ -55,7 +55,7 @@
                     <a href="{{ . }}" target="_blank"><i class="fa fa-tumblr"></i></a>
                 {{ end }}
                 {{ with .Site.Params.youtube }}
-                    <a href="{{ . }}" target="_blank"><i class="fa fa-youtube"></i></a>
+                    <a href="{{ . }}" target="_blank"><i class="fa fa-youtube-adblock-proof"></i></a>
                 {{ end }}
                 {{ with .Site.Params.vimeo }}
                     <a href="{{ . }}" target="_blank"><i class="fa fa-vimeo"></i></a>

@@ -51,7 +51,7 @@ footer {
         }
 
         .right {
-            .social-media {
+            .external-profiles {
 
                 width: 100%;
                 margin-bottom: 2em;
@@ -64,6 +64,24 @@ footer {
                     &:hover {
                         color: $highlight-color;
                     }
+                }
+
+                // Workaround to avoid conflicts with Adblock
+                // See: https://github.com/Lednerb/bilberry-hugo-theme/issues/95
+                .fa-facebook-adblock-proof:before {
+                    content:"\f09a";
+                }
+
+                .fa-twitter-adblock-proof:before {
+                    content:"\f099";
+                }
+
+                .fa-google-plus-official-adblock-proof:before {
+                    content:"\f2b3";
+                }
+
+                .fa-youtube-adblock-proof:before {
+                    content:"\f167";
                 }
             }
 
