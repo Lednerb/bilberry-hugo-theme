@@ -61,6 +61,7 @@ disqusShortname = "bilberry-hugo-theme"
 
 
   # Footer configuration
+    showFooter = true
 
     # How many articles should be displayed at latest posts in the footer?
     # Set to -1 to hide the 'Latest Posts' column
