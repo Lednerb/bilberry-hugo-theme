@@ -62,10 +62,15 @@ article {
                 font-style: normal;
             }
 
-            .categories, .author {
+            span {
                 &:before {
                     content: " / ";
                     margin: 0 1rem;
+                }
+
+                &:first-child:before {
+                    margin: 0 !important;
+                    content: "" !important;
                 }
 
                 a:not(:last-child):after {

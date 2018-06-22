@@ -8,7 +8,9 @@
         {{ end }}
     </div>
 
-    {{ template "_internal/disqus.html" . }}
+    {{ if ( .Params.showComments | default true ) }}
+        {{ template "_internal/disqus.html" . }}
+    {{ end }}
 
     {{ .Scratch.Set "singlePage" false }} <!-- RESET singlePage variable -->
 {{ end }}

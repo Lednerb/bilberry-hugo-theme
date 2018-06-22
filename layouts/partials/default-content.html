@@ -1,7 +1,9 @@
 <div class="content">
     <h3><a href="{{ .URL }}">{{ .Title }}</a></h3>
     <div class="meta">
-        <span class="date moment">{{ .PublishDate.Format "2006-01-02" }}</span>
+        {{ if ( .Params.showDate | default true ) }}
+            <span class="date moment">{{ .PublishDate.Format "2006-01-02" }}</span>
+        {{ end }}
 
         {{ with .Params.categories }}
             <span class="categories">
