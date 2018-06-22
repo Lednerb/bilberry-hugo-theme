@@ -1,29 +1,31 @@
 <footer>
     <div class="container">
+
+        {{ if gt (.Site.Params.amountLatestPostsInFooter | default 7) 0 }}
         <div class="recent-posts">
             <strong>{{ i18n "latestPosts" }}</strong>
                 <ul>
-                {{ range where (where (first 10 .Site.Pages.ByPublishDate.Reverse) ".Kind" "page") ".Type" "ne" "page" }}
+                {{ range where (where (first (.Site.Params.amountLatestPostsInFooter | default 7) .Site.Pages.ByPublishDate.Reverse) ".Kind" "page") ".Type" "ne" "page" }}
                     <li>
                         <a href="{{ .URL }}">{{ .Title }}</a>
                     </li>
                 {{ end }}
                 </ul>
         </div>
+        {{ end }}
 
+        {{ if and .Site.Taxonomies.categories (gt ( .Site.Params.amountCategoriesInFooter | default 7 ) 0 ) }}
         <div class="categories">
-            <strong>{{ i18n "categories" }}</strong>
-
-            {{ with .Site.Taxonomies.categories }}
+            <a href="{{ "/categories/" | relLangURL }}"><strong>{{ i18n "categories" }}</strong></a>
                 <ul>
-                {{ range $name, $taxonomy := . }}
+                {{ range $order, $taxonomy := (first ( .Site.Params.amountCategoriesInFooter | default 7 ) .Site.Taxonomies.categories.ByCount) }}
                     <li>
-                        <a href="{{ (print "/categories/" ($name | urlize)) | relLangURL }}">{{ $name | humanize }} ({{ $taxonomy.Count }})</a>
+                        <a href="{{ (print "/categories/" ($taxonomy.Name | urlize)) | relLangURL }}">{{ $taxonomy.Name | humanize }} ({{ $taxonomy.Count }})</a>
                     </li>
                 {{ end }}
-                </ul>
-            {{ end }}
+            </ul>
         </div>
+        {{ end }}
 
         <div class="right">
             {{ if .Site.Params.showSocialMedia | default true }}
@@ -66,7 +68,7 @@
             </div>
             {{ end }}
 
-            {{ if gt .Site.Languages 1 }}
+            {{ if and (.Site.Params.showFooterLanguageChooser | default true) (gt .Site.Languages 1) }}
                 {{- $.Scratch.Set "language" .Language -}}
                 <div class="languages">
                     <strong>{{ i18n "otherLanguages" }}</strong>

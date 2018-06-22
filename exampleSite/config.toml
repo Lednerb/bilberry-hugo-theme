@@ -1,5 +1,5 @@
 title = "My cool new Blog"
-baseURL = "https://example.com"
+baseURL = "https://lednerb.github.io/bilberry-hugo-theme"
 theme = "bilberry-hugo-theme"
 
 enableRobotsTXT = true
@@ -48,7 +48,7 @@ disqusShortname = "bilberry-hugo-theme"
     subtitle = "Hello World! This is the most epic subtitle ever."
 
     # if you want to use gravatar for the header image
-    gravatarEMail = ""
+    gravatarEMail = "code@lednerb.de"
 
     # set an path to the image file you want to use | overwrites gravatar
     customImage = ""
@@ -59,6 +59,35 @@ disqusShortname = "bilberry-hugo-theme"
     # show a language chooser in the header
     showHeaderLanguageChooser = true
 
+
+  # Footer configuration
+
+    # How many articles should be displayed at latest posts in the footer?
+    # Set to -1 to hide the 'Latest Posts' column
+    amountLatestPostsInFooter = 7
+
+    # How many categories should be displayed in the footer section?
+    # Set to -1 to hide the 'Categories' column
+    amountCategoriesInFooter = 7
+
+    # show a language chooser in the header
+    showFooterLanguageChooser = true
+
+    # social media profile urls for the footer links
+    showSocialMedia = true
+
+    facebook   = ""
+    twitter    = "https://twitter.com/TheRealLednerb"
+    googleplus = ""
+    pinterest  = ""
+    instagram  = ""
+    tumblr     = ""
+    youtube    = ""
+    vimeo      = ""
+    github     = "https://github.com/Lednerb"
+    xing       = ""
+    linkedin   = ""
+
     # credits line configuration
     copyrightBy = "by Lednerb"
     copyrightUseCurrentYear = false  # set to true to always display the current year in the copyright
@@ -67,19 +96,6 @@ disqusShortname = "bilberry-hugo-theme"
     creditsText = "Bilberry Hugo Theme"
     creditsUrl = "https://github.com/Lednerb/bilberry-hugo-theme"
 
-  # social media profile urls for the footer links
-  showSocialMedia = true
-  facebook   = ""
-  twitter    = "https://twitter.com/TheRealLednerb"
-  googleplus = ""
-  pinterest  = ""
-  instagram  = ""
-  tumblr     = ""
-  youtube    = ""
-  vimeo      = ""
-  github     = "https://github.com/Lednerb"
-  xing       = ""
-  linkedin   = ""
 
 # customize your available languages for your multi-langual site
 # or delete the [Languages] blog to use the theme with only one supported language
