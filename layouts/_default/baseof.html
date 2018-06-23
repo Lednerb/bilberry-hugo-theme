@@ -1,14 +1,50 @@
+{{- if not .Params.gallery -}}
+    {{- if not .Params.featuredImage -}}
+        {{ .Scratch.Set "image" (printf "https://www.gravatar.com/avatar/%s?size=200" (md5 .Site.Params.gravatarEMail)) }}
+    {{- else -}}
+        {{ .Scratch.Set "image" (.Params.featuredImage) }}
+    {{- end -}}
+{{- else -}}
+    {{ .Scratch.Set "image" (index (.Params.gallery) 0 | relURL | absURL) }}
+{{- end -}}
+{{- if ne .Description "" -}}
+    {{ .Scratch.Set "description" (.Description) }}
+{{- else -}}
+    {{- if eq .Title .Site.Title -}}
+        {{ .Scratch.Set "description" (.Site.Params.description) }}
+    {{- else -}}
+        {{ .Scratch.Set "description" (printf "%s - %s" (.Title) (.Site.Params.description)) }}
+    {{- end -}}
+{{- end -}}
+{{- if eq .Site.Title .Title -}}
+    {{ .Scratch.Set "title" (.Site.Params.subtitle) }}
+{{- else -}}
+    {{ .Scratch.Set "title" (.Title) }}
+{{- end -}}
+
 <!doctype html>
 <html class="no-js" lang="{{ .Site.Language.Lang }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <meta name="author" content="{{ .Site.Params.author }}">
         <meta name="description" content="{{ .Site.Params.description }}">
         <meta name="keywords" content="{{ .Site.Params.keywords }}">
         {{ .Hugo.Generator }}
-
+        <title>{{ block "title" . }} {{ .Scratch.Get "title" }} | {{ .Site.Title }}{{ end }}</title>
+        <meta name="description" content="{{ .Scratch.Get "description" }}">
+        <meta itemprop="name" content="{{ .Scratch.Get "title" }}">
+        <meta itemprop="description" content="{{ .Scratch.Get "description" }}">
+        <meta property="og:title" content="{{ .Scratch.Get "title" }}">
+        <meta property="og:description" content="{{ .Scratch.Get "description" }}">
+        <meta property="og:image" content="{{ .Scratch.Get "image" }}">
+        <meta property="og:url" content="{{ .URL | absURL }}">
+        <meta property="og:site_name" content="{{ .Site.Title }}">
+        {{- if .IsPage }}
+        <meta property="og:type" content="article">
+        {{- else -}}
+        <meta property="og:type" content="website">
+        {{- end }}
         <link rel="icon" type="image/png" href="{{ "favicon-32x32.png" | absURL }}" sizes="32x32">
         <link rel="icon" type="image/png" href="{{ "favicon-16x16.png" | absURL }}" sizes="16x16">
 
@@ -21,13 +57,6 @@
                 <link rel="stylesheet" href="{{ . | absURL }}">
             {{ end }}
         {{ end }}
-
-        {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
-        <title>
-            {{ block "title" . }}
-                {{ .Site.Title | default "My cool new blog" }} | {{ if eq .Site.Title .Title }}{{ .Site.Params.subtitle | default "Bilberry Theme" }}{{ else }}{{ .Title }}{{ end }}
-            {{ end }}
-        </title>
     </head>
     <body class="bilberry-hugo-theme">
         {{ partial "topnav" . }}
