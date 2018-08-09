@@ -115,6 +115,6 @@ disqusShortname = "bilberry-hugo-theme"
   category = "categories"
 
 [outputs]
-  home = [ "HTML", "JSON" ]
+  home = [ "HTML", "JSON", "RSS" ]
   page = [ "HTML" ]
 
