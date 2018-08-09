@@ -3,7 +3,7 @@
         <div class="logo">
             <a href="{{ .Site.BaseURL | relLangURL }}" class="logo">
                 {{ if and (isset .Site.Params "customimage") (ne .Site.Params.customImage "") }}
-                    <img src="{{ .Site.Params.customImage }}" alt="">
+                    <img src="{{ .Site.Params.customImage | relLangURL }}" alt="">
                 {{ else }}
                     <img src="https://www.gravatar.com/avatar/{{ md5 .Site.Params.gravatarEMail }}?d=mm&size=200" alt="">
                 {{ end }}
