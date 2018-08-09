@@ -123,7 +123,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Some typos
 
 
-[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.7.1...master
+[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.8.0...master
+[1.8.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.7.1...1.8.0
 [1.7.1]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.7.0...1.7.1
 [1.7.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.6.0...1.7.0
 [1.6.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.5.0...1.6.0
