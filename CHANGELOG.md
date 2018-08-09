@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.8.0] - 2018-08-09
+### Added
+- Vietnamese language, thanks to @anhchungite
+- Danish language, thanks to @GMpet
+- Open Graph meta data, thanks to @anhchungite again!
+- RSS support, contributed by @NickBusey
+
+### Fixed
+- Displaying custom image (#96 and #103), by @Embraser01 and @gigovich
+- Responsive images in posts
+
+
 ## [1.7.1] - 2018-06-17 | Hotfix
 ### Fixed
 - Broken links in favicon, algolia-logo and `theme.css`
