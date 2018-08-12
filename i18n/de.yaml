@@ -1,98 +1,24 @@
-[
-    {
-        "term": "categories",
-        "definition": "Kategorien",
-        "context": "Posts, Footer",
-        "term_plural": "",
-        "reference": "",
-        "comment": ""
-    },
-    {
-        "term": "authors",
-        "definition": "Autoren",
-        "context": "Posts",
-        "term_plural": "",
-        "reference": "",
-        "comment": ""
-    },
-    {
-        "term": "tags",
-        "definition": "Tags",
-        "context": "Posts",
-        "term_plural": "",
-        "reference": "",
-        "comment": ""
-    },
-    {
-        "term": "socialMedia",
-        "definition": "Social media",
-        "context": "Footer",
-        "term_plural": "",
-        "reference": "",
-        "comment": ""
-    },
-    {
-        "term": "latestPosts",
-        "definition": "Neuste Beitr\u00e4ge",
-        "context": "Footer",
-        "term_plural": "",
-        "reference": "",
-        "comment": ""
-    },
-    {
-        "term": "search",
-        "definition": "Suchen ...",
-        "context": "Search",
-        "term_plural": "",
-        "reference": "",
-        "comment": ""
-    },
-    {
-        "term": "noSearchResults",
-        "definition": "Nichts gefunden.",
-        "context": "Search",
-        "term_plural": "",
-        "reference": "",
-        "comment": ""
-    },
-    {
-        "term": "olderPosts",
-        "definition": "\u00c4ltere Beitr\u00e4ge",
-        "context": "Navigation",
-        "term_plural": "",
-        "reference": "",
-        "comment": ""
-    },
-    {
-        "term": "newerPosts",
-        "definition": "Neuere Beitr\u00e4ge",
-        "context": "Navigation",
-        "term_plural": "",
-        "reference": "",
-        "comment": ""
-    },
-    {
-        "term": "footnoteReturnText",
-        "definition": "[zur\u00fcck]",
-        "context": "Navigation",
-        "term_plural": "",
-        "reference": "",
-        "comment": ""
-    },
-    {
-        "term": "continueReading",
-        "definition": "Weiterlesen",
-        "context": "Posts",
-        "term_plural": "",
-        "reference": "",
-        "comment": ""
-    },
-    {
-        "term": "otherLanguages",
-        "definition": "Andere Sprachen",
-        "context": "Footer",
-        "term_plural": "",
-        "reference": "",
-        "comment": ""
-    }
-]
+- id: categories
+  translation: "Kategorien"
+- id: authors
+  translation: "Autoren"
+- id: tags
+  translation: "Tags"
+- id: socialMedia
+  translation: "Social media"
+- id: latestPosts
+  translation: "Neuste Beiträge"
+- id: search
+  translation: "Suchen ..."
+- id: noSearchResults
+  translation: "Nichts gefunden."
+- id: olderPosts
+  translation: "Ältere Beiträge"
+- id: newerPosts
+  translation: "Neuere Beiträge"
+- id: footnoteReturnText
+  translation: "[zurück]"
+- id: continueReading
+  translation: "Weiterlesen"
+- id: otherLanguages
+  translation: "Andere Sprachen"
