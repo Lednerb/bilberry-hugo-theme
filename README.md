@@ -1,5 +1,6 @@
 ## Bilberry Hugo Theme
 [![GitHub version](https://img.shields.io/github/release/Lednerb/bilberry-hugo-theme/all.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/releases)
+[![Discord](https://img.shields.io/discord/479643633814077465.svg?style=flat-square&label=Discord%20Chat&colorB=7289da)](https://discord.gg/vZVHJ4j)
 [![License](https://img.shields.io/github/license/Lednerb/bilberry-hugo-theme.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/blob/master/LICENSE.md)
 [![GitHub stars](https://img.shields.io/github/stars/Lednerb/bilberry-hugo-theme.svg?style=social&label=Stars)](https://github.com/Lednerb/bilberry-hugo-theme)
 
@@ -10,8 +11,6 @@ Bilberry is an adaption that comes with different optimizations and little featu
 <br>Click here for a [DEMO / PREVIEW](https://lednerb.github.io/bilberry-hugo-theme).
 
 If you like this theme and/or use it for commercial purposes, please support me!
-
-<a href="https://www.patreon.com/Lednerb" target="patreon"><img src="https://github.com/Lednerb/bilberry-hugo-theme/raw/master/images/patreon-button.png" height="40" alt="Become a Patron"></a>
 
 
 ## Table of Contents
@@ -34,7 +33,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
 - [CSS and JS modules](#css-and-js-modules)
 - [Credits](#credits)
 - [License](#license)
-- [Support Me and This Theme](#support-me-and-this-theme)
+- [Support and Discussions](#support-and-discussions)
 
 
 ## Quick Start
@@ -241,10 +240,7 @@ A big thank you goes to [@Ipstenu](https://github.com/Ipstenu) for his help in [
 The Bilberry Theme for HUGO is licensed under the MIT license.
 
 
-## Support Me and This Theme
-If you enjoy this theme (and especially if you make money with your blog) and want to use it for your site, please consider a small or generous monthly support towards me so I can keep up supporting and maintaining this theme in the future.
+## Support and Discussions
+If you enjoy this theme and want to stay up to date or just want to say thanks, have a look at this Discord Channel:
 
-<a href="https://www.patreon.com/Lednerb" target="_blank"><img src="https://github.com/Lednerb/bilberry-hugo-theme/raw/master/images/patreon-button.png" height="40" alt="Become a Patron"></a>
-
-You don’t want to use Patreon? <br>
-Just write me a short mail and we’ll find a solution: code@lednerb.de
+[![Discord](https://img.shields.io/discord/479643633814077465.svg?style=for-the-badge&label=Discord%20Chat&colorB=7289da)](https://discord.gg/vZVHJ4j)
