@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.8.1] - 2018-08-16
+### Added
+- Africans language
+
+### Changed
+- Removed Patreon example content and introduced the new Discord server: <br> [![Discord](https://img.shields.io/discord/479643633814077465.svg?style=for-the-badge&label=Discord%20Chat&colorB=7289da)](https://discord.gg/vZVHJ4j)
+- Language files from `.yaml` to `.toml` and switched to [POEditor](https://poeditor.com/projects/view?id=202795) for translations.
+
+
 ## [1.8.0] - 2018-08-09
 ### Added
 - Vietnamese language, thanks to @anhchungite
@@ -123,7 +132,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Some typos
 
 
-[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.8.0...master
+[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.8.1...master
+[1.8.1]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.8.0...1.8.1
 [1.8.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.7.1...1.8.0
 [1.7.1]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.7.0...1.7.1
 [1.7.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.6.0...1.7.0
