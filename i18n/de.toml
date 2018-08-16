@@ -1,0 +1,36 @@
+[categories]
+other = "Kategorien"
+
+[authors]
+other = "Autoren"
+
+[tags]
+other = "Tags"
+
+[socialMedia]
+other = "Social media"
+
+[latestPosts]
+other = "Neuste Beiträge"
+
+[search]
+other = "Suchen ..."
+
+[noSearchResults]
+other = "Nichts gefunden."
+
+[olderPosts]
+other = "Ältere Beiträge"
+
+[newerPosts]
+other = "Neuere Beiträge"
+
+[footnoteReturnText]
+other = "[zurück]"
+
+[continueReading]
+other = "Weiterlesen"
+
+[otherLanguages]
+other = "Andere Sprachen"
+

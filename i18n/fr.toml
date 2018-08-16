@@ -1,0 +1,36 @@
+[categories]
+other = "Catégories"
+
+[authors]
+other = "Auteurs"
+
+[tags]
+other = "Mots clés"
+
+[socialMedia]
+other = "Des médias sociaux"
+
+[latestPosts]
+other = "Derniers articles"
+
+[search]
+other = "Chercher ..."
+
+[noSearchResults]
+other = "Rien n'a été trouvé."
+
+[olderPosts]
+other = "Articles plus anciens"
+
+[newerPosts]
+other = "messages plus récents"
+
+[footnoteReturnText]
+other = "[revenir]"
+
+[continueReading]
+other = "continuer la lecture"
+
+[otherLanguages]
+other = "Autres langues"
+

@@ -1,7 +1,7 @@
 ## Bilberry Hugo Theme
 [![GitHub version](https://img.shields.io/github/release/Lednerb/bilberry-hugo-theme/all.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/releases)
-[![Discord](https://img.shields.io/discord/479643633814077465.svg?style=flat-square&label=Discord%20Chat&colorB=7289da)](https://discord.gg/vZVHJ4j)
 [![License](https://img.shields.io/github/license/Lednerb/bilberry-hugo-theme.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/blob/master/LICENSE.md)
+[![Discord](https://img.shields.io/discord/479643633814077465.svg?style=flat-square&label=Discord%20Chat&colorB=7289da)](https://discord.gg/vZVHJ4j)
 [![GitHub stars](https://img.shields.io/github/stars/Lednerb/bilberry-hugo-theme.svg?style=social&label=Stars)](https://github.com/Lednerb/bilberry-hugo-theme)
 
 
@@ -31,6 +31,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
 - [Custom Post Types](#custom-post-types)
 - [Custom colors and fonts](#custom-colors-and-fonts)
 - [CSS and JS modules](#css-and-js-modules)
+- [Translations](#translations)
 - [Credits](#credits)
 - [License](#license)
 - [Support and Discussions](#support-and-discussions)
@@ -227,6 +228,12 @@ This theme supports hot-swappable CSS and JavaScript extentions. Modules can be 
 
 Modules are imported in the order they appear in the list, and immediately after the default Bilberry CSS and JS files are imported.
 
+
+## Translations
+This theme has support for multi-language sites and therefore translations for 10+ languages.
+If you want to contribute and improve this theme for all users, please check our translation project at [POEditor](https://poeditor.com/projects/view?id=202795)
+
+Feel free to submit a request for a new language or improve existing ones!
 
 ## Credits
 Bilberry is inspired by the [WordPress theme Lingonberry](http://www.andersnoren.se/teman/lingonberry-wordpress-theme/), created by Anders Norén.
