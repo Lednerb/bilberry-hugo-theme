@@ -1,0 +1,36 @@
+[categories]
+other = "分類"
+
+[authors]
+other = "作者"
+
+[tags]
+other = "標籤"
+
+[socialMedia]
+other = "社交媒體"
+
+[latestPosts]
+other = "最新帖子"
+
+[search]
+other = "搜索..."
+
+[noSearchResults]
+other = "什麼都沒找到。"
+
+[olderPosts]
+other = "以前的帖子"
+
+[newerPosts]
+other = "較新的帖子"
+
+[footnoteReturnText]
+other = "[返回]"
+
+[continueReading]
+other = "繼續閱讀"
+
+[otherLanguages]
+other = "其他語言"
+
