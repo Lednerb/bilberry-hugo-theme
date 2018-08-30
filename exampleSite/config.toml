@@ -1,5 +1,5 @@
 title = "My cool new Blog"
-baseURL = "https://lednerb.github.io/bilberry-hugo-theme"
+baseURL = "https://example.com"
 theme = "bilberry-hugo-theme"
 
 enableRobotsTXT = true

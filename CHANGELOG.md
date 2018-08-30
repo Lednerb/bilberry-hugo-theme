@@ -6,7 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [1.9.0] - 2018-08-16
+## [1.9.1] - 2018-08-30
+### Fixed
+- Issues with the GoHugo Theme's requirements for the themes.gohugo.io site
+
+
+## [1.9.0] - 2018-08-30
 ### Added
 - All-Contributors list to README.md
 - Chinese language, thanks to @AgennyBrof
@@ -138,7 +143,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Some typos
 
 
-[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.9.0...master
+[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.9.1...master
+[1.9.1]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.9.0...1.9.1
 [1.9.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.8.1...1.9.0
 [1.8.1]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.8.0...1.8.1
 [1.8.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.7.1...1.8.0
