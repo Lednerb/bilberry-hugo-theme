@@ -2,7 +2,11 @@
     <h3><a href="{{ .URL }}">{{ .Title }}</a></h3>
     <div class="meta">
         {{ if ( .Params.showDate | default true ) }}
-            <span class="date moment">{{ .PublishDate.Format "2006-01-02" }}</span>
+            {{ if (.Site.Params.enableMomentJs | default true ) }}
+                <span class="date moment">{{ .PublishDate.Format "2006-01-02" }}</span>
+            {{ else }}
+                <span class="date">{{ .PublishDate.Format (.Site.Params.DateFormat | default "2006-01-02") }}</span>
+            {{ end }}
         {{ end }}
 
         {{ with .Params.categories }}

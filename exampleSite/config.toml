@@ -62,6 +62,14 @@ disqusShortname = "bilberry-hugo-theme"
     # show a language chooser in the header
     showHeaderLanguageChooser = true
 
+  # Content configuration
+    # enable automatical localization of the article's PublishedDate with momentjs
+    enableMomentJs = true
+
+    # customize the date format | only works if momentjs is disabled | only works with English month names
+    # you can customize it with the options you find here:
+    # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+    dateFormat = "2006-01-02"
 
   # Footer configuration
     showFooter = true
