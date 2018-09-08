@@ -53,6 +53,9 @@ disqusShortname = "bilberry-hugo-theme"
     # set an path to the image file you want to use | overwrites gravatar
     customImage = ""
 
+    # define the icon you want to use for the overlay for the customImage or gravatar.
+    overlayIcon = "fa-home"
+
     # always display the top navigation (with pages and search) on non-mobile screens
     permanentTopNav = false
 
