@@ -97,6 +97,10 @@ article {
             }
         }
 
+        .task-list ul {
+            list-style: none;
+        }
+
         blockquote {
             background-color: #f6f6f6;
             font-family: $headline-font;
@@ -116,7 +120,7 @@ article {
                 margin-bottom: 0;
             }
         }
-		
+
 	img {
             width: 100%;
         }
