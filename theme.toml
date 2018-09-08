@@ -5,7 +5,7 @@ description = "Bilberry is a premium hugo theme with a lot of nice features. It 
 homepage = "https://lednerb.github.io/bilberry-hugo-theme/"
 tags = ["blog", "personal", "responsive", "algolia", "disqus", "search", "font awesome", "pages", "posts", "multilingual", "highlight.js", "syntax highlighting", "premium", "shortcuts"]
 features = ["search", "algolia integration", "post types", "i18n", 'multilangual', 'blog', 'google analytics', 'comments', 'disqus integration', "highlight.js", "syntax highlighting", "premium theme", "shortcuts"]
-min_version = "0.43"
+min_version = "0.46"
 
 theme_version = "1.10.0"
 

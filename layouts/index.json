@@ -1,15 +1,15 @@
 {{- $.Scratch.Add "index" slice -}}
 
 {{- range $name, $taxonomy := .Site.Taxonomies.categories -}}
-    {{- $.Scratch.Add "index" (dict "url" (print "/categories/" $name | relURL) "title" ($name | humanize) "iconClass" "fa-folder" "type" "category" "objectID" (print "/categories/" $name | relURL) ) -}}
+    {{- $.Scratch.Add "index" (dict "url" (print "/categories/" $name | absURL) "title" ($name | humanize) "iconClass" "fa-folder" "type" "category" "objectID" (print "/categories/" $name | absURL) ) -}}
 {{- end -}}
 
 {{- range $name, $taxonomy := .Site.Taxonomies.author -}}
-    {{- $.Scratch.Add "index" (dict "url" (print "/author/" $name | relURL) "title" ($name | humanize) "iconClass" "fa-user" "type" "author" "objectID" (print "/author/" $name | relURL) ) -}}
+    {{- $.Scratch.Add "index" (dict "url" (print "/author/" $name | absURL) "title" ($name | humanize) "iconClass" "fa-user" "type" "author" "objectID" (print "/author/" $name | absURL) ) -}}
 {{- end -}}
 
 {{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
-    {{- $.Scratch.Add "index" (dict "url" (print "/tags/" $name | relURL) "title" ($name | humanize) "iconClass" "fa-tag" "type" "tag" "objectID" (print "/tags/" $name | relURL) ) -}}
+    {{- $.Scratch.Add "index" (dict "url" (print "/tags/" $name | absURL) "title" ($name | humanize) "iconClass" "fa-tag" "type" "tag" "objectID" (print "/tags/" $name | absURL) ) -}}
 {{- end -}}
 
 {{- range where .Pages "Type" "not in"  (slice "page" "json") -}}
@@ -29,7 +29,7 @@
             {{- .Scratch.Set "iconClass" "fa-music" -}}
         {{- end -}}
 
-        {{- $.Scratch.Add "index" (dict "url" .RelPermalink "title" .Title "tags" .Params.tags "categories" .Params.categories "author" .Params.author "type" .Type "language" .Lang "iconClass" (.Scratch.Get "iconClass") "objectID" (.RelPermalink | md5) ) -}}
+        {{- $.Scratch.Add "index" (dict "url" .Permalink "title" .Title "tags" .Params.tags "categories" .Params.categories "author" .Params.author "type" .Type "language" .Lang "iconClass" (.Scratch.Get "iconClass") "objectID" (.Permalink | md5) ) -}}
     {{- end -}}
 {{- end -}}
 

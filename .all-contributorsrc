@@ -1,0 +1,183 @@
+{
+  "projectName": "bilberry-hugo-theme",
+  "projectOwner": "Lednerb",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "Lednerb",
+      "name": "Sascha Brendel",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/2056876?v=4",
+      "profile": "https://sascha-brendel.de",
+      "contributions": [
+        "question",
+        "blog",
+        "code",
+        "design",
+        "doc",
+        "translation"
+      ]
+    },
+    {
+      "name": "Anna Brendel",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/2056876?v=4",
+      "profile": "https://anna-brendel.de",
+      "contributions": [
+        "ideas",
+        "translation"
+      ]
+    },
+    {
+      "login": "gigovich",
+      "name": "Givi Khojanashvili",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1560404?v=4",
+      "profile": "https://www.linkedin.com/in/khojanashvili/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "anhchungite",
+      "name": "Chung Tran Anh",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/28822504?v=4",
+      "profile": "https://github.com/anhchungite",
+      "contributions": [
+        "code",
+        "translation"
+      ]
+    },
+    {
+      "login": "cripplet",
+      "name": "Minke Zhang",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/3048682?v=4",
+      "profile": "http://blogzhang.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "aerohub",
+      "name": "Pavel Kanyshev",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/16353578?v=4",
+      "profile": "https://github.com/aerohub",
+      "contributions": [
+        "code",
+        "translation"
+      ]
+    },
+    {
+      "login": "marcelkraus",
+      "name": "Marcel Kraus",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/3541050?v=4",
+      "profile": "https://www.marcelkraus.de",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "NickBusey",
+      "name": "Nick Busey",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/280825?v=4",
+      "profile": "http://nickbusey.com/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "lkorzen",
+      "name": "lkorzen",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/4789253?v=4",
+      "profile": "https://github.com/lkorzen",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "ChrisStayte",
+      "name": "Chris Stayte",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/12019608?v=4",
+      "profile": "http://www.chrisstayte.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "meAmidos",
+      "name": "Dmitry Matrosov",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/405277?v=4",
+      "profile": "https://twitter.com/amidos_me",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Embraser01",
+      "name": "Marc-Antoine",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/8802277?v=4",
+      "profile": "https://marca.finch4.xyz/",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "nnja",
+      "name": "Nina Zakharenko",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/2030983?v=4",
+      "profile": "http://nnja.io",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "nisargap",
+      "name": "Nisarga",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/7719018?v=4",
+      "profile": "https://github.com/nisargap",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "pdoro",
+      "name": "Pablo Domingo Rojo",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/2817480?v=4",
+      "profile": "https://github.com/pdoro",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "rabarar",
+      "name": "Rob Baruch",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/4433144?v=4",
+      "profile": "https://github.com/rabarar",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "GMpet",
+      "name": "Taoshi",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/9339576?v=4",
+      "profile": "https://github.com/GMpet",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "nonumeros",
+      "name": "nonumeros",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/11535575?v=4",
+      "profile": "https://github.com/nonumeros",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
+}
