@@ -71,6 +71,9 @@ disqusShortname = "bilberry-hugo-theme"
     # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
     dateFormat = "2006-01-02"
 
+    # display the estimated reading time for an article
+    showReadingTime = false
+
   # Footer configuration
     showFooter = true
 

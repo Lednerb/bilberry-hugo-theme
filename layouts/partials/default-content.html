@@ -9,6 +9,10 @@
             {{ end }}
         {{ end }}
 
+        {{ if (.Site.Params.showReadingTime | default false ) }}
+            <span class="readingTime">{{ i18n "readingTime" .ReadingTime }}</span>
+        {{ end }}
+
         {{ with .Params.categories }}
             <span class="categories">
                 {{ range . }}
