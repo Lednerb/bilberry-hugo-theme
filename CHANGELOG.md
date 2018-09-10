@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.10.0] - 2018-09-10
+### Fixed
+- Incorrect rendering of task lists (#108)
+- Displaying the RSS line in the footer
+
+### Added
+- Support for hugo pipes, no longer need for `npm` dependencies (#102)
+- Option to configure the overlayIcon (#56)
+- Option to configure the date format (#53)
+- Option to display the Reading Time (#51)
+
+
 ## [1.9.1] - 2018-08-30
 ### Fixed
 - Issues with the GoHugo Theme's requirements for the themes.gohugo.io site
@@ -143,7 +155,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Some typos
 
 
-[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.9.1...master
+[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.10.0...master
+[1.10.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.9.1...1.10.0
 [1.9.1]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.9.0...1.9.1
 [1.9.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.8.1...1.9.0
 [1.8.1]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.8.0...1.8.1
