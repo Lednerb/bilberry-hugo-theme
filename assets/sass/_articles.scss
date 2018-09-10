@@ -97,6 +97,17 @@ article {
             }
         }
 
+        .task-list {
+            list-style: none;
+
+            .task-list-item {
+                margin-bottom: 0;
+                position: relative;
+                top: 3px;
+                margin-right: 0.25em;
+            }
+        }
+
         blockquote {
             background-color: #f6f6f6;
             font-family: $headline-font;
@@ -116,7 +127,7 @@ article {
                 margin-bottom: 0;
             }
         }
-		
+
 	img {
             width: 100%;
         }

@@ -53,12 +53,26 @@ disqusShortname = "bilberry-hugo-theme"
     # set an path to the image file you want to use | overwrites gravatar
     customImage = ""
 
+    # define the icon you want to use for the overlay for the customImage or gravatar.
+    overlayIcon = "fa-home"
+
     # always display the top navigation (with pages and search) on non-mobile screens
     permanentTopNav = false
 
     # show a language chooser in the header
     showHeaderLanguageChooser = true
 
+  # Content configuration
+    # enable automatical localization of the article's PublishedDate with momentjs
+    enableMomentJs = true
+
+    # customize the date format | only works if momentjs is disabled | only works with English month names
+    # you can customize it with the options you find here:
+    # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+    dateFormat = "2006-01-02"
+
+    # display the estimated reading time for an article
+    showReadingTime = false
 
   # Footer configuration
     showFooter = true
