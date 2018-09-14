@@ -1,5 +1,7 @@
 <div class="content">
-    <h3><a href="{{ .URL }}">{{ .Title }}</a></h3>
+    {{ if not .Params.restrictToTeaser }}
+        <h3><a href="{{ .URL }}">{{ .Title }}</a></h3>
+    {{ end }}
     <div class="meta">
         {{ if ( .Params.showDate | default true ) }}
             {{ if (.Site.Params.enableMomentJs | default true ) }}
@@ -26,7 +28,7 @@
         {{ end }}
     </div>
 
-    {{ if or (.Scratch.Get "singlePage") (.Params.noSummary) }}
+    {{ if or (.Scratch.Get "singlePage") (.Params.noSummary) (.Params.restrictToTeaser) }}
         {{ .Content }}
     {{ else }}
         {{ .Summary }}

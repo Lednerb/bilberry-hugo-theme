@@ -1,6 +1,10 @@
-<a class="bubble" href="{{ .URL }}">
-    <i class="fa fa-fw fa-file"></i>
-</a>
+{{ if not .Params.restrictToTeaser }}
+    <a href="{{ .URL }}">
+{{ end }}
+    <span class="bubble"><i class="fa fa-fw fa-file"></i></span>
+{{ if not .Params.restrictToTeaser }}
+    </a>
+{{ end }}
 
 <article class="default article">
     {{ partial "featured-image" . }}

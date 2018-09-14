@@ -6,8 +6,12 @@
     </div>
 {{ else if and (isset .Params "featuredimage") (ne .Params.featuredImage "") }}
     <div class="featured-image">
-        <a href="{{ .URL }}">
+        {{ if not .Params.restrictToTeaser }}
+            <a href="{{ .URL }}">
+        {{ end }}
             <img src="{{ .Params.featuredImage | relURL }}" alt="">
-        </a>
+        {{ if not .Params.restrictToTeaser }}
+            </a>
+        {{ end}}
     </div>
 {{ end }}
