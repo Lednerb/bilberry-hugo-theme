@@ -34,3 +34,6 @@ other = "더보기"
 [otherLanguages]
 other = "다국어"
 
+[readingTime]
+other = "{{.Count}} 분"
+
