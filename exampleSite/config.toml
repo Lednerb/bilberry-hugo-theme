@@ -63,6 +63,9 @@ disqusShortname = "bilberry-hugo-theme"
     showHeaderLanguageChooser = true
 
   # Content configuration
+    # Enable an optional pinned page to display at the top of the index
+    # pinnedPost = "/content/github/"
+
     # enable automatical localization of the article's PublishedDate with momentjs
     enableMomentJs = true
 
