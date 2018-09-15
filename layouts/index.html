@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ $paginator := .Paginate (where .Data.Pages "Type" "ne" "page") (index .Site.Params "paginate" | default 7) }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "ne" "page" | intersect (where .Site.RegularPages "Params.excludefromindex" "==" nil)) (index .Site.Params "paginate" | default 7) }}
 
     {{ if .Site.Params.pinnedPost }}
         {{ if (and .Site.Params.pinOnlyToFirstPage (ne $paginator.PageNumber 1)) }}
@@ -12,7 +12,7 @@
         {{end}}
     {{end}}
 
-    {{ range  where .Paginator.Pages "Type" "ne" "page" }}
+    {{ range $paginator.Pages }}
         {{ partial "article-wrapper" . }}
     {{ end }}
 
