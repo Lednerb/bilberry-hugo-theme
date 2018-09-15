@@ -1,5 +1,6 @@
 title = "My cool new Blog"
-baseURL = "https://example.com"
+# Add an trailing slash to ensure that all fonts render correctly.
+baseURL = "https://example.com/"
 theme = "bilberry-hugo-theme"
 
 enableRobotsTXT = true
