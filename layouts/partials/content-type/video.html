@@ -1,5 +1,6 @@
+
 <a class="bubble" href="{{ .URL }}">
-    <i class="fa fa-fw fa-video-camera"></i>
+    <i class="fa fa-fw {{or .Params.icon "fa-video-camera" }}"></i>
 </a>
 
 <article class="video">

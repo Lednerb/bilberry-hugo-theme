@@ -1,5 +1,5 @@
 <a class="bubble" href="{{ .URL }}">
-    <i class="fa fa-fw fa-file"></i>
+    <i class="fa fa-fw {{or .Params.icon "fa-file" }}"></i>
 </a>
 
 <article class="default article">
