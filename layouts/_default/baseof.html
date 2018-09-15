@@ -53,7 +53,10 @@
 	  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 	{{ end }}
 
-        {{ $style := resources.Get "sass/theme.scss" | toCSS | minify | fingerprint }}
+        {{ $variables := resources.Get "sass/_variables.scss" | resources.ExecuteAsTemplate "sass/variables.scss" . }}
+        {{ $theme := resources.Get "sass/theme.scss" }}
+        {{ $combined := slice $variables $theme | resources.Concat "sass/combined.scss" }}
+        {{ $style := $combined | toCSS | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
 
         {{ partial "twitter-card" . }}
@@ -82,11 +85,11 @@
         {{ end }}
 
         {{ $js := resources.Get "js/externalDependencies.js" }}
-        {{ $secureJS := $js | resources.Fingerprint "sha512" }}
+        {{ $secureJS := $js | resources.Fingerprint "md5" }}
         <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 
         {{ $jsTemplate := resources.Get "js/theme.js" }}
-        {{ $secureJS := $jsTemplate | resources.ExecuteAsTemplate "js/theme.js" . | fingerprint }}
+        {{ $secureJS := $jsTemplate | resources.ExecuteAsTemplate "js/theme.js" . | fingerprint "md5" }}
         <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 
         <script>

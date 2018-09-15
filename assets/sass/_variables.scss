@@ -1,8 +1,8 @@
-$fonts-folder: '/bilberry-hugo-theme/dist/fonts/';
+$fonts-folder: '{{ .Site.BaseURL }}/dist/fonts/';
 
 // Set the with of the main content area
 // Notice that the actual content's width is $site-width - 100px
-$site-width: 800px;
+$site-width: {{ .Site.Params.SiteWidth | default "800px" }};
 
 // Define your fonts.
 // If you want to import new fonts, set them in /src/css/fonts.css
