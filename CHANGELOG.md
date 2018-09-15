@@ -6,11 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.11.1] - 2018-09-15
+### Fixed
+- Broken font path since Version 1.10.0 (#114, #115)
+
 ## [1.11.0] - 2018-09-14
 ### Added
 - Language Brazilian Portuguese, thanks to @marcelocg (#112)
 - Updated Korean language
-
 
 ## [1.10.0] - 2018-09-10
 ### Fixed
@@ -161,7 +164,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Some typos
 
 
-[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.11.0...master
+[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.11.1...master
+[1.11.1]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.11.0...1.11.1
 [1.11.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.10.0...1.11.0
 [1.10.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.9.1...1.10.0
 [1.9.1]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.9.0...1.9.1

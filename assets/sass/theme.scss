@@ -1,4 +1,4 @@
-@import "_variables";
+// @import "_variables";
 @import "externalDependencies";
 @import "fontface";
 
@@ -29,6 +29,7 @@
 
     .container {
         width: $site-width;
+        max-width: 100%;
     }
 
     @import "topnav";
