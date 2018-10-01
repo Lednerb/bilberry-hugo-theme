@@ -16,6 +16,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
 
 ## Table of Contents
 
+- [Requirements](#requirements)
 - [Quick Start](#quick-start)
 - [Configuration](#configuration)
 - [Features](#features)
@@ -38,8 +39,14 @@ If you like this theme and/or use it for commercial purposes, please support me!
 - [Contributors](#contributors)
 - [License](#license)
 
+## Requirements
+
+**Hugo version >= 0.43 Extended**
+
+This theme makes use of Hugo Pipes, and requires at least Hugo version 0.43 **extended**. Please follow the installation instructions for your platform [here](https://gohugo.io/getting-started/installing/).
 
 ## Quick Start
+
 - Create a new hugo site
 ```
 hugo new site my-new-blog
@@ -204,23 +211,19 @@ Otherwise, your changes would be overwritten when you update to the latest theme
 
 
 ## Custom colors and fonts
-Bilberry uses SCSS for styling and a Webpack-based workflow to dynamically create the combined and compresses production-ready stylesheets.
+Bilberry uses SCSS for styling, and [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/) to dynamically create the combined and compressed production-ready stylesheets. Hugo Pipes requires Hugo version >= 0.43 **extended**. Find installation instructions for your platform [here](https://gohugo.io/getting-started/installing/).
 
 If you want to change any colors or fonts, you have follow these steps:
 
 1. Install this theme to your `themes` directory
-2. Install [yarn](https://yarnpkg.com/en/docs/install)
-3. `cd themes/bilberry-hugo-theme/src`
-4. Run `yarn install` to install all necessary dependencies
-5. Modify the `scss/_variables.scss` file to customize your colors. <br> If you want to change the header's color just edit the `$base-color` variable
-6. After finishing your changes, run `yarn run production` to produce your customized stylesheets
-7. Done
+1. Modify the `scss/_variables.scss` file to customize your colors. <br> If you want to change the header's color just edit the `$base-color` variable
+1. Done!
 
 If you 're going to change the default fonts (e.g., lack of support for Cyrillic languages), you can use some of the [Google Fonts](https://fonts.google.com).
 Select your favorite fonts and copy the `@import url('...');` directive to the `src/css/fonts.css` file.
 Now you have to modify the `scss/_variables.scss` and set the `$headline-font` and `$content-font` to the selected ones.
 
-Follow the steps 1-7 to implement your custom font to your site.
+Follow the steps 1-3 to implement your custom font to your site.
 
 _Note:_ You don't have to upload the `node_modules` folder to your webspace, this is only created and needed to generate your customized stylesheets.
 
