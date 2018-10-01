@@ -12,7 +12,7 @@ footer {
 
         div {
             &:not(:first-child) {
-                margin-left: 5%;
+                margin-#{$left}: 5%;
             }
         }
 
@@ -32,25 +32,25 @@ footer {
 
             li {
                 border-bottom: 1px solid #eee;
-                padding-right: 10px;
+                padding-#{$right}: 10px;
             }
 
             a {
                 position: relative;
-                left: 0;
+                $left: 0;
                 display: inline-block;
-                transition: left 0.3s ease-in-out;
+                transition: $left 0.3s ease-in-out;
                 color: $highlight-color;
                 font-family: $content-font;
 
                 &:hover {
-                    left: 10px;
+                    $left: 10px;
                     color: $base-color;
                 }
             }
         }
 
-        .right {
+        .#{$right} {
             .external-profiles {
 
                 width: 100%;
@@ -88,7 +88,7 @@ footer {
             .languages {
                 width: 100%;
 
-                margin-left: 0;
+                margin-#{$left}: 0;
 
                 a {
                     text-transform: uppercase;

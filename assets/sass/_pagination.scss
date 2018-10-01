@@ -1,6 +1,6 @@
 .paginator {
     display: flex;
-    margin-left: 100px;
+    margin-#{$left}: 100px;
     margin-top: 75px;
     padding-bottom: 1em;
 
@@ -22,11 +22,11 @@
         }
 
         &.older {
-            margin-right: auto;
+            margin-#{$right}: auto;
         }
 
         &.newer {
-            margin-left: auto;
+            margin-#{$left}: auto;
         }
     }
 }
