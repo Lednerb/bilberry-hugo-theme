@@ -197,6 +197,16 @@ If you want to use custom Front Matter variables, create a `book.md` archetype i
 
 You can find further information in the official HUGO docs.
 
+## Customizing Individual Posts
+
+Posts can be customized via a variety of options.
+
+To exclude posts from appearing on your blog index, while still being displayed in categories, add `excludeFromIndex: true` to the post configuration.
+
+The theme also has options for a pinned post. Just uncomment `pinnedPost` in `config.toml`, and point it to the post you'd like permanently pinned to the top of the page. The `pinOnlyToFirstPage` setting lets you control if you'd like to only display the pinned post on the index, or on all pages.
+
+A custom icon can be declared per post, by specifying a font-awesome icon in the post configuration, such as `icon: fa-thumb-tack` for a pinned post.
+
 --------------
 
 If you want to change the default post types (e.g., don't use the pencil icon on the `article` or default type, but another one) copy the original file to your local `layouts/partials/content-type/` directory and edit it there. <br>
