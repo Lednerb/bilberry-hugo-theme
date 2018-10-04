@@ -1,0 +1,40 @@
+[categories]
+other = "קטגוריות"
+
+[authors]
+other = "מחברים"
+
+[tags]
+other = "תגים"
+
+[socialMedia]
+other = "מדיה חברתית"
+
+[latestPosts]
+other = "פוסטים אחרונים"
+
+[search]
+other = "חיפוש ..."
+
+[noSearchResults]
+other = "לא נמצא"
+
+[olderPosts]
+other = "פוסטים ישנים"
+
+[newerPosts]
+other = "פוסטים חדשים"
+
+[footnoteReturnText]
+other = "[return]"
+
+[continueReading]
+other = "להמשך קריאה"
+
+[otherLanguages]
+other = "שפות אחרות"
+
+[readingTime]
+one = "דקת קריאה"
+other = "{{.Count}} דקות קריאה"
+
