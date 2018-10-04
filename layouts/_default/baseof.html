@@ -23,7 +23,9 @@
 {{- end -}}
 
 <!doctype html>
-<html class="no-js" lang="{{ .Site.Language.Lang }}">
+{{ $rtl := or (eq .Lang "he") (eq .Language "he") (eq .Site.Language.Lang "he") (and (isset .Params "rtl") (eq .Params.rtl "rtl")) }}
+<html class="no-js" lang="{{.Lang}}" {{ if $rtl }} dir="rtl" {{ end }}>
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,7 +56,9 @@
 	{{ end }}
 
         {{ $variables := resources.Get "sass/_variables.scss" | resources.ExecuteAsTemplate "sass/variables.scss" . }}
-        {{ $theme := resources.Get "sass/theme.scss" }}
+        {{ $themename := "sass/theme-ltr.scss" }}
+        {{ if $rtl }} {{ $themename = "sass/theme-rtl.scss" }} {{ end }}           
+        {{ $theme := resources.Get $themename }}
         {{ $combined := slice $variables $theme | resources.Concat "sass/combined.scss" }}
         {{ $style := $combined | toCSS | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
