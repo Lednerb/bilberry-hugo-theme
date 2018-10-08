@@ -25,9 +25,6 @@ other = "Older posts"
 [newerPosts]
 other = "Newer posts"
 
-[footnoteReturnText]
-other = "[return]"
-
 [continueReading]
 other = "Continue reading"
 

@@ -25,9 +25,6 @@ other = "Articles plus anciens"
 [newerPosts]
 other = "messages plus récents"
 
-[footnoteReturnText]
-other = "[revenir]"
-
 [continueReading]
 other = "continuer la lecture"
 

@@ -1,4 +1,4 @@
-$fonts-folder: '{{ .Site.BaseURL }}/dist/fonts/';
+$fonts-folder: '{{ .Site.Params.CustomFontsURL | default (print .Site.BaseURL "dist/fonts/") }}';
 
 // Set the with of the main content area
 // Notice that the actual content's width is $site-width - 100px
@@ -37,7 +37,7 @@ $meta-border-color: #eee;
 $continue-reading-hover-color: $meta-text-color;
 
 $footer-border-color: #eee;
-$footer-background-color: #ffffff80;
+$footer-background-color: rgba(#ffffff, 80);
 $footer-headline-color: #444;
 
 

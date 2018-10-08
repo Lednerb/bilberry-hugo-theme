@@ -25,9 +25,6 @@ other = "Publicaciones anteriores"
 [newerPosts]
 other = "las publicaciones más nuevas"
 
-[footnoteReturnText]
-other = "[regreso]"
-
 [continueReading]
 other = "sigue leyendo"
 

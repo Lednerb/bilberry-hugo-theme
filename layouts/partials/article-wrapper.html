@@ -1,0 +1,9 @@
+{{ with . }}
+    <div class="article-wrapper u-cf">
+        {{ if or (fileExists (print "layouts/partials/content-type/" .Type ".html") ) (fileExists (print "themes/bilberry-hugo-theme/layouts/partials/content-type/" .Type ".html")) }}
+            {{ partial (print "content-type/" .Type) . }}
+        {{ else }}
+            {{ partial "content-type/article" . }}
+        {{ end }}
+    </div>
+{{end}}

@@ -1,13 +1,19 @@
 {{ define "main" }}
-    {{ $paginator := .Paginate (where .Data.Pages "Type" "ne" "page") (index .Site.Params "paginate" | default 7) }}
-    {{ range  where .Paginator.Pages "Type" "ne" "page" }}
-        <div class="article-wrapper u-cf">
-            {{  if or (fileExists (print "layouts/partials/content-type/" .Type ".html") ) (fileExists (print "themes/bilberry-hugo-theme/layouts/partials/content-type/" .Type ".html")) }}
-                {{ partial (print "content-type/" .Type) . }}
-            {{ else }}
-                {{ partial "content-type/article" . }}
-            {{ end }}
-        </div>
+
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "ne" "page" | intersect (where .Site.RegularPages "Params.excludefromindex" "==" nil)) (index .Site.Params "paginate" | default 7) }}
+
+    {{ if .Site.Params.pinnedPost }}
+        {{ if (and .Site.Params.pinOnlyToFirstPage (ne $paginator.PageNumber 1)) }}
+            {{/* Do nothing if the pinOnlyToFirstPage flag is set and we're not on page 1. */}}
+        {{else}}
+            {{ range first 1 (where .Data.Pages "URL" .Site.Params.pinnedPost) }}
+                {{ partial "article-wrapper" . }}
+            {{end}}
+        {{end}}
+    {{end}}
+
+    {{ range $paginator.Pages }}
+        {{ partial "article-wrapper" . }}
     {{ end }}
 
     {{ partial "paginator" . }}
