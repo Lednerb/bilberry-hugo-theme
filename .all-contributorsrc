@@ -25,7 +25,7 @@
     },
     {
       "name": "Anna Brendel",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/2056876?v=4",
+      "avatar_url": "https://anna-brendel.de/images/background1.jpg",
       "profile": "https://anna-brendel.de",
       "contributions": [
         "ideas",
@@ -131,7 +131,9 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/2030983?v=4",
       "profile": "http://nnja.io",
       "contributions": [
-        "code"
+        "code",
+        "bug",
+        "doc"
       ]
     },
     {
