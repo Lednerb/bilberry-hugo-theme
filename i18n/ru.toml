@@ -25,9 +25,6 @@ other = "Старые записи"
 [newerPosts]
 other = "Новые записи"
 
-[footnoteReturnText]
-other = "[Назад]"
-
 [continueReading]
 other = "Читать далее..."
 

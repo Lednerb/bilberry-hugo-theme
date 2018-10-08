@@ -25,9 +25,6 @@ other = "Старі повідомлення"
 [newerPosts]
 other = "Нові повідомлення"
 
-[footnoteReturnText]
-other = "[назад]"
-
 [continueReading]
 other = "Далі"
 

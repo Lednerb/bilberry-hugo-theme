@@ -25,9 +25,6 @@ other = "以前的帖子"
 [newerPosts]
 other = "較新的帖子"
 
-[footnoteReturnText]
-other = "[返回]"
-
 [continueReading]
 other = "繼續閱讀"
 
