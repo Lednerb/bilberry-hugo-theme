@@ -7,7 +7,8 @@
     "README.md"
   ],
   "imageSize": 100,
-  "commit": true,
+  "commit": false,
+  "contributorsPerLine": 5,
   "contributors": [
     {
       "login": "Lednerb",
@@ -186,6 +187,33 @@
       "name": "Marcelo Gonçalves",
       "avatar_url": "https://avatars3.githubusercontent.com/u/56372?v=4",
       "profile": "http://marcelogoncalves.com.br",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "davidsarkany",
+      "name": "Dávid Sárkány",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/9111944?v=4",
+      "profile": "https://sarkanydavid.com",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "meonamz",
+      "name": "meonamz",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/43414238?v=4",
+      "profile": "https://github.com/meonamz",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "hycakir",
+      "name": "Hamza Yusuf Çakır",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/32282514?v=4",
+      "profile": "https://github.com/hycakir",
       "contributions": [
         "translation"
       ]
