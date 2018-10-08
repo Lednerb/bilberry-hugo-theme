@@ -53,9 +53,9 @@
 	  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 	{{ end }}
 
-        {{ $variables := resources.Get "sass/_variables.scss" | resources.ExecuteAsTemplate "sass/variables.scss" . }}
+        {{ $variables := resources.Get "sass/_variables.scss" }}
         {{ $theme := resources.Get "sass/theme.scss" }}
-        {{ $combined := slice $variables $theme | resources.Concat "sass/combined.scss" }}
+        {{ $combined := slice $variables $theme | resources.Concat "sass/combined.scss" | resources.ExecuteAsTemplate "sass/combined.scss" .  }}
         {{ $style := $combined | toCSS | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
 
