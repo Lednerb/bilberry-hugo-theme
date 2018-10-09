@@ -6,6 +6,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.12.0] - 2018-10-08
+### Fixed
+- Bug #128 that prevent to build the site.
+- Deprecation warning with SCSS, thanks to @nnja
+- README.md for the latest instructions
+- Font path issues
+
+### Added
+- Feature for a Pinned Post, thanks to @nnja
+- Feature to customize the post icon, also by @nnja
+- Feature to exclude an post from the main page, @nnja again!
+- Hungarian Language, provided by @davidsarkany
+- Turkish Language, provided by @hycakir
+
+
 ## [1.11.1] - 2018-09-15
 ### Fixed
 - Broken font path since Version 1.10.0 (#114, #115)
@@ -164,7 +179,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Some typos
 
 
-[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.11.1...master
+[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.12.0...master
+[1.12.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.11.1...1.12.0
 [1.11.1]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.11.0...1.11.1
 [1.11.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.10.0...1.11.0
 [1.10.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.9.1...1.10.0

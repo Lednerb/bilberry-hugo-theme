@@ -25,9 +25,6 @@ other = "이전 글"
 [newerPosts]
 other = "최근 글"
 
-[footnoteReturnText]
-other = "[되돌아가기]"
-
 [continueReading]
 other = "더보기"
 
