@@ -11,20 +11,20 @@ article {
         content: "";
         display: block;
         border: 11px solid transparent;
-        border-#{$right}-color: #ddd;
+        border-right-color: #ddd;
         position: absolute;
         top: 49px;
-        $left: -22px;
+        left: -22px;
     }
 
     &:after {
         content: "";
         display: block;
         border: 10px solid transparent;
-        border-#{$right}-color: #FFF;
+        border-right-color: #FFF;
         position: absolute;
         top: 50px;
-        $left: -20px;
+        left: -20px;
     }
 
     .featured-image {
@@ -104,7 +104,7 @@ article {
                 margin-bottom: 0;
                 position: relative;
                 top: 3px;
-                margin-#{$right}: 0.25em;
+                margin-right: 0.25em;
             }
         }
 
@@ -113,7 +113,7 @@ article {
             font-family: $headline-font;
             margin: 1.5em 0;
             padding: 2em;
-            border-#{$left}: 0.5em solid #ededed;
+            border-left: 0.5em solid #ededed;
             font-size: 1.1em;
 
             cite {
@@ -153,7 +153,7 @@ article {
             margin: 1em 2em;
 
             .links {
-                margin-#{$left}: 0.75em;
+                margin-left: 0.75em;
                 a:not(:last-child):after {
                     content: " / ";
                     color: $text-color !important;
@@ -172,7 +172,7 @@ article {
             }
 
             .links {
-                margin-#{$left}: 0.75em;
+                margin-left: 0.75em;
                 text-transform: uppercase;
                 font-family: $content-font;
                 letter-spacing: 0.1em;
@@ -190,7 +190,7 @@ article {
         background-color: $special-color;
 
         &:after {
-            border-#{$right}-color: $special-color;
+            border-right-color: $special-color;
         }
 
         a:hover {
@@ -262,7 +262,7 @@ article {
             iframe {
                 position: absolute;
                 top: 0;
-                $left: 0;
+                left: 0;
                 width: 100%;
                 height: 100%;
             }
@@ -284,7 +284,7 @@ article {
         min-height: 7em;
 
         &:after {
-            border-#{$right}-color: $special-color;
+            border-right-color: $special-color;
         }
 
         &:hover {
@@ -292,7 +292,7 @@ article {
             transition: all 0.3s ease-in-out;
 
             &:after {
-                border-#{$right}-color: $highlight-color;
+                border-right-color: $highlight-color;
                 transition: all 0.3s ease-in-out
             }
         }
@@ -306,7 +306,7 @@ article {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            $left: 0;
+            left: 0;
             top: 0;
             width: 100%;
             height: 100%;
@@ -328,6 +328,6 @@ article {
 }
 
 #disqus_thread {
-    margin-#{$left}: 100px;
+    margin-left: 100px;
     padding-bottom: 1.2em;
 }

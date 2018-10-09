@@ -23,9 +23,7 @@
 {{- end -}}
 
 <!doctype html>
-{{ $rtl := or (eq .Lang "he") (eq .Language "he") (eq .Site.Language.Lang "he") (and (isset .Params "rtl") (eq .Params.rtl "rtl")) }}
-<html class="no-js" lang="{{.Lang}}" {{ if $rtl }} dir="rtl" {{ end }}>
-
+<html class="no-js" lang="{{ .Site.Language.Lang }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,7 +52,6 @@
 	  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 	  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 	{{ end }}
-
 
         {{ $variables := resources.Get "sass/_variables.scss" }}
         {{ $theme := resources.Get "sass/theme.scss" }}

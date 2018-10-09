@@ -61,7 +61,7 @@ nav {
 
     // Algolia-Search
     .search {
-        margin-#{$left}: auto;
+        margin-left: auto;
         // width: 45%;
         min-width: 300px;
         position: relative;
@@ -72,7 +72,7 @@ nav {
 
         i {
             position: absolute;
-            $left: 1em;
+            left: 1em;
             top: 10px;
             z-index: 40;
         }
@@ -82,7 +82,7 @@ nav {
             background: transparent;
             border: none;
             color: $nav-text-color;
-            padding-#{$left}: 2.75em;
+            padding-left: 2.75em;
             width: 100%;
             background-color: lighten($nav-background-color, 5);
 
@@ -107,7 +107,7 @@ nav {
 
                 .branding {
                     font-size: 0.75em;
-                    text-align: $right;
+                    text-align: right;
                     padding: 0.5em 1em;
                     background-color: $page-background-color;
 
@@ -144,7 +144,7 @@ nav {
                     .fa {
                         font-size: 1em;
                         color: $algolia-search-box-icon-color;
-                        text-align: $right;
+                        text-align: right;
                     }
                 }
             }
@@ -175,7 +175,7 @@ nav {
             width: 16px;
             position: absolute;
             top: 50%;
-            $right: 16px;
+            right: 16px;
             -webkit-transform: translateY(-50%);
                 transform: translateY(-50%);
             fill: $algolia-border-color;
