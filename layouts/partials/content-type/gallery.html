@@ -14,7 +14,7 @@
     {{ else if ne .Params.imageSlider false }}
         <div class="flexslider">
             <ul class="slides">
-            {{ if .Site.Params.resizeImages | default true }}
+            {{ if and (.Site.Params.resizeImages | default true) (.Params.resizeImages | default true) }}
                 {{ range .Resources.ByType "image" }}
                     <li><img src="{{ (.Fill "700x350 q95").RelPermalink }}" /></li>
                 {{ end }}
