@@ -27,6 +27,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
     - [Manual Summary Breaks](#manual-summary-breaks)
     - [Disqus Comments](#disqus-comments)
     - [Responsive Design](#responsive-design)
+    - [Automatic Image Resizing](#automatic-image-resizing)
     - [Permanent Top Navigation](#permanent-top-navigation)
     - [MathJAX Markup](#mathjax-markup)
 - [External Images](#external-images)
@@ -173,6 +174,12 @@ You can manage and moderate the comments either on your website or at the disqus
 
 ### Responsive Design
 Bilberry is optimized for desktop and mobile devices (tablets and smartphones).
+
+### Automatic Image Resizing
+The bilberry theme handles image crops and resizes automatically by default.
+However, if you want to disable this functionality in general, you can set `resizeImages: false` in your `config.toml` file.
+
+If you want to disable this functionality just on some posts, you can set `resizeImages: false` in your post's settings.
 
 ### Permanent Top Navigation
 If you want to permanently display the top navigation with the algolia search bar and the `page` entries, you can set the `permanentTopNav` option to `true` in your site's config file.

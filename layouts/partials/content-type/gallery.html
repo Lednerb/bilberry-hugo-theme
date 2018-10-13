@@ -3,7 +3,6 @@
 </a>
 
 <article class="gallery">
-
     {{ if and (isset .Params "gallery") (ne .Params.gallery "") }}
         <div class="flexslider">
             <ul class="slides">
@@ -15,8 +14,14 @@
     {{ else if ne .Params.imageSlider false }}
         <div class="flexslider">
             <ul class="slides">
-            {{ range .Resources.ByType "image" }}
-                <li><img src="{{ .RelPermalink }}" /></li>
+            {{ if and (.Site.Params.resizeImages | default true) (.Params.resizeImages | default true) }}
+                {{ range .Resources.ByType "image" }}
+                    <li><img src="{{ (.Fill "700x350 q95").RelPermalink }}" /></li>
+                {{ end }}
+            {{ else }}
+                {{ range .Resources.ByType "image" }}
+                    <li><img src="{{ .RelPermalink }}" /></li>
+                {{ end }}
             {{ end }}
             </ul>
         </div>

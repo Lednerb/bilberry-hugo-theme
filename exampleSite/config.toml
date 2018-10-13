@@ -48,6 +48,9 @@ disqusShortname = "bilberry-hugo-theme"
     # set the width of your site's content
     siteWidth = "800px"
 
+    # let hugo automatically resize and crop your images to the correct sizes
+    resizeImages = true
+
   # Header configuration
     # your subtitle if you want to use any
     subtitle = "Hello World! This is the most epic subtitle ever."

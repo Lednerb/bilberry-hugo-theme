@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.13.0] - 2018-10-13
+### Added
+- Functionality to automatically resize and crop images.
+
+### Fixed
+- A bug where the `customImage` is not displayed on multi-language sites. #137
+- Style for the gallery slider controls so they are visible on white backgrounds. #138
+
+
 ## [1.12.0] - 2018-10-08
 ### Fixed
 - Bug #128 that prevent to build the site.
@@ -179,7 +188,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Some typos
 
 
-[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.12.0...master
+[Unreleased]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.13.0...development
+[1.13.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.12.0...1.13.0
 [1.12.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.11.1...1.12.0
 [1.11.1]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.11.0...1.11.1
 [1.11.0]: https://github.com/Lednerb/bilberry-hugo-theme/compare/1.10.0...1.11.0
