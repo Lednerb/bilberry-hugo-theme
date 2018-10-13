@@ -9,7 +9,7 @@
             <i class="fa fa-tags"></i>
             <div class="links">
                 {{ range . }}
-                    <a href="{{ (print "/tags/" (. | urlize)) | relLangURL }}">{{ . }}</a>
+                    <a href="{{ (print "/tags/" (. | urlize)) | relLangURL }}/">{{ . }}</a>
                 {{ end }}
             </div>
         </div>
