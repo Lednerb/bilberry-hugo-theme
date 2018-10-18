@@ -129,9 +129,13 @@ article {
         }
 
 	img {
-            width: 100%;
+            max-width: 100%;
         }
-    }
+  video {
+            max-width: 100%;
+        }
+  }
+
 
     .footer {
         display: flex;
