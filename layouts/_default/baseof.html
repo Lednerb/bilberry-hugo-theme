@@ -57,7 +57,7 @@
         {{ $theme := resources.Get "sass/theme.scss" }}
         {{ $combined := slice $variables $theme | resources.Concat "sass/combined.scss" | resources.ExecuteAsTemplate "sass/combined.scss" .  }}
         {{ $style := $combined | toCSS | minify | fingerprint }}
-        <link rel="stylesheet" href="{{ $style.Permalink }}">
+        <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
         {{ partial "twitter-card" . }}
 
@@ -86,11 +86,11 @@
 
         {{ $js := resources.Get "js/externalDependencies.js" }}
         {{ $secureJS := $js | resources.Fingerprint "md5" }}
-        <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+        <script type="text/javascript" src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 
         {{ $jsTemplate := resources.Get "js/theme.js" }}
         {{ $secureJS := $jsTemplate | resources.ExecuteAsTemplate "js/theme.js" . | fingerprint "md5" }}
-        <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
+        <script type="text/javascript" src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 
         <script>
             $(".moment").each(function() {
