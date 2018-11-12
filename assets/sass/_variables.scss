@@ -1,4 +1,4 @@
-$fonts-folder: '{{ .Site.Params.CustomFontsURL | default (print .Site.BaseURL "dist/fonts/") }}';
+$fonts-folder: '{{ .Site.Params.CustomFontsURL | default (print "dist/fonts/") }}';
 
 // Set the with of the main content area
 // Notice that the actual content's width is $site-width - 100px
