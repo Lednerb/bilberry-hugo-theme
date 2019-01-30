@@ -31,3 +31,6 @@ other = "続きを読む"
 [otherLanguages]
 other = "他言語"
 
+[readingTime]
+other = "読了時間約１分"
+

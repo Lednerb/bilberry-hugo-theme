@@ -11,19 +11,19 @@ other = "標籤"
 other = "社交媒體"
 
 [latestPosts]
-other = "最新帖子"
+other = "最新文章"
 
 [search]
-other = "搜索..."
+other = "搜尋..."
 
 [noSearchResults]
 other = "什麼都沒找到。"
 
 [olderPosts]
-other = "以前的帖子"
+other = "較舊的文章"
 
 [newerPosts]
-other = "較新的帖子"
+other = "較新的文章"
 
 [continueReading]
 other = "繼續閱讀"
