@@ -14,6 +14,10 @@ googleAnalytics = ""
 # Enable / Disable comments on the articles via Disqus.
 disqusShortname = "bilberry-hugo-theme"
 
+# Enable / Disable open link with a new tab.
+[blackfriday]
+  hrefTargetBlank = false
+
 [params]
   # Favicon for the browser's favorites and tabs
   favicon = "" # set a favicon icon
