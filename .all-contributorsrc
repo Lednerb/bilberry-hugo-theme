@@ -217,6 +217,16 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "anoff",
+      "name": "Andreas Offenhaeuser",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/7142618?v=4",
+      "profile": "https://github.com/anoff",
+      "contributions": [
+        "code",
+        "doc
+      ]
     }
   ]
 }
