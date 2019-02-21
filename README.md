@@ -282,7 +282,8 @@ window.addEventListener('load', function () {
 })
 ```
 
-Then you only need to modify your `config.toml` to load the local init script and the external libraries
+Then you only need to modify your `config.toml` to load the local init script and the libraries. You can either download the files and put them in your `/static` directory as well or reference them directly using a CDN.
+Serving the files with your website reduces external dependencies, increases privacy and makes sure your website can be developed in an offline environment as well.
 
 ```toml
 css_modules = ["..", "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"]
