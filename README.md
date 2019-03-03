@@ -261,6 +261,34 @@ This theme supports hot-swappable CSS and JavaScript extentions. Modules can be 
 
 Modules are imported in the order they appear in the list, and immediately after the default Bilberry CSS and JS files are imported.
 
+### Adding a Cookie disclaimer
+Depending on the type of website you are running with this theme you may also want to add a cookie consent information. The popuplar solution [cookie consent](https://cookieconsent.insites.com/) can be integrated into the theme by loading the resources as external CSS and JS modules.
+
+Use the configurator on the [cookie consent website](https://cookieconsent.insites.com/) to generate the required initialization code and add it to a local `static/init-cookieconsent.js` file e.g.
+
+```javascript
+// https://cookieconsent.insites.com/download/#
+window.addEventListener('load', function () {
+  window.cookieconsent.initialise({
+    'palette': {
+      'popup': {
+        'background': '#cc0033'
+      },
+      'button': {
+        'background': '#fff'
+      }
+    }
+  })
+})
+```
+
+Then you only need to modify your `config.toml` to load the local init script and the libraries. You can either download the files and put them in your `/static` directory as well or reference them directly using a CDN.
+Serving the files with your website reduces external dependencies, increases privacy and makes sure your website can be developed in an offline environment as well.
+
+```toml
+css_modules = ["..", "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"]
+js_modules = ["..", "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js", "init-cookieconsent.js"]
+```
 
 ## Translations
 This theme has support for multi-language sites and therefore translations for 10+ languages.
