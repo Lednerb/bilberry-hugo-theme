@@ -14,7 +14,7 @@ other = "社交媒體"
 other = "最新文章"
 
 [search]
-other = "搜尋..."
+other = "搜尋 ..."
 
 [noSearchResults]
 other = "什麼都沒找到。"

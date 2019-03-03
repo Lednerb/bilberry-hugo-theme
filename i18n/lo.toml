@@ -8,7 +8,7 @@ other = "ຜູ້ຂຽນ"
 other = "ບົດຄວາມລ່າສຸດ"
 
 [search]
-other = "ຄົ້ນຫາ..."
+other = "ຄົ້ນຫາ ..."
 
 [noSearchResults]
 other = "ບໍ່ພົບສິ່ງທີ່ຄົ້ນຫາ"
@@ -20,7 +20,7 @@ other = "ບົດຄວາມເກົ່າກວ່າ"
 other = "ບົດຄວາມໃໝ່ຫວ່າ"
 
 [continueReading]
-other = "ອ່ານເພີ່ມ..."
+other = "ອ່ານເພີ່ມ"
 
 [otherLanguages]
 other = "ພາສາອື່ນ"
