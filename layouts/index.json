@@ -14,23 +14,24 @@
 
 {{- range where .Pages "Type" "not in"  (slice "page" "json") -}}
 
-    {{- range .Translations -}}
-
-        {{- .Scratch.Set "iconClass" "fa-pencil" -}}
-        {{- if eq .Type "quote" -}}
-            {{- .Scratch.Set "iconClass" "fa-quote-right" -}}
-        {{- else if eq .Type "link" -}}
-            {{- .Scratch.Set "iconClass" "fa-link" -}}
-        {{- else if eq .Type "video" -}}
-            {{- .Scratch.Set "iconClass" "fa-video-camera" -}}
-        {{- else if or (eq .Type "gallery") (eq .Type "picture") -}}
-            {{- .Scratch.Set "iconClass" "fa-camera" -}}
-        {{- else if eq .Type "audio" -}}
-            {{- .Scratch.Set "iconClass" "fa-music" -}}
-        {{- end -}}
-
-        {{- $.Scratch.Add "index" (dict "url" .Permalink "title" .Title "tags" .Params.tags "categories" .Params.categories "author" .Params.author "type" .Type "language" .Lang "iconClass" (.Scratch.Get "iconClass") "objectID" (.Permalink | md5) ) -}}
+    {{-  $iconClass := "fa-pencil" -}}
+    {{- if eq .Type "quote" -}}
+        {{- $iconClass = "fa-quote-right" -}}
+    {{- else if eq .Type "link" -}}
+        {{- $iconClass = "fa-link" -}}
+    {{- else if eq .Type "video" -}}
+        {{- $iconClass = "fa-video-camera" -}}
+    {{- else if or (eq .Type "gallery") (eq .Type "picture") -}}
+        {{- $iconClass = "fa-camera" -}}
+    {{- else if eq .Type "audio" -}}
+        {{- $iconClass = "fa-music" -}}
     {{- end -}}
+        
+    {{- range .Translations -}}
+        {{- $.Scratch.Add "index" (dict "url" .Permalink "title" .Title "tags" .Params.tags "categories" .Params.categories "author" .Params.author "type" .Type "language" .Lang "iconClass" $iconClass "objectID" (.Permalink | md5) ) -}}
+    {{- end -}}
+    {{- $.Scratch.Add "index" (dict "url" .Permalink "title" .Title "tags" .Params.tags "categories" .Params.categories "author" .Params.author "type" .Type "language" .Lang "iconClass" $iconClass "objectID" (.Permalink | md5) ) -}}
+
 {{- end -}}
 
 {{- $.Scratch.Get "index" | jsonify -}}
