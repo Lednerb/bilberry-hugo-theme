@@ -4,6 +4,7 @@
 [![License](https://img.shields.io/github/license/Lednerb/bilberry-hugo-theme.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/blob/master/LICENSE.md)
 [![Discord](https://img.shields.io/discord/479643633814077465.svg?style=flat-square&label=Discord%20Chat&colorB=7289da)](https://discord.gg/vZVHJ4j)
 [![GitHub stars](https://img.shields.io/github/stars/Lednerb/bilberry-hugo-theme.svg?style=social&label=Stars)](https://github.com/Lednerb/bilberry-hugo-theme)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FLednerb%2Fbilberry-hugo-theme.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FLednerb%2Fbilberry-hugo-theme?ref=badge_shield)
 
 
 This is a premium theme for [HUGO](https://gohugo.io), inspired by the [Lingonberry WordPress](http://www.andersnoren.se/teman/lingonberry-wordpress-theme/) theme from Anders Norén.
@@ -327,3 +328,6 @@ This project follows the [all-contributors](https://github.com/kentcdodds/all-co
 
 ## License
 The Bilberry Theme for HUGO is licensed under the MIT license.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FLednerb%2Fbilberry-hugo-theme.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FLednerb%2Fbilberry-hugo-theme?ref=badge_large)
