@@ -44,9 +44,9 @@ If you like this theme and/or use it for commercial purposes, please support me!
 
 ## Requirements
 
-**Hugo version >= 0.43 Extended**
+**Hugo version >= 0.53 Extended**
 
-This theme makes use of Hugo Pipes, and requires at least Hugo version 0.43 **extended**. Please follow the installation instructions for your platform [here](https://gohugo.io/getting-started/installing/).
+This theme makes use of Hugo Pipes, and requires at least Hugo version 0.53 **extended**. Please follow the installation instructions for your platform [here](https://gohugo.io/getting-started/installing/).
 
 ## Quick Start
 
@@ -247,7 +247,7 @@ Otherwise, your changes would be overwritten when you update to the latest theme
 
 
 ## Custom colors and fonts
-Bilberry uses SCSS for styling, and [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/) to dynamically create the combined and compressed production-ready stylesheets. Hugo Pipes requires Hugo version >= 0.43 **extended**. Find installation instructions for your platform [here](https://gohugo.io/getting-started/installing/).
+Bilberry uses SCSS for styling, and [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/) to dynamically create the combined and compressed production-ready stylesheets. Hugo Pipes requires Hugo version >= 0.53 **extended**. Find installation instructions for your platform [here](https://gohugo.io/getting-started/installing/).
 
 If you want to change any colors or fonts, you have follow these steps:
 
