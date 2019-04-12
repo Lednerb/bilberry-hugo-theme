@@ -1,5 +1,5 @@
 <div class="content">
-    <h3><a href="{{ .URL }}">{{ .Title }}</a></h3>
+    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
     <div class="meta">
         {{ if ( .Params.showDate | default true ) }}
             {{ if (.Site.Params.enableMomentJs | default true ) }}
@@ -32,7 +32,7 @@
         {{ .Summary }}
 
         {{ if .Truncated }}
-            <a href="{{ .URL }}" class="more">{{ i18n "continueReading" }}</a>
+            <a href="{{ .Permalink }}" class="more">{{ i18n "continueReading" }}</a>
         {{ end }}
     {{ end }}
 </div>
