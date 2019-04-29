@@ -102,7 +102,7 @@ disqusShortname = "bilberry-hugo-theme"
     # Set to -1 to hide the 'Categories' column
     amountCategoriesInFooter = 7
 
-    # show a language chooser in the header
+    # show a language chooser in the footer
     showFooterLanguageChooser = true
 
     # social media profile urls for the footer links
