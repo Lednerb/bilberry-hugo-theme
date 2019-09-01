@@ -1,0 +1,37 @@
+[categories]
+other = "Kategori"
+
+[authors]
+other = "Penulis"
+
+[tags]
+other = "Tag"
+
+[socialMedia]
+other = "Sosial Media"
+
+[latestPosts]
+other = "Post Terbaru"
+
+[search]
+other = "Mencari ..."
+
+[noSearchResults]
+other = "Pencarian tidak ditemukan."
+
+[olderPosts]
+other = "Post sebelumnya"
+
+[newerPosts]
+other = "Post selanjutnya"
+
+[continueReading]
+other = "Lanjutkan membaca"
+
+[otherLanguages]
+other = "Bahasa lainnya"
+
+[readingTime]
+one = "1 menit"
+other = "{{.Count}} menit"
+
