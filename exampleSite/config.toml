@@ -120,6 +120,24 @@ disqusShortname = "bilberry-hugo-theme"
     xing       = ""
     linkedin   = ""
 
+    # To add custom links to your social media section, create a 'customlinks' map like below
+    # Currently only Font Awesome 4.7.0 icons are available
+    #
+    # customlinks = [
+    # 	{ link = "URL-ADDRESS", icon = "FONT-AWESOME-ICON-NAME" }, 
+    # 	{ link = "ANOTHER-URL", icon = "ANOTHER-FONT-AWESOME-ICON}, <--trailing comma intentional
+    #  ]
+      
+    customlinks = [ 
+	{ link = "https://gitlab.com/tonytheleg", icon = "fa fa-gitlab" },
+	{ link = "https://t.me/tonytheleg", icon = "fa fa-telegram"}, 
+	{ link = "https://steamcommunity.com/id/tonytheleg", icon = "fa fa-steam" },
+	{ link = "https://www.twitch.tv/tonytheleg", icon = "fa fa-twitch" }, 
+	{ link = "https://keybase.io/tonytheleg", icon = "fab fa-keybase" },
+    ]
+
+
+
     # credits line configuration
     copyrightBy = "by Lednerb"
     copyrightUseCurrentYear = false  # set to true to always display the current year in the copyright

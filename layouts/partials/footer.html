@@ -66,7 +66,11 @@
                 {{ with .Site.Params.linkedin }}
                     <a href="{{ . }}" target="_blank"><i class="fa fa-linkedin"></i></a>
                 {{ end }}
-            </div>
+            
+		{{ range .Site.Params.customlinks }}
+		    <a href="{{ .link }}" target="_blank"><i class="{{ .icon}}"></i></a>
+		{{ end {{
+	    </div>
             {{ end }}
 
             {{ if and (.Site.Params.showFooterLanguageChooser | default true) (gt .Site.Languages 1) }}
