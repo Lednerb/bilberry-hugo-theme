@@ -67,9 +67,11 @@
                     <a href="{{ . }}" target="_blank"><i class="fa fa-linkedin"></i></a>
                 {{ end }}
             
-		{{ range .Site.Params.customlinks }}
-		    <a href="{{ .link }}" target="_blank"><i class="{{ .icon}}"></i></a>
-		{{ end {{
+		{{ if .Site.Params.showCustomSocialMedia | default false }}
+			{{ range .Site.Params.customlinks }}
+			    <a href="{{ .link }}" target="_blank"><i class="{{ .icon}}"></i></a>
+      	        	{{ end }}
+		{{ end }}
 	    </div>
             {{ end }}
 
