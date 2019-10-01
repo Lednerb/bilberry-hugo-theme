@@ -120,7 +120,7 @@ disqusShortname = "bilberry-hugo-theme"
     xing       = ""
     linkedin   = ""
 
-    # Enable custom links in your social media section -- add to links to 'customlinks'below to use
+    # Enable custom links in your social media section -- add your links to 'customlinks' below to use
     showCustomSocialMedia = false
 
     # Example custom links (currently supports FontAwesome 4.7.0 icons only)
