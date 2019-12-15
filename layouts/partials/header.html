@@ -8,7 +8,7 @@
                     <img src="https://www.gravatar.com/avatar/{{ md5 .Site.Params.gravatarEMail }}?d=mm&size=200" alt="">
                 {{ end }}
 
-                <span class="overlay"><i class="fa {{ .Site.Params.overlayIcon | default "fa-home" }}"></i></span>
+                <span class="overlay"><i class="fas {{ .Site.Params.overlayIcon | default "fa-home" }}"></i></span>
             </a>
         </div>
         <div class="titles">
@@ -36,7 +36,7 @@
         {{ else }}
         <div class="toggler">
         {{ end }}
-            <i class="fa fa-bars" aria-hidden="true"></i>
+            <i class="fas fa-bars" aria-hidden="true"></i>
         </div>
     </div>
 </header>

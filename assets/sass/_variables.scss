@@ -1,6 +1,9 @@
 {{ $fonts := "dist/fonts/" | absURL }}
 $fonts-folder: '{{ .Site.Params.CustomFontsURL | default $fonts }}';
 
+{{ $fontawesome := "dist/fonts/fontawesome/" | absURL }}
+$fontawesome-folder: '{{ .Site.Params.CustomFontAwesomeURL | default $fontawesome }}';
+
 // Set the with of the main content area
 // Notice that the actual content's width is $site-width - 100px
 $site-width: {{ .Site.Params.SiteWidth | default "800px" }};

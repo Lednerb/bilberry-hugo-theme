@@ -6,13 +6,56 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'FontAwesome';
-  src: url($fonts-folder + 'fontawesome-webfont.eot?v=4.7.0');
-  src: url($fonts-folder + 'fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url($fonts-folder + 'fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url($fonts-folder + 'fontawesome-webfont.woff?v=4.7.0') format('woff'), url($fonts-folder + 'fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url($fonts-folder + 'fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+  @font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: normal;
+    src: url($fontawesome-folder + 'fa-brands-400.eot');
+    src: url($fontawesome-folder + 'fa-brands-400.eot?#iefix') format('embedded-opentype'),
+    url($fontawesome-folder + 'fa-brands-400.woff2') format('woff2'),
+    url($fontawesome-folder + 'fa-brands-400.woff') format('woff'),
+    url($fontawesome-folder + 'fa-brands-400.ttf') format('truetype'),
+    url($fontawesome-folder + 'fa-brands-400.svg#fontawesome') format('svg');
+  }
+
+  .fab {
+    font-family: 'Font Awesome 5 Brands';
+  }
+
+  @font-face {
+    font-family: 'Font Awesome 5 Light';
+    font-style: normal;
+    font-weight: 400;
+    src: url($fontawesome-folder + 'fa-regular-400.eot');
+    src: url($fontawesome-folder + 'fa-regular-400.eot?#iefix') format('embedded-opentype'),
+    url($fontawesome-folder + 'fa-regular-400.woff2') format('woff2'),
+    url($fontawesome-folder + 'fa-regular-400.woff') format('woff'),
+    url($fontawesome-folder + 'fa-regular-400.ttf') format('truetype'),
+    url($fontawesome-folder + 'fa-regular-400.svg#fontawesome') format('svg');
+  }
+
+  .far {
+    font-family: 'Font Awesome 5 Light';
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Font Awesome 5';
+    font-style: normal;
+    font-weight: 900;
+    src: url($fontawesome-folder + '/fa-solid-900.eot');
+    src: url($fontawesome-folder + '/fa-solid-900.eot?#iefix') format('embedded-opentype'),
+    url($fontawesome-folder + '/fa-solid-900.woff2') format('woff2'),
+    url($fontawesome-folder + '/fa-solid-900.woff') format('woff'),
+    url($fontawesome-folder + '/fa-solid-900.ttf') format('truetype'),
+    url($fontawesome-folder + '/fa-solid-900.svg#fontawesome') format('svg');
+  }
+
+  .fa,
+  .fas {
+    font-family: 'Font Awesome 5';
+    font-weight: 900;
+  }
 
 /* open-sans-regular - vietnamese_latin_greek_cyrillic-ext_greek-ext_latin-ext_cyrillic */
 @font-face {

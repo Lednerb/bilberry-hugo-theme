@@ -18,7 +18,7 @@
 
         {{ if and (isset .Site.Params "algolia_search") (eq .Site.Params.algolia_search true) }}
             <div id="search-box" class="search">
-                <i class="fa fa-search"></i>
+                <i class="fas fa-search"></i>
                 <input id="search" type="text" placeholder="{{ i18n "search" }}">
             </div>
         {{ end }}

@@ -6,7 +6,7 @@
 
     {{ with .Params.tags }}
         <div class="tags">
-            <i class="fa fa-tags"></i>
+            <i class="fas fa-tags"></i>
             <div class="links">
                 {{ range . }}
                     <a href="{{ (print "/tags/" (. | urlize)) | relLangURL }}">{{ . }}</a>
@@ -17,7 +17,7 @@
 
     {{ if .IsTranslated }}
     <div class="languages">
-        <i class="fa fa-language"></i>
+        <i class="fas fa-language"></i>
         <div class="links">
             {{ range .Translations }}
                 <a href="{{ .Permalink }}">{{ .Lang }}</a>

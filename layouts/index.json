@@ -14,7 +14,7 @@
 
 {{- range where .Pages "Type" "not in"  (slice "page" "json") -}}
 
-    {{-  $iconClass := "fa-pencil" -}}
+    {{-  $iconClass := "fa-pencil-alt" -}}
     {{- if eq .Type "quote" -}}
         {{- $iconClass = "fa-quote-right" -}}
     {{- else if eq .Type "link" -}}
@@ -26,7 +26,7 @@
     {{- else if eq .Type "audio" -}}
         {{- $iconClass = "fa-music" -}}
     {{- end -}}
-        
+
     {{- range .Translations -}}
         {{- $.Scratch.Add "index" (dict "url" .Permalink "title" .Title "tags" .Params.tags "categories" .Params.categories "author" .Params.author "type" .Type "language" .Lang "iconClass" $iconClass "objectID" (.Permalink | md5) ) -}}
     {{- end -}}

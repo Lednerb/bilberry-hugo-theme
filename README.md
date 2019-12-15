@@ -203,8 +203,8 @@ If you want to create a `book` post type, for example, you can do the following:
 
 1. Copy the default `themes/bilberry-hugo-theme/layouts/partials/content-type/article.html` to your site's `layouts/partials/content-type/` folder.
 2. Rename the file to your custom post type. A proper name in the _book scenario_ would be `book.html`
-3. Customize the file. <br> You can change the icon in the bubble with another [Font Awesome Icon](http://fontawesome.io/icons/). <br> In the _book scenario_ we would change the `fa-pencil` class to `fa-book`:
-`<i class="fa fa-fw fa-book"></i>`
+3. Customize the file. <br> You can change the icon in the bubble with another [Font Awesome Icon](http://fontawesome.io/icons/). <br> In the _book scenario_ we would change the `fa-pencil-alt` class to `fa-book`:
+`<i class="fas fa-fw fa-book"></i>`
 
 4. Create your new posts with the post type prefix: `hugo new book/a-very-cool-book.md`
 5. Done.
