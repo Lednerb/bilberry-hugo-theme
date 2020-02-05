@@ -7625,13 +7625,33 @@ based on dark.css by Ivan Sagalaev
   padding: 2em;
 }
 
-.bilberry-hugo-theme article .content h3 {
+.bilberry-hugo-theme article .content h1 {
   font-size: 1.75em;
   margin-bottom: 0.25em;
 }
 
-.bilberry-hugo-theme article .content h3 a {
+.bilberry-hugo-theme article .content h1 a {
   font-style: normal;
+}
+
+.bilberry-hugo-theme article .content h2 {
+  font-size: 1.6em;
+}
+
+.bilberry-hugo-theme article .content h3 {
+  font-size: 1.5em;
+}
+
+.bilberry-hugo-theme article .content h4 {
+  font-size: 1.4em;
+}
+
+.bilberry-hugo-theme article .content h5 {
+  font-size: 1.3em;
+}
+
+.bilberry-hugo-theme article .content h6 {
+  font-size: 1.2em;
 }
 
 .bilberry-hugo-theme article .content .meta {
@@ -7844,8 +7864,8 @@ based on dark.css by Ivan Sagalaev
 
 .bilberry-hugo-theme article.video .responsive-video {
   position: relative;
-  padding-bottom: 56.25%;
   /* 16:9 ratio*/
+  padding-bottom: 56.25%;
   padding-top: 0px;
   height: 0;
   overflow: hidden;
