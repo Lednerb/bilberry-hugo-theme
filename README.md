@@ -13,34 +13,36 @@ Bilberry is an adaption that comes with different optimizations and little featu
 
 If you like this theme and/or use it for commercial purposes, please support me!
 
-
 ## Table of Contents
 
-- [Requirements](#requirements)
-- [Quick Start](#quick-start)
-- [Configuration](#configuration)
-- [Features](#features)
-    - [Algolia Search](#algolia-search)
-    - [Keyboard Shortcuts](#keyboard-shortcuts)
-    - [Post Types](#post-types)
-    - [Pages and External Links](#pages-and-external-links)
-    - [Manual Summary Breaks](#manual-summary-breaks)
-    - [Disqus Comments](#disqus-comments)
-    - [Responsive Design](#responsive-design)
-    - [Automatic Image Resizing](#automatic-image-resizing)
-    - [Permanent Top Navigation](#permanent-top-navigation)
-    - [MathJAX Markup](#mathjax-markup)
-- [External Images](#external-images)
-- [Custom 404 site](#custom-404-site)
-- [Custom Post Types](#custom-post-types)
-- [Customizing Individual Posts](#customizing-individual-posts)
-- [Custom colors and fonts](#custom-colors-and-fonts)
-- [CSS and JS modules](#css-and-js-modules)
-- [Translations](#translations)
-- [Credits](#credits)
-- [Support and Discussions](#support-and-discussions)
-- [Contributors](#contributors)
-- [License](#license)
+- [Requirements](#Requirements)
+- [Quick Start](#Quick-Start)
+- [Configuration](#Configuration)
+- [Features](#Features)
+  - [Algolia Search](#Algolia-Search)
+    - [Setup](#Setup)
+    - [Update the search index](#Update-the-search-index)
+  - [Keyboard Shortcuts](#Keyboard-Shortcuts)
+  - [Post Types](#Post-Types)
+  - [Pages and External Links](#Pages-and-External-Links)
+  - [Manual Summary Breaks](#Manual-Summary-Breaks)
+  - [Disqus comments](#Disqus-comments)
+  - [Responsive Design](#Responsive-Design)
+  - [Automatic Image Resizing](#Automatic-Image-Resizing)
+  - [Permanent Top Navigation](#Permanent-Top-Navigation)
+  - [MathJAX Markup](#MathJAX-Markup)
+- [Custom 404 site](#Custom-404-site)
+- [Custom Post Types](#Custom-Post-Types)
+- [External Images](#External-Images)
+- [Customizing Individual Posts](#Customizing-Individual-Posts)
+- [Custom colors and fonts](#Custom-colors-and-fonts)
+- [CSS and JS modules](#CSS-and-JS-modules)
+  - [Adding a Cookie disclaimer](#Adding-a-Cookie-disclaimer)
+- [Translations](#Translations)
+- [Credits](#Credits)
+- [Support and Discussions](#Support-and-Discussions)
+- [Contributors](#Contributors)
+- [License](#License)
 
 ## Requirements
 
@@ -190,6 +192,19 @@ Note that on mobile devices the navigation will still be collapsed because other
 
 If you want to add [MathJAX](https://www.mathjax.org) markup support, set parameter `enable_mathjax` option to `true` in your site's config file.
 
+## Favicons
+Using favicons nowadays is not a trivial thing.
+There are many different sizes and file types for the various mobile and desktop browsers and for the shortcuts for Android and iOS devices.
+
+This theme makes it easy for you to include all needed files:
+
+1. Visit https://realfavicongenerator.net/ and generate your favicon according to your needs
+2. Copy & Paste the generated files into your `/static` folder
+3. Edit the `/layouts/partials/favicon.html` file and copy & paste the HTML code from the generated instruction
+
+**Important:**
+You have to follow the [Quick Start](#Quick-Start) guideline or manually copy the `/layouts/partials/favicon.html` file from the theme to your site's `/layouts` directory. Otherwise the file is missing.
+
 ## Custom 404 site
 If you want to customize your 404 site, copy the `themes/bilberry-hugo-theme/layouts/404.html` to your local `layouts/404.html` and edit the file.
 
@@ -204,7 +219,7 @@ If you want to create a `book` post type, for example, you can do the following:
 1. Copy the default `themes/bilberry-hugo-theme/layouts/partials/content-type/article.html` to your site's `layouts/partials/content-type/` folder.
 2. Rename the file to your custom post type. A proper name in the _book scenario_ would be `book.html`
 3. Customize the file. <br> You can change the icon in the bubble with another [Font Awesome Icon](http://fontawesome.io/icons/). <br> In the _book scenario_ we would change the `fa-pencil` class to `fa-book`:
-`<i class="fa fa-fw fa-book"></i>`
+`<i class="fas fa-fw fa-book"></i>`
 
 4. Create your new posts with the post type prefix: `hugo new book/a-very-cool-book.md`
 5. Done.
@@ -247,13 +262,15 @@ Otherwise, your changes would be overwritten when you update to the latest theme
 
 
 ## Custom colors and fonts
-Bilberry uses SCSS for styling, and [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/) to dynamically create the combined and compressed production-ready stylesheets. Hugo Pipes requires Hugo version >= 0.53 **extended**. Find installation instructions for your platform [here](https://gohugo.io/getting-started/installing/).
+Bilberry uses SCSS for styling and NPM with [Laravel Mix](https://laravel-mix.com/) for dependancy management.
 
 If you want to change any colors or fonts, you have follow these steps:
 
 1. Install this theme to your `themes` directory
-1. Modify the `scss/_variables.scss` file to customize your colors. <br> If you want to change the header's color just edit the `$base-color` variable
-1. Done!
+2. `cd themes/bilberry-hugo-theme`
+3. `npm install`
+4. Modify the `scss/_variables.scss` file to customize your colors. <br> If you want to change the header's color just edit the `$base-color` variable
+5. use `npm run dev` for development and preview purposes and `npm run production` when you finished the changes
 
 
 ## CSS and JS modules

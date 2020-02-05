@@ -46,8 +46,8 @@
     {{- else -}}
     <meta property="og:type" content="website">
     {{- end }}
-    <link rel="icon" type="image/png" href="{{ "favicon-32x32.png" | absURL }}" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{ "favicon-16x16.png" | absURL }}" sizes="16x16">
+
+    {{ partial "favicon.html" . }}
 
     {{ if .RelPermalink }}
     <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
