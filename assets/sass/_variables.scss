@@ -1,15 +1,15 @@
-{{ $fonts := "dist/fonts/" | absURL }}
-$fonts-folder: '{{ .Site.Params.CustomFontsURL | default $fonts }}';
+$font-path: '../fonts/' !default;
 
 // Set the with of the main content area
 // Notice that the actual content's width is $site-width - 100px
-$site-width: {{ .Site.Params.SiteWidth | default "800px" }};
+$site-width: 800px;
 
-// Define your fonts.
-// If you want to import new fonts, set them in /src/css/fonts.css
-$headline-font: 'Comfortaa', sans-serif;
-$content-font: 'Open Sans', sans-serif;
-$article-footer-font: 'Roboto Mono', monospace;
+$headline-font: 'Comfortaa',
+sans-serif;
+$content-font: 'Open Sans',
+sans-serif;
+$article-footer-font: 'Fira Code',
+monospace;
 
 // main colors
 $page-background-color: #f1f1f1;
@@ -27,7 +27,7 @@ $algolia-search-box-background-color: #fafafa;
 $algolia-border-color: #e4e4e4;
 
 $header-text-color: $page-background-color;
-$logo-color: darken( $page-background-color, 1 );
+$logo-color: darken($page-background-color, 1);
 $bubble-color: #fff;
 $bubble-background-color: #ccc;
 $bubble-hover-color: $highlight-color;

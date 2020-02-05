@@ -1,5 +1,5 @@
 <a class="bubble" href="{{ .Permalink }}">
-    <i class="fa fa-fw {{or .Params.icon "fa-file" }}"></i>
+    <i class="fas fa-fw {{or .Params.icon "fa-file" }}"></i>
 </a>
 
 <article class="default article">
@@ -7,7 +7,7 @@
     {{ partial "default-content" . }}
 
     {{ with .Params.link }}
-        <script>window.location = {{ . | relURL }}</script>
+    <script>window.location = {{ . | relURL }}</script>
     {{ end }}
 
     {{ partial "article-footer" . }}

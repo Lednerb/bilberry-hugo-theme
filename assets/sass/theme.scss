@@ -1,48 +1,19 @@
-// @import "_variables";
-@import "externalDependencies";
-@import "fontface";
+// Settings for customization
+@import "variables";
 
-.bilberry-hugo-theme {
-    background-color: $page-background-color;
-    font-family: $content-font;
-    color: $text-color;
-    font-size: 1.6em;
+// Dependencies
+@import '~normalize.css/normalize.css';
+@import '~skeleton-css/css/skeleton.css';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~flexslider/flexslider.css';
+@import 'fontface';
 
-    h1, h2, h3, h4, h5, h6, .title, .subtitle {
-        font-family: $headline-font;
-    }
+// Choose one of the supported syntax highlighting styles
+// https://highlightjs.org/static/demo/
+@import '~highlight.js/scss/zenburn.scss';
 
-    a {
-        color: inherit;
-        text-decoration: none;
-        transition: all 0.2s ease-in-out;
-
-        &:hover {
-            color: $highlight-color;
-        }
-    }
-
-    .hljs {
-        padding: 0.75em;
-        font-size: 0.9em;
-    }
-
-    .container {
-        width: $site-width;
-        max-width: 100%;
-    }
-
-    @import "topnav";
-
-    @import "header";
-
-    @import "main";
-
-    @import "articles";
-
-    @import "pagination";
-
-    @import "footer";
-
-    @import "responsive";
-}
+// Basic bilberry styling
+@import 'bilberry-hugo-theme';

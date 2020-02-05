@@ -5,24 +5,25 @@
         {{ if gt (.Site.Params.amountLatestPostsInFooter | default 7) 0 }}
         <div class="recent-posts">
             <strong>{{ i18n "latestPosts" }}</strong>
-                <ul>
+            <ul>
                 {{ range where (where (first (.Site.Params.amountLatestPostsInFooter | default 7) .Site.Pages.ByPublishDate.Reverse) ".Kind" "page") ".Type" "ne" "page" }}
-                    <li>
-                        <a href="{{ .Permalink }}">{{ .Title }}</a>
-                    </li>
+                <li>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
                 {{ end }}
-                </ul>
+            </ul>
         </div>
         {{ end }}
 
         {{ if and .Site.Taxonomies.categories (gt ( .Site.Params.amountCategoriesInFooter | default 7 ) 0 ) }}
         <div class="categories">
             <a href="{{ "/categories/" | relLangURL }}"><strong>{{ i18n "categories" }}</strong></a>
-                <ul>
+            <ul>
                 {{ range $order, $taxonomy := (first ( .Site.Params.amountCategoriesInFooter | default 7 ) .Site.Taxonomies.categories.ByCount) }}
-                    <li>
-                        <a href="{{ (print "/categories/" ($taxonomy.Name | urlize)) | relLangURL }}">{{ $taxonomy.Name | humanize }} ({{ $taxonomy.Count }})</a>
-                    </li>
+                <li>
+                    <a href="{{ (print "/categories/" ($taxonomy.Name | urlize)) | relLangURL }}">{{ $taxonomy.Name | humanize }}
+                        ({{ $taxonomy.Count }})</a>
+                </li>
                 {{ end }}
             </ul>
         </div>
@@ -34,53 +35,53 @@
                 <strong>{{ i18n "socialMedia" }}</strong>
 
                 {{ with .Site.Params.facebook }}
-                    <a href="{{ . }}" target="_blank"><i class="fa fa-facebook-adblock-proof"></i></a>
+                <a href="{{ . }}" target="_blank"><i class="fab fa-facebook-adblock-proof"></i></a>
                 {{ end }}
                 {{ with .Site.Params.twitter }}
-                    <a href="{{ . }}" target="_blank"><i class="fa fa-twitter-adblock-proof"></i></a>
+                <a href="{{ . }}" target="_blank"><i class="fab fa-twitter-adblock-proof"></i></a>
                 {{ end }}
                 {{ with .Site.Params.googleplus }}
-                    <a href="{{ . }}" target="_blank"><i class="fa fa-google-plus-official-adblock-proof"></i></a>
+                <a href="{{ . }}" target="_blank"><i class="fab fa-google-plus-official-adblock-proof"></i></a>
                 {{ end }}
                 {{ with .Site.Params.xing }}
-                    <a href="{{ . }}" target="_blank"><i class="fa fa-xing"></i></a>
+                <a href="{{ . }}" target="_blank"><i class="fab fa-xing"></i></a>
                 {{ end }}
                 {{ with .Site.Params.pinterest }}
-                    <a href="{{ . }}" target="_blank"><i class="fa fa-pinterest"></i></a>
+                <a href="{{ . }}" target="_blank"><i class="fab fa-pinterest"></i></a>
                 {{ end }}
                 {{ with .Site.Params.instagram }}
-                    <a href="{{ . }}" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="{{ . }}" target="_blank"><i class="fab fa-instagram"></i></a>
                 {{ end }}
                 {{ with .Site.Params.tumblr }}
-                    <a href="{{ . }}" target="_blank"><i class="fa fa-tumblr"></i></a>
+                <a href="{{ . }}" target="_blank"><i class="fab fa-tumblr"></i></a>
                 {{ end }}
                 {{ with .Site.Params.youtube }}
-                    <a href="{{ . }}" target="_blank"><i class="fa fa-youtube-adblock-proof"></i></a>
+                <a href="{{ . }}" target="_blank"><i class="fab fa-youtube-adblock-proof"></i></a>
                 {{ end }}
                 {{ with .Site.Params.vimeo }}
-                    <a href="{{ . }}" target="_blank"><i class="fa fa-vimeo"></i></a>
+                <a href="{{ . }}" target="_blank"><i class="fab fa-vimeo"></i></a>
                 {{ end }}
                 {{ with .Site.Params.github }}
-                    <a href="{{ . }}" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="{{ . }}" target="_blank"><i class="fab fa-github"></i></a>
                 {{ end }}
                 {{ with .Site.Params.linkedin }}
-                    <a href="{{ . }}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="{{ . }}" target="_blank"><i class="fab fa-linkedin"></i></a>
                 {{ end }}
             </div>
             {{ end }}
 
             {{ if and (.Site.Params.showFooterLanguageChooser | default true) (gt .Site.Languages 1) }}
-                {{- $.Scratch.Set "language" .Language -}}
-                <div class="languages">
-                    <strong>{{ i18n "otherLanguages" }}</strong>
-                    {{ range .Site.Languages }}
-                        {{ if eq ($.Scratch.Get "language") . }}
-                            <a href="{{ . | relURL }}" class="active">{{ . }}</a>
-                        {{ else }}
-                            <a href="{{ . | relURL }}">{{ . }}</a>
-                        {{ end }}
-                    {{ end }}
-                </div>
+            {{- $.Scratch.Set "language" .Language -}}
+            <div class="languages">
+                <strong>{{ i18n "otherLanguages" }}</strong>
+                {{ range .Site.Languages }}
+                {{ if eq ($.Scratch.Get "language") . }}
+                <a href="{{ . | relURL }}" class="active">{{ . }}</a>
+                {{ else }}
+                <a href="{{ . | relURL }}">{{ . }}</a>
+                {{ end }}
+                {{ end }}
+            </div>
             {{ end }}
         </div>
     </div>
@@ -93,19 +94,20 @@
             <a href="{{ .Site.Params.copyrightUrl | default "https://github.com/Lednerb" }}" target="_blank">
                 &copy;
                 {{ if .Site.Params.copyrightUseCurrentYear }}
-                    {{ now.Year }}
+                {{ now.Year }}
                 {{ else }}
-                    {{ .Site.Params.copyrightYearOverride | default 2018 }}
+                {{ .Site.Params.copyrightYearOverride | default 2018 }}
                 {{ end }}
                 {{ .Site.Params.copyrightBy | default "by Lednerb" }}
             </a>
-	    {{ with  .OutputFormats.Get "rss" -}}
-        -
-		<a href="{{ .Permalink }}">{{ .Name }}</a>
-	    {{- end }}
+            {{ with  .OutputFormats.Get "rss" -}}
+            -
+            <a href="{{ .Permalink }}">{{ .Name }}</a>
+            {{- end }}
         </div>
         <div class="author">
-            <a href="{{ .Site.Params.creditsUrl | default "https://github.com/Lednerb/bilberry-hugo-theme" }}" target="_blank">{{ .Site.Params.creditsText | default "Bilberry Hugo Theme" }}</a>
+            <a href="{{ .Site.Params.creditsUrl | default "https://github.com/Lednerb/bilberry-hugo-theme" }}"
+                target="_blank">{{ .Site.Params.creditsText | default "Bilberry Hugo Theme" }}</a>
         </div>
     </div>
 </div>

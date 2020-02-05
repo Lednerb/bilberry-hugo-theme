@@ -1,10 +1,10 @@
 <a class="bubble" href="{{ .Params.link }}" target="_blank">
-    <i class="fa fa-fw {{or .Params.icon "fa-link" }}"></i>
+    <i class="fas fa-fw {{ or .Params.icon "fa-link" }}"></i>
 </a>
 
 <article class="link">
     {{ with .Params.featuredImage }}
-        <img src="{{ . }}" class="featured-image" alt="">
+    <img src="{{ . }}" class="featured-image" alt="">
     {{ end }}
     <a href="{{ .Params.link }}" target="_blank">
         <h4>{{ .Title }}</h4>

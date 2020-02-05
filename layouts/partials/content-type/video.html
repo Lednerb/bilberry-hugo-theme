@@ -1,20 +1,20 @@
-
 <a class="bubble" href="{{ .Permalink }}">
-    <i class="fa fa-fw {{or .Params.icon "fa-video-camera" }}"></i>
+    <i class="fas fa-fw {{or .Params.icon "fa-video" }}"></i>
 </a>
 
 <article class="video">
     {{ partial "featured-image" . }}
 
     {{ with .Params.youtube }}
-        <div class="responsive-video youtube">
-            <iframe src="https://www.youtube-nocookie.com/embed/{{ . }}?rel=0" frameborder="0" allowfullscreen></iframe>
-        </div>
+    <div class="responsive-video youtube">
+        <iframe src="https://www.youtube-nocookie.com/embed/{{ . }}?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
     {{ end }}
     {{ with .Params.vimeo }}
-        <div class="responsive-video vimeo">
-            <iframe src="https://player.vimeo.com/video/{{ . }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
+    <div class="responsive-video vimeo">
+        <iframe src="https://player.vimeo.com/video/{{ . }}" frameborder="0" webkitallowfullscreen mozallowfullscreen
+            allowfullscreen></iframe>
+    </div>
     {{ end }}
 
     {{ partial "default-content.html" . }}

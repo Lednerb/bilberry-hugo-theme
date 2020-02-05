@@ -1,42 +1,10 @@
-<script>
-    var client = algoliasearch({{ .Site.Params.algolia_appId }}, {{ .Site.Params.algolia_apiKey}});
-    var index = client.initIndex({{ .Site.Params.algolia_indexName }});
+<div id="activate-algolia-search" class="hidden">
+  <input type="hidden" id="algolia-search-appId" value="{{ .Site.Params.algolia_appId }}">
+  <input type="hidden" id="algolia-search-apiKey" value="{{ .Site.Params.algolia_apiKey }}">
+  <input type="hidden" id="algolia-search-indexName" value="{{ .Site.Params.algolia_indexName }}">
+  <input type="hidden" id="algolia-search-noSearchResults" value="{{ i18n "noSearchResults" }}">
 
-    $('#search').autocomplete({ hint: false, autoselect: true, debug: false },
-      [
-        {
-          {{ if .Site.Params.algolia_currentLanguageOnly }}
-            source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5, filters: 'language: {{ .Lang }}' }),
-          {{ else }}
-            source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 10 }),
-          {{ end }}
-          displayKey: function(suggestion) {
-            return suggestion.title || suggestion.author
-          },
-          templates: {
-            suggestion: function(suggestion) {
-                return "<span class='entry " + suggestion.type + "'>"
-                      + "<span class='title'>" + suggestion.title + "</span>"
-                      + "<span class='fa fa-fw " + suggestion.iconClass + "'></span>"
-                  + "</span>"
-                ;
-            },
-            empty: function() {
-              return "<span class='empty'>{{ i18n "noSearchResults" }}</span>"
-            },
-            footer: function() {
-              return '<div class="branding">Powered by <img src="{{ "dist/algolia-logo-light.svg" | absURL }}" /></div>'
-            }
-
-          },
-        }
-      ])
-      .on('autocomplete:selected', function(event, suggestion, dataset) {
-        window.location = (suggestion.url);
-      })
-      .keypress(function (event, suggestion) {
-        if (event.which == 13) {
-          window.location = (suggestion.url);
-        }
-      });
-</script>
+  {{ if .Site.Params.algolia_currentLanguageOnly }}
+  <input type="hidden" id="algolia-search-currentLanguageOnly">
+  {{ end }}
+</div>

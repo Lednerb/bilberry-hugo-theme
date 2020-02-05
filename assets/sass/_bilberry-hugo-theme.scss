@@ -1,0 +1,82 @@
+.bilberry-hugo-theme {
+    background-color: $page-background-color;
+    font-family: $content-font;
+    color: $text-color;
+    font-size: 1.6em;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .title,
+    .subtitle {
+        font-family: $headline-font;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $highlight-color;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .hljs {
+        padding: 0.75em;
+        font-size: 0.9em;
+    }
+
+    code {
+        font-family: 'Fira Code', monospace;
+    }
+
+    .bubble .fas {
+        font-size: 15pt;
+    }
+
+
+    .container {
+        width: $site-width;
+        max-width: 100%;
+    }
+
+    ul {
+        list-style: circle;
+        padding-left: inherit;
+    }
+
+    .flexslider {
+
+        ol,
+        ul {
+            list-style: none;
+        }
+    }
+
+
+    .fa-youtube-adblock-proof:before {
+        content: "\F167";
+    }
+
+    @import "topnav";
+
+    @import "header";
+
+    @import "main";
+
+    @import "articles";
+
+    @import "pagination";
+
+    @import "footer";
+
+    @import "responsive";
+}
