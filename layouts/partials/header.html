@@ -1,4 +1,8 @@
+{{ if and .Site.Params.permanentTopNav .Site.Params.stickyNav }}
+<header class="sticky">
+{{ else }}
 <header>
+{{ end }}
     <div class="container">
         <div class="logo">
             <a id="siteBaseUrl" href="{{ .Site.BaseURL | relLangURL }}" class="logo">

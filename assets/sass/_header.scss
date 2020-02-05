@@ -5,6 +5,10 @@ header {
     display: flex;
     align-items: center;
 
+    &.sticky {
+        padding-top: 65px;
+    }
+
     .container {
         display: flex;
         flex-direction: row;

@@ -24,7 +24,13 @@ nav {
     display: none;
 
     &.permanentTopNav {
-      display: block;
+        display: block;
+
+        &.sticky {
+            position: fixed;
+            width: 100%;
+            z-index: 60;
+        }
     }
 
     .container {
@@ -86,7 +92,8 @@ nav {
             width: 100%;
             background-color: lighten($nav-background-color, 5);
 
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 background-color: lighten($nav-background-color, 10);
                 border: none;
             }
@@ -127,7 +134,8 @@ nav {
                     align-items: center;
                     background-color: $algolia-search-box-background-color;
 
-                    &:hover, &:focus {
+                    &:hover,
+                    &:focus {
                         background-color: darken($algolia-search-box-background-color, 2);
                     }
 
@@ -135,7 +143,9 @@ nav {
                         max-width: 315px;
                     }
 
-                    &.entry.category, &.entry.tag, &.entry.author {
+                    &.entry.category,
+                    &.entry.tag,
+                    &.entry.author {
                         .title {
                             text-transform: capitalize;
                         }
@@ -165,8 +175,10 @@ nav {
             appearance: none;
         }
 
-        .aa-input-search::-webkit-search-decoration, .aa-input-search::-webkit-search-cancel-button,
-        .aa-input-search::-webkit-search-results-button, .aa-input-search::-webkit-search-results-decoration {
+        .aa-input-search::-webkit-search-decoration,
+        .aa-input-search::-webkit-search-cancel-button,
+        .aa-input-search::-webkit-search-results-button,
+        .aa-input-search::-webkit-search-results-decoration {
             display: none;
         }
 
@@ -177,7 +189,7 @@ nav {
             top: 50%;
             right: 16px;
             -webkit-transform: translateY(-50%);
-                transform: translateY(-50%);
+            transform: translateY(-50%);
             fill: $algolia-border-color;
             pointer-events: none;
         }
@@ -195,7 +207,7 @@ nav {
             cursor: pointer;
         }
 
-        .aa-suggestion + .aa-suggestion {
+        .aa-suggestion+.aa-suggestion {
             border-top: 1px solid rgba($algolia-border-color, 0.6);
         }
 
