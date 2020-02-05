@@ -12,7 +12,7 @@ Hallo zusammen!
 
 Dieses Premium Theme ist unter einer Open Source Lizenz veröffentlicht worden, sodass du dieses für deinen Blog benutzen kannst.
 
-Bisher habe ich mehr als 75 Stunden Arbeitszeit investiert, um eins der besten Themes für Hugo zu erstellen, das es bisher für Hugo gibt.
+Bisher habe ich 100+ Stunden Arbeitszeit investiert, um eins der besten Themes für Hugo zu erstellen, das es bisher für Hugo gibt.
 
 Wenn dir dieses Theme gefällt und du über alle neuen Erweiterungen und Funktionen informiert werden oder einfach Danke sagen möchtest, schau mal in unseren Discord Kanal:
 

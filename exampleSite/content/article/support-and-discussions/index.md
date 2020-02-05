@@ -10,7 +10,7 @@ resizeImages: false
 ---
 Hey there!
 
-This Premium Theme is published under an open source license so you can use it for your blog. It took me more than 75 hours of work to create one of the best Hugo themes out there.
+This Premium Theme is published under an open source license so you can use it for your blog. It took me 100+ hours of work to create one of the best Hugo themes out there.
 
 If you enjoy this theme and want to stay informed about the latest releases and features or want to say thanks and discuss with other users, join our Discord server:
 

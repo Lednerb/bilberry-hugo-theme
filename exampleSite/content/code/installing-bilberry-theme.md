@@ -15,26 +15,26 @@ __If you want to install this theme, follow these steps:__
 
 - Install Hugo and create a new site:
 
-```sh
+```plaintext
 hugo new site my-new-blog
 ```
 
 - Switch to your `theme` folder and import the latest version of the Bilberry Theme
 
-```sh
+```plaintext
 cd my-new-blog/themes
 git clone https://github.com/Lednerb/bilberry-hugo-theme.git
 ```
 
 - Copy the example content to your new site
 
-```sh
+```plaintext
 cp -r bilberry-hugo-theme/exampleSite/* ../
 ```
 
 - Test the installation
 
-```sh
+```plaintext
 cd ../
 hugo server -D
 ```
