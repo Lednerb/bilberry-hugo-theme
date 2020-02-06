@@ -15,6 +15,8 @@ If you like this theme and/or use it for commercial purposes, please support me!
 
 ## Table of Contents
 
+- [Bilberry Hugo Theme](#Bilberry-Hugo-Theme)
+- [Table of Contents](#Table-of-Contents)
 - [Requirements](#Requirements)
 - [Quick Start](#Quick-Start)
 - [Configuration](#Configuration)
@@ -25,12 +27,13 @@ If you like this theme and/or use it for commercial purposes, please support me!
   - [Keyboard Shortcuts](#Keyboard-Shortcuts)
   - [Post Types](#Post-Types)
   - [Pages and External Links](#Pages-and-External-Links)
-  - [Manual Summary Breaks](#Manual-Summary-Breaks)
+  - [Summary Breaks](#Summary-Breaks)
   - [Disqus comments](#Disqus-comments)
   - [Responsive Design](#Responsive-Design)
   - [Automatic Image Resizing](#Automatic-Image-Resizing)
   - [Permanent Top Navigation](#Permanent-Top-Navigation)
   - [MathJAX Markup](#MathJAX-Markup)
+- [Favicons](#Favicons)
 - [Custom 404 site](#Custom-404-site)
 - [Custom Post Types](#Custom-Post-Types)
 - [External Images](#External-Images)
@@ -154,8 +157,8 @@ A `page` can be a static page (about me or impress site) or a link to another pa
 The post type `link` always links to an external site and can be used with or without a background image.
 
 
-### Manual Summary Breaks
-You can influence the summary outpot on the listing pages (such as the home page or the category or tag pages) in three ways:
+### Summary Breaks
+You can influence the summary output on the listing pages (such as the home page or the category or tag pages) in different ways:
 
 - You don't set a manual summary break. <br>
 Hugo will care for you and generates a summary as well as a _Continue reading_ link.
@@ -166,6 +169,9 @@ Just write your content and if you want to break use the code snippet to tell Hu
 - You want to display the full article without a _Continue reading_ link <br>
 In this case, set the option `noSummary: true` in the header area (Front Matter) of your `.md` file.
 
+- You can define a summary that differs from the first content lines <br>
+Use the `summary: "Here goes my summary"` Front Matter variable. <br>
+In this case no _Continue reading_ link will be displayed.
 
 ### Disqus comments
 If you want to enable the functionality for your users to write comments below your articles, you can register for a free [Disqus](https://disqus.com) account.
