@@ -45,10 +45,7 @@ disqusShortname = "bilberry-hugo-theme"
     # Set this option to false if you want to search within all articles in all languages at once
     algolia_currentLanguageOnly = true
 
-  # Style configuration
-    # set the width of your site's content
-    siteWidth = "800px"
-
+  # Media configuration
     # let hugo automatically resize and crop your images to the correct sizes
     resizeImages = true
 
