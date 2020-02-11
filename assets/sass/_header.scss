@@ -87,7 +87,8 @@ header {
         right: 0;
         bottom: 0;
         background-color: $special-color;
-        padding: 0.25em 1em;
+        padding: 0.5em 1em;
+        display: flex;
         border-top-right-radius: 4px;
         border-top-left-radius: 4px;
 
