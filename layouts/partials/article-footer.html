@@ -9,7 +9,9 @@
             <i class="fa fa-tags"></i>
             <div class="links">
                 {{ range . }}
-                    <a href="{{ (print "/tags/" (. | urlize)) | relLangURL }}">{{ . }}</a>
+                {{ with $.Site.GetPage (printf "/tags/%s" ( . | urlize)) }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ end }}
                 {{ end }}
             </div>
         </div>

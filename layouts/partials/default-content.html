@@ -16,13 +16,19 @@
         {{ with .Params.categories }}
         <span class="categories">
             {{ range . }}
-            <a href="{{ (print "/categories/" ( . | urlize)) | relLangURL }}">{{ . }}</a>
+                {{ with $.Site.GetPage (printf "/categories/%s" ( . | urlize)) }}
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ end }}
             {{ end }}
         </span>
         {{ end }}
 
         {{ with .Params.author }}
-        <span class="author"><a href="{{ (print "/author/" (. | urlize)) | relLangURL }}">{{ . }}</a></span>
+        <span class="author">
+            {{ with $.Site.GetPage (printf "/author/%s" ( . | urlize)) }}
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ end }}
+        </span>
         {{ end }}
     </div>
 
