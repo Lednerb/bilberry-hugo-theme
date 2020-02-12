@@ -1,8 +1,8 @@
 title = "My cool new Blog"
-# Add an trailing slash to ensure that all fonts render correctly.
 baseURL = "https://example.com/"
 theme = "bilberry-hugo-theme"
 
+# Generate the robots.txt file for SEO
 enableRobotsTXT = true
 
 # Change to one of your content languages definded at the end.
@@ -106,17 +106,13 @@ disqusShortname = "bilberry-hugo-theme"
     # social media profile urls for the footer links
     showSocialMedia = true
 
-    facebook   = ""
-    twitter    = "https://twitter.com/TheRealLednerb"
-    googleplus = ""
-    pinterest  = ""
-    instagram  = ""
-    tumblr     = ""
-    youtube    = ""
-    vimeo      = ""
-    github     = "https://github.com/Lednerb"
-    xing       = ""
-    linkedin   = ""
+    # define your links with FontAwesome 5 (only free icons are supported)
+    # all icons https://fontawesome.com/icons?d=gallery&m=free
+    # brand icons https://fontawesome.com/icons?d=gallery&s=brands&m=free
+    socialMediaLinks = [
+      { link = "https://twitter.com/TheRealLednerb", icon = "fab fa-twitter" },
+      { link = "https://github.com/Lednerb", icon = "fab fa-github" },
+    ]
 
     # credits line configuration
     copyrightBy = "by Lednerb"

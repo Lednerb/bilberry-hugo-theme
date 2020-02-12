@@ -34,38 +34,8 @@
             <div class="external-profiles">
                 <strong>{{ i18n "socialMedia" }}</strong>
 
-                {{ with .Site.Params.facebook }}
-                <a href="{{ . }}" target="_blank"><i class="fab fa-facebook-adblock-proof"></i></a>
-                {{ end }}
-                {{ with .Site.Params.twitter }}
-                <a href="{{ . }}" target="_blank"><i class="fab fa-twitter-adblock-proof"></i></a>
-                {{ end }}
-                {{ with .Site.Params.googleplus }}
-                <a href="{{ . }}" target="_blank"><i class="fab fa-google-plus-official-adblock-proof"></i></a>
-                {{ end }}
-                {{ with .Site.Params.xing }}
-                <a href="{{ . }}" target="_blank"><i class="fab fa-xing"></i></a>
-                {{ end }}
-                {{ with .Site.Params.pinterest }}
-                <a href="{{ . }}" target="_blank"><i class="fab fa-pinterest"></i></a>
-                {{ end }}
-                {{ with .Site.Params.instagram }}
-                <a href="{{ . }}" target="_blank"><i class="fab fa-instagram"></i></a>
-                {{ end }}
-                {{ with .Site.Params.tumblr }}
-                <a href="{{ . }}" target="_blank"><i class="fab fa-tumblr"></i></a>
-                {{ end }}
-                {{ with .Site.Params.youtube }}
-                <a href="{{ . }}" target="_blank"><i class="fab fa-youtube-adblock-proof"></i></a>
-                {{ end }}
-                {{ with .Site.Params.vimeo }}
-                <a href="{{ . }}" target="_blank"><i class="fab fa-vimeo"></i></a>
-                {{ end }}
-                {{ with .Site.Params.github }}
-                <a href="{{ . }}" target="_blank"><i class="fab fa-github"></i></a>
-                {{ end }}
-                {{ with .Site.Params.linkedin }}
-                <a href="{{ . }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+                {{ range .Site.Params.socialMediaLinks }}
+                <a href="{{ .link }}" target="_blank"><i class="{{ .icon }}"></i></a>
                 {{ end }}
             </div>
             {{ end }}
