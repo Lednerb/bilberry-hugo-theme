@@ -74,11 +74,11 @@
             {{- $.Scratch.Set "language" .Language -}}
             <div class="languages">
                 <strong>{{ i18n "otherLanguages" }}</strong>
-                {{ range .Site.Languages }}
-                {{ if eq ($.Scratch.Get "language") . }}
-                <a href="{{ . | relURL }}" class="active">{{ . }}</a>
+                {{ range $.Site.Home.AllTranslations }}
+                {{ if eq ($.Scratch.Get "language") .Language }}
+                <a href="{{ .Permalink }}" class="active">{{ .Language }}</a>
                 {{ else }}
-                <a href="{{ . | relURL }}">{{ . }}</a>
+                <a href="{{ .Permalink }}">{{ .Language }}</a>
                 {{ end }}
                 {{ end }}
             </div>
