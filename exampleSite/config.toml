@@ -47,6 +47,8 @@ disqusShortname = "bilberry-hugo-theme"
 
   # Media configuration
     # let hugo automatically resize and crop your images to the correct sizes
+    # NB: When enabled the image files get renamed by adding additional information,
+    #     even if the image has the correct sizes.
     resizeImages = true
 
   # Header configuration
