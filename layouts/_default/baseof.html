@@ -54,6 +54,9 @@
     <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
 
+    {{ with .Params.original_url }}
+    <link rel=”canonical” href=”{{ . }}” />
+    {{ end }}
 
     <link rel="stylesheet" href="{{ "theme.css" | absURL }}">
 

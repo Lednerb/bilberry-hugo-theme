@@ -15,8 +15,6 @@ If you like this theme and/or use it for commercial purposes, please support me!
 
 ## Table of Contents
 
-- [Bilberry Hugo Theme](#Bilberry-Hugo-Theme)
-- [Table of Contents](#Table-of-Contents)
 - [Requirements](#Requirements)
 - [Quick Start](#Quick-Start)
 - [Configuration](#Configuration)
@@ -27,6 +25,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
   - [Keyboard Shortcuts](#Keyboard-Shortcuts)
   - [Post Types](#Post-Types)
   - [Pages and External Links](#Pages-and-External-Links)
+  - [Reposting an Article / Duplicated Content [SEO]](#Reposting-an-Article--Duplicated-Content-SEO)
   - [Summary Breaks](#Summary-Breaks)
   - [Disqus comments](#Disqus-comments)
   - [Responsive Design](#Responsive-Design)
@@ -156,6 +155,17 @@ A `page` can be a static page (about me or impress site) or a link to another pa
 
 The post type `link` always links to an external site and can be used with or without a background image.
 
+### Reposting an Article / Duplicated Content [SEO]
+If you want to repost an article from another website or have duplicated content on your own site, for SEO reasons it's a good practice to link to the original / `canonical` URL.
+
+If you want to mark one of your content sites as duplicated content you can simply use the following front matter configuration option:
+
+```
+original_url: "https://example.org/path/to/content"
+```
+
+Further Information:
+- [Wikipedia](https://en.wikipedia.org/wiki/Canonical_link_element)
 
 ### Summary Breaks
 You can influence the summary output on the listing pages (such as the home page or the category or tag pages) in different ways:
