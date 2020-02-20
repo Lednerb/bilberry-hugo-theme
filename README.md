@@ -48,9 +48,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
 
 ## Requirements
 
-**Hugo version >= 0.53 Extended**
-
-This theme makes use of Hugo Pipes, and requires at least Hugo version 0.53 **extended**. Please follow the installation instructions for your platform [here](https://gohugo.io/getting-started/installing/).
+**Hugo version >= 0.53 required**
 
 ## Quick Start
 
@@ -59,12 +57,12 @@ This theme makes use of Hugo Pipes, and requires at least Hugo version 0.53 **ex
 hugo new site my-new-blog
 ```
 
-- Install this theme
+- Install the latest version of this  theme
 ```
 cd my-new-blog/themes
 git clone https://github.com/Lednerb/bilberry-hugo-theme.git
 ```
-If you don't use git, you can download and extract this theme manually into the themes folder. <br>
+If you don't use git, you can download this theme [HERE](https://github.com/Lednerb/bilberry-hugo-theme/archive/master.zip) and extract it manually into the themes folder. <br>
 Please ensure that the folder is renamed to "bilberry-hugo-theme"
 
 - Copy example content and default config file for a quick start
