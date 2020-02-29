@@ -55,7 +55,7 @@ $(document).ready(function () {
                         suggestion: function (suggestion) {
                             return "<span class='entry " + suggestion.type + "'>"
                                 + "<span class='title'>" + suggestion.title + "</span>"
-                                + "<span class='fa fa-fw " + suggestion.iconClass + "'></span>"
+                                + "<span class='fas fa-fw " + suggestion.iconClass + "'></span>"
                                 + "</span>"
                                 ;
                         },
@@ -63,7 +63,7 @@ $(document).ready(function () {
                             return "<span class='empty'>" + $('#algolia-search-noSearchResults').val() + "</span>"
                         },
                         footer: function () {
-                            return '<div class="branding">Powered by <img src="' + $('#siteBaseUrl').attr('href') + '/algolia-logo-light.svg" /></div>'
+                            return '<div class="branding">Powered by <img src="' + $('#siteBaseUrl').attr('href') + 'algolia-logo-light.svg" /></div>'
                         }
                     },
                 }
