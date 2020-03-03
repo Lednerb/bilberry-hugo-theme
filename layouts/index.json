@@ -12,21 +12,22 @@
     {{- $.Scratch.Add "index" (dict "url" (print "/tags/" $name | absURL) "title" ($name | humanize) "iconClass" "fa-tag" "type" "tag" "objectID" (print "/tags/" $name | absURL) ) -}}
 {{- end -}}
 
-{{- range where .Pages "Type" "not in"  (slice "page" "json") -}}
-
-    {{-  $iconClass := "fa-pencil" -}}
+{{- range where .Site.RegularPages "Type" "not in" (slice "page" "json") -}}
+    {{-  $iconClass := "fa-pencil-alt" -}}
     {{- if eq .Type "quote" -}}
         {{- $iconClass = "fa-quote-right" -}}
     {{- else if eq .Type "link" -}}
         {{- $iconClass = "fa-link" -}}
     {{- else if eq .Type "video" -}}
-        {{- $iconClass = "fa-video-camera" -}}
+        {{- $iconClass = "fa-video" -}}
     {{- else if or (eq .Type "gallery") (eq .Type "picture") -}}
         {{- $iconClass = "fa-camera" -}}
     {{- else if eq .Type "audio" -}}
         {{- $iconClass = "fa-music" -}}
+    {{- else if eq .Type "code" -}}
+        {{- $iconClass = "fa-code" -}}
     {{- end -}}
-        
+
     {{- range .Translations -}}
         {{- $.Scratch.Add "index" (dict "url" .Permalink "title" .Title "tags" .Params.tags "categories" .Params.categories "author" .Params.author "type" .Type "language" .Lang "iconClass" $iconClass "objectID" (.Permalink | md5) ) -}}
     {{- end -}}
