@@ -16,7 +16,7 @@
         {{ with .Params.categories }}
         <span class="categories">
             {{ range . }}
-                {{ with $.Site.GetPage (printf "/categories/%s" ( . | urlize)) }}
+                {{ with $.Site.GetPage (printf "/categories/%s" ( . | anchorize)) }}
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
                 {{ end }}
             {{ end }}
@@ -25,7 +25,7 @@
 
         {{ with .Params.author }}
         <span class="author">
-            {{ with $.Site.GetPage (printf "/author/%s" ( . | urlize)) }}
+            {{ with $.Site.GetPage (printf "/author/%s" ( . | anchorize ) ) }}
             <a href="{{ .Permalink }}">{{ .Title }}</a>
             {{ end }}
         </span>

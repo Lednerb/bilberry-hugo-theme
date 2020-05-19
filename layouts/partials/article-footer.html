@@ -9,7 +9,7 @@
             <i class="fa fa-tags"></i>
             <div class="links">
                 {{ range . }}
-                {{ with $.Site.GetPage (printf "/tags/%s" ( . | urlize)) }}
+                {{ with $.Site.GetPage (printf "/tags/%s" ( . | anchorize)) }}
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
                 {{ end }}
                 {{ end }}
