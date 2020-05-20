@@ -24,7 +24,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install Hugo
-        run: curl -o hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.71.0/hugo_extended_0.71.0_Linux-64bit.deb && sudo dpkg -i ./hugo.deb
+        run: curl -L -o hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.71.0/hugo_extended_0.71.0_Linux-64bit.deb && sudo dpkg -i ./hugo.deb
 
       # Runs a set of commands using the runners shell
       - name: Run tests
