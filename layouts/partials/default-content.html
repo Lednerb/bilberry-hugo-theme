@@ -16,7 +16,8 @@
         {{ with .Params.categories }}
         <span class="categories">
             {{ range . }}
-                {{ with $.Site.GetPage (printf "/categories/%s" ( . | anchorize)) }}
+                {{ $urlValue := replace . " " "-" | lower}}
+                {{ with $.Site.GetPage (printf "/categories/%s" $urlValue) }}
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
                 {{ end }}
             {{ end }}
@@ -25,7 +26,8 @@
 
         {{ with .Params.author }}
         <span class="author">
-            {{ with $.Site.GetPage (printf "/author/%s" ( . | anchorize ) ) }}
+            {{ $urlValue := replace . " " "-" | lower}}
+            {{ with $.Site.GetPage (printf "/author/%s" $urlValue ) }}
             <a href="{{ .Permalink }}">{{ .Title }}</a>
             {{ end }}
         </span>

@@ -9,9 +9,10 @@
             <i class="fa fa-tags"></i>
             <div class="links">
                 {{ range . }}
-                {{ with $.Site.GetPage (printf "/tags/%s" ( . | anchorize)) }}
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-                {{ end }}
+                    {{ $urlValue := replace . " " "-" | lower}}
+                    {{ with $.Site.GetPage (printf "/tags/%s" $urlValue) }}
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    {{ end }}
                 {{ end }}
             </div>
         </div>
