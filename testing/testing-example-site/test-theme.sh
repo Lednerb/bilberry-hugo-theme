@@ -12,7 +12,7 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
 
 TARGET_DIR="$DIR/public"
 
-./setup-theme.sh
+"${DIR}"/setup-theme.sh
 
 
 ERROR_COUNT=0
