@@ -72,7 +72,7 @@ if [ ! -d "$TARGET_DIR" ]; then
 fi
 
 echo "# Umlauts tests"
-testFolderAndContinue "$TARGET_DIR/aauthor/ä-ß+"
+testFolderAndContinue "$TARGET_DIR/author/ä-ß+"
 
 testFolderAndContinue "$TARGET_DIR/article/täst"
 testFolderAndContinue "$TARGET_DIR/de/article/täst"
@@ -88,7 +88,7 @@ testFolderAndContinue "$TARGET_DIR/de/tags/tästing++"
 
 # article/täst [en]
 echo "## Testing article/täst [en]"
-testContentAndContinue 'a<a href="https://example.com/categories/t%C3%A4st&#43;&#43;/">Täst&#43;&#43;</a>' "$TARGET_DIR/article/täst/index.html"
+testContentAndContinue '<a href="https://example.com/categories/t%C3%A4st&#43;&#43;/">Täst&#43;&#43;</a>' "$TARGET_DIR/article/täst/index.html"
 testContentAndContinue '<a href="https://example.com/author/%C3%A4-%C3%9F&#43;/">ä ß&#43;</a>' "$TARGET_DIR/article/täst/index.html"
 testContentAndContinue '<a href="https://example.com/tags/c&#43;&#43;/">C&#43;&#43;</a>' "$TARGET_DIR/article/täst/index.html"
 testContentAndContinue '<a href="https://example.com/tags/t%C3%A4sting&#43;&#43;/">tästing&#43;&#43;</a>' "$TARGET_DIR/article/täst/index.html"
