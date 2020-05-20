@@ -225,7 +225,18 @@
       "profile": "https://github.com/anoff",
       "contributions": [
         "code",
-        "doc
+        "doc"
+      ]
+    },
+    {
+      "login": "nidomiro",
+      "name": "Niclas Roßberger",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/15079172?s=460&v=4",
+      "profile": "https://github.com/nidomiro",
+      "contributions": [
+        "code",
+        "bug",
+        "maintenance"
       ]
     }
   ]

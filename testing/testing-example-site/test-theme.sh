@@ -20,6 +20,11 @@ incErrorCount () {
   ERROR_COUNT=$((ERROR_COUNT + 1))
 }
 
+cleanBuildHugo () {
+  rm -rf $TARGET_DIR
+  cd "$DIR" && hugo
+}
+
 fail () {
   incErrorCount
   echo "$1"
@@ -56,7 +61,7 @@ testContentAndContinue () {
 }
 
 
-cd "$DIR" && hugo
+cleanBuildHugo
 
 if [ ! -d "$TARGET_DIR" ]; then
   fail "Compile failed - '$TARGET_DIR' does not exist"
@@ -66,6 +71,7 @@ if [ ! -d "$TARGET_DIR" ]; then
   failButContinue "Expected '$TARGET_DIR' but does not exist"
 fi
 
+echo "# Umlauts tests"
 testFolderAndContinue "$TARGET_DIR/author/ä-ß+"
 
 testFolderAndContinue "$TARGET_DIR/article/täst"
@@ -81,7 +87,7 @@ testFolderAndContinue "$TARGET_DIR/tags/tästing++"
 testFolderAndContinue "$TARGET_DIR/de/tags/tästing++"
 
 # article/täst [en]
-echo "# Testing article/täst [en]"
+echo "## Testing article/täst [en]"
 testContentAndContinue '<a href="https://example.com/categories/t%C3%A4st&#43;&#43;/">Täst&#43;&#43;</a>' "$TARGET_DIR/article/täst/index.html"
 testContentAndContinue '<a href="https://example.com/author/%C3%A4-%C3%9F&#43;/">ä ß&#43;</a>' "$TARGET_DIR/article/täst/index.html"
 testContentAndContinue '<a href="https://example.com/tags/c&#43;&#43;/">C&#43;&#43;</a>' "$TARGET_DIR/article/täst/index.html"
@@ -93,7 +99,7 @@ testContentAndContinue '<a href="/categories/t%C3%A4st&#43;&#43;">Täst&#43;&#43
                         (2)</a>' "$TARGET_DIR/article/täst/index.html"
 
 # article/täst [de]
-echo "# Testing article/täst [de]"
+echo "## Testing article/täst [de]"
 testContentAndContinue '<a href="https://example.com/de/categories/t%C3%A4st&#43;&#43;/">Täst&#43;&#43;</a>' "$TARGET_DIR/de/article/täst/index.html"
 testContentAndContinue '<a href="https://example.com/de/author/%C3%A4-%C3%9F&#43;/">ä ß&#43;</a>' "$TARGET_DIR/de/article/täst/index.html"
 testContentAndContinue '<a href="https://example.com/de/tags/c&#43;&#43;/">C&#43;&#43;</a>' "$TARGET_DIR/de/article/täst/index.html"
@@ -105,13 +111,35 @@ testContentAndContinue '<a href="/de/categories/t%C3%A4st&#43;&#43;">Täst&#43;&
                         (2)</a>' "$TARGET_DIR/de/article/täst/index.html"
 
 # quote/täst-quote [en]
-echo "# Testing quote/täst-quote [en]"
+echo "## Testing quote/täst-quote [en]"
 testContentAndContinue '<a href="/author/%c3%a4-%c3%9f&#43;">ä ß&#43;</a>' "$TARGET_DIR/quote/täst-quote/index.html"
 
 # quote/täst-quote [de]
-echo "# Testing quote/täst-quote [de]"
+echo "## Testing quote/täst-quote [de]"
 testContentAndContinue '<a href="/de/author/%c3%a4-%c3%9f&#43;">ä ß&#43;</a>' "$TARGET_DIR/de/quote/täst-quote/index.html"
 
+
+echo "# Build stability test [not working right now]"
+
+#BUILD_COUNT=5
+#for ((i=0; i<BUILD_COUNT; i++)) ; do
+#  echo "Building ($i)"
+#  cleanBuildHugo > /dev/null
+#  rm -rf "$TARGET_DIR$i"
+#  mv "$TARGET_DIR" "$TARGET_DIR$i"
+#done
+#
+#DIFF_OUT=""
+#set +e
+#for ((i=1; i<BUILD_COUNT; i++)) ; do
+#  echo "Calculating differences between $i and $((i-1))"
+#  DIFF_OUT="$DIFF_OUT$(diff -rq "$TARGET_DIR$i" "$TARGET_DIR$((i-1))")"
+#done
+#set -e
+#
+#if [[ -z $DIFF_OUT ]]; then
+#    failButContinue "Build is instable! expected to receive no differences but was: $DIFF_OUT"
+#fi
 
 
 
