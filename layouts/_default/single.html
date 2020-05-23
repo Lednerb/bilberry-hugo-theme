@@ -9,7 +9,10 @@
     </div>
 
     {{ if ( .Params.showComments | default true ) }}
-        {{ template "_internal/disqus.html" . }}
+        <div id="comments-container">
+            {{ template "_internal/disqus.html" . }}
+            {{ template "partials/commento.html" . }}
+        </div>
     {{ end }}
 
     {{ .Scratch.Set "singlePage" false }} <!-- RESET singlePage variable -->
