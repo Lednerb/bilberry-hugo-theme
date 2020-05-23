@@ -181,12 +181,41 @@ In this case, set the option `noSummary: true` in the header area (Front Matter)
 Use the `summary: "Here goes my summary"` Front Matter variable. <br>
 In this case no _Continue reading_ link will be displayed.
 
-### Disqus comments
+### Comments
+Currently [Commento](https://commento.io/) and [Disqus](https://disqus.com) are supported.
+
+#### Commento comments
+If you want to enable the functionality for your users to write comments below your articles, you can either register account at [commento.io](https://commento.io/) or [host Commento yourself](https://docs.commento.io/getting-started/self-hosting/).
+
+To activate Commento in your blog you have to add the URL for the JS-snippet to `commentoJsURL` in your `config.toml`.
+
+**Example:**
+
+Snippet displayed in Commento:
+```html
+<script defer src="http://localhost:8080/js/commento.js"></script>
+<div id="commento"></div>
+```
+
+Your `config.toml`
+```toml
+#[...]
+[params]
+
+    #[...]
+
+    # Commento
+    commentoJsURL = "http://localhost:8080/js/commento.js"
+```
+
+
+#### Disqus comments
 If you want to enable the functionality for your users to write comments below your articles, you can register for a free [Disqus](https://disqus.com) account.
 
 Just create a new site and copy your site's short name to the `config.toml` file at `disqusShortname`.
 
 You can manage and moderate the comments either on your website or at the disqus management panel.
+
 
 ### Responsive Design
 Bilberry is optimized for desktop and mobile devices (tablets and smartphones).
