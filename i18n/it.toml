@@ -1,0 +1,36 @@
+[categories]
+other = "Categorie"
+
+[authors]
+other = "Autori"
+
+[tags]
+other = "Tags"
+
+[socialMedia]
+other = "Social media"
+
+[latestPosts]
+other = "Ultimi post"
+
+[search]
+other = "Cerca ..."
+
+[noSearchResults]
+other = "Nessun risultato."
+
+[olderPosts]
+other = "Vecchi post"
+
+[newerPosts]
+other = "Ultimi post"
+
+[continueReading]
+other = "Leggi tutto"
+
+[otherLanguages]
+other = "Altre lingue"
+
+[readingTime]
+one = "1 min lettura"
+other = "{{.Count}} min lettura"
