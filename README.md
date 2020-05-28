@@ -111,7 +111,7 @@ If you want to include the algolia search for your site, you have to follow thes
 4. Switch over to `API Keys` and copy your `Application ID`, `Search-Only API Key` and chosen `Index name` to your `config.toml` file.
 5. Ensure that `algolia_search = true` is set.
 6. Check the next section [Update the search index](#update-the-search-index), follow the steps and come back again
-7. Back in your algolia index, switch to `DISPLAY` and select `language` in the `Attributes for faceting` option.
+7. Go to the tab `Configuration` of your newly created indices, select the `Facets` in the section `FILTERING AND FACETING` and add the `language` attribute with the `filter only` modifier in the `Attributes for faceting` option. If, after adding the `language` attribute, the `Unknown attribute` error is shown, ignore it. 
 8. Done.
 
 
