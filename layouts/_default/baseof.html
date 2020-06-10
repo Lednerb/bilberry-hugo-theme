@@ -1,12 +1,13 @@
-{{- if not .Params.gallery -}}
-{{- if not .Params.featuredImage -}}
-{{ .Scratch.Set "image" (printf "https://www.gravatar.com/avatar/%s?size=200" (md5 .Site.Params.gravatarEMail)) }}
-{{- else -}}
-{{ .Scratch.Set "image" (.Params.featuredImage) }}
-{{- end -}}
-{{- else -}}
-{{ .Scratch.Set "image" (index (.Params.gallery) 0 | relURL | absURL) }}
-{{- end -}}
+{{ if .Params.gallery }}
+  {{ .Scratch.Set "image" (index (.Params.gallery) 0 | relURL | absURL) }}
+{{ else if .Params.featuredImage }}
+  {{ .Scratch.Set "image" (.Params.featuredImage) }}
+{{ else if .Params.localimage }}
+  {{ .Scratch.Set "image" (.Params.localimage) }}
+{{ else }}
+  {{ .Scratch.Set "image" (printf "https://www.gravatar.com/avatar/%s?size=200" (md5 .Site.Params.gravatarEMail)) }}
+{{ end }}
+
 {{- if ne .Description "" -}}
 {{ .Scratch.Set "description" (.Description) }}
 {{- else -}}
@@ -38,7 +39,7 @@
     <meta itemprop="description" content="{{ .Scratch.Get "description" }}">
     <meta property="og:title" content="{{ .Scratch.Get "title" }}">
     <meta property="og:description" content="{{ .Scratch.Get "description" }}">
-    <meta property="og:image" content="{{ .Scratch.Get "image" }}">
+    <meta property="og:image" content="{{ .Scratch.Get "image" | absURL }}">
     <meta property="og:url" content="{{ .Permalink | absURL }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     {{- if .IsPage }}
