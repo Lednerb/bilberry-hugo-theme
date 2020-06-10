@@ -125,6 +125,8 @@ You have to repeat this step every time you change a post or publish a new one t
 4. Paste the copied text from the `index.json` file.
 5. Done.
 
+Also, you can read this [write-up](https://www.kiroule.com/article/automate-index-upload-to-algolia-search/) on how to automate 
+index upload to Algolia Search if you host your Bilberry theme-based website on Netlify.
 
 ### Keyboard Shortcuts
 If you want to start a search on your blog simply type `s` and the search menu will open.
