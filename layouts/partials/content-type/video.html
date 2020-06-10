@@ -23,6 +23,15 @@
     </div>
     {{ end }}
 
+    {{ if isset .Params "videoLocal" }}
+    <div class="responsive-video local">
+      <video width="100%" controls poster="{{ .Params.videoImage }}">
+        <source src="{{ .Params.videoLocal }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    {{ end }}
+    
     {{ partial "default-content.html" . }}
     {{ partial "article-footer" . }}
 </article>
