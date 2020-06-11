@@ -32,5 +32,5 @@ other = "Leggi tutto"
 other = "Altre lingue"
 
 [readingTime]
-one = "1 min lettura"
-other = "{{.Count}} min lettura"
+one = "Tempo di lettura 1 minuto"
+other = "Tempo di lettura {{.Count}} minuti"
