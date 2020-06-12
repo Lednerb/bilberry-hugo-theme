@@ -21,7 +21,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
 - [Features](#Features)
   - [Algolia Search](#Algolia-Search)
     - [Setup](#Setup)
-    - [Update the search index](#Update-the-search-index)
+    - [Update the Search Index](#Update-the-search-index)
   - [Keyboard Shortcuts](#Keyboard-Shortcuts)
   - [Post Types](#Post-Types)
   - [Pages and External Links](#Pages-and-External-Links)
@@ -116,15 +116,29 @@ If you want to include the algolia search for your site, you have to follow thes
 8. Done.
 
 
-#### Update the search index
+#### Update the Search Index
 You have to repeat this step every time you change a post or publish a new one to update the search index.
 
-1. Publish your changes via the `hugo` command.
-2. Head over to the `public/index.json` file and copy everything in there
-3. Login to your algolia account, open your index and click at `Add records manually`
-4. Paste the copied text from the `index.json` file.
-5. Done.
+Execute the 'hugo' command in the site's root directory to publish your changes.
 
+* Manual Upload
+    * Head over to the `public/index.json` file and copy everything in there.
+    * Login to your Algolia account, open your index and click at `Add records manually`.
+    * Paste the copied text from the `index.json` file.
+    * Verify in the `Browse` tab of your index that the index records were uploaded correctly.
+
+* Automated Upload
+    * Prerequisites: installed Python 3 and Algolia API's [Python client](https://github.com/algolia/algoliasearch-client-python). The API Python client can be installed with the following command:
+    ```shell script
+    $ pip install --upgrade 'algoliasearch>=2.0,<3.0'
+    ```
+    * Execute the `algolia-index-upload.py` from the site's root directory as follows:
+    ```shell script
+    python3 algolia-index-upload.py -f public/index.json -a <algolia-app-id> -k <algolia-admin-api-key> -n <algolia-index-name>
+    ```
+    * The `algolia-admin-api-key` argument, namely your Algolia account's `Admin API Key`, is used to create, update, and delete indices, and it should be kept secret.
+    * Login to your Algolia account and verify in the `Browse` tab of your index that the index records were uploaded correctly. 
+    
 Also, you can read this [write-up](https://www.kiroule.com/article/automate-index-upload-to-algolia-search/) on how to automate 
 index upload to Algolia Search if you host your Bilberry theme-based website on Netlify.
 
@@ -308,9 +322,9 @@ Otherwise, your changes would be overwritten when you update to the latest theme
 
 
 ## Custom colors and fonts
-Bilberry uses SCSS for styling and NPM with [Laravel Mix](https://laravel-mix.com/) for dependancy management.
+Bilberry uses SCSS for styling and NPM with [Laravel Mix](https://laravel-mix.com/) for dependency management.
 
-If you want to change any colors or fonts, you have follow these steps:
+If you want to change any colors or fonts, you have to follow these steps:
 
 1. Install this theme to your `themes` directory
 2. `cd themes/bilberry-hugo-theme`
@@ -320,12 +334,12 @@ If you want to change any colors or fonts, you have follow these steps:
 
 
 ## CSS and JS modules
-This theme supports hot-swappable CSS and JavaScript extentions. Modules can be specified using the `(css|js)_modules` list parameter. Modules can be specified either relative to the `static` directory (e.g. `exampleSite/static/css/custom.css`) or as a URL.
+This theme supports hot-swappable CSS and JavaScript extensions. Modules can be specified using the `(css|js)_modules` list parameter. Modules can be specified either relative to the `static` directory (e.g. `exampleSite/static/css/custom.css`) or as a URL.
 
 Modules are imported in the order they appear in the list, and immediately after the default Bilberry CSS and JS files are imported.
 
 ### Adding a Cookie disclaimer
-Depending on the type of website you are running with this theme you may also want to add a cookie consent information. The popuplar solution [cookie consent](https://cookieconsent.insites.com/) can be integrated into the theme by loading the resources as external CSS and JS modules.
+Depending on the type of website you are running with this theme you may also want to add a cookie consent information. The popular solution [cookie consent](https://cookieconsent.insites.com/) can be integrated into the theme by loading the resources as external CSS and JS modules.
 
 Use the configurator on the [cookie consent website](https://cookieconsent.insites.com/) to generate the required initialization code and add it to a local `static/init-cookieconsent.js` file e.g.
 
@@ -364,7 +378,7 @@ Bilberry is inspired by the [WordPress theme Lingonberry](http://www.andersnoren
 
 Bilberry is a theme for the great [HUGO static site generator](https://gohugo.io).
 
-A big thank you goes to [@Ipstenu](https://github.com/Ipstenu) for his help in [this thread](https://discourse.gohugo.io/t/search-index-json-file-for-lunr-js/6286/5?u=lednerb) that helped me to create the `index.json` for the algolia export.
+A big thank-you goes to [@Ipstenu](https://github.com/Ipstenu) for his help in [this thread](https://discourse.gohugo.io/t/search-index-json-file-for-lunr-js/6286/5?u=lednerb) that helped me to create the `index.json` for the algolia export.
 
 ## Support and Discussions
 If you enjoy this theme and want to stay up to date or just want to say thanks, have a look at this Discord Channel:
@@ -373,7 +387,7 @@ If you enjoy this theme and want to stay up to date or just want to say thanks, 
 
 ## Contributors
 
-Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+Many thanks go to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
