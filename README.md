@@ -130,7 +130,7 @@ Execute the 'hugo' command in the site's root directory to publish your changes.
 * Automated Upload
     * Prerequisites: installed Python 3 and Algolia API's [Python client](https://github.com/algolia/algoliasearch-client-python). The API Python client can be installed with the following command:
     ```shell script
-    $ pip install --upgrade 'algoliasearch>=2.0,<3.0'
+    pip install --upgrade 'algoliasearch>=2.0,<3.0'
     ```
     * Execute the `algolia-index-upload.py` from the site's root directory as follows:
     ```shell script
