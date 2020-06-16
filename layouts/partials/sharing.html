@@ -1,0 +1,11 @@
+<!-- SHARING SITES -->
+{{ if .Site.Params.showSharing | default true }}
+  <div class="sharing-sites">
+        <i class="fa fa-share-alt-square"></i>
+
+        {{ range .Site.Params.sharingLinks }}
+          <a href="{{ replace ( replace .link "SHARING_LINK" $.Permalink ) "SHARING_TEXT" $.Site.Params.sharingText | safeURL }}" target="_blank"><i class="{{ .icon }}"></i></a>
+        {{ end }}
+
+    </div>
+{{ end }}

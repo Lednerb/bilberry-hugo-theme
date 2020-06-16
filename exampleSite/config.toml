@@ -116,6 +116,23 @@ disqusShortname = "bilberry-hugo-theme"
       { link = "https://github.com/Lednerb", icon = "fab fa-github" },
     ]
 
+    # sharing sites on content footer
+    showSharing = true
+
+    # possible sharing sites, structure like social media.
+    # Add "SHARING_LINK" where you have to pace the permalink of the Content
+    # Add "SHARING_TEXT" where you want add the text in sharingText (not possible for every site)
+    sharingLinks = [
+      { link = "https://twitter.com/intent/tweet?text=SHARING_TEXT&url=SHARING_LINK", icon = "fab fa-twitter" },
+      { link = "https://facebook.com/sharer/sharer.php?u=SHARING_LINK", icon = "fab fa-facebook-f" },
+      { link = "mailto:?subject=SHARING_TEXT&body=SHARING_LINK", icon = "far fa-envelope" },
+      { link = "https://linkedin.com/shareArticle?mini=true&url=SHARING_LINK&title=SHARING_TEXT", icon = "fab fa-linkedin-in" },
+      { link = "whatsapp://send?text=SHARING_LINK", icon = "fab fa-whatsapp" },
+      { link = "https://telegram.me/share/url?text=SHARING_TEXT&  url=SHARING_LINK", icon = "fab fa-telegram-plane" },
+    ]
+
+    sharingText = "you can read this interesting article "
+
     # credits line configuration
     copyrightBy = "by Lednerb"
     copyrightUseCurrentYear = false  # set to true to always display the current year in the copyright
@@ -144,4 +161,3 @@ disqusShortname = "bilberry-hugo-theme"
 [outputs]
   home = [ "HTML", "JSON", "RSS" ]
   page = [ "HTML" ]
-
