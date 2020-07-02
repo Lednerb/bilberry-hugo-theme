@@ -33,7 +33,15 @@
     <meta name="description" content="{{ .Site.Params.description }}">
     <meta name="keywords" content="{{ .Site.Params.keywords }}">
     {{ hugo.Generator }}
-    <title>{{ block "title" . }} {{ .Scratch.Get "title" }} | {{ .Site.Title }}{{ end }}</title>
+    <title>
+        {{ block "title" . }}
+           {{ if .Scratch.Get "title" }}
+               {{ .Scratch.Get "title" }} &vert; {{ .Site.Title }}
+           {{ else }}
+               {{ .Site.Title }}
+           {{ end }}
+        {{ end }}
+    </title>
     <meta name="description" content="{{ .Scratch.Get "description" }}">
     <meta itemprop="name" content="{{ .Scratch.Get "title" }}">
     <meta itemprop="description" content="{{ .Scratch.Get "description" }}">
