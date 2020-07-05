@@ -150,3 +150,6 @@ testing/testing-example-site/public3
 testing/testing-example-site/public4
 testing/testing-example-site/resources
 testing/testing-example-site/themes
+
+# IntelliJ IDEA
+*.iml
