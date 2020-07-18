@@ -1,0 +1,36 @@
+name: github pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          # extended: true
+
+      - name: Create new demo site
+        run: hugo new site /tmp/demo-site
+
+      - name: Copy exampleSite content to new site
+        run: cp -r ./exampleSite/* /tmp/demo-site
+
+      - name: Copy theme to the right location
+        run: mkdir /tmp/demo-site/themes/bilberry-hugo-theme && cp -r * /tmp/demo-site/themes/bilberry-hugo-theme
+
+      - name: Build
+        run: cd /tmp/demo-site && hugo
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public

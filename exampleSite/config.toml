@@ -12,7 +12,7 @@ DefaultContentLanguage = "en"
 googleAnalytics = ""
 
 # Enable / Disable comments on the articles via Disqus.
-disqusShortname = "bilberry-hugo-theme"
+disqusShortname = ""
 
 # Enable / Disable open link with a new tab.
 [blackfriday]
@@ -44,6 +44,9 @@ disqusShortname = "bilberry-hugo-theme"
   algolia_indexName = "default-content"
     # Set this option to false if you want to search within all articles in all languages at once
     algolia_currentLanguageOnly = true
+
+  # Enable / Disable comments on the articles via commento
+  commentoJsURL = "https://commento.lednerb.de/js/commento.js"
 
   # Media configuration
     # let hugo automatically resize and crop your images to the correct sizes
