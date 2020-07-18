@@ -3,7 +3,7 @@ name: github pages
 on:
   push:
     branches:
-      - master
+      - develop
 
 jobs:
   deploy:
@@ -29,8 +29,11 @@ jobs:
       - name: Build
         run: cd /tmp/demo-site && hugo
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          target_branch: gh-pages
+          build_dir: /tmp/demo-site/public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
