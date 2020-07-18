@@ -23,6 +23,9 @@ jobs:
       - name: Copy exampleSite content to new site
         run: cp -r ./exampleSite/* /tmp/demo-site
 
+      - name: Adjust the baseURL for gh-pages
+        run: sed "s/baseURL=.*/baseURL=https:\/\/lednerb.github.io\/bilberry-hugo-theme\//g"
+
       - name: Copy theme to the right location
         run: mkdir /tmp/demo-site/themes/bilberry-hugo-theme && cp -r * /tmp/demo-site/themes/bilberry-hugo-theme
 
