@@ -24,7 +24,7 @@ jobs:
         run: cp -r ./exampleSite/* /tmp/demo-site
 
       - name: Adjust the baseURL for gh-pages
-        run: sed -i "s/baseURL=.*/baseURL=https:\/\/lednerb.github.io\/bilberry-hugo-theme\//g" /tmp/demo-site/config.toml
+        run: sed -i "s/baseURL = .*/baseURL = https:\/\/lednerb.github.io\/bilberry-hugo-theme\//g" /tmp/demo-site/config.toml
 
       - name: Copy theme to the right location
         run: mkdir /tmp/demo-site/themes/bilberry-hugo-theme && cp -r * /tmp/demo-site/themes/bilberry-hugo-theme
