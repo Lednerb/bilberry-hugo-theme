@@ -12,6 +12,17 @@ $(document).ready(function () {
         $("#search").autocomplete("val", "");
     });
 
+    // Commento support to block search focus when hitting the S key
+    blockSearchFocus = false;
+
+    $('#commento').focusin(function() {
+      blockSearchFocus = true;
+    });
+
+    $('#commento').focusout(function() {
+      blockSearchFocus = false;
+    });
+
     // Keyboard-Support
     $(document).keyup(function (e) {
         if (e.keyCode === 27) {
@@ -19,7 +30,7 @@ $(document).ready(function () {
                 $("nav").slideUp();
             $("#search").autocomplete("val", "");
         }
-        else if (e.keyCode === 83) {
+        else if (e.keyCode === 83 && !blockSearchFocus) {
             if (!$("nav").hasClass('permanentTopNav'))
                 $("nav").slideDown();
             $("#search").focus();
