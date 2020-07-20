@@ -30,7 +30,7 @@ jobs:
         run: mkdir /tmp/demo-site/themes/bilberry-hugo-theme && cp -r * /tmp/demo-site/themes/bilberry-hugo-theme
 
       - name: Build
-        run: cd /tmp/demo-site && hugo --ignoreCache
+        run: cd /tmp/demo-site && hugo
 
       - name: Deploy to GitHub Pages
         if: success()
