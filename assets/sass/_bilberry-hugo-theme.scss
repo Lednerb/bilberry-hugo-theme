@@ -50,6 +50,10 @@
         max-width: 100%;
     }
 
+    .ulist { // Fix for asciidoctor-html5s
+        padding-left: 1em;
+    }
+
     ul {
         list-style: circle;
         padding-left: inherit;
