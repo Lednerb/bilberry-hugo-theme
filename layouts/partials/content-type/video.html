@@ -31,7 +31,12 @@
       </video>
     </div>
     {{ end }}
-    
-    {{ partial "default-content.html" . }}
+
+    {{ $PAGE_TYPE := "SINGLE_PAGE"}}
+    {{ if .Scratch.Get "singlePage"}}
+        {{ $PAGE_TYPE := "MULTI_PAGE"}}
+    {{ end }}
+    {{ partialCached "default-content" . .Title .Content $PAGE_TYPE }}
+
     {{ partial "article-footer" . }}
 </article>
