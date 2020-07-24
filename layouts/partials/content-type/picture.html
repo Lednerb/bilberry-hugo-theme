@@ -6,7 +6,7 @@
     {{ partial "featured-image" . }}
 
     {{ $PAGE_TYPE := "SINGLE_PAGE"}}
-    {{ if .Scratch.Get "singlePage"}}
+    {{ if not (.Scratch.Get "singlePage") }}
         {{ $PAGE_TYPE := "MULTI_PAGE"}}
     {{ end }}
     {{ partialCached "default-content" . .Title .Content $PAGE_TYPE }}
