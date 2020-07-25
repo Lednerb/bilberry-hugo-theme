@@ -29,11 +29,6 @@
     {{ partial "featured-image" . }}
     {{ end }}
 
-    {{ $PAGE_TYPE := "SINGLE_PAGE"}}
-    {{ if not (.Scratch.Get "singlePage") }}
-        {{ $PAGE_TYPE := "MULTI_PAGE"}}
-    {{ end }}
-    {{ partialCached "default-content" . .Title .Content $PAGE_TYPE }}
-
+    {{ partial "default-content" . }}
     {{ partial "article-footer" . }}
 </article>
