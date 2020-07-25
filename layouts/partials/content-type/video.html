@@ -3,7 +3,7 @@
 </a>
 
 <article class="video">
-    {{ partial "featured-image" . }}
+    {{ partial "featured-image.html" . }}
 
     {{ with .Params.youtube }}
     <div class="responsive-video youtube">
@@ -31,7 +31,7 @@
       </video>
     </div>
     {{ end }}
-    
+
     {{ partial "default-content.html" . }}
-    {{ partial "article-footer" . }}
+    {{ partial "article-footer.html" . }}
 </article>

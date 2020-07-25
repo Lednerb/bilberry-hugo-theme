@@ -3,12 +3,12 @@
 </a>
 
 <article class="default article">
-    {{ partial "featured-image" . }}
-    {{ partial "default-content" . }}
+    {{ partial "featured-image.html" . }}
+    {{ partial "default-content.html" . }}
 
     {{ with .Params.link }}
     <script>window.location = {{ . | relURL }}</script>
     {{ end }}
 
-    {{ partial "article-footer" . }}
+    {{ partial "article-footer.html" . }}
 </article>

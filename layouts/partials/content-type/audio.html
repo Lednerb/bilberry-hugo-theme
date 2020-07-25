@@ -3,7 +3,7 @@
 </a>
 
 <article class="audio">
-    {{ partial "featured-image" . }}
+    {{ partial "featured-image.html" . }}
 
     {{ with .Params.spotify }}
     <div class="responsive-audio spotify">
@@ -30,6 +30,6 @@
     </div>
     {{ end }}
 
-    {{ partial "default-content" . }}
-    {{ partial "article-footer" . }}
+    {{ partial "default-content.html" . }}
+    {{ partial "article-footer.html" . }}
 </article>

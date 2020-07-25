@@ -69,7 +69,7 @@
 
     <link rel="stylesheet" href="{{ "theme.css" | absURL }}">
 
-    {{ partial "twitter-card" . }}
+    {{ partial "twitter-card.html" . }}
 
     {{ if isset .Site.Params "css_modules" }}
     {{ range .Site.Params.css_modules }}
@@ -80,20 +80,20 @@
 
 <body class="bilberry-hugo-theme">
 
-    {{ partial "topnav" . }}
+    {{ partial "topnav.html" . }}
 
-    {{ partial "header" . }}
+    {{ partial "header.html" . }}
 
     <div class="main container">
         {{ block "main" . }}{{ end }}
     </div>
 
-    {{ partial "footer" . }}
+    {{ partial "footer.html" . }}
 
     {{ template "_internal/google_analytics_async.html" . }}
 
     {{ if and (isset .Site.Params "enable_mathjax") (eq .Site.Params.enable_mathjax true) }}
-    {{ partial "mathjax" . }}
+    {{ partial "mathjax.html" . }}
     {{ end }}
 
 
@@ -106,7 +106,7 @@
     {{ end }}
 
     {{ if and (isset .Site.Params "algolia_search") (eq .Site.Params.algolia_search true) }}
-    {{ partial "algolia-search" . }}
+    {{ partial "algolia-search.html" . }}
     {{ end }}
 
 

@@ -6,10 +6,10 @@
             {{  if or (fileExists (print "layouts/partials/content-type/" .Type ".html") ) (fileExists (print "themes/bilberry-hugo-theme/layouts/partials/content-type/" .Type ".html")) }}
                 {{ partial (print "content-type/" .Type) . }}
             {{ else }}
-                {{ partial "content-type/article" . }}
+                {{ partial "content-type/article.html" . }}
             {{ end }}
         </div>
     {{ end }}
 
-    {{ partial "paginator" . }}
+    {{ partial "paginator.html" . }}
 {{ end }}

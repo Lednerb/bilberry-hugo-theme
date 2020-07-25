@@ -8,14 +8,14 @@
             {{/* Do nothing if the pinOnlyToFirstPage flag is set and we're not on page 1. */}}
         {{else}}
             {{ range first 1 (where .Data.Pages "URL" .Site.Params.pinnedPost) }}
-                {{ partial "article-wrapper" . }}
+                {{ partial "article-wrapper.html" . }}
             {{end}}
         {{end}}
     {{end}}
 
     {{ range $paginator.Pages }}
-        {{ partial "article-wrapper" . }}
+        {{ partial "article-wrapper.html" . }}
     {{ end }}
 
-    {{ partial "paginator" . }}
+    {{ partial "paginator.html" . }}
 {{ end }}
