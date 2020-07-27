@@ -18,8 +18,8 @@ jobs:
           hugo-version: 'latest'
           # extended: true
 
-       - name: Run tests
-         run: ./testing/testing-example-site/test-theme.sh
+      - name: Run tests
+        run: ./testing/testing-example-site/test-theme.sh
 
   deploy:
     runs-on: ubuntu-latest

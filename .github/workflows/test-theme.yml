@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-     steps:
+    steps:
 
       - uses: actions/checkout@v2
 
@@ -19,5 +19,5 @@ jobs:
           hugo-version: 'latest'
           # extended: true
 
-       - name: Run tests
+      - name: Run tests
         run: ./testing/testing-example-site/test-theme.sh
