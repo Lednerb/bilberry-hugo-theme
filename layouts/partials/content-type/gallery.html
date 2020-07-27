@@ -1,34 +1,34 @@
-<a class="bubble" href="{{ .Permalink }}">
-    <i class="fas fa-fw {{ or .Params.icon "fa-camera" }}"></i>
+<a class="bubble" href="{{ .ctx.Permalink }}">
+    <i class="fas fa-fw {{ or .ctx.Params.icon "fa-camera" }}"></i>
 </a>
 
 <article class="gallery">
-    {{ if and (isset .Params "gallery") (ne .Params.gallery "") }}
+    {{ if and (isset .ctx.Params "gallery") (ne .ctx.Params.gallery "") }}
     <div class="flexslider">
         <ul class="slides">
-            {{ range .Params.gallery }}
+            {{ range .ctx.Params.gallery }}
             <li><img src="{{ . | relURL }}" /></li>
             {{ end }}
         </ul>
     </div>
-    {{ else if ne .Params.imageSlider false }}
+    {{ else if ne .ctx.Params.imageSlider false }}
     <div class="flexslider">
         <ul class="slides">
-            {{ if and (.Site.Params.resizeImages | default true) (.Params.resizeImages | default true) }}
-            {{ range .Resources.ByType "image" }}
+            {{ if and (.ctx.Site.Params.resizeImages | default true) (.ctx.Params.resizeImages | default true) }}
+            {{ range .ctx.Resources.ByType "image" }}
             <li><img src="{{ (.Fill "700x350 q95").RelPermalink }}" /></li>
             {{ end }}
             {{ else }}
-            {{ range .Resources.ByType "image" }}
+            {{ range .ctx.Resources.ByType "image" }}
             <li><img src="{{ .RelPermalink }}" /></li>
             {{ end }}
             {{ end }}
         </ul>
     </div>
     {{ else}}
-    {{ partial "featured-image.html" . }}
+    {{ partial "featured-image.html" .ctx }}
     {{ end }}
 
-    {{ partial "default-content.html" . }}
-    {{ partial "article-footer.html" . }}
+    {{ partial "default-content.html" (dict "ctx" .ctx "template_type" .template_type) }}
+    {{ partial "article-footer.html" .ctx }}
 </article>

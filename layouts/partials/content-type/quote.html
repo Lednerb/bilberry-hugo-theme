@@ -1,14 +1,19 @@
-<a class="bubble" href="{{ .Permalink }}">
-    <i class="fas fa-fw {{or .Params.icon "fa-quote-right" }}"></i>
+<a class="bubble" href="{{ .ctx.Permalink }}">
+    <i class="fas fa-fw {{or .ctx.Params.icon "fa-quote-right" }}"></i>
 </a>
 
 <article class="quote">
-    {{ with .Params.featuredImage }}
-    <img src="{{ . }}" class="featured-image" alt="">
+    {{ with .ctx.Params.featuredImage }}
+        <img src="{{ . }}" class="featured-image" alt="">
     {{ end }}
+
     <blockquote>
-        {{ .Content }}
-        {{ $urlValue := replace .Params.author " " "-" | lower}}
-        <cite><a href="{{ (print "/author/" $urlValue) | relLangURL }}">{{ .Params.author }}</a></cite>
+        {{ .ctx.Content }}
+        {{ $urlValue := replace .ctx.Params.author " " "-" | lower}}
+        <cite>
+            <a href="{{ (print "/author/" $urlValue) | relLangURL }}">
+                {{ .ctx.Params.author }}
+            </a>
+        </cite>
     </blockquote>
 </article>
