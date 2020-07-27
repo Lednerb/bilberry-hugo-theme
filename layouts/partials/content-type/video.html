@@ -1,37 +1,37 @@
-<a class="bubble" href="{{ .Permalink }}">
-    <i class="fas fa-fw {{or .Params.icon "fa-video" }}"></i>
+<a class="bubble" href="{{ .ctx.Permalink }}">
+    <i class="fas fa-fw {{or .ctx.Params.icon "fa-video" }}"></i>
 </a>
 
 <article class="video">
-    {{ partial "featured-image" . }}
+    {{ partial "featured-image.html" .ctx }}
 
-    {{ with .Params.youtube }}
-    <div class="responsive-video youtube">
-        <iframe src="https://www.youtube-nocookie.com/embed/{{ . }}?rel=0" frameborder="0" allowfullscreen></iframe>
-    </div>
-    {{ end }}
-    {{ with .Params.vimeo }}
-    <div class="responsive-video vimeo">
-        <iframe src="https://player.vimeo.com/video/{{ . }}" frameborder="0" webkitallowfullscreen mozallowfullscreen
-            allowfullscreen></iframe>
-    </div>
-    {{ end }}
-    {{ with .Params.prezi }}
-    <div class="responsive-video prezi">
-        <iframe src="https://prezi.com/embed/{{ . }}/" frameborder="0" webkitallowfullscreen mozallowfullscreen
-            allowfullscreen></iframe>
-    </div>
+    {{ with .ctx.Params.youtube }}
+        <div class="responsive-video youtube">
+            <iframe src="https://www.youtube-nocookie.com/embed/{{ . }}?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
     {{ end }}
 
-    {{ if isset .Params "mp4video" }}
-    <div class="responsive-video local">
-      <video width="100%" controls poster="{{ .Params.mp4videoImage }}">
-        <source src="{{ .Params.mp4video }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
+    {{ with .ctx.Params.vimeo }}
+        <div class="responsive-video vimeo">
+            <iframe src="https://player.vimeo.com/video/{{ . }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
     {{ end }}
-    
-    {{ partial "default-content.html" . }}
-    {{ partial "article-footer" . }}
+
+    {{ with .ctx.Params.prezi }}
+        <div class="responsive-video prezi">
+            <iframe src="https://prezi.com/embed/{{ . }}/" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    {{ end }}
+
+    {{ if isset .ctx.Params "mp4video" }}
+        <div class="responsive-video local">
+          <video width="100%" controls poster="{{ .ctx.Params.mp4videoImage }}">
+            <source src="{{ .ctx.Params.mp4video }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+    {{ end }}
+
+    {{ partial "default-content.html" (dict "ctx" .ctx "template_type" .template_type) }}
+    {{ partial "article-footer.html" .ctx }}
 </article>

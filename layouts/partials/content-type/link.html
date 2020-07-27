@@ -1,13 +1,13 @@
-<a class="bubble" href="{{ .Params.link }}" target="_blank">
-    <i class="fas fa-fw {{ or .Params.icon "fa-link" }}"></i>
+<a class="bubble" href="{{ .ctx.Params.link }}" target="_blank">
+    <i class="fas fa-fw {{ or .ctx.Params.icon "fa-link" }}"></i>
 </a>
 
 <article class="link">
-    {{ with .Params.featuredImage }}
-    <img src="{{ . }}" class="featured-image" alt="">
+    {{ with .ctx.Params.featuredImage }}
+        <img src="{{ . }}" class="featured-image" alt="">
     {{ end }}
-    <a href="{{ .Params.link }}" target="_blank">
-        <h4>{{ .Title }}</h4>
-        {{ .Content }}
+    <a href="{{ .ctx.Params.link }}" target="_blank">
+        <h4>{{ .ctx.Title }}</h4>
+        {{ .ctx.Content }}
     </a>
 </article>

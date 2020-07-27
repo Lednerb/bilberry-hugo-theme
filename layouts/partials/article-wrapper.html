@@ -1,10 +1,9 @@
 {{ with . }}
-    {{ .Scratch.Set "singlePage" false }} <!-- RESET singlePage variable -->
     <div class="article-wrapper u-cf">
         {{ if or (fileExists (print "layouts/partials/content-type/" .Type ".html") ) (fileExists (print "themes/bilberry-hugo-theme/layouts/partials/content-type/" .Type ".html")) }}
-            {{ partial (print "content-type/" .Type) . }}
+            {{ partial (print "content-type/" .Type ".html") (dict "ctx" . "template_type" "multiple") }}
         {{ else }}
-            {{ partial "content-type/article" . }}
+            {{ partial "content-type/article.html" (dict "ctx" . "template_type" "multiple") }}
         {{ end }}
     </div>
-{{end}}
+{{ end }}
