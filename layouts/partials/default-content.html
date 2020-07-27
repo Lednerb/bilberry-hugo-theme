@@ -22,17 +22,17 @@
             <span class="categories">
                 {{ range . }}
                     {{ $urlValue := replace . " " "-" | lower}}
-                    {{ with $.Site.GetPage (printf "/categories/%s" $urlValue) }}
+                    {{ with $.ctx.Site.GetPage (printf "/categories/%s" $urlValue) }}
                         <a href="{{ .Permalink }}">{{ .Title }}</a>
                     {{ end }}
                 {{ end }}
             </span>
         {{ end }}
 
-        {{ with .Params.author }}
+        {{ with .ctx.Params.author }}
             <span class="author">
                 {{ $urlValue := replace . " " "-" | lower}}
-                {{ with $.Site.GetPage (printf "/author/%s" $urlValue ) }}
+                {{ with $.ctx.Site.GetPage (printf "/author/%s" $urlValue ) }}
                     <a href="{{ .Permalink }}">{{ .Title }}</a>
                 {{ end }}
             </span>
