@@ -112,7 +112,7 @@ If you want to include the algolia search for your site, you have to follow thes
 4. Switch over to `API Keys` and copy your `Application ID`, `Search-Only API Key` and chosen `Index name` to your `config.toml` file.
 5. Ensure that `algolia_search = true` is set.
 6. Check the next section [Update the search index](#update-the-search-index), follow the steps and come back again
-7. Go to the tab `Configuration` of your newly created indices, select the `Facets` in the section `FILTERING AND FACETING` and add the `language` attribute with the `filter only` modifier in the `Attributes for faceting` option. If, after adding the `language` attribute, the `Unknown attribute` error is shown, ignore it. 
+7. Go to the tab `Configuration` of your newly created indices, select the `Facets` in the section `FILTERING AND FACETING` and add the `language` attribute with the `filter only` modifier in the `Attributes for faceting` option. If, after adding the `language` attribute, the `Unknown attribute` error is shown, ignore it.
 8. Done.
 
 
@@ -126,6 +126,7 @@ Execute the 'hugo' command in the site's root directory to publish your changes.
     * Login to your Algolia account, open your index and click at `Add records manually`.
     * Paste the copied text from the `index.json` file.
     * Verify in the `Browse` tab of your index that the index records were uploaded correctly.
+    * If case you have a multi-language setup, make sure that you repeat the steps above for all `public/{LANG}/index.json` files
 
 * Automated Upload
     * Prerequisites: installed Python 3 and Algolia API's [Python client](https://github.com/algolia/algoliasearch-client-python). The API Python client can be installed with the following command:
@@ -137,9 +138,10 @@ Execute the 'hugo' command in the site's root directory to publish your changes.
     python3 algolia-index-upload.py -f public/index.json -a <algolia-app-id> -k <algolia-admin-api-key> -n <algolia-index-name>
     ```
     * The `algolia-admin-api-key` argument, namely your Algolia account's `Admin API Key`, is used to create, update, and delete indices, and it should be kept secret.
-    * Login to your Algolia account and verify in the `Browse` tab of your index that the index records were uploaded correctly. 
-    
-Also, you can read this [write-up](https://www.kiroule.com/article/automate-index-upload-to-algolia-search/) on how to automate 
+    * Login to your Algolia account and verify in the `Browse` tab of your index that the index records were uploaded correctly.
+    * If case you have a multi-language setup, make sure that you repeat the steps above for all `public/{LANG}/index.json` files
+
+Also, you can read this [write-up](https://www.kiroule.com/article/automate-index-upload-to-algolia-search/) on how to automate
 index upload to Algolia Search if you host your Bilberry theme-based website on Netlify.
 
 ### Keyboard Shortcuts
