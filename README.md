@@ -26,6 +26,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
   - [Post Types](#Post-Types)
   - [Pages and External Links](#Pages-and-External-Links)
   - [Reposting an Article / Duplicated Content [SEO]](#Reposting-an-Article--Duplicated-Content-SEO)
+  - [Overwrite the calculated reading time](#Overwrite-the-calculated-reading-time)
   - [Summary Breaks](#Summary-Breaks)
   - [Disqus comments](#Disqus-comments)
   - [Responsive Design](#Responsive-Design)
@@ -183,6 +184,13 @@ original_url: "https://example.org/path/to/content"
 
 Further Information:
 - [Wikipedia](https://en.wikipedia.org/wiki/Canonical_link_element)
+
+### Overwrite the calculated reading time
+If you want to overwrite the automatically calculated reading time for a post you can use the following front matter confguration option:
+
+```
+readingTime: 7 # integer for the amount of minutes
+```
 
 ### Summary Breaks
 You can influence the summary output on the listing pages (such as the home page or the category or tag pages) in different ways:
