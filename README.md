@@ -90,8 +90,10 @@ Also, check out this [tutorial](https://www.kiroule.com/article/start-blogging-w
 
 ## Configuration
 To configure your site according to your needs, just open the `config.toml` file in your project folder and adjust the settings.
-All options you can and should customize are commented so it should be no problem for you to get it done.
+All options you can and should customize are commented out, so it should be no problem for you to get it done.
 
+Also, you can read this [write-up](https://www.kiroule.com/article/manage-environment-specific-settings-for-hugo-based-website/) on how to manage
+environment-specific settings for a Hugo-based website.
 
 ## Features
 
