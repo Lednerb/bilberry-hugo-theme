@@ -15,7 +15,11 @@
         {{ end }}
 
         {{ if ( .ctx.Site.Params.showReadingTime | default false ) }}
-            <span class="readingTime">{{ i18n "readingTime" .ctx.ReadingTime }}</span>
+            {{ if .ctx.Params.readingTime }}
+                <span class="readingTime">{{ i18n "readingTime" .ctx.Params.readingTime }}</span>
+            {{ else }}
+                <span class="readingTime">{{ i18n "readingTime" .ctx.ReadingTime }}</span>
+            {{ end }}
         {{ end }}
 
         {{ with .ctx.Params.categories }}
