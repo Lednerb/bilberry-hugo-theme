@@ -2,6 +2,10 @@ title = "My cool new Blog"
 baseURL = "https://example.com/"
 theme = "bilberry-hugo-theme"
 
+# Force absolute urls
+relativeURLs = false
+canonifyURLs = true
+
 # Generate the robots.txt file for SEO
 enableRobotsTXT = true
 
