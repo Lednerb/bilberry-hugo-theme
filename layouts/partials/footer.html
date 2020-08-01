@@ -8,7 +8,7 @@
             <ul>
                 {{ range where (where (first (.Site.Params.amountLatestPostsInFooter | default 7) .Site.Pages.ByPublishDate.Reverse) ".Kind" "page") ".Type" "ne" "page" }}
                 <li>
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </li>
                 {{ end }}
             </ul>
@@ -46,9 +46,9 @@
                 <strong>{{ i18n "otherLanguages" }}</strong>
                 {{ range $.Site.Home.AllTranslations }}
                 {{ if eq ($.Scratch.Get "language") .Language }}
-                <a href="{{ .Permalink }}" class="active">{{ .Language }}</a>
+                <a href="{{ .RelPermalink }}" class="active">{{ .Language }}</a>
                 {{ else }}
-                <a href="{{ .Permalink }}">{{ .Language }}</a>
+                <a href="{{ .RelPermalink }}">{{ .Language }}</a>
                 {{ end }}
                 {{ end }}
             </div>
@@ -72,7 +72,7 @@
             </a>
             {{ with  .OutputFormats.Get "rss" -}}
             -
-            <a href="{{ .Permalink }}">{{ .Name }}</a>
+            <a href="{{ .RelPermalink }}">{{ .Name }}</a>
             {{- end }}
         </div>
         <div class="author">

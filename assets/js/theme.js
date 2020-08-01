@@ -3,6 +3,7 @@ require('jquery');
 require('flexslider');
 require('algoliasearch/dist/algoliasearch.jquery');
 require('autocomplete.js/dist/autocomplete.jquery');
+require('magnific-popup')
 let hljs = require('highlight.js');
 
 $(document).ready(function () {
@@ -47,10 +48,10 @@ $(document).ready(function () {
 
     // Algolia-Search
     if ($('#activate-algolia-search').length) {
-        var client = algoliasearch($('#algolia-search-appId').val(), $('#algolia-search-apiKey').val());
-        var index = client.initIndex($('#algolia-search-indexName').val());
+        const client = algoliasearch($('#algolia-search-appId').val(), $('#algolia-search-apiKey').val());
+        const index = client.initIndex($('#algolia-search-indexName').val());
 
-        var autocompleteSource = $.fn.autocomplete.sources.hits(index, { hitsPerPage: 10 });
+        let autocompleteSource = $.fn.autocomplete.sources.hits(index, {hitsPerPage: 10});
         if ($('#algolia-search-currentLanguageOnly').length) {
             autocompleteSource = $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5, filters: 'language: ' + $('html').attr('lang') });
         }
@@ -74,7 +75,7 @@ $(document).ready(function () {
                             return "<span class='empty'>" + $('#algolia-search-noSearchResults').val() + "</span>"
                         },
                         footer: function () {
-                            return '<div class="branding">Powered by <img src="' + $('#siteBaseUrl').attr('href') + '/algolia-logo-light.svg" /></div>'
+                            return '<div class="branding">Powered by <img src="' + $('#siteBaseUrl').attr('href') + '/algolia-logo-light.svg"  alt=""/></div>'
                         }
                     },
                 }
@@ -83,11 +84,19 @@ $(document).ready(function () {
                 window.location = (suggestion.url);
             })
             .keypress(function (event, suggestion) {
-                if (event.which == 13) {
+                if (event.which === 13) {
                     window.location = (suggestion.url);
                 }
             });
     }
+
+    $('.image-block').magnificPopup({
+        type: "image",
+        delegate: "a",
+        image: {
+            verticalFit: true
+        }
+    });
 });
 
 hljs.initHighlightingOnLoad();

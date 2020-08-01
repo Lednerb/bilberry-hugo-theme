@@ -11,7 +11,7 @@
                 {{ range . }}
                     {{ $urlValue := replace . " " "-" | lower}}
                     {{ with $.Site.GetPage (printf "/tags/%s" $urlValue) }}
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                     {{ end }}
                 {{ end }}
             </div>
@@ -23,7 +23,7 @@
         <i class="fa fa-language"></i>
         <div class="links">
             {{ range .Translations }}
-                <a href="{{ .Permalink }}">{{ .Lang }}</a>
+                <a href="{{ .RelPermalink }}">{{ .Lang }}</a>
             {{ end }}
         </div>
     </div>

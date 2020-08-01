@@ -3,9 +3,9 @@
     {{ $imageUrl := "" }}
 
     {{ if and (.Site.Params.resizeImages | default true) (.Params.resizeImages | default true) }}
-        {{ $imageUrl = ($image.Fill "700x350 q95").Permalink }}
+        {{ $imageUrl = ($image.Fill "700x350 q95").RelPermalink }}
     {{ else }}
-        {{ $imageUrl = $image.Permalink }}
+        {{ $imageUrl = $image.RelPermalink }}
     {{ end }}
 
     {{ .Scratch.Set "image" $imageUrl }}
@@ -14,9 +14,9 @@
     {{ $imageUrl := "" }}
 
     {{ if and (.Site.Params.resizeImages | default true) (.Params.resizeImages | default true) }}
-         {{ $imageUrl = ((.Resources.GetMatch "featuredImage.*").Fill "700x350 q95").Permalink }}
+         {{ $imageUrl = ((.Resources.GetMatch "featuredImage.*").Fill "700x350 q95").RelPermalink }}
     {{ else }}
-        {{ $imageUrl = (.Resources.GetMatch "featuredImage.*").Permalink }}
+        {{ $imageUrl = (.Resources.GetMatch "featuredImage.*").RelPermalink }}
     {{ end }}
 
     {{ .Scratch.Set "image" $imageUrl }}
@@ -69,8 +69,8 @@
     <meta itemprop="description" content="{{ .Scratch.Get "description" }}">
     <meta property="og:title" content="{{ .Scratch.Get "title" }}">
     <meta property="og:description" content="{{ .Scratch.Get "description" }}">
-    <meta property="og:image" content="{{ .Scratch.Get "image" | absURL }}">
-    <meta property="og:url" content="{{ .Permalink | absURL }}">
+    <meta property="og:image" content="{{ .Scratch.Get "image" | relURL }}">
+    <meta property="og:url" content="{{ .RelPermalink | relURL }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     {{- if .IsPage }}
     <meta property="og:type" content="article">
@@ -89,13 +89,13 @@
     <link rel=”canonical” href=”{{ . }}” />
     {{ end }}
 
-    <link rel="stylesheet" href="{{ "theme.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "theme.css" | relURL }}">
 
     {{ partial "twitter-card.html" . }}
 
     {{ if isset .Site.Params "css_modules" }}
     {{ range .Site.Params.css_modules }}
-    <link rel="stylesheet" href="{{ . | absURL }}">
+    <link rel="stylesheet" href="{{ . | relURL }}">
     {{ end }}
     {{ end }}
 </head>
@@ -119,11 +119,11 @@
     {{ end }}
 
 
-    <script type="text/javascript" src="{{ "theme.js" | absURL }}"></script>
+    <script type="text/javascript" src="{{ "theme.js" | relURL }}"></script>
 
     {{ if isset .Site.Params "js_modules" }}
     {{ range .Site.Params.js_modules }}
-    <script src="{{ . | absURL }}" type="application/javascript"></script>
+    <script src="{{ . | relURL }}" type="application/javascript"></script>
     {{ end }}
     {{ end }}
 

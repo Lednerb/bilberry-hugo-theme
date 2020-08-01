@@ -28,9 +28,9 @@
         <div class="languages">
         {{ range $.Site.Home.AllTranslations }}
             {{ if eq ($.Scratch.Get "language") .Language }}
-                <a href="{{ .Permalink }}" class="active">{{ .Language }}</a>
+                <a href="{{ .RelPermalink }}" class="active">{{ .Language }}</a>
             {{ else }}
-                <a href="{{ .Permalink }}">{{ .Language }}</a>
+                <a href="{{ .RelPermalink }}">{{ .Language }}</a>
             {{ end }}
         {{ end }}
         </div>
