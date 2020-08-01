@@ -16,12 +16,12 @@ $(document).ready(function () {
     // Commento support to block search focus when hitting the S key
     blockSearchFocus = false;
 
-    $('#commento').focusin(function() {
-      blockSearchFocus = true;
+    $('#commento').focusin(function () {
+        blockSearchFocus = true;
     });
 
-    $('#commento').focusout(function() {
-      blockSearchFocus = false;
+    $('#commento').focusout(function () {
+        blockSearchFocus = false;
     });
 
     // Keyboard-Support
@@ -30,8 +30,7 @@ $(document).ready(function () {
             if (!$("nav").hasClass('permanentTopNav'))
                 $("nav").slideUp();
             $("#search").autocomplete("val", "");
-        }
-        else if (e.keyCode === 83 && !blockSearchFocus) {
+        } else if (e.keyCode === 83 && !blockSearchFocus) {
             if (!$("nav").hasClass('permanentTopNav'))
                 $("nav").slideDown();
             $("#search").focus();
@@ -53,10 +52,13 @@ $(document).ready(function () {
 
         let autocompleteSource = $.fn.autocomplete.sources.hits(index, {hitsPerPage: 10});
         if ($('#algolia-search-currentLanguageOnly').length) {
-            autocompleteSource = $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5, filters: 'language: ' + $('html').attr('lang') });
+            autocompleteSource = $.fn.autocomplete.sources.hits(index, {
+                hitsPerPage: 5,
+                filters: 'language: ' + $('html').attr('lang')
+            });
         }
 
-        $('#search').autocomplete({ hint: false, autoselect: true, debug: false },
+        $('#search').autocomplete({hint: false, autoselect: true, debug: false},
             [
                 {
                     source: autocompleteSource,
@@ -94,7 +96,11 @@ $(document).ready(function () {
         type: "image",
         delegate: "a",
         image: {
-            verticalFit: true
+            titleSrc: function (item) {
+                return item.el.parent().find('figcaption').text();
+            },
+
+            verticalFit: true // Fits image in area vertically
         }
     });
 });
