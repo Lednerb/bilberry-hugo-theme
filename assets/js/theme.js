@@ -74,7 +74,7 @@ $(document).ready(function () {
                             return "<span class='empty'>" + $('#algolia-search-noSearchResults').val() + "</span>"
                         },
                         footer: function () {
-                            return '<div class="branding">Powered by <img src="' + $('#siteBaseUrl').attr('href') + '/algolia-logo-light.svg" /></div>'
+                            return '<div class="branding">Powered by <img src="' + $('meta[name=siteBaseUrl]').attr("content") + '/algolia-logo-light.svg" /></div>'
                         }
                     },
                 }

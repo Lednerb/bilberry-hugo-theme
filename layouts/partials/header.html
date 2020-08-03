@@ -5,7 +5,7 @@
 {{ end }}
     <div class="container">
         <div class="logo">
-            <a id="siteBaseUrl" href="{{ .Site.BaseURL | relLangURL }}" class="logo">
+            <a href="{{ .Site.BaseURL | relLangURL }}" class="logo">
                 {{ if and (isset .Site.Params "customimage") (ne .Site.Params.customImage "") }}
                 <img src="{{ .Site.Params.customImage | relURL }}" alt="">
                 {{ else }}
