@@ -95,6 +95,16 @@ All options you can and should customize are commented out, so it should be no p
 Also, you can read this [write-up](https://www.kiroule.com/article/manage-environment-specific-settings-for-hugo-based-website/) on how to manage
 environment-specific settings for a Hugo-based website.
 
+### Absolute vs Relative URLs
+The theme uses relative URLs by default (except for open-graph tags #168).
+
+If you want to use absolute URLs add the following to your `config.toml`:
+```toml
+# Force absolute urls
+relativeURLs = false
+canonifyURLs = true
+```
+
 ## Features
 
 
