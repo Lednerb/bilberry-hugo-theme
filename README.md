@@ -107,7 +107,6 @@ canonifyURLs = true
 
 ## Features
 
-
 ### Algolia Search
 Bilberry includes a convenient search functionality for your site.
 You can test it on the demo site.
@@ -162,7 +161,6 @@ If you want to start a search on your blog simply type `s` and the search menu w
 
 To close it again you can enter `esc` at any time.
 
-
 ### Post Types
 Bilberry comes with a bunch of predefined post types.
 Available post types are `article`, `audio`, `code`, `gallery`, `link`, `page`, `quote` and `video`.
@@ -176,7 +174,6 @@ hugo new quote/edward-snowden-about-privacy.md
 `article` is the default post type if you want to use another type of content as the predefined.
 
 Just discover the entries from the `exampleSite` folder to get an overview of the great possibilities Bilberry provides ;-)
-
 
 ### Pages and External Links
 The post type `page` is the only one that appears in the top navigation (when you click on the navigation button on the top right).
@@ -255,7 +252,6 @@ Just create a new site and copy your site's short name to the `config.toml` file
 
 You can manage and moderate the comments either on your website or at the disqus management panel.
 
-
 ### Responsive Design
 Bilberry is optimized for desktop and mobile devices (tablets and smartphones).
 
@@ -264,6 +260,22 @@ The bilberry theme handles image crops and resizes automatically by default.
 However, if you want to disable this functionality in general, you can set `resizeImages: false` in your `config.toml` file.
 
 If you want to disable this functionality just on some posts, you can set `resizeImages: false` in your post's settings.
+
+### Clickable images (Image modal)
+
+If you want to open a larger version of an image in post on click use the following code:
+
+markdown:
+```markdown
+[![My alt-text or my caption](my-image.png)](my-image.png)
+```
+
+asciidoc:
+```asciidoc
+[#my-anchor]
+.My caption
+image::my-image.png[alt="My alt-text", link="my-image.png"]
+```
 
 ### Permanent Top Navigation
 If you want to permanently display the top navigation with the algolia search bar and the `page` entries, you can set the `permanentTopNav` option to `true` in your site's config file.

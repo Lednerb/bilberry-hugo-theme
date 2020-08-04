@@ -103,6 +103,20 @@ $(document).ready(function () {
             verticalFit: true // Fits image in area vertically
         }
     });
+
+    $('p').magnificPopup({
+        type: "image",
+        delegate: "a",
+        image: {
+            titleSrc: function (item) {
+                console.log(item)
+                return item.el.find('img').attr('alt');
+            },
+
+            verticalFit: true // Fits image in area vertically
+        }
+    });
+
 });
 
 hljs.initHighlightingOnLoad();
