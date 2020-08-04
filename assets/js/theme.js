@@ -104,9 +104,8 @@ $(document).ready(function () {
         }
     });
 
-    $('p').magnificPopup({
+    $('.image-modal').magnificPopup({
         type: "image",
-        delegate: "a",
         image: {
             titleSrc: function (item) {
                 return item.el.find('img').attr('alt');

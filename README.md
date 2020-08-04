@@ -267,12 +267,22 @@ If you want to disable this functionality just on some posts, you can set `resiz
 
 If you want to open a larger version of an image in post on click use the following code:
 
-markdown:
-```markdown
-[![My alt-text or my caption](my-image.png)](my-image.png)
+#### Markdown:
+Sadly, the only option right now is to use html:
+```html
+<a href="../server-config-from-git/git-config-change.svg" class="image-modal"><img src="../server-config-from-git/git-config-change.svg" alt="My alt-text"></a>
 ```
 
-asciidoc:
+In order to use html in Markdown you have to add this to your `config.toml`:
+```toml
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+```
+
+
+#### Asciidoc:
 ```asciidoc
 [#my-anchor]
 .My caption
