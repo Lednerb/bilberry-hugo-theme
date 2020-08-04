@@ -109,7 +109,6 @@ $(document).ready(function () {
         delegate: "a",
         image: {
             titleSrc: function (item) {
-                console.log(item)
                 return item.el.find('img').attr('alt');
             },
 
