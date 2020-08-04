@@ -69,8 +69,8 @@
     <meta itemprop="description" content="{{ .Scratch.Get "description" }}">
     <meta property="og:title" content="{{ .Scratch.Get "title" }}">
     <meta property="og:description" content="{{ .Scratch.Get "description" }}">
-    <meta property="og:image" content="{{ .Scratch.Get "image" | relURL }}">
-    <meta property="og:url" content="{{ .RelPermalink | relURL }}">
+    <meta property="og:image" content="{{ .Scratch.Get "image" | absURL }}">
+    <meta property="og:url" content="{{ .Permalink | absURL }}">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     {{- if .IsPage }}
     <meta property="og:type" content="article">
