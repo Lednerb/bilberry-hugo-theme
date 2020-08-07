@@ -39,6 +39,10 @@
         border: 0;
         margin: 0;
         white-space: normal;
+
+        &.hljs {
+            white-space: nowrap;
+        }
     }
 
     .bubble .fas {
