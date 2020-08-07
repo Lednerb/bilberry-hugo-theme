@@ -29,9 +29,13 @@
         }
     }
 
-    .hljs {
-        padding: 0.75em;
-        font-size: 0.9em;
+    pre {
+        code {
+            padding: 0.75em;
+            font-size: 0.9em;
+            white-space: nowrap;
+            overflow-x: scroll;
+        }
     }
 
     code {
@@ -39,10 +43,6 @@
         border: 0;
         margin: 0;
         white-space: normal;
-
-        &.hljs {
-            white-space: nowrap;
-        }
     }
 
     .bubble .fas {
