@@ -1,0 +1,22 @@
+.js {
+    .no-js-message {
+        display: none;
+    }
+}
+
+.no-js {
+
+    .no-js-message {
+        display: block;
+    }
+
+    nav {
+        display: block !important;
+    }
+
+    .search,
+    .toggler {
+        display: none !important;
+    }
+
+}
