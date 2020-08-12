@@ -8,21 +8,21 @@
     <div class="container">
         <ul class="topnav">
             {{ range where (where .Site.Pages.ByWeight ".Type" "page") ".IsPage" true }}
-            {{ if .Params.excludeFromTopNav }}
-            {{/* Do nothing */}}
-            {{ else if and (isset .Params "link") (ne .Params.link "") }}
-            <li><a href="{{ .Params.link | relURL }}" target="{{ .Params.target }}">{{ .Title }}</a></li>
-            {{ else }}
-            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-            {{ end }}
+                {{ if .Params.excludeFromTopNav }}
+                    {{/* Do nothing */}}
+                {{ else if and (isset .Params "link") (ne .Params.link "") }}
+                    <li><a href="{{ .Params.link | relURL }}" target="{{ .Params.target }}">{{ .Title }}</a></li>
+                {{ else }}
+                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
             {{ end }}
         </ul>
 
         {{ if and (isset .Site.Params "algolia_search") (eq .Site.Params.algolia_search true) }}
-        <div id="search-box" class="search">
-            <i class="fas fa-search"></i>
-            <input id="search" type="text" placeholder="{{ i18n "search" }}">
-        </div>
+            <div id="search-box" class="search">
+                <i class="fas fa-search"></i>
+                <input id="search" type="text" placeholder="{{ i18n "search" }}">
+            </div>
         {{ end }}
     </div>
 </nav>

@@ -3,9 +3,45 @@ require('jquery');
 require('flexslider');
 require('algoliasearch/dist/algoliasearch.jquery');
 require('autocomplete.js/dist/autocomplete.jquery');
+require('tooltipster');
+
+let ClipboardJs = require('clipboard')
 let hljs = require('highlight.js');
 
+// Add ClipboardJs to enable copy button functionality
+new ClipboardJs('.copy-button', {
+    target: function(trigger) {
+        return trigger.previousElementSibling;
+    }
+}).on('success', function(e) {
+    e.clearSelection()
+});
+
 $(document).ready(function () {
+
+    // Add copy button and tooltip to each code-block
+    $('pre').each(function () {
+        $(this).append('<button class="copy-button tooltip" title="Copied!"><i class="far fa-fw fa-copy"></i></button>')
+    });
+
+    $('.tooltip').tooltipster({
+        animationDuration: 1,
+        theme: 'tooltipster-light',
+        side: 'bottom',
+        delay: [200, 0],
+        distance: 0,
+        trigger: 'custom',
+        triggerOpen: {
+            click: true,
+            tap: true
+        },
+        triggerClose: {
+            click: true,
+            tap: true,
+            mouseleave: true
+        }
+    });
+
     // Nav-Toggle
     $(".toggler").click(function () {
         $("nav").slideToggle();
@@ -47,10 +83,10 @@ $(document).ready(function () {
 
     // Algolia-Search
     if ($('#activate-algolia-search').length) {
-        var client = algoliasearch($('#algolia-search-appId').val(), $('#algolia-search-apiKey').val());
-        var index = client.initIndex($('#algolia-search-indexName').val());
+        let client = algoliasearch($('#algolia-search-appId').val(), $('#algolia-search-apiKey').val());
+        let index = client.initIndex($('#algolia-search-indexName').val());
 
-        var autocompleteSource = $.fn.autocomplete.sources.hits(index, { hitsPerPage: 10 });
+        let autocompleteSource = $.fn.autocomplete.sources.hits(index, { hitsPerPage: 10 });
         if ($('#algolia-search-currentLanguageOnly').length) {
             autocompleteSource = $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5, filters: 'language: ' + $('html').attr('lang') });
         }
