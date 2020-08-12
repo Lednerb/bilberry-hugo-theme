@@ -83,6 +83,7 @@ $(document).ready(function () {
     });
 
     // Magnific Popup for images within articles to zoom them
+    // Rendered with Markdown
     $('p img').magnificPopup({
         type: "image",
         image: {
@@ -101,6 +102,33 @@ $(document).ready(function () {
 
               item.src = item.el.attr('src')
             }
+        },
+        // https://github.com/dimsemenov/Magnific-Popup/pull/1017
+        // Enabled popup only when image size is greater than content area
+        disableOn: function(e) {
+            img = e.target;
+
+            if( img.naturalWidth > img.clientWidth ) {
+                return true;
+            }
+
+            return false;
+        }
+    });
+
+    // Magnific Popup for images within articles to zoom them
+    // Rendered with Asciidoc
+    $('.image-block').magnificPopup({
+        type: "image",
+        delegate: "a",
+        image: {
+            titleSrc: function (item) {
+                return item.el.parent().find('figcaption').text();
+            },
+            verticalFit: true
+        },
+        zoom: {
+            enabled: true
         },
         // https://github.com/dimsemenov/Magnific-Popup/pull/1017
         // Enabled popup only when image size is greater than content area
