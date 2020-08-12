@@ -24,6 +24,13 @@
  */
 
 /*!
+ * clipboard.js v2.0.6
+ * https://clipboardjs.com/
+ * 
+ * Licensed MIT © Zeno Rocha
+ */
+
+/*!
  * jQuery JavaScript Library v3.5.1
  * https://jquery.com/
  *
@@ -36,3 +43,5 @@
  *
  * Date: 2020-05-04T22:49Z
  */
+
+/*! tooltipster v4.2.8 */
