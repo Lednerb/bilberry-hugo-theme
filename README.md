@@ -34,6 +34,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
   - [Image Modal Zoom](#Image-Modal-Zoom)
   - [Permanent Top Navigation](#Permanent-Top-Navigation)
   - [MathJAX Markup](#MathJAX-Markup)
+  - [Disabled Javascript Support](#Disabled-Javascript-Support)
 - [Favicons](#Favicons)
 - [Custom 404 site](#Custom-404-site)
 - [Custom Post Types](#Custom-Post-Types)
@@ -265,8 +266,13 @@ If you want to permanently display the top navigation with the algolia search ba
 Note that on mobile devices the navigation will still be collapsed because otherwise, the navigation menu hides the essential parts of your site.
 
 ### MathJAX Markup
-
 If you want to add [MathJAX](https://www.mathjax.org) markup support, set parameter `enable_mathjax` option to `true` in your site's config file.
+
+### Disabled Javascript Support
+Although this theme has a lot of features that only work with enabled javascript, it also fully supports disabled javascript.
+Disabling javascript will not break any styles or essential functionality on the site.
+
+Just head over to the demo page, disable javascript in your browser and check the results!
 
 ## Favicons
 Using favicons nowadays is not a trivial thing.
