@@ -31,6 +31,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
   - [Disqus comments](#Disqus-comments)
   - [Responsive Design](#Responsive-Design)
   - [Automatic Image Resizing](#Automatic-Image-Resizing)
+  - [Image Modal Zoom](#Image-Modal-Zoom)
   - [Permanent Top Navigation](#Permanent-Top-Navigation)
   - [MathJAX Markup](#MathJAX-Markup)
 - [Favicons](#Favicons)
@@ -253,7 +254,10 @@ Bilberry is optimized for desktop and mobile devices (tablets and smartphones).
 The bilberry theme handles image crops and resizes automatically by default.
 However, if you want to disable this functionality in general, you can set `resizeImages: false` in your `config.toml` file.
 
-If you want to disable this functionality just on some posts, you can set `resizeImages: false` in your post's settings.
+If you want to disable this functionality just on some posts, you can set `resizeImages: false` in your post's frontmatter settings.
+
+### Image Modal Zoom
+When including an image that has larger dimensions than the content area, the image gets clickable and a bigger version will open in a lightbox.
 
 ### Permanent Top Navigation
 If you want to permanently display the top navigation with the algolia search bar and the `page` entries, you can set the `permanentTopNav` option to `true` in your site's config file.
