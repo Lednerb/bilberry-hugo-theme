@@ -34,3 +34,4 @@ other = "Otros idiomas"
 [readingTime]
 one = "1 min de lectura"
 other = "{{ .Count }} mins. de lectura"
+

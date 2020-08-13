@@ -4,6 +4,7 @@ require('flexslider');
 require('algoliasearch/dist/algoliasearch.jquery');
 require('autocomplete.js/dist/autocomplete.jquery');
 require('tooltipster');
+require('magnific-popup');
 
 let ClipboardJs = require('clipboard')
 let hljs = require('highlight.js');
@@ -81,6 +82,39 @@ $(document).ready(function () {
         pauseOnHover: true,
     });
 
+    // Magnific Popup for images within articles to zoom them
+    $('p img').magnificPopup({
+        type: "image",
+        image: {
+            verticalFit: true,
+            titleSrc: 'alt'
+        },
+        zoom: {
+            enabled: true
+        },
+        callbacks: {
+            // Get the src directly from the img-tag instead of an additional tag
+            elementParse: function(item) {
+              // Function will fire for each target element
+              // "item.el" is a target DOM element (if present)
+              // "item.src" is a source that you may modify
+
+              item.src = item.el.attr('src')
+            }
+        },
+        // https://github.com/dimsemenov/Magnific-Popup/pull/1017
+        // Enabled popup only when image size is greater than content area
+        disableOn: function(e) {
+            img = e.target;
+
+            if( img.naturalWidth > img.clientWidth ) {
+                return true;
+            }
+
+            return false;
+        }
+    });
+
     // Algolia-Search
     if ($('#activate-algolia-search').length) {
         let client = algoliasearch($('#algolia-search-appId').val(), $('#algolia-search-apiKey').val());
@@ -110,7 +144,7 @@ $(document).ready(function () {
                             return "<span class='empty'>" + $('#algolia-search-noSearchResults').val() + "</span>"
                         },
                         footer: function () {
-                            return '<div class="branding">Powered by <img src="' + $('meta[name=siteBaseUrl]').attr("content") + '/algolia-logo-light.svg" /></div>'
+                            return '<div class="branding">Powered by <img src="' + $('meta[name=siteBaseUrl]').attr("content") + '/algolia-logo-light.svg" alt="algolia" /></div>'
                         }
                     },
                 }

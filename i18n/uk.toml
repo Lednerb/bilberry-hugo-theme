@@ -31,3 +31,7 @@ other = "Далі"
 [otherLanguages]
 other = "Інші мови"
 
+[readingTime]
+one = "1 хвилина читання"
+other = "{{.Count}} хвилина читання"
+

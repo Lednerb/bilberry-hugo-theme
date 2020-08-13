@@ -31,3 +31,6 @@ other = "繼續閱讀"
 [otherLanguages]
 other = "其他語言"
 
+[readingTime]
+other = "1 分鐘閱讀。"
+
