@@ -159,8 +159,12 @@ article {
         video {
             max-width: 100%;
         }
+
     }
 
+    .highlight {
+        margin: 1em 0;
+    }
 
     .footer {
         display: flex;
@@ -382,6 +386,12 @@ article {
                 margin: 2em;
                 margin-top: 0;
             }
+        }
+    }
+
+    &.status {
+        .content :last-child {
+            margin-bottom: 0;
         }
     }
 }
