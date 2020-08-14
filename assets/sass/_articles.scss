@@ -215,6 +215,33 @@ article {
         }
     }
 
+    // Footnotes
+    .footnotes {
+        font-size: 0.9em;
+
+        ol {
+            counter-reset: list;
+            display: table;
+
+            li {
+                list-style: none;
+                counter-increment: list;
+                display: table-row;
+
+                &:before {
+                    content: counter(list) ".";
+                    display: table-cell;
+                    text-align: right;
+                    padding-right: 0.75em;
+                }
+
+                p {
+                    margin-bottom: 0.5em;
+                }
+            }
+        }
+    }
+
     // Quotes
     &.quote {
         background-color: $special-color;
