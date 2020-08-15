@@ -157,7 +157,7 @@ To close it again you can enter `esc` at any time.
 
 ### Post Types
 Bilberry comes with a bunch of predefined post types.
-Available post types are `article`, `audio`, `code`, `gallery`, `link`, `page`, `quote` and `video`.
+Available post types are `article`, `audio`, `code`, `gallery`, `link`, `page`, `quote`, `status` and `video`.
 
 To use a post type, just create new content via the hugo command.<br>
 For example:
