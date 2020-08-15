@@ -8,6 +8,8 @@ require('magnific-popup');
 
 let ClipboardJs = require('clipboard')
 let hljs = require('highlight.js');
+let moment = require('moment');
+require("moment/min/locales.min");
 
 // Add ClipboardJs to enable copy button functionality
 new ClipboardJs('.copy-button', {
@@ -158,6 +160,14 @@ $(document).ready(function () {
                 }
             });
     }
+
+    // MomentJS
+    language = $('html').attr('lang');
+    moment.locale(language);
+    $('.moment').each(function() {
+        date = $(this).text()
+        $(this).text(moment(date).format('LL'))
+    });
 });
 
 hljs.initHighlightingOnLoad();
