@@ -7,13 +7,31 @@
 
     {{ with .ctx.Params.youtube }}
         <div class="responsive-video youtube">
-            <iframe src="https://www.youtube-nocookie.com/embed/{{ . }}?rel=0" frameborder="0" allowfullscreen></iframe>
+            <iframe class="no-js-hidden" src="https://www.youtube-nocookie.com/embed/{{ . }}?rel=0" frameborder="0" allowfullscreen></iframe>
+
+            <div class="no-js-message">
+                The youtube player can not be loaded with disabled javascript. <br>
+                The following video is embedded here: <br>
+
+                <a href="https://youtube.com/watch?v={{ . }}" target="_blank">
+                    https://youtube.com/watch?v={{ . }}
+                </a>
+            </div>
         </div>
     {{ end }}
 
     {{ with .ctx.Params.vimeo }}
         <div class="responsive-video vimeo">
-            <iframe src="https://player.vimeo.com/video/{{ . }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe class="no-js-hidden" src="https://player.vimeo.com/video/{{ . }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+            <div class="no-js-message">
+                The vimeo player can not be loaded with disabled javascript. <br>
+                The following video is embedded here: <br>
+
+                <a href="https://vimeo.com/{{ . }}" target="_blank">
+                    https://vimeo.com/{{ . }}
+                </a>
+            </div>
         </div>
     {{ end }}
 

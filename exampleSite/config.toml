@@ -39,9 +39,9 @@ disqusShortname = ""
 
   # Enable / Disable algolia search
   algolia_search    = true
-  algolia_appId     = "Y2C4RWMPXW"
-  algolia_apiKey    = "50ea7f8c41c0ad233926e0be2b769ed1"
-  algolia_indexName = "default-content"
+  algolia_appId     = "45CEN6X6AT"
+  algolia_apiKey    = "16030625f1a4d0dd3b8aefd794fd4cf1"
+  algolia_indexName = "bilberry-hugo-theme"
     # Set this option to false if you want to search within all articles in all languages at once
     algolia_currentLanguageOnly = true
 
@@ -58,13 +58,13 @@ disqusShortname = ""
     # your subtitle if you want to use any
     subtitle = "Hello World! This is the most epic subtitle ever."
 
-    # if you want to use gravatar for the header image
-    gravatarEMail = "code@lednerb.de"
+    # if you want to use libravatar or gravatar for the header image
+    avatarEmail = "code@lednerb.de"
 
-    # set an path to the image file you want to use | overwrites gravatar
+    # set an path to the image file you want to use | overwrites avatar by email
     customImage = ""
 
-    # define the icon you want to use for the overlay for the customImage or gravatar.
+    # define the icon you want to use for the overlay for the customImage or avatar.
     overlayIcon = "fa-home"
 
     # always display the top navigation (with pages and search) on non-mobile screens

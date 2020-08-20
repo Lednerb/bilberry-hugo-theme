@@ -3,11 +3,11 @@ license = "MIT"
 licenselink = "https://github.com/Lednerb/bilberry-hugo-theme/blob/master/LICENSE.md"
 description = "Bilberry is a premium hugo theme with a lot of nice features. It is an adaption and optimization for hugo from the Lingonberry WordPress theme by Anders Norén."
 homepage = "https://lednerb.github.io/bilberry-hugo-theme/"
-tags = ["blog", "personal", "responsive", "algolia", "disqus", "search", "font awesome", "pages", "posts", "multilingual", "highlight.js", "syntax highlighting", "premium", "shortcuts"]
+tags = ["blog", "personal", "responsive", "commento", "comments", "disabled javascript", "gallery", "code", "coding", "programming", "audio", "video", "algolia", "disqus", "search", "font awesome", "pages", "posts", "multilingual", "highlight.js", "syntax highlighting", "premium", "shortcuts"]
 features = ["search", "algolia integration", "post types", "i18n", 'multilangual', 'blog', 'google analytics', 'comments', 'disqus integration', "highlight.js", "syntax highlighting", "premium theme", "shortcuts"]
-min_version = "0.46"
+min_version = "0.53"
 
-theme_version = "1.10.0"
+theme_version = "2.1.0"
 
 [author]
   name = "Lednerb | Sascha Brendel"

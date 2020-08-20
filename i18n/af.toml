@@ -31,3 +31,7 @@ other = "lees verder"
 [otherLanguages]
 other = "Ander tale"
 
+[readingTime]
+one = "1 min lees"
+other = "{{.Count}} min lees"
+

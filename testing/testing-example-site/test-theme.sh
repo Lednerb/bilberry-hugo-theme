@@ -94,7 +94,7 @@ testContentAndContinue '<a href="https://example.com/tags/c&#43;&#43;/">C&#43;&#
 testContentAndContinue '<a href="https://example.com/tags/t%C3%A4sting&#43;&#43;/">tästing&#43;&#43;</a>' "$TARGET_DIR/article/täst/index.html"
 testContentAndContinue '<a href="https://example.com/de/article/t%C3%A4st/">de</a>' "$TARGET_DIR/article/täst/index.html"
 testContentAndContinue '<a href="https://example.com/article/t%C3%A4st/">Umlauts Täst&#43;&#43;</a>' "$TARGET_DIR/article/täst/index.html"
-testContentAndContinue '<a href="https://example.com/quote/t%C3%A4st-quote/">Quote Umlauts Täst&#43;&#43;</a' "$TARGET_DIR/article/täst/index.html"
+testContentAndContinue '<p>This is a umlauts-test in Quotes äüöß++</p>' "$TARGET_DIR/quote/index.html"
 testContentAndContinue '<a href="/categories/t%C3%A4st&#43;&#43;">Täst&#43;&#43;
                         (2)</a>' "$TARGET_DIR/article/täst/index.html"
 
@@ -106,7 +106,7 @@ testContentAndContinue '<a href="https://example.com/de/tags/c&#43;&#43;/">C&#43
 testContentAndContinue '<a href="https://example.com/de/tags/t%C3%A4sting&#43;&#43;/">tästing&#43;&#43;</a>' "$TARGET_DIR/de/article/täst/index.html"
 testContentAndContinue '<a href="https://example.com/article/t%C3%A4st/">en</a>' "$TARGET_DIR/de/article/täst/index.html"
 testContentAndContinue '<a href="https://example.com/de/article/t%C3%A4st/">de Umlauts Täst&#43;&#43;</a>' "$TARGET_DIR/de/article/täst/index.html"
-testContentAndContinue '<a href="https://example.com/de/quote/t%C3%A4st-quote/">de Quote Umlauts Täst&#43;&#43;</a' "$TARGET_DIR/de/article/täst/index.html"
+testContentAndContinue '<p>de This is a umlauts-test in quotes äüöß++</p>' "$TARGET_DIR/de/quote/index.html"
 testContentAndContinue '<a href="/de/categories/t%C3%A4st&#43;&#43;">Täst&#43;&#43;
                         (2)</a>' "$TARGET_DIR/de/article/täst/index.html"
 

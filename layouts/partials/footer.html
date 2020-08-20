@@ -6,10 +6,11 @@
         <div class="recent-posts">
             <strong>{{ i18n "latestPosts" }}</strong>
             <ul>
-                {{ range where (where (first (.Site.Params.amountLatestPostsInFooter | default 7) .Site.Pages.ByPublishDate.Reverse) ".Kind" "page") ".Type" "ne" "page" }}
-                <li>
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>
-                </li>
+                {{ $dontRender :=  (slice "page" "quote" "link" "status") }}
+                {{ range (first (.Site.Params.amountLatestPostsInFooter | default 7) (where (where .Site.Pages.ByPublishDate.Reverse ".Kind" "page") ".Type" "not in" $dontRender )) }}
+                    <li>
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </li>
                 {{ end }}
             </ul>
         </div>

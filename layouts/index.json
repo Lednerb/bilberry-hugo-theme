@@ -13,8 +13,10 @@
 {{- end -}}
 
 {{- range where .Site.RegularPages "Type" "not in" (slice "page" "json") -}}
-    {{-  $iconClass := "fa-pencil-alt" -}}
-    {{- if eq .Type "quote" -}}
+    {{- $iconClass := "" -}}
+    {{- if and (isset .Params "icon") (ne .Params.icon "") -}}
+        {{- $iconClass = .Params.icon -}}
+    {{- else if eq .Type "quote" -}}
         {{- $iconClass = "fa-quote-right" -}}
     {{- else if eq .Type "link" -}}
         {{- $iconClass = "fa-link" -}}
@@ -26,6 +28,8 @@
         {{- $iconClass = "fa-music" -}}
     {{- else if eq .Type "code" -}}
         {{- $iconClass = "fa-code" -}}
+    {{- else -}}
+        {{-  $iconClass = "fa-pencil-alt" -}}
     {{- end -}}
 
     {{- range .Translations -}}

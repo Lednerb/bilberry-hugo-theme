@@ -159,8 +159,12 @@ article {
         video {
             max-width: 100%;
         }
+
     }
 
+    .highlight {
+        margin: 1em 0;
+    }
 
     .footer {
         display: flex;
@@ -210,6 +214,33 @@ article {
                 a:not(:last-child):after {
                     content: " | ";
                     color: $text-color !important;
+                }
+            }
+        }
+    }
+
+    // Footnotes
+    .footnotes {
+        font-size: 0.9em;
+
+        ol {
+            counter-reset: list;
+            display: table;
+
+            li {
+                list-style: none;
+                counter-increment: list;
+                display: table-row;
+
+                &:before {
+                    content: counter(list) ".";
+                    display: table-cell;
+                    text-align: right;
+                    padding-right: 0.75em;
+                }
+
+                p {
+                    margin-bottom: 0.5em;
                 }
             }
         }
@@ -355,6 +386,12 @@ article {
                 margin: 2em;
                 margin-top: 0;
             }
+        }
+    }
+
+    &.status {
+        .content :last-child {
+            margin-bottom: 0;
         }
     }
 }
