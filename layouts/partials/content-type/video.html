@@ -5,16 +5,18 @@
 <article class="video">
     {{ partial "featured-image.html" .ctx }}
 
-    {{ with .ctx.Params.youtube }}
+    {{ if and (isset .ctx.Params "youtube") (ne .ctx.Params.youtube "") }}
         <div class="responsive-video youtube">
-            <iframe class="no-js-hidden" src="https://www.youtube-nocookie.com/embed/{{ . }}?rel=0" frameborder="0" allowfullscreen></iframe>
-
-            <div class="no-js-message">
-                The youtube player can not be loaded with disabled javascript. <br>
-                The following video is embedded here: <br>
-
-                <a href="https://youtube.com/watch?v={{ . }}" target="_blank">
-                    https://youtube.com/watch?v={{ . }}
+            <div>
+                <a href="https://www.youtube.com/watch?v={{ .ctx.Params.youtube }}" target="_blank" data-video="{{ .ctx.Params.youtube }}">
+                    {{ if .ctx.Resources.GetMatch "videoPoster.*" }}
+                        <img src="{{ (.ctx.Resources.GetMatch "videoPoster.*").RelPermalink }}" alt="">
+                    {{ else }}
+                        <img src="https://i.ytimg.com/vi/{{ .ctx.Params.youtube }}/maxresdefault.jpg" alt="">
+                    {{ end }}
+                    <div class="overlay">
+                        <i class="fab fa-youtube"></i>
+                    </div>
                 </a>
             </div>
         </div>

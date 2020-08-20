@@ -168,6 +168,14 @@ $(document).ready(function () {
         date = $(this).text()
         $(this).text(moment(date).format('LL'))
     });
+
+    // Youtube-2-Click-Embed
+    $('.youtube a').click(function(e) {
+        e.preventDefault();
+        iframe = '<iframe class="no-js-hidden" src="https://www.youtube-nocookie.com/embed/' + $(this).attr('data-video') + '?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>';
+        $(this).parent().append(iframe);
+        $(this).remove();
+    });
 });
 
 hljs.initHighlightingOnLoad();
