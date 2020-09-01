@@ -172,6 +172,7 @@ Just discover the entries from the `exampleSite` folder to get an overview of th
 
 ### Pages and External Links
 The post type `page` is the only one that appears in the top navigation (when you click on the navigation button on the top right).
+Pages can be ordered using the `weight` front matter variable, which should be set to a non-zero value. A page with a lower `weight` will be displayed first.
 
 A `page` can be a static page (about me or impress site) or a link to another page as it is used in the demo to link to the Bilberry GitHub repository.
 
