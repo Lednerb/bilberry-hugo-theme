@@ -3,7 +3,7 @@
 <div class="content">
     <div class="article-wrapper u-cf single">
         <a class="bubble" href="{{ "/author/" | relLangURL}}">
-            <i class="fa fa-fw fa-users"></i>
+        <i class="fa fa-fw fa-users"></i>
         </a>
 
         <article class="article">
@@ -12,7 +12,9 @@
                 <hr>
                 <ul id="all-categories">
                     {{ range $name, $taxonomy := .Site.Taxonomies.author }}
-                        <li><a href="{{ "/author/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize }} ({{ $taxonomy.Count }})</a></li>
+                        {{- with site.GetPage (printf "/author/%s" (urlize $name)) -}}
+                            <li><a href="{{ .Permalink }}">{{ .Title}} ({{ $taxonomy.Count }})</a></li>
+                        {{- end -}}
                     {{ end }}
                 </ul>
             </div>
