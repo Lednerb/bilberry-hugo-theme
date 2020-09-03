@@ -13,7 +13,7 @@
                 <ul id="all-categories">
                     {{ range $name, $taxonomy := .Site.Taxonomies.author }}
                         {{- with site.GetPage (printf "/author/%s" (urlize $name)) -}}
-                            <li><a href="{{ .Permalink }}">{{ .Title}}({{ $taxonomy.Count }})</a></li>
+                            <li><a href="{{ .Permalink }}">{{ .Title}} ({{ $taxonomy.Count }})</a></li>
                         {{- end -}}
                     {{ end }}
                 </ul>
