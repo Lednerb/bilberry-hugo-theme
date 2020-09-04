@@ -5,7 +5,13 @@
 {{- end -}}
 
 {{- range $name, $taxonomy := .Site.Taxonomies.author -}}
-    {{- $.Scratch.Add "index" (dict "url" (print "/author/" $name | absURL) "title" ($name | humanize) "iconClass" "fa-user" "type" "author" "objectID" (print "/author/" $name | absURL) ) -}}
+    {{- $author_name := $name -}}
+    {{- $author_path := (printf "/author/%s" (urlize $name)) -}}
+    {{- $author_page := site.GetPage $author_path -}}
+    {{- if $author_page -}}
+        {{- $author_name = $author_page.Title -}}
+    {{- end -}}
+    {{- $.Scratch.Add "index" (dict "url" ($author_path | absURL) "title" $author_name "iconClass" "fa-user" "type" "author" "objectID" ($author_path | absURL) ) -}}
 {{- end -}}
 
 {{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
