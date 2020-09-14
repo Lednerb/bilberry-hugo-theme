@@ -352,8 +352,8 @@ If you want to change any colors or fonts, you have to follow these steps:
 1. Install this theme to your `themes` directory
 2. `cd themes/bilberry-hugo-theme`
 3. `npm install`
-4. Modify the `scss/_variables.scss` file to customize your colors. <br> If you want to change the header's color just edit the `$base-color` variable
-5. use `npm run dev` for development and preview purposes and `npm run production` when you finished the changes
+4. Modify the `assets/sass/_variables.scss` file to customize your colors. <br> If you want to change the header's color just edit the `$base-color` variable
+5. Use `npm run dev` for development and preview purposes and `npm run production` when you finished the changes
 
 
 ## CSS and JS modules
