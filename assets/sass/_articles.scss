@@ -160,6 +160,51 @@ article {
             max-width: 100%;
         }
 
+        #TableOfContents {
+            display: block;
+            background: transparent;
+            padding-bottom: 2rem;
+            font-size: 1.2em;
+
+            ul {
+                display: list-item;
+                padding-left: 0;
+
+                ul {
+                    display: list-item;
+                    padding-left: 0.9rem;
+                    font-size: 95%;
+
+                    ul {
+                        display: inherit;
+                        padding-left: 0.9rem;
+                        font-size: 95%;
+
+                        ul {
+                            display: inherit;
+                            padding-left: 0.9rem;
+                            font-size: 95%;
+                        }
+                    }
+                }
+            }
+
+            li {
+                display: inherit;
+                color: $text-color;
+
+                a {
+                    color: inherit;
+                    text-align: left;
+                    padding: 0;
+
+                    &:hover {
+                        color: $highlight-color;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
     }
 
     .highlight {

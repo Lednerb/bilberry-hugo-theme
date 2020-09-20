@@ -35,3 +35,6 @@ other = "Other languages"
 one = "1 min read"
 other = "{{.Count}} min read"
 
+[tableOfContents]
+other = "Table of Contents"
+

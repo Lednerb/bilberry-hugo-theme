@@ -28,6 +28,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
   - [Reposting an Article / Duplicated Content [SEO]](#Reposting-an-Article--Duplicated-Content-SEO)
   - [Overwrite the calculated reading time](#Overwrite-the-calculated-reading-time)
   - [Summary Breaks](#Summary-Breaks)
+  - [Table of Contents](#Table-of-Contents)
   - [Disqus comments](#Disqus-comments)
   - [Responsive Design](#Responsive-Design)
   - [Automatic Image Resizing](#Automatic-Image-Resizing)
@@ -212,6 +213,16 @@ In this case, set the option `noSummary: true` in the header area (Front Matter)
 - You can define a summary that differs from the first content lines <br>
 Use the `summary: "Here goes my summary"` Front Matter variable. <br>
 In this case no _Continue reading_ link will be displayed.
+
+### Table of Contents
+To enable the automatic creation of a table of contents(TOC), set the `toc` front matter variable to true in your article. If the article's markdown contains appropriate headings, Hugo will generate a table of content at the beginning of the article. 
+
+By default, a TOC is generated if the content's word count is greater than **400**. The `tocMinWordCount` parameter defines this value in the `config.toml` configuration file. 
+
+The headings that are taken into account for a TOC are from _H2_ (##) to _H5_ (#####) inclusive. Also, if you want to display a TOC at a specific point in your article, set the `toc` front matter variable to false, and use the `toc` shortcode like this:
+```markdown
+{{< toc >}}
+```
 
 ### Comments
 Currently [Commento](https://commento.io/) and [Disqus](https://disqus.com) are supported.
