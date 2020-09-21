@@ -169,23 +169,13 @@ article {
             ul {
                 display: list-item;
                 padding-left: 0;
+            }
 
-                ul {
+            ul {
+                &:not(:first-child) {
                     display: list-item;
                     padding-left: 0.9rem;
                     font-size: 95%;
-
-                    ul {
-                        display: inherit;
-                        padding-left: 0.9rem;
-                        font-size: 95%;
-
-                        ul {
-                            display: inherit;
-                            padding-left: 0.9rem;
-                            font-size: 95%;
-                        }
-                    }
                 }
             }
 
