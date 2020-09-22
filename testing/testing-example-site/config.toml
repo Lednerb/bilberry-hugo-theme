@@ -91,6 +91,9 @@ disqusShortname = "bilberry-hugo-theme"
     # display the estimated reading time for an article
     showReadingTime = false
 
+    # Minimum word count to display the Table of Contents
+    tocMinWordCount = 400
+
   # Footer configuration
     showFooter = true
 
@@ -144,4 +147,10 @@ disqusShortname = "bilberry-hugo-theme"
 [outputs]
   home = [ "HTML", "JSON", "RSS" ]
   page = [ "HTML" ]
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 5
+    ordered = false
+    startLevel = 2
 
