@@ -169,9 +169,7 @@ article {
             ul {
                 display: list-item;
                 padding-left: 0;
-            }
 
-            ul {
                 &:not(:first-child) {
                     display: list-item;
                     padding-left: 0.9rem;
