@@ -38,3 +38,5 @@ other = "{{.Count}} min read"
 [tableOfContents]
 other = "Table of Contents"
 
+[series]
+other = "Series"

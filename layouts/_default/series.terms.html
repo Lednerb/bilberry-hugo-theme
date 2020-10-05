@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<div class="content">
+    <div class="article-wrapper u-cf single">
+        <a class="bubble" href="{{ "/series/" | relLangURL}}">
+            <i class="fa fa-fw fa-list-alt"></i>
+        </a>
+
+        <article class="article">
+            <div class="content">
+                <h3>{{ i18n "series" | default "series" }}</h3>
+                <hr>
+                <ul id="all-series">
+                    {{ range $name, $taxonomy := .Site.Taxonomies.series }}
+                        {{ $series_name := $name }}
+                        {{ $series_path := (printf "/series/%s" (urlize $name)) }}
+                        {{ $series_page := site.GetPage $series_path }}
+
+                        {{ if $series_page }}
+                            {{ $series_name = $series_page.Title }}
+                        {{ end }}
+
+                        <li><a href="{{ $series_path }}">{{ $series_name }} ({{ $taxonomy.Count }})</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+        </article>
+    </div>
+</div>
+{{ end }}
