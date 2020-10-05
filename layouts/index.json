@@ -18,6 +18,10 @@
     {{- $.Scratch.Add "index" (dict "url" (print "/tags/" $name | absURL) "title" ($name | humanize) "iconClass" "fa-tag" "type" "tag" "objectID" (print "/tags/" $name | absURL) ) -}}
 {{- end -}}
 
+{{- range $name, $taxonomy := .Site.Taxonomies.series -}}
+    {{- $.Scratch.Add "index" (dict "url" (print "/series/" $name | absURL) "title" ($name | humanize) "iconClass" "fa-list-alt" "type" "series" "objectID" (print "/series/" $name | absURL) ) -}}
+{{- end -}}
+
 {{- range where .Site.RegularPages "Type" "not in" (slice "page" "json" "status") -}}
     {{- $iconClass := "" -}}
     {{- if and (isset .Params "icon") (ne .Params.icon "") -}}
