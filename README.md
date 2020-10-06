@@ -224,6 +224,14 @@ The headings that are taken into account for a TOC are from _H2_ (##) to _H5_ (#
 {{< toc >}}
 ```
 
+### Series Taxonomy ###
+In case you want to group some articles as a series, you have to add the `series` front matter variable to each article and set its value to the name of the series, for example, `series: "My New Super Series"`.
+
+The page at `<site-base-url>/series/` will list all the series. To list all articles for a particular series within markdown, you can use the `series` shortcode with the series name in question, for instance: 
+```markdown
+{{< series "My New Super Series" >}}
+```
+
 ### Comments
 Currently [Commento](https://commento.io/) and [Disqus](https://disqus.com) are supported.
 

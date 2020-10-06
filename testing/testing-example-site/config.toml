@@ -143,6 +143,7 @@ disqusShortname = "bilberry-hugo-theme"
   author   = "author"
   tag      = "tags"
   category = "categories"
+  series   = "series"
 
 [outputs]
   home = [ "HTML", "JSON", "RSS" ]

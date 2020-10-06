@@ -1,0 +1,11 @@
+{{ $series_name := .Get 0 | urlize }}
+
+{{ range $key, $taxonomy := .Site.Taxonomies.series }}
+    {{ if eq $key $series_name }}
+    <ul>
+        {{ range $taxonomy.Pages.ByDate }}
+        <li hugo-nav="{{ .RelPermalink }}"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
+{{ end }}
