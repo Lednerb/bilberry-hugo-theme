@@ -29,6 +29,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
   - [Overwrite the calculated reading time](#Overwrite-the-calculated-reading-time)
   - [Summary Breaks](#Summary-Breaks)
   - [Table of Contents(TOC)](#table-of-contentstoc)
+  - [Series Taxonomy](#series-taxonomy)
   - [Disqus comments](#Disqus-comments)
   - [Responsive Design](#Responsive-Design)
   - [Automatic Image Resizing](#Automatic-Image-Resizing)
