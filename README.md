@@ -354,7 +354,7 @@ Posts can be customized via a variety of options.
 
 To exclude posts from appearing on your blog index, while still being displayed in categories, add `excludeFromIndex: true` to the post configuration.
 
-The theme also has options for a pinned post. Just uncomment `pinnedPost` in `config.toml`, and point it to the post you'd like permanently pinned to the top of the page. The `pinOnlyToFirstPage` setting lets you control if you'd like to only display the pinned post on the index, or on all pages.
+If you'd like to pin one or several posts to the top of the index page, uncomment the `pinnedPost` param in `config.toml`. Then set its value to the post's relative URL, for example, `/article/installing-bilberry-theme/`. When pinning multiple posts, the relative URL values should be separated by a comma. The `pinOnlyToFirstPage` parameter allows you to choose whether to display pinned posts on the index page only or on all pages.
 
 A custom icon can be declared per post, by specifying a font-awesome icon in the post configuration, such as `icon: fa-thumb-tack` for a pinned post.
 

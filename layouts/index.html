@@ -1,14 +1,24 @@
 {{ define "main" }}
 {{ $allNonExcludedPages := where .Site.RegularPages "Params.excludefromindex" "==" nil }}
 {{ $allNonExcludedPagesNotTypePage := (where .Site.RegularPages "Type" "ne" "page" | intersect $allNonExcludedPages) }}
-{{ $paginator := .Paginate $allNonExcludedPagesNotTypePage (index .Site.Params "paginate" | default 7) }}
+
+{{ $pinnedPostRelPermalinks := split .Site.Params.pinnedPost "," }}
+{{ $pinnedPosts := where $allNonExcludedPagesNotTypePage "RelPermalink" "in" $pinnedPostRelPermalinks }}
+{{ $pagesToPaginate := where $allNonExcludedPagesNotTypePage "RelPermalink" "not in" $pinnedPostRelPermalinks }}
+
+{{ $paginationLimit := index .Site.Params "paginate" | default 7 }}
+{{ if not .Site.Params.pinOnlyToFirstPage }}
+    {{ $paginationLimit = sub $paginationLimit (len $pinnedPosts) }}
+{{ end }}
+
+{{ $paginator := .Paginate $pagesToPaginate $paginationLimit }}
 
     {{ if .Site.Params.pinnedPost }}
         {{ if (and .Site.Params.pinOnlyToFirstPage (ne $paginator.PageNumber 1)) }}
             {{/* Do nothing if the pinOnlyToFirstPage flag is set and we're not on page 1. */}}
         {{else}}
-            {{ range first 1 (where .Data.Pages "URL" .Site.Params.pinnedPost) }}
-                {{ partial "article-wrapper.html" . }}
+            {{ range $pinnedPosts }}
+        {{ partial "article-wrapper.html" . }}
             {{end}}
         {{end}}
     {{end}}
