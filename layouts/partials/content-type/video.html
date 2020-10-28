@@ -6,48 +6,19 @@
     {{ partial "featured-image.html" .ctx }}
 
     {{ with .ctx.Params.youtube }}
-        <div class="responsive-video youtube">
-            <iframe class="no-js-hidden" src="https://www.youtube-nocookie.com/embed/{{ . }}?rel=0" frameborder="0" allowfullscreen></iframe>
-
-            <div class="no-js-message">
-                The youtube player can not be loaded with disabled javascript. <br>
-                The following video is embedded here: <br>
-
-                <a href="https://youtube.com/watch?v={{ . }}" target="_blank">
-                    https://youtube.com/watch?v={{ . }}
-                </a>
-            </div>
-        </div>
+        {{ partial "video-embed" (dict "type" "youtube" "id" .) }}
     {{ end }}
 
     {{ with .ctx.Params.vimeo }}
-        <div class="responsive-video vimeo">
-            <iframe class="no-js-hidden" src="https://player.vimeo.com/video/{{ . }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-            <div class="no-js-message">
-                The vimeo player can not be loaded with disabled javascript. <br>
-                The following video is embedded here: <br>
-
-                <a href="https://vimeo.com/{{ . }}" target="_blank">
-                    https://vimeo.com/{{ . }}
-                </a>
-            </div>
-        </div>
+        {{ partial "video-embed" (dict "type" "vimeo" "id" .) }}
     {{ end }}
 
     {{ with .ctx.Params.prezi }}
-        <div class="responsive-video prezi">
-            <iframe src="https://prezi.com/embed/{{ . }}/" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
+        {{ partial "video-embed" (dict "type" "prezi" "id" .) }}
     {{ end }}
 
     {{ if isset .ctx.Params "mp4video" }}
-        <div class="responsive-video local">
-          <video width="100%" controls poster="{{ .ctx.Params.mp4videoImage }}">
-            <source src="{{ .ctx.Params.mp4video }}" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        {{ partial "video-embed" (dict "type" "mp4" "url" .ctx.Params.mp4video "imageUrl" .ctx.Params.mp4videoImage) }}
     {{ end }}
 
     {{ partial "default-content.html" (dict "ctx" .ctx "template_type" .template_type) }}

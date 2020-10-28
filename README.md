@@ -37,6 +37,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
   - [Permanent Top Navigation](#Permanent-Top-Navigation)
   - [MathJAX Markup](#MathJAX-Markup)
   - [Disabled Javascript Support](#Disabled-Javascript-Support)
+  - [Videos](#Videos)
 - [Favicons](#Favicons)
 - [Custom 404 site](#Custom-404-site)
 - [Custom Post Types](#Custom-Post-Types)
@@ -294,6 +295,48 @@ Although this theme has a lot of features that only work with enabled javascript
 Disabling javascript will not break any styles or essential functionality on the site.
 
 Just head over to the demo page, disable javascript in your browser and check the results!
+
+### Videos
+The following video hosting providers are supported: `YouTube`, `Vimeo`, and `Prezi`. Videos in the `MP4` format, either stored externally or within the site's `static` folder, are also supported. There are two options to display videos. 
+
+The first one is to use a post of the `video` type.  Use the following command to create your video post:
+```bash
+hugo new video/<post-name>.md
+```
+
+Then set the corresponding front matter variable:
+```markdown
+youtube: "<youtube-video-id>"            # https://www.youtube.com/watch?v=M7IjJiZUutk -> "M7IjJiZUutk"
+vimeo: "<vimeo-video-id>"                # https://vimeo.com/239830182 -> "239830182"
+prezi: "<prezi-video-id"                 # https://prezi.com/v/5z9shnq7jzxs/what-to-study/ -> "5z9shnq7jzxs"
+mp4video: "<video-file-url>"             # location of video file (only mp4) 
+mp4videoImage: "<image-video-file-url>"  # location of poster image 
+```
+
+If the `MP4` video and its image are stored in the `static` folder, you can set variables as follows:
+```markdown
+mp4video: "/<video-file-name>.mp4"
+mp4videoImage: "/<image-video-file-name>.png"
+```
+
+The second option is to use the `video` shortcode within markdown content in a post of the `article` type as follows:
+```markdown
+<!-- YouTube -->
+{{< video type="youtube" id="<youtube-video-id>" >}}
+
+<!-- Vimeo -->
+{{< video type="vimeo" id="<vimeo-video-id>" >}}
+
+<!-- Prezi -->
+{{< video type="prezi" id="<prezi-video-id>" >}}
+
+<!-- MP4 external -->
+{{< video type="mp4" url="<video-file-url>" imageUrl="<image-video-file-url>" >}}
+
+<!-- MP4 in site's static folder -->
+{{< video type="mp4" url="/<video-file-name>.mp4" imageUrl="/<image-video-file-name>.png" >}}
+
+```
 
 ## Favicons
 Using favicons nowadays is not a trivial thing.
