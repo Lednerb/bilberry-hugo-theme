@@ -8,7 +8,7 @@ other = "Autores"
 other = "Etiquetas"
 
 [socialMedia]
-other = "Redes Sociales"
+other = "Redes sociales"
 
 [latestPosts]
 other = "Últimas publicaciones"
@@ -17,21 +17,26 @@ other = "Últimas publicaciones"
 other = "Buscar ..."
 
 [noSearchResults]
-other = "Nada Encontrado."
+other = "Nada encontrado."
 
 [olderPosts]
 other = "Publicaciones anteriores"
 
 [newerPosts]
-other = "las publicaciones más nuevas"
+other = "Publicaciones recientes"
 
 [continueReading]
-other = "sigue leyendo"
+other = "Seguir leyendo"
 
 [otherLanguages]
 other = "Otros idiomas"
 
 [readingTime]
-one = "1 min de lectura"
-other = "{{ .Count }} mins. de lectura"
+one = "1 minuto de lectura"
+other = "{{ .Count }} minutos de lectura"
 
+[tableOfContents]
+other = "Tabla de contenidos"
+
+[series]
+other = "Series"
