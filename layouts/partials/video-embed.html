@@ -1,0 +1,56 @@
+{{ if eq .type "youtube" }}
+    <div class="responsive-video youtube">
+        <iframe class="no-js-hidden" src="https://www.youtube-nocookie.com/embed/{{ .id }}?rel=0" frameborder="0" allowfullscreen></iframe>
+
+        <div class="no-js-message">
+            The YouTube player can not be loaded with disabled JavaScript. <br>
+            The following video is embedded here: <br>
+
+            <a href="https://youtube.com/watch?v={{ .id }}" target="_blank">
+                https://youtube.com/watch?v={{ .id }}
+            </a>
+        </div>
+    </div>
+{{ end }}
+
+{{ if eq .type "vimeo" }}
+    <div class="responsive-video vimeo">
+        <iframe class="no-js-hidden" src="https://player.vimeo.com/video/{{ .id }}" frameborder="0"
+                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+        <div class="no-js-message">
+            The Vimeo player can not be loaded with disabled JavaScript. <br>
+            The following video is embedded here: <br>
+
+            <a href="https://vimeo.com/{{ .id }}" target="_blank">
+                https://vimeo.com/{{ .id }}
+            </a>
+        </div>
+    </div>
+{{ end }}
+
+{{ if eq .type "prezi" }}
+    <div class="responsive-video prezi">
+        <iframe class="no-js-hidden" src="https://prezi.com/v/embed/{{ .id }}/" frameborder="0" webkitallowfullscreen mozallowfullscreen
+                allowfullscreen></iframe>
+
+        <div class="no-js-message">
+            The Prezi player can not be loaded with disabled JavaScript. <br>
+            The following video is embedded here: <br>
+
+            <a href="https://prezi.com/v/embed/{{ .id }}" target="_blank">
+                https://prezi.com/v/embed/{{ .id }}
+            </a>
+        </div>
+    </div>
+{{ end }}
+
+{{ if eq .type "mp4" }}
+    <div class="responsive-video local">
+        <video width="100%" controls poster="{{ .imageUrl }}">
+            <source src="{{ .url }}" type="video/mp4">
+
+            Your browser does not support the video tag.
+        </video>
+    </div>
+{{ end }}
