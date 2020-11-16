@@ -114,6 +114,12 @@ disqusShortname = ""
     # social media profile urls for the footer links
     showSocialMedia = true
 
+    # show an archive link in the footer
+    showArchive = true
+
+  # how to group arhive. "2006" by year, "2006-01" by month. Uses similiar syntax as dateFormat above
+    archiveDateGrouping = "2006-01"
+
     # define your links with FontAwesome 5 (only free icons are supported)
     # all icons https://fontawesome.com/icons?d=gallery&m=free
     # brand icons https://fontawesome.com/icons?d=gallery&s=brands&m=free
