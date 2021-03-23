@@ -137,17 +137,19 @@ Execute the 'hugo' command in the site's root directory to publish your changes.
     * If case you have a multi-language setup, make sure that you repeat the steps above for all `public/{LANG}/index.json` files
 
 * Automated Upload
-    * Prerequisites: installed Python 3 and Algolia API's [Python client](https://github.com/algolia/algoliasearch-client-python). The API Python client can be installed with the following command:
+  
+    * Install required dependencies by executing the following command from the site's root:
     ```shell script
-    pip install --upgrade 'algoliasearch>=2.0,<3.0'
+    npm install "algolia"
     ```
-    * Execute the `algolia-index-upload.py` from the site's root directory as follows:
+    * Run the `data-upload.js` from the site's root directory as follows:
     ```shell script
-    python3 algolia-index-upload.py -f public/index.json -a <algolia-app-id> -k <algolia-admin-api-key> -n <algolia-index-name>
+    npm --prefix "algolia" run data-upload -- -f public/index.json -a <algolia-app-id> -k <algolia-admin-api-key> -n <algolia-index-name>
     ```
     * The `algolia-admin-api-key` argument, namely your Algolia account's `Admin API Key`, is used to create, update, and delete indices, and it should be kept secret.
+    * Add the `-c` or `--clear-index` option if you want to clear the corresponding Algolia index before starting a new upload.   
     * Login to your Algolia account and verify in the `Browse` tab of your index that the index records were uploaded correctly.
-    * If case you have a multi-language setup, make sure that you repeat the steps above for all `public/{LANG}/index.json` files
+    * In case you have a multi-language setup, make sure that you repeat the steps above for all `public/{LANG}/index.json` files.
 
 Also, you can read this [write-up](https://www.kiroule.com/article/automate-index-upload-to-algolia-search/) on how to automate
 index upload to Algolia Search if you host your Bilberry theme-based website on Netlify.
