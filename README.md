@@ -138,13 +138,14 @@ Execute the 'hugo' command in the site's root directory to publish your changes.
 
 * Automated Upload
   
-    * Install required dependencies by executing the following command from the site's root:
+    * Install required dependencies by executing the following command from the `algolia` directory:
     ```shell script
-    npm install "algolia"
+    cd algolia
+    npm install
     ```
-    * Run the `data-upload.js` from the site's root directory as follows:
+    * Run the `data-upload.js` from from the `algolia` directory as follows:
     ```shell script
-    npm --prefix "algolia" run data-upload -- -f public/index.json -a <algolia-app-id> -k <algolia-admin-api-key> -n <algolia-index-name>
+    npm run data-upload -- -f ../public/index.json -a <algolia-app-id> -k <algolia-admin-api-key> -n <algolia-index-name>
     ```
     * The `algolia-admin-api-key` argument, namely your Algolia account's `Admin API Key`, is used to create, update, and delete indices, and it should be kept secret.
     * Add the `-c` or `--clear-index` option if you want to clear the corresponding Algolia index before starting a new upload.   
