@@ -26,7 +26,7 @@
 {{ else if .Params.mp4videoImage }}
   {{ .Scratch.Set "image" (.Params.mp4videoImage | absURL) }}
 {{ else }}
-  {{ .Scratch.Set "image" (printf "https://www.gravatar.com/avatar/%s?size=200" (md5 .Site.Params.gravatarEMail)) }}
+  {{ .Scratch.Set "image" (site.Params.customImage) }}
 {{ end }}
 
 {{- if ne .Description "" -}}
