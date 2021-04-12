@@ -90,6 +90,8 @@
 
     {{ with .Params.original_url }}
     <link rel=”canonical” href=”{{ . }}” />
+    {{ else }}
+    <link rel='canonical' href='{{ .Permalink }}'>
     {{ end }}
 
     <link rel="stylesheet" href="{{ "theme.css" | absURL }}">
