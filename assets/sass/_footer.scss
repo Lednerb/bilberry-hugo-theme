@@ -90,6 +90,7 @@ footer {
 
                 margin-left: 0;
 
+                margin-bottom: 2em;
                 a {
                     text-transform: uppercase;
                     color: $highlight-color;
@@ -108,6 +109,12 @@ footer {
                         color: $text-color !important;
                     }
                 }
+            }
+
+            .archive {
+                width: 100%;
+
+                margin-left: 0;
             }
 
             strong {

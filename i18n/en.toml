@@ -40,3 +40,6 @@ other = "Table of Contents"
 
 [series]
 other = "Series"
+
+[archive]
+other = "Archive"
