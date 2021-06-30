@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     // Add copy button and tooltip to each code-block
     $('pre').each(function () {
-        $(this).append('<button class="copy-button tooltip" title="Copied!"><i class="far fa-fw fa-copy"></i></button>')
+        $(this).append('<button class="copy-button tooltip" title="Copied!"><i class="far fa-clipboard"></i></button>')
     });
 
     $('.tooltip').tooltipster({
@@ -52,14 +52,25 @@ $(document).ready(function () {
     });
 
     // Commento support to block search focus when hitting the S key
-    blockSearchFocus = false;
+    blockSearchFocusCommento = false;
 
     $('#commento').focusin(function() {
-      blockSearchFocus = true;
+        blockSearchFocusCommento = true;
     });
 
     $('#commento').focusout(function() {
-      blockSearchFocus = false;
+        blockSearchFocusCommento = false;
+    });
+
+    // Utterances support to block search focus when hitting the S key
+    blockSearchFocusUtterances = false;
+
+    $('#utterances').focusin(function() {
+        blockSearchFocusUtterances = true;
+    });
+
+    $('#utterances').focusout(function() {
+        blockSearchFocusUtterances = false;
     });
 
     // Keyboard-Support
@@ -69,7 +80,7 @@ $(document).ready(function () {
                 $("nav").slideUp();
             $("#search").autocomplete("val", "");
         }
-        else if (e.keyCode === 83 && !blockSearchFocus) {
+        else if (e.keyCode === 83 && !blockSearchFocusCommento || !blockSearchFocusUtterances) {
             if (!$("nav").hasClass('permanentTopNav'))
                 $("nav").slideDown();
             $("#search").focus();

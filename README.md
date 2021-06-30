@@ -269,6 +269,42 @@ Just create a new site and copy your site's short name to the `config.toml` file
 
 You can manage and moderate the comments either on your website or at the disqus management panel.
 
+#### Utterances comments
+If you want to enable the functionality for your users to write comments below your articles. You need to follow instructions in [Utterances](https://utteranc.es/) website.
+
+To activate Utterances in your blog you have to customize the JS-snippet below or by adding your configuration to `config.toml`.
+
+**Example:**
+
+Snippet displayed in Utterances:
+```html
+<script src="https://utteranc.es/client.js"
+  repo="Lednerb/bilberry-hugo-theme"
+  issue-term="pathname"
+  label="Comment"
+  theme="github-light"
+  crossorigin="anonymous"
+  async>
+</script>
+<div id="utterances"></div>
+```
+
+Your `config.toml`
+```toml
+#[...]
+[params]
+
+    #[...]
+
+    # Utterances
+    utterances    = true
+    utterancesJsUrl     = "https://utteranc.es/client.js"
+    utterancesRepository    = "Lednerb/bilberry-hugo-theme"
+    utterancesIssueTerm   = "pathname"
+    utterancesLabel   = "Comment"
+    utterancesTheme = "github-light"
+    utterancesCrossOrigin = "anonymous"
+```
 
 ### Responsive Design
 Bilberry is optimized for desktop and mobile devices (tablets and smartphones).
