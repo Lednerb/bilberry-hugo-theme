@@ -1,0 +1,15 @@
+{
+  "name": "algolia-helper",
+  "version": "1.0.0",
+  "description": "Algolia helper for sending and managing data",
+  "dependencies": {
+    "algoliasearch": "^4.8.5",
+    "jsonfile": "^6.1.0",
+    "yargs": "^16.2.0"
+  },
+  "scripts": {
+    "data-upload": "node data-upload.js"
+  },
+  "author": "Igor Baiborodine",
+  "license": "MIT"
+}
