@@ -8,7 +8,11 @@
 @import '~tooltipster/dist/css/tooltipster.bundle.css';
 @import '~tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-light.min.css';
 @import "~magnific-popup";
-
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import 'fontface';
 // Choose one of the supported syntax highlighting styles
 // https://highlightjs.org/static/demo/
 @import '~highlight.js/scss/monokai-sublime.scss';
