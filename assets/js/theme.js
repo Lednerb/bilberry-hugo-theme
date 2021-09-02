@@ -7,7 +7,6 @@ require('tooltipster');
 require('magnific-popup');
 
 let ClipboardJs = require('clipboard')
-let hljs = require('highlight.js');
 let moment = require('moment');
 require("moment/min/locales.min");
 
@@ -24,7 +23,7 @@ $(document).ready(function () {
 
     // Add copy button and tooltip to each code-block
     $('pre').each(function () {
-        $(this).append('<button class="copy-button tooltip" title="Copied!"><i class="far fa-clipboard"></i></button>')
+        $(this).append('<button class="copy-button tooltip" title="COPIED"><i class="far fa-copy"></i></button>')
     });
 
     $('.tooltip').tooltipster({
@@ -195,7 +194,7 @@ $(document).ready(function () {
                             return "<span class='empty'>" + $('#algolia-search-noSearchResults').val() + "</span>"
                         },
                         footer: function () {
-                            return '<div class="branding">Powered by <img src="' + $('meta[name=siteBaseUrl]').attr("content") + '/algolia-logo-light.svg" alt="algolia" /></div>'
+                            return '<div class="branding">Powered by <img src="' + $('meta[name=siteBaseUrl]').attr("content") + '/static/algolia-logo-light.svg" alt="algolia" /></div>'
                         }
                     },
                 }
@@ -218,5 +217,3 @@ $(document).ready(function () {
         $(this).text(moment(date).format('LL'))
     });
 });
-
-hljs.initHighlightingOnLoad();

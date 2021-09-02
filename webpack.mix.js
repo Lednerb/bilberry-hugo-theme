@@ -15,10 +15,11 @@ mix.autoload({
     moment: 'moment'
 });
 
-mix.setPublicPath('./static')
+mix.setPublicPath('./static/static/')
     .setResourceRoot('./')
     .js('assets/js/theme.js', './')
-    .sass('assets/sass/theme.scss', './');
+    .sass('assets/sass/theme.scss', './')
+    .sass( 'assets/sass/fontface.scss', './');
 
 // Full API
 // mix.js(src, output);
