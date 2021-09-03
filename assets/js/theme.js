@@ -19,7 +19,7 @@ new ClipboardJs('.copy-button', {
     e.clearSelection()
 });
 
-$(document).on("ready", function () {
+$(function () {
 
     // Add copy button and tooltip to each code-block
     $('pre').each(function () {
