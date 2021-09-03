@@ -63,12 +63,12 @@ $(document).on("ready", function () {
 
     // Keyboard-Support
     $(document).on("keyup", function (e) {
-        if (e.code === "Escape") {
+        if (e.code == "Escape") {
             if (!$("nav").hasClass('permanentTopNav'))
                 $("nav").slideUp();
             $("#search").autocomplete("val", "");
         }
-        else if (e.code === "KeyS" && !blockSearchFocusUtterances) {
+        else if (e.code == "KeyS" && !blockSearchFocusUtterances) {
             if (!$("nav").hasClass('permanentTopNav'))
                 $("nav").slideDown();
             $("#search").trigger("focus");
