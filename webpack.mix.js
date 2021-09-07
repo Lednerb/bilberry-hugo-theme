@@ -18,7 +18,8 @@ mix.autoload({
 mix.setPublicPath('./static/static/')
     .setResourceRoot('./')
     .js('assets/js/theme.js', './')
-    .sass('assets/sass/theme.scss', './');
+    .sass('assets/sass/theme.scss', './')
+    .sourceMaps();
 
 // Full API
 // mix.js(src, output);
