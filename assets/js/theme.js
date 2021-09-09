@@ -23,7 +23,7 @@ $(function () {
 
     // Add copy button and tooltip to each code-block
     $('pre').each(function () {
-        $(this).append('<button class="copy-button tooltip" title="COPIED"><i class="far fa-copy"></i></button>')
+        $(this).append('<button class="copy-button tooltip" title="COPIED"><i class="far fa-clipboard"></i></button>')
     });
 
     $('.tooltip').tooltipster({
@@ -183,16 +183,16 @@ $(function () {
                             return "<span class='empty'>" + $('#algolia-search-noSearchResults').val() + "</span>"
                         },
                         footer: function () {
-                            return '<div class="branding">Powered by <img src="' + $('meta[name=siteBaseUrl]').attr("content") + '/static/algolia-logo-light.27917f95d07e6215412f2bb2f22d58806ab721dbb064a503513f90de90d570bd.svg" alt="algolia" /></div>'
+                            return '<div class="branding">Powered by <img src="' + $('meta[name=siteBaseUrl]').attr("content") + '/images/logos/algolia-logo-light.27917f95d07e6215412f2bb2f22d58806ab721dbb064a503513f90de90d570bd.svg" alt="algolia" /></div>'
                         }
                     },
                 }
             ])
-            .on('autocomplete:selected', function (event, suggestion, dataset) {
+            .on('autocomplete:selected', function (suggestion) {
                 window.location = (suggestion.url);
             })
             .keypress(function (event, suggestion) {
-                if (event.which == 13) {
+                if (event.code == "Enter") {
                     window.location = (suggestion.url);
                 }
             });

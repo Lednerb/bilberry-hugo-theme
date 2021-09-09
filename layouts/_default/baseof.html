@@ -81,7 +81,7 @@
 
     {{ partial "favicon.html" . }}
 
-    <script src="{{ "/static/modernizr-simple.9022aa18b96ab0f335d0c433a6e351da17bd2f09524c922ddfec345affe8c53c.js" | relURL }}"></script>
+    <script src="{{ "/js/modernizr-simple.9022aa18b96ab0f335d0c433a6e351da17bd2f09524c922ddfec345affe8c53c.js" | relURL }}"></script>
 
     {{ if .RelPermalink }}
     <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
@@ -94,7 +94,7 @@
     <link rel="canonical" href="{{ .Permalink }}">
     {{ end }}
 
-    <link rel="stylesheet" href="{{ "/static/theme.ee2ee27de0516e82d7cf4ea63464e50006cab9a754e32c1b800d641e9885936e.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "/css/theme.8f9bb590b8a8eb748a2c1f0a9ca509a04b96bbf1395b13c12a1135af342e1408.css" | absURL }}">
 
     {{ partial "twitter-card.html" . }}
 
@@ -124,7 +124,7 @@
     {{ end }}
 
 
-    <script type="text/javascript" src="{{ "/static/theme.46256f837cbc4813606d5e607ab76dc9a4ab8ff58c11c17fbdb68513a8522c62.js" | absURL }}"></script>
+    <script type="text/javascript" src="{{ "/js/theme.44b61f1abf42cfd3d42cc4fd3e4d68f87fca3e6f484558d915eabbd3fc8364af.js" | absURL }}"></script>
 
     {{ if isset .Site.Params "js_modules" }}
     {{ range .Site.Params.js_modules }}
