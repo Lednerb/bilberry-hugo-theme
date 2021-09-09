@@ -15,11 +15,11 @@ mix.autoload({
     moment: 'moment'
 });
 
-mix.setPublicPath('./static/static/')
+mix.setPublicPath('./static/')
     .setResourceRoot('./')
     .js('assets/js/theme.js', './')
     .sass('assets/sass/theme.scss', './')
-    .sourceMaps();
+    .sourceMaps(true, 'source-map');
 
 // Full API
 // mix.js(src, output);
