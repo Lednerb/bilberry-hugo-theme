@@ -48,6 +48,15 @@ disqusShortname = ""
   # Enable / Disable comments on the articles via commento
   commentoJsURL = "https://commento.lednerb.de/js/commento.js"
 
+  # Enable / Disable Utterances comments
+  utterances    = true
+  utterancesJsUrl     = "https://utteranc.es/client.js"
+  utterancesRepository    = "Lednerb/bilberry-hugo-theme"
+  utterancesIssueTerm   = "pathname"
+  utterancesLabel   = "Comment"
+  utterancesTheme = "github-light"
+  utterancesCrossOrigin = "anonymous"
+
   # Media configuration
     # let hugo automatically resize and crop your images to the correct sizes
     # NB: When enabled the image files get renamed by adding additional information,

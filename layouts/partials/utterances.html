@@ -1,0 +1,10 @@
+{{ if .Site.Params.utterances }}
+<script src="{{ .Site.Params.utterancesJsUrl }}"
+        repo="{{ .Site.Params.utterancesRepository }}"
+        issue-term="{{.Site.Params.utterancesIssueTerm}}"
+        theme="{{ .Site.Params.utterancesTheme }}"
+        crossorigin="{{ .Site.Params.utterancesCrossOrigin }}"
+        async>
+</script>
+<div id="utterances"></div>
+{{ end }}
