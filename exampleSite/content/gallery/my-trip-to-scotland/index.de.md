@@ -9,7 +9,7 @@ author: "Lednerb"
 Im Juni 2017 habe ich mit meinem besten Freund Schottland für 2 Wochen besucht und bereist.
 Wir fuhren viel durch das schöne Land und sahen eine Reihe verschiedener Tiere: Rinder, Hirsche, Vögel, Delfine und Schafe. Überall Schafe!
 
-Auf einem schönen, kleinen Campingplatz sahen wir am frühen Morgen Rinder im Nebel und machten ein Foto. Dieses Bild hat seither den Titel "Rindviehcher im Nebel".
+Auf einem schönen, kleinen Campingplatz sahen wir am frühen Morgen Rinder im Nebel und machten ein Foto. Dieses Bild hat seither den Titel "Rindviecher im Nebel".
 
 Wir fuhren mit dem Auto durch den Eurotunnel Calais-Folkstone nach Großbritannien und fuhren die Westküste nach Norden und besuchten die Isle of Skye - eine wunderschöne Insel, die man in seinem Leben auf jeden Fall gesehen haben sollte. Dann ging es weiter Richtung Norden nach Durness, wo wir den Straßen nach Osten folgten, entlang an den Küsten und via Single-Track-Roads nach Lindisfarne.
 
