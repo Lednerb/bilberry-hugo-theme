@@ -22,7 +22,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
 - [Configuration](#Configuration)
 - [Features](#Features)
   - [Algolia Search](#Algolia-Search)
-    - [Setup](#Setup)
+    - [Initial Setup](#Initial-setup)
     - [Update Algolia Index](#Update-algolia-index)
   - [Keyboard Shortcuts](#Keyboard-Shortcuts)
   - [Post Types](#Post-Types)
