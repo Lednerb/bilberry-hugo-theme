@@ -8,4 +8,4 @@ tags: ['search engine']
 # Set your external url
 link: "https://duckduckgo.com"
 ---
-A search engnine that respects your privacy.
+A search engine that respects your privacy.

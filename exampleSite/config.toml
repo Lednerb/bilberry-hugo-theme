@@ -5,7 +5,7 @@ theme = "bilberry-hugo-theme"
 # Generate the robots.txt file for SEO
 enableRobotsTXT = true
 
-# Change to one of your content languages definded at the end.
+# Change to one of your content languages defined at the end.
 DefaultContentLanguage = "en"
 
 # Enable / Disable Google Analytics statistics for your site
@@ -48,6 +48,15 @@ disqusShortname = ""
   # Enable / Disable comments on the articles via commento
   commentoJsURL = "https://commento.lednerb.de/js/commento.js"
 
+  # Enable / Disable Utterances comments
+  utterances    = true
+  utterancesJsUrl     = "https://utteranc.es/client.js"
+  utterancesRepository    = "Lednerb/bilberry-hugo-theme"
+  utterancesIssueTerm   = "pathname"
+  utterancesLabel   = "Comment"
+  utterancesTheme = "github-light"
+  utterancesCrossOrigin = "anonymous"
+
   # Media configuration
     # let hugo automatically resize and crop your images to the correct sizes
     # NB: When enabled the image files get renamed by adding additional information,
@@ -83,7 +92,7 @@ disqusShortname = ""
     # Set to true to pin only to the first page, false to all pages
     # pinOnlyToFirstPage = true
 
-    # enable automatical localization of the article's PublishedDate with momentjs
+    # enable automatic localization of the article's PublishedDate with momentjs
     enableMomentJs = true
 
     # customize the date format | only works if momentjs is disabled | only works with English month names
@@ -131,7 +140,7 @@ disqusShortname = ""
     creditsUrl = "https://github.com/Lednerb/bilberry-hugo-theme"
 
 
-# customize your available languages for your multi-langual site
+# customize your available languages for your multi-lingual site
 # or delete the [Languages] blog to use the theme with only one supported language
 [Languages]
   [Languages.en]

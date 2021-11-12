@@ -9,7 +9,7 @@ author: "Lednerb"
 In June 2017 I've visited Scotland with my best friend for two weeks.
 We drove a lot through the beautiful countryside and saw a lot of different animals: cattle, deer, birds, dolphins, and sheep. Sheep everywhere!
 
-At one beautiful camping site, we saw cattle in fog in the very early morning and took a picture of it. The image now has the title "Rindviehcher im Nebel", a quite funny German phrase that means cattle in the fog.
+At one beautiful camping site, we saw cattle in fog in the very early morning and took a picture of it. The image now has the title "Rindviecher im Nebel", a quite funny German phrase that means cattle in the fog.
 
 We arrived by car via the Eurotunnel Calais-Folkstone and drove the west coast to the north, visited the Isle of Skye (everyone should've seen this place before death), headed over to the north to Durness and took the north and east coast roads to Lindisfarne.
 
