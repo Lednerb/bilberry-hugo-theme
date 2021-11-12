@@ -111,7 +111,7 @@ You can test it on the demo site.
 Just click on the navigation bar at the top right of the header.
 
 
-#### Setup
+#### Initial Setup
 If you do not want to use the search functionality set `algolia_search = false` in your `config.toml` file.
 
 If you want to include the algolia search for your site, you have to follow these steps:
@@ -121,15 +121,14 @@ If you want to include the algolia search for your site, you have to follow thes
 3. Switch over to `Indices` and create a new one.
 4. Switch over to `API Keys` and copy your `Application ID`, `Search-Only API Key` and chosen `Index name` to your `config.toml` file.
 5. Ensure that `algolia_search = true` is set.
-6. Check the next section [Update the search index](#update-the-search-index), follow the steps and come back again
-7. Go to the tab `Configuration` of your newly created indices, select the `Facets` in the section `FILTERING AND FACETING` and add the `language` attribute with the `filter only` modifier in the `Attributes for faceting` option. If, after adding the `language` attribute, the `Unknown attribute` error is shown, ignore it.
-8. Done.
+6. Follow instructions in the section [Update Algolia Index](#update-algolia-index) and proceed to the next step.
+7. To complete the initial setup, go to the tab `Configuration` of your newly created indices, select the `Facets` in the section `FILTERING AND FACETING` and add the `language` attribute with the `filter only` modifier in the `Attributes for faceting` option. If, after adding the `language` attribute, the `Unknown attribute` error is shown, ignore it.
 
 
-#### Update the Search Index
+#### Update Algolia Index
 You have to repeat this step every time you change a post or publish a new one to update the search index.
 
-Execute the 'hugo' command in the site's root directory to publish your changes.
+Execute the `hugo` command in the site's root directory to publish your changes.
 
 * Manual Upload
     * Head over to the `public/index.json` file and copy everything in there.
@@ -140,7 +139,7 @@ Execute the 'hugo' command in the site's root directory to publish your changes.
 
 * Automated Upload
   
-    * Install required dependencies by executing the following command from the `algolia` directory:
+    * Switch to the `algolia` directory and install required dependencies by executing the following command:
     ```shell script
     cd algolia
     npm install
@@ -154,8 +153,8 @@ Execute the 'hugo' command in the site's root directory to publish your changes.
     * Login to your Algolia account and verify in the `Browse` tab of your index that the index records were uploaded correctly.
     * In case you have a multi-language setup, make sure that you repeat the steps above for all `public/{LANG}/index.json` files.
 
-Also, you can read this [write-up](https://www.kiroule.com/article/automate-index-upload-to-algolia-search/) on how to automate
-index upload to Algolia Search if you host your Bilberry theme-based website on Netlify.
+Also, you can read this [write-up](https://www.kiroule.com/article/automate-data-upload-to-algolia-index-revisited/) on how to automate
+data upload to Algolia Index if you host your Bilberry theme-based website on Netlify.
 
 ### Keyboard Shortcuts
 If you want to start a search on your blog simply type `s` and the search menu will open.
