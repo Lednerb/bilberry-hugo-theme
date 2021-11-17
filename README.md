@@ -17,19 +17,21 @@ If you like this theme and/or use it for commercial purposes, please support me!
 
 ## Table of Contents
 
-- [Requirements](#Requirements)
-- [Quick Start](#Quick-Start)
-- [Configuration](#Configuration)
-- [Features](#Features)
-  - [Algolia Search](#Algolia-Search)
-    - [Initial Setup](#Initial-setup)
-    - [Update Algolia Index](#Update-algolia-index)
-  - [Keyboard Shortcuts](#Keyboard-Shortcuts)
-  - [Post Types](#Post-Types)
-  - [Pages and External Links](#Pages-and-External-Links)
-  - [Reposting an Article / Duplicated Content [SEO]](#Reposting-an-Article--Duplicated-Content-SEO)
-  - [Overwrite the calculated reading time](#Overwrite-the-calculated-reading-time)
-  - [Summary Breaks](#Summary-Breaks)
+- [Bilberry Hugo Theme](#bilberry-hugo-theme)
+- [Table of Contents](#table-of-contents)
+- [Requirements](#requirements)
+- [Quick Start](#quick-start)
+- [Configuration](#configuration)
+- [Features](#features)
+  - [Algolia Search](#algolia-search)
+    - [Initial Setup](#initial-setup)
+    - [Update Algolia Index](#update-algolia-index)
+  - [Keyboard Shortcuts](#keyboard-shortcuts)
+  - [Post Types](#post-types)
+  - [Pages and External Links](#pages-and-external-links)
+  - [Reposting an Article / Duplicated Content [SEO]](#reposting-an-article--duplicated-content-seo)
+  - [Overwrite the calculated reading time](#overwrite-the-calculated-reading-time)
+  - [Summary Breaks](#summary-breaks)
   - [Table of Contents(TOC)](#table-of-contentstoc)
   - [Series Taxonomy](#series-taxonomy)
   - [Disqus comments](#Disqus-comments)
@@ -274,6 +276,53 @@ If you want to enable the functionality for your users to write comments below y
 Just create a new site and copy your site's short name to the `config.toml` file at `disqusShortname`.
 
 You can manage and moderate the comments either on your website or at the disqus management panel.
+
+#### Giscus comments
+If you want to enable the functionality for your users to write comments below your articles. You need to follow instructions in [Giscus](https://giscus.app/) website.
+
+To activate Giscus in your blog you have to customize the JS-snippet below or by adding your configuration to `config.toml`.
+
+**Example:**
+
+Snippet displayed in Giscus:
+```html
+<script src="https://giscus.app/client.js"
+        data-repo="Lednerb/bilberry-hugo-theme"
+        data-repo-id="R_kgDOGX153A"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOGX153M4B_2Vz"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+<div id="giscus"></div>
+```
+
+Your `config.toml`
+```toml
+#[...]
+[params]
+
+    #[...]
+
+    # Giscus
+    giscus    = true
+    giscusJsUrl     = "https://giscus.app/client.js"
+    giscusRepository    = "Lednerb/bilberry-hugo-theme"
+    giscusRepositoryId   = "R_kgDOGX153A"
+    giscusMapping   = "pathname"
+    giscusCategory  = "Announcements"
+    giscusCategoryId   = "DIC_kwDOGX153M4B_2Vz"
+    giscusTheme = "light"
+    giscusReactions = "1"
+    giscusEmitMetadata = "0"
+    giscusLanguage = "en"
+    giscusCrossOrigin = "anonymous"
+```
 
 #### Utterances comments
 If you want to enable the functionality for your users to write comments below your articles. You need to follow instructions in [Utterances](https://utteranc.es/) website.
