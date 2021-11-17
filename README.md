@@ -40,6 +40,7 @@ If you like this theme and/or use it for commercial purposes, please support me!
   - [MathJAX Markup](#MathJAX-Markup)
   - [Disabled Javascript Support](#Disabled-Javascript-Support)
   - [Videos](#Videos)
+  - [Raw HTML](#Raw-html)
 - [Favicons](#Favicons)
 - [Custom 404 site](#Custom-404-site)
 - [Custom Post Types](#Custom-Post-Types)
