@@ -14,10 +14,6 @@ googleAnalytics = ""
 # Enable / Disable comments on the articles via Disqus.
 disqusShortname = ""
 
-# Enable / Disable open link with a new tab.
-[blackfriday]
-  hrefTargetBlank = false
-
 [params]
   # Custom CSS / JS modules that will be imported by the template.
   # Files are relative to the static/ directory or a URL.
@@ -162,6 +158,12 @@ disqusShortname = ""
   page = [ "HTML" ]
 
 [markup]
+  defaultMarkdownHandler = 'goldmark'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Change to 'true' if you need to render raw HTML whithin your markdown content
+      unsafe = false
+
   [markup.tableOfContents]
     endLevel = 5
     ordered = false
