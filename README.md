@@ -378,6 +378,14 @@ The second option is to use the `video` shortcode within markdown content in a p
 
 ```
 
+### Raw HTML
+If you want to include raw HTML in your markdown content, enable the `unsafe` setting in your `config.toml` file by changing it to `true`:
+```toml
+[markup.goldmark]
+  [markup.goldmark.renderer]
+    unsafe = true
+```
+
 ## Favicons
 Using favicons nowadays is not a trivial thing.
 There are many different sizes and file types for the various mobile and desktop browsers and for the shortcuts for Android and iOS devices.
