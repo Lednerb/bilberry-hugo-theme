@@ -366,7 +366,7 @@ article {
     }
 
     // Audio
-    &.audio {
+    &.audio, &.article {
         .responsive-audio {
             iframe {
                 width: 100%;
