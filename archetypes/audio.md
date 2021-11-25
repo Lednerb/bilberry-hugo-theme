@@ -12,5 +12,5 @@ spotify: ""     # https://open.spotify.com/track/3W2lz1sg6m4sEzjmoTjmdE?si=0659f
 soundcloud: ""  # https://soundcloud.com/lightbooks/alchemist-08-new-world-order-snip
 tunein: ""      # https://tunein.com/embed/player/t117894382/" --> t117894382
 mixcloud: ""    # https://www.mixcloud.com/scienceforthepeople/445-ai-ant-intelligence/ --> scienceforthepeople/445-ai-ant-intelligence 
-audio: ""       # location of audio file (only ogg, mp3, or wav formats)
+audiofile: ""   # location of audio file (only ogg, mp3, or wav formats)
 ---
