@@ -22,7 +22,7 @@
     {{ end }}
 
     {{ with .ctx.Params.audiofile }}
-        {{ partial "audio-embed" (dict "type" "audio" "url" .) }}
+        {{ partial "audio-embed" (dict "type" "audiofile" "url" .) }}
     {{ end }}
 
     {{ partial "default-content.html" (dict "ctx" .ctx "template_type" .template_type) }}
