@@ -367,10 +367,8 @@ article {
 
     // Audio
     &.audio, &.article {
-        .responsive-audio {
-            iframe {
-                width: 100%;
-            }
+        .responsive-audio iframe, .responsive-audio audio {
+            width: 100%;
         }
     }
 
