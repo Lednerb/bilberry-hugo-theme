@@ -21,7 +21,7 @@
         {{ partial "audio-embed" (dict "type" "mixcloud" "id" .) }}
     {{ end }}
 
-    {{ with .ctx.Params.audio }}
+    {{ with .ctx.Params.audiofile }}
         {{ partial "audio-embed" (dict "type" "audio" "url" .) }}
     {{ end }}
 
