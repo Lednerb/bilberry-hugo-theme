@@ -4,6 +4,7 @@ date: {{ .Date }}
 draft: true
 
 categories: []
+tags: []
 author: ""
 
 # Set your video id for

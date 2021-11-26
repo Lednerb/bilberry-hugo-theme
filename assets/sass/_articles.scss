@@ -366,11 +366,9 @@ article {
     }
 
     // Audio
-    &.audio {
-        .responsive-audio {
-            iframe {
-                width: 100%;
-            }
+    &.audio, &.article {
+        .responsive-audio iframe, .responsive-audio audio {
+            width: 100%;
         }
     }
 

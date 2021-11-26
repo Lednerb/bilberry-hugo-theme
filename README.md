@@ -39,7 +39,8 @@ If you like this theme and/or use it for commercial purposes, please support me!
   - [Permanent Top Navigation](#Permanent-Top-Navigation)
   - [MathJAX Markup](#MathJAX-Markup)
   - [Disabled Javascript Support](#Disabled-Javascript-Support)
-  - [Videos](#Videos)
+  - [Video](#Video)
+  - [Audio](#Audio)
   - [Raw HTML](#Raw-html)
 - [Favicons](#Favicons)
 - [Custom 404 site](#Custom-404-site)
@@ -337,8 +338,8 @@ Disabling javascript will not break any styles or essential functionality on the
 
 Just head over to the demo page, disable javascript in your browser and check the results!
 
-### Videos
-The following video hosting providers are supported: `YouTube`, `Vimeo`, and `Prezi`. Videos in the `MP4` format, either stored externally or within the site's `static` folder, are also supported. There are two options to display videos. 
+### Video
+The following video hosting providers are supported: `YouTube`, `Vimeo`, and `Prezi`. Videos in the `MP4` format, either stored externally or within the site's `static` folder, are also supported. There are two options to display video embeds. 
 
 The first one is to use a post of the `video` type.  Use the following command to create your video post:
 ```bash
@@ -354,7 +355,7 @@ mp4video: "<video-file-url>"             # location of video file (only mp4)
 mp4videoImage: "<image-video-file-url>"  # location of poster image 
 ```
 
-If the `MP4` video and its image are stored in the `static` folder, you can set variables as follows:
+For example, if an `MP4` video and its image are stored in the `static` folder, you can set variables as follows:
 ```markdown
 mp4video: "/<video-file-name>.mp4"
 mp4videoImage: "/<image-video-file-name>.png"
@@ -377,6 +378,49 @@ The second option is to use the `video` shortcode within markdown content in a p
 <!-- MP4 in site's static folder -->
 {{< video type="mp4" url="/<video-file-name>.mp4" imageUrl="/<image-video-file-name>.png" >}}
 
+```
+
+### Audio
+The following audio streaming providers are supported: [Mixcloud](https://www.mixcloud.com/), [SoundCloud](https://soundcloud.com/), [Spotify](https://www.spotify.com/), and [TuneIn](https://tunein.com/). Audio files in the `Ogg`, `MP3`, or `WAV` formats, either stored externally or within the site's `static` folder, are also supported. There are two options to display audio embeds.
+
+The first one is to use a post of the `audio` type. Use the following command to create your audio post:
+```bash
+hugo new audio/<post-name>.md
+```
+
+Then set the corresponding front matter variable:
+```markdown
+spotify: "<spotify-track-id>"        # https://open.spotify.com/track/3W2lz1sg6m4sEzjmoTjmdE?si=0659fd12179840dd --> 3W2lz1sg6m4sEzjmoTjmdE
+soundcloud: "<soundcloud-track-url>" # https://soundcloud.com/lightbooks/alchemist-08-new-world-order-snip
+tunein: "<tunein-track-id>"          # https://tunein.com/embed/player/t117894382/" --> t117894382
+mixcloud: "<mixcloud-track-id>"      # https://www.mixcloud.com/scienceforthepeople/445-ai-ant-intelligence/ --> scienceforthepeople/445-ai-ant-intelligence
+audiofile: "<audio-file-url>"        # location of audio file (only ogg, mp3, or wav formats)
+```
+
+For example, if an MP3 audio file is stored in the `static` folder, you can set the `audiofile` variable as follows:
+```markdown
+audiofile: "/<audio-file-name>.mp3"
+```
+
+The second option is to use the `audio` shortcode within markdown content in a post of the `article` type as follows:
+```markdown
+<!-- Mixcloud -->
+{{< audio type="mixcloud" id="<mixcloud-track-id>" >}}
+
+<!-- SoundCloud -->
+{{< audio type="soundcloud" id="<soundcloud-track-url>" >}}
+
+<!-- Spotify -->
+{{< audio type="spotify" id="<spotify-track-id>" >}}
+
+<!-- TuneIn -->
+{{< audio type="tunein" id="<tunein-track-id>" >}}
+
+<!-- MP3 external -->
+{{< audio type="audiofile" url="<audio-file-url>" >}}
+
+<!-- MP3 in site's static folder -->
+{{< audio type="audiofile" url="/<audio-file-name>.mp3" >}}
 ```
 
 ### Raw HTML
