@@ -73,6 +73,17 @@ $(document).ready(function () {
         blockSearchFocusUtterances = false;
     });
 
+    // Giscus support to block search focus when hitting the S key
+    blockSearchFocusGiscus = false;
+
+    $('#giscus').focusin(function() {
+        blockSearchFocusGiscus = true;
+    });
+
+    $('#giscus').focusout(function() {
+        blockSearchFocusGiscus = false;
+    });
+
     // Keyboard-Support
     $(document).keyup(function (e) {
         if (e.keyCode === 27) {
@@ -80,7 +91,7 @@ $(document).ready(function () {
                 $("nav").slideUp();
             $("#search").autocomplete("val", "");
         }
-        else if (e.keyCode === 83 && !blockSearchFocusCommento || !blockSearchFocusUtterances) {
+        else if (e.keyCode === 83 && !blockSearchFocusCommento || !blockSearchFocusUtterances || !blockSearchFocusGiscus) {
             if (!$("nav").hasClass('permanentTopNav'))
                 $("nav").slideDown();
             $("#search").focus();

@@ -11,6 +11,7 @@
         <div id="comments-container">
             {{ template "_internal/disqus.html" . }}
             {{ partial "commento.html" . }}
+            {{ partial "giscus.html" . }}
             {{ partial "utterances.html" . }}
         </div>
     {{ end }}
