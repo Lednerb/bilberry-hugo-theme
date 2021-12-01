@@ -8,13 +8,13 @@
         data-reactions-enabled="{{ .Site.Params.giscusReactions }}"
         data-emit-metadata="{{ .Site.Params.giscusMetadata }}"
         data-theme="{{ .Site.Params.giscusTheme }}"
-        {{ if isset .Site.Params "giscusLanguage" }}
-        data-lang="{{ .Site.Params.giscusLanguage }}"
+        {{ if isset .Site.Params "giscuslanguage" }}
+            data-lang="{{ .Site.Params.giscusLanguage }}"
         {{ else }}
-        data-lang="{{ .Site.Language.Lang }}"
+            data-lang="{{ .Site.Language.Lang }}"
         {{ end }}
         crossorigin="{{ .Site.Params.giscusCrossOrigin }}"
         async>
-</script>
+    </script>
     <div id="giscus"></div>
 {{ end }}
