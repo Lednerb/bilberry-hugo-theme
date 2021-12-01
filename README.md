@@ -62,22 +62,22 @@ Here's a live [demo site](https://lednerb.github.io/bilberry-hugo-theme) to see 
 
 ## Requirements
 
-**Hugo version >= 0.53 required**
+**Hugo version >= 0.53 required**; see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.
 
 ## Quick Start
-
-- Create a new hugo site
+ 
+- Create a new site:
 ```
 hugo new site my-new-blog
 ```
 
-- Install the latest version of this  theme
+- Install the latest version of this theme:
 ```
 cd my-new-blog/themes
 git clone https://github.com/Lednerb/bilberry-hugo-theme.git
 ```
-If you don't use git, you can download this theme [HERE](https://github.com/Lednerb/bilberry-hugo-theme/archive/master.zip) and extract it manually into the themes folder. <br>
-Please ensure that the folder is renamed to "bilberry-hugo-theme"
+If you don't use Git, you can download this theme [here](https://github.com/Lednerb/bilberry-hugo-theme/archive/master.zip) and extract it manually into the `themes` folder.  
+Make sure the folder containing the extracted theme is named `bilberry-hugo-theme`.
 
 - Copy example content and default config file for a quick start
 ```
