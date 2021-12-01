@@ -45,13 +45,13 @@ disqusShortname = ""
   commentoJsURL = "https://commento.lednerb.de/js/commento.js"
 
   # Enable / Disable Giscus comments
-  giscus             = true
+  giscus             = false
   giscusJsUrl        = "https://giscus.app/client.js"
-  giscusRepository   = "Lednerb/bilberry-hugo-theme"
-  giscusRepositoryId = "R_kgDOGX153A"
+  giscusRepository   = "[ENTER REPO HERE]"
+  giscusRepositoryId = "[ENTER REPO ID HERE]"
   giscusMapping      = "pathname"
-  giscusCategory     = "Announcements"
-  giscusCategoryId   = "DIC_kwDOGX153M4B_2Vz"
+  giscusCategory     = "[ENTER CATEGORY NAME HERE]"
+  giscusCategoryId   = "[ENTER CATEGORY ID HERE]"
   giscusTheme        = "light"
   giscusReactions    = "1"
   giscusEmitMetadata = "0"
@@ -59,12 +59,12 @@ disqusShortname = ""
   giscusCrossOrigin  = "anonymous"
 
   # Enable / Disable Utterances comments
-  utterances    = true
-  utterancesJsUrl     = "https://utteranc.es/client.js"
-  utterancesRepository    = "Lednerb/bilberry-hugo-theme"
+  utterances            = false
+  utterancesJsUrl       = "https://utteranc.es/client.js"
+  utterancesRepository  = "Lednerb/bilberry-hugo-theme"
   utterancesIssueTerm   = "pathname"
-  utterancesLabel   = "Comment"
-  utterancesTheme = "github-light"
+  utterancesLabel       = "Comment"
+  utterancesTheme       = "github-light"
   utterancesCrossOrigin = "anonymous"
 
   # Media configuration
