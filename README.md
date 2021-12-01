@@ -8,12 +8,10 @@
 [![Contributors](https://img.shields.io/badge/contributors-36-orange.svg?style=flat-square)](#contributors)
 [![Discord](https://img.shields.io/discord/479643633814077465.svg?style=flat-square&label=Discord%20Chat&colorB=7289da)](https://discord.gg/vZVHJ4j)
 
-This is a premium [Hugo](https://gohugo.io) theme, inspired by the [Lingonberry WordPress](http://www.andersnoren.se/teman/lingonberry-wordpress-theme/) theme from Anders Norén.
+**Bilberry** is a premium [Hugo](https://gohugo.io) theme with many great features. 
+This is an adaptation and further optimization of the [Lingonberry WordPress theme](https://en-ca.wordpress.org/themes/lingonberry/) by Anders Norén.
 
-Bilberry is an adaption that comes with different optimizations and little features as listed below.
-<br>Click here for a [DEMO / PREVIEW](https://lednerb.github.io/bilberry-hugo-theme).
-
-If you like this theme and/or use it for commercial purposes, please support me!
+Here's a live [demo site](https://lednerb.github.io/bilberry-hugo-theme) to see this theme in action.
 
 ## Table of Contents
 
