@@ -24,6 +24,8 @@ Here's a live [demo site](https://lednerb.github.io/bilberry-hugo-theme) to see 
   - [Algolia Search](#algolia-search)
     - [Initial Setup](#initial-setup)
     - [Update Algolia Index](#update-algolia-index)
+      - [Manual Upload](#manual-upload)
+      - [Automated Upload](#automated-upload)
   - [Keyboard Shortcuts](#keyboard-shortcuts)
   - [Post Types](#post-types)
   - [Pages and External Links](#pages-and-external-links)
@@ -76,91 +78,83 @@ hugo new site my-new-blog
 cd my-new-blog/themes
 git clone https://github.com/Lednerb/bilberry-hugo-theme.git
 ```
-If you don't use Git, you can download this theme [here](https://github.com/Lednerb/bilberry-hugo-theme/archive/master.zip) and extract it manually into the `themes` folder.  
+If you don't use **Git**, you can download this theme [here](https://github.com/Lednerb/bilberry-hugo-theme/archive/master.zip) and extract it manually into the `themes` folder. 
 Make sure the folder containing the extracted theme is named `bilberry-hugo-theme`.
 
-- Copy example content and default config file for a quick start
+- Copy example site content including the `config.toml` file:
 ```
 cp -r bilberry-hugo-theme/exampleSite/* ../
 ```
 
-- Remove the default archetype
+- Remove the default archetype:
 ```
 cd ../
 rm archetypes/default.md
 ```
 
-- Test and configure your site
+- Configure the necessary properties in the `config.toml` file. Then start the webserver and to publish your website:
 ```
-hugo server -D
+hugo server
 ```
 
-__Important:__ <br>
-Do NOT change the name of the theme folder. <br>
-If you rename the folder, the different post types will not work.
+**Important:** Do NOT change the name of the `bilberry-hugo-theme` folder. 
+Renaming this folder will break your site.
 
 Also, check out this [tutorial](https://www.kiroule.com/article/start-blogging-with-github-hugo-and-netlify/) on how to build a Bilberry theme-based website using Hugo, GitHub, and Netlify.
 
 ## Configuration
-To configure your site according to your needs, just open the `config.toml` file in your project folder and adjust the settings.
-All options you can and should customize are commented out, so it should be no problem for you to get it done.
+To customize your site according to your needs, simply edit the `config.toml` file in the site's root directory by adjusting the settings. 
+All parameters that need to be configured are commented out or disabled.
 
 Also, you can read this [write-up](https://www.kiroule.com/article/manage-environment-specific-settings-for-hugo-based-website/) on how to manage
 environment-specific settings for a Hugo-based website.
 
 ## Features
 
-
 ### Algolia Search
-Bilberry includes a convenient search functionality for your site.
-You can test it on the demo site.
-Just click on the navigation bar at the top right of the header.
-
+Bilberry theme includes built-in content search via Algolia SAAS. 
+You can see this in action on the [demo site]((https://lednerb.github.io/bilberry-hugo-theme)) by clicking on "burger" and typing something in the search text box, such as "support."
 
 #### Initial Setup
-If you do not want to use the search functionality set `algolia_search = false` in your `config.toml` file.
+To enable and configure search functionality for your site, follow these steps:
 
-If you want to include the algolia search for your site, you have to follow these steps:
-
-1. Register for a free Algolia Search account at https://www.algolia.com/
+1. Register for a free Algolia Search account at https://www.algolia.com/.
 2. Add a `New Application`. You can choose the `COMMUNITY` plan.
-3. Switch over to `Indices` and create a new one.
+3. Switch over to `Indices` and create a new index.
 4. Switch over to `API Keys` and copy your `Application ID`, `Search-Only API Key` and chosen `Index name` to your `config.toml` file.
-5. Ensure that `algolia_search = true` is set.
+5. Make sure that the `algolia_search` parameter is set to  `true`.
 6. Follow instructions in the section [Update Algolia Index](#update-algolia-index) and proceed to the next step.
 7. To complete the initial setup, go to the tab `Configuration` of your newly created indices, select the `Facets` in the section `FILTERING AND FACETING` and add the `language` attribute with the `filter only` modifier in the `Attributes for faceting` option. If, after adding the `language` attribute, the `Unknown attribute` error is shown, ignore it.
-
 
 #### Update Algolia Index
 You have to repeat this step every time you change a post or publish a new one to update the search index.
 
-Execute the `hugo` command in the site's root directory to publish your changes.
+Execute the `hugo` command in the site's root directory to generate the index file.
 
-* Manual Upload
-    * Head over to the `public/index.json` file and copy everything in there.
-    * Login to your Algolia account, open your index and click at `Add records manually`.
-    * Paste the copied text from the `index.json` file.
-    * Verify in the `Browse` tab of your index that the index records were uploaded correctly.
-    * If case you have a multi-language setup, make sure that you repeat the steps above for all `public/{LANG}/index.json` files
+##### Manual Upload
+1. Head over to the `public/index.json` file and copy everything in there.
+2. Login to your Algolia account, open your index and click at `Add records manually`.
+3. Paste the copied text from the `index.json` file.
+4. Verify in the `Browse` tab of your index that the index records were uploaded correctly.
+5. In case you have a multi-language setup, make sure that you repeat the steps above for all `public/{LANG}/index.json` files.
 
-* Automated Upload
-  
-    * Switch to the `algolia` directory and install required dependencies by executing the following command:
-    ```shell script
-    cd algolia
-    npm install
-    ```
-    * Run the `data-upload.js` from from the `algolia` directory as follows:
-    ```shell script
-    npm run data-upload -- -f ../public/index.json -a <algolia-app-id> -k <algolia-admin-api-key> -n <algolia-index-name>
-    ```
-    * The `algolia-admin-api-key` argument, namely your Algolia account's `Admin API Key`, is used to create, update, and delete indices, and it should be kept secret.
-    * Add the `-c` or `--clear-index` option if you want to clear the corresponding Algolia index before starting a new upload.   
-    * Login to your Algolia account and verify in the `Browse` tab of your index that the index records were uploaded correctly.
-    * In case you have a multi-language setup, make sure that you repeat the steps above for all `public/{LANG}/index.json` files.
+##### Automated Upload
+1. Switch to the `algolia` directory and install required dependencies by executing the following command:
+  ```shell script
+  cd algolia
+  npm install
+  ```
+2. Run the `data-upload.js` from from the `algolia` directory as follows:
+  ```shell script
+  npm run data-upload -- -f ../public/index.json -a <algolia-app-id> -k <algolia-admin-api-key> -n <algolia-index-name>
+  ```
+3. The `algolia-admin-api-key` argument, namely your Algolia account's `Admin API Key`, is used to create, update, and delete indices, and it should be kept secret.
+4. Add the `-c` or `--clear-index` option if you want to clear the corresponding Algolia index before starting a new upload.   
+5. Login to your Algolia account and verify in the `Browse` tab of your index that the index records were uploaded correctly.
+6. In case you have a multi-language setup, make sure that you repeat the steps above for all `public/{LANG}/index.json` files.
 
 Also, you can read this [write-up](https://www.kiroule.com/article/automate-data-upload-to-algolia-index-revisited/) on how to automate
-data upload to Algolia Index if you host your Bilberry theme-based website on Netlify.
+data upload to Algolia index if you host your Bilberry theme-based website on Netlify.
 
 ### Keyboard Shortcuts
 If you want to start a search on your blog simply type `s` and the search menu will open.
