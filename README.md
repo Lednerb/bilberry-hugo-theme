@@ -112,8 +112,8 @@ environment-specific settings for a Hugo-based website.
 ## Features
 
 ### Algolia Search
-Bilberry theme includes built-in content search via Algolia SAAS. 
-You can see this in action on the [demo site]((https://lednerb.github.io/bilberry-hugo-theme)) by clicking on "burger" and typing something in the search text box, such as "support."
+Bilberry theme includes built-in content search via [Algolia SAAS](https://www.algolia.com/). 
+You can see this in action on the [demo site]((https://lednerb.github.io/bilberry-hugo-theme)) by clicking on "burger" and typing something in the search text field, such as "support."
 
 #### Initial Setup
 To enable and configure search functionality for your site, follow these steps:
@@ -157,10 +157,8 @@ Also, you can read this [write-up](https://www.kiroule.com/article/automate-data
 data upload to Algolia index if you host your Bilberry theme-based website on Netlify.
 
 ### Keyboard Shortcuts
-If you want to start a search on your blog simply type `s` and the search menu will open.
-
-To close it again you can enter `esc` at any time.
-
+Type `s` to open the navigation bar and set focus to the search input field. 
+To remove focus, press the `Esc` key.
 
 ### Post Types
 Bilberry comes with a bunch of predefined post types.
