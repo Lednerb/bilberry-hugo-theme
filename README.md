@@ -175,23 +175,17 @@ The `page` content can be a static page, such as the "About"page, or a link to a
 
 The `link` post type always links to an external site and can be used with or without a background image.
 
-### Reposting an Article / Duplicated Content [SEO]
-If you want to repost an article from another website or have duplicated content on your own site, for SEO reasons it's a good practice to link to the original / `canonical` URL.
-
-If you want to mark one of your content sites as duplicated content you can simply use the following front matter configuration option:
-
+### Repost Article/Duplicated Content
+If you need to repost an article from another website, or if you have duplicate content on your own site for SEO reasons, you should link this content to the original URL. 
+To do so, define the `original_url` front matter variable in your post, for example:
 ```
 original_url: "https://example.org/path/to/content"
 ```
 
-Further Information:
-- [Wikipedia](https://en.wikipedia.org/wiki/Canonical_link_element)
-
-### Overwrite the calculated reading time
-If you want to overwrite the automatically calculated reading time for a post you can use the following front matter confguration option:
-
+### Calculated Reading Time
+To override the automatically calculated read time for a post, you can use the following front matter variable:
 ```
-readingTime: 7 # integer for the amount of minutes
+readingTime: 7 # integer value in  minutes
 ```
 
 ### Summary Breaks
