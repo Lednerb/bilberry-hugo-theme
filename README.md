@@ -28,7 +28,6 @@ Here's a live [demo site](https://lednerb.github.io/bilberry-hugo-theme) to see 
       - [Automated Upload](#automated-upload)
   - [Keyboard Shortcuts](#keyboard-shortcuts)
   - [Post Types](#post-types)
-  - [Pages and External Links](#pages-and-external-links)
   - [Reposting an Article / Duplicated Content [SEO]](#reposting-an-article--duplicated-content-seo)
   - [Overwrite the calculated reading time](#overwrite-the-calculated-reading-time)
   - [Summary Breaks](#summary-breaks)
@@ -113,7 +112,7 @@ environment-specific settings for a Hugo-based website.
 
 ### Algolia Search
 Bilberry theme includes built-in content search via [Algolia SAAS](https://www.algolia.com/). 
-You can see this in action on the [demo site]((https://lednerb.github.io/bilberry-hugo-theme)) by clicking on "burger" and typing something in the search text field, such as "support."
+You can see this in action on the [demo site]((https://lednerb.github.io/bilberry-hugo-theme)) by clicking on "hamburger" and typing something in the search text field, such as "support."
 
 #### Initial Setup
 To enable and configure search functionality for your site, follow these steps:
@@ -161,27 +160,20 @@ Type `s` to open the navigation bar and set focus to the search input field.
 To remove focus, press the `Esc` key.
 
 ### Post Types
-Bilberry comes with a bunch of predefined post types.
-Available post types are `article`, `audio`, `code`, `gallery`, `link`, `page`, `quote`, `status` and `video`.
+Bilberry theme comes with a set of predefined post types, namely `article`, `audio`, `code`, `gallery`, `link`, `page`, `quote`, `status`, and `video` where the `article` type is the default.
 
-To use a post type, just create new content via the hugo command.<br>
-For example:
+To create content of a specific type, use the `hugo new` command. For example:
 ```
 hugo new quote/edward-snowden-about-privacy.md
 ```
 
-`article` is the default post type if you want to use another type of content as the predefined.
+The `page` post type is the only one that can be used in the top navigation bar, which you can open by clicking on the "hamburger".
+Pages can be ordered using the `weight` front matter variable, which should be set to a non-zero value. 
+A page with a lower `weight` will be displayed first.
 
-Just discover the entries from the `exampleSite` folder to get an overview of the great possibilities Bilberry provides ;-)
+The `page` content can be a static page, such as the "About"page, or a link to another page, internal or external.
 
-
-### Pages and External Links
-The post type `page` is the only one that appears in the top navigation (when you click on the navigation button on the top right).
-Pages can be ordered using the `weight` front matter variable, which should be set to a non-zero value. A page with a lower `weight` will be displayed first.
-
-A `page` can be a static page (about me or impress site) or a link to another page as it is used in the demo to link to the Bilberry GitHub repository.
-
-The post type `link` always links to an external site and can be used with or without a background image.
+The `link` post type always links to an external site and can be used with or without a background image.
 
 ### Reposting an Article / Duplicated Content [SEO]
 If you want to repost an article from another website or have duplicated content on your own site, for SEO reasons it's a good practice to link to the original / `canonical` URL.
