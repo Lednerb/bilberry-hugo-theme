@@ -21,13 +21,14 @@ Here's a live [demo site](https://lednerb.github.io/bilberry-hugo-theme) to see 
 - [Quick Start](#quick-start)
 - [Configuration](#configuration)
 - [Features](#features)
+  - [Post Types](#post-types) 
+  - [Top Navigation Bar](#top-navigation-bar)
   - [Algolia Search](#algolia-search)
     - [Initial Setup](#initial-setup)
     - [Update Algolia Index](#update-algolia-index)
       - [Manual Upload](#manual-upload)
       - [Automated Upload](#automated-upload)
   - [Keyboard Shortcuts](#keyboard-shortcuts)
-  - [Post Types](#post-types)
   - [Reposting an Article / Duplicated Content [SEO]](#reposting-an-article--duplicated-content-seo)
   - [Overwrite the calculated reading time](#overwrite-the-calculated-reading-time)
   - [Summary Splits](#summary-splits)
@@ -38,14 +39,13 @@ Here's a live [demo site](https://lednerb.github.io/bilberry-hugo-theme) to see 
   - [Table of Contents(TOC)](#table-of-contentstoc)
   - [Series Taxonomy](#series-taxonomy)
   - [Comments](#comments)
-    - [Commento comments](#commento-comments)
-    - [Disqus comments](#disqus-comments)
-    - [Giscus comments](#giscus-comments)
-    - [Utterances comments](#utterances-comments)
+    - [Commento](#commento)
+    - [Disqus](#disqus)
+    - [Giscus](#giscus)
+    - [Utterances](#utterances)
   - [Responsive Design](#responsive-design)
   - [Automatic Image Resizing](#automatic-image-resizing)
   - [Image Modal Zoom](#image-modal-zoom)
-  - [Permanent Top Navigation](#permanent-top-navigation)
   - [MathJAX Markup](#mathjax-markup)
   - [Disabled Javascript Support](#disabled-javascript-support)
   - [Video](#video)
@@ -114,6 +114,29 @@ environment-specific settings for a Hugo-based website.
 
 ## Features
 
+### Post Types
+Bilberry theme comes with a set of predefined post types, namely `article`, `audio`, `code`, `gallery`, `link`, `page`, `quote`, `status`, and `video` where the `article` type is the default.
+
+To create content of a specific type, use the `hugo new` command. For example:
+```
+hugo new quote/edward-snowden-about-privacy.md
+```
+
+The `page` post type is the only one that can be used in the top navigation bar.
+Pages can be ordered using the `weight` front matter variable, which should be set to a non-zero value.
+A page with a lower `weight` will be displayed first.
+
+The `page` content can be a static page, such as the "About"page, or a link to another page, internal or external.
+
+The `link` post type always links to an external site and can be used with or without a background image.
+
+
+### Top Navigation Bar
+If you want to permanently display the top navigation bar with the search text field and `page` items, set the `permanentTopNav` parameter to `true`"` in the `config.toml` file.
+
+Note that the top navigation bar is minimized by default on mobile devices.
+
+
 ### Algolia Search
 Bilberry theme includes built-in content search via [Algolia SAAS](https://www.algolia.com/). 
 You can see this in action on the [demo site]((https://lednerb.github.io/bilberry-hugo-theme)) by clicking on "hamburger" and typing something in the search text field, such as "support."
@@ -121,7 +144,7 @@ You can see this in action on the [demo site]((https://lednerb.github.io/bilberr
 #### Initial Setup
 To enable and configure search functionality for your site, follow these steps:
 
-1. Register for a free Algolia Search account at https://www.algolia.com/.
+1. Register for a free Algolia Search account on https://www.algolia.com/.
 2. Add a `New Application`. You can choose the `COMMUNITY` plan.
 3. Switch over to `Indices` and create a new index.
 4. Switch over to `API Keys` and copy your `Application ID`, `Search-Only API Key` and chosen `Index name` to your `config.toml` file.
@@ -163,23 +186,6 @@ data upload to Algolia index if you host your Bilberry theme-based website on Ne
 ### Keyboard Shortcuts
 Type `s` to open the navigation bar and set focus to the search input field. 
 To remove focus, press the `Esc` key.
-
-
-### Post Types
-Bilberry theme comes with a set of predefined post types, namely `article`, `audio`, `code`, `gallery`, `link`, `page`, `quote`, `status`, and `video` where the `article` type is the default.
-
-To create content of a specific type, use the `hugo new` command. For example:
-```
-hugo new quote/edward-snowden-about-privacy.md
-```
-
-The `page` post type is the only one that can be used in the top navigation bar.
-Pages can be ordered using the `weight` front matter variable, which should be set to a non-zero value. 
-A page with a lower `weight` will be displayed first.
-
-The `page` content can be a static page, such as the "About"page, or a link to another page, internal or external.
-
-The `link` post type always links to an external site and can be used with or without a background image.
 
 
 ### Reposted Article/Duplicated Content
@@ -230,7 +236,7 @@ Also, if you want to display a TOC at a specific point in your article, set the 
 ```
 
 
-### Series Taxonomy ###
+### Series Taxonomy 
 In case you want to group some articles as a series, you have to add the `series` front matter variable to each article and set its value to the name of the series, for example, `series: "My New Super Series"`.
 
 The page at `<site-base-url>/series/` will list all the series. To list all articles for a particular series within markdown, you can use the `series` shortcode with the series name in question, for instance: 
@@ -240,51 +246,44 @@ The page at `<site-base-url>/series/` will list all the series. To list all arti
 
 
 ### Comments
-Currently [Commento](https://commento.io/) and [Disqus](https://disqus.com) are supported.
+To allow readers to comment under your articles, you can use either [Commento](https://commento.io/), [Disqus](https://disqus.com/), [Giscus](https://giscus.app/), or [Utterances](https://utteranc.es/).
 
-#### Commento comments
-If you want to enable the functionality for your users to write comments below your articles, you can either register account at [commento.io](https://commento.io/) or [host Commento yourself](https://docs.commento.io/getting-started/self-hosting/).
+#### Commento
+Follow this [guide](https://docs.commento.io/installation/cloud-service/) if you want to use Commento Cloud Service which is not free of cost.
 
-To activate Commento in your blog you have to add the URL for the JS-snippet to `commentoJsURL` in your `config.toml`.
+In case you want to use Self-hosting Commento, follow these [instructions](https://docs.commento.io/installation/self-hosting/).
 
-**Example:**
-
-Snippet displayed in Commento:
-```html
-<script defer src="http://localhost:8080/js/commento.js"></script>
-<div id="commento"></div>
-```
-
-Your `config.toml`
+Then uncomment the `commentoJsURL` parameter in the `config.toml` file:
 ```toml
 #[...]
 [params]
-
     #[...]
 
     # Commento
     commentoJsURL = "http://localhost:8080/js/commento.js"
 ```
 
-
-#### Disqus comments
-If you want to enable the functionality for your users to write comments below your articles, you can register for a free [Disqus](https://disqus.com) account.
-
-Just create a new site and copy your site's short name to the `config.toml` file at `disqusShortname`.
-
-You can manage and moderate the comments either on your website or at the disqus management panel.
-
-#### Giscus comments
-
-To allow readers to leave comments under your articles, you need to follow instructions on the [Giscus](https://giscus.app/) website. 
-Once you complete the prerequisites for your GitHub repository and select a discussion category, values for `giscusRepositoryId` and `giscusCategoryId` will be automatically generated. 
-Then, in the `config.toml` file, set the `giscus` property to `true` and the properties mentioned above, respectively. 
-For example:
-
+#### Disqus
+To allow readers to leave comments under your articles, sign up for free on [Disqus](https://disqus.com) website. 
+Then create a new site and set the `disqusShortname` parameter to your site's short name in the `config.toml` file:
 ```toml
 #[...]
 [params]
+    #[...]
 
+    # Disqus
+    disqusShortname = "lednerb"
+```
+
+You can manage and moderate the comments either on your website or using the Disqus management panel.
+
+#### Giscus
+Follow instructions on [Giscus](https://giscus.app/) website. 
+Once you complete the prerequisites for your GitHub repository and select a discussion category, values for `giscusRepositoryId` and `giscusCategoryId` will be automatically generated. 
+Then, in the `config.toml` file, set the `giscus` parameter to `true` and the properties mentioned above, respectively: 
+```toml
+#[...]
+[params]
     #[...]
 
     # Giscus
@@ -302,68 +301,47 @@ For example:
     giscusCrossOrigin   = "anonymous"
 ```
 
-#### Utterances comments
-If you want to enable the functionality for your users to write comments below your articles. You need to follow instructions in [Utterances](https://utteranc.es/) website.
-
-To activate Utterances in your blog you have to customize the JS-snippet below or by adding your configuration to `config.toml`.
-
-**Example:**
-
-Snippet displayed in Utterances:
-```html
-<script src="https://utteranc.es/client.js"
-  repo="Lednerb/bilberry-hugo-theme"
-  issue-term="pathname"
-  label="Comment"
-  theme="github-light"
-  crossorigin="anonymous"
-  async>
-</script>
-<div id="utterances"></div>
-```
-
-Your `config.toml`
+#### Utterances
+Follow instructions on [Utterances](https://utteranc.es/) website. 
+Once you complete the prerequisites for your GitHub repository, set the `utterances` parameter to `true` in the `config.toml` file:
 ```toml
 #[...]
 [params]
-
     #[...]
 
     # Utterances
-    utterances    = true
-    utterancesJsUrl     = "https://utteranc.es/client.js"
-    utterancesRepository    = "Lednerb/bilberry-hugo-theme"
+    utterances            = true
+    utterancesJsUrl       = "https://utteranc.es/client.js"
+    utterancesRepository  = "Lednerb/bilberry-hugo-theme"
     utterancesIssueTerm   = "pathname"
-    utterancesLabel   = "Comment"
-    utterancesTheme = "github-light"
+    utterancesLabel       = "Comment"
+    utterancesTheme       = "github-light"
     utterancesCrossOrigin = "anonymous"
 ```
 
 ### Responsive Design
-Bilberry is optimized for desktop and mobile devices (tablets and smartphones).
+Bilberry theme is optimized to look good on all devices, namely desktops, tablets and smartphones.
 
 ### Automatic Image Resizing
-The bilberry theme handles image crops and resizes automatically by default.
-However, if you want to disable this functionality in general, you can set `resizeImages: false` in your `config.toml` file.
+Bilberry theme includes built-in automatic cropping and image resizing, activated by default.
+However, if you want to disable it, set the `resizeImages` parameter to `false` in the `config.toml` file.
+Also, this feature can be disabled at the post level by setting the `resizeImages` front matter varible to `false`. 
 
-If you want to disable this functionality just on some posts, you can set `resizeImages: false` in your post's frontmatter settings.
 
 ### Image Modal Zoom
-When including an image that has larger dimensions than the content area, the image gets clickable and a bigger version will open in a lightbox.
+When you include an image that is larger than the content area, the image becomes interactive and a larger version can be opened in a lightbox.
 
-### Permanent Top Navigation
-If you want to permanently display the top navigation with the algolia search bar and the `page` entries, you can set the `permanentTopNav` option to `true` in your site's config file.
-
-Note that on mobile devices the navigation will still be collapsed because otherwise, the navigation menu hides the essential parts of your site.
 
 ### MathJAX Markup
 If you want to add [MathJAX](https://www.mathjax.org) markup support, set parameter `enable_mathjax` option to `true` in your site's config file.
+
 
 ### Disabled Javascript Support
 Although this theme has a lot of features that only work with enabled javascript, it also fully supports disabled javascript.
 Disabling javascript will not break any styles or essential functionality on the site.
 
 Just head over to the demo page, disable javascript in your browser and check the results!
+
 
 ### Video
 The following video hosting providers are supported: `YouTube`, `Vimeo`, and `Prezi`. Videos in the `MP4` format, either stored externally or within the site's `static` folder, are also supported. There are two options to display video embeds. 
