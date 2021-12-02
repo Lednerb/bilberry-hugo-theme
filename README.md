@@ -52,7 +52,7 @@ Here's a live [demo site](https://lednerb.github.io/bilberry-hugo-theme) to see 
   - [Audio](#audio)
   - [Raw HTML](#raw-html)
 - [Favicons](#favicons)
-- [Custom 404 site](#custom-404-site)
+- [Custom 404 Page](#custom-404-page)
 - [Custom Post Types](#custom-post-types)
 - [External Images](#external-images)
 - [Customizing Individual Posts](#customizing-individual-posts)
@@ -333,20 +333,20 @@ When you include an image that is larger than the content area, the image become
 
 
 ### MathJAX Markup
-If you want to add [MathJAX](https://www.mathjax.org) markup support, set parameter `enable_mathjax` option to `true` in your site's config file.
+To enable the [MathJAX](https://www.mathjax.org) markup support, set the `enable_mathjax` parameter to `true` in the `config.toml` file.
 
 
 ### Disabled Javascript Support
-Although this theme has a lot of features that only work with enabled javascript, it also fully supports disabled javascript.
-Disabling javascript will not break any styles or essential functionality on the site.
+Although this theme has a lot of features that only work with enabled JavaScript, it also fully supports disabled JavaScript. 
+Disabled Javascript will not break any styling or essential functionalities of your website.
 
-Just head over to the demo page, disable javascript in your browser and check the results!
+You can test the behavior of the [demo site]((https://lednerb.github.io/bilberry-hugo-theme)) by disabling JavaScript in your browser.
 
 
 ### Video
 The following video hosting providers are supported: `YouTube`, `Vimeo`, and `Prezi`. Videos in the `MP4` format, either stored externally or within the site's `static` folder, are also supported. There are two options to display video embeds. 
 
-The first one is to use a post of the `video` type.  Use the following command to create your video post:
+The first option is to use a post of the `video` type. Use the following command to create your video post:
 ```bash
 hugo new video/<post-name>.md
 ```
@@ -360,7 +360,7 @@ mp4video: "<video-file-url>"             # location of video file (only mp4)
 mp4videoImage: "<image-video-file-url>"  # location of poster image 
 ```
 
-For example, if an `MP4` video and its image are stored in the `static` folder, you can set variables as follows:
+For example, if an `MP4` video and its image are stored in the `static` folder, you can set corresponding front matter variables as follows:
 ```markdown
 mp4video: "/<video-file-name>.mp4"
 mp4videoImage: "/<image-video-file-name>.png"
@@ -386,9 +386,11 @@ The second option is to use the `video` shortcode within markdown content in a p
 ```
 
 ### Audio
-The following audio streaming providers are supported: [Mixcloud](https://www.mixcloud.com/), [SoundCloud](https://soundcloud.com/), [Spotify](https://www.spotify.com/), and [TuneIn](https://tunein.com/). Audio files in the `Ogg`, `MP3`, or `WAV` formats, either stored externally or within the site's `static` folder, are also supported. There are two options to display audio embeds.
+The following audio streaming providers are supported: [Mixcloud](https://www.mixcloud.com/), [SoundCloud](https://soundcloud.com/), [Spotify](https://www.spotify.com/), and [TuneIn](https://tunein.com/). 
+Audio files in the `Ogg`, `MP3`, or `WAV` formats, either stored externally or within the site's `static` folder, are also supported. 
+There are two options to display audio embeds.
 
-The first one is to use a post of the `audio` type. Use the following command to create your audio post:
+The first option is to use a post of the `audio` type. Use the following command to create your audio post:
 ```bash
 hugo new audio/<post-name>.md
 ```
@@ -402,7 +404,7 @@ mixcloud: "<mixcloud-track-id>"      # https://www.mixcloud.com/scienceforthepeo
 audiofile: "<audio-file-url>"        # location of audio file (only ogg, mp3, or wav formats)
 ```
 
-For example, if an MP3 audio file is stored in the `static` folder, you can set the `audiofile` variable as follows:
+For example, if an `MP3` audio file is stored in the `static` folder, you can set the `audiofile` front matter variable as follows:
 ```markdown
 audiofile: "/<audio-file-name>.mp3"
 ```
@@ -429,7 +431,7 @@ The second option is to use the `audio` shortcode within markdown content in a p
 ```
 
 ### Raw HTML
-If you want to include raw HTML in your markdown content, enable the `unsafe` setting in your `config.toml` file by changing it to `true`:
+If you want to include raw HTML in your markdown content, set the `unsafe` setting in the `config.toml` file to `true`:
 ```toml
 [markup.goldmark]
   [markup.goldmark.renderer]
@@ -437,19 +439,17 @@ If you want to include raw HTML in your markdown content, enable the `unsafe` se
 ```
 
 ## Favicons
-Using favicons nowadays is not a trivial thing.
-There are many different sizes and file types for the various mobile and desktop browsers and for the shortcuts for Android and iOS devices.
+To add favicons, proceed with the following steps:
+1. Visit https://realfavicongenerator.net/ website, and generate favicons according to your needs.
+2. Copy and paste the generated files into your site's `/static` folder.
+3. Edit the `/layouts/partials/favicon.html` file, then copy and paste the HTML code from the generated instruction.
 
-This theme makes it easy for you to include all needed files:
+**Important:** You have to follow the [Quick Start](#Quick-Start) instructions or manually copy the `/layouts/partials/favicon.html` file from the theme to your site's `/layouts` directory.
 
-1. Visit https://realfavicongenerator.net/ and generate your favicon according to your needs
-2. Copy & Paste the generated files into your `/static` folder
-3. Edit the `/layouts/partials/favicon.html` file and copy & paste the HTML code from the generated instruction
+Also, check out this [tutorial](https://www.kiroule.com/article/add-favicon-to-hugo-based-website/) on how to add favicons to Bilberry theme-based website.
 
-**Important:**
-You have to follow the [Quick Start](#Quick-Start) guideline or manually copy the `/layouts/partials/favicon.html` file from the theme to your site's `/layouts` directory. Otherwise the file is missing.
 
-## Custom 404 site
+## Custom 404 Page
 If you want to customize your 404 site, copy the `themes/bilberry-hugo-theme/layouts/404.html` to your local `layouts/404.html` and edit the file.
 
 You can quickly change the message and / or the icon class for example.
