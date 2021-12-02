@@ -30,7 +30,11 @@ Here's a live [demo site](https://lednerb.github.io/bilberry-hugo-theme) to see 
   - [Post Types](#post-types)
   - [Reposting an Article / Duplicated Content [SEO]](#reposting-an-article--duplicated-content-seo)
   - [Overwrite the calculated reading time](#overwrite-the-calculated-reading-time)
-  - [Summary Breaks](#summary-breaks)
+  - [Summary Splits](#summary-splits)
+    - [Automatic Summary Split](#automatic-summary-split)
+    - [Manual Summary Split](#manual-summary-split)
+    - [Front Matter Summary Split](#front-matter-summary-split)
+    - [No Summary Split](#no-summary-split)
   - [Table of Contents(TOC)](#table-of-contentstoc)
   - [Series Taxonomy](#series-taxonomy)
   - [Comments](#comments)
@@ -155,9 +159,11 @@ Execute the `hugo` command in the site's root directory to generate the index fi
 Also, you can read this [write-up](https://www.kiroule.com/article/automate-data-upload-to-algolia-index-revisited/) on how to automate
 data upload to Algolia index if you host your Bilberry theme-based website on Netlify.
 
+
 ### Keyboard Shortcuts
 Type `s` to open the navigation bar and set focus to the search input field. 
 To remove focus, press the `Esc` key.
+
 
 ### Post Types
 Bilberry theme comes with a set of predefined post types, namely `article`, `audio`, `code`, `gallery`, `link`, `page`, `quote`, `status`, and `video` where the `article` type is the default.
@@ -167,7 +173,7 @@ To create content of a specific type, use the `hugo new` command. For example:
 hugo new quote/edward-snowden-about-privacy.md
 ```
 
-The `page` post type is the only one that can be used in the top navigation bar, which you can open by clicking on the "hamburger".
+The `page` post type is the only one that can be used in the top navigation bar.
 Pages can be ordered using the `weight` front matter variable, which should be set to a non-zero value. 
 A page with a lower `weight` will be displayed first.
 
@@ -175,44 +181,54 @@ The `page` content can be a static page, such as the "About"page, or a link to a
 
 The `link` post type always links to an external site and can be used with or without a background image.
 
-### Repost Article/Duplicated Content
+
+### Reposted Article/Duplicated Content
 If you need to repost an article from another website, or if you have duplicate content on your own site for SEO reasons, you should link this content to the original URL. 
 To do so, define the `original_url` front matter variable in your post, for example:
 ```
 original_url: "https://example.org/path/to/content"
 ```
 
+
 ### Calculated Reading Time
-To override the automatically calculated read time for a post, you can use the following front matter variable:
+To override the automatically calculated reading time for a post, you can use the `readingTime` front matter variable, for example:
 ```
 readingTime: 7 # integer value in  minutes
 ```
 
-### Summary Breaks
-You can influence the summary output on the listing pages (such as the home page or the category or tag pages) in different ways:
 
-- You don't set a manual summary break. <br>
-Hugo will care for you and generates a summary as well as a _Continue reading_ link.
+### Summary Splits
+There are three options for how Hugo can generate summaries of content which will be used as a short version in summary views, such as a home page and tags or categories pages.
 
-- You set a manual break via `<!--more-->` <br>
-Just write your content and if you want to break use the code snippet to tell Hugo to break here.
+#### Automatic Summary Split
+Using first 70 words of your content, Hugo automatically generates the summary followed by the _Continue reading_ link.  
 
-- You want to display the full article without a _Continue reading_ link <br>
-In this case, set the option `noSummary: true` in the header area (Front Matter) of your `.md` file.
+#### Manual Summary Split
+Add the `<!--more-->` summary divider to your content. 
+Any content before the divider will be used by Hugo as a summary of that content. 
+The generated summary will also be followed by the _Continue reading_ link.
 
-- You can define a summary that differs from the first content lines <br>
-Use the `summary: "Here goes my summary"` Front Matter variable. <br>
-In this case no _Continue reading_ link will be displayed.
+#### Front Matter Summary Split
+To define a summary that differs from the text that starts your article, use the `summary` front matter variable, for example, `summary: "Here goes my summary"`. 
+This summary will also be followed by the _Continue reading_ link.
+
+#### No Summary Split
+If you want to display the entire article without the _Continue Reading_ link, set the `noSummary` variable to `true` in your content file.
+
 
 ### Table of Contents(TOC)
-To enable the automatic creation of a table of contents(TOC), set the `toc` front matter variable to true in your article. If the article's markdown contains appropriate headings, Hugo will generate a table of content at the beginning of the article. 
+To enable the automatic creation of a table of contents(TOC), set the `toc` front matter variable to `true` in your article. 
+If the article's markdown contains appropriate headings, Hugo will generate a table of content at the beginning of the article. 
 
-By default, a TOC is generated if the content's word count is greater than **400**. The `tocMinWordCount` parameter defines this value in the `config.toml` configuration file. 
+By default, a TOC is generated if the content's word count is greater than **400**. 
+The `tocMinWordCount` parameter defines this value in the `config.toml` configuration file. 
 
-The headings that are taken into account for a TOC are from _H2_ (##) to _H5_ (#####) inclusive. Also, if you want to display a TOC at a specific point in your article, set the `toc` front matter variable to false, and use the `toc` shortcode like this:
+The headings that are taken into account for a TOC are from _H2_ (##) to _H5_ (#####) inclusive. 
+Also, if you want to display a TOC at a specific point in your article, set the `toc` front matter variable to false, and use the `toc` shortcode like this:
 ```markdown
 {{< toc >}}
 ```
+
 
 ### Series Taxonomy ###
 In case you want to group some articles as a series, you have to add the `series` front matter variable to each article and set its value to the name of the series, for example, `series: "My New Super Series"`.
@@ -221,6 +237,7 @@ The page at `<site-base-url>/series/` will list all the series. To list all arti
 ```markdown
 {{< series "My New Super Series" >}}
 ```
+
 
 ### Comments
 Currently [Commento](https://commento.io/) and [Disqus](https://disqus.com) are supported.
