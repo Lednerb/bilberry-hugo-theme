@@ -42,7 +42,7 @@ disqusShortname = ""
   algolia_currentLanguageOnly = true
 
   # Enable / Disable comments on the articles via commento
-  commentoJsURL = "https://commento.lednerb.de/js/commento.js"
+  # commentoJsURL = "https://commento.lednerb.de/js/commento.js"
 
   # Enable / Disable Giscus comments
   giscus             = false
@@ -61,7 +61,7 @@ disqusShortname = ""
   # Enable / Disable Utterances comments
   utterances            = false
   utterancesJsUrl       = "https://utteranc.es/client.js"
-  utterancesRepository  = "Lednerb/bilberry-hugo-theme"
+  utterancesRepository  = "[ENTER REPO HERE]"
   utterancesIssueTerm   = "pathname"
   utterancesLabel       = "Comment"
   utterancesTheme       = "github-light"
