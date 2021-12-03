@@ -126,7 +126,7 @@ The `page` post type is the only one that can be used in the top navigation bar.
 Pages can be ordered using the `weight` front matter variable, which should be set to a non-zero value.
 A page with a lower `weight` will be displayed first.
 
-The `page` content can be a static page, such as the "About"page, or a link to another page, internal or external.
+The `page` content can be a static page, such as an **About** page, or a link to another page, internal or external.
 
 The `link` post type always links to an external site and can be used with or without a background image.
 
@@ -344,7 +344,9 @@ You can test the behavior of the [demo site]((https://lednerb.github.io/bilberry
 
 
 ### Video
-The following video hosting providers are supported: `YouTube`, `Vimeo`, and `Prezi`. Videos in the `MP4` format, either stored externally or within the site's `static` folder, are also supported. There are two options to display video embeds. 
+The following video hosting providers are supported: [YouTube](https://www.youtube.com/), [Vimeo](https://vimeo.com/), and [Prezi](https://prezi.com/).
+Videos in the `MP4` format, either stored externally or within the site's `static` folder, are also supported. 
+There are two options to display video embeds. 
 
 The first option is to use a post of the `video` type. Use the following command to create your video post:
 ```bash
