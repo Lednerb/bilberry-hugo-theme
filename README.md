@@ -58,7 +58,7 @@ Here's a live [demo site](https://lednerb.github.io/bilberry-hugo-theme) to see 
 - [Customizing Individual Posts](#customizing-individual-posts)
 - [Custom colors and fonts](#custom-colors-and-fonts)
 - [CSS and JS modules](#css-and-js-modules)
-  - [Adding a Cookie disclaimer](#adding-a-cookie-disclaimer)
+  - [Add Cookie Disclaimer](#add-cookie-disclaimer)
 - [Translations](#translations)
 - [Credits](#credits)
 - [Support and Discussions](#support-and-discussions)
@@ -487,43 +487,44 @@ gallery: [
 ]
 ```
 
-## Customizing Individual Posts
+## Individual Posts Customization
+You can customize your posts as follows:
 
-Posts can be customized via a variety of options.
+1. To exclude posts from your blog's index but still show up in categories, add `excludeFromIndex: true` to your post's front matter.
 
-To exclude posts from appearing on your blog index, while still being displayed in categories, add `excludeFromIndex: true` to the post configuration.
+2. To pin one or more posts to the top of the index page, uncomment the `pinnedPost` parameter in the `config.toml` file. 
+Then set its value to the post's relative URL, for example, `/article/installing-bilberry-theme/`. 
+When pinning multiple posts, the relative URL values should be separated by a comma. 
+The `pinOnlyToFirstPage` parameter allows you to choose whether to display pinned posts on the index page only or on all pages.
 
-If you'd like to pin one or several posts to the top of the index page, uncomment the `pinnedPost` param in `config.toml`. Then set its value to the post's relative URL, for example, `/article/installing-bilberry-theme/`. When pinning multiple posts, the relative URL values should be separated by a comma. The `pinOnlyToFirstPage` parameter allows you to choose whether to display pinned posts on the index page only or on all pages.
+3. A custom icon can be declared per post, by specifying a font-awesome icon in the post's front matter, such as `icon: fa-thumb-tack` for a pinned post.
 
-A custom icon can be declared per post, by specifying a font-awesome icon in the post configuration, such as `icon: fa-thumb-tack` for a pinned post.
-
---------------
-
-If you want to change the default post types (e.g., don't use the pencil icon on the `article` or default type, but another one) copy the original file to your local `layouts/partials/content-type/` directory and edit it there. <br>
-Otherwise, your changes would be overwritten when you update to the latest theme version.
+4. If you want to change the default post types(e.g., replace the pencil icon for the `article` post type another one) copy the original content type file to your site's `layouts/partials/content-type/` directory and edit it there. 
+Otherwise, your changes will be overwritten when you update the theme to the latest version.
 
 
 ## Custom colors and fonts
-Bilberry uses SCSS for styling and NPM with [Laravel Mix](https://laravel-mix.com/) for dependency management.
+Bilberry uses SCSS for styling and NPM with [Laravel Mix](https://laravel-mix.com/) for the dependency management.
 
-If you want to change any colors or fonts, you have to follow these steps:
+To change any colors or fonts, you have to follow these steps:
 
-1. Install this theme to your `themes` directory
-2. `cd themes/bilberry-hugo-theme`
-3. `npm install`
-4. Modify the `assets/sass/_variables.scss` file to customize your colors. <br> If you want to change the header's color just edit the `$base-color` variable
-5. Use `npm run dev` for development and preview purposes and `npm run production` when you finished the changes
+1. In your site's `cd themes/bilberry-hugo-theme` directory, execute `npm install`.
+2. Modify the `assets/sass/_variables.scss` file to customize your colors. 
+If you want to change the header's color, only edit the `$base-color` variable.
+3. Use `npm run dev` for development and preview purposes and `npm run production` when you're done with the changes.
 
 
 ## CSS and JS modules
-This theme supports hot-swappable CSS and JavaScript extensions. Modules can be specified using the `(css|js)_modules` list parameter. Modules can be specified either relative to the `static` directory (e.g. `exampleSite/static/css/custom.css`) or as a URL.
+This theme supports hot-swappable CSS and JavaScript extensions. 
+Modules can be specified using the `(css|js)_modules` list parameter. 
+Modules can be specified either relative to the `static` directory (e.g. `exampleSite/static/css/custom.css`) or as a URL.
 
 Modules are imported in the order they appear in the list, and immediately after the default Bilberry CSS and JS files are imported.
 
-### Adding a Cookie disclaimer
-Depending on the type of website you are running with this theme you may also want to add a cookie consent information. The popular solution [cookie consent](https://cookieconsent.insites.com/) can be integrated into the theme by loading the resources as external CSS and JS modules.
+## Add Cookie Disclaimer
+You can use [cookie consent](https://cookieconsent.insites.com/) to add cookie consent information by loading the needed resources as external CSS and JS modules.
 
-Use the configurator on the [cookie consent website](https://cookieconsent.insites.com/) to generate the required initialization code and add it to a local `static/init-cookieconsent.js` file e.g.
+Use the configurator on the [cookie consent website](https://cookieconsent.insites.com/) to generate the required initialization code and add it to a local `static/init-cookieconsent.js` file, for example:
 
 ```javascript
 // https://cookieconsent.insites.com/download/#
@@ -541,29 +542,30 @@ window.addEventListener('load', function () {
 })
 ```
 
-Then you only need to modify your `config.toml` to load the local init script and the libraries. You can either download the files and put them in your `/static` directory as well or reference them directly using a CDN.
-Serving the files with your website reduces external dependencies, increases privacy and makes sure your website can be developed in an offline environment as well.
+Then you only need to modify the `config.toml` file to load the local init script and the libraries. 
+You can either download the files and put them in your site's `/static` directory or reference them directly using a CDN.
+Storing these files on your website reduces external dependencies, increases privacy, and allows you to develop your website in an offline environment.
 
 ```toml
 css_modules = ["..", "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"]
 js_modules = ["..", "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js", "init-cookieconsent.js"]
 ```
 
-## Translations
-This theme has support for multi-language sites and therefore translations for 10+ languages.
-If you want to contribute and improve this theme for all users, please check our translation project at [POEditor](https://poeditor.com/projects/view?id=202795)
 
-Feel free to submit a request for a new language or improve existing ones!
+## Translations
+Bilberry theme has built-in support for multi-language sites, and currently supports translations for more than 10 languages.
+
+Feel free to submit a request for a new language translation or improve existing ones!
 
 ## Credits
-Bilberry is inspired by the [WordPress theme Lingonberry](http://www.andersnoren.se/teman/lingonberry-wordpress-theme/), created by Anders Norén.
+Bilberry theme was inspired by the [WordPress theme Lingonberry](https://en-ca.wordpress.org/themes/lingonberry/) created by Anders Norén.
 
 Bilberry is a theme for the great [HUGO static site generator](https://gohugo.io).
 
-A big thank-you goes to [@Ipstenu](https://github.com/Ipstenu) for his help in [this thread](https://discourse.gohugo.io/t/search-index-json-file-for-lunr-js/6286/5?u=lednerb) that helped me to create the `index.json` for the algolia export.
+Special thank-you goes to [@Ipstenu](https://github.com/Ipstenu) for his help in [this thread](https://discourse.gohugo.io/t/search-index-json-file-for-lunr-js/6286/5?u=lednerb) that helped to create the `index.json` for the Algolia index.
 
 ## Support and Discussions
-If you enjoy this theme and want to stay up to date or just want to say thanks, have a look at this Discord Channel:
+If you like this theme and want to stay updated or just want to say thanks, check out this Discord channel:
 
 [![Discord](https://img.shields.io/discord/479643633814077465.svg?style=for-the-badge&label=Discord%20Chat&colorB=7289da)](https://discord.gg/vZVHJ4j)
 
@@ -585,4 +587,4 @@ This project follows the [all-contributors](https://github.com/kentcdodds/all-co
 
 
 ## License
-The Bilberry Theme for HUGO is licensed under the MIT license.
+The Bilberry Hugo theme is licensed under the MIT license.
