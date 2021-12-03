@@ -132,9 +132,9 @@ The `link` post type always links to an external site and can be used with or wi
 
 
 ### Top Navigation Bar
-If you want to permanently display the top navigation bar with the search text field and `page` items, set the `permanentTopNav` parameter to `true`"` in the `config.toml` file.
+If you want to permanently display the top navigation bar with the search text field and `page` items, set the `permanentTopNav` parameter to `true` in the `config.toml` file.
 
-Note that the top navigation bar is minimized by default on mobile devices.
+Please note that the top navigation bar is minimized by default on mobile devices.
 
 
 ### Algolia Search
