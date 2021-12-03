@@ -230,7 +230,7 @@ By default, a TOC is generated if the content's word count is greater than **400
 The `tocMinWordCount` parameter defines this value in the `config.toml` configuration file. 
 
 The headings that are taken into account for a TOC are from _H2_ (##) to _H5_ (#####) inclusive. 
-Also, if you want to display a TOC at a specific point in your article, set the `toc` front matter variable to false, and use the `toc` shortcode like this:
+Also, if you want to display a TOC at a specific point in your article, set the `toc` front matter variable to `false`, and use the `toc` shortcode like this:
 ```markdown
 {{< toc >}}
 ```
@@ -340,7 +340,7 @@ To enable the [MathJAX](https://www.mathjax.org) markup support, set the `enable
 Although this theme has a lot of features that only work with enabled JavaScript, it also fully supports disabled JavaScript. 
 Disabled Javascript will not break any styling or essential functionalities of your website.
 
-You can test the behavior of the [demo site]((https://lednerb.github.io/bilberry-hugo-theme)) by disabling JavaScript in your browser.
+You can test the behavior of the [demo site](https://lednerb.github.io/bilberry-hugo-theme) by disabling JavaScript in your browser.
 
 
 ### Video
