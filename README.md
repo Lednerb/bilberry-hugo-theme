@@ -139,7 +139,7 @@ Please note that the top navigation bar is minimized by default on mobile device
 
 ### Algolia Search
 Bilberry theme includes built-in content search via [Algolia SAAS](https://www.algolia.com/). 
-You can see this in action on the [demo site]((https://lednerb.github.io/bilberry-hugo-theme)) by clicking on "hamburger" and typing something in the search text field, such as "support."
+You can see this in action on the [demo site](https://lednerb.github.io/bilberry-hugo-theme) by clicking on "hamburger" and typing something in the search text field, such as "support."
 
 #### Initial Setup
 To enable and configure search functionality for your site, follow these steps:
