@@ -158,7 +158,7 @@ You have to repeat this step every time you change a post or publish a new one t
 Execute the `hugo` command in the site's root directory to generate the index file.
 
 ##### Manual Upload
-1. Head over to the `public/index.json` file and copy everything in there.
+1. Head over to the `public/index.json` file and copy its content.
 2. Login to your Algolia account, open your index and click at `Add records manually`.
 3. Paste the copied text from the `index.json` file.
 4. Verify in the `Browse` tab of your index that the index records were uploaded correctly.
@@ -189,7 +189,7 @@ To remove focus, press the `Esc` key.
 
 
 ### Reposted Article/Duplicated Content
-If you need to repost an article from another website, or if you have duplicate content on your own site for SEO reasons, you should link this content to the original URL. 
+If you need to repost an article from another website, or if you have duplicate content on your own site, you should link this content to the original URL, so it's correctly processed by SEO. 
 To do so, define the `original_url` front matter variable in your post, for example:
 ```
 original_url: "https://example.org/path/to/content"
