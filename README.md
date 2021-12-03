@@ -189,7 +189,7 @@ To remove focus, press the `Esc` key.
 
 
 ### Reposted Article/Duplicated Content
-If you need to repost an article from another website, or if you have duplicate content on your own site, you should link this content to the original URL, so it's correctly processed by SEO. 
+If you need to repost an article from another website or duplicate content on your site, you should link it to the original URL so it's correctly processed by SEO. 
 To do so, define the `original_url` front matter variable in your post, for example:
 ```
 original_url: "https://example.org/path/to/content"
