@@ -524,7 +524,7 @@ Modules can be specified either relative to the `static` directory (e.g. `exampl
 Modules are imported in the order they appear in the list, and immediately after the default Bilberry CSS and JS files are imported.
 
 ## Add Cookie Disclaimer
-You can use [cookie consent](https://cookieconsent.insites.com/) to add cookie consent information by loading the needed resources as external CSS and JS modules.
+You can use the [cookie consent](https://cookieconsent.insites.com/) solution to add cookie consent information by loading the needed resources as external CSS and JS modules.
 
 Use the configurator on the [cookie consent website](https://cookieconsent.insites.com/) to generate the required initialization code and add it to a local `static/init-cookieconsent.js` file, for example:
 
