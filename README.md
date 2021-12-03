@@ -450,38 +450,36 @@ Also, check out this [tutorial](https://www.kiroule.com/article/add-favicon-to-h
 
 
 ## Custom 404 Page
-If you want to customize your 404 site, copy the `themes/bilberry-hugo-theme/layouts/404.html` to your local `layouts/404.html` and edit the file.
+To customize your 404 page, copy the `themes/bilberry-hugo-theme/layouts/404.html` file to your site's `layouts/404.html` and edit the file according to your needs, for example, change the message, icon class etc.
 
-You can quickly change the message and / or the icon class for example.
-Otherwise, you can replace the whole content with your 404 site markup.
 
 ## Custom Post Types
-If you want to add a custom post type to change the icon in the bubble on the left column you can simply create those as you wish.
-
-If you want to create a `book` post type, for example, you can do the following:
+With Bilberry theme, you can create new post types easily. 
+For example, suppose you want to create a new type named `book`.
+Then you should do the following:
 
 1. Copy the default `themes/bilberry-hugo-theme/layouts/partials/content-type/article.html` to your site's `layouts/partials/content-type/` folder.
-2. Rename the file to your custom post type. A proper name in the _book scenario_ would be `book.html`
-3. Customize the file. <br> You can change the icon in the bubble with another [Font Awesome Icon](http://fontawesome.io/icons/). <br> In the _book scenario_ we would change the `fa-pencil` class to `fa-book`:
-`<i class="fas fa-fw fa-book"></i>`
-
-4. Create your new posts with the post type prefix: `hugo new book/a-very-cool-book.md`
-5. Done.
-
-If you want to use custom Front Matter variables, create a `book.md` archetype in your `archetypes/` directory.
-
-You can find further information in the official HUGO docs.
+2. Rename the file to your custom post type, namely `book.html`.
+3. Customize the newly created file, for instance, change the icon in the bubble to `fa-book` that is available on [Font Awesome Icon](http://fontawesome.io/icons/) website: 
+```html
+<i class="fas fa-fw fa-book"></i>
+```
+4. To create new posts, use the `book` post type prefix:
+```shell
+hugo new book/my-favorite-book.md`
+```
+If you want to use custom front matter variables, create a `book.md` archetype in your site's `archetypes/` directory.
 
 ## External Images
-If you want to use external images (on another server or installation, etc.) for the `featuredImage` or in the `gallery` post type, you can use them by specifying the following in the post's config within the frontmatter:
+If you would like to use external images, such as those stored on another server or in the cloud, as a featured image for your article or in the `gallery` post type, you can use them by setting the appropriate front matter variables with the full-path URL values:
 
-`/content/article/my-external-featured-image-post.md`
-```
+```markdown
+# /content/article/my-external-featured-image-post.md
 featuredImage: "https://example.org/images/my-image.jpg"
 ```
 
-`/content/gallery/my-external-gallery-post.md`
-```
+```markdown
+# /content/gallery/my-external-gallery-post.md
 gallery: [
     "https://example.org/images/gallery-image1.jpg",
     "https://example.org/images/gallery-image2.jpg",
