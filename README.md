@@ -352,7 +352,7 @@ You can test the behavior of the [demo site](https://lednerb.github.io/bilberry-
 
 
 ### Video
-The following video hosting providers are supported: [YouTube](https://www.youtube.com/), [Vimeo](https://vimeo.com/),  [Prezi](https://prezi.com/), and [Bilibili](https://www.bilibili.com).
+The following video hosting providers are supported: [YouTube](https://www.youtube.com/), [Vimeo](https://vimeo.com/),  [Prezi](https://prezi.com/), [Bilibili](https://www.bilibili.com), and [PeerTube](https://joinpeertube.org).
 Videos in the `MP4` format, either stored externally or within the site's `static` folder, are also supported. 
 There are two options to display video embeds. 
 
@@ -367,6 +367,7 @@ youtube: "<youtube-video-id>"            # https://www.youtube.com/watch?v=M7IjJ
 vimeo: "<vimeo-video-id>"                # https://vimeo.com/239830182 -> "239830182"
 prezi: "<prezi-video-id>"                # https://prezi.com/v/5z9shnq7jzxs/what-to-study/ -> "5z9shnq7jzxs"
 bilibili: "<bilibili-video-id>"          # https://www.bilibili.com/video/BV1Sx411T7QQ -> "BV1Sx411T7QQ"
+peertube: "<peertube-video-id>"          # https://vids.tekdmn.me/w/w7WGHX7Lb6mCrbrpF3Xb8V -> "w7WGHX7Lb6mCrbrpF3Xb8V" (Set the peertube site in config.toml)
 mp4video: "<video-file-url>"             # location of video file (only mp4) 
 mp4videoImage: "<image-video-file-url>"  # location of poster image 
 ```
@@ -391,6 +392,9 @@ The second option is to use the `video` shortcode within markdown content in a p
 <!-- bilibili -->
 {{< video type="bilibili" id="<bilibili-video-id>" >}}
 
+<!-- PeerTube -->
+{{< video type="peertube" id="<peertube-video-id>" >}} 
+
 <!-- MP4 external -->
 {{< video type="mp4" url="<video-file-url>" imageUrl="<image-video-file-url>" >}}
 
@@ -398,6 +402,19 @@ The second option is to use the `video` shortcode within markdown content in a p
 {{< video type="mp4" url="/<video-file-name>.mp4" imageUrl="/<image-video-file-name>.png" >}}
 
 ```
+
+#### PeerTube Configuration
+Because there is no *one* PeerTube site, you need to indicate which ones your videos use, if any:
+
+```toml
+#[...]
+[params]
+    #[...]
+
+    peertubeUrl = "https://share.tube"
+```
+
+There is an [instance finder](https://joinpeertube.org/instances#instances-list) if you want to start hosting your videos on PeerTube but don't know which instance to join.
 
 ### Audio
 The following audio streaming providers are supported: [Mixcloud](https://www.mixcloud.com/), [SoundCloud](https://soundcloud.com/), [Spotify](https://www.spotify.com/), and [TuneIn](https://tunein.com/). 

@@ -21,6 +21,10 @@
         {{ partial "video-embed" (dict "type" "bilibili" "id" .) }}
     {{ end }}
 
+    {{ with .ctx.Params.peertube }}
+        {{ partial "video-embed" (dict "type" "peertube" "id" .) }}
+    {{ end }}
+
     {{ if isset .ctx.Params "mp4video" }}
         {{ partial "video-embed" (dict "type" "mp4" "url" .ctx.Params.mp4video "imageUrl" .ctx.Params.mp4videoImage) }}
     {{ end }}
