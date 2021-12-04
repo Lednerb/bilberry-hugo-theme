@@ -54,6 +54,12 @@
                 {{ end }}
             </div>
             {{ end }}
+
+            {{ if .Site.Params.showArchive | default true }}
+            <div class="archive">
+                <a href="{{ "/archive/" | relLangURL }}"><strong>{{ i18n "archive" }}</strong></a>
+            </div>
+            {{ end }}
         </div>
     </div>
 </footer>

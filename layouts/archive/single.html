@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{ if .Site.Params.showArchive | default true }}
+<div class="content">
+    <div class="article-wrapper u-cf single">
+        <a class="bubble" href="{{ "/archive/" | relLangURL}}">
+            <i class="fa fa-fw fa-archive"></i>
+        </a>
+
+        <article class="article">
+            <div class="content">
+                <h3>{{ i18n "archive" }}</h3>
+                <hr>
+
+                {{ range (where .Site.RegularPages "Type" "not in" (slice "page" "archive" "status" ) ).GroupByPublishDate (.Site.Params.archiveDateGrouping | default "2006-01") }}
+                <h4>{{ .Key }}</h4>
+                <ul>
+                    {{ range .Pages }}
+                        <li>
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                            <div class="meta">{{ .PublishDate.Format (.Site.Params.DateFormat | default "2006-01-02") }}</div>
+                        </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </div>
+        </article>
+    </div>
+</div>
+{{ end }}
+{{ end }}
