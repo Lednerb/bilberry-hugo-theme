@@ -134,9 +134,9 @@ disqusShortname = ""
     showSocialMedia = true
 
     # show an archive link in the footer
-    showArchive = true
+    showArchive = false
 
-  # how to group arhive. "2006" by year, "2006-01" by month. Uses similiar syntax as dateFormat above
+    # archive grouping: "2006" by year, "2006-01" by month
     archiveDateGrouping = "2006-01"
 
     # define your links with FontAwesome 5 (only free icons are supported)
