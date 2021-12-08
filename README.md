@@ -29,8 +29,8 @@ Here's a live [demo site](https://lednerb.github.io/bilberry-hugo-theme) to see 
       - [Manual Upload](#manual-upload)
       - [Automated Upload](#automated-upload)
   - [Keyboard Shortcuts](#keyboard-shortcuts)
-  - [Reposting an Article / Duplicated Content [SEO]](#reposting-an-article--duplicated-content-seo)
-  - [Overwrite the calculated reading time](#overwrite-the-calculated-reading-time)
+  - [Reposted Article/Duplicated Content](#reposted-articleduplicated-content)
+  - [Calculated Reading Rime](#calculated-reading-time)
   - [Summary Splits](#summary-splits)
     - [Automatic Summary Split](#automatic-summary-split)
     - [Manual Summary Split](#manual-summary-split)
@@ -53,10 +53,11 @@ Here's a live [demo site](https://lednerb.github.io/bilberry-hugo-theme) to see 
   - [Raw HTML](#raw-html)
 - [Favicons](#favicons)
 - [Custom 404 Page](#custom-404-page)
+- [Archive Page](#archive-page)
 - [Custom Post Types](#custom-post-types)
 - [External Images](#external-images)
 - [Customizing Individual Posts](#customizing-individual-posts)
-- [Custom colors and fonts](#custom-colors-and-fonts)
+- [Custom Colors and Fonts](#custom-colors-and-fonts)
 - [CSS and JS modules](#css-and-js-modules)
   - [Add Cookie Disclaimer](#add-cookie-disclaimer)
 - [Translations](#translations)
@@ -454,6 +455,20 @@ Also, check out this [tutorial](https://www.kiroule.com/article/add-favicon-to-h
 ## Custom 404 Page
 To customize your 404 page, copy the `themes/bilberry-hugo-theme/layouts/404.html` file to your site's `layouts/404.html` and edit the file according to your needs, for example, change the message, icon class etc.
 
+## Archive Page
+The archive page will be available at `<site-base-url>/archive/` as soon as you copy the `themes/bilberry-hugo-theme/exampleSite/content/archive.md` file to `content` directory of your site. 
+By default, the published content is grouped by year. 
+To group the content by year and month, set the `archiveDateGrouping` parameter to the `2006-01` value.
+
+To display the archive link in the footer, set the `showArchive` parameter to `true`. 
+
+To add the archive link to the top navigation bar, create a new page with the following command:
+```shell
+hugo new page/archive.md
+```
+
+Then, in the newly created `content/page/archive.md` file, set the `link` front matter variable to the `/archive/` value and completely remove the `target` variable.
+
 
 ## Custom Post Types
 With Bilberry theme, you can create new post types easily. 
@@ -505,7 +520,7 @@ The `pinOnlyToFirstPage` parameter allows you to choose whether to display pinne
 Otherwise, your changes will be overwritten when you update the theme to the latest version.
 
 
-## Custom colors and fonts
+## Custom Colors and Fonts
 Bilberry uses SCSS for styling and NPM with [Laravel Mix](https://laravel-mix.com/) for the dependency management.
 
 To change any colors or fonts, you have to follow these steps:
