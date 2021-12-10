@@ -130,6 +130,37 @@ article {
             }
         }
 
+        .archive-list {
+            ul {
+                list-style: none;
+                margin-top: 1.25em;
+
+                li {
+                    border-bottom: 1px solid #eee;
+                    padding-right: 10px;
+                }
+
+                a {
+                    position: relative;
+                    left: 0;
+                    display: inline-block;
+                    transition: left 0.3s ease-in-out;
+                    color: $highlight-color;
+                    font-family: $content-font;
+                    font-style: normal;
+
+                    span {
+                        color: $meta-text-color;
+                    }
+
+                    &:hover {
+                        left: 10px;
+                        color: $base-color;
+                    }
+                }
+            }
+        }
+
         blockquote {
             background-color: #f6f6f6;
             font-family: $headline-font;

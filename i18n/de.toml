@@ -35,3 +35,5 @@ other = "Andere Sprachen"
 one = "1 Min. lesen"
 other = "{{.Count}} Min. lesen"
 
+[archive]
+other = "Archiv"
