@@ -7,9 +7,8 @@
 
         <article class="article">
             <div class="content">
-                <h3>{{ i18n "archive" }}</h3>
-                <hr>
-
+                <h1 class="article-title">{{ i18n "archive" }}</h1>
+                <div class="meta"></div>
                 <div class="archive-list">
                     {{ range (where .Site.RegularPages "Type" "not in" (slice "page" "archive" "status" ) ).GroupByPublishDate (.Site.Params.archiveDateGrouping | default "2006-01") }}
                     <h4>{{ .Key }}</h4>
