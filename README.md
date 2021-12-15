@@ -345,7 +345,7 @@ You can test the behavior of the [demo site](https://lednerb.github.io/bilberry-
 
 
 ### Video
-The following video hosting providers are supported: [YouTube](https://www.youtube.com/), [Vimeo](https://vimeo.com/), and [Prezi](https://prezi.com/).
+The following video hosting providers are supported: [YouTube](https://www.youtube.com/), [Vimeo](https://vimeo.com/),  [Prezi](https://prezi.com/), and [Bilibili](https://www.bilibili.com).
 Videos in the `MP4` format, either stored externally or within the site's `static` folder, are also supported. 
 There are two options to display video embeds. 
 
@@ -358,7 +358,8 @@ Then set the corresponding front matter variable:
 ```markdown
 youtube: "<youtube-video-id>"            # https://www.youtube.com/watch?v=M7IjJiZUutk -> "M7IjJiZUutk"
 vimeo: "<vimeo-video-id>"                # https://vimeo.com/239830182 -> "239830182"
-prezi: "<prezi-video-id"                 # https://prezi.com/v/5z9shnq7jzxs/what-to-study/ -> "5z9shnq7jzxs"
+prezi: "<prezi-video-id>"                # https://prezi.com/v/5z9shnq7jzxs/what-to-study/ -> "5z9shnq7jzxs"
+bilibili: "<bilibili-video-id>"          # https://www.bilibili.com/video/BV1Sx411T7QQ -> "BV1Sx411T7QQ"
 mp4video: "<video-file-url>"             # location of video file (only mp4) 
 mp4videoImage: "<image-video-file-url>"  # location of poster image 
 ```
@@ -379,6 +380,9 @@ The second option is to use the `video` shortcode within markdown content in a p
 
 <!-- Prezi -->
 {{< video type="prezi" id="<prezi-video-id>" >}}
+
+<!-- bilibili -->
+{{< video type="bilibili" id="<bilibili-video-id>" >}}
 
 <!-- MP4 external -->
 {{< video type="mp4" url="<video-file-url>" imageUrl="<image-video-file-url>" >}}
