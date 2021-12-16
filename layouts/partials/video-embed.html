@@ -45,6 +45,24 @@
     </div>
 {{ end }}
 
+{{ if eq .type "bilibili" }}
+    <div class="responsive-video bilibili" style="padding-bottom: 75%">
+        <iframe
+            class="no-js-hidden" src="https://player.bilibili.com/player.html?bvid={{ .id }}&page=1&as_wide=1&high_quality=1&danmaku=0"
+            scrolling="no" frameborder="no" framespacing="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+        </iframe>
+
+        <div class="no-js-message">
+            The Bilibili player can not be loaded with disabled JavaScript. <br>
+            The following video is embedded here: <br>
+
+            <a href="https://www.bilibili.com/video/{{ .id }}" target="_blank">
+                https://www.bilibili.com/video/{{ .id }}
+            </a>
+        </div>
+    </div>
+{{ end }}
+
 {{ if eq .type "mp4" }}
     <div class="responsive-video local">
         <video width="100%" controls poster="{{ .imageUrl }}">

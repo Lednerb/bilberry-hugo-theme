@@ -17,6 +17,10 @@
         {{ partial "video-embed" (dict "type" "prezi" "id" .) }}
     {{ end }}
 
+    {{ with .ctx.Params.bilibili }}
+        {{ partial "video-embed" (dict "type" "bilibili" "id" .) }}
+    {{ end }}
+
     {{ if isset .ctx.Params "mp4video" }}
         {{ partial "video-embed" (dict "type" "mp4" "url" .ctx.Params.mp4video "imageUrl" .ctx.Params.mp4videoImage) }}
     {{ end }}
