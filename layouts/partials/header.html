@@ -3,55 +3,56 @@
 {{ else }}
     <header>
 {{ end }}
-        <div class="container">
-            <div class="logo">
-                <a href="{{ .Site.BaseURL | relLangURL }}" class="logo">
-                    {{ if and (isset .Site.Params "customimage") (ne .Site.Params.customImage "") }}
-                        <img src="{{ .Site.Params.customImage | relURL }}" alt="">
+    <div class="container">
+        <div class="logo">
+            <a href="{{ .Site.BaseURL | relLangURL }}" class="logo">
+                {{ if and (isset .Site.Params "customimage") (ne .Site.Params.customImage "") }}
+                    <img src="{{ .Site.Params.customImage | relURL }}" alt="">
+                {{ else }}
+                    {{ $avatarEmail := "" }}
+                    {{ if not (eq .Site.Params.avatarEmail nil) }}
+                        {{ $avatarEmail = .Site.Params.avatarEmail }}
                     {{ else }}
-                        {{ $avatarEmail := "" }}
-                        {{ if not (eq .Site.Params.avatarEmail nil) }}
-                            {{ $avatarEmail = .Site.Params.avatarEmail }}
-                        {{ else }}
-                            {{ $avatarEmail = .Site.Params.gravatarEMail }}
-                        {{ end }}
-                        <img src="https://seccdn.libravatar.org/avatar/{{ md5 $avatarEmail }}?d=mm&size=200" alt="">
+                        {{ $avatarEmail = .Site.Params.gravatarEMail }}
                     {{ end }}
+                    <img src="https://seccdn.libravatar.org/avatar/{{ md5 $avatarEmail }}?d=mm&size=200" alt="">
+                {{ end }}
 
-                    <span class="overlay"><i class="fa {{ .Site.Params.overlayIcon | default "fa-home" }}"></i></span>
+                <span class="overlay"><i class="fa {{ .Site.Params.overlayIcon | default "fa-home" }}"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title">
+                <a href="{{ .Site.BaseURL | relLangURL }}">
+                    {{ .Site.Title | default "My cool new blog" }}
                 </a>
-            </div>
-            <div class="titles">
-                <h3 class="title">
-                    <a href="{{ .Site.BaseURL | relLangURL }}">
-                        {{ .Site.Title | default "My cool new blog" }}
-                    </a>
-                </h3>
+            </h3>
 
-                {{ with .Site.Params.Subtitle }}
-                    <span class="subtitle">{{ . }}</span>
-                {{ end }}
-            </div>
-
-            {{ if and (gt .Site.Languages 1) (.Site.Params.showHeaderLanguageChooser | default true) }}
-                {{- $language := .Language -}}
-                <div class="languages">
-                {{ range $.Site.Home.AllTranslations }}
-                    {{ if eq $language .Language }}
-                        <a href="{{ .Permalink }}" class="active">{{ .Language }}</a>
-                    {{ else }}
-                        <a href="{{ .Permalink }}">{{ .Language }}</a>
-                    {{ end }}
-                {{ end }}
-                </div>
+            {{ with .Site.Params.Subtitle }}
+                <span class="subtitle">{{ . }}</span>
             {{ end }}
+        </div>
 
-            {{ if .Site.Params.permanentTopNav }}
-                <div class="toggler permanentTopNav">
-            {{ else }}
-                <div class="toggler">
+        {{ if and (gt .Site.Languages 1) (.Site.Params.showHeaderLanguageChooser | default true) }}
+            {{- $language := .Language -}}
+            <div class="languages">
+            {{ range $.Site.Home.AllTranslations }}
+                {{ if eq $language .Language }}
+                    <a href="{{ .Permalink }}" class="active">{{ .Language }}</a>
+                {{ else }}
+                    <a href="{{ .Permalink }}">{{ .Language }}</a>
+                {{ end }}
             {{ end }}
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </div>
             </div>
-    </header>
+        {{ end }}
+
+        {{ if .Site.Params.permanentTopNav }}
+            <div class="toggler permanentTopNav">
+        {{ else }}
+            <div class="toggler">
+        {{ end }}
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</header>

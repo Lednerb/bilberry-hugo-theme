@@ -1,7 +1,7 @@
 header {
     background-color: $base-color;
     color: $header-text-color;
-    height: 20rem;
+    height: auto;
     display: flex;
     align-items: center;
 
@@ -13,7 +13,7 @@ header {
         display: flex;
         flex-direction: row;
         align-items: center;
-        height: 100%;
+        min-height: 20rem;
 
         &:after {
             content: "";
