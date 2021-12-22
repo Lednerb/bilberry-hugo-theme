@@ -2,7 +2,7 @@
 title: "Support and Discussions"
 date: 2021-11-01T18:10:14+01:00
 
-tags: ['Diskussion', 'Support', 'Q&A', 'Ideen', 'Zeigen und erzählen']
+tags: ['Support', 'Discussions', 'Q&A', 'Ideas', 'Show and tell']
 author: "Lednerb"
 noSummary: true
 ---
