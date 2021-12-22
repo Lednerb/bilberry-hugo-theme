@@ -1,6 +1,6 @@
 ---
 title: "Albert Einstein - Sinn Des Lebens"
-date: 2021-12-01T14:40:32+01:00
+date: 2021-11-01T14:40:32+01:00
 
 categories: ['Zitate']
 author: "Albert Einstein"
