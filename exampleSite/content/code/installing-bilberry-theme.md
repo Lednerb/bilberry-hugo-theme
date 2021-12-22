@@ -1,6 +1,6 @@
 ---
 title: "Installing Bilberry Theme"
-date: 2017-11-01T09:31:27+01:00
+date: 2021-11-01T09:31:27+01:00
 
 categories: ['Code', 'Tutorials']
 tags: ['Hugo', 'Bilberry Theme']

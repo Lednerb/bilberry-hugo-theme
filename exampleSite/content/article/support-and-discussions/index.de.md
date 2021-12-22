@@ -1,19 +1,16 @@
 ---
 title: "Unterstützung und Diskussionen"
-date: 2017-11-01T18:10:14+01:00
+date: 2021-11-01T18:10:14+01:00
 
-tags: ['Discord', 'Support', 'Sag Danke!']
+tags: ['Discussion', 'Support', 'Sag Danke!']
 author: "Lednerb"
 noSummary: true
-
-resizeImages: false
 ---
-Hallo zusammen!
+Unterstützung für dieses Thema wird durch die [Probleme](https://github.com/Lednerb/bilberry-hugo-theme/issues) und [Diskussionen](https://github.com/Lednerb/bilberry-hugo-theme/discussions) Abschnitte des Projekts.
+Bitte verwenden Sie den Abschnitt **Probleme**, wenn Sie einen Fehler oder Fehler melden möchten. Für alle anderen Anfragen verwenden Sie den Abschnitt **Diskussionen**.
 
-Dieses Premium Theme ist unter einer Open Source Lizenz veröffentlicht worden, sodass du dieses für deinen Blog benutzen kannst.
-
-Bisher habe ich 100+ Stunden Arbeitszeit investiert, um eins der besten Themes für Hugo zu erstellen, das es bisher für Hugo gibt.
-
-Wenn dir dieses Theme gefällt und du über alle neuen Erweiterungen und Funktionen informiert werden oder einfach Danke sagen möchtest, schau mal in unseren Discord Kanal:
-
-[![Discord](https://img.shields.io/discord/479643633814077465.svg?style=for-the-badge&label=Discord%20Chat&colorB=7289da)](https://discord.gg/vZVHJ4j)
+Bitte verwenden Sie die folgenden Richtlinien, wenn Sie eine Diskussion beginnen möchten:
+- Wenn Sie Fragen zu einer bestimmten Funktion haben oder Hilfe bei der Verwendung oder Anpassung des Designs benötigen, verwenden Sie die Kategorie **Fragen & Antworten** (Q&A).
+- Verwenden Sie für eine neue Funktion oder andere Verbesserungen die Kategorie **Ideen**.
+- Verwenden Sie die Kategorie **Zeigen und erzählen**, um Ihren Blog oder Ihre Website mit dem Thema Bilberry zu präsentieren.
+- Für alle anderen Anfragen nutzen Sie bitte die **Allgemeine** Typendiskussion.
