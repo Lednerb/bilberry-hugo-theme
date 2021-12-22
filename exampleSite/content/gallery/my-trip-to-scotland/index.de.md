@@ -1,6 +1,6 @@
 ---
 title: "Meine Reise nach Schottland"
-date: 2017-11-01T18:01:26+01:00
+date: 2021-11-01T18:01:26+01:00
 
 categories: ['Reise', 'Urlaub']
 tags: ['Schottland', 'Glennfinnan Viadukt', 'Eilean Donan Castle']

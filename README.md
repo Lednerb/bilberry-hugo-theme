@@ -1,22 +1,30 @@
-## Bilberry Hugo Theme
+# Bilberry Hugo Theme
 [![GitHub version](https://img.shields.io/github/release/Lednerb/bilberry-hugo-theme/all.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/releases)
 [![Hugo Version](https://img.shields.io/badge/Hugo-%5E0.53-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
-[![License](https://img.shields.io/github/license/Lednerb/bilberry-hugo-theme.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/blob/master/LICENSE.md)
 [![Hugo Themes](https://img.shields.io/badge/Hugo_Themes-@Bilberry-ff4088)](https://themes.gohugo.io/themes/bilberry-hugo-theme/)
 
 [![Build GH-Pages](https://github.com/Lednerb/bilberry-hugo-theme/workflows/Update%20GitHub%20Pages/badge.svg)](https://github.com/Lednerb/bilberry-hugo-theme/deployments/activity_log?environment=github-pages)
 [![Contributors](https://img.shields.io/badge/contributors-38-orange.svg?style=flat-square)](#contributors)
-[![Discord](https://img.shields.io/discord/479643633814077465.svg?style=flat-square&label=Discord%20Chat&colorB=7289da)](https://discord.gg/vZVHJ4j)
+[![License](https://img.shields.io/github/license/Lednerb/bilberry-hugo-theme.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/blob/master/LICENSE.md)
 
 **Bilberry** is a premium [Hugo](https://gohugo.io) theme with many great features. 
 This is an adaptation and further optimization of the [Lingonberry WordPress theme](https://en-ca.wordpress.org/themes/lingonberry/) by Anders Norén.
 
 Here's a live [demo site](https://lednerb.github.io/bilberry-hugo-theme) to see this theme in action.
 
+## Support and Discussions
+
+Support for this theme is provided through the [Issues](https://github.com/Lednerb/bilberry-hugo-theme/issues) and [Discussions](https://github.com/Lednerb/bilberry-hugo-theme/discussions) sections of the project. 
+Please use the **Issues** section if you would like to report a defect or bug. For any other requests, use the **Discussions** section.
+
+Please use the following guidelines if you want to start a discussion:
+- For any questions regarding a specific feature, or if you need help using or customizing the theme, use the **Questions & Answers** (Q&A) category.
+- For a new feature or any other improvements, use the **Ideas** category.
+- To showcase your blog or website powered by Bilberry theme, use the **Show and tell** category.
+- For any other inquiries, please use the **General** type discussion.
+ 
 ## Table of Contents
 
-- [Bilberry Hugo Theme](#bilberry-hugo-theme)
-- [Table of Contents](#table-of-contents)
 - [Requirements](#requirements)
 - [Quick Start](#quick-start)
 - [Configuration](#configuration)
@@ -62,7 +70,6 @@ Here's a live [demo site](https://lednerb.github.io/bilberry-hugo-theme) to see 
   - [Add Cookie Disclaimer](#add-cookie-disclaimer)
 - [Translations](#translations)
 - [Credits](#credits)
-- [Support and Discussions](#support-and-discussions)
 - [Contributors](#contributors)
 - [License](#license)
 
@@ -584,11 +591,6 @@ Bilberry theme was inspired by the [WordPress theme Lingonberry](https://en-ca.w
 Bilberry is a theme for the great [HUGO static site generator](https://gohugo.io).
 
 Special thank-you goes to [@Ipstenu](https://github.com/Ipstenu) for his help in [this thread](https://discourse.gohugo.io/t/search-index-json-file-for-lunr-js/6286/5?u=lednerb) that helped to create the `index.json` for the Algolia index.
-
-## Support and Discussions
-If you like this theme and want to stay updated or just want to say thanks, check out this Discord channel:
-
-[![Discord](https://img.shields.io/discord/479643633814077465.svg?style=for-the-badge&label=Discord%20Chat&colorB=7289da)](https://discord.gg/vZVHJ4j)
 
 ## Contributors
 

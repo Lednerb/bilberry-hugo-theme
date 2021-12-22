@@ -1,6 +1,6 @@
 ---
 title: "Kilez More - Leben und Tod des Imperialismus"
-date: 2017-11-01T16:23:40+01:00
+date: 2021-11-01T16:23:40+01:00
 
 categories: ['Video', 'Musik', 'Politik']
 tags: ['Kilez More']

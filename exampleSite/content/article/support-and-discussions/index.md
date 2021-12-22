@@ -1,18 +1,17 @@
 ---
 title: "Support and Discussions"
-date: 2017-11-01T18:10:14+01:00
+date: 2021-11-01T18:10:14+01:00
 
-tags: ['Discord', 'Support', 'Say Thanks!']
+tags: ['Diskussion', 'Support', 'Q&A', 'Ideen', 'Zeigen und erzählen']
 author: "Lednerb"
 noSummary: true
-
-resizeImages: false
 ---
-Hey there!
 
-This Premium Theme is published under an open source license so you can use it for your blog. It took me 100+ hours of work to create one of the best Hugo themes out there.
+Support for this theme is provided through the [Issues](https://github.com/Lednerb/bilberry-hugo-theme/issues) and [Discussions](https://github.com/Lednerb/bilberry-hugo-theme/discussions) sections of the project.
+Please use the **Issues** section if you would like to report a defect or bug. For any other requests, use the **Discussions** section.
 
-If you enjoy this theme and want to stay informed about the latest releases and features or want to say thanks and discuss with other users, join our Discord server:
-
-[![Discord](https://img.shields.io/discord/479643633814077465.svg?style=for-the-badge&label=Discord%20Chat&colorB=7289da)](https://discord.gg/vZVHJ4j)
-
+Please use the following guidelines if you want to start a discussion:
+- For any questions regarding a specific feature, or if you need help using or customizing the theme, use the **Questions & Answers** (Q&A) category.
+- For a new feature or any other improvements, use the **Ideas** category.
+- To showcase your blog or website powered by Bilberry theme, use the **Show and tell** category.
+- For any other inquiries, please use the **General** type discussion.
