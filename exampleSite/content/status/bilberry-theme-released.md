@@ -7,4 +7,4 @@ showDate: false
 I'm glad to announce the release of the Bilberry Hugo theme. 
 This premium theme is published under an open-source license ([MIT](https://github.com/Lednerb/bilberry-hugo-theme/blob/master/LICENSE.md)), and you can use it free of charge. 
 It took me a significant amount of time to create and refine this theme. 
-I also admit that I could not have been successful without the help of other contributors.
+This theme is a collaborative effort of [numerous volunteers](https://github.com/Lednerb/bilberry-hugo-theme/graphs/contributors).
