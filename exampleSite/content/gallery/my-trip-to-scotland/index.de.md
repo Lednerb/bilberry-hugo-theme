@@ -13,7 +13,7 @@ Auf einem schönen, kleinen Campingplatz sahen wir am frühen Morgen Rinder im N
 
 Wir fuhren mit dem Auto durch den Eurotunnel Calais-Folkstone nach Großbritannien und fuhren die Westküste nach Norden und besuchten die Isle of Skye - eine wunderschöne Insel, die man in seinem Leben auf jeden Fall gesehen haben sollte. Dann ging es weiter Richtung Norden nach Durness, wo wir den Straßen nach Osten folgten, entlang an den Küsten und via Single-Track-Roads nach Lindisfarne.
 
-An unserem letzten Tag besuchten wir Dover Castle - eine Antike Burganlage. Die Römer bauten vor über 2000 Jahren des ersten Leuchtturm, welcher heute noch besichtigt werden kann. Dover Castle wurde auch während beiden Weltkriegen genutzt.
+An unserem letzten Tag besuchten wir Dover Castle - eine Antike Burganlage. Die Römer bauten vor über 2000 Jahren des ersten Leuchtturm, welcher heute noch besichtigt werden kann. Dover Castle wurde auch während beider Weltkriege genutzt.
 
 Bester Urlaub aller Zeiten!
 

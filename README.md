@@ -230,8 +230,8 @@ This summary will also be followed by the _Continue reading_ link.
 If you want to display the entire article without the _Continue Reading_ link, set the `noSummary` variable to `true` in your content file.
 
 
-### Table of Contents(TOC)
-To enable the automatic creation of a table of contents(TOC), set the `toc` front matter variable to `true` in your article. 
+### Table of Contents (TOC)
+To enable the automatic creation of a table of contents (TOC), set the `toc` front matter variable to `true` in your article. 
 If the article's markdown contains appropriate headings, Hugo will generate a table of content at the beginning of the article. 
 
 By default, a TOC is generated if the content's word count is greater than **400**. 
@@ -333,7 +333,7 @@ Bilberry theme is optimized to look good on all devices, namely desktops, tablet
 ### Automatic Image Resizing
 Bilberry theme includes built-in automatic cropping and image resizing, activated by default.
 However, if you want to disable it, set the `resizeImages` parameter to `false` in the `config.toml` file.
-Also, this feature can be disabled at the post level by setting the `resizeImages` front matter varible to `false`. 
+Also, this feature can be disabled at the post level by setting the `resizeImages` front matter variable to `false`. 
 
 
 ### Image Modal Zoom

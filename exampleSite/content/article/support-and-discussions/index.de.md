@@ -7,7 +7,7 @@ author: "Lednerb"
 noSummary: true
 ---
 Unterstützung für dieses Theme erhalten Sie über [GitHub Issues](https://github.com/Lednerb/bilberry-hugo-theme/issues) und [GitHub Discussions](https://github.com/Lednerb/bilberry-hugo-theme/discussions).
-Bitte verwenden Sie **GitHub Issues**, wenn Sie einen Fehler melden möchten. Für alle anderen Anfragen verwenden Sie **GitHub Diskussions**.
+Bitte verwenden Sie **GitHub Issues**, wenn Sie einen Fehler melden möchten. Für alle anderen Anfragen verwenden Sie **GitHub Discussions**.
 
 Bitte verwenden Sie die folgenden Kategorien, wenn Sie eine Diskussion beginnen möchten:
 - Wenn Sie Fragen zu einer bestimmten Funktion haben oder Hilfe bei der Verwendung oder Anpassung des Designs benötigen, verwenden Sie die Kategorie **Q&A** (Fragen & Antworten).
