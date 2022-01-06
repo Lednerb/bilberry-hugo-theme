@@ -181,7 +181,7 @@ disqusShortname = ""
   defaultMarkdownHandler = 'goldmark'
   [markup.goldmark]
     [markup.goldmark.renderer]
-      # Change to 'true' if you need to render raw HTML whithin your markdown content
+      # Change to 'true' if you need to render raw HTML within your markdown content
       unsafe = false
 
   [markup.tableOfContents]
