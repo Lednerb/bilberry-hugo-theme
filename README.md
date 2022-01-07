@@ -27,6 +27,10 @@ Please use the following guidelines if you want to start a discussion:
 
 - [Requirements](#requirements)
 - [Quick Start](#quick-start)
+  - [Create skeleton site](#create-skeleton-site) 
+  - [Route 1 (recommended): use theme as module](#route-1-recommended-use-theme-as-module)
+  - [Route 2 (traditional): install theme locally](#route-2-traditional-install-theme-locally)
+  - [Start up your site](#start-up-your-site)
 - [Configuration](#configuration)
 - [Features](#features)
   - [Post Types](#post-types) 
@@ -44,7 +48,7 @@ Please use the following guidelines if you want to start a discussion:
     - [Manual Summary Split](#manual-summary-split)
     - [Front Matter Summary Split](#front-matter-summary-split)
     - [No Summary Split](#no-summary-split)
-  - [Table of Contents(TOC)](#table-of-contentstoc)
+  - [Table of Contents (TOC)](#table-of-contentstoc)
   - [Series Taxonomy](#series-taxonomy)
   - [Comments](#comments)
     - [Commento](#commento)
@@ -75,31 +79,98 @@ Please use the following guidelines if you want to start a discussion:
 
 ## Requirements
 
-**Hugo version >= 0.53 required**; see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.
+**Hugo version >= 0.53 required**; see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.  
+Only when using theme as Hugo module:  
+**Go version >= 1.12 required**; download Go installer [here](https://go.dev/dl/)  
+**Git required**; download Git installer [here](https://git-scm.com/downloads)
 
 ## Quick Start
+
+### Create skeleton site
  
 - Create a new site:
 ```
 hugo new site my-new-blog
 ```
 
+- Enter site directory:
+```
+cd my-new-blog
+```
+
+There are two routes to associate the `billberry` theme with your site:
+
+### Route 1 (recommended): use theme as module
+
+- Turn your new site into a Hugo module:
+```
+hugo mod init github.com/me/my-new-blog
+```
+
+- Declare the `bilberry` module as a dependency of your site:
+```
+hugo mod get github.com/Lednerb/bilberry-hugo-theme
+```
+
+- Add the following lines at the end of your `config.toml`:
+
+```
+[module]
+  [[module.imports]]
+    path = "github.com/Lednerb/bilberry-hugo-theme"
+    disable = false
+  [[module.imports.mounts]]
+    source = "exampleSite"
+    target = "assets/exampleSite"
+```
+
+- Vendor the theme into the `_vendor` directory:
+
+```
+hugo mod vendor
+```
+
+- Copy example site content including the `config.toml` file:
+```
+cp -r _vendor/github.com/Lednerb/bilberry-hugo-theme/exampleSite/* .
+```
+
+- Delete the `_vendor` directory in your site root:
+
+```
+rm -rf _vendor/
+```
+
+At the top of your config.toml, remove the hash sign at the beginning of the `theme =` line in order to activate your theme as module:
+
+```
+# using theme as Hugo module (uncomment to activate)
+theme = "github.com/Lednerb/bilberry-hugo-theme"
+```
+
+### Route 2 (traditional): install theme locally
+
 - Install the latest version of this theme:
 ```
-cd my-new-blog/themes
+cd themes
 git clone https://github.com/Lednerb/bilberry-hugo-theme.git
 ```
 If you don't use **Git**, you can download this theme [here](https://github.com/Lednerb/bilberry-hugo-theme/archive/master.zip) and extract it manually into the `themes` folder. 
 Make sure the folder containing the extracted theme is named `bilberry-hugo-theme`.
 
+**Important:** Do NOT change the name of the `bilberry-hugo-theme` folder. 
+Renaming this folder will break your site.
+
 - Copy example site content including the `config.toml` file:
 ```
 cp -r bilberry-hugo-theme/exampleSite/* ../
+cd ../
 ```
+
+## Start up your site
 
 - Remove the default archetype:
 ```
-cd ../
 rm archetypes/default.md
 ```
 
@@ -107,9 +178,6 @@ rm archetypes/default.md
 ```
 hugo server
 ```
-
-**Important:** Do NOT change the name of the `bilberry-hugo-theme` folder. 
-Renaming this folder will break your site.
 
 Also, check out this [tutorial](https://www.kiroule.com/article/start-blogging-with-github-hugo-and-netlify/) on how to build a Bilberry theme-based website using Hugo, GitHub, and Netlify.
 

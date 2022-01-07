@@ -1,6 +1,11 @@
 title = "My cool new Blog"
 baseURL = "https://example.com/"
+
+# using theme locally (git clone, submodule or as zip)
 theme = "bilberry-hugo-theme"
+
+# using theme as Hugo module (uncomment to activate)
+# theme = "github.com/Lednerb/bilberry-hugo-theme"
 
 # Generate the robots.txt file for SEO
 enableRobotsTXT = true
