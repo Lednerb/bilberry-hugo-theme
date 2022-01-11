@@ -134,8 +134,6 @@ The `page` post type is the only one that can be used in the top navigation bar.
 Pages can be ordered using the `weight` front matter variable, which should be set to a non-zero value.
 A page with a lower `weight` will be displayed first.
 
-The `page` content can be a static page, such as an **About** page, or a link to another page, internal or external.
-
 The `link` post type always links to an external site and can be used with or without a background image.
 
 
