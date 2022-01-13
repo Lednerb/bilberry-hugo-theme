@@ -367,7 +367,7 @@ youtube: "<youtube-video-id>"            # https://www.youtube.com/watch?v=M7IjJ
 vimeo: "<vimeo-video-id>"                # https://vimeo.com/239830182 -> "239830182"
 prezi: "<prezi-video-id>"                # https://prezi.com/v/5z9shnq7jzxs/what-to-study/ -> "5z9shnq7jzxs"
 bilibili: "<bilibili-video-id>"          # https://www.bilibili.com/video/BV1Sx411T7QQ -> "BV1Sx411T7QQ"
-peertube: "<peertube-video-id>"          # https://vids.tekdmn.me/w/w7WGHX7Lb6mCrbrpF3Xb8V -> "w7WGHX7Lb6mCrbrpF3Xb8V" (Set the peertube site in config.toml)
+peertube: "<peertube-video-id>"          # https://vids.tekdmn.me/w/w7WGHX7Lb6mCrbrpF3Xb8V (entire URL)
 mp4video: "<video-file-url>"             # location of video file (only mp4) 
 mp4videoImage: "<image-video-file-url>"  # location of poster image 
 ```
@@ -404,15 +404,8 @@ The second option is to use the `video` shortcode within markdown content in a p
 ```
 
 #### PeerTube Configuration
-Because there is no *one* PeerTube site, you need to indicate which ones your videos use, if any:
-
-```toml
-#[...]
-[params]
-    #[...]
-
-    peertubeUrl = "https://share.tube"
-```
+Because there is no *one* PeerTube site, you need to indicate which ones your videos use, meaning you can't use just the video ID.
+Instead, copy in the entire watch URL, and it'll be transformed into the correct embed URL to use.
 
 There is an [instance finder](https://joinpeertube.org/instances#instances-list) if you want to start hosting your videos on PeerTube but don't know which instance to join.
 
