@@ -39,7 +39,7 @@
     }
 
     .responsive-video {
-        &.youtube, &.vimeo {
+        &.youtube, &.vimeo, &.peertube {
                 height: auto !important;
                 padding: 0 !important;
             }

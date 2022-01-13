@@ -63,6 +63,23 @@
     </div>
 {{ end }}
 
+{{ if (eq .type "peertube") }}
+{{- $srcUrl := urls.Parse .id -}}
+{{- $embedUrl := printf "%s://%s/videos/embed/%s" $srcUrl.Scheme $srcUrl.Host ($srcUrl.Path | path.Base) -}}
+    <div class="responsive-video peertube">
+      <iframe class="no-js-hidden" sandbox="allow-same-origin allow-scripts allow-popups" src="{{ $embedUrl }}" frameborder="0" allowfullscreen></iframe>
+
+      <div class="no-js-message">
+	The PeerTube player can not be loaded with disabled JavaScript. <br>
+	The following video is embedded here: <br>
+
+	<a href="{{ .id }}" target="_blank">
+	  {{ .id }}
+	</a>
+      </div>
+    </div>
+{{ end }}
+
 {{ if eq .type "mp4" }}
     <div class="responsive-video local">
         <video width="100%" controls poster="{{ .imageUrl }}">
