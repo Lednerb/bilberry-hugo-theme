@@ -73,12 +73,6 @@ disqusShortname = ""
     #     even if the image has the correct sizes.
     resizeImages = true
 
-    # URL for the PeerTube instance that you use, if any
-    # PeerTube is federated, meaning you need to pick an instance if you plan on 
-    # embedding PeerTube content (say).
-    # Example: https://share.tube. If unset, peertube embeds will have no effect.
-    peertubeUrl = ""
-
   # Header configuration
     # your subtitle if you want to use any
     subtitle = "Hello World! This is the most epic subtitle ever."
