@@ -1,3 +1,3 @@
-module github.com/Lednerb/billberry-hugo-theme-example
+module github.com/Lednerb/billberry-hugo-theme/exampleSite
 
 go 1.12
