@@ -35,3 +35,11 @@ other = "Autres langues"
 one = "1 Min. lecture"
 other = "{{.Count}} Min. lecture"
 
+[tableOfContents]
+other = "Table des Contenus"
+
+[series]
+other = "Séries"
+
+[archive]
+other = "Archives"
