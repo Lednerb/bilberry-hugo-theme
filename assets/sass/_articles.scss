@@ -44,6 +44,12 @@ article {
 
             a {
                 font-style: normal;
+                color: inherit;
+
+                &:hover {
+                    color: $highlight-color;
+                    text-decoration: none;
+                }
             }
         }
 
@@ -81,7 +87,13 @@ article {
             margin-bottom: 4.5%;
 
             a {
+                color: inherit;
                 font-style: normal;
+
+                &:hover {
+                    color: $highlight-color;
+                    text-decoration: underline;
+                }
             }
 
             span {
@@ -102,20 +114,24 @@ article {
         }
 
         a {
-            font-style: italic;
+            font-style: normal;
+            color: $highlight-color;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
         a.more {
             display: block;
-            margin: 2.5rem 0;
-            margin-bottom: 1rem;
+            margin: 2.5rem 0 1rem;
             color: $highlight-color;
             font-size: 1.125em;
             text-decoration: none;
             font-style: normal;
 
             &:hover {
-                color: $continue-reading-hover-color;
+                text-decoration: underline;
             }
         }
 
@@ -156,6 +172,7 @@ article {
                     &:hover {
                         left: 10px;
                         color: $base-color;
+                        text-decoration: none;
                     }
                 }
             }
