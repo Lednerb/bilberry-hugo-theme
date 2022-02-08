@@ -659,7 +659,7 @@ js_modules = ["..", "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cooki
 
 
 ## Translations
-Bilberry theme has built-in support for multi-language sites, and currently supports translations for more than 10 languages.
+Bilberry theme has built-in support for multi-language sites, and currently supports translations for more than 20 languages.
 
 Feel free to submit a request for a new language translation or improve existing ones!
 
