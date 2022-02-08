@@ -1,6 +1,6 @@
 # Bilberry Hugo Theme
 [![GitHub version](https://img.shields.io/github/release/Lednerb/bilberry-hugo-theme/all.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/releases)
-[![Hugo Version](https://img.shields.io/badge/Hugo-%5E0.56.3-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
+[![Hugo Version](https://img.shields.io/badge/Hugo-%5E0.77.0-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
 [![Hugo Themes](https://img.shields.io/badge/Hugo_Themes-@Bilberry-ff4088)](https://themes.gohugo.io/themes/bilberry-hugo-theme/)
 
 [![Build GH-Pages](https://github.com/Lednerb/bilberry-hugo-theme/workflows/Update%20GitHub%20Pages/badge.svg)](https://github.com/Lednerb/bilberry-hugo-theme/deployments/activity_log?environment=github-pages)
@@ -79,7 +79,7 @@ Please use the following guidelines if you want to start a discussion:
 
 ## Requirements
 
-**Hugo version >= 0.53 required**; see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.  
+**Hugo version >= 0.77.0 required**; see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.  
 Only when using theme as Hugo module:  
 **Go version >= 1.12 required**; download Go installer [here](https://go.dev/dl/)  
 **Git required**; download Git installer [here](https://git-scm.com/downloads)
