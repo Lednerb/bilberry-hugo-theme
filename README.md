@@ -256,7 +256,7 @@ Execute the `hugo` command in the site's root directory to generate the index fi
 6. In case you have a multi-language setup, make sure that you repeat the steps above for all `public/{LANG}/index.json` files.
 
 Also, you can read this [write-up](https://www.kiroule.com/article/automate-data-upload-to-algolia-index-revisited/) on how to automate
-data upload to Algolia index if you host your Bilberry theme-based website on Netlify.
+data upload to Algolia index if you host your Bilberry theme-based website on Netlify, or this [write-up](https://www.kiroule.com/article/automate-data-upload-to-algolia-index-with-github-actions/) using GitHub Actions.
 
 
 ### Keyboard Shortcuts
