@@ -341,10 +341,10 @@ For a featured image to be cropped and resized, it should be named `featuredImag
 Also, it should be placed within the page bundle in question, for example:
 ```shell
 content
-├── article
-│   ├── my-post-with-featured-image
-│   │   ├── featuredImage.png
-│   │   └── index.md
+└── article
+    └── my-post-with-featured-image
+        ├── featuredImage.png
+        └── index.md
 ```
 **NOTE**: a featured image defined via the `featuredImage` front matter parameter will **NOT** be cropped and resized.
 
