@@ -77,7 +77,7 @@ Please use the following guidelines if you want to start a discussion:
 
 **Hugo version >= 0.77.0 required**; see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.  
 Only when using theme as Hugo module:  
-**Git required**; download Git installer [here](https://git-scm.com/downloads)
+**Git optional**; download Git installer [here](https://git-scm.com/downloads)
 
 ## Quick Start
 
@@ -333,10 +333,20 @@ Once you complete the prerequisites for your GitHub repository, set the `utteran
 Bilberry theme is optimized to look good on all devices, namely desktops, tablets and smartphones.
 
 ### Automatic Image Resizing
-Bilberry theme includes built-in automatic cropping and image resizing, activated by default.
+Bilberry theme includes built-in automatic cropping and resizing only for **featured** and **gallery** images, activated by default.
 However, if you want to disable it, set the `resizeImages` parameter to `false` in the `config.toml` file.
-Also, this feature can be disabled at the post level by setting the `resizeImages` front matter variable to `false`. 
+Also, this feature can be disabled at the post level by setting the `resizeImages` front matter variable to `false`.
 
+For a featured image to be cropped and resized, it should be named `featuredImage.*` where the `*` is the image file extension, e.g., `jpg`, `png`, etc.
+Also, it should be placed within the page bundle in question, for example:
+```shell
+content
+├── article
+│   ├── my-post-with-featured-image
+│   │   ├── featuredImage.png
+│   │   └── index.md
+```
+**NOTE**: a featured image defined via the `featuredImage` front matter parameter will **NOT** be cropped and resized.
 
 ### Image Modal Zoom
 When you include an image that is larger than the content area, the image becomes interactive and a larger version can be opened in a lightbox.
