@@ -127,7 +127,7 @@ environment-specific settings for a Hugo-based website.
 ### Post Types
 Bilberry theme comes with a set of predefined post types, namely `article`, `audio`, `code`, `gallery`, `link`, `page`, `quote`, `status`, and `video` where the `article` type is the default one.
 
-To create a new content, use the `hugo new` command. Content can be created in two ways: a single page or a page bundle.
+To create a new content, use the `hugo new` command. Content can be created in two ways: a single page or a [page bundle](https://gohugo.io/content-management/page-bundles/).
 
 To create new content as a single page, you can use the following command:
 ```shell
