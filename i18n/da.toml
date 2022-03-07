@@ -17,7 +17,7 @@ other = "Seneste indlæg"
 other = "Søg ..."
 
 [noSearchResults]
-other = "Intet fundet."
+other = "Ingen resultater fundet."
 
 [olderPosts]
 other = "Ældre indlæg"
@@ -32,6 +32,6 @@ other = "Fortsæt med at læse"
 other = "Andre sprog"
 
 [readingTime]
-one = "1 min læse"
-other = "{{.Count}} min læse"
+one = "1 min at læse"
+other = "{{.Count}} min at læse"
 
