@@ -45,8 +45,7 @@
     {{ .Scratch.Set "title" (.Title) }}
 {{- end -}}
 
-<!doctype html>
-<html class="no-js" lang="{{ .Site.Language.Lang }}">
+<html itemscope itemtype="https://schema.org/WebPage" class="no-js" lang="{{ .Site.Language.Lang }}">
 
 <head>
     <meta charset="utf-8">
@@ -65,7 +64,6 @@
            {{ end }}
         {{ end }}
     </title>
-    <meta name="description" content="{{ .Scratch.Get "description" }}">
     <meta itemprop="name" content="{{ .Scratch.Get "title" }}">
     <meta itemprop="description" content="{{ .Scratch.Get "description" }}">
     <meta property="og:title" content="{{ .Scratch.Get "title" }}">
@@ -124,7 +122,7 @@
     {{ end }}
 
 
-    <script type="text/javascript" src="{{ "theme.js" | absURL }}"></script>
+    <script src="{{ "theme.js" | absURL }}"></script>
 
     {{ if isset .Site.Params "js_modules" }}
     {{ range .Site.Params.js_modules }}

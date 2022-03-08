@@ -3,11 +3,13 @@
 </a>
 
 <article class="gallery">
+    {{ $img_alt := .ctx.Title }}
+
     {{ if and (isset .ctx.Params "gallery") (ne .ctx.Params.gallery "") }}
         <div class="flexslider">
             <ul class="slides">
                 {{ range .ctx.Params.gallery }}
-                    <li><img src="{{ . | relURL }}" /></li>
+                    <li><img alt="{{ $img_alt }}" src="{{ . | relURL }}" /></li>
                 {{ end }}
             </ul>
         </div>
@@ -16,11 +18,11 @@
             <ul class="slides">
                 {{ if and (.ctx.Site.Params.resizeImages | default true) (.ctx.Params.resizeImages | default true) }}
                     {{ range .ctx.Resources.ByType "image" }}
-                        <li><img src="{{ (.Fill "700x350 q95").RelPermalink }}" /></li>
+                        <li><img alt="{{ $img_alt }}" src="{{ (.Fill "700x350 q95").RelPermalink }}" /></li>
                     {{ end }}
                 {{ else }}
                     {{ range .ctx.Resources.ByType "image" }}
-                        <li><img src="{{ .RelPermalink }}" /></li>
+                        <li><img alt="{{ $img_alt }}" src="{{ .RelPermalink }}" /></li>
                     {{ end }}
                 {{ end }}
             </ul>

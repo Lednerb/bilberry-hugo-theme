@@ -15,7 +15,7 @@
 
 {{ if eq .type "vimeo" }}
     <div class="responsive-video vimeo">
-        <iframe class="no-js-hidden" src="https://player.vimeo.com/video/{{ .id }}" frameborder="0"
+        <iframe class="no-js-hidden" src="https://player.vimeo.com/video/{{ .id }}"
                 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
         <div class="no-js-message">
@@ -31,7 +31,7 @@
 
 {{ if eq .type "prezi" }}
     <div class="responsive-video prezi">
-        <iframe class="no-js-hidden" src="https://prezi.com/v/embed/{{ .id }}/" frameborder="0" webkitallowfullscreen mozallowfullscreen
+        <iframe class="no-js-hidden" src="https://prezi.com/v/embed/{{ .id }}/" webkitallowfullscreen mozallowfullscreen
                 allowfullscreen></iframe>
 
         <div class="no-js-message">
@@ -49,7 +49,7 @@
     <div class="responsive-video bilibili" style="padding-bottom: 75%">
         <iframe
             class="no-js-hidden" src="https://player.bilibili.com/player.html?bvid={{ .id }}&page=1&as_wide=1&high_quality=1&danmaku=0"
-            scrolling="no" frameborder="no" framespacing="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+            scrolling="no" framespacing="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
         </iframe>
 
         <div class="no-js-message">
@@ -67,7 +67,7 @@
 {{- $srcUrl := urls.Parse .id -}}
 {{- $embedUrl := printf "%s://%s/videos/embed/%s" $srcUrl.Scheme $srcUrl.Host ($srcUrl.Path | path.Base) -}}
     <div class="responsive-video peertube">
-      <iframe class="no-js-hidden" sandbox="allow-same-origin allow-scripts allow-popups" src="{{ $embedUrl }}" frameborder="0" allowfullscreen></iframe>
+      <iframe class="no-js-hidden" sandbox="allow-same-origin allow-scripts allow-popups" src="{{ $embedUrl }}" allowfullscreen></iframe>
 
       <div class="no-js-message">
 	The PeerTube player can not be loaded with disabled JavaScript. <br>
