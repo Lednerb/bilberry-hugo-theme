@@ -385,7 +385,7 @@ The first option is to use a post of the `video` type. Use the following command
 hugo new video/<post-name>.md
 ```
 
-Then set the corresponding front matter variable:
+Then set the appropriate front matter variable while removing the others:
 ```markdown
 youtube: "<youtube-video-id>"            # https://www.youtube.com/watch?v=M7IjJiZUutk -> "M7IjJiZUutk"
 vimeo: "<vimeo-video-id>"                # https://vimeo.com/239830182 -> "239830182"
@@ -443,7 +443,7 @@ The first option is to use a post of the `audio` type. Use the following command
 hugo new audio/<post-name>.md
 ```
 
-Then set the corresponding front matter variable:
+Then set the appropriate front matter variable while removing the others:
 ```markdown
 spotify: "<spotify-track-id>"        # https://open.spotify.com/track/3W2lz1sg6m4sEzjmoTjmdE?si=0659fd12179840dd --> 3W2lz1sg6m4sEzjmoTjmdE
 soundcloud: "<soundcloud-track-url>" # https://soundcloud.com/lightbooks/alchemist-08-new-world-order-snip
