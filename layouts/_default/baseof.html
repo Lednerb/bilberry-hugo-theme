@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 {{ if eq .Type "gallery" }}
     {{ $image := (index (.Resources.ByType "image") 0 ) }}
     {{ $imageUrl := "" }}
