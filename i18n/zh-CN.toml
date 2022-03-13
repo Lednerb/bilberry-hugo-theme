@@ -14,13 +14,13 @@ other = "社交媒体"
 other = "最新帖子"
 
 [search]
-other = "搜索 ..."
+other = "搜索……"
 
 [noSearchResults]
 other = "什么都没找到。"
 
 [olderPosts]
-other = "以前的帖子"
+other = "较旧的帖子"
 
 [newerPosts]
 other = "较新的帖子"
@@ -32,5 +32,5 @@ other = "继续阅读"
 other = "其他语言"
 
 [readingTime]
-other = "1 分钟阅读"
+other = "需要 {{.Count}} 分钟阅读"
 
