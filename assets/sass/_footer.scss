@@ -52,7 +52,6 @@ footer {
 
         .right {
             .external-profiles {
-
                 width: 100%;
                 margin-bottom: 2em;
 
@@ -69,28 +68,27 @@ footer {
                 // Workaround to avoid conflicts with Adblock
                 // See: https://github.com/Lednerb/bilberry-hugo-theme/issues/95
                 .fa-facebook-adblock-proof:before {
-                    content:"\f09a";
+                    content: "\f09a";
                 }
 
                 .fa-twitter-adblock-proof:before {
-                    content:"\f099";
+                    content: "\f099";
                 }
 
                 .fa-google-plus-official-adblock-proof:before {
-                    content:"\f2b3";
+                    content: "\f2b3";
                 }
 
                 .fa-youtube-adblock-proof:before {
-                    content:"\f167";
+                    content: "\f167";
                 }
             }
 
             .languages {
                 width: 100%;
-
                 margin-left: 0;
-
                 margin-bottom: 2em;
+
                 a {
                     text-transform: uppercase;
                     color: $highlight-color;
@@ -113,16 +111,13 @@ footer {
 
             .archive {
                 width: 100%;
-
                 margin-left: 0;
             }
 
             strong {
                 display: block;
             }
-
         }
-
     }
 }
 
