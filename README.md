@@ -116,8 +116,11 @@ Renaming this folder will break your site.
 Also, check out this [tutorial](https://www.kiroule.com/article/start-blogging-with-github-hugo-and-netlify/) on how to build a Bilberry theme-based website using Hugo, GitHub, and Netlify.
 
 ## Configuration
-To customize your site according to your needs, simply edit the `config.toml` file in the site's root directory by adjusting the settings. 
+To customize your site according to your needs, edit the `config.toml` file in the site's root directory by adjusting the settings. 
 All parameters that need to be configured are commented out or disabled.
+
+The Algolia Search is enabled in the `config.toml` file that comes with the example site; 
+therefore, if you don't plan to use it, disable it by setting the `algolia_search` property to `false`.
 
 Also, you can read this [write-up](https://www.kiroule.com/article/manage-environment-specific-settings-for-hugo-based-website/) on how to manage
 environment-specific settings for a Hugo-based website.
