@@ -47,14 +47,16 @@ nav {
         flex-wrap: wrap;
         align-items: center;
         margin: 0;
+        padding: 0;
 
         li {
-            margin-bottom: 0;
+            margin: 0;
             display: flex;
 
             a {
+                margin: 0;
                 text-align: center;
-                padding: 1em 1.5em;
+                padding: 1em 1.4em;
                 display: flex;
 
                 &:hover {
@@ -105,7 +107,9 @@ nav {
 
             .aa-dropdown-menu {
                 width: 100%;
-                border-radius: 4px;
+                overflow: hidden;
+                border-radius: 1em;
+                padding: 0.5em;
 
                 .empty {
                     padding: 0.5em 1em;
@@ -124,7 +128,6 @@ nav {
                         top: 0.1em;
                     }
                 }
-
             }
 
             .aa-suggestion {
@@ -207,7 +210,7 @@ nav {
             cursor: pointer;
         }
 
-        .aa-suggestion+.aa-suggestion {
+        .aa-suggestion + .aa-suggestion {
             border-top: 1px solid rgba($algolia-border-color, 0.6);
         }
 
