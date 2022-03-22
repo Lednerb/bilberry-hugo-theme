@@ -1,14 +1,12 @@
 @media (max-width: $site-width) {
-
     nav {
-
         &.permanentTopNav {
             display: none;
         }
 
         .container {
             flex-direction: column-reverse;
-            padding: 0 1.5em;
+            padding: 1em 2em;
 
             .topnav {
                 flex-direction: column;
@@ -43,15 +41,27 @@
         width: 100%;
 
         .container {
-            padding: 0 1em;
+            padding: 0 30px;
+            .titles {
+                font-size: 1.5rem;
+                line-height: 140%;
+                .title {
+                    font-size: 3rem;
+                    line-height: 160%;
+                }
+            }
         }
 
         .toggler {
-            right: 1.5em;
+            right: 14px;
 
             &.permanentTopNav {
                 display: block;
             }
+        }
+
+        .languages {
+            right: 14px;
         }
     }
 
@@ -74,7 +84,7 @@
     }
 
     .main article {
-        margin: 0;
+        margin: 14px;
         width: 100%;
 
         &:before,
@@ -93,14 +103,13 @@
     }
 
     footer .container {
-        padding: 4rem 1.5em;
+        padding: 3em 2em 2em 2em;
         flex-direction: column;
         text-align: center;
 
         div {
             width: 100%;
-            margin: 0 !important;
-            margin-top: 1.5em !important;
+            margin: 0;
         }
     }
 
