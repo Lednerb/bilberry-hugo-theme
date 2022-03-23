@@ -86,14 +86,17 @@ $(document).ready(function () {
 
     // Keyboard-Support
     $(document).keyup(function (e) {
-        if (e.keyCode === 27) {
-            if (!$("nav").hasClass('permanentTopNav'))
+        if (e.code === 'Escape') {
+            if (!$("nav").hasClass('permanentTopNav')) {
                 $("nav").slideUp();
-            $("#search").autocomplete("val", "");
-        }
-        else if (e.keyCode === 83 && !blockSearchFocusCommento || !blockSearchFocusUtterances || !blockSearchFocusGiscus) {
-            if (!$("nav").hasClass('permanentTopNav'))
+            }
+            $("#search").autocomplete("val", "").blur();
+        } else if (e.code === 'KeyS' && (!blockSearchFocusCommento
+            || !blockSearchFocusUtterances || !blockSearchFocusGiscus)) {
+
+            if (!$("nav").hasClass('permanentTopNav')) {
                 $("nav").slideDown();
+            }
             $("#search").focus();
         }
     })
