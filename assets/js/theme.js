@@ -90,8 +90,7 @@ $(document).ready(function () {
             if (!$("nav").hasClass('permanentTopNav')) {
                 $("nav").slideUp();
             }
-            $("#search").autocomplete("val", "");
-            $("#search").blur();
+            $("#search").autocomplete("val", "").blur();
         } else if (e.code === 'KeyS' && (!blockSearchFocusCommento
             || !blockSearchFocusUtterances || !blockSearchFocusGiscus)) {
 
