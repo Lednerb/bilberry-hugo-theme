@@ -1,6 +1,6 @@
 # Bilberry Hugo Theme
 [![GitHub version](https://img.shields.io/github/release/Lednerb/bilberry-hugo-theme/all.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/releases)
-[![Hugo Version](https://img.shields.io/badge/Hugo-%5E0.77.0-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
+[![Hugo Version](https://img.shields.io/badge/Hugo-%5E0.83.0-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
 [![Hugo Themes](https://img.shields.io/badge/Hugo_Themes-@Bilberry-ff4088)](https://themes.gohugo.io/themes/bilberry-hugo-theme/)
 
 [![Build GH-Pages](https://github.com/Lednerb/bilberry-hugo-theme/workflows/Update%20GitHub%20Pages/badge.svg)](https://github.com/Lednerb/bilberry-hugo-theme/deployments/activity_log?environment=github-pages)
@@ -46,6 +46,7 @@ Please use the following guidelines if you want to start a discussion:
     - [No Summary Split](#no-summary-split)
   - [Table of Contents (TOC)](#table-of-contentstoc)
   - [Series Taxonomy](#series-taxonomy)
+  - [Google Analytics](#google-analytics)
   - [Comments](#comments)
     - [Commento](#commento)
     - [Disqus](#disqus)
@@ -269,6 +270,17 @@ The page at `<site-base-url>/series/` will list all the series. To list all arti
 {{< series "My New Super Series" >}}
 ```
 
+### Google Analytics
+Bilberry theme comes with built-in support for both v3 and v4 of [Google Analytics](https://analytics.google.com/analytics/web/). 
+You should set the value of the `googleAnalytics` property in the `config.toml` file to enable it.
+
+Such value for Universal Analytics v3 is prefixed with the `UA` letters. 
+So, suppose you migrate your existing website to the Bilberry theme, and your website is already tracked in Universal Analytics, given that the corresponding property was created before October 14, 2020. 
+In that case, you should continue using the v3 value in the `config.toml` file. 
+But given that Universal Analytics will no longer process new data in standard properties beginning July 1, 2023, you will have to create a Google Analytics v4 property linked to your v3 property.
+
+If you created your property after October 14, 2020, you're likely using a Google Analytics v4 property already, and the value for such property is prefixed with the `G` letter. 
+In that case, you should use the v4 value in the `config.toml` file.
 
 ### Comments
 To allow readers to comment under your articles, you can use either [Commento](https://commento.io/), [Disqus](https://disqus.com/), [Giscus](https://giscus.app/), or [Utterances](https://utteranc.es/).
