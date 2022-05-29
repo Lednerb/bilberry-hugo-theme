@@ -76,7 +76,7 @@ Please use the following guidelines if you want to start a discussion:
 
 ## Requirements
 
-**Hugo version >= 0.77.0 required**; see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.  
+**Hugo version >= 0.83.0 required**; see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.  
 Only when using theme as Hugo module:  
 **Git optional**; download Git installer [here](https://git-scm.com/downloads)
 
