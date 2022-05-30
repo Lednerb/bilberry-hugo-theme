@@ -27,6 +27,10 @@ Please use the following guidelines if you want to start a discussion:
 
 - [Requirements](#requirements)
 - [Quick Start](#quick-start)
+  - [Initial Setup](#initial-setup)
+  - [Theme Installation Options](#theme-installation-options)
+    - [Cloning/Copying the Theme Files](#cloningcopying-the-theme-files) 
+    - [Adding the theme as a Hugo Module](#adding-the-theme-as-a-hugo-module) 
 - [Configuration](#configuration)
 - [Features](#features)
   - [Post Types](#post-types) 
@@ -82,16 +86,38 @@ Please use the following guidelines if you want to start a discussion:
 
 ## Quick Start
 
-- Create a new site:
+### Initial Setup
+- Clone the Bilberry Hugo theme repository to your local computer: 
+```shell
+git clone https://github.com/Lednerb/bilberry-hugo-theme.git
 ```
+Alternatively, you can download it as a [ZIP](https://github.com/Lednerb/bilberry-hugo-theme/archive/master.zip) file and unzip into the `bilberry-hugo-theme` directory.
+
+- Create a new site:
+```shell
 hugo new site my-new-blog
 ```
 
-- Install the latest version of this theme:
+- Copy example site content including the `config.toml` file:
+```shell
+cp -r bilberry-hugo-theme/exampleSite/* my-new-blog
 ```
-cd my-new-blog/themes
-git clone https://github.com/Lednerb/bilberry-hugo-theme.git
+
+- Remove the default archetype:
+```shell
+rm my-new-blog/archetypes/default.md
 ```
+
+### Theme Installation Options
+#### Cloning/Copying the Theme Files
+Use this option if you want to directly customize and maintain your own copy of the theme.
+- Copy cloned(or unzipped) theme files in previous step to `my-new-blog/themes` directory 
+```
+cp -r bilberry-hugo-theme my-new-blog/themes/bilberry-hugo-theme
+```
+
+#### Adding the theme as a Hugo Module
+- TODO
 If you don't use **Git**, you can download this theme [here](https://github.com/Lednerb/bilberry-hugo-theme/archive/master.zip) and extract it manually into the `themes` folder.
 Make sure the folder containing the extracted theme is named `bilberry-hugo-theme`.
 
