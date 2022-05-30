@@ -501,6 +501,18 @@ If you want to include raw HTML in your markdown content, set the `unsafe` setti
     unsafe = true
 ```
 
+
+## [Add hugo contact form](https://fabform.io/a/hugo-contact-form)
+
+```
+<form action="https://fabform.io/f/{form-id}" method="post">
+ <label for="email">Your Email</label>
+ <input name="email" type="email">
+ <button type="submit">Submit</button> 
+</form>
+```
+
+
 ## Favicons
 To add favicons, proceed with the following steps:
 1. Visit https://realfavicongenerator.net/ website, and generate favicons according to your needs.
