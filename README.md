@@ -27,11 +27,13 @@ Please use the following guidelines if you want to start a discussion:
 
 - [Requirements](#requirements)
 - [Quick Start](#quick-start)
-  - [Initial Setup](#initial-setup)
+  - [Site Initial Setup](#site-initial-setup)
   - [Theme Installation Options](#theme-installation-options)
-    - [Cloning/Copying the Theme Files](#cloningcopying-the-theme-files) 
-    - [Adding the theme as a Hugo Module](#adding-the-theme-as-a-hugo-module) 
-- [Configuration](#configuration)
+    - [Option 1(recommended): Adding the Theme as a Hugo Module](#option-1recommended-adding-the-theme-as-a-hugo-module) 
+    - [Option 2: Cloning/Copying the Theme Files](#option-2-cloningcopying-the-theme-files) 
+  - [Configuration](#configuration)
+  - [Webserver](#webserver)
+  - [Other Tutorials](#other-tutorials)
 - [Features](#features)
   - [Post Types](#post-types) 
   - [Top Navigation Bar](#top-navigation-bar)
@@ -79,78 +81,75 @@ Please use the following guidelines if you want to start a discussion:
 - [License](#license)
 
 ## Requirements
-
 - **Hugo** (version >= 0.83.0), see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.
 - **Git**, see this [guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on how to install Git.
 - **Go** (version >= 1.18), optional, required only when the Bilberry theme is used as a Hugo module; see this [guide](https://go.dev/doc/install) on how to install Go. 
 
 ## Quick Start
 
-### Initial Setup
+### Site Initial Setup
 - Clone the Bilberry Hugo theme repository to your local computer: 
 ```shell
 git clone https://github.com/Lednerb/bilberry-hugo-theme.git
 ```
-Alternatively, you can download it as a [ZIP](https://github.com/Lednerb/bilberry-hugo-theme/archive/master.zip) file and unzip into the `bilberry-hugo-theme` directory.
+Alternatively, you can download it as a [ZIP](https://github.com/Lednerb/bilberry-hugo-theme/archive/master.zip) file and extract into the `bilberry-hugo-theme` directory.
 
 - Create a new site:
 ```shell
 hugo new site my-new-blog
 ```
 
-- Copy example site content including the `config.toml` file:
+- Copy the example site content including the `config.toml` file:
 ```shell
 cp -r bilberry-hugo-theme/exampleSite/* my-new-blog
 ```
 
-- Remove the default archetype:
+- Delete the default archetype:
 ```shell
 rm my-new-blog/archetypes/default.md
 ```
 
 ### Theme Installation Options
-#### Cloning/Copying the Theme Files
+#### Option 1(recommended): Adding the Theme as a Hugo Module
+
+#### Option 2: Cloning/Copying the Theme Files
 Use this option if you want to directly customize and maintain your own copy of the theme.
 - Copy cloned(or unzipped) theme files in previous step to `my-new-blog/themes` directory 
-```
+```shell
 cp -r bilberry-hugo-theme my-new-blog/themes/bilberry-hugo-theme
 ```
 
-#### Adding the theme as a Hugo Module
+#### Adding the Theme as a Hugo Module
 - TODO
 If you don't use **Git**, you can download this theme [here](https://github.com/Lednerb/bilberry-hugo-theme/archive/master.zip) and extract it manually into the `themes` folder.
 Make sure the folder containing the extracted theme is named `bilberry-hugo-theme`.
 
 - Copy example site content including the `config.toml` file:
-```
+```shell
 cp -r bilberry-hugo-theme/exampleSite/* ../
-```
-
-- Remove the default archetype:
-```
-cd ../
-rm archetypes/default.md
-```
-
-- Configure the necessary properties in the `config.toml` file. Then start the webserver and to publish your website:
-```
-hugo server
 ```
 
 **Important:** Do NOT change the name of the `bilberry-hugo-theme` folder.
 Renaming this folder will break your site.
 
-Also, check out this [tutorial](https://www.kiroule.com/article/start-blogging-with-github-hugo-and-netlify/) on how to build a Bilberry theme-based website using Hugo, GitHub, and Netlify.
-
-## Configuration
-To customize your site according to your needs, edit the `config.toml` file in the site's root directory by adjusting the settings. 
+### Configuration
+To customize website according to your needs, edit the `config.toml` file in the site's root directory by adjusting the settings. 
 All parameters that need to be configured are commented out or disabled.
 
 The Algolia Search is enabled in the `config.toml` file that comes with the example site; 
 therefore, if you don't plan to use it, disable it by setting the `algolia_search` property to `false`.
 
-Also, you can read this [write-up](https://www.kiroule.com/article/manage-environment-specific-settings-for-hugo-based-website/) on how to manage
-environment-specific settings for a Hugo-based website.
+### Webserver
+To build and serve the site, execute the following command from the site's root:
+```shell
+cd my-new-blog
+hugo server
+```
+
+### Other Tutorials
+- [Start Blogging With Hugo, GitHub, and Netlify](https://www.kiroule.com/article/start-blogging-with-github-hugo-and-netlify/)
+- [Configure Custom Domain and HTTPS on Netlify](https://www.kiroule.com/article/configure-custom-domain-and-https-in-netlify/)
+- [Manage Environment-Specific Settings for Hugo-Based Website](https://www.kiroule.com/article/manage-environment-specific-settings-for-hugo-based-website/)
 
 ## Features
 
