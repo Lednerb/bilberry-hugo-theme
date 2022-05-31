@@ -29,7 +29,7 @@ Please use the following guidelines if you want to start a discussion:
 - [Quick Start](#quick-start)
   - [Site Initial Setup](#site-initial-setup)
   - [Theme Installation Options](#theme-installation-options)
-    - [Option 1(recommended): Adding the Theme as a Hugo Module](#option-1recommended-adding-the-theme-as-a-hugo-module) 
+    - [Option 1(recommended): Adding the Theme as a Hugo Module](#option-1-recommended-adding-the-theme-as-a-hugo-module) 
     - [Option 2: Cloning/Copying the Theme Files](#option-2-cloningcopying-the-theme-files) 
   - [Configuration](#configuration)
   - [Webserver](#webserver)
@@ -110,27 +110,30 @@ rm my-new-blog/archetypes/default.md
 ```
 
 ### Theme Installation Options
-#### Option 1(recommended): Adding the Theme as a Hugo Module
-Use this option if you want to pull in the theme files from the main Bilberry Hugo theme repository at your chosen revision.
+#### Option 1 (recommended): Adding the Theme as a Hugo Module
+Use this option if you want to pull in the theme files from the main Bilberry Hugo theme repository at your chosen revision. 
 This option makes it easy to keep the theme up to date on your site.
  
-- In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Option 1**, and comment out the `theme` property for **Option 2**:
-```toml
-# Option 1(recommended): Adding the Theme as a Hugo Module
-theme = "github.com/Lednerb/bilberry-hugo-theme/v3"
-
-# Option 2: Cloning/Copying the Theme Files
-# theme = "bilberry-hugo-theme"
-```
-
 - Initialize your website as a Hugo module from the site's root:
 ```shell
 cd my-new-blog
 hugo mod init github.com/<your-user>/my-new-blog
 ```
+Following the Hugo module initialization, you may have the following warning: module "github.com/Lednerb/bilberry-hugo-theme/v3" not found, which should be ignored. 
+
+If you need more details on how to use Hugo modules, please read the [Hugo documentation](https://gohugo.io/hugo-modules/use-modules/).
 
 #### Option 2: Cloning/Copying the Theme Files
 Use this option if you want to directly customize and maintain your own copy of the theme.
+
+- In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Option 2**, and comment out the `theme` property for **Option 1**:
+```toml
+# Option 1 (recommended): Adding the Theme as a Hugo Module
+# theme = "github.com/Lednerb/bilberry-hugo-theme/v3"
+
+# Option 2: Cloning/Copying the Theme Files
+theme = "bilberry-hugo-theme"
+```
 
 - Copy cloned(or unzipped) theme files in previous step to the `my-new-blog/themes` directory: 
 ```shell
