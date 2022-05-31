@@ -42,15 +42,17 @@ jobs:
       - name: Adjust the baseURL for gh-pages
         run: sed -i "s/baseURL = .*$/baseURL = \"https:\/\/lednerb.github.io\/bilberry-hugo-theme\/\"/" /tmp/demo-site/config.toml
 
-      - name: Copy theme to the right location
-        run: mkdir /tmp/demo-site/themes/bilberry-hugo-theme && cp -r * /tmp/demo-site/themes/bilberry-hugo-theme
+      - name: Init Hugo module
+        working-directory: /tmp/demo-site
+        run: hugo mod init github.com/Lednerb/bilberry-hugo-theme/exampleSite
 
       - name: Build
-        run: cd /tmp/demo-site && hugo && > public/.nojekyll
+        working-directory: /tmp/demo-site
+        run: hugo && > public/.nojekyll
 
       - name: Deploy to GitHub Pages
         if: success()
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages
           build_dir: ../../../../../../../../tmp/demo-site/public
