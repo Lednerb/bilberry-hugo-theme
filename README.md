@@ -129,10 +129,10 @@ Use this option if you want to directly customize and maintain your own copy of 
 
 - In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Option 2**, and comment out the `theme` property for **Option 1**:
 ```toml
-# Option 1 (recommended): Adding the Theme as a Hugo Module
+# Option 1 (recommended): adding the theme as a hugo module
 # theme = "github.com/Lednerb/bilberry-hugo-theme/v3"
 
-# Option 2: Cloning/Copying the Theme Files
+# Option 2: cloning/copying the theme files
 theme = "bilberry-hugo-theme"
 ```
 
