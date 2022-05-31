@@ -29,7 +29,7 @@ Please use the following guidelines if you want to start a discussion:
 - [Quick Start](#quick-start)
   - [Site Initial Setup](#site-initial-setup)
   - [Theme Installation Options](#theme-installation-options)
-    - [Option 1(recommended): Adding the Theme as a Hugo Module](#option-1-recommended-adding-the-theme-as-a-hugo-module) 
+    - [Option 1 (recommended): Adding the Theme as a Hugo Module](#option-1-recommended-adding-the-theme-as-a-hugo-module) 
     - [Option 2: Cloning/Copying the Theme Files](#option-2-cloningcopying-the-theme-files) 
   - [Configuration](#configuration)
   - [Webserver](#webserver)
