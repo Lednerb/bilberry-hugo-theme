@@ -99,21 +99,22 @@ Alternatively, you can download it as a [ZIP](https://github.com/Lednerb/bilberr
 hugo new site my-new-blog
 ```
 
-- Copy the example site content including the `config.toml` file:
-```shell
-cp -r bilberry-hugo-theme/exampleSite/* my-new-blog
-```
-
 - Delete the default archetype:
 ```shell
 rm my-new-blog/archetypes/default.md
 ```
 
+- Copy the example site content including the `config.toml` file:
+```shell
+cp -r bilberry-hugo-theme/exampleSite/* my-new-blog
+```
+
+
 ### Theme Installation Options
 #### Option 1 (recommended): Adding the Theme as a Hugo Module
-Use this option if you want to pull in the theme files from the main Bilberry Hugo theme repository at your chosen revision. 
-This option makes it easy to keep the theme up to date on your site.
- 
+Use this option if you want to pull in the theme files from the main Bilberry Hugo theme repository. 
+This option makes it easy to keep the theme up to date in your site. 
+
 - Initialize your website as a Hugo module from the site's root:
 ```shell
 cd my-new-blog
