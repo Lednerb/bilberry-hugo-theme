@@ -111,25 +111,33 @@ rm my-new-blog/archetypes/default.md
 
 ### Theme Installation Options
 #### Option 1(recommended): Adding the Theme as a Hugo Module
+Use this option if you want to pull in the theme files from the main Bilberry Hugo theme repository at your chosen revision.
+This option makes it easy to keep the theme up to date on your site.
+ 
+- In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Option 1**, and comment out the `theme` property for **Option 2**:
+```toml
+# Option 1(recommended): Adding the Theme as a Hugo Module
+theme = "github.com/Lednerb/bilberry-hugo-theme/v3"
+
+# Option 2: Cloning/Copying the Theme Files
+# theme = "bilberry-hugo-theme"
+```
+
+- Initialize your website as a Hugo module from the site's root:
+```shell
+cd my-new-blog
+hugo mod init github.com/<your-user>/my-new-blog
+```
 
 #### Option 2: Cloning/Copying the Theme Files
 Use this option if you want to directly customize and maintain your own copy of the theme.
+
 - Copy cloned(or unzipped) theme files in previous step to the `my-new-blog/themes` directory: 
 ```shell
 cp -r bilberry-hugo-theme my-new-blog/themes/bilberry-hugo-theme
 ```
 **Important:** Do NOT change the name of the `themes/bilberry-hugo-theme` folder in your site's root.
 Renaming this folder will break your site.
-
-#### Adding the Theme as a Hugo Module
-- TODO
-If you don't use **Git**, you can download this theme [here](https://github.com/Lednerb/bilberry-hugo-theme/archive/master.zip) and extract it manually into the `themes` folder.
-Make sure the folder containing the extracted theme is named `bilberry-hugo-theme`.
-
-- Copy example site content including the `config.toml` file:
-```shell
-cp -r bilberry-hugo-theme/exampleSite/* ../
-```
 
 ### Configuration
 To customize website according to your needs, edit the `config.toml` file in the site's root directory by adjusting the settings. 
@@ -139,7 +147,7 @@ The Algolia Search is enabled in the `config.toml` file that comes with the exam
 therefore, if you don't plan to use it, disable it by setting the `algolia_search` property to `false`.
 
 ### Webserver
-To build and serve the site, execute the following command from the site's root:
+- To build and serve the site, execute the following command from the site's root:
 ```shell
 cd my-new-blog
 hugo server
