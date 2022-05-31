@@ -136,7 +136,7 @@ Use this option if you want to directly customize and maintain your own copy of 
 theme = "bilberry-hugo-theme"
 ```
 
-- Copy cloned(or unzipped) theme files in previous step to the `my-new-blog/themes` directory: 
+- Copy cloned (or unzipped) theme files in previous step to the `my-new-blog/themes` directory: 
 ```shell
 cp -r bilberry-hugo-theme my-new-blog/themes/bilberry-hugo-theme
 ```
