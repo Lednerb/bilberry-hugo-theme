@@ -114,10 +114,12 @@ rm my-new-blog/archetypes/default.md
 
 #### Option 2: Cloning/Copying the Theme Files
 Use this option if you want to directly customize and maintain your own copy of the theme.
-- Copy cloned(or unzipped) theme files in previous step to `my-new-blog/themes` directory 
+- Copy cloned(or unzipped) theme files in previous step to the `my-new-blog/themes` directory: 
 ```shell
 cp -r bilberry-hugo-theme my-new-blog/themes/bilberry-hugo-theme
 ```
+**Important:** Do NOT change the name of the `themes/bilberry-hugo-theme` folder in your site's root.
+Renaming this folder will break your site.
 
 #### Adding the Theme as a Hugo Module
 - TODO
@@ -128,9 +130,6 @@ Make sure the folder containing the extracted theme is named `bilberry-hugo-them
 ```shell
 cp -r bilberry-hugo-theme/exampleSite/* ../
 ```
-
-**Important:** Do NOT change the name of the `bilberry-hugo-theme` folder.
-Renaming this folder will break your site.
 
 ### Configuration
 To customize website according to your needs, edit the `config.toml` file in the site's root directory by adjusting the settings. 
