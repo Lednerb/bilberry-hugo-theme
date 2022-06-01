@@ -27,7 +27,13 @@ Please use the following guidelines if you want to start a discussion:
 
 - [Requirements](#requirements)
 - [Quick Start](#quick-start)
-- [Configuration](#configuration)
+  - [Site Initial Setup](#site-initial-setup)
+  - [Theme Installation Options](#theme-installation-options)
+    - [Option 1 (recommended): Adding the Theme as a Hugo Module](#option-1-recommended-adding-the-theme-as-a-hugo-module) 
+    - [Option 2: Cloning/Copying the Theme Files](#option-2-cloningcopying-the-theme-files) 
+  - [Configuration](#configuration)
+  - [Webserver](#webserver)
+  - [Other Tutorials](#other-tutorials)
 - [Features](#features)
   - [Post Types](#post-types) 
   - [Top Navigation Bar](#top-navigation-bar)
@@ -75,56 +81,86 @@ Please use the following guidelines if you want to start a discussion:
 - [License](#license)
 
 ## Requirements
-
-**Hugo version >= 0.83.0 required**; see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.  
-Only when using theme as Hugo module:  
-**Git optional**; download Git installer [here](https://git-scm.com/downloads)
+- **Hugo** (version >= 0.83.0), see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.
+- **Git**, see this [guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on how to install Git.
+- **Go** (version >= 1.18), optional, required only when the Bilberry theme is used as a Hugo module; see this [guide](https://go.dev/doc/install) on how to install Go. 
 
 ## Quick Start
 
-- Create a new site:
+### Site Initial Setup
+- Clone the Bilberry Hugo theme repository to your local computer: 
+```shell
+git clone https://github.com/Lednerb/bilberry-hugo-theme.git
 ```
+Alternatively, you can download it as a [ZIP](https://github.com/Lednerb/bilberry-hugo-theme/archive/master.zip) file and extract into the `bilberry-hugo-theme` directory.
+
+- Create a new site:
+```shell
 hugo new site my-new-blog
 ```
 
-- Install the latest version of this theme:
-```
-cd my-new-blog/themes
-git clone https://github.com/Lednerb/bilberry-hugo-theme.git
-```
-If you don't use **Git**, you can download this theme [here](https://github.com/Lednerb/bilberry-hugo-theme/archive/master.zip) and extract it manually into the `themes` folder.
-Make sure the folder containing the extracted theme is named `bilberry-hugo-theme`.
-
-- Copy example site content including the `config.toml` file:
-```
-cp -r bilberry-hugo-theme/exampleSite/* ../
+- Delete the default archetype:
+```shell
+rm my-new-blog/archetypes/default.md
 ```
 
-- Remove the default archetype:
-```
-cd ../
-rm archetypes/default.md
-```
-
-- Configure the necessary properties in the `config.toml` file. Then start the webserver and to publish your website:
-```
-hugo server
+- Copy the example site content including the `config.toml` file:
+```shell
+cp -r bilberry-hugo-theme/exampleSite/* my-new-blog
 ```
 
-**Important:** Do NOT change the name of the `bilberry-hugo-theme` folder.
+
+### Theme Installation Options
+#### Option 1 (recommended): Adding the Theme as a Hugo Module
+Use this option if you want to pull in the theme files from the main Bilberry Hugo theme repository. 
+This option makes it easy to keep the theme up to date in your site. 
+
+- Initialize your website as a Hugo module from the site's root:
+```shell
+cd my-new-blog
+hugo mod init github.com/<your-user>/my-new-blog
+```
+Following the Hugo module initialization, you may have the following warning: module "github.com/Lednerb/bilberry-hugo-theme/v3" not found, which should be ignored. 
+
+If you need more details on how to use Hugo modules, please read the [Hugo documentation](https://gohugo.io/hugo-modules/use-modules/).
+
+#### Option 2: Cloning/Copying the Theme Files
+Use this option if you want to directly customize and maintain your own copy of the theme.
+
+- In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Option 2**, and comment out the `theme` property for **Option 1**:
+```toml
+# Option 1 (recommended): adding the theme as a hugo module
+# theme = "github.com/Lednerb/bilberry-hugo-theme/v3"
+
+# Option 2: cloning/copying the theme files
+theme = "bilberry-hugo-theme"
+```
+
+- Copy cloned (or unzipped) theme files in previous step to the `my-new-blog/themes` directory: 
+```shell
+cp -r bilberry-hugo-theme my-new-blog/themes/bilberry-hugo-theme
+```
+**Important:** Do NOT change the name of the `themes/bilberry-hugo-theme` folder in your site's root.
 Renaming this folder will break your site.
 
-Also, check out this [tutorial](https://www.kiroule.com/article/start-blogging-with-github-hugo-and-netlify/) on how to build a Bilberry theme-based website using Hugo, GitHub, and Netlify.
-
-## Configuration
-To customize your site according to your needs, edit the `config.toml` file in the site's root directory by adjusting the settings. 
+### Configuration
+To customize website according to your needs, edit the `config.toml` file in the site's root directory by adjusting the settings. 
 All parameters that need to be configured are commented out or disabled.
 
 The Algolia Search is enabled in the `config.toml` file that comes with the example site; 
 therefore, if you don't plan to use it, disable it by setting the `algolia_search` property to `false`.
 
-Also, you can read this [write-up](https://www.kiroule.com/article/manage-environment-specific-settings-for-hugo-based-website/) on how to manage
-environment-specific settings for a Hugo-based website.
+### Webserver
+- To build and serve the site, execute the following command from the site's root:
+```shell
+cd my-new-blog
+hugo server
+```
+
+### Other Tutorials
+- [Start Blogging With Hugo, GitHub, and Netlify](https://www.kiroule.com/article/start-blogging-with-github-hugo-and-netlify/)
+- [Configure Custom Domain and HTTPS on Netlify](https://www.kiroule.com/article/configure-custom-domain-and-https-in-netlify/)
+- [Manage Environment-Specific Settings for Hugo-Based Website](https://www.kiroule.com/article/manage-environment-specific-settings-for-hugo-based-website/)
 
 ## Features
 
