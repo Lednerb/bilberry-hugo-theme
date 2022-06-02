@@ -120,14 +120,24 @@ This option makes it easy to keep the theme up to date in your site.
 cd my-new-blog
 hugo mod init github.com/<your-user>/my-new-blog
 ```
-Following the Hugo module initialization, you may have the following warning: module "github.com/Lednerb/bilberry-hugo-theme/v3" not found, which should be ignored. 
 
-If you need more details on how to use Hugo modules, please read the [Hugo documentation](https://gohugo.io/hugo-modules/use-modules/).
+Following the Hugo module initialization, you may have the following warning: module "
+github.com/Lednerb/bilberry-hugo-theme/v3" not found, which should be ignored.
+
+- Pull theme files to add new content to your website:
+
+```shell
+hugo mod vendor
+```
+
+If you need more details on how to use Hugo modules, please read
+the [Hugo documentation](https://gohugo.io/hugo-modules/use-modules/).
 
 #### Option 2: Cloning/Copying the Theme Files
 Use this option if you want to directly customize and maintain your own copy of the theme.
 
-- In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Option 2**, and comment out the `theme` property for **Option 1**:
+- In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Option 2**, and
+  comment out the `theme` property for **Option 1**:
 ```toml
 # Option 1 (recommended): adding the theme as a hugo module
 # theme = "github.com/Lednerb/bilberry-hugo-theme/v3"
@@ -144,11 +154,13 @@ cp -r bilberry-hugo-theme my-new-blog/themes/bilberry-hugo-theme
 Renaming this folder will break your site.
 
 ### Configuration
-To customize website according to your needs, edit the `config.toml` file in the site's root directory by adjusting the settings. 
-All parameters that need to be configured are commented out or disabled.
 
-The Algolia Search is enabled in the `config.toml` file that comes with the example site; 
-therefore, if you don't plan to use it, disable it by setting the `algolia_search` property to `false`.
+To customize website according to your needs, edit the `config.toml` file in the site's root
+directory by adjusting the settings. All parameters that need to be configured are commented out or
+disabled.
+
+The Algolia Search is enabled in the `config.toml` file that comes with the example site; therefore,
+if you don't plan to use it, disable it by setting the `algolia_search` property to `false`.
 
 ### Webserver
 - To build and serve the site, execute the following command from the site's root:
