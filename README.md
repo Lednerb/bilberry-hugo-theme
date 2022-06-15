@@ -229,7 +229,7 @@ To enable and configure search functionality for your site, follow these steps:
 #### Update Algolia Index
 You have to repeat this step every time you change a post or publish a new one to update the search index.
 
-Execute the `hugo` command in the site's root directory to generate the index file.
+Execute the `hugo` command in the site's root directory to generate the `index.json` file.
 
 ##### Manual Upload
 1. Head over to the `public/index.json` file and copy its content.
