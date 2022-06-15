@@ -162,7 +162,7 @@ disqusShortname = ""
 
 
 # customize your available languages for your multi-lingual site
-# or delete the [Languages] blog to use the theme with only one supported language
+# or delete one of the [Languages.xx] blocks to use the theme with only one supported language
 [Languages]
   [Languages.en]
     weight = 1
