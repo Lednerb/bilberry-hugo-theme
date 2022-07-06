@@ -32,6 +32,14 @@ other = "Читать далее"
 other = "Другие языки"
 
 [readingTime]
-one = "1 мин читать"
-other = "{{.Count}} мин читать"
+one = "время чтения 1 мин"
+other = "время чтения {{.Count}} мин"
 
+[tableOfContents]
+other = "Содержание"
+
+[series]
+other = "Подборки"
+
+[archive]
+other = "Архив"
