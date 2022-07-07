@@ -633,7 +633,7 @@ Bilberry uses SCSS for styling and NPM with [Laravel Mix](https://laravel-mix.co
 
 To change any colors or fonts, you have to follow these steps:
 
-1. In your site's `cd themes/bilberry-hugo-theme` directory, execute `npm install`.
+1. In your site's `themes/bilberry-hugo-theme` directory, execute `npm install`.
 2. Modify the `assets/sass/_variables.scss` file to customize your colors. 
 If you want to change the header's color, only edit the `$base-color` variable.
 3. Use `npm run dev` for development and preview purposes and `npm run production` when you're done with the changes.
