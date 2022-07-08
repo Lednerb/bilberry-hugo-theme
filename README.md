@@ -58,23 +58,24 @@ Please use the following guidelines if you want to start a discussion:
     - [Disqus](#disqus)
     - [Giscus](#giscus)
     - [Utterances](#utterances)
+  - [Archive Page](#archive-page)
   - [Responsive Design](#responsive-design)
   - [Automatic Image Resizing](#automatic-image-resizing)
   - [Image Modal Zoom](#image-modal-zoom)
+  - [External Images](#external-images)
   - [MathJAX Markup](#mathjax-markup)
   - [Disabled Javascript Support](#disabled-javascript-support)
   - [Video](#video)
   - [Audio](#audio)
   - [Raw HTML](#raw-html)
-- [Favicons](#favicons)
-- [Custom 404 Page](#custom-404-page)
-- [Archive Page](#archive-page)
-- [Custom Post Types](#custom-post-types)
-- [External Images](#external-images)
-- [Customizing Individual Posts](#customizing-individual-posts)
-- [Custom Colors and Fonts](#custom-colors-and-fonts)
-- [CSS and JS modules](#css-and-js-modules)
-  - [Add Cookie Disclaimer](#add-cookie-disclaimer)
+- [Customizations](#customizations)
+  - [Favicons](#favicons)
+  - [404 Page](#404-page)
+  - [Post Types](#post-types)
+  - [Individual Posts](#individual-posts)
+  - [Colors and Fonts](#colors-and-fonts)
+  - [CSS and JS modules](#css-and-js-modules)
+  - [Cookie Disclaimer](#cookie-disclaimer)
 - [Translations](#translations)
 - [Credits](#credits)
 - [Contributors](#contributors)
@@ -404,6 +405,24 @@ Once you complete the prerequisites for your GitHub repository, set the `utteran
     utterancesCrossOrigin = "anonymous"
 ```
 
+### Archive Page
+
+The archive page will be available at `<site-base-url>/archive/` as soon as you copy
+the `themes/bilberry-hugo-theme/exampleSite/content/archive.md` file to `content` directory of your
+site. By default, the published content is grouped by year. To group the content by year and month,
+set the `archiveDateGrouping` parameter to the `2006-01` value.
+
+To display the archive link in the footer, set the `showArchive` parameter to `true`.
+
+To add the archive link to the top navigation bar, create a new page with the following command:
+
+```shell
+hugo new page/archive.md
+```
+
+Then, in the newly created `content/page/archive.md` file, set the `link` front matter variable to
+the `/archive/` value and completely remove the `target` variable.
+
 ### Responsive Design
 Bilberry theme is optimized to look good on all devices, namely desktops, tablets and smartphones.
 
@@ -426,6 +445,27 @@ content
 ### Image Modal Zoom
 When you include an image that is larger than the content area, the image becomes interactive and a larger version can be opened in a lightbox.
 
+### External Images
+
+If you would like to use external images, such as those stored on another server or in the cloud, as
+a featured image for your article or in the `gallery` post type, you can use them by setting the
+appropriate front matter variables with the full-path URL values:
+
+```markdown
+# /content/article/my-external-featured-image-post.md
+
+featuredImage: "https://example.org/images/my-image.jpg"
+```
+
+```markdown
+# /content/gallery/my-external-gallery-post.md
+
+gallery: [
+"https://example.org/images/gallery-image1.jpg",
+"https://example.org/images/gallery-image2.jpg",
+"https://example.org/images/gallery-image3.jpg"
+]
+```
 
 ### MathJAX Markup
 To enable the [MathJAX](https://www.mathjax.org) markup support, set the `enable_mathjax` parameter to `true` in the `config.toml` file.
@@ -549,7 +589,9 @@ If you want to include raw HTML in your markdown content, set the `unsafe` setti
     unsafe = true
 ```
 
-## Favicons
+## Customizations
+
+### Favicons
 To add favicons, proceed with the following steps:
 1. Visit https://realfavicongenerator.net/ website, and generate favicons according to your needs.
 2. Copy and paste the generated files into your site's `/static` folder.
@@ -560,25 +602,10 @@ To add favicons, proceed with the following steps:
 Also, check out this [tutorial](https://www.kiroule.com/article/add-favicon-to-hugo-based-website/) on how to add favicons to Bilberry theme-based website.
 
 
-## Custom 404 Page
+### 404 Page
 To customize your 404 page, copy the `themes/bilberry-hugo-theme/layouts/404.html` file to your site's `layouts/404.html` and edit the file according to your needs, for example, change the message, icon class etc.
 
-## Archive Page
-The archive page will be available at `<site-base-url>/archive/` as soon as you copy the `themes/bilberry-hugo-theme/exampleSite/content/archive.md` file to `content` directory of your site. 
-By default, the published content is grouped by year. 
-To group the content by year and month, set the `archiveDateGrouping` parameter to the `2006-01` value.
-
-To display the archive link in the footer, set the `showArchive` parameter to `true`. 
-
-To add the archive link to the top navigation bar, create a new page with the following command:
-```shell
-hugo new page/archive.md
-```
-
-Then, in the newly created `content/page/archive.md` file, set the `link` front matter variable to the `/archive/` value and completely remove the `target` variable.
-
-
-## Custom Post Types
+### Post Types
 With Bilberry theme, you can create new post types easily. 
 For example, suppose you want to create a new type named `book`.
 Then you should do the following:
@@ -595,24 +622,7 @@ hugo new book/my-favorite-book.md`
 ```
 If you want to use custom front matter variables, create a `book.md` archetype in your site's `archetypes/` directory.
 
-## External Images
-If you would like to use external images, such as those stored on another server or in the cloud, as a featured image for your article or in the `gallery` post type, you can use them by setting the appropriate front matter variables with the full-path URL values:
-
-```markdown
-# /content/article/my-external-featured-image-post.md
-featuredImage: "https://example.org/images/my-image.jpg"
-```
-
-```markdown
-# /content/gallery/my-external-gallery-post.md
-gallery: [
-    "https://example.org/images/gallery-image1.jpg",
-    "https://example.org/images/gallery-image2.jpg",
-    "https://example.org/images/gallery-image3.jpg"
-]
-```
-
-## Individual Posts Customization
+### Individual Posts
 You can customize your posts as follows:
 
 1. To exclude posts from your blog's index but still show up in categories, add `excludeFromIndex: true` to your post's front matter.
@@ -628,7 +638,7 @@ The `pinOnlyToFirstPage` parameter allows you to choose whether to display pinne
 Otherwise, your changes will be overwritten when you update the theme to the latest version.
 
 
-## Custom Colors and Fonts
+### Colors and Fonts
 Bilberry uses SCSS for styling and NPM with [Laravel Mix](https://laravel-mix.com/) for the dependency management.
 
 To change any colors or fonts, you have to follow these steps:
@@ -639,14 +649,14 @@ If you want to change the header's color, only edit the `$base-color` variable.
 3. Use `npm run dev` for development and preview purposes and `npm run production` when you're done with the changes.
 
 
-## CSS and JS modules
+### CSS and JS modules
 This theme supports hot-swappable CSS and JavaScript extensions. 
 Modules can be specified using the `(css|js)_modules` list parameter. 
 Modules can be specified either relative to the `static` directory (e.g. `exampleSite/static/css/custom.css`) or as a URL.
 
 Modules are imported in the order they appear in the list, and immediately after the default Bilberry CSS and JS files are imported.
 
-## Add Cookie Disclaimer
+### Cookie Disclaimer
 You can use the [cookie consent](https://cookieconsent.insites.com/) solution to add cookie consent information by loading the needed resources as external CSS and JS modules.
 
 Use the configurator on the [cookie consent website](https://cookieconsent.insites.com/) to generate the required initialization code and add it to a local `static/init-cookieconsent.js` file, for example:
@@ -675,7 +685,6 @@ Storing these files on your website reduces external dependencies, increases pri
 css_modules = ["..", "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"]
 js_modules = ["..", "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js", "init-cookieconsent.js"]
 ```
-
 
 ## Translations
 Bilberry theme has built-in support for multi-language sites, and currently supports translations for more than 20 languages.
