@@ -1,0 +1,12 @@
+name: Generate README TOC
+
+on:
+  pull_request:
+    branches: "*"
+
+jobs:
+  generateTOC:
+    name: Generate TOC
+    runs-on: ubuntu-latest
+    steps:
+      - uses: technote-space/toc-generator@v4

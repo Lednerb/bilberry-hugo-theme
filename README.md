@@ -22,20 +22,22 @@ Please use the following guidelines if you want to start a discussion:
 - To propose a new feature or any other improvements, use the **Ideas** category.
 - To showcase your blog or website powered by Bilberry theme, use the **Show and tell** category.
 - For any other inquiries, please use the **General** type discussion.
- 
-## Table of Contents
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
 
 - [Requirements](#requirements)
 - [Quick Start](#quick-start)
   - [Site Initial Setup](#site-initial-setup)
   - [Theme Installation Options](#theme-installation-options)
-    - [Option 1 (recommended): Adding the Theme as a Hugo Module](#option-1-recommended-adding-the-theme-as-a-hugo-module) 
-    - [Option 2: Cloning/Copying the Theme Files](#option-2-cloningcopying-the-theme-files) 
+    - [Option 1 (recommended): Adding the Theme as a Hugo Module](#option-1-recommended-adding-the-theme-as-a-hugo-module)
+    - [Option 2: Cloning/Copying the Theme Files](#option-2-cloningcopying-the-theme-files)
   - [Configuration](#configuration)
   - [Webserver](#webserver)
   - [Other Tutorials](#other-tutorials)
 - [Features](#features)
-  - [Post Types](#post-types) 
+  - [Default Post Types](#default-post-types)
   - [Top Navigation Bar](#top-navigation-bar)
   - [Algolia Search](#algolia-search)
     - [Initial Setup](#initial-setup)
@@ -44,13 +46,13 @@ Please use the following guidelines if you want to start a discussion:
       - [Automated Upload](#automated-upload)
   - [Keyboard Shortcuts](#keyboard-shortcuts)
   - [Reposted Article/Duplicated Content](#reposted-articleduplicated-content)
-  - [Calculated Reading Rime](#calculated-reading-time)
+  - [Calculated Reading Time](#calculated-reading-time)
   - [Summary Splits](#summary-splits)
     - [Automatic Summary Split](#automatic-summary-split)
     - [Manual Summary Split](#manual-summary-split)
     - [Front Matter Summary Split](#front-matter-summary-split)
     - [No Summary Split](#no-summary-split)
-  - [Table of Contents (TOC)](#table-of-contentstoc)
+  - [Table of Contents (TOC)](#table-of-contents-toc)
   - [Series Taxonomy](#series-taxonomy)
   - [Google Analytics](#google-analytics)
   - [Comments](#comments)
@@ -66,12 +68,13 @@ Please use the following guidelines if you want to start a discussion:
   - [MathJAX Markup](#mathjax-markup)
   - [Disabled Javascript Support](#disabled-javascript-support)
   - [Video](#video)
+    - [PeerTube Configuration](#peertube-configuration)
   - [Audio](#audio)
   - [Raw HTML](#raw-html)
 - [Customizations](#customizations)
   - [Favicons](#favicons)
   - [404 Page](#404-page)
-  - [Post Types](#post-types)
+  - [Custom Post Types](#custom-post-types)
   - [Individual Posts](#individual-posts)
   - [Colors and Fonts](#colors-and-fonts)
   - [CSS and JS modules](#css-and-js-modules)
@@ -80,6 +83,8 @@ Please use the following guidelines if you want to start a discussion:
 - [Credits](#credits)
 - [Contributors](#contributors)
 - [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Requirements
 - **Hugo** (version >= 0.83.0), see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.
@@ -177,7 +182,7 @@ hugo server
 
 ## Features
 
-### Post Types
+### Default Post Types
 Bilberry theme comes with a set of predefined post types, namely `article`, `audio`, `code`, `gallery`, `link`, `page`, `quote`, `status`, and `video` where the `article` type is the default one.
 
 To create a new content, use the `hugo new` command. Content can be created in two ways: a single page or a [page bundle](https://gohugo.io/content-management/page-bundles/).
@@ -601,11 +606,10 @@ To add favicons, proceed with the following steps:
 
 Also, check out this [tutorial](https://www.kiroule.com/article/add-favicon-to-hugo-based-website/) on how to add favicons to Bilberry theme-based website.
 
-
 ### 404 Page
 To customize your 404 page, copy the `themes/bilberry-hugo-theme/layouts/404.html` file to your site's `layouts/404.html` and edit the file according to your needs, for example, change the message, icon class etc.
 
-### Post Types
+### Custom Post Types
 With Bilberry theme, you can create new post types easily. 
 For example, suppose you want to create a new type named `book`.
 Then you should do the following:
@@ -637,7 +641,6 @@ The `pinOnlyToFirstPage` parameter allows you to choose whether to display pinne
 4. If you want to change the default post types(e.g., replace the pencil icon for the `article` post type another one) copy the original content type file to your site's `layouts/partials/content-type/` directory and edit it there. 
 Otherwise, your changes will be overwritten when you update the theme to the latest version.
 
-
 ### Colors and Fonts
 Bilberry uses SCSS for styling and NPM with [Laravel Mix](https://laravel-mix.com/) for the dependency management.
 
@@ -647,7 +650,6 @@ To change any colors or fonts, you have to follow these steps:
 2. Modify the `assets/sass/_variables.scss` file to customize your colors. 
 If you want to change the header's color, only edit the `$base-color` variable.
 3. Use `npm run dev` for development and preview purposes and `npm run production` when you're done with the changes.
-
 
 ### CSS and JS modules
 This theme supports hot-swappable CSS and JavaScript extensions. 
