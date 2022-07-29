@@ -58,6 +58,7 @@ Please use the following guidelines if you want to start a discussion:
   - [Series Taxonomy](#series-taxonomy)
   - [External Images](#external-images)
   - [Image Modal Zoom](#image-modal-zoom)
+  - [Featured Image](#featured-image)
   - [Automatic Image Resizing](#automatic-image-resizing)
   - [Video](#video)
     - [PeerTube Configuration](#peertube-configuration)
