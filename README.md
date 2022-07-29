@@ -182,7 +182,7 @@ hugo server
 
 ## Features
 
-### Post Types
+### Default Post Types
 Bilberry theme comes with a set of predefined post types, namely `article`, `audio`, `code`, `gallery`, `link`, `page`, `quote`, `status`, and `video` where the `article` type is the default one.
 
 To create a new content, use the `hugo new` command. Content can be created in two ways: a single page or a [page bundle](https://gohugo.io/content-management/page-bundles/).
@@ -606,11 +606,10 @@ To add favicons, proceed with the following steps:
 
 Also, check out this [tutorial](https://www.kiroule.com/article/add-favicon-to-hugo-based-website/) on how to add favicons to Bilberry theme-based website.
 
-
 ### 404 Page
 To customize your 404 page, copy the `themes/bilberry-hugo-theme/layouts/404.html` file to your site's `layouts/404.html` and edit the file according to your needs, for example, change the message, icon class etc.
 
-### Post Types
+### Custom Post Types
 With Bilberry theme, you can create new post types easily. 
 For example, suppose you want to create a new type named `book`.
 Then you should do the following:
@@ -642,7 +641,6 @@ The `pinOnlyToFirstPage` parameter allows you to choose whether to display pinne
 4. If you want to change the default post types(e.g., replace the pencil icon for the `article` post type another one) copy the original content type file to your site's `layouts/partials/content-type/` directory and edit it there. 
 Otherwise, your changes will be overwritten when you update the theme to the latest version.
 
-
 ### Colors and Fonts
 Bilberry uses SCSS for styling and NPM with [Laravel Mix](https://laravel-mix.com/) for the dependency management.
 
@@ -652,7 +650,6 @@ To change any colors or fonts, you have to follow these steps:
 2. Modify the `assets/sass/_variables.scss` file to customize your colors. 
 If you want to change the header's color, only edit the `$base-color` variable.
 3. Use `npm run dev` for development and preview purposes and `npm run production` when you're done with the changes.
-
 
 ### CSS and JS modules
 This theme supports hot-swappable CSS and JavaScript extensions. 
