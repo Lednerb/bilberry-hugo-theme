@@ -332,7 +332,7 @@ The page at `<site-base-url>/series/` will list all the series. To list all arti
 
 If you would like to use external images, such as those stored on another server or in the cloud, as
 a featured image for your article or in the `gallery` post type, you can use them by setting the
-appropriate front matter variables with the full-path URL values:
+appropriate front matter variables with the absolute URL values:
 
 ```markdown
 # /content/article/my-external-featured-image-post.md
@@ -355,16 +355,15 @@ gallery: [
 When you include an image that is larger than the content area, the image becomes interactive and a larger version can
 be opened in a lightbox.
 
-### Automatic Image Resizing
+### Featured Image
 
-Bilberry theme includes built-in automatic cropping and resizing only for **featured** and **gallery** images, activated
-by default.
-However, if you want to disable it, set the `resizeImages` parameter to `false` in the `config.toml` file.
-Also, this feature can be disabled at the post level by setting the `resizeImages` front matter variable to `false`.
+There are two options for adding a featured image to a post. The first approach is to use a [single-page](#single-page)
+post with the `featuredImage` front matter variable, where the value for this variable should be either the path
+relative to the base URL or an absolute URL.
 
-For a featured image to be cropped and resized, it should be named `featuredImage.*` where the `*` is the image file
-extension, e.g., `jpg`, `png`, etc.
-Also, it should be placed within the page bundle in question, for example:
+Alternatively, when using a [page-bundle](#page-bundle) post, the intended featured image should be
+named `featuredImage.*` where the `*` is the image file extension, e.g., `jpg`, `png`, etc. Also, it should be placed
+within the page bundle in question, for example:
 
 ```shell
 content
@@ -373,6 +372,16 @@ content
         ├── featuredImage.png
         └── index.md
 ```
+
+### Automatic Image Resizing
+
+Bilberry theme includes built-in automatic cropping and resizing only for **featured** and **gallery** images, activated
+by default. However, if you want to disable it, set the `resizeImages` parameter to `false` in the `config.toml` file.
+Also, this feature can be disabled at the post level by setting the `resizeImages` front matter variable to `false`.
+
+For a featured image to be cropped and resized, it should be named `featuredImage.*` and placed within the page bundle
+folder.
+
 **NOTE**: a featured image defined via the `featuredImage` front matter parameter will **NOT** be cropped and resized.
 
 ### Video
