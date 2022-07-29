@@ -210,12 +210,10 @@ The `page` content can be a static page, such as an **About** page, or a link to
 
 The `link` post type always links to an external site and can be used with or without a background image.
 
-
 ### Top Navigation Bar
 If you want to permanently display the top navigation bar with the search text field and `page` items, set the `permanentTopNav` parameter to `true` in the `config.toml` file.
 
 Please note that the top navigation bar is minimized by default on mobile devices.
-
 
 ### Algolia Search
 Bilberry theme includes built-in content search via [Algolia SAAS](https://www.algolia.com/). 
@@ -262,11 +260,9 @@ Execute the `hugo` command in the site's root directory to generate the `index.j
 Also, you can read this [write-up](https://www.kiroule.com/article/automate-data-upload-to-algolia-index-revisited/) on how to automate
 data upload to Algolia index if you host your Bilberry theme-based website on Netlify, or this [write-up](https://www.kiroule.com/article/automate-data-upload-to-algolia-index-with-github-actions/) using GitHub Actions.
 
-
 ### Keyboard Shortcuts
 Type `s` to open the navigation bar and set focus to the search input field. 
 To remove focus, press the `Esc` key.
-
 
 ### Reposted Article/Duplicated Content
 If you need to repost an article from another website or duplicate content on your site, you should link it to the original URL so it's correctly processed by SEO. 
@@ -275,13 +271,11 @@ To do so, define the `original_url` front matter variable in your post, for exam
 original_url: "https://example.org/path/to/content"
 ```
 
-
 ### Calculated Reading Time
 To override the automatically calculated reading time for a post, you can use the `readingTime` front matter variable, for example:
 ```
 readingTime: 7 # integer value in  minutes
 ```
-
 
 ### Summary Splits
 There are three options for how Hugo can generate summaries of content which will be used as a short version in summary views, such as a home page and tags or categories pages.
@@ -301,7 +295,6 @@ This summary will also be followed by the _Continue reading_ link.
 #### No Summary Split
 If you want to display the entire article without the _Continue Reading_ link, set the `noSummary` variable to `true` in your content file.
 
-
 ### Table of Contents (TOC)
 To enable the automatic creation of a table of contents (TOC), set the `toc` front matter variable to `true` in your article. 
 If the article's markdown contains appropriate headings, Hugo will generate a table of content at the beginning of the article. 
@@ -315,13 +308,162 @@ Also, if you want to display a TOC at a specific point in your article, set the 
 {{< toc >}}
 ```
 
-
 ### Series Taxonomy 
 In case you want to group some articles as a series, you have to add the `series` front matter variable to each article and set its value to the name of the series, for example, `series: "My New Super Series"`.
 
 The page at `<site-base-url>/series/` will list all the series. To list all articles for a particular series within markdown, you can use the `series` shortcode with the series name in question, for instance: 
 ```markdown
 {{< series "My New Super Series" >}}
+```
+
+### External Images
+
+If you would like to use external images, such as those stored on another server or in the cloud, as
+a featured image for your article or in the `gallery` post type, you can use them by setting the
+appropriate front matter variables with the full-path URL values:
+
+```markdown
+# /content/article/my-external-featured-image-post.md
+
+featuredImage: "https://example.org/images/my-image.jpg"
+```
+
+```markdown
+# /content/gallery/my-external-gallery-post.md
+
+gallery: [
+"https://example.org/images/gallery-image1.jpg",
+"https://example.org/images/gallery-image2.jpg",
+"https://example.org/images/gallery-image3.jpg"
+]
+```
+
+### Image Modal Zoom
+
+When you include an image that is larger than the content area, the image becomes interactive and a larger version can
+be opened in a lightbox.
+
+### Automatic Image Resizing
+
+Bilberry theme includes built-in automatic cropping and resizing only for **featured** and **gallery** images, activated
+by default.
+However, if you want to disable it, set the `resizeImages` parameter to `false` in the `config.toml` file.
+Also, this feature can be disabled at the post level by setting the `resizeImages` front matter variable to `false`.
+
+For a featured image to be cropped and resized, it should be named `featuredImage.*` where the `*` is the image file
+extension, e.g., `jpg`, `png`, etc.
+Also, it should be placed within the page bundle in question, for example:
+
+```shell
+content
+└── article
+    └── my-post-with-featured-image
+        ├── featuredImage.png
+        └── index.md
+```
+**NOTE**: a featured image defined via the `featuredImage` front matter parameter will **NOT** be cropped and resized.
+
+### Video
+The following video hosting providers are supported: [YouTube](https://www.youtube.com/), [Vimeo](https://vimeo.com/),  [Prezi](https://prezi.com/), [Bilibili](https://www.bilibili.com), and [PeerTube](https://joinpeertube.org).
+Videos in the `MP4` format, either stored externally or within the site's `static` folder, are also supported.
+There are two options to display video embeds.
+
+The first option is to use a post of the `video` type. Use the following command to create your video post:
+```bash
+hugo new video/<post-name>.md
+```
+
+Then set the appropriate front matter variable while removing the others:
+```markdown
+youtube: "<youtube-video-id>"            # https://www.youtube.com/watch?v=M7IjJiZUutk -> "M7IjJiZUutk"
+vimeo: "<vimeo-video-id>"                # https://vimeo.com/239830182 -> "239830182"
+prezi: "<prezi-video-id>"                # https://prezi.com/v/5z9shnq7jzxs/what-to-study/ -> "5z9shnq7jzxs"
+bilibili: "<bilibili-video-id>"          # https://www.bilibili.com/video/BV1Sx411T7QQ -> "BV1Sx411T7QQ"
+peertube: "<peertube-video-id>"          # https://vids.tekdmn.me/w/w7WGHX7Lb6mCrbrpF3Xb8V (entire URL)
+mp4video: "<video-file-url>"             # location of video file (only mp4) 
+mp4videoImage: "<image-video-file-url>"  # location of poster image 
+```
+
+For example, if an `MP4` video and its image are stored in the `static` folder, you can set corresponding front matter variables as follows:
+```markdown
+mp4video: "/<video-file-name>.mp4"
+mp4videoImage: "/<image-video-file-name>.png"
+```
+
+The second option is to use the `video` shortcode within markdown content in a post of the `article` type as follows:
+```markdown
+<!-- YouTube -->
+{{< video type="youtube" id="<youtube-video-id>" >}}
+
+<!-- Vimeo -->
+{{< video type="vimeo" id="<vimeo-video-id>" >}}
+
+<!-- Prezi -->
+{{< video type="prezi" id="<prezi-video-id>" >}}
+
+<!-- bilibili -->
+{{< video type="bilibili" id="<bilibili-video-id>" >}}
+
+<!-- PeerTube -->
+{{< video type="peertube" id="<peertube-video-id>" >}} 
+
+<!-- MP4 external -->
+{{< video type="mp4" url="<video-file-url>" imageUrl="<image-video-file-url>" >}}
+
+<!-- MP4 in site's static folder -->
+{{< video type="mp4" url="/<video-file-name>.mp4" imageUrl="/<image-video-file-name>.png" >}}
+
+```
+
+#### PeerTube Configuration
+Because there is no *one* PeerTube site, you need to indicate which ones your videos use, meaning you can't use just the video ID.
+Instead, copy in the entire watch URL, and it'll be transformed into the correct embed URL to use.
+
+There is an [instance finder](https://joinpeertube.org/instances#instances-list) if you want to start hosting your videos on PeerTube but don't know which instance to join.
+
+### Audio
+The following audio streaming providers are supported: [Mixcloud](https://www.mixcloud.com/), [SoundCloud](https://soundcloud.com/), [Spotify](https://www.spotify.com/), and [TuneIn](https://tunein.com/).
+Audio files in the `Ogg`, `MP3`, or `WAV` formats, either stored externally or within the site's `static` folder, are also supported.
+There are two options to display audio embeds.
+
+The first option is to use a post of the `audio` type. Use the following command to create your audio post:
+```bash
+hugo new audio/<post-name>.md
+```
+
+Then set the appropriate front matter variable while removing the others:
+```markdown
+spotify: "<spotify-track-id>"        # https://open.spotify.com/track/3W2lz1sg6m4sEzjmoTjmdE?si=0659fd12179840dd --> 3W2lz1sg6m4sEzjmoTjmdE
+soundcloud: "<soundcloud-track-url>" # https://soundcloud.com/lightbooks/alchemist-08-new-world-order-snip
+tunein: "<tunein-track-id>"          # https://tunein.com/embed/player/t117894382/" --> t117894382
+mixcloud: "<mixcloud-track-id>"      # https://www.mixcloud.com/scienceforthepeople/445-ai-ant-intelligence/ --> scienceforthepeople/445-ai-ant-intelligence
+audiofile: "<audio-file-url>"        # location of audio file (only ogg, mp3, or wav formats)
+```
+
+For example, if an `MP3` audio file is stored in the `static` folder, you can set the `audiofile` front matter variable as follows:
+```markdown
+audiofile: "/<audio-file-name>.mp3"
+```
+
+The second option is to use the `audio` shortcode within markdown content in a post of the `article` type as follows:
+```markdown
+<!-- Mixcloud -->
+{{< audio type="mixcloud" id="<mixcloud-track-id>" >}}
+
+<!-- SoundCloud -->
+{{< audio type="soundcloud" id="<soundcloud-track-url>" >}}
+
+<!-- Spotify -->
+{{< audio type="spotify" id="<spotify-track-id>" >}}
+
+<!-- TuneIn -->
+{{< audio type="tunein" id="<tunein-track-id>" >}}
+
+<!-- MP3 external -->
+{{< audio type="audiofile" url="<audio-file-url>" >}}
+
+<!-- MP3 in site's static folder -->
+{{< audio type="audiofile" url="/<audio-file-name>.mp3" >}}
 ```
 
 ### Google Analytics
@@ -431,160 +573,14 @@ the `/archive/` value and completely remove the `target` variable.
 ### Responsive Design
 Bilberry theme is optimized to look good on all devices, namely desktops, tablets and smartphones.
 
-### Automatic Image Resizing
-Bilberry theme includes built-in automatic cropping and resizing only for **featured** and **gallery** images, activated by default.
-However, if you want to disable it, set the `resizeImages` parameter to `false` in the `config.toml` file.
-Also, this feature can be disabled at the post level by setting the `resizeImages` front matter variable to `false`.
-
-For a featured image to be cropped and resized, it should be named `featuredImage.*` where the `*` is the image file extension, e.g., `jpg`, `png`, etc.
-Also, it should be placed within the page bundle in question, for example:
-```shell
-content
-└── article
-    └── my-post-with-featured-image
-        ├── featuredImage.png
-        └── index.md
-```
-**NOTE**: a featured image defined via the `featuredImage` front matter parameter will **NOT** be cropped and resized.
-
-### Image Modal Zoom
-When you include an image that is larger than the content area, the image becomes interactive and a larger version can be opened in a lightbox.
-
-### External Images
-
-If you would like to use external images, such as those stored on another server or in the cloud, as
-a featured image for your article or in the `gallery` post type, you can use them by setting the
-appropriate front matter variables with the full-path URL values:
-
-```markdown
-# /content/article/my-external-featured-image-post.md
-
-featuredImage: "https://example.org/images/my-image.jpg"
-```
-
-```markdown
-# /content/gallery/my-external-gallery-post.md
-
-gallery: [
-"https://example.org/images/gallery-image1.jpg",
-"https://example.org/images/gallery-image2.jpg",
-"https://example.org/images/gallery-image3.jpg"
-]
-```
-
 ### MathJAX Markup
 To enable the [MathJAX](https://www.mathjax.org) markup support, set the `enable_mathjax` parameter to `true` in the `config.toml` file.
-
 
 ### Disabled Javascript Support
 Although this theme has a lot of features that only work with enabled JavaScript, it also fully supports disabled JavaScript. 
 Disabled Javascript will not break any styling or essential functionalities of your website.
 
 You can test the behavior of the [demo site](https://lednerb.github.io/bilberry-hugo-theme) by disabling JavaScript in your browser.
-
-
-### Video
-The following video hosting providers are supported: [YouTube](https://www.youtube.com/), [Vimeo](https://vimeo.com/),  [Prezi](https://prezi.com/), [Bilibili](https://www.bilibili.com), and [PeerTube](https://joinpeertube.org).
-Videos in the `MP4` format, either stored externally or within the site's `static` folder, are also supported. 
-There are two options to display video embeds. 
-
-The first option is to use a post of the `video` type. Use the following command to create your video post:
-```bash
-hugo new video/<post-name>.md
-```
-
-Then set the appropriate front matter variable while removing the others:
-```markdown
-youtube: "<youtube-video-id>"            # https://www.youtube.com/watch?v=M7IjJiZUutk -> "M7IjJiZUutk"
-vimeo: "<vimeo-video-id>"                # https://vimeo.com/239830182 -> "239830182"
-prezi: "<prezi-video-id>"                # https://prezi.com/v/5z9shnq7jzxs/what-to-study/ -> "5z9shnq7jzxs"
-bilibili: "<bilibili-video-id>"          # https://www.bilibili.com/video/BV1Sx411T7QQ -> "BV1Sx411T7QQ"
-peertube: "<peertube-video-id>"          # https://vids.tekdmn.me/w/w7WGHX7Lb6mCrbrpF3Xb8V (entire URL)
-mp4video: "<video-file-url>"             # location of video file (only mp4) 
-mp4videoImage: "<image-video-file-url>"  # location of poster image 
-```
-
-For example, if an `MP4` video and its image are stored in the `static` folder, you can set corresponding front matter variables as follows:
-```markdown
-mp4video: "/<video-file-name>.mp4"
-mp4videoImage: "/<image-video-file-name>.png"
-```
-
-The second option is to use the `video` shortcode within markdown content in a post of the `article` type as follows:
-```markdown
-<!-- YouTube -->
-{{< video type="youtube" id="<youtube-video-id>" >}}
-
-<!-- Vimeo -->
-{{< video type="vimeo" id="<vimeo-video-id>" >}}
-
-<!-- Prezi -->
-{{< video type="prezi" id="<prezi-video-id>" >}}
-
-<!-- bilibili -->
-{{< video type="bilibili" id="<bilibili-video-id>" >}}
-
-<!-- PeerTube -->
-{{< video type="peertube" id="<peertube-video-id>" >}} 
-
-<!-- MP4 external -->
-{{< video type="mp4" url="<video-file-url>" imageUrl="<image-video-file-url>" >}}
-
-<!-- MP4 in site's static folder -->
-{{< video type="mp4" url="/<video-file-name>.mp4" imageUrl="/<image-video-file-name>.png" >}}
-
-```
-
-#### PeerTube Configuration
-Because there is no *one* PeerTube site, you need to indicate which ones your videos use, meaning you can't use just the video ID.
-Instead, copy in the entire watch URL, and it'll be transformed into the correct embed URL to use.
-
-There is an [instance finder](https://joinpeertube.org/instances#instances-list) if you want to start hosting your videos on PeerTube but don't know which instance to join.
-
-### Audio
-The following audio streaming providers are supported: [Mixcloud](https://www.mixcloud.com/), [SoundCloud](https://soundcloud.com/), [Spotify](https://www.spotify.com/), and [TuneIn](https://tunein.com/). 
-Audio files in the `Ogg`, `MP3`, or `WAV` formats, either stored externally or within the site's `static` folder, are also supported. 
-There are two options to display audio embeds.
-
-The first option is to use a post of the `audio` type. Use the following command to create your audio post:
-```bash
-hugo new audio/<post-name>.md
-```
-
-Then set the appropriate front matter variable while removing the others:
-```markdown
-spotify: "<spotify-track-id>"        # https://open.spotify.com/track/3W2lz1sg6m4sEzjmoTjmdE?si=0659fd12179840dd --> 3W2lz1sg6m4sEzjmoTjmdE
-soundcloud: "<soundcloud-track-url>" # https://soundcloud.com/lightbooks/alchemist-08-new-world-order-snip
-tunein: "<tunein-track-id>"          # https://tunein.com/embed/player/t117894382/" --> t117894382
-mixcloud: "<mixcloud-track-id>"      # https://www.mixcloud.com/scienceforthepeople/445-ai-ant-intelligence/ --> scienceforthepeople/445-ai-ant-intelligence
-audiofile: "<audio-file-url>"        # location of audio file (only ogg, mp3, or wav formats)
-```
-
-For example, if an `MP3` audio file is stored in the `static` folder, you can set the `audiofile` front matter variable as follows:
-```markdown
-audiofile: "/<audio-file-name>.mp3"
-```
-
-The second option is to use the `audio` shortcode within markdown content in a post of the `article` type as follows:
-```markdown
-<!-- Mixcloud -->
-{{< audio type="mixcloud" id="<mixcloud-track-id>" >}}
-
-<!-- SoundCloud -->
-{{< audio type="soundcloud" id="<soundcloud-track-url>" >}}
-
-<!-- Spotify -->
-{{< audio type="spotify" id="<spotify-track-id>" >}}
-
-<!-- TuneIn -->
-{{< audio type="tunein" id="<tunein-track-id>" >}}
-
-<!-- MP3 external -->
-{{< audio type="audiofile" url="<audio-file-url>" >}}
-
-<!-- MP3 in site's static folder -->
-{{< audio type="audiofile" url="/<audio-file-name>.mp3" >}}
-```
 
 ### Raw HTML
 If you want to include raw HTML in your markdown content, set the `unsafe` setting in the `config.toml` file to `true`:
