@@ -1,8 +1,9 @@
 name: Generate README TOC
 
 on:
-  pull_request:
-    branches: "*"
+  push:
+    branches:
+      - 'master'
 
 jobs:
   generateTOC:
