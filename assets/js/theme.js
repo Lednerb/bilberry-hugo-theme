@@ -111,7 +111,7 @@ $(document).ready(function () {
 
     // Magnific Popup for images within articles to zoom them
     // Rendered with Markdown
-    $('p img').magnificPopup({
+    $('p img, figure img').magnificPopup({
         type: "image",
         image: {
             verticalFit: true,
