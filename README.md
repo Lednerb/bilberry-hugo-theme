@@ -183,20 +183,30 @@ hugo server
 ## Features
 
 ### Default Post Types
-Bilberry theme comes with a set of predefined post types, namely `article`, `audio`, `code`, `gallery`, `link`, `page`, `quote`, `status`, and `video` where the `article` type is the default one.
 
-To create a new content, use the `hugo new` command. Content can be created in two ways: a single page or a [page bundle](https://gohugo.io/content-management/page-bundles/).
+Bilberry theme comes with a set of predefined post types, namely `article`, `audio`, `code`, `gallery`, `link`, `page`
+, `quote`, `status`, and `video` where the `article` type is the default one.
 
+To create a new content, use the `hugo new` command. Content can be created in two ways: a single page or
+a [page bundle](https://gohugo.io/content-management/page-bundles/).
+
+#### Single Page
 To create new content as a single page, you can use the following command:
+
 ```shell
 hugo new <content-type>/my-single-page-content.md
 ```
+
+#### Page Bundle
 Or, new page bundle content can be created as follows:
+
 ```shell
 hugo new <content-type>/my-page-bundle-content/index.md
 ```
 
-For example, you can create a new article as a single page and a new gallery as a page bundle using the following commands respectively:
+For example, you can create a new article as a single page and a new gallery as a page bundle using the following
+commands respectively:
+
 ```shell
 hugo new article/my-single-page-article.md
 hugo new gallery/my-page-bundle-gallery/index.md
