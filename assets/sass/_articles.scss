@@ -197,7 +197,7 @@ article {
             }
         }
 
-        img {
+        img, figure {
             max-width: 100%;
             display: block;
             margin: 0 auto;
@@ -399,7 +399,7 @@ article {
             position: relative;
             /* 16:9 ratio*/
             padding-bottom: 56.25%;
-            padding-top: 0px;
+            padding-top: 0;
             height: 0;
             overflow: hidden;
 
