@@ -47,7 +47,15 @@ disqusShortname = ""
   algolia_currentLanguageOnly = true
 
   # Enable / Disable comments on the articles via commento
+  commento        = false
   # commentoJsURL = "https://commento.lednerb.de/js/commento.js"
+  # Enable / Disable comments on the articles via Coral
+  coral           = false
+  # coralJsURL    = ""
+  # Enable / Disable comments on the articles via Remark42
+  remark42        = false
+  # remarkJsURL   = ""
+  # remarkID      = "remark"
 
   # Enable / Disable Giscus comments
   giscus             = false
@@ -71,7 +79,7 @@ disqusShortname = ""
   utterancesLabel       = "Comment"
   utterancesTheme       = "github-light"
   utterancesCrossOrigin = "anonymous"
-
+  
   # Media configuration
     # let hugo automatically resize and crop your images to the correct sizes
     # NB: When enabled the image files get renamed by adding additional information,

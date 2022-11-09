@@ -10,6 +10,8 @@
     {{ if ( .Params.showComments | default true ) }}
         <div id="comments-container">
             {{ template "_internal/disqus.html" . }}
+            {{ partial "coral.html" . }}
+            {{ partial "remark42.html" . }}
             {{ partial "commento.html" . }}
             {{ partial "giscus.html" . }}
             {{ partial "utterances.html" . }}

@@ -1,4 +1,5 @@
-{{ if isset .Site.Params "commentojsurl" }}
-    <script defer src="{{.Site.Params.commentoJsURL}}"></script>
+{{ if .Site.Params.commento }}
     <div id="commento"></div>
+    <script defer src="{{ .Site.Params.commentoJsURL }}"></script>
+	<noscript>Please enable JavaScript to view the comments powered by <a href="https://commento.io/">Commento</a>.</noscript>
 {{ end }}

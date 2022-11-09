@@ -1,0 +1,17 @@
+{{ if .Site.Params.remark42 }}
+<div id="remark42"></div>
+<script type="text/javascript">
+  var remark_config = {
+    host: "{{ .Site.Params.RemarkJsURL }}", // url of remark server, same as REMARK_URL in backend config
+    site_id: "{{ .Site.Params.RemarkID }}",
+    components: ['embed'], // optional param; which components to load. default to ["embed"]
+                          // to load all components define components as ['embed', 'last-comments', 'counter']
+                          // available component are:
+                          //     - 'embed': basic comments widget
+                          //     - 'last-comments': last comments widget, see `Last Comments` section below
+                          //     - 'counter': counter widget, see `Counter` section below
+  };
+  !function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);
+</script>
+<noscript>Please enable JavaScript to view the comments powered by <a href="https://remark42.com/">Remark42</a>.</noscript>
+{{ end }}
