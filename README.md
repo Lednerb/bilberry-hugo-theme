@@ -604,6 +604,12 @@ In that case, you should use the v4 value in the `config.toml` file.
 To allow readers to comment under your articles, you can use either [Commento](https://commento.io/)
 , [Disqus](https://disqus.com/), [Giscus](https://giscus.app/), or [Utterances](https://utteranc.es/).
 
+**Note to developers/contributors**: if you want to submit a new commenting engine for integration with the Bilberry theme, it must meet the following criteria:
+1. The engine should be offered as a SAAS, i.e., you only need to create an account and configure the necessary settings on the engine's website.
+2. If the engine is offered as a SAAS, it must have a free tier plan.
+3. All the configuration steps needed to integrate a third-party commenting service must occur only in the `config.toml` file and not within additional configuration in the partial files or any other.
+
+
 #### Commento
 
 Follow this [guide](https://docs.commento.io/installation/cloud-service/) if you want to use Commento Cloud Service
