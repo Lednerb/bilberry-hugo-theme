@@ -115,7 +115,7 @@ disqusShortname = "bilberry-hugo-theme"
     # all icons https://fontawesome.com/icons?d=gallery&m=free
     # brand icons https://fontawesome.com/icons?d=gallery&s=brands&m=free
     socialMediaLinks = [
-      { link = "https://twitter.com/TheRealLednerb", icon = "fab fa-twitter" },
+      { link = "https://twitter.com/TheRealLednerb", icon = "fab fa-twitter", rel = "me" },
       { link = "https://github.com/Lednerb", icon = "fab fa-github" },
     ]
 

@@ -36,7 +36,7 @@
                 <strong>{{ i18n "socialMedia" }}</strong>
 
                 {{ range .Site.Params.socialMediaLinks }}
-                <a href="{{ .link }}" target="_blank"><i class="{{ .icon }}"></i></a>
+                <a href="{{ .link }}" target="_blank" rel="{{ .rel }}"><em class="{{ .icon }}"></em></a>
                 {{ end }}
             </div>
             {{ end }}
