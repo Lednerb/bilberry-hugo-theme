@@ -20,7 +20,7 @@
                             {{ $series_name = $series_page.Title }}
                         {{ end }}
 
-                        <li><a href="{{ $series_path }}">{{ $series_name }} ({{ $taxonomy.Count }})</a></li>
+                        <li><a href="{{ $series_path | relLangURL }}">{{ $series_name }} ({{ $taxonomy.Count }})</a></li>
                     {{ end }}
                 </ul>
             </div>
