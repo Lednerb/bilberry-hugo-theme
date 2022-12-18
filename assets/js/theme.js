@@ -131,10 +131,11 @@ $(document).ready(function () {
             }
         },
         // https://github.com/dimsemenov/Magnific-Popup/pull/1017
-        // Enabled popup only when image size is greater than content area
+        // Enabled popup only when parent is not <a> or
+        // image size is greater than content area
         disableOn: function(e) {
             let img = e.target;
-            return img.naturalWidth > img.clientWidth;
+            return img.parent('a').length || img.naturalWidth > img.clientWidth;
         }
     });
 
