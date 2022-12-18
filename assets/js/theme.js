@@ -111,7 +111,7 @@ $(document).ready(function () {
 
     // Magnific Popup for images within articles to zoom them
     // Rendered with Markdown
-    $('p img, figure img').magnificPopup({
+    $('p img, figure img').not('p a img').magnificPopup({
         type: "image",
         image: {
             verticalFit: true,
@@ -131,11 +131,10 @@ $(document).ready(function () {
             }
         },
         // https://github.com/dimsemenov/Magnific-Popup/pull/1017
-        // Enabled popup only when parent is not <a> or
-        // image size is greater than content area
+        // Enabled popup only when image size is greater than content area
         disableOn: function(e) {
             let img = e.target;
-            return img.parent('a').length || img.naturalWidth > img.clientWidth;
+            return img.naturalWidth > img.clientWidth;
         }
     });
 
