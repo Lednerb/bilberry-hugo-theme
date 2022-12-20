@@ -68,6 +68,7 @@
     </title>
     <meta itemprop="name" content="{{ .Scratch.Get "title" }}">
     <meta itemprop="description" content="{{ .Scratch.Get "description" }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
 
     {{ template "_internal/opengraph.html" . }}
 
