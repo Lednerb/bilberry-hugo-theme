@@ -171,7 +171,19 @@ disqusShortname = ""
     title = "Mein cooler neuer Blog"
     subtitle = "Hallo Welt! Dies ist der epischste Untertitel aller Zeiten."
 
-# don't change anything below
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # change to 'true' if you need to render raw HTML within your markdown content
+      unsafe = false
+
+  [markup.tableOfContents]
+    endLevel = 5
+    ordered = false
+    startLevel = 2
+
+# do NOT change anything below
 [taxonomies]
   author   = "author"
   tag      = "tags"
@@ -181,15 +193,3 @@ disqusShortname = ""
 [outputs]
   home = [ "HTML", "JSON", "RSS" ]
   page = [ "HTML" ]
-
-[markup]
-  defaultMarkdownHandler = 'goldmark'
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      # Change to 'true' if you need to render raw HTML within your markdown content
-      unsafe = false
-
-  [markup.tableOfContents]
-    endLevel = 5
-    ordered = false
-    startLevel = 2

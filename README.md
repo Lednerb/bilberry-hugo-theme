@@ -394,7 +394,7 @@ and use the `toc` shortcode like this:
 ### Series Taxonomy
 
 In case you want to group some articles as a series, you have to add the `series` front matter variable to each article
-and set its value to the name of the series, for example, `series: "My New Super Series"`.
+and set its value to the name of the series, for example, `series: ["My New Super Series"]`.
 
 The page at `<site-base-url>/series/` will list all the series. To list all articles for a particular series within
 markdown, you can use the `series` shortcode with the series name in question, for instance:
