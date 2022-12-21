@@ -58,6 +58,7 @@ Please use the following guidelines if you want to start a discussion:
     - [Manual Summary Split](#manual-summary-split)
     - [Front Matter Summary Split](#front-matter-summary-split)
     - [No Summary Split](#no-summary-split)
+  - [Open Graph Metadata](#open-graph-metadata)
   - [Table of Contents (TOC)](#table-of-contents-toc)
   - [Series Taxonomy](#series-taxonomy)
   - [External Images](#external-images)
