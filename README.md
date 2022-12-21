@@ -378,12 +378,10 @@ your content file.
 
 The following base Open Graph metadata is included by default in all pages: `og:site_name`, `og:title`
 , `og:description`, `og:type`, `og:url`, `article:section`, `article:published_time`, and `article:modified_time` where
-the `article:published_time` and `article:modified_time` tags will have the same timestamp value as the `date` front
-matter variable.
+the `article:published_time` tag will have the same timestamp value as the `date` front matter variable.
 
 Additional metadata can be included by adding the following front matter variables:
 - `publishDate` for `article:published_time`
-- `lastmod` for `article:modified_time`
 - `images` for `og:image` 
 - `audio` for `og:audio`
 - `videos` and `og:video`
