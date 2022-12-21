@@ -392,7 +392,6 @@ For example:
 ```markdown
 title: "Open Graph Metadata for Single Page Article with Extra Front Matter Variables"
 date: 2022-12-19T19:00:00-05:00
-date: 2022-12-19T19:00:00-05:00
 publishDate: 2022-12-19T20:00:00-05:00
 lastmod: 2022-12-19T21:00:00-05:00
 images: ["/img/content/article/open-graph-metadata-for-single-page-article-with-extra-front-matter-variables/thumbnail.jpg"]
