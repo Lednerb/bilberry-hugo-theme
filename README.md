@@ -58,6 +58,7 @@ Please use the following guidelines if you want to start a discussion:
     - [Manual Summary Split](#manual-summary-split)
     - [Front Matter Summary Split](#front-matter-summary-split)
     - [No Summary Split](#no-summary-split)
+  - [Open Graph Metadata](#open-graph-metadata)
   - [Table of Contents (TOC)](#table-of-contents-toc)
   - [Series Taxonomy](#series-taxonomy)
   - [External Images](#external-images)
@@ -373,6 +374,29 @@ This summary will also be followed by the _Continue reading_ link.
 If you want to display the entire article without the _Continue Reading_ link, set the `noSummary` variable to `true` in
 your content file.
 
+### Open Graph Metadata
+
+The following base Open Graph metadata is included by default in all pages: `og:site_name`, `og:title`
+, `og:description`, `og:type`, `og:url`, `article:section`, `article:published_time`, and `article:modified_time` where
+the `article:published_time` tag will have the same timestamp value as the `date` front matter variable.
+
+Additional metadata can be included by adding the following front matter variables:
+- `publishDate` for `article:published_time`
+- `images` for `og:image` 
+- `audio` for `og:audio`
+- `videos` and `og:video`
+
+For example:
+```markdown
+title: "Open Graph Metadata with Extra Front Matter Variables"
+date: 2022-12-19T19:00:00-05:00
+publishDate: 2022-12-19T20:00:00-05:00
+lastmod: 2022-12-19T21:00:00-05:00
+images: ["/img/content/article/open-graph-metadata-with-extra-front-matter-variables/thumbnail.jpg"]
+audio: "/audio/icq-remix.mp3"
+videos: ["/video/test_mp4_video.mp4"]
+```
+
 ### Table of Contents (TOC)
 
 To enable the automatic creation of a table of contents (TOC), set the `toc` front matter variable to `true` in your
@@ -394,7 +418,7 @@ and use the `toc` shortcode like this:
 ### Series Taxonomy
 
 In case you want to group some articles as a series, you have to add the `series` front matter variable to each article
-and set its value to the name of the series, for example, `series: "My New Super Series"`.
+and set its value to the name of the series, for example, `series: ["My New Super Series"]`.
 
 The page at `<site-base-url>/series/` will list all the series. To list all articles for a particular series within
 markdown, you can use the `series` shortcode with the series name in question, for instance:
