@@ -72,6 +72,8 @@
                 &copy;
                 {{ if .Site.Params.copyrightUseCurrentYear }}
                 {{ now.Year }}
+                {{ else if gt now.Year (.Site.Params.copyrightYearOverride | default 2018) }}
+                {{ .Site.Params.copyrightYearOverride | default 2018 }} - {{ now.Year }}
                 {{ else }}
                 {{ .Site.Params.copyrightYearOverride | default 2018 }}
                 {{ end }}
