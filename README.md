@@ -376,15 +376,15 @@ your content file.
 
 ### Open Graph Metadata
 
-The following base Open Graph metadata is included by default in all pages: `og:site_name`, `og:title`
-, `og:description`, `og:type`, `og:url`, `article:section`, `article:published_time`, and `article:modified_time` where
+The following base Open Graph metadata is included by default in all pages: `og:site_name`, `og:title`, `og:description`, `og:type`, `og:url`, `article:section`, `article:published_time`, and `article:modified_time` where
 the `article:published_time` tag will have the same timestamp value as the `date` front matter variable.
 
 Additional metadata can be included by adding the following front matter variables:
 - `publishDate` for `article:published_time`
 - `images` for `og:image` 
 - `audio` for `og:audio`
-- `videos` and `og:video`
+- `videos` for `og:video`
+- `series` for `og:see_also`
 
 For example:
 ```markdown
@@ -395,6 +395,7 @@ lastmod: 2022-12-19T21:00:00-05:00
 images: ["/img/content/article/open-graph-metadata-with-extra-front-matter-variables/thumbnail.jpg"]
 audio: "/audio/icq-remix.mp3"
 videos: ["/video/test_mp4_video.mp4"]
+series: ["My Cool Series"]
 ```
 
 ### Table of Contents (TOC)
