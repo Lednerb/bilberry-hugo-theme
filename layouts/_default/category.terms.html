@@ -2,7 +2,7 @@
 
 <div class="content">
     <div class="article-wrapper u-cf single">
-        <a class="bubble" href="{{ "/categories/" | relLangURL}}">
+        <a class="bubble" href="{{ "categories/" | relLangURL}}">
             <i class="fa fa-fw fa-list"></i>
         </a>
 
@@ -12,7 +12,7 @@
                 <hr>
                 <ul id="all-categories">
                     {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-                        <li><a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize }} ({{ $taxonomy.Count }})</a></li>
+                        <li><a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize }} ({{ $taxonomy.Count }})</a></li>
                     {{ end }}
                 </ul>
             </div>
