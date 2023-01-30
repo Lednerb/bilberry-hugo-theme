@@ -18,12 +18,16 @@
 
         {{ if and .Site.Taxonomies.categories (gt ( .Site.Params.amountCategoriesInFooter | default 7 ) 0 ) }}
         <div class="categories">
-            <a href="{{ "/categories/" | relLangURL }}"><strong>{{ i18n "categories" }}</strong></a>
+            {{ with .Site.GetPage "/categories" }}
+            <a href="{{ .Permalink }}"><strong>{{ .Title }}</strong></a>
+            {{ end }}
+
             <ul>
                 {{ range $order, $taxonomy := (first ( .Site.Params.amountCategoriesInFooter | default 7 ) .Site.Taxonomies.categories.ByCount) }}
                 <li>
-                    <a href="{{ (print "/categories/" ($taxonomy.Name | urlize)) | relLangURL }}">{{ $taxonomy.Name | humanize }}
-                        ({{ $taxonomy.Count }})</a>
+                {{ with $.Site.GetPage (printf "/categories/%s" ($taxonomy.Name | urlize)) }}
+                    <a href="{{ .Permalink }}">{{ .Title }} ({{ $taxonomy.Count }})</a>
+                {{ end }}
                 </li>
                 {{ end }}
             </ul>
@@ -57,7 +61,9 @@
 
             {{ if .Site.Params.showArchive | default true }}
             <div class="archive">
-                <a href="{{ "/archive/" | relLangURL }}"><strong>{{ i18n "archive" }}</strong></a>
+                {{ with .Site.GetPage "/archive" }}
+                <a href="{{ .Permalink }}"><strong>{{ .Title }}</strong></a>
+                {{ end }}
             </div>
             {{ end }}
         </div>
