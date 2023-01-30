@@ -15,7 +15,7 @@
                 <ul id="all-categories">
                     {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
                     <li>
-                        {{ with $.Site.GetPage (printf "/categories/%s" ($name | urlize)) }}
+                        {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
                         <a href="{{ .Permalink }}">{{ .Title }} ({{ $taxonomy.Count }})</a>
                         {{ end }}
                     </li>
