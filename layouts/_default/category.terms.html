@@ -2,9 +2,11 @@
 
 <div class="content">
     <div class="article-wrapper u-cf single">
-        <a class="bubble" href="{{ "/categories/" | relLangURL}}">
+        {{ with .Site.GetPage "/categories" }}
+        <a class="bubble" href="{{ .Permalink }}">
             <i class="fa fa-fw fa-list"></i>
         </a>
+        {{ end }}
 
         <article class="article">
             <div class="content">
@@ -12,7 +14,11 @@
                 <hr>
                 <ul id="all-categories">
                     {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
-                        <li><a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name | humanize }} ({{ $taxonomy.Count }})</a></li>
+                    <li>
+                        {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
+                        <a href="{{ .Permalink }}">{{ .Title }} ({{ $taxonomy.Count }})</a>
+                        {{ end }}
+                    </li>
                     {{ end }}
                 </ul>
             </div>

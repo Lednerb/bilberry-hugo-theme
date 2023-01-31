@@ -146,11 +146,7 @@ GitHub.sublime-settings
 # End of https://www.gitignore.io/api/node,sass,linux,macos,sublimetext
 
 testing/testing-example-site/public
-testing/testing-example-site/public0
-testing/testing-example-site/public1
-testing/testing-example-site/public2
-testing/testing-example-site/public3
-testing/testing-example-site/public4
+testing/testing-example-site/public*
 testing/testing-example-site/resources
 testing/testing-example-site/themes
 
