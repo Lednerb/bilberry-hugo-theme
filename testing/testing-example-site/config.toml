@@ -119,6 +119,12 @@ disqusShortname = "bilberry-hugo-theme"
       { link = "https://github.com/Lednerb", icon = "fab fa-github" },
     ]
 
+    # show an archive link in the footer
+    showArchive = true
+
+    # archive grouping: "2006" by year, "2006-01" by month
+    archiveDateGrouping = "2006-01"
+
     # credits line configuration
     copyrightBy = "by Lednerb"
     copyrightUseCurrentYear = false  # set to true to always display the current year in the copyright

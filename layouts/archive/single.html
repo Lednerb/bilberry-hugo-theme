@@ -1,13 +1,17 @@
 {{ define "main" }}
 <div class="content">
     <div class="article-wrapper u-cf single">
-        <a class="bubble" href="{{ "/archive/" | relLangURL}}">
+        {{ with .Site.GetPage "/archive" }}
+        <a class="bubble" href="{{ .Permalink }}">
             <i class="fa fa-fw fa-archive"></i>
         </a>
+        {{ end }}
 
         <article class="article">
             <div class="content">
-                <h1 class="article-title">{{ i18n "archive" }}</h1>
+                {{ with .Site.GetPage "/archive" }}
+                <h1 class="article-title">{{ .Title }}</h1>
+                {{ end }}
                 <div class="meta"></div>
                 <div class="archive-list">
                     {{ range (where .Site.RegularPages "Type" "not in" (slice "page" "archive" "status" ) ).GroupByPublishDate (.Site.Params.archiveDateGrouping | default "2006-01") }}
