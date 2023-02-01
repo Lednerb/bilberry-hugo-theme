@@ -138,12 +138,6 @@ disqusShortname = ""
     # social media profile urls for the footer links
     showSocialMedia = true
 
-    # show an archive link in the footer
-    showArchive = false
-
-    # archive grouping: "2006" by year, "2006-01" by month
-    archiveDateGrouping = "2006-01"
-
     # define your links with FontAwesome 5 (only free icons are supported)
     # all icons https://fontawesome.com/icons?d=gallery&m=free
     # brand icons https://fontawesome.com/icons?d=gallery&s=brands&m=free
@@ -151,6 +145,12 @@ disqusShortname = ""
       { link = "https://twitter.com/TheRealLednerb", icon = "fab fa-twitter", rel = "me" },
       { link = "https://github.com/Lednerb", icon = "fab fa-github" },
     ]
+
+    # show an archive link in the footer
+    showArchive = false
+
+    # archive grouping: "2006" by year, "2006-01" by month
+    archiveDateGrouping = "2006-01"
 
     # credits line configuration
     copyrightBy = "by Lednerb"

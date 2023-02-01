@@ -86,6 +86,9 @@ testFolderAndContinue "$TARGET_DIR/de/tags/c++"
 testFolderAndContinue "$TARGET_DIR/tags/tästing++"
 testFolderAndContinue "$TARGET_DIR/de/tags/tästing++"
 
+testFolderAndContinue "$TARGET_DIR/archive"
+testFolderAndContinue "$TARGET_DIR/de/archive"
+
 # article/täst [en]
 echo "## Testing article/täst [en]"
 testContentAndContinue '<a href="https://example.com/categories/t%C3%A4st&#43;&#43;/">Täst&#43;&#43;</a>' "$TARGET_DIR/article/täst/index.html"
@@ -96,7 +99,7 @@ testContentAndContinue '<a href="https://example.com/de/article/t%C3%A4st/">de</
 testContentAndContinue '<a href="https://example.com/article/t%C3%A4st/">Umlauts Täst&#43;&#43;</a>' "$TARGET_DIR/article/täst/index.html"
 testContentAndContinue '<p>This is a umlauts-test in Quotes äüöß++</p>' "$TARGET_DIR/quote/index.html"
 testContentAndContinue '<a href="https://example.com/categories/t%C3%A4st&#43;&#43;/">Täst&#43;&#43; (2)</a>' "$TARGET_DIR/article/täst/index.html"
-
+testContentAndContinue '<a href="https://example.com/archive/"><strong>Archive</strong></a>' "$TARGET_DIR/article/täst/index.html"
 # article/täst [de]
 echo "## Testing article/täst [de]"
 testContentAndContinue '<a href="https://example.com/de/categories/t%C3%A4st&#43;&#43;/">Täst&#43;&#43;</a>' "$TARGET_DIR/de/article/täst/index.html"
@@ -107,6 +110,7 @@ testContentAndContinue '<a href="https://example.com/article/t%C3%A4st/">en</a>'
 testContentAndContinue '<a href="https://example.com/de/article/t%C3%A4st/">de Umlauts Täst&#43;&#43;</a>' "$TARGET_DIR/de/article/täst/index.html"
 testContentAndContinue '<p>de This is a umlauts-test in quotes äüöß++</p>' "$TARGET_DIR/de/quote/index.html"
 testContentAndContinue '<a href="https://example.com/de/categories/t%C3%A4st&#43;&#43;/">Täst&#43;&#43; (2)</a>' "$TARGET_DIR/de/article/täst/index.html"
+testContentAndContinue '<a href="https://example.com/de/archive/"><strong>Archiv</strong></a>' "$TARGET_DIR/de/article/täst/index.html"
 
 # quote/täst-quote [en]
 echo "## Testing quote/täst-quote [en]"
@@ -120,6 +124,29 @@ testContentAndContinue '<a href="/de/author/%c3%a4-%c3%9f&#43;">
   ä ß&#43;
 </a>' "$TARGET_DIR/de/quote/täst-quote/index.html"
 
+# archive [en]
+echo "## Testing archive [en]"
+testContentAndContinue '<a class="bubble" href="https://example.com/archive/">' "$TARGET_DIR/archive/index.html"
+testContentAndContinue '<h1 class="article-title">Archive Page</h1>' "$TARGET_DIR/archive/index.html"
+testContentAndContinue '<h4>2020-05</h4>' "$TARGET_DIR/archive/index.html"
+testContentAndContinue '<a href="https://example.com/article/long-text/">long text <span>(2020-05-15)</span></a>' "$TARGET_DIR/archive/index.html"
+testContentAndContinue '<h4>2020-04</h4>' "$TARGET_DIR/archive/index.html"
+testContentAndContinue '<a href="https://example.com/article/long-text-1/">long text 1 <span>(2020-04-15)</span></a>' "$TARGET_DIR/archive/index.html"
+testContentAndContinue '<h4>2020-03</h4>' "$TARGET_DIR/archive/index.html"
+testContentAndContinue '<a href="https://example.com/article/long-text-manual-readmore/">long text manual readmore <span>(2020-03-15)</span></a>' "$TARGET_DIR/archive/index.html"
+testContentAndContinue '<h4>2020-02</h4>' "$TARGET_DIR/archive/index.html"
+testContentAndContinue '<a href="https://example.com/article/shorttextwithcode/">long text <span>(2020-02-15)</span></a>' "$TARGET_DIR/archive/index.html"
+testContentAndContinue '<h4>2020-01</h4>' "$TARGET_DIR/archive/index.html"
+testContentAndContinue '<a href="https://example.com/article/t%C3%A4st/">Umlauts Täst&#43;&#43; <span>(2020-01-15)</span></a>' "$TARGET_DIR/archive/index.html"
+testContentAndContinue '<a href="https://example.com/quote/t%C3%A4st-quote/">Quote Umlauts Täst&#43;&#43; <span>(2020-01-14)</span></a>' "$TARGET_DIR/archive/index.html"
+
+# archive [de]
+echo "## Testing archive [de]"
+testContentAndContinue '<a class="bubble" href="https://example.com/de/archive/">' "$TARGET_DIR/de/archive/index.html"
+testContentAndContinue '<h1 class="article-title">Archivseite</h1>' "$TARGET_DIR/de/archive/index.html"
+testContentAndContinue '<h4>2020-01</h4>' "$TARGET_DIR/de/archive/index.html"
+testContentAndContinue '<a href="https://example.com/de/article/t%C3%A4st/">de Umlauts Täst&#43;&#43; <span>(2020-01-15)</span></a>' "$TARGET_DIR/de/archive/index.html"
+testContentAndContinue '<a href="https://example.com/de/quote/t%C3%A4st-quote/">de Quote Umlauts Täst&#43;&#43; <span>(2020-01-14)</span></a>' "$TARGET_DIR/de/archive/index.html"
 
 echo "# Build stability test"
 

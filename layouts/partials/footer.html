@@ -6,7 +6,7 @@
         <div class="recent-posts">
             <strong>{{ i18n "latestPosts" }}</strong>
             <ul>
-                {{ $dontRender :=  (slice "page" "quote" "link" "status") }}
+                {{ $dontRender :=  (slice "page" "quote" "link" "status" "archive") }}
                 {{ range (first (.Site.Params.amountLatestPostsInFooter | default 7) (where (where .Site.Pages.ByPublishDate.Reverse ".Kind" "page") ".Type" "not in" $dontRender )) }}
                     <li>
                         <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -19,7 +19,7 @@
         {{ if and .Site.Taxonomies.categories (gt ( .Site.Params.amountCategoriesInFooter | default 7 ) 0 ) }}
         <div class="categories">
             {{ with .Site.GetPage "/categories" }}
-            <a href="{{ .Permalink }}"><strong>{{ .Title }}</strong></a>
+            <a href="{{ .Permalink }}"><strong>{{ i18n "categories" }}</strong></a>
             {{ end }}
 
             <ul>
@@ -38,7 +38,6 @@
             {{ if .Site.Params.showSocialMedia | default true }}
             <div class="external-profiles">
                 <strong>{{ i18n "socialMedia" }}</strong>
-
                 {{ range .Site.Params.socialMediaLinks }}
                 <a href="{{ .link }}" target="_blank" rel="{{ .rel }}"><em class="{{ .icon }}"></em></a>
                 {{ end }}
@@ -62,7 +61,7 @@
             {{ if .Site.Params.showArchive | default true }}
             <div class="archive">
                 {{ with .Site.GetPage "/archive" }}
-                <a href="{{ .Permalink }}"><strong>{{ .Title }}</strong></a>
+                <a href="{{ .Permalink }}"><strong>{{ i18n "archive" }}</strong></a>
                 {{ end }}
             </div>
             {{ end }}
