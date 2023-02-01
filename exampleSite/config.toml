@@ -147,7 +147,7 @@ disqusShortname = ""
     ]
 
     # show an archive link in the footer
-    showArchive = false
+    showArchive = true
 
     # archive grouping: "2006" by year, "2006-01" by month
     archiveDateGrouping = "2006-01"
