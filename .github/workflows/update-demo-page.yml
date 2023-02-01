@@ -39,12 +39,20 @@ jobs:
       - name: Copy exampleSite content to new site
         run: cp -r ./exampleSite/* /tmp/demo-site
 
-      - name: Adjust the baseURL for gh-pages
-        run: sed -i "s/baseURL = .*$/baseURL = \"https:\/\/lednerb.github.io\/bilberry-hugo-theme\/\"/" /tmp/demo-site/config.toml
-
       - name: Init Hugo module
         working-directory: /tmp/demo-site
-        run: hugo mod init github.com/Lednerb/bilberry-hugo-theme/exampleSite
+        run: |
+          hugo mod init github.com/Lednerb/bilberry-hugo-theme/exampleSite
+          hugo mod get
+          cat go.mod
+
+      - name: Adjust config.yml
+        working-directory: /tmp/demo-site
+        run: |
+          sed -i "s/baseURL = .*$/baseURL = \"https:\/\/lednerb.github.io\/bilberry-hugo-theme\/\"/" config.toml
+          version=$(grep -o 'v[0-9]\.[0-9][0-9]\.[0-9]' go.mod)
+          sed -i "s/creditsText = .*$/creditsText = \"Bilberry Hugo Theme $version\"/" config.toml
+          sed -i "s/creditsUrl = .*$/creditsUrl = \"https:\/\/github.com\/Lednerb\/bilberry-hugo-theme\/tree\/$version\"/" config.toml
 
       - name: Build
         working-directory: /tmp/demo-site
