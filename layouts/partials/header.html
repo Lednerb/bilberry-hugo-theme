@@ -36,11 +36,11 @@
         {{ if and (gt .Site.Languages 1) (.Site.Params.showHeaderLanguageChooser | default true) }}
             {{- $language := .Language -}}
             <div class="languages">
-            {{ range $.Site.Home.AllTranslations }}
+            {{ range .Page.AllTranslations }}
                 {{ if eq $language .Language }}
-                    <a href="{{ .Permalink }}" class="active">{{ .Language }}</a>
+                    <a href="{{ .RelPermalink }}" class="active">{{ .Language }}</a>
                 {{ else }}
-                    <a href="{{ .Permalink }}">{{ .Language }}</a>
+                    <a href="{{ .RelPermalink }}">{{ .Language }}</a>
                 {{ end }}
             {{ end }}
             </div>
