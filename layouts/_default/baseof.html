@@ -125,6 +125,10 @@
     {{ end }}
     {{ end }}
 
+    {{ if and (hugo.IsProduction) (isset .Site.Params "umami_website_id") }}
+    <script async defer src="https://analytics.umami.is/script.js" data-website-id="{{ .Site.Params.umami_website_id }}"></script>
+    {{ end }}
+
     {{ if and (isset .Site.Params "algolia_search") (eq .Site.Params.algolia_search true) }}
     {{ partial "algolia-search.html" . }}
     {{ end }}
