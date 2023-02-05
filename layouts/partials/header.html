@@ -37,18 +37,16 @@
             {{- $language := .Language -}}
             {{- $pages := .Page.AllTranslations -}}
             <div class="languages">
-            {{ range $site := $.Site.Home.AllTranslations }}
-                {{ $url := $site.RelPermalink }}
-                {{ range $page := $pages }}
-                    {{ if eq $page.Lang $site.Language.Lang }}
-                      {{ $url = $page.RelPermalink }}
-                    {{ end }}
+            {{ range $.Site.Home.AllTranslations }}
+                {{ $url := .RelPermalink }}
+                {{ range where $pages "Lang" .Language.Lang }}
+                  {{ $url = .RelPermalink }}
                 {{ end }}
 
-                {{ if eq $language $site.Language }}
-                    <a href="{{ $url }}" class="active">{{ $site.Language }}</a>
+                {{ if eq $language .Language }}
+                    <a href="{{ $url }}" class="active">{{ .Language }}</a>
                 {{ else }}
-                    <a href="{{ $url }}">{{ $site.Language }}</a>
+                    <a href="{{ $url }}">{{ .Language }}</a>
                 {{ end }}
             {{ end }}
             </div>
