@@ -51,49 +51,25 @@ $(document).ready(function () {
         $("#search").autocomplete("val", "");
     });
 
-    // Commento support to block search focus when hitting the S key
-    blockSearchFocusCommento = false;
-
-    $('#commento').focusin(function() {
-        blockSearchFocusCommento = true;
-    });
-
-    $('#commento').focusout(function() {
-        blockSearchFocusCommento = false;
-    });
-
-    // Utterances support to block search focus when hitting the S key
-    blockSearchFocusUtterances = false;
-
-    $('#utterances').focusin(function() {
-        blockSearchFocusUtterances = true;
-    });
-
-    $('#utterances').focusout(function() {
-        blockSearchFocusUtterances = false;
-    });
-
-    // Giscus support to block search focus when hitting the S key
-    blockSearchFocusGiscus = false;
-
-    $('#giscus').focusin(function() {
-        blockSearchFocusGiscus = true;
-    });
-
-    $('#giscus').focusout(function() {
-        blockSearchFocusGiscus = false;
-    });
-
     // Keyboard-Support
     $(document).keyup(function (e) {
-        if (e.code === 'Escape') {
+        // Clear and/or close search on ESC
+        if (e.code === 'Escape' && $("#search")[0] == $(e.target)[0]) {
             if (!$("nav").hasClass('permanentTopNav')) {
                 $("nav").slideUp();
             }
             $("#search").autocomplete("val", "").blur();
-        } else if (e.code === 'KeyS' && (!blockSearchFocusCommento
-            || !blockSearchFocusUtterances || !blockSearchFocusGiscus)) {
+            return;
+        }
 
+        // Ignore event if we're inside a input field
+        let targetType = (e.target.tagName ?? "").toLowerCase();
+        if (targetType == "textarea" || targetType == "input") {
+            return;
+        }
+
+        // Else we listen for "s" to active out search box
+        if (e.code === 'KeyS') {
             if (!$("nav").hasClass('permanentTopNav')) {
                 $("nav").slideDown();
             }
