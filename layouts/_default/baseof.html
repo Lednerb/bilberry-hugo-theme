@@ -116,8 +116,15 @@
     {{ partial "mathjax.html" . }}
     {{ end }}
 
-
+    {{ if and .Site.Params.enableMomentJs .Site.Params.enableHighlightJs }}
+    <script src="{{ "theme-moment-highlight.js" | absURL }}"></script>
+    {{ else if .Site.Params.enableMomentJs }}
+    <script src="{{ "theme-moment.js" | absURL }}"></script>
+    {{ else if .Site.Params.enableHighlightJs }}
+    <script src="{{ "theme-highlight.js" | absURL }}"></script>
+    {{ else }}
     <script src="{{ "theme.js" | absURL }}"></script>
+    {{ end }}
 
     {{ if isset .Site.Params "js_modules" }}
     {{ range .Site.Params.js_modules }}

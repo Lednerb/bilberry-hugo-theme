@@ -31,9 +31,13 @@
         }
     }
 
+    code {
+        background: transparent !important;
+    }
+
     pre {
         position: relative;
-        background: transparent !important;
+        background: transparent;
 
         code {
             padding: 1.0em;
