@@ -77,7 +77,8 @@ Please use the following guidelines if you want to start a discussion:
   - [Archive Page](#archive-page)
   - [Responsive Design](#responsive-design)
   - [MathJAX Markup](#mathjax-markup)
-  - [Disabled Javascript Support](#disabled-javascript-support)
+  - [Disabled JavaScript Support](#disabled-javascript-support)
+  - [Trimmed JavaScript size](#trimmed-javascript-size)
   - [Raw HTML](#raw-html)
 - [Customizations](#customizations)
   - [Favicons](#favicons)
@@ -745,7 +746,7 @@ Bilberry theme is optimized to look good on all devices, namely desktops, tablet
 To enable the [MathJAX](https://www.mathjax.org) markup support, set the `enable_mathjax` parameter to `true` in
 the `config.toml` file.
 
-### Disabled Javascript Support
+### Disabled JavaScript Support
 
 Although this theme has a lot of features that only work with enabled JavaScript, it also fully supports disabled
 JavaScript.
@@ -753,6 +754,18 @@ Disabled Javascript will not break any styling or essential functionalities of y
 
 You can test the behavior of the [demo site](https://lednerb.github.io/bilberry-hugo-theme) by disabling JavaScript in
 your browser.
+
+### Trimmed JavaScript size
+
+By default the JavaScript bundle of this theme contains both [highlightjs][] and [momentjs][] which are quite big, even though they add some real value.
+
+To save some bytes and trim down the size of the JavaScript bundle one can choose wether or not those feature should stay enabled (which is the current default), via two config parameters:
+
+```toml
+[params]
+enableHighlightJs = true # false would save ~127KiB gzipped
+enableMomentJs = true    # false would save ~262KiB gzipped
+```
 
 ### Raw HTML
 
@@ -926,3 +939,6 @@ of any kind welcome!
 ## License
 
 The Bilberry Hugo theme is licensed under the MIT license.
+
+  [highlightjs]: https://highlightjs.org/
+  [momentjs]: https://momentjs.com/
