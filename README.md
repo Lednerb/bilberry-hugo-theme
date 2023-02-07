@@ -759,7 +759,7 @@ your browser.
 
 By default the JavaScript bundle of this theme contains both [highlightjs][] and [momentjs][] which are quite big, even though they add some real value.
 
-To save some bytes and trim down the size of the JavaScript bundle one can choose wether or not those feature should stay enabled (which is the current default), via two config parameters:
+To save some bytes and trim down the size of the JavaScript bundle, one can choose wether or not those features should stay enabled (which is the current default), via two config parameters:
 
 ```toml
 [params]
