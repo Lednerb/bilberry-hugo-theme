@@ -109,7 +109,7 @@ disqusShortname = ""
 
     # enable highlight.js for syntax highlighting or (if set to false) use
     # the hugo built-in chroma highlighter
-    enableHighlightJs = false
+    enableHighlightJs = true
 
     # enable automatic localization of the article's PublishedDate with momentjs
     enableMomentJs = true
