@@ -775,7 +775,7 @@ hook partials: [hooks/head-end.html](https://github.com/Lednerb/bilberry-hugo-th
 and [hooks/body-end.html](https://github.com/Lednerb/bilberry-hugo-theme/blob/master/layouts/partials/hooks/body-end.html). 
 Copy the file in question into your site root's `layouts/partials/hooks` folder and add the necessary code, for
 example, as in this [hooks/body-end.html](https://github.com/igor-baiborodine/bilberry-hugo-theme-sandbox/blob/9c492fad08771295f529b9acdc17aa03865a52ad/layouts/partials/hooks/body-end.html)
-file hat contains integration with Umami web analytics.
+file that contains integration with Umami web analytics.
 
 ```html
 <script async defer src="https://analytics.umami.is/script.js"
