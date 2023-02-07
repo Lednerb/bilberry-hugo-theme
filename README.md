@@ -80,6 +80,7 @@ Please use the following guidelines if you want to start a discussion:
   - [Disabled Javascript Support](#disabled-javascript-support)
   - [Raw HTML](#raw-html)
 - [Customizations](#customizations)
+  - [Hooks](#hooks)
   - [Favicons](#favicons)
   - [404 Page](#404-page)
   - [Custom Post Types](#custom-post-types)
