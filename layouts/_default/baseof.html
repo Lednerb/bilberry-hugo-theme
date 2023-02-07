@@ -96,9 +96,12 @@
             <link rel="stylesheet" href="{{ . | absURL }}">
         {{ end }}
     {{ end }}
+
+    {{ partial "hooks/head-end.html" }}
 </head>
 
 <body class="bilberry-hugo-theme">
+    {{ partial "hooks/body-start.html" }}
 
     {{ partial "topnav.html" . }}
 
@@ -128,6 +131,8 @@
     {{ if and (isset .Site.Params "algolia_search") (eq .Site.Params.algolia_search true) }}
     {{ partial "algolia-search.html" . }}
     {{ end }}
+
+    {{ partial "hooks/body-end.html" }}
 </body>
 
 </html>
