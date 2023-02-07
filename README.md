@@ -80,6 +80,7 @@ Please use the following guidelines if you want to start a discussion:
   - [Disabled Javascript Support](#disabled-javascript-support)
   - [Raw HTML](#raw-html)
 - [Customizations](#customizations)
+  - [Hooks](#hooks)
   - [Favicons](#favicons)
   - [404 Page](#404-page)
   - [Custom Post Types](#custom-post-types)
@@ -769,15 +770,17 @@ unsafe = true
 ### Hooks
 
 If you need to integrate your website with a third-party service or to customize it further, you can use the following
-hook partials: hooks/head-end.html, hooks/body-start.html, and hooks/body-end.html. Copy the file in question into
-your site root's `layouts/partials/hooks` folder and add the necessary code, for example, as in this [hooks/body-end.html](https://github.com/igor-baiborodine/bilberry-hugo-theme-sandbox/blob/9c492fad08771295f529b9acdc17aa03865a52ad/layouts/partials/hooks/body-end.html)
-file hat contains integration with Umami web analytics.
+hook partials: [hooks/head-end.html](https://github.com/Lednerb/bilberry-hugo-theme/blob/master/layouts/partials/hooks/head-end.html), 
+[hooks/body-start.html](https://github.com/Lednerb/bilberry-hugo-theme/blob/master/layouts/partials/hooks/body-start.html), 
+and [hooks/body-end.html](https://github.com/Lednerb/bilberry-hugo-theme/blob/master/layouts/partials/hooks/body-end.html). 
+Copy the file in question into your site root's `layouts/partials/hooks` folder and add the necessary code, for
+example, as in this [hooks/body-end.html](https://github.com/igor-baiborodine/bilberry-hugo-theme-sandbox/blob/9c492fad08771295f529b9acdc17aa03865a52ad/layouts/partials/hooks/body-end.html)
+file that contains integration with Umami web analytics.
 
 ```html
 <script async defer src="https://analytics.umami.is/script.js"
         data-website-id="29b02d61-3df1-433f-8bb7-cba0ec70c9f7"></script>
 ```
-
 
 ### Favicons
 
