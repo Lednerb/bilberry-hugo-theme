@@ -778,7 +778,6 @@ file hat contains integration with Umami web analytics.
         data-website-id="29b02d61-3df1-433f-8bb7-cba0ec70c9f7"></script>
 ```
 
-
 ### Favicons
 
 To add favicons, proceed with the following steps:
