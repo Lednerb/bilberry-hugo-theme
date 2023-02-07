@@ -97,11 +97,11 @@
         {{ end }}
     {{ end }}
 
-    {{ partial "hooks/head-end.html" }}
+    {{ partial "hooks/head-end.html" . }}
 </head>
 
 <body class="bilberry-hugo-theme">
-    {{ partial "hooks/body-start.html" }}
+    {{ partial "hooks/body-start.html" . }}
 
     {{ partial "topnav.html" . }}
 
@@ -132,7 +132,7 @@
     {{ partial "algolia-search.html" . }}
     {{ end }}
 
-    {{ partial "hooks/body-end.html" }}
+    {{ partial "hooks/body-end.html" . }}
 </body>
 
 </html>
