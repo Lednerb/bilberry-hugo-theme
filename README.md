@@ -754,7 +754,7 @@ Disabled Javascript will not break any styling or essential functionalities of y
 You can test the behavior of the [demo site](https://lednerb.github.io/bilberry-hugo-theme) by disabling JavaScript in
 your browser.
 
-### Trimmed JavaScript size
+### Trimmed JavaScript Size
 
 By default the JavaScript bundle of this theme contains both [highlightjs][] and [momentjs][] which are quite big, even though they add some real value.
 
