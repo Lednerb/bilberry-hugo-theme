@@ -78,7 +78,6 @@ Please use the following guidelines if you want to start a discussion:
   - [Responsive Design](#responsive-design)
   - [MathJAX Markup](#mathjax-markup)
   - [Disabled JavaScript Support](#disabled-javascript-support)
-  - [Trimmed JavaScript size](#trimmed-javascript-size)
   - [Raw HTML](#raw-html)
 - [Customizations](#customizations)
   - [Favicons](#favicons)
