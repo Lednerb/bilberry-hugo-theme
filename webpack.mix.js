@@ -19,9 +19,9 @@ mix.setPublicPath('./static')
 .setResourceRoot('./')
 // MomentJS and HightlighJS are quire big and thus we create variants
 // that can be used with or without them!
-.js('assets/js/theme.js', './theme-no-moment-no-highlight.js')
-.js(['assets/js/theme.js', 'assets/js/moment.js'], './theme-no-highlight.js')
-.js(['assets/js/theme.js', 'assets/js/highlight.js'], './theme-no-moment.js')
+.js('assets/js/theme.js', './theme-exclude-moment-and-highlight.js')
+.js(['assets/js/theme.js', 'assets/js/moment.js'], './theme-exclude-highlight.js')
+.js(['assets/js/theme.js', 'assets/js/highlight.js'], './theme-exclude-moment.js')
 .js(['assets/js/theme.js', 'assets/js/moment.js', 'assets/js/highlight.js'], './theme.js')
 .sass('assets/sass/theme.scss', './')
 .then(() => {
