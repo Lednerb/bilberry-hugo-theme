@@ -1,0 +1,35 @@
+name: Update Static Files
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - assets/js/**
+      - assets/sass/**
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Clean old build artifacts
+        run: rm -rf ./static/theme*.js* ./static/theme*.css*
+
+      - name: Create build artifacts
+        run: npm run production
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "npm run production"
+          add_options: --all
+          file_pattern: ./static/

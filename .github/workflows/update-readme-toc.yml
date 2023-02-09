@@ -1,12 +1,14 @@
-name: Generate README TOC
+name: Update README TOC
 
 on:
   pull_request:
-    branches: "*"
+    branches:
+      - master
+    paths:
+      - README.md
 
 jobs:
-  generateTOC:
-    name: Generate TOC
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: technote-space/toc-generator@v4
