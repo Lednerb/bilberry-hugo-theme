@@ -756,9 +756,9 @@ your browser.
 
 ### Trimmed JavaScript Size
 
-By default the JavaScript bundle of this theme contains both [highlightjs][] and [momentjs][] which are quite big, even though they add some real value.
+By default, this theme's JavaScript bundle contains the [highlight.js](https://highlightjs.org/) and [Moment.js](https://momentjs.com/) libraries, which are pretty large, though they add real value.
 
-To save some bytes and trim down the size of the JavaScript bundle, one can choose wether or not those features should stay enabled (which is the current default), via two config parameters:
+Therefore, to reduce the size of the downloaded JavaScript bundle, you can choose whether these features should remain enabled (which is currently the default) via two configuration parameters
 
 ```toml
 [params]
@@ -938,6 +938,3 @@ of any kind welcome!
 ## License
 
 The Bilberry Hugo theme is licensed under the MIT license.
-
-  [highlightjs]: https://highlightjs.org/
-  [momentjs]: https://momentjs.com/
