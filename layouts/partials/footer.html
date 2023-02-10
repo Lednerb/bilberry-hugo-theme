@@ -44,18 +44,24 @@
             </div>
             {{ end }}
 
-            {{ if and (.Site.Params.showFooterLanguageChooser | default true) (gt .Site.Languages 1) }}
-            {{- $.Scratch.Set "language" .Language -}}
-            <div class="languages">
-                <strong>{{ i18n "otherLanguages" }}</strong>
-                {{ range $.Site.Home.AllTranslations }}
-                {{ if eq ($.Scratch.Get "language") .Language }}
-                <a href="{{ .Permalink }}" class="active">{{ .Language }}</a>
-                {{ else }}
-                <a href="{{ .Permalink }}">{{ .Language }}</a>
-                {{ end }}
-                {{ end }}
-            </div>
+            {{ if and (gt .Site.Languages 1) (.Site.Params.showFooterLanguageChooser | default true) }}
+                {{- $language := .Language -}}
+                {{- $pages := .Page.AllTranslations -}}
+                <div class="languages">
+                    <strong>{{ i18n "otherLanguages" }}</strong>
+                    {{ range $.Site.Home.AllTranslations }}
+                        {{ $url := .RelPermalink }}
+                        {{ range where $pages "Lang" .Language.Lang }}
+                            {{ $url = .RelPermalink }}
+                        {{ end }}
+
+                        {{ if eq $language .Language }}
+                            <a href="{{ $url }}" class="active">{{ .Language }}</a>
+                        {{ else }}
+                            <a href="{{ $url }}">{{ .Language }}</a>
+                        {{ end }}
+                    {{ end }}
+                </div>
             {{ end }}
 
             {{ if .Site.Params.showArchive | default true }}
