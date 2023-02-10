@@ -254,6 +254,9 @@ The `link` post type always links to an external site and can be used with or wi
 If you want to permanently display the top navigation bar with the search text field and `page` items, set
 the `permanentTopNav` parameter to `true` in the `config.toml` file.
 
+If you want to display the top navigation bar when scrolling down the page, set the `stickyNav` parameter to `true`. But
+this will only work when the `permanentTopNav` is also set to `true`.
+
 Please note that the top navigation bar is minimized by default on mobile devices.
 
 ### Algolia Search
