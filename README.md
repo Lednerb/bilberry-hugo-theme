@@ -95,6 +95,11 @@ Please use the following guidelines if you want to start a discussion:
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+
+## Test Update TOC
+
+This test for updating TOC
+
 ## Requirements
 
 - **Hugo** (version >= 0.93.3), see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.
