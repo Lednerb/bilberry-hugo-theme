@@ -3,7 +3,7 @@ name: Update README TOC
 on:
   push:
     branches:
-      - '!master'
+      - '*'
 #    paths:
 #      - 'README.md'
 
