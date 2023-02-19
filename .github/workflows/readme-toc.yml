@@ -1,14 +1,12 @@
 name: Update README TOC
 
 on:
-  push:
-    branches:
-      - '*'
-#    paths:
-#      - 'README.md'
+  pull_request:
+    branches: "*"
 
 jobs:
-  update-toc:
+  generateTOC:
+    name: Update TOC
     runs-on: ubuntu-latest
     steps:
       - uses: technote-space/toc-generator@v4
