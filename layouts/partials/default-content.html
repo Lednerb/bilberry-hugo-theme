@@ -55,7 +55,7 @@
     {{ else }}
         {{ .ctx.Summary }}
 
-        {{ if .ctx.Truncated }}
+        {{ if or (.ctx.Truncated) (isset .ctx.Params "summary") }}
             <a href="{{ .ctx.Permalink }}" class="more">{{ i18n "continueReading" }}</a>
         {{ end }}
     {{ end }}
