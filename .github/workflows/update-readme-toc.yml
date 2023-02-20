@@ -1,0 +1,15 @@
+name: Update README TOC
+
+on:
+  push:
+    branches: 
+      - 'master'
+    paths:
+      - 'README.md'
+
+jobs:
+  update-toc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: technote-space/toc-generator@v4
+        name: Run TOC generator
