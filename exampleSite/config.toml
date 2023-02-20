@@ -187,9 +187,6 @@ disqusShortname = ""
     ordered = false
     startLevel = 2
 
-  [markup.highlight]
-    style = "pastie"
-
 # do NOT change anything below
 [taxonomies]
   author   = "author"
