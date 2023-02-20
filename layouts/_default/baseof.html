@@ -119,8 +119,17 @@
     {{ partial "mathjax.html" . }}
     {{ end }}
 
-
+    {{- $noMoment    := not (.Site.Params.enableMomentJs    | default true) -}}
+    {{- $noHighlight := not (.Site.Params.enableHighlightJs | default true) -}}
+    {{ if and $noMoment $noHighlight }}
+    <script src="{{ "theme-exclude-moment-and-highlight.js" | absURL }}"></script>
+    {{ else if $noMoment }}
+    <script src="{{ "theme-exclude-moment.js" | absURL }}"></script>
+    {{ else if $noHighlight }}
+    <script src="{{ "theme-exclude-highlight.js" | absURL }}"></script>
+    {{ else }}
     <script src="{{ "theme.js" | absURL }}"></script>
+    {{ end }}
 
     {{ if isset .Site.Params "js_modules" }}
     {{ range .Site.Params.js_modules }}

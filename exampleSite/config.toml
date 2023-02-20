@@ -107,6 +107,10 @@ disqusShortname = ""
     # Set to true to pin only to the first page, false to all pages
     # pinOnlyToFirstPage = true
 
+    # enable highlight.js for syntax highlighting or (if set to false) use
+    # the hugo built-in chroma highlighter
+    enableHighlightJs = true
+
     # enable automatic localization of the article's PublishedDate with momentjs
     enableMomentJs = true
 
@@ -182,6 +186,9 @@ disqusShortname = ""
     endLevel = 5
     ordered = false
     startLevel = 2
+
+  [markup.highlight]
+    style = "pastie"
 
 # do NOT change anything below
 [taxonomies]

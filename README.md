@@ -749,7 +749,7 @@ Bilberry theme is optimized to look good on all devices, namely desktops, tablet
 To enable the [MathJAX](https://www.mathjax.org) markup support, set the `enable_mathjax` parameter to `true` in
 the `config.toml` file.
 
-### Disabled Javascript Support
+### Disabled JavaScript Support
 
 Although this theme has a lot of features that only work with enabled JavaScript, it also fully supports disabled
 JavaScript.
@@ -757,6 +757,18 @@ Disabled Javascript will not break any styling or essential functionalities of y
 
 You can test the behavior of the [demo site](https://lednerb.github.io/bilberry-hugo-theme) by disabling JavaScript in
 your browser.
+
+### Trimmed JavaScript Size
+
+By default, this theme's JavaScript bundle contains the [highlight.js](https://highlightjs.org/) and [Moment.js](https://momentjs.com/) libraries, which are pretty large, though they add real value.
+
+Therefore, to reduce the size of the downloaded JavaScript bundle, you can choose whether these features should remain enabled (which is currently the default) via two configuration parameters
+
+```toml
+[params]
+enableHighlightJs = true # false would save ~127KiB gzipped
+enableMomentJs = true    # false would save ~262KiB gzipped
+```
 
 ### Raw HTML
 
