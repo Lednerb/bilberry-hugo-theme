@@ -202,6 +202,14 @@ cd my-new-blog
 hugo server
 ```
 
+### Free Hosting
+
+To deploy and host your website for free, you can use either [GitHub Pages](https://pages.github.com/)
+or [Netlify](https://www.netlify.com/).
+
+**Important**: When hosting on GitHub Pages, you should add an empty file named `.nojekyll` to the site's root to avoid
+the [issue](https://github.com/Lednerb/bilberry-hugo-theme/discussions/448) with Font Awesome's icons not being loaded.
+
 ### Other Tutorials
 
 - [Start Blogging With Hugo, GitHub, and Netlify](https://www.kiroule.com/article/start-blogging-with-github-hugo-and-netlify/)
