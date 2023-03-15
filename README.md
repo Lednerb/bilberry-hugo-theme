@@ -39,6 +39,7 @@ Please use the following guidelines if you want to start a discussion:
     - [Option 2: Cloning/Copying the Theme Files](#option-2-cloningcopying-the-theme-files)
   - [Configuration](#configuration)
   - [Webserver](#webserver)
+  - [Free Hosting](#free-hosting)
   - [Other Tutorials](#other-tutorials)
 - [Features](#features)
   - [Default Post Types](#default-post-types)
