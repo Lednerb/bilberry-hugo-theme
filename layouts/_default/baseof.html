@@ -76,10 +76,11 @@
 
     <script src="{{ "modernizr-simple.js" | relURL }}"></script>
 
-    {{ if .RelPermalink }}
-    <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{ end }}
+    {{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+    <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+    {{end}}
+
 
     {{ with .Params.original_url }}
     <link rel="canonical" href="{{ . }}" />
