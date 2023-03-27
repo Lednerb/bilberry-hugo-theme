@@ -892,7 +892,7 @@ URL.
 Modules are imported in the order they appear in the list, and immediately after the default Bilberry CSS and JS files
 are imported.
 
-### Cookie Disclaimer
+### Cookie Disclaimer (GDPR)
 
 You can use the [cookie consent](https://cookieconsent.insites.com/) solution to add cookie consent information by
 loading the needed resources as external CSS and JS modules.
