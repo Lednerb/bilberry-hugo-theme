@@ -89,7 +89,7 @@ Please use the following guidelines if you want to start a discussion:
   - [Individual Posts](#individual-posts)
   - [Colors and Fonts](#colors-and-fonts)
   - [CSS and JS modules](#css-and-js-modules)
-  - [Cookie Disclaimer](#cookie-disclaimer)
+  - [Cookie Disclaimer (GDPR)](#cookie-disclaimer-gdpr)
 - [Translations](#translations)
 - [Credits](#credits)
 - [Contributors](#contributors)
