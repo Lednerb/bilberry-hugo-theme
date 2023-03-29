@@ -1,0 +1,42 @@
+[categories]
+other = "Categorías"
+
+[authors]
+other = "Autores"
+
+[tags]
+other = "Etiquetas"
+
+[socialMedia]
+other = "Redes sociales"
+
+[latestPosts]
+other = "Últimas publicaciones"
+
+[search]
+other = "Buscar ..."
+
+[noSearchResults]
+other = "Nada encontrado."
+
+[olderPosts]
+other = "Publicaciones anteriores"
+
+[newerPosts]
+other = "Publicaciones recientes"
+
+[continueReading]
+other = "Seguir leyendo"
+
+[otherLanguages]
+other = "Otros idiomas"
+
+[readingTime]
+one = "1 minuto de lectura"
+other = "{{ .Count }} minutos de lectura"
+
+[tableOfContents]
+other = "Tabla de contenidos"
+
+[series]
+other = "Series"

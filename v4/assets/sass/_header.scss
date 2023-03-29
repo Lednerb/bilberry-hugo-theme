@@ -1,0 +1,127 @@
+header {
+    background-color: $base-color;
+    color: $header-text-color;
+    height: auto;
+    display: flex;
+    align-items: center;
+
+    &.sticky {
+        padding-top: 65px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        min-height: 20rem;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            width: 2px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+    }
+
+    .logo {
+        font-size: 40pt !important;
+        background-color: $logo-color;
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        border: 5px $logo-color solid;
+        position: relative;
+        color: $logo-color;
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            border: 0;
+        }
+
+        &:hover {
+            .overlay {
+                opacity: 1;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: $bubble-hover-color;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+        }
+    }
+
+    .titles {
+        margin-left: 3rem;
+
+        h3 {
+            margin-bottom: 0;
+            font-size: 3.25rem;
+        }
+    }
+
+    .languages {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: $special-color;
+        padding: 0.5em 1em;
+        display: flex;
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+
+        a {
+            text-transform: uppercase;
+            font-size: 0.8em;
+            color: $page-background-color;
+            letter-spacing: 0.1em;
+
+            &.active {
+                font-weight: bold;
+            }
+
+            &:not(:last-child):after {
+                content: " | ";
+                color: inherit;
+            }
+        }
+    }
+
+    .toggler {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: $special-color;
+        padding: 0.375em 0.75em;
+        font-size: 1.125em;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        cursor: pointer;
+
+        &.permanentTopNav {
+            display: none;
+        }
+    }
+}

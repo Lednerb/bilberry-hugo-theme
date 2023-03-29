@@ -1,0 +1,6 @@
+{{ $type := .Get "type" }}
+{{ if eq $type "audiofile"}}
+    {{ partial "audio-embed" (dict "type" $type "url" (.Get "url")) }}
+{{ else }}
+    {{ partial "audio-embed" (dict "type" $type "id" (.Get "id")) }}
+{{ end }}

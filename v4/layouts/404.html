@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<div class="content">
+    <div class="article-wrapper u-cf single">
+        <a class="bubble" href="{{ "/" | relLangURL}}">
+            <i class="fa fa-fw fa-exclamation-triangle"></i>
+        </a>
+
+        <article class="error404 article">
+            <div class="content">
+                <h3>WOAH BUDDY!</h3>
+                <p></p>
+                <p>This is definitely not the page you're looking for...</p>
+                <p><strong>An Error 404 occured.</strong> That means the page is not available. </p>
+                <p>Please select a category at the bottom or change over to the <a href="{{ "/" | relLangURL}}"> HOMEPAGE</a>.</p>
+            </div>
+        </article>
+    </div>
+</div>
+{{ end }}

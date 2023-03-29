@@ -1,0 +1,18 @@
+{{ define "main" }}
+    <div class="article-wrapper u-cf single">
+        {{  if or (fileExists (print "layouts/partials/content-type/" .Type ".html") ) (fileExists (print "themes/bilberry-hugo-theme/layouts/partials/content-type/" .Type ".html")) }}
+            {{ partial (print "content-type/" .Type ".html") (dict "ctx" . "template_type" "single") }}
+        {{ else }}
+            {{ partial "content-type/article.html" (dict "ctx" . "template_type" "single") }}
+        {{ end }}
+    </div>
+
+    {{ if ( .Params.showComments | default true ) }}
+        <div id="comments-container">
+            {{ template "_internal/disqus.html" . }}
+            {{ partial "commento.html" . }}
+            {{ partial "giscus.html" . }}
+            {{ partial "utterances.html" . }}
+        </div>
+    {{ end }}
+{{ end }}

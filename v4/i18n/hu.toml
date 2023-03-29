@@ -1,0 +1,37 @@
+[categories]
+other = "Kategóriák"
+
+[authors]
+other = "Szerzők"
+
+[tags]
+other = "Címkék"
+
+[socialMedia]
+other = "Közösségi média"
+
+[latestPosts]
+other = "Legfrissebb bejegyzések"
+
+[search]
+other = "Keresés ..."
+
+[noSearchResults]
+other = "Nincs találat."
+
+[olderPosts]
+other = "Korábbi bejegyzések"
+
+[newerPosts]
+other = "Újabb bejegyzések"
+
+[continueReading]
+other = "Tovább olvasom"
+
+[otherLanguages]
+other = "További nyelvek"
+
+[readingTime]
+one = "1 perc olvasási idő"
+other = "{{.Count}} perc olvasási idő"
+

@@ -1,0 +1,36 @@
+[categories]
+other = "Danh mục"
+
+[authors]
+other = "Tác giả"
+
+[tags]
+other = "Thẻ"
+
+[socialMedia]
+other = "Mạng xã hội"
+
+[latestPosts]
+other = "Bài viết mới nhất"
+
+[search]
+other = "Tìm kiếm ..."
+
+[noSearchResults]
+other = "Không có kết quả nào được tìm thấy."
+
+[olderPosts]
+other = "Bài viết cũ hơn"
+
+[newerPosts]
+other = "Bài viết mới hơn"
+
+[continueReading]
+other = "Đọc tiếp"
+
+[otherLanguages]
+other = "Ngôn ngữ khác"
+
+[readingTime]
+other = "1 phút đọc"
+

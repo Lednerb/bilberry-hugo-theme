@@ -1,0 +1,19 @@
+name = "Bilberry Hugo Theme"
+license = "MIT"
+licenselink = "https://github.com/Lednerb/bilberry-hugo-theme/blob/master/LICENSE.md"
+description = "Bilberry is a premium Hugo theme with many great features. This is a Hugo adaptation and further optimization of the Lingonberry WordPress theme by Anders Norén."
+
+homepage = "https://github.com/Lednerb/bilberry-hugo-theme"
+demosite = "https://lednerb.github.io/bilberry-hugo-theme"
+
+tags = ["blog", "personal", "responsive", "commento", "comments", "disabled javascript", "gallery", "code", "coding", "programming", "audio", "video", "algolia", "disqus", "search", "font awesome", "pages", "posts", "multilingual", "highlight.js", "syntax highlighting", "premium", "shortcuts"]
+features = ["search", "algolia integration", "post types", "i18n", 'multilingual', 'blog', 'google analytics', 'comments', 'disqus integration', "highlight.js", "syntax highlighting", "premium theme", "shortcuts"]
+
+[author]
+  name = "Lednerb | Sascha Brendel"
+  homepage = "https://sascha-brendel.de"
+
+[original]
+  name = "Lingonberry"
+  homepage = "https://andersnoren.se/teman/lingonberry-wordpress-theme/"
+  repo = "https://wordpress.org/themes/lingonberry/"

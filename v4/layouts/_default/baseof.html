@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+{{ if eq .Type "gallery" }}
+    {{ $image := (index (.Resources.ByType "image") 0 ) }}
+    {{ $imageUrl := "" }}
+
+    {{ if and (.Site.Params.resizeImages | default true) (.Params.resizeImages | default true) }}
+        {{ $imageUrl = ($image.Fill "700x350 q95").Permalink }}
+    {{ else }}
+        {{ $imageUrl = $image.Permalink }}
+    {{ end }}
+
+    {{ .Scratch.Set "image" $imageUrl }}
+
+{{ else if .Resources.GetMatch "featuredImage.*" }}
+    {{ $imageUrl := "" }}
+
+    {{ if and (.Site.Params.resizeImages | default true) (.Params.resizeImages | default true) }}
+         {{ $imageUrl = ((.Resources.GetMatch "featuredImage.*").Fill "700x350 q95").Permalink }}
+    {{ else }}
+        {{ $imageUrl = (.Resources.GetMatch "featuredImage.*").Permalink }}
+    {{ end }}
+
+    {{ .Scratch.Set "image" $imageUrl }}
+
+{{ else if .Params.featuredImage }}
+  {{ .Scratch.Set "image" (.Params.featuredImage | absURL) }}
+{{ else if .Params.mp4videoImage }}
+  {{ .Scratch.Set "image" (.Params.mp4videoImage | absURL) }}
+{{ else }}
+  {{ .Scratch.Set "image" (printf "https://www.gravatar.com/avatar/%s?size=200" (md5 .Site.Params.gravatarEMail)) }}
+{{ end }}
+
+{{- if ne .Description "" -}}
+{{ .Scratch.Set "description" (.Description) }}
+{{- else -}}
+{{- if eq .Title .Site.Title -}}
+{{ .Scratch.Set "description" (.Site.Params.description) }}
+{{- else -}}
+{{ .Scratch.Set "description" (printf "%s - %s" (.Title) (.Site.Params.description)) }}
+{{- end -}}
+{{- end -}}
+
+{{- if eq .Site.Title .Title -}}
+    {{ .Scratch.Set "title" (.Site.Params.subtitle) }}
+{{- else -}}
+    {{ .Scratch.Set "title" (.Title) }}
+{{- end -}}
+
+<html itemscope itemtype="https://schema.org/WebPage" class="no-js" lang="{{ .Site.Language.Lang }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="siteBaseUrl" content="{{ .Site.BaseURL }}">
+    <meta name="author" content="{{ .Site.Params.author }}">
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta name="keywords" content="{{ .Site.Params.keywords }}">
+    {{ hugo.Generator }}
+    <title>
+        {{ block "title" . }}
+           {{ if .Scratch.Get "title" }}
+               {{ .Scratch.Get "title" }} &vert; {{ .Site.Title }}
+           {{ else }}
+               {{ .Site.Title }}
+           {{ end }}
+        {{ end }}
+    </title>
+    <meta itemprop="name" content="{{ .Scratch.Get "title" }}">
+    <meta itemprop="description" content="{{ .Scratch.Get "description" }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+
+    {{ template "_internal/opengraph.html" . }}
+
+    {{ partial "favicon.html" . }}
+
+    <script src="{{ "modernizr-simple.js" | relURL }}"></script>
+
+    {{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+    <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+    {{end}}
+
+
+    {{ with .Params.original_url }}
+    <link rel="canonical" href="{{ . }}" />
+    {{ else }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ end }}
+
+    <link rel="stylesheet" href="{{ "theme.css" | absURL }}">
+
+    {{ partial "twitter-card.html" . }}
+
+    {{ if isset .Site.Params "css_modules" }}
+        {{ range .Site.Params.css_modules }}
+            <link rel="stylesheet" href="{{ . | absURL }}">
+        {{ end }}
+    {{ end }}
+
+    {{ partial "hooks/head-end.html" . }}
+</head>
+
+<body class="bilberry-hugo-theme">
+    {{ partial "hooks/body-start.html" . }}
+
+    {{ partial "topnav.html" . }}
+
+    {{ partial "header.html" . }}
+
+    <div class="main container">
+        {{ block "main" . }}{{ end }}
+    </div>
+
+    {{ partial "footer.html" . }}
+
+    {{ template "_internal/google_analytics.html" . }}
+
+    {{ if and (isset .Site.Params "enable_mathjax") (eq .Site.Params.enable_mathjax true) }}
+    {{ partial "mathjax.html" . }}
+    {{ end }}
+
+    {{- $noMoment    := not (.Site.Params.enableMomentJs    | default true) -}}
+    {{- $noHighlight := not (.Site.Params.enableHighlightJs | default true) -}}
+    {{ if and $noMoment $noHighlight }}
+    <script src="{{ "theme-exclude-moment-and-highlight.js" | absURL }}"></script>
+    {{ else if $noMoment }}
+    <script src="{{ "theme-exclude-moment.js" | absURL }}"></script>
+    {{ else if $noHighlight }}
+    <script src="{{ "theme-exclude-highlight.js" | absURL }}"></script>
+    {{ else }}
+    <script src="{{ "theme.js" | absURL }}"></script>
+    {{ end }}
+
+    {{ if isset .Site.Params "js_modules" }}
+    {{ range .Site.Params.js_modules }}
+    <script src="{{ . | absURL }}" type="application/javascript"></script>
+    {{ end }}
+    {{ end }}
+
+    {{ if and (isset .Site.Params "algolia_search") (eq .Site.Params.algolia_search true) }}
+    {{ partial "algolia-search.html" . }}
+    {{ end }}
+
+    {{ partial "hooks/body-end.html" . }}
+</body>
+
+</html>

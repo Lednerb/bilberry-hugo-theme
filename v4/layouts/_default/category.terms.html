@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+<div class="content">
+    <div class="article-wrapper u-cf single">
+        {{ with .Site.GetPage "/categories" }}
+        <a class="bubble" href="{{ .Permalink }}">
+            <i class="fa fa-fw fa-list"></i>
+        </a>
+        {{ end }}
+
+        <article class="article">
+            <div class="content">
+                <h3>{{ i18n "categories" }}</h3>
+                <hr>
+                <ul id="all-categories">
+                    {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+                    <li>
+                        {{ with $.Site.GetPage (printf "/categories/%s" $name) }}
+                        <a href="{{ .Permalink }}">{{ .Title }} ({{ $taxonomy.Count }})</a>
+                        {{ end }}
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </article>
+    </div>
+</div>
+{{ end }}

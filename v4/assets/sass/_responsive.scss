@@ -1,0 +1,119 @@
+@media (max-width: $site-width) {
+    nav {
+        &.permanentTopNav {
+            display: none;
+        }
+
+        .container {
+            flex-direction: column-reverse;
+            padding: 1em 2em;
+
+            .topnav {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 0.5em;
+                width: 100%;
+
+                li {
+                    width: 100%;
+                }
+
+                a {
+                    padding: 0.75em 0;
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            .search {
+                margin: 0.5em 1.5em;
+                width: 100%;
+
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    header {
+        width: 100%;
+
+        .container {
+            padding: 0 30px;
+            .titles {
+                font-size: 1.5rem;
+                line-height: 140%;
+                .title {
+                    font-size: 3rem;
+                    line-height: 160%;
+                }
+            }
+        }
+
+        .toggler {
+            right: 14px;
+
+            &.permanentTopNav {
+                display: block;
+            }
+        }
+
+        .languages {
+            right: 14px;
+        }
+    }
+
+    .bubble {
+        display: none !important;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .container:before,
+    .container:after {
+        display: none !important;
+    }
+
+    .main {
+        margin-bottom: 0;
+    }
+
+    .main article {
+        margin: 14px;
+        width: 100%;
+
+        &:before,
+        &:after {
+            display: none !important;
+        }
+    }
+
+    .main #comments-container {
+        margin: 0 1.5em;
+    }
+
+    .main .paginator {
+        margin: 1.5em;
+        margin-top: 50px;
+    }
+
+    footer .container {
+        padding: 3em 2em 2em 2em;
+        flex-direction: column;
+        text-align: center;
+
+        div {
+            width: 100%;
+            margin: 0 !important;
+        }
+    }
+
+    .credits .container {
+        padding: 4rem 1.5em;
+    }
+}

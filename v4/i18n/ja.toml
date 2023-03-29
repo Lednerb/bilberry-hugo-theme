@@ -1,0 +1,36 @@
+[categories]
+other = "カテゴリー"
+
+[authors]
+other = "著者"
+
+[tags]
+other = "タグ"
+
+[socialMedia]
+other = "ソーシャルメディア"
+
+[latestPosts]
+other = "最近の投稿"
+
+[search]
+other = "検索 ..."
+
+[noSearchResults]
+other = "検索結果がありません."
+
+[olderPosts]
+other = "過去の投稿"
+
+[newerPosts]
+other = "新しい投稿"
+
+[continueReading]
+other = "続きを読む"
+
+[otherLanguages]
+other = "他言語"
+
+[readingTime]
+other = "読了時間約１分"
+

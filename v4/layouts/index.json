@@ -1,0 +1,52 @@
+{{- $.Scratch.Add "index" slice -}}
+
+{{- range $name, $taxonomy := .Site.Taxonomies.categories -}}
+    {{- $.Scratch.Add "index" (dict "url" (print "/categories/" $name | absURL) "title" ($name | humanize) "iconClass" "fa-folder" "type" "category" "objectID" (print "/categories/" $name | absURL) ) -}}
+{{- end -}}
+
+{{- range $name, $taxonomy := .Site.Taxonomies.author -}}
+    {{- $author_name := $name -}}
+    {{- $author_path := (printf "/author/%s" (urlize $name)) -}}
+    {{- $author_page := site.GetPage $author_path -}}
+    {{- if $author_page -}}
+        {{- $author_name = $author_page.Title -}}
+    {{- end -}}
+    {{- $.Scratch.Add "index" (dict "url" ($author_path | absURL) "title" $author_name "iconClass" "fa-user" "type" "author" "objectID" ($author_path | absURL) ) -}}
+{{- end -}}
+
+{{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
+    {{- $.Scratch.Add "index" (dict "url" (print "/tags/" $name | absURL) "title" ($name | humanize) "iconClass" "fa-tag" "type" "tag" "objectID" (print "/tags/" $name | absURL) ) -}}
+{{- end -}}
+
+{{- range $name, $taxonomy := .Site.Taxonomies.series -}}
+    {{- $.Scratch.Add "index" (dict "url" (print "/series/" $name | absURL) "title" ($name | humanize) "iconClass" "fa-list-alt" "type" "series" "objectID" (print "/series/" $name | absURL) ) -}}
+{{- end -}}
+
+{{- range where .Site.RegularPages "Type" "not in" (slice "page" "json" "status") -}}
+    {{- $iconClass := "" -}}
+    {{- if and (isset .Params "icon") (ne .Params.icon "") -}}
+        {{- $iconClass = .Params.icon -}}
+    {{- else if eq .Type "quote" -}}
+        {{- $iconClass = "fa-quote-right" -}}
+    {{- else if eq .Type "link" -}}
+        {{- $iconClass = "fa-link" -}}
+    {{- else if eq .Type "video" -}}
+        {{- $iconClass = "fa-video" -}}
+    {{- else if or (eq .Type "gallery") (eq .Type "picture") -}}
+        {{- $iconClass = "fa-camera" -}}
+    {{- else if eq .Type "audio" -}}
+        {{- $iconClass = "fa-music" -}}
+    {{- else if eq .Type "code" -}}
+        {{- $iconClass = "fa-code" -}}
+    {{- else -}}
+        {{-  $iconClass = "fa-pencil-alt" -}}
+    {{- end -}}
+
+    {{- range .Translations -}}
+        {{- $.Scratch.Add "index" (dict "url" .Permalink "title" .Title "tags" .Params.tags "categories" .Params.categories "author" .Params.author "type" .Type "language" .Lang "iconClass" $iconClass "objectID" (.Permalink | md5) ) -}}
+    {{- end -}}
+    {{- $.Scratch.Add "index" (dict "url" .Permalink "title" .Title "tags" .Params.tags "categories" .Params.categories "author" .Params.author "type" .Type "language" .Lang "iconClass" $iconClass "objectID" (.Permalink | md5) ) -}}
+
+{{- end -}}
+
+{{- $.Scratch.Get "index" | jsonify -}}

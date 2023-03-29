@@ -1,0 +1,45 @@
+[categories]
+other = "Categories"
+
+[authors]
+other = "Authors"
+
+[tags]
+other = "Tags"
+
+[socialMedia]
+other = "Social media"
+
+[latestPosts]
+other = "Latest posts"
+
+[search]
+other = "Search ..."
+
+[noSearchResults]
+other = "Nothing found."
+
+[olderPosts]
+other = "Older posts"
+
+[newerPosts]
+other = "Newer posts"
+
+[continueReading]
+other = "Continue reading"
+
+[otherLanguages]
+other = "Other languages"
+
+[readingTime]
+one = "1 min read"
+other = "{{.Count}} min read"
+
+[tableOfContents]
+other = "Table of Contents"
+
+[series]
+other = "Series"
+
+[archive]
+other = "Archive"

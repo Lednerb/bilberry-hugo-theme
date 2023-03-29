@@ -1,0 +1,36 @@
+[categories]
+other = "分类"
+
+[authors]
+other = "作者"
+
+[tags]
+other = "标签"
+
+[socialMedia]
+other = "社交媒体"
+
+[latestPosts]
+other = "最新帖子"
+
+[search]
+other = "搜索……"
+
+[noSearchResults]
+other = "什么都没找到。"
+
+[olderPosts]
+other = "较旧的帖子"
+
+[newerPosts]
+other = "较新的帖子"
+
+[continueReading]
+other = "继续阅读"
+
+[otherLanguages]
+other = "其他语言"
+
+[readingTime]
+other = "需要 {{.Count}} 分钟阅读"
+

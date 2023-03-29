@@ -1,0 +1,37 @@
+[categories]
+other = "Kategorier"
+
+[authors]
+other = "Forfattere"
+
+[tags]
+other = "Tags"
+
+[socialMedia]
+other = "Sociale medier"
+
+[latestPosts]
+other = "Seneste indlæg"
+
+[search]
+other = "Søg ..."
+
+[noSearchResults]
+other = "Ingen resultater fundet."
+
+[olderPosts]
+other = "Ældre indlæg"
+
+[newerPosts]
+other = "Nyere indlæg"
+
+[continueReading]
+other = "Fortsæt med at læse"
+
+[otherLanguages]
+other = "Andre sprog"
+
+[readingTime]
+one = "1 min at læse"
+other = "{{.Count}} min at læse"
+

@@ -1,0 +1,34 @@
+<a class="bubble" href="{{ .ctx.Permalink }}">
+    <i class="fas fa-fw {{or .ctx.Params.icon "fa-video" }}"></i>
+</a>
+
+<article class="video">
+    {{ partial "featured-image.html" .ctx }}
+
+    {{ with .ctx.Params.youtube }}
+        {{ partial "video-embed" (dict "type" "youtube" "id" .) }}
+    {{ end }}
+
+    {{ with .ctx.Params.vimeo }}
+        {{ partial "video-embed" (dict "type" "vimeo" "id" .) }}
+    {{ end }}
+
+    {{ with .ctx.Params.prezi }}
+        {{ partial "video-embed" (dict "type" "prezi" "id" .) }}
+    {{ end }}
+
+    {{ with .ctx.Params.bilibili }}
+        {{ partial "video-embed" (dict "type" "bilibili" "id" .) }}
+    {{ end }}
+
+    {{ with .ctx.Params.peertube }}
+        {{ partial "video-embed" (dict "type" "peertube" "id" .) }}
+    {{ end }}
+
+    {{ if isset .ctx.Params "mp4video" }}
+        {{ partial "video-embed" (dict "type" "mp4" "url" .ctx.Params.mp4video "imageUrl" .ctx.Params.mp4videoImage) }}
+    {{ end }}
+
+    {{ partial "default-content.html" (dict "ctx" .ctx "template_type" .template_type) }}
+    {{ partial "article-footer.html" .ctx }}
+</article>

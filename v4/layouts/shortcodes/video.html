@@ -1,0 +1,8 @@
+{{ $type := .Get "type" }}
+{{ if eq $type "mp4"}}
+    {{ partial "video-embed" (dict "type" $type "url" (.Get "url") "imageUrl" (.Get "imageUrl")) }}
+{{ else }}
+    {{ partial "video-embed" (dict "type" $type "id" (.Get "id")) }}
+{{ end }}
+
+

@@ -1,0 +1,36 @@
+[categories]
+other = "카테고리"
+
+[authors]
+other = "글쓴이"
+
+[tags]
+other = "태그"
+
+[socialMedia]
+other = "소셜 미디어"
+
+[latestPosts]
+other = "최근 글"
+
+[search]
+other = "검색 ..."
+
+[noSearchResults]
+other = "검색 결과가 없습니다."
+
+[olderPosts]
+other = "이전 글"
+
+[newerPosts]
+other = "최근 글"
+
+[continueReading]
+other = "더보기"
+
+[otherLanguages]
+other = "다국어"
+
+[readingTime]
+other = "{{.Count}} 분"
+

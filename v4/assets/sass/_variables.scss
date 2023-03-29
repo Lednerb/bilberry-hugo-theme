@@ -1,0 +1,53 @@
+// Set the width of the main content area
+// Notice that the actual content's width is $site-width - 100px
+$site-width: 800px;
+
+$headline-font: 'Comfortaa',
+sans-serif;
+$content-font: 'Open Sans',
+sans-serif;
+$article-footer-font: 'Fira Code',
+monospace;
+
+// main colors
+$page-background-color: #f1f1f1;
+$base-color: #1d1f38;
+$special-color: #2D3642;
+$highlight-color: #5c8b59;
+$text-color: #222;
+
+// easy styling
+$nav-background-color: $special-color;
+$nav-text-color: $page-background-color;
+$algolia-search-box-color: #444;
+$algolia-search-box-icon-color: #888;
+$algolia-search-box-background-color: #fafafa;
+$algolia-border-color: #e4e4e4;
+
+$header-text-color: $page-background-color;
+$logo-color: darken($page-background-color, 1);
+$bubble-color: #fff;
+$bubble-background-color: #ccc;
+$bubble-hover-color: $highlight-color;
+
+$article-background-color: #fff;
+$meta-text-color: #999;
+$meta-border-color: #eee;
+$continue-reading-hover-color: $meta-text-color;
+
+$footer-border-color: #eee;
+$footer-background-color: rgba(#ffffff, 80);
+$footer-headline-color: #444;
+
+
+@mixin featuredImage() {
+    .featured-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        opacity: 0.25;
+    }
+}

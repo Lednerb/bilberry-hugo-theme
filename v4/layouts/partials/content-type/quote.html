@@ -1,0 +1,19 @@
+<a class="bubble" href="{{ .ctx.Permalink }}">
+    <i class="fas fa-fw {{or .ctx.Params.icon "fa-quote-right" }}"></i>
+</a>
+
+<article class="quote">
+    {{ with .ctx.Params.featuredImage }}
+        <img src="{{ . }}" class="featured-image" alt="">
+    {{ end }}
+
+    <blockquote>
+        {{ .ctx.Content }}
+        {{ $urlValue := replace .ctx.Params.author " " "-" | lower}}
+        <cite>
+            <a href="{{ (print "/author/" $urlValue) | relLangURL }}">
+                {{ .ctx.Params.author }}
+            </a>
+        </cite>
+    </blockquote>
+</article>

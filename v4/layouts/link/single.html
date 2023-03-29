@@ -1,0 +1,12 @@
+<html>
+<head>
+    <meta http-equiv="refresh" content="0; url={{ .Params.link }}" />
+    <title>Redirecting...</title>
+</head>
+<body>
+    <p><a href="{{ .Params.link }}">Click here if you're not redirected.</a></p>
+    <script>
+        window.location = {{ .Params.link }}
+    </script>
+</body>
+</html>

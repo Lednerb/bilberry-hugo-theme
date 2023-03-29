@@ -1,0 +1,45 @@
+[categories]
+other = "Categorieën"
+
+[authors]
+other = "Auteurs"
+
+[tags]
+other = "Tags"
+
+[socialMedia]
+other = "Social media"
+
+[latestPosts]
+other = "Laatste berichten"
+
+[search]
+other = "Zoeken ..."
+
+[noSearchResults]
+other = "Niets gevonden."
+
+[olderPosts]
+other = "Oudere berichten"
+
+[newerPosts]
+other = "Nieuwere berichten"
+
+[continueReading]
+other = "Lees verder"
+
+[otherLanguages]
+other = "Andere talen"
+
+[readingTime]
+one = "1 min lezen"
+other = "{{.Count}} min lezen"
+
+[tableOfContents]
+other = "Inhoudsopgave"
+
+[series]
+other = "Series"
+
+[archive]
+other = "Archief"

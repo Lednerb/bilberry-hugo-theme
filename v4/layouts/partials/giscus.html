@@ -1,0 +1,20 @@
+{{ if .Site.Params.giscus }}
+    <script src="{{ .Site.Params.giscusJsUrl }}"
+        data-repo="{{ .Site.Params.giscusRepository }}"
+        data-repo-id="{{ .Site.Params.giscusRepositoryId }}"
+        data-category="{{.Site.Params.giscusCategory}}"
+        data-category-id="{{ .Site.Params.giscusCategoryId }}"
+        data-mapping="{{ .Site.Params.giscusMapping }}"
+        data-reactions-enabled="{{ .Site.Params.giscusReactions }}"
+        data-emit-metadata="{{ .Site.Params.giscusMetadata }}"
+        data-theme="{{ .Site.Params.giscusTheme }}"
+        {{ if isset .Site.Params "giscuslanguage" }}
+            data-lang="{{ .Site.Params.giscusLanguage }}"
+        {{ else }}
+            data-lang="{{ .Site.Language.Lang }}"
+        {{ end }}
+        crossorigin="{{ .Site.Params.giscusCrossOrigin }}"
+        async>
+    </script>
+    <div id="giscus"></div>
+{{ end }}
