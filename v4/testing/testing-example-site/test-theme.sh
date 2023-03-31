@@ -89,6 +89,9 @@ testFolderAndContinue "$TARGET_DIR/de/tags/tästing++"
 testFolderAndContinue "$TARGET_DIR/archive"
 testFolderAndContinue "$TARGET_DIR/de/archive"
 
+testFolderAndContinue "$TARGET_DIR/page/about-bilberry"
+testFolderAndContinue "$TARGET_DIR/de/page/about-bilberry"
+
 # article/täst [en]
 echo "## Testing article/täst [en]"
 testContentAndContinue '<a href="https://example.com/categories/t%C3%A4st&#43;&#43;/">Täst&#43;&#43;</a>' "$TARGET_DIR/article/täst/index.html"
@@ -147,6 +150,11 @@ testContentAndContinue '<h1 class="article-title">Archivseite</h1>' "$TARGET_DIR
 testContentAndContinue '<h4>2020-01</h4>' "$TARGET_DIR/de/archive/index.html"
 testContentAndContinue '<a href="https://example.com/de/article/t%C3%A4st/">de Umlauts Täst&#43;&#43; <span>(2020-01-15)</span></a>' "$TARGET_DIR/de/archive/index.html"
 testContentAndContinue '<a href="https://example.com/de/quote/t%C3%A4st-quote/">de Quote Umlauts Täst&#43;&#43; <span>(2020-01-14)</span></a>' "$TARGET_DIR/de/archive/index.html"
+
+# topnav [en|de]
+echo "## Testing topnav [en|de]"
+testContentAndContinue '<li><a href="/page/about-bilberry/">About Bilberry</a></li>' "$TARGET_DIR/index.html"
+testContentAndContinue '<li><a href="/de/page/about-bilberry/">Über Bilberry</a></li>' "$TARGET_DIR/de/index.html"
 
 echo "# Build stability test"
 

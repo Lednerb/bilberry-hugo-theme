@@ -7,13 +7,13 @@
 {{ end }}
     <div class="container">
         <ul class="topnav">
-            {{ range where (where .Site.Pages.ByWeight ".Type" "page") ".IsPage" true }}
-                {{ if .Params.excludeFromTopNav }}
-                    {{/* Do nothing */}}
-                {{ else if and (isset .Params "link") (ne .Params.link "") }}
-                    <li><a href="{{ .Params.link | relURL }}" target="{{ .Params.target }}">{{ .Title }}</a></li>
+            {{ range site.Menus.topnav }}
+                {{ $page := .Page }}
+                {{ if and (isset $page.Params "link") (ne $page.Params.link "") }}
+                    <li><a href="{{ $page.Params.link | relLangURL }}"
+                           target="{{ $page.Params.target }}">{{ .Title }}</a></li>
                 {{ else }}
-                    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    <li><a href="{{ .URL }}">{{ .Title }}</a></li>
                 {{ end }}
             {{ end }}
         </ul>

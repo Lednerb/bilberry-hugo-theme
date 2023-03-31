@@ -61,7 +61,7 @@ nav {
 
                 &:hover {
                     color: inherit;
-                    background-color: lighten($nav-background-color, 10);
+                    text-decoration: underline;
                 }
             }
         }

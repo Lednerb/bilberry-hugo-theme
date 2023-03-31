@@ -1,4 +1,4 @@
-# Bilberry Hugo Theme
+# Bilberry Hugo Theme v4
 
 [![GitHub version](https://img.shields.io/github/release/Lednerb/bilberry-hugo-theme/all.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/releases)
 [![Hugo Version](https://img.shields.io/badge/Hugo-%5E0.109.0-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
