@@ -60,8 +60,7 @@ nav {
                 display: flex;
 
                 &:hover {
-                    color: inherit;
-                    text-decoration: underline;
+                    color: $bubble-hover-color;
                 }
             }
         }
