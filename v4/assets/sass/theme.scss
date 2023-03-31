@@ -1,0 +1,22 @@
+// Settings for customization
+@import "variables";
+
+// Dependencies
+@import '~normalize.css/normalize.css';
+@import '~skeleton-css/css/skeleton.css';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~flexslider/flexslider.css';
+@import '~tooltipster/dist/css/tooltipster.bundle.css';
+@import '~tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-light.min.css';
+@import "~magnific-popup";
+@import 'fontface';
+
+// Choose one of the supported syntax highlighting styles
+// https://highlightjs.org/static/demo/
+@import '~highlight.js/scss/zenburn.scss';
+
+// Basic bilberry styling
+@import 'bilberry-hugo-theme';

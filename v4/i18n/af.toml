@@ -1,0 +1,37 @@
+[categories]
+other = "Kategorieë"
+
+[authors]
+other = "Skrywers"
+
+[tags]
+other = "Tags"
+
+[socialMedia]
+other = "Sosiale media"
+
+[latestPosts]
+other = "Laaste plasings"
+
+[search]
+other = "Soek ..."
+
+[noSearchResults]
+other = "Niks gevind."
+
+[olderPosts]
+other = "Ouer poste"
+
+[newerPosts]
+other = "Nuwer plasings"
+
+[continueReading]
+other = "lees verder"
+
+[otherLanguages]
+other = "Ander tale"
+
+[readingTime]
+one = "1 min lees"
+other = "{{.Count}} min lees"
+

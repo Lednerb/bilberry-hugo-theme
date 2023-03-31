@@ -1,0 +1,37 @@
+[categories]
+other = "Kategoriler"
+
+[authors]
+other = "Yazarlar"
+
+[tags]
+other = "Etiketler"
+
+[socialMedia]
+other = "Sosyal medya"
+
+[latestPosts]
+other = "Son gönderiler"
+
+[search]
+other = "Ara ..."
+
+[noSearchResults]
+other = "Hiçbir şey bulunamadı."
+
+[olderPosts]
+other = "Eski gönderiler"
+
+[newerPosts]
+other = "Yeni gönderiler"
+
+[continueReading]
+other = "Okumaya devam et"
+
+[otherLanguages]
+other = "Diğer diller"
+
+[readingTime]
+one = "1 dak. okuma"
+other = "{{.Count}} dak. okuma"
+

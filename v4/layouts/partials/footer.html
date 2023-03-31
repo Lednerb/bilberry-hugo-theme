@@ -1,0 +1,103 @@
+{{ if .Site.Params.showFooter | default true }}
+<footer>
+    <div class="container">
+
+        {{ if gt (.Site.Params.amountLatestPostsInFooter | default 7) 0 }}
+        <div class="recent-posts">
+            <strong>{{ i18n "latestPosts" }}</strong>
+            <ul>
+                {{ $dontRender :=  (slice "page" "quote" "link" "status" "archive") }}
+                {{ range (first (.Site.Params.amountLatestPostsInFooter | default 7) (where (where .Site.Pages.ByPublishDate.Reverse ".Kind" "page") ".Type" "not in" $dontRender )) }}
+                    <li>
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+
+        {{ if and .Site.Taxonomies.categories (gt ( .Site.Params.amountCategoriesInFooter | default 7 ) 0 ) }}
+        <div class="categories">
+            {{ with .Site.GetPage "/categories" }}
+            <a href="{{ .Permalink }}"><strong>{{ i18n "categories" }}</strong></a>
+            {{ end }}
+
+            <ul>
+                {{ range $order, $taxonomy := (first ( .Site.Params.amountCategoriesInFooter | default 7 ) .Site.Taxonomies.categories.ByCount) }}
+                <li>
+                {{ with $.Site.GetPage (printf "/categories/%s" $taxonomy.Name) }}
+                    <a href="{{ .Permalink }}">{{ .Title }} ({{ $taxonomy.Count }})</a>
+                {{ end }}
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+
+        <div class="right">
+            {{ if .Site.Params.showSocialMedia | default true }}
+            <div class="external-profiles">
+                <strong>{{ i18n "socialMedia" }}</strong>
+                {{ range .Site.Params.socialMediaLinks }}
+                <a href="{{ .link }}" target="_blank" rel="{{ .rel }}"><em class="{{ .icon }}"></em></a>
+                {{ end }}
+            </div>
+            {{ end }}
+
+            {{ if and (gt .Site.Languages 1) (.Site.Params.showFooterLanguageChooser | default true) }}
+                {{- $language := .Language -}}
+                {{- $pages := .Page.AllTranslations -}}
+                <div class="languages">
+                    <strong>{{ i18n "otherLanguages" }}</strong>
+                    {{ range $.Site.Home.AllTranslations }}
+                        {{ $url := .RelPermalink }}
+                        {{ range where $pages "Lang" .Language.Lang }}
+                            {{ $url = .RelPermalink }}
+                        {{ end }}
+
+                        {{ if eq $language .Language }}
+                            <a href="{{ $url }}" class="active">{{ .Language }}</a>
+                        {{ else }}
+                            <a href="{{ $url }}">{{ .Language }}</a>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            {{ end }}
+
+            {{ if .Site.Params.showArchive | default true }}
+            <div class="archive">
+                {{ with .Site.GetPage "/archive" }}
+                <a href="{{ .Permalink }}"><strong>{{ i18n "archive" }}</strong></a>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</footer>
+{{ end }}
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="{{ .Site.Params.copyrightUrl | default "https://github.com/Lednerb" }}" target="_blank">
+                &copy;
+                {{ if .Site.Params.copyrightUseCurrentYear }}
+                {{ now.Year }}
+                {{ else if gt now.Year (.Site.Params.copyrightYearOverride | default 2018) }}
+                {{ .Site.Params.copyrightYearOverride | default 2018 }} - {{ now.Year }}
+                {{ else }}
+                {{ .Site.Params.copyrightYearOverride | default 2018 }}
+                {{ end }}
+                {{ .Site.Params.copyrightBy | default "by Lednerb" }}
+            </a>
+            {{ with  .OutputFormats.Get "rss" -}}
+            -
+            <a href="{{ .Permalink }}">{{ .Name }}</a>
+            {{- end }}
+        </div>
+        <div class="author">
+            <a href="{{ .Site.Params.creditsUrl | default "https://github.com/Lednerb/bilberry-hugo-theme" }}"
+                target="_blank">{{ .Site.Params.creditsText | default "Bilberry Hugo Theme" }}</a>
+        </div>
+    </div>
+</div>

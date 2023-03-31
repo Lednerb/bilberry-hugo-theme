@@ -1,0 +1,36 @@
+[categories]
+other = "分類"
+
+[authors]
+other = "作者"
+
+[tags]
+other = "標籤"
+
+[socialMedia]
+other = "社交媒體"
+
+[latestPosts]
+other = "最新文章"
+
+[search]
+other = "搜尋 ..."
+
+[noSearchResults]
+other = "什麼都沒找到。"
+
+[olderPosts]
+other = "較舊的文章"
+
+[newerPosts]
+other = "較新的文章"
+
+[continueReading]
+other = "繼續閱讀"
+
+[otherLanguages]
+other = "其他語言"
+
+[readingTime]
+other = "1 分鐘閱讀。"
+

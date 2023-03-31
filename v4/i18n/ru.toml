@@ -1,0 +1,45 @@
+[categories]
+other = "Темы"
+
+[authors]
+other = "Авторы"
+
+[tags]
+other = "Теги"
+
+[socialMedia]
+other = "Социальные медиа"
+
+[latestPosts]
+other = "Последние записи"
+
+[search]
+other = "Поиск ..."
+
+[noSearchResults]
+other = "Ничего не найдено."
+
+[olderPosts]
+other = "Старые записи"
+
+[newerPosts]
+other = "Новые записи"
+
+[continueReading]
+other = "Читать далее"
+
+[otherLanguages]
+other = "Другие языки"
+
+[readingTime]
+one = "время чтения 1 мин"
+other = "время чтения {{.Count}} мин"
+
+[tableOfContents]
+other = "Содержание"
+
+[series]
+other = "Подборки"
+
+[archive]
+other = "Архив"

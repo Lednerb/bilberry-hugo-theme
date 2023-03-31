@@ -1,0 +1,30 @@
+<a class="bubble" href="{{ .ctx.Permalink }}">
+    <i class="fas fa-fw {{or .ctx.Params.icon "fa-music" }}"></i>
+</a>
+
+<article class="audio">
+    {{ partial "featured-image.html" .ctx }}
+
+    {{ with .ctx.Params.spotify }}
+        {{ partial "audio-embed" (dict "type" "spotify" "id" .) }}
+    {{ end }}
+
+    {{ with .ctx.Params.soundcloud }}
+        {{ partial "audio-embed" (dict "type" "soundcloud" "id" .) }}
+    {{ end }}
+
+    {{ with .ctx.Params.tunein }}
+        {{ partial "audio-embed" (dict "type" "tunein" "id" .) }}
+    {{ end }}
+
+    {{ with .ctx.Params.mixcloud }}
+        {{ partial "audio-embed" (dict "type" "mixcloud" "id" .) }}
+    {{ end }}
+
+    {{ with .ctx.Params.audiofile }}
+        {{ partial "audio-embed" (dict "type" "audiofile" "url" .) }}
+    {{ end }}
+
+    {{ partial "default-content.html" (dict "ctx" .ctx "template_type" .template_type) }}
+    {{ partial "article-footer.html" .ctx }}
+</article>

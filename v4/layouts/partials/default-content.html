@@ -1,0 +1,62 @@
+<div class="content">
+    <h1 class="article-title">
+        <a href="{{ .ctx.Permalink }}">
+            {{ .ctx.Title }}
+        </a>
+    </h1>
+
+    <div class="meta">
+        {{ if ( .ctx.Params.showDate | default true ) }}
+            {{ if ( .ctx.Site.Params.enableMomentJs | default true ) }}
+                <span class="date moment">{{ .ctx.PublishDate.Format "2006-01-02" }}</span>
+            {{ else }}
+                <span class="date">{{ .ctx.PublishDate.Format (.ctx.Site.Params.DateFormat | default "2006-01-02") }}</span>
+            {{ end }}
+        {{ end }}
+
+        {{ if ( .ctx.Site.Params.showReadingTime | default false ) }}
+            {{ if eq .ctx.Params.readingTime 0 }}
+                <!-- hide reading time when it's set to 0 -->
+            {{ else if .ctx.Params.readingTime }}
+                <span class="readingTime">{{ i18n "readingTime" .ctx.Params.readingTime }}</span>
+            {{ else }}
+                <span class="readingTime">{{ i18n "readingTime" .ctx.ReadingTime }}</span>
+            {{ end }}
+        {{ end }}
+
+        {{ with .ctx.Params.categories }}
+            <span class="categories">
+                {{ range . }}
+                    {{ $urlValue := replace . " " "-" | lower}}
+                    {{ with $.ctx.Site.GetPage (printf "/categories/%s" $urlValue) }}
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    {{ end }}
+                {{ end }}
+            </span>
+        {{ end }}
+
+        {{ with .ctx.Params.author }}
+            <span class="author">
+                {{ $urlValue := replace . " " "-" | lower}}
+                {{ with $.ctx.Site.GetPage (printf "/author/%s" $urlValue ) }}
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ end }}
+            </span>
+        {{ end }}
+    </div>
+
+    {{ if or (eq .template_type "single") (.ctx.Params.noSummary) }}
+        {{ if and (gt .ctx.WordCount .ctx.Site.Params.tocMinWordCount ) (.ctx.Params.toc) }}
+            <h2>{{ i18n "tableOfContents" | default "tableOfContents" }}</h2>
+            {{ .ctx.TableOfContents }}
+        {{ end }}
+
+        {{ .ctx.Content }}
+    {{ else }}
+        {{ .ctx.Summary }}
+
+        {{ if or (.ctx.Truncated) (isset .ctx.Params "summary") }}
+            <a href="{{ .ctx.Permalink }}" class="more">{{ i18n "continueReading" }}</a>
+        {{ end }}
+    {{ end }}
+</div>

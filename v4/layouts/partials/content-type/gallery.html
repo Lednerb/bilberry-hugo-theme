@@ -1,0 +1,36 @@
+<a class="bubble" href="{{ .ctx.Permalink }}">
+    <i class="fas fa-fw {{ or .ctx.Params.icon "fa-camera" }}"></i>
+</a>
+
+<article class="gallery">
+    {{ $img_alt := .ctx.Title }}
+
+    {{ if and (isset .ctx.Params "gallery") (ne .ctx.Params.gallery "") }}
+        <div class="flexslider">
+            <ul class="slides">
+                {{ range .ctx.Params.gallery }}
+                    <li><img alt="{{ $img_alt }}" src="{{ . | relURL }}" /></li>
+                {{ end }}
+            </ul>
+        </div>
+    {{ else if ne .ctx.Params.imageSlider false }}
+        <div class="flexslider">
+            <ul class="slides">
+                {{ if and (.ctx.Site.Params.resizeImages | default true) (.ctx.Params.resizeImages | default true) }}
+                    {{ range .ctx.Resources.ByType "image" }}
+                        <li><img alt="{{ $img_alt }}" src="{{ (.Fill "700x350 q95").RelPermalink }}" /></li>
+                    {{ end }}
+                {{ else }}
+                    {{ range .ctx.Resources.ByType "image" }}
+                        <li><img alt="{{ $img_alt }}" src="{{ .RelPermalink }}" /></li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+        </div>
+    {{ else}}
+        {{ partial "featured-image.html" .ctx }}
+    {{ end }}
+
+    {{ partial "default-content.html" (dict "ctx" .ctx "template_type" .template_type) }}
+    {{ partial "article-footer.html" .ctx }}
+</article>

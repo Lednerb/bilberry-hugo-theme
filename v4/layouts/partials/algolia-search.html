@@ -1,0 +1,10 @@
+<div id="activate-algolia-search" class="hidden">
+  <input type="hidden" id="algolia-search-appId" value="{{ .Site.Params.algolia_appId }}">
+  <input type="hidden" id="algolia-search-apiKey" value="{{ .Site.Params.algolia_apiKey }}">
+  <input type="hidden" id="algolia-search-indexName" value="{{ .Site.Params.algolia_indexName }}">
+  <input type="hidden" id="algolia-search-noSearchResults" value="{{ i18n "noSearchResults" }}">
+
+  {{ if .Site.Params.algolia_currentLanguageOnly }}
+  <input type="hidden" id="algolia-search-currentLanguageOnly">
+  {{ end }}
+</div>

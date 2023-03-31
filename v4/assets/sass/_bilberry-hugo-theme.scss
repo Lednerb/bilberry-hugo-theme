@@ -1,0 +1,121 @@
+@import "no-js";
+
+.bilberry-hugo-theme {
+    background-color: $page-background-color;
+    font-family: $content-font;
+    color: $text-color;
+    font-size: 1.6em;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .title,
+    .subtitle {
+        font-family: $headline-font;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $highlight-color;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    pre {
+        position: relative;
+        background: transparent !important;
+
+        code {
+            padding: 1.0em;
+            font-size: 0.9em;
+            white-space: pre;
+            overflow-x: auto;
+            border-radius: 4px;
+        }
+
+        .copy-button {
+            display: none;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: #f1f1f1;
+            padding: 4px;
+            font-size: 12pt;
+            line-height: normal;
+            height: auto;
+        }
+
+        &:hover .copy-button {
+            display: block;
+        }
+    }
+
+    code {
+        font-family: "Fira Code", monospace;
+        border: 0;
+        margin: 0;
+        white-space: normal;
+    }
+
+    .tooltipster-light {
+        font-size: 0.75em;
+
+        .tooltipster-content {
+            padding: 6px 10px;
+        }
+    }
+
+    .bubble .fas {
+        font-size: 15pt;
+    }
+
+    .container {
+        width: $site-width;
+        max-width: 100%;
+    }
+
+    .ulist {
+        // Fix for asciidoctor-html5s
+        padding-left: 1em;
+    }
+
+    ul {
+        list-style: circle;
+        padding-left: inherit;
+    }
+
+    .flexslider {
+        ol,
+        ul {
+            list-style: none;
+        }
+    }
+
+    .fa-youtube-adblock-proof:before {
+        content: "\F167";
+    }
+
+    @import "topnav";
+
+    @import "header";
+
+    @import "main";
+
+    @import "articles";
+
+    @import "pagination";
+
+    @import "footer";
+
+    @import "responsive";
+}

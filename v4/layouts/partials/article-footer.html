@@ -1,0 +1,31 @@
+{{ with .Params.tags }}
+<div class="footer">
+{{ else }}
+<div class="footer no-tags">
+{{ end }}
+
+    {{ with .Params.tags }}
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                {{ range . }}
+                    {{ $urlValue := replace . " " "-" | lower}}
+                    {{ with $.Site.GetPage (printf "/tags/%s" $urlValue) }}
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    {{ end }}
+
+    {{ if .IsTranslated }}
+    <div class="languages">
+        <i class="fa fa-language"></i>
+        <div class="links">
+            {{ range .Translations }}
+                <a href="{{ .Permalink }}">{{ .Lang }}</a>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>

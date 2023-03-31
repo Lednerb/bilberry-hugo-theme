@@ -1,0 +1,47 @@
+.js {
+    .no-js-message {
+        display: none;
+    }
+}
+
+.no-js {
+
+    .no-js-hidden {
+        display: none;
+    }
+
+    .no-js-message {
+        display: block;
+        padding: 2em;
+        background-color: $base-color;
+        color: $header-text-color;
+        font-size: 0.9em;
+        font-style: italic;
+        text-align: center;
+
+        &:first-line {
+            font-weight: bold;
+        }
+    }
+
+    nav {
+        display: block !important;
+    }
+
+    .search,
+    .toggler {
+        display: none !important;
+    }
+
+    pre code {
+        background: inherit;
+        color: inherit;
+    }
+
+    .responsive-video {
+        &.youtube, &.vimeo, &.peertube {
+                height: auto !important;
+                padding: 0 !important;
+            }
+    }
+}

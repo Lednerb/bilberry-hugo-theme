@@ -1,0 +1,14 @@
+{{ define "main" }}
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "ne" "page") (index .Site.Params "paginate" | default 7) }}
+    {{ range  where .Paginator.Pages "Type" "ne" "page" }}
+        <div class="article-wrapper u-cf">
+            {{  if or (fileExists (print "layouts/partials/content-type/" .Type ".html") ) (fileExists (print "themes/bilberry-hugo-theme/layouts/partials/content-type/" .Type ".html")) }}
+                {{ partial (print "content-type/" .Type ".html") (dict "ctx" . "template_type" "multiple") }}
+            {{ else }}
+                {{ partial "content-type/article.html" (dict "ctx" . "template_type" "multiple") }}
+            {{ end }}
+        </div>
+    {{ end }}
+
+    {{ partial "paginator.html" . }}
+{{ end }}
