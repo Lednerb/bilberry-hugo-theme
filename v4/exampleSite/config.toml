@@ -111,10 +111,10 @@ disqusShortname = ""
     # the hugo built-in chroma highlighter
     enableHighlightJs = true
 
-    # enable automatic localization of the article's PublishedDate with momentjs
+    # enable automatic localization of the article's published date using Moment.js
     enableMomentJs = true
 
-    # customize the date format | only works if momentjs is disabled | only works with English month names
+    # customize the date format | only works if Moment.js is disabled | only works with English month names
     # you can customize it with the options you find here:
     # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
     dateFormat = "2006-01-02"

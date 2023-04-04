@@ -132,7 +132,7 @@ rm my-new-blog/archetypes/default.md
 - Copy the example site content including the `config.toml` file:
 
 ```shell
-cp -r bilberry-hugo-theme/exampleSite/* my-new-blog
+cp -r bilberry-hugo-theme/v4/exampleSite/* my-new-blog
 ```
 
 ### Theme Installation Options
@@ -150,7 +150,7 @@ hugo mod init github.com/<your-user>/my-new-blog
 ```
 
 Following the Hugo module initialization, you may have the following warning: module "
-github.com/Lednerb/bilberry-hugo-theme/v3" not found, which should be ignored.
+github.com/Lednerb/bilberry-hugo-theme/v4" not found, which should be ignored.
 
 - Pull theme files to add new content to your website:
 
@@ -170,10 +170,10 @@ Use this option if you want to directly customize and maintain your own copy of 
 
 ```toml
 # Option 1 (recommended): adding the theme as a hugo module
-# theme = "github.com/Lednerb/bilberry-hugo-theme/v3"
+# theme = "github.com/Lednerb/bilberry-hugo-theme/v4"
 
 # Option 2: cloning/copying the theme files
-theme = "bilberry-hugo-theme"
+theme = "bilberry-hugo-theme/v4"
 ```
 
 - Copy cloned (or unzipped) theme files in previous step to the `my-new-blog/themes` directory:
