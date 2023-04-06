@@ -33,14 +33,19 @@
 
     pre {
         position: relative;
-        background: transparent !important;
+        background: transparent;
+        border-radius: 4px;
 
         code {
+            background-color: inherit;
+            font-family: "Fira Code", monospace;
+            border: 0;
+            margin: 0;
+            white-space: normal;
             padding: 1.0em;
             font-size: 0.9em;
             white-space: pre;
             overflow-x: auto;
-            border-radius: 4px;
         }
 
         .copy-button {
@@ -58,13 +63,6 @@
         &:hover .copy-button {
             display: block;
         }
-    }
-
-    code {
-        font-family: "Fira Code", monospace;
-        border: 0;
-        margin: 0;
-        white-space: normal;
     }
 
     .tooltipster-light {

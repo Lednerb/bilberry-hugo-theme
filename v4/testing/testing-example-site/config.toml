@@ -29,7 +29,7 @@ disqusShortname = "bilberry-hugo-theme"
   # Description and meta data for the search engines
   author = "Lednerb"
   description = "Bilberry Premium Theme for Hugo."
-  keywords = "blog,personal,responsive,search,font awesome,pages,posts,multilingual,highlight.js,syntax highlighting,premium,shortcuts"
+  keywords = "blog,personal,responsive,search,font awesome,pages,posts,multilingual,syntax highlighting,premium,shortcuts"
 
   # How many articles should be displayed at once?
   paginate = 7
