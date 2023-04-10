@@ -17,12 +17,10 @@ mix.autoload({
 
 mix.setPublicPath('./static')
 .setResourceRoot('./')
-// MomentJS and HightlighJS are quire big and thus we create variants
-// that can be used with or without them!
-.js('assets/js/theme.js', './theme-exclude-moment-and-highlight.js')
-.js(['assets/js/theme.js', 'assets/js/moment.js'], './theme-exclude-highlight.js')
-.js(['assets/js/theme.js', 'assets/js/highlight.js'], './theme-exclude-moment.js')
-.js(['assets/js/theme.js', 'assets/js/moment.js', 'assets/js/highlight.js'], './theme.js')
+// Moment.js is large enough, thus we create variants
+// that can be used with or without Moment.js!
+.js(['assets/js/theme.js'], './theme-exclude-moment.js')
+.js(['assets/js/theme.js', 'assets/js/moment.js'], './theme.js')
 .sass('assets/sass/theme.scss', './')
 .then(() => {
   const fs = require("fs");

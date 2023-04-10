@@ -29,7 +29,7 @@ disqusShortname = "bilberry-hugo-theme"
   # Description and meta data for the search engines
   author = "Lednerb"
   description = "Bilberry Premium Theme for Hugo."
-  keywords = "blog,personal,responsive,search,font awesome,pages,posts,multilingual,highlight.js,syntax highlighting,premium,shortcuts"
+  keywords = "blog,personal,responsive,search,font awesome,pages,posts,multilingual,syntax highlighting,premium,shortcuts"
 
   # How many articles should be displayed at once?
   paginate = 7
@@ -144,6 +144,31 @@ disqusShortname = "bilberry-hugo-theme"
     title = "Mein cooler neuer Blog"
     subtitle = "Hallo Welt! Dies ist der epischste Untertitel aller Zeiten."
 
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # change to 'true' if you need to render raw HTML within your markdown content
+      unsafe = false
+    [markup.highlight]
+      anchorLineNos = false
+      codeFences = true
+      guessSyntax = false
+      hl_Lines = ''
+      hl_inline = false
+      lineAnchors = ''
+      lineNoStart = 1
+      lineNos = false
+      lineNumbersInTable = true
+      noClasses = true
+      noHl = false
+      style = 'monokai'
+      tabWidth = 4
+    [markup.tableOfContents]
+      endLevel = 5
+      ordered = false
+      startLevel = 2
+
 # don't change anything below
 [taxonomies]
   author   = "author"
@@ -154,9 +179,3 @@ disqusShortname = "bilberry-hugo-theme"
 [outputs]
   home = [ "HTML", "JSON", "RSS" ]
   page = [ "HTML" ]
-
-[markup]
-  [markup.tableOfContents]
-    endLevel = 5
-    ordered = false
-    startLevel = 2

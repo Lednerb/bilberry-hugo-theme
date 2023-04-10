@@ -31,40 +31,71 @@
         }
     }
 
-    pre {
-        position: relative;
-        background: transparent !important;
+    .highlight {
+        margin: 1em 0;
 
-        code {
-            padding: 1.0em;
-            font-size: 0.9em;
-            white-space: pre;
-            overflow-x: auto;
+        div {
             border-radius: 4px;
         }
 
-        .copy-button {
-            display: none;
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            background: #f1f1f1;
-            padding: 4px;
-            font-size: 12pt;
-            line-height: normal;
-            height: auto;
+        pre {
+            position: relative;
+            background: transparent;
+            border-radius: 4px;
+
+            code {
+                background-color: inherit;
+                font-family: "Fira Code", monospace;
+                border: 0;
+                margin: 0;
+                padding: 1.0em;
+                font-size: 0.9em;
+                white-space: pre;
+                overflow-x: auto;
+            }
+
+            .copy-button {
+                display: none;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                background: #f1f1f1;
+                padding: 4px;
+                font-size: 12pt;
+                line-height: normal;
+                height: auto;
+            }
+
+            &:hover .copy-button {
+                display: block;
+            }
         }
 
-        &:hover .copy-button {
-            display: block;
+        td pre {
+            margin-bottom: 1em;
         }
-    }
 
-    code {
-        font-family: "Fira Code", monospace;
-        border: 0;
-        margin: 0;
-        white-space: normal;
+        td:first-child pre code {
+            padding: 0 0 0 1em;
+
+            &:hover .copy-button {
+                display: none;
+            }
+        }
+
+        td:first-child pre {
+            &:hover .copy-button {
+                display: none !important;
+            }
+
+            code {
+                padding: 0 0 0 1em;
+            }
+        }
+
+        td:nth-child(2) pre code {
+            padding: 0;
+        }
     }
 
     .tooltipster-light {

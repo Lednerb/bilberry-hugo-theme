@@ -6,8 +6,8 @@ description = "Bilberry is a premium Hugo theme with many great features. This i
 homepage = "https://github.com/Lednerb/bilberry-hugo-theme"
 demosite = "https://lednerb.github.io/bilberry-hugo-theme"
 
-tags = ["blog", "personal", "responsive", "commento", "comments", "disabled javascript", "gallery", "code", "coding", "programming", "audio", "video", "algolia", "disqus", "search", "font awesome", "pages", "posts", "multilingual", "highlight.js", "syntax highlighting", "premium", "shortcuts"]
-features = ["search", "algolia integration", "post types", "i18n", 'multilingual', 'blog', 'google analytics', 'comments', 'disqus integration', "highlight.js", "syntax highlighting", "premium theme", "shortcuts"]
+tags = ["blog", "personal", "responsive", "commento", "comments", "disabled javascript", "gallery", "code", "coding", "programming", "audio", "video", "algolia", "disqus", "search", "font awesome", "pages", "posts", "multilingual", "syntax highlighting", "premium", "shortcuts"]
+features = ["search", "algolia integration", "post types", "i18n", 'multilingual', 'blog', 'google analytics', 'comments', 'disqus integration', "syntax highlighting", "premium theme", "shortcuts"]
 
 [author]
   name = "Lednerb | Sascha Brendel"

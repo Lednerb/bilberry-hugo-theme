@@ -30,7 +30,7 @@ disqusShortname = ""
   # Description and meta data for the search engines
   author = "Lednerb"
   description = "Bilberry Premium Theme for Hugo."
-  keywords = "blog,personal,responsive,search,font awesome,pages,posts,multilingual,highlight.js,syntax highlighting,premium,shortcuts"
+  keywords = "blog,personal,responsive,search,font awesome,pages,posts,multilingual,syntax highlighting,premium,shortcuts"
 
   # How many articles should be displayed at once?
   paginate = 7
@@ -107,10 +107,6 @@ disqusShortname = ""
     # Set to true to pin only to the first page, false to all pages
     # pinOnlyToFirstPage = true
 
-    # enable highlight.js for syntax highlighting or (if set to false) use
-    # the hugo built-in chroma highlighter
-    enableHighlightJs = true
-
     # enable automatic localization of the article's published date using Moment.js
     enableMomentJs = true
 
@@ -181,7 +177,20 @@ disqusShortname = ""
     [markup.goldmark.renderer]
       # change to 'true' if you need to render raw HTML within your markdown content
       unsafe = false
-
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'monokai'
+    tabWidth = 4
   [markup.tableOfContents]
     endLevel = 5
     ordered = false

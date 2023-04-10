@@ -770,13 +770,14 @@ your browser.
 
 ### Trimmed JavaScript Size
 
-By default, this theme's JavaScript bundle contains the [highlight.js](https://highlightjs.org/) and [Moment.js](https://momentjs.com/) libraries, which are pretty large, though they add real value.
+By default, this theme's JavaScript bundle contains the [Moment.js](https://momentjs.com/) library, which is large
+enough, though they add real value.
 
-Therefore, to reduce the size of the downloaded JavaScript bundle, you can choose whether these features should remain enabled (which is currently the default) via two configuration parameters
+Therefore, to reduce the size of the downloaded JavaScript bundle, you can choose whether using the Moment.js library
+remains enabled (which is currently the default) via the corresponding configuration parameter:
 
 ```toml
 [params]
-enableHighlightJs = true # false would save ~127KiB gzipped
 enableMomentJs = true    # false would save ~262KiB gzipped
 ```
 
