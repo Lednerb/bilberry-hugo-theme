@@ -196,4 +196,19 @@ $(document).ready(function () {
                 }
             });
     }
+
+    // Back to top button
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+            $('#back-to-top-button').addClass('show');
+        } else {
+            $('#back-to-top-button').removeClass('show');
+        }
+    });
+
+    $('#back-to-top-button').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+    });
+
 });

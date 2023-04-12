@@ -136,6 +136,36 @@
         content: "\F167";
     }
 
+    #back-to-top-button {
+        display: inline-block;
+        color: $page-background-color;
+        background-color: $base-color;
+        font-size: 2.5em;
+        line-height: 45px;
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        border-radius: 4px;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        transition: background-color .3s,
+        opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+    }
+
+    #back-to-top-button:hover {
+        cursor: pointer;
+        background-color: $highlight-color;
+    }
+
+    #back-to-top-button.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
     @import "topnav";
 
     @import "header";
