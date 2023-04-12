@@ -3,6 +3,10 @@
 {{ else }}
     <header>
 {{ end }}
+    <a id="back-to-top-button">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
     <div class="container">
         <div class="logo">
             <a href="{{ .Site.BaseURL | relLangURL }}" class="logo">
@@ -59,5 +63,6 @@
         {{ end }}
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </div>
+    </div>
     </div>
 </header>

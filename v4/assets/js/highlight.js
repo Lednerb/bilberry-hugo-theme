@@ -1,2 +1,0 @@
-require('highlight.js')
-    .initHighlightingOnLoad();
