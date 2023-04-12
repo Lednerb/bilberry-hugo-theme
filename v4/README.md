@@ -774,12 +774,8 @@ By default, this theme's JavaScript bundle contains the [Moment.js](https://mome
 enough, though they add real value.
 
 Therefore, to reduce the size of the downloaded JavaScript bundle, you can choose whether using the Moment.js library
-remains enabled (which is currently the default) via the corresponding configuration parameter:
-
-```toml
-[params]
-enableMomentJs = true    # false would save ~262KiB gzipped
-```
+remains enabled (currently the default) via the `enableMomentJs` configuration parameter. Setting it to `false` would
+reduce the bundle size by ~262 kB gzipped.
 
 ### Raw HTML
 
@@ -787,8 +783,8 @@ If you want to include raw HTML in your markdown content, set the `unsafe` setti
 
 ```toml
 [markup.goldmark]
-[markup.goldmark.renderer]
-unsafe = true
+  [markup.goldmark.renderer]
+    unsafe = true
 ```
 
 ## Customizations
@@ -871,6 +867,27 @@ You can customize your posts as follows:
 4. If you want to change the default post types(e.g., replace the pencil icon for the `article` post type another one)
    copy the original content type file to your site's `layouts/partials/content-type/` directory and edit it there.
    Otherwise, your changes will be overwritten when you update the theme to the latest version.
+
+### Syntax Highlighting
+
+Syntax highlighting for code blocks in your posts is implemented using Hugo's
+built-in [Chrome](https://github.com/alecthomas/chroma) code highlighter. Highlighting for code blocks in your posts can
+be customized at the site level or per code block.
+
+To change the default configuration at the site level, adjust the properties in the  `[markup.highlight]` section of
+the `config.toml` file. For example, you can change the default `monokai` style to the one from
+the [Chroma Style Gallery](https://xyproto.github.io/splash/docs/all.html).
+
+Per code block, the following parameters can be
+personalized: `linenos`, `hl_lines`, `linenostart`, `anchorlinenos`, `lineanchors`, and `hl_inline`, for example:
+
+\```java {linenos=inline, hl_lines="7-12 21-26"}
+
+// ... code
+
+\```
+
+Read Hugo's [documentation](https://gohugo.io/content-management/syntax-highlighting/) for more details.
 
 ### Colors and Fonts
 
