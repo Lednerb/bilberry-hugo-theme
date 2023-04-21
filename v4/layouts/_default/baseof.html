@@ -88,15 +88,9 @@
     <link rel="canonical" href="{{ .Permalink }}">
     {{ end }}
 
-    <link rel="stylesheet" href="{{ "theme.css" | absURL }}">
+    {{ partial "css.html" . }}
 
     {{ partial "twitter-card.html" . }}
-
-    {{ if isset .Site.Params "css_modules" }}
-        {{ range .Site.Params.css_modules }}
-            <link rel="stylesheet" href="{{ . | absURL }}">
-        {{ end }}
-    {{ end }}
 
     {{ partial "hooks/head-end.html" . }}
 </head>
