@@ -1,21 +1,19 @@
-// Settings for customization
+// The variables below are processed in './layouts/partials/css.html'
+// when it's executed as template by Hugo pipes.
 
-// Set the width of the main content area
-// Notice that the actual content's width is $site-width - 100px
+// Width of the main content area where the the actual content's width is $site-width - 100px
 $site-width: {{ .Param "siteWidth" | default "800px" }};
 
 $headline-font: {{ .Param "headlineFont" | default "'Comfortaa',sans-serif" }};
 $content-font: {{ .Param "contentFont" | default "'Open Sans',sans-serif" }};
 $article-footer-font: {{ .Param "articleFooterFont" | default "'Fira Code',monospace" }};
 
-// main colors
 $page-background-color: {{ .Param "pageBackgroundColor" | default "#f1f1f1" }};
 $base-color: {{ .Param "baseColor" | default "#1d1f38" }};
 $special-color: {{ .Param "specialColor" | default "#2D3642" }};
 $highlight-color: {{ .Param "highlightColor" | default "#5c8b59" }};
 $text-color: {{ .Param "textColor" | default "#222" }};
 
-// easy styling
 $nav-background-color: {{ .Param "navBackgroundColor" | default "$special-color" }};
 $nav-text-color: {{ .Param "navTextColor" | default "$page-background-color" }};
 $algolia-search-box-color: {{ .Param "algoliaSearchBoxColor" | default "#444" }};
@@ -51,17 +49,12 @@ $footer-headline-color: {{ .Param "" | default "#444" }};
 }
 
 // Dependencies
-//@import '~normalize.css/normalize.css';
-//@import '~skeleton-css/css/skeleton.css';
-//@import '~@fortawesome/fontawesome-free/scss/brands';
-//@import '~@fortawesome/fontawesome-free/scss/regular';
-//@import '~@fortawesome/fontawesome-free/scss/solid';
-//@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-//@import '~flexslider/flexslider.css';
-//@import '~tooltipster/dist/css/tooltipster.bundle.css';
-//@import '~tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-light.min.css';
-//@import '~magnific-popup';
-//@import 'fontface';
+@import '../../assets/_vendor/normalize.scss';
+@import '../../assets/_vendor/skeleton.scss';
+@import '../../assets/_vendor/flexslider.scss';
+@import '../../assets/_vendor/tooltipster.scss';
+@import '../../assets/_vendor/tooltipster-sideTip-light.scss';
+@import 'fontface';
 
-// Base Bilberry styling
+// Base theme styling
 @import 'bilberry-hugo-theme';

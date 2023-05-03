@@ -1,11 +1,11 @@
-{{ $options := dict "targetPath" "css/theme.css" "enableSourceMap" true "precision" 6 }}
+{{ $options := dict "targetPath" "theme.css" "enableSourceMap" true "precision" 6 }}
 {{ $css := resources.Get "sass/theme.scss" | resources.ExecuteAsTemplate "theme.scss" . | toCSS $options }}
 
 {{ if or (.Site.IsServer) (eq .Site.Params.env "LOCAL") }}
 <link rel="stylesheet" href="{{ $css.Permalink }}" media="screen">
 {{ else }}
-{{ $css := $css | resources.Minify | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="screen">
+    {{ $css := $css | resources.Minify | resources.Fingerprint }}
+     <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="screen">
 {{ end }}
 
 {{ if isset .Site.Params "css_modules" }}
