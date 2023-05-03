@@ -1,18 +1,60 @@
-// Settings for customization
-@import "variables";
+// The variables below are processed in './layouts/partials/css.html'
+// when it's executed as template by Hugo pipes.
+
+// Width of the main content area where the the actual content's width is $site-width - 100px
+$site-width: {{ .Param "siteWidth" | default "800px" }};
+
+$headline-font: {{ .Param "headlineFont" | default "'Comfortaa',sans-serif" }};
+$content-font: {{ .Param "contentFont" | default "'Open Sans',sans-serif" }};
+$article-footer-font: {{ .Param "articleFooterFont" | default "'Fira Code',monospace" }};
+
+$page-background-color: {{ .Param "pageBackgroundColor" | default "#f1f1f1" }};
+$base-color: {{ .Param "baseColor" | default "#1d1f38" }};
+$special-color: {{ .Param "specialColor" | default "#2D3642" }};
+$highlight-color: {{ .Param "highlightColor" | default "#5c8b59" }};
+$text-color: {{ .Param "textColor" | default "#222" }};
+
+$nav-background-color: {{ .Param "navBackgroundColor" | default "$special-color" }};
+$nav-text-color: {{ .Param "navTextColor" | default "$page-background-color" }};
+$algolia-search-box-color: {{ .Param "algoliaSearchBoxColor" | default "#444" }};
+$algolia-search-box-icon-color: {{ .Param "algoliaSearchBoxIconColor" | default "#888" }};
+$algolia-search-box-background-color: {{ .Param "algoliaSearchBoxBackgroundColor" | default "#fafafa" }};
+$algolia-border-color: {{ .Param "algoliaBorderColor" | default "#e4e4e4" }};
+
+$header-text-color: {{ .Param "headerTextColor" | default "$page-background-color" }};
+$logo-color: {{ .Param "logoColor" | default "darken($page-background-color, 1)" }};
+$bubble-color: {{ .Param "bubbleColor" | default "#fff" }};
+$bubble-background-color: {{ .Param "bubbleBackgroundColor" | default "#ccc" }};
+$bubble-hover-color: {{ .Param "bubbleHoverColor" | default "$highlight-color" }};
+
+$article-background-color: {{ .Param "articleBackgroundColor" | default "#fff" }};
+$meta-text-color: {{ .Param "metaTextColor" | default "#999" }};
+$meta-border-color: {{ .Param "metaBorderColor" | default "#eee" }};
+$continue-reading-hover-color: {{ .Param "continueReadingHoverColor" | default "$meta-text-color" }};
+
+$footer-border-color: {{ .Param "footerBorderColor" | default "#eee" }};
+$footer-background-color: {{ .Param "footerBackgroundColor" | default "rgba(#ffffff, 80)" }};
+$footer-headline-color: {{ .Param "" | default "#444" }};
+
+@mixin featuredImage() {
+  .featured-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 0.25;
+  }
+}
 
 // Dependencies
-@import '~normalize.css/normalize.css';
-@import '~skeleton-css/css/skeleton.css';
-@import '~@fortawesome/fontawesome-free/scss/brands';
-@import '~@fortawesome/fontawesome-free/scss/regular';
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-@import '~flexslider/flexslider.css';
-@import '~tooltipster/dist/css/tooltipster.bundle.css';
-@import '~tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-light.min.css';
-@import "~magnific-popup";
+@import '../../assets/_vendor/normalize.scss';
+@import '../../assets/_vendor/skeleton.scss';
+@import '../../assets/_vendor/flexslider.scss';
+@import '../../assets/_vendor/tooltipster.scss';
+@import '../../assets/_vendor/tooltipster-sideTip-light.scss';
 @import 'fontface';
 
-// Basic bilberry styling
+// Base theme styling
 @import 'bilberry-hugo-theme';
