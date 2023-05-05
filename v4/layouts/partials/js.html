@@ -2,7 +2,8 @@
 {{ $jsToConcat := slice $themejs }}
 
 {{ range slice
-        "_vendor/modernizr-simple.js" }}
+        "js/modernizr-simple.js"
+        "js/_vendor/jquery.js" }}
     {{ $jsToConcat = $jsToConcat | append (resources.Get .) }}
 {{ end }}
 

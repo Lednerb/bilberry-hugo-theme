@@ -1,5 +1,3 @@
-// dependencies
-require('jquery');
 require('flexslider');
 require('algoliasearch/dist/algoliasearch.jquery');
 require('autocomplete.js/dist/autocomplete.jquery');

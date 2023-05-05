@@ -13,9 +13,9 @@ npm install
 echo
 echo ">>> Cleaning 'node_modules'..."
 
-#npm prune
+npm prune
 
-echo ">>> Copying Node dependencies to 'assets/_vendor'..."
+echo ">>> Copying SASS Node dependencies to 'assets/_vendor'..."
 
 if [ -d "assets/_vendor" ]
   then rm -rf assets/_vendor
@@ -35,7 +35,17 @@ cp node_modules/@fortawesome/fontawesome-free/css/regular.css assets/_vendor/fon
 cp node_modules/@fortawesome/fontawesome-free/css/solid.css assets/_vendor/fontawesome/solid.scss
 cp node_modules/@fortawesome/fontawesome-free/css/fontawesome.css assets/_vendor/fontawesome/fontawesome.scss
 
-echo ">>> Copying Node dependencies to 'static'..."
+echo ">>> Copying JavaScript Node dependencies to 'assets/js/_vendor'..."
+
+if [ -d "assets/js/_vendor" ]
+  then rm -rf assets/js/_vendor
+fi
+
+mkdir assets/js/_vendor
+
+cp node_modules/jquery/dist/jquery.js assets/js/_vendor/jquery.js
+
+echo ">>> Copying fonts Node dependencies to 'static'..."
 
 if [ -d "static/webfonts" ]
   then rm -rf static/webfonts
