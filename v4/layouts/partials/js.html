@@ -1,0 +1,22 @@
+{{ $themejs := resources.Get "js/theme.js" }}
+{{ $jsToConcat := slice $themejs }}
+
+{{ range slice
+        "_vendor/modernizr-simple.js" }}
+    {{ $jsToConcat = $jsToConcat | append (resources.Get .) }}
+{{ end }}
+
+{{ $js := $jsToConcat | resources.Concat "theme.js" }}
+
+{{ if or (.Site.IsServer) (eq .Site.Params.env "LOCAL") }}
+    <script src="{{ $js.Permalink }}"></script>
+{{ else }}
+    {{ $js := $js | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ end }}
+
+{{ if isset .Site.Params "js_modules" }}
+    {{ range .Site.Params.js_modules }}
+        <script src="{{ . | absURL }}" type="application/javascript"></script>
+    {{ end }}
+{{ end }}
