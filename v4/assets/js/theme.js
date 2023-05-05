@@ -3,8 +3,6 @@
  * Bilberry Hugo theme - main
  */
 
-// require('autocomplete.js/dist/autocomplete.jquery');
-
 // Add copy button functionality
 new ClipboardJS('.copy-button', {
     target: function(trigger) {

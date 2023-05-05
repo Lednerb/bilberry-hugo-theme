@@ -44,6 +44,7 @@ fi
 mkdir assets/js/_vendor
 
 cp node_modules/algoliasearch/dist/algoliasearch.jquery.min.js assets/js/_vendor/algoliasearch.js
+cp node_modules/autocomplete.js/dist/autocomplete.jquery.min.js assets/js/_vendor/autocomplete.js
 cp node_modules/clipboard/dist/clipboard.min.js assets/js/_vendor/clipboard.js
 cp node_modules/flexslider/jquery.flexslider-min.js assets/js/_vendor/flexslider.js
 cp node_modules/jquery/dist/jquery.min.js assets/js/_vendor/jquery.js
