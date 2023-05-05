@@ -43,11 +43,12 @@ fi
 
 mkdir assets/js/_vendor
 
-cp node_modules/jquery/dist/jquery.js assets/js/_vendor/jquery.js
-cp node_modules/flexslider/jquery.flexslider.js assets/js/_vendor/flexslider.js
-cp node_modules/tooltipster/dist/js/tooltipster.main.js assets/js/_vendor/tooltipster.js
-cp node_modules/magnific-popup/dist/jquery.magnific-popup.js assets/js/_vendor/magnific-popup.js
-cp node_modules/clipboard/dist/clipboard.js assets/js/_vendor/clipboard.js
+cp node_modules/clipboard/dist/clipboard.min.js assets/js/_vendor/clipboard.js
+cp node_modules/flexslider/jquery.flexslider-min.js assets/js/_vendor/flexslider.js
+cp node_modules/jquery/dist/jquery.min.js assets/js/_vendor/jquery.js
+cp node_modules/magnific-popup/dist/jquery.magnific-popup.min.js assets/js/_vendor/magnific-popup.js
+cp node_modules/tooltipster/dist/js/tooltipster.bundle.min.js assets/js/_vendor/tooltipster.js
+cp node_modules/tooltipster/src/js/plugins/tooltipster/sideTip/tooltipster-sideTip.js assets/js/_vendor/tooltipster-sideTip.js
 
 echo ">>> Copying fonts Node dependencies to 'static'..."
 
