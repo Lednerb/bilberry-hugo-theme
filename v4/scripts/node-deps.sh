@@ -47,6 +47,7 @@ cp node_modules/jquery/dist/jquery.js assets/js/_vendor/jquery.js
 cp node_modules/flexslider/jquery.flexslider.js assets/js/_vendor/flexslider.js
 cp node_modules/tooltipster/dist/js/tooltipster.main.js assets/js/_vendor/tooltipster.js
 cp node_modules/magnific-popup/dist/jquery.magnific-popup.js assets/js/_vendor/magnific-popup.js
+cp node_modules/clipboard/dist/clipboard.js assets/js/_vendor/clipboard.js
 
 echo ">>> Copying fonts Node dependencies to 'static'..."
 

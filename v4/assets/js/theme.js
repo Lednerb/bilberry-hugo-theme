@@ -1,10 +1,10 @@
-require('algoliasearch/dist/algoliasearch.jquery');
-require('autocomplete.js/dist/autocomplete.jquery');
+/* Bilberry Hugo theme */
 
-let ClipboardJs = require('clipboard')
+// require('algoliasearch/dist/algoliasearch.jquery');
+// require('autocomplete.js/dist/autocomplete.jquery');
 
-// Add ClipboardJs to enable copy button functionality
-new ClipboardJs('.copy-button', {
+// Add copy button functionality
+new ClipboardJS('.copy-button', {
     target: function(trigger) {
         return trigger.previousElementSibling;
     }

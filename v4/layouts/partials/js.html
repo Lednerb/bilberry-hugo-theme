@@ -1,14 +1,16 @@
-{{ $themejs := resources.Get "js/theme.js" }}
-{{ $jsToConcat := slice $themejs }}
+{{ $jsToConcat := slice }}
 
 {{ range slice
         "js/modernizr-simple.js"
         "js/_vendor/jquery.js"
         "js/_vendor/flexslider.js"
         "js/_vendor/tooltipster.js"
-        "js/_vendor/magnific-popup.js" }}
+        "js/_vendor/magnific-popup.js"
+        "js/_vendor/clipboard.js" }}
     {{ $jsToConcat = $jsToConcat | append (resources.Get .) }}
 {{ end }}
+
+{{ $jsToConcat = $jsToConcat | append (resources.Get "js/theme.js") }}
 
 {{ $js := $jsToConcat | resources.Concat "theme.js" }}
 
