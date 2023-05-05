@@ -3,7 +3,10 @@
 
 {{ range slice
         "js/modernizr-simple.js"
-        "js/_vendor/jquery.js" }}
+        "js/_vendor/jquery.js"
+        "js/_vendor/flexslider.js"
+        "js/_vendor/tooltipster.js"
+        "js/_vendor/magnific-popup.js" }}
     {{ $jsToConcat = $jsToConcat | append (resources.Get .) }}
 {{ end }}
 

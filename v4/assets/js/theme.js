@@ -1,8 +1,5 @@
-require('flexslider');
 require('algoliasearch/dist/algoliasearch.jquery');
 require('autocomplete.js/dist/autocomplete.jquery');
-require('tooltipster');
-require('magnific-popup');
 
 let ClipboardJs = require('clipboard')
 
