@@ -11,6 +11,11 @@
     {{ $jsToConcat = $jsToConcat | append (resources.Get .) }}
 {{ end }}
 
+{{ if and (isset .Site.Params "algolia_search") (eq .Site.Params.algolia_search true) }}
+    {{ $jsToConcat = $jsToConcat | append (resources.Get "js/_vendor/algoliasearch.js") }}
+    {{ $jsToConcat = $jsToConcat | append (resources.Get "js/theme-algolia-search.js") }}
+{{ end }}
+
 {{ $jsToConcat = $jsToConcat | append (resources.Get "js/theme.js") }}
 
 {{ $js := $jsToConcat | resources.Concat "theme.js" }}
