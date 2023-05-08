@@ -14,6 +14,7 @@
 
 {{ if and (isset .Site.Params "algolia_search") (eq .Site.Params.algolia_search true) }}
     {{ $jsToConcat = $jsToConcat | append (resources.Get "js/_vendor/algoliasearch.js") }}
+    {{ $jsToConcat = $jsToConcat | append (resources.Get "js/_vendor/autocomplete.js") }}
     {{ $jsToConcat = $jsToConcat | append (resources.Get "js/theme-algoliasearch.js") }}
 {{ end }}
 
