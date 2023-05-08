@@ -1,6 +1,5 @@
-
 /*
- * Bilberry Hugo theme - main
+ * theme.js
  */
 
 // Add copy button functionality

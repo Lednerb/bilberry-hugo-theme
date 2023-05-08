@@ -1,6 +1,5 @@
-
 /*
- * Bilberry Hugo theme - Algolia Search
+ * theme-algoliasearch.js
  */
 if ($('#activate-algolia-search').length) {
     let client = algoliasearch($('#algolia-search-appId').val(), $('#algolia-search-apiKey').val());

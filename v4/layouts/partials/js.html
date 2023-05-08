@@ -14,7 +14,12 @@
 
 {{ if and (isset .Site.Params "algolia_search") (eq .Site.Params.algolia_search true) }}
     {{ $jsToConcat = $jsToConcat | append (resources.Get "js/_vendor/algoliasearch.js") }}
-    {{ $jsToConcat = $jsToConcat | append (resources.Get "js/theme-algolia-search.js") }}
+    {{ $jsToConcat = $jsToConcat | append (resources.Get "js/theme-algoliasearch.js") }}
+{{ end }}
+
+{{ if and (isset .Site.Params "enablemomentjs") (eq .Site.Params.enablemomentjs true) }}
+    {{ $jsToConcat = $jsToConcat | append (resources.Get "js/_vendor/moment.js") }}
+    {{ $jsToConcat = $jsToConcat | append (resources.Get "js/theme-moment.js") }}
 {{ end }}
 
 {{ $jsToConcat = $jsToConcat | append (resources.Get "js/theme.js") }}
