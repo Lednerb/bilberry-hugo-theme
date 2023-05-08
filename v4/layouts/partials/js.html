@@ -1,0 +1,40 @@
+{{ $jsToConcat := slice }}
+
+{{ range slice
+        "js/modernizr-simple.js"
+        "js/_vendor/jquery.js"
+        "js/_vendor/autocomplete.js"
+        "js/_vendor/clipboard.js"
+        "js/_vendor/flexslider.js"
+        "js/_vendor/magnific-popup.js"
+        "js/_vendor/tooltipster.js"
+        "js/_vendor/tooltipster-sideTip.js" }}
+    {{ $jsToConcat = $jsToConcat | append (resources.Get .) }}
+{{ end }}
+
+{{ if and (isset .Site.Params "algolia_search") (eq .Site.Params.algolia_search true) }}
+    {{ $jsToConcat = $jsToConcat | append (resources.Get "js/_vendor/algoliasearch.js") }}
+    {{ $jsToConcat = $jsToConcat | append (resources.Get "js/theme-algoliasearch.js") }}
+{{ end }}
+
+{{ if and (isset .Site.Params "enablemomentjs") (eq .Site.Params.enablemomentjs true) }}
+    {{ $jsToConcat = $jsToConcat | append (resources.Get "js/_vendor/moment.js") }}
+    {{ $jsToConcat = $jsToConcat | append (resources.Get "js/theme-moment.js") }}
+{{ end }}
+
+{{ $jsToConcat = $jsToConcat | append (resources.Get "js/theme.js") }}
+
+{{ $js := $jsToConcat | resources.Concat "theme.js" }}
+
+{{ if or (.Site.IsServer) (eq .Site.Params.env "LOCAL") }}
+    <script src="{{ $js.Permalink }}"></script>
+{{ else }}
+    {{ $js := $js | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ end }}
+
+{{ if isset .Site.Params "js_modules" }}
+    {{ range .Site.Params.js_modules }}
+        <script src="{{ . | absURL }}" type="application/javascript"></script>
+    {{ end }}
+{{ end }}

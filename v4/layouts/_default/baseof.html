@@ -74,13 +74,10 @@
 
     {{ partial "favicon.html" . }}
 
-    <script src="{{ "modernizr-simple.js" | relURL }}"></script>
-
     {{ with .OutputFormats.Get "RSS" }}
     <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
     <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
     {{end}}
-
 
     {{ with .Params.original_url }}
     <link rel="canonical" href="{{ . }}" />
@@ -111,23 +108,13 @@
     {{ template "_internal/google_analytics.html" . }}
 
     {{ if and (isset .Site.Params "enable_mathjax") (eq .Site.Params.enable_mathjax true) }}
-    {{ partial "mathjax.html" . }}
+        {{ partial "mathjax.html" . }}
     {{ end }}
 
-    {{ if not (.Site.Params.enableMomentJs | default true) }}
-    <script src="{{ "theme-exclude-moment.js" | absURL }}"></script>
-    {{ else }}
-    <script src="{{ "theme.js" | absURL }}"></script>
-    {{ end }}
-
-    {{ if isset .Site.Params "js_modules" }}
-    {{ range .Site.Params.js_modules }}
-    <script src="{{ . | absURL }}" type="application/javascript"></script>
-    {{ end }}
-    {{ end }}
+    {{ partial "js.html" . }}
 
     {{ if and (isset .Site.Params "algolia_search") (eq .Site.Params.algolia_search true) }}
-    {{ partial "algolia-search.html" . }}
+        {{ partial "algolia-search.html" . }}
     {{ end }}
 
     {{ partial "hooks/body-end.html" . }}
