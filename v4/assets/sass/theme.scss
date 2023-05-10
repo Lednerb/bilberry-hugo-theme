@@ -49,11 +49,11 @@ $footer-headline-color: {{ .Param "" | default "#444" }};
 }
 
 // Dependencies
-@import '../../assets/_vendor/normalize.scss';
-@import '../../assets/_vendor/skeleton.scss';
-@import '../../assets/_vendor/flexslider.scss';
-@import '../../assets/_vendor/tooltipster.scss';
-@import '../../assets/_vendor/tooltipster-sideTip-light.scss';
+@import '../../assets/sass/_vendor/normalize.scss';
+@import '../../assets/sass/_vendor/skeleton.scss';
+@import '../../assets/sass/_vendor/flexslider.scss';
+@import '../../assets/sass/_vendor/tooltipster.scss';
+@import '../../assets/sass/_vendor/tooltipster-sideTip-light.scss';
 @import 'fontface';
 
 // Base theme styling

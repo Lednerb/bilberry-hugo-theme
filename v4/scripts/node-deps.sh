@@ -15,25 +15,25 @@ echo ">>> Cleaning 'node_modules'..."
 
 npm prune
 
-echo ">>> Copying SASS Node dependencies to 'assets/_vendor'..."
+echo ">>> Copying SASS Node dependencies to 'assets/sass/_vendor'..."
 
-if [ -d "assets/_vendor" ]
-  then rm -rf assets/_vendor
+if [ -d "assets/sass/_vendor" ]
+  then rm -rf assets/sass/_vendor
 fi
 
-mkdir assets/_vendor assets/_vendor/fontawesome
+mkdir assets/sass/_vendor assets/sass/_vendor/fontawesome
 
-cp node_modules/normalize.css/normalize.css assets/_vendor/normalize.scss
-cp node_modules/skeleton-css/css/skeleton.css assets/_vendor/skeleton.scss
-cp node_modules/flexslider/flexslider.css assets/_vendor/flexslider.scss
-cp node_modules/tooltipster/dist/css/tooltipster.bundle.css assets/_vendor/tooltipster.scss
-cp node_modules/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-light.min.css assets/_vendor/tooltipster-sideTip-light.scss
-cp node_modules/magnific-popup/dist/magnific-popup.css assets/_vendor/magnific-popup.scss
+cp node_modules/normalize.css/normalize.css assets/sass/_vendor/normalize.scss
+cp node_modules/skeleton-css/css/skeleton.css assets/sass/_vendor/skeleton.scss
+cp node_modules/flexslider/flexslider.css assets/sass/_vendor/flexslider.scss
+cp node_modules/tooltipster/dist/css/tooltipster.bundle.css assets/sass/_vendor/tooltipster.scss
+cp node_modules/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-light.min.css assets/sass/_vendor/tooltipster-sideTip-light.scss
+cp node_modules/magnific-popup/dist/magnific-popup.css assets/sass/_vendor/magnific-popup.scss
 
-cp node_modules/@fortawesome/fontawesome-free/css/brands.css assets/_vendor/fontawesome/brands.scss
-cp node_modules/@fortawesome/fontawesome-free/css/regular.css assets/_vendor/fontawesome/regular.scss
-cp node_modules/@fortawesome/fontawesome-free/css/solid.css assets/_vendor/fontawesome/solid.scss
-cp node_modules/@fortawesome/fontawesome-free/css/fontawesome.css assets/_vendor/fontawesome/fontawesome.scss
+cp node_modules/@fortawesome/fontawesome-free/css/brands.css assets/sass/_vendor/fontawesome/brands.scss
+cp node_modules/@fortawesome/fontawesome-free/css/regular.css assets/sass/_vendor/fontawesome/regular.scss
+cp node_modules/@fortawesome/fontawesome-free/css/solid.css assets/sass/_vendor/fontawesome/solid.scss
+cp node_modules/@fortawesome/fontawesome-free/css/fontawesome.css assets/sass/_vendor/fontawesome/fontawesome.scss
 
 echo ">>> Copying JavaScript Node dependencies to 'assets/js/_vendor'..."
 
@@ -53,7 +53,7 @@ cp node_modules/moment/min/moment-with-locales.js assets/js/_vendor/moment.js
 cp node_modules/tooltipster/dist/js/tooltipster.bundle.min.js assets/js/_vendor/tooltipster.js
 cp node_modules/tooltipster/src/js/plugins/tooltipster/sideTip/tooltipster-sideTip.js assets/js/_vendor/tooltipster-sideTip.js
 
-echo ">>> Copying fonts Node dependencies to 'static'..."
+echo ">>> Copying font Node dependencies to 'static'..."
 
 if [ -d "static/webfonts" ]
   then rm -rf static/webfonts

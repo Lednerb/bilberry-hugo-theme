@@ -24,8 +24,8 @@
     "vue-template-compiler": "^2.6.11"
   },
   "scripts": {
-    "build": "rm -rf public | hugo",
-    "server": "cd exampleSite | hugo server --buildDrafts --buildFuture",
+    "build": "rm -rf public ; hugo",
+    "server": "cd exampleSite ; hugo server --buildDrafts --buildFuture",
     "stop": "killall hugo",
     "deps": "./scripts/node-deps.sh"
   },
