@@ -156,10 +156,17 @@ GitHub.sublime-settings
 
 # End of https://www.gitignore.io/api/node,sass,linux,macos,sublimetext,hugo
 
-**/testing/testing-example-site/public
-**/testing/testing-example-site/public*
-**/testing/testing-example-site/resources
-**/testing/testing-example-site/themes
+# v3
+testing/testing-example-site/public
+testing/testing-example-site/public*
+testing/testing-example-site/resources
+testing/testing-example-site/themes
+
+# v4
+**/tests/exampleSite/public
+**/tests/exampleSite/public*
+**/tests/exampleSite/resources
+**/tests/exampleSite/themes
 
 **/mix-manifest.json
 

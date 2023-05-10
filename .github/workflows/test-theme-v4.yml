@@ -1,14 +1,14 @@
-name: Test Theme v3
+name: Test Theme v4
 
 on:
   push:
     branches: "*"
     paths:
-      - '!v4/**'
+      - 'v4/**'
   pull_request:
     branches: "*"
     paths:
-      - '!v4/**'
+      - 'v4/**'
 
 jobs:
   test:
@@ -21,7 +21,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
-          # extended: true
+          extended: true
 
       - name: Run tests
-        run: ./testing/testing-example-site/test-theme.sh
+        run: ./v4/tests/exampleSite/test-theme.sh
