@@ -161,14 +161,14 @@ testing/testing-example-site/public
 testing/testing-example-site/public*
 testing/testing-example-site/resources
 testing/testing-example-site/themes
+mix-manifest.json
 
 # v4
 **/tests/exampleSite/public
 **/tests/exampleSite/public*
 **/tests/exampleSite/resources
 **/tests/exampleSite/themes
-
-**/mix-manifest.json
+**/tests/local
 
 # IntelliJ IDEA
 *.iml

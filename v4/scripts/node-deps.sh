@@ -21,7 +21,7 @@ if [ -d "assets/sass/_vendor" ]
   then rm -rf assets/sass/_vendor
 fi
 
-mkdir assets/sass/_vendor assets/sass/_vendor/fontawesome
+mkdir -p assets/sass/_vendor/fontawesome
 
 cp node_modules/normalize.css/normalize.css assets/sass/_vendor/normalize.scss
 cp node_modules/skeleton-css/css/skeleton.css assets/sass/_vendor/skeleton.scss
