@@ -87,6 +87,7 @@ Please use the following guidelines if you want to start a discussion:
   - [404 Page](#404-page)
   - [Custom Post Types](#custom-post-types)
   - [Individual Posts](#individual-posts)
+  - [Syntax Highlighting](#syntax-highlighting)
   - [Colors and Fonts](#colors-and-fonts)
   - [CSS and JS modules](#css-and-js-modules)
   - [Cookie Disclaimer (GDPR)](#cookie-disclaimer-gdpr)
