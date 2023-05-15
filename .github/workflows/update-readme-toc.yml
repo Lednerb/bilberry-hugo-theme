@@ -5,7 +5,7 @@ on:
     branches: 
       - 'master'
     paths:
-      - 'README.md'
+      - '*README.md'
 
 jobs:
   update-toc:
@@ -13,3 +13,5 @@ jobs:
     steps:
       - uses: technote-space/toc-generator@v4
         name: Run TOC generator
+        with:
+          TARGET_PATHS: '*README.md'
