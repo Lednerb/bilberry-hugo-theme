@@ -892,21 +892,27 @@ Read Hugo's [documentation](https://gohugo.io/content-management/syntax-highligh
 
 ### Colors and Fonts
 
-Bilberry uses SCSS for styling and NPM with [Laravel Mix](https://laravel-mix.com/) for the dependency management.
+Styling is implemented using SCSS along with [npm](https://www.npmjs.com/), which is only used for the development
+dependency management. Colors and fonts can be customized via variables defined in
+the [`assets/sass/theme.scss`](v4/assets/sass/theme.scss) file.
 
-To change any colors or fonts, you have to follow these steps:
+For example, if you want to customize the `$base-color` variable, you should define the `baseColor` parameter in your
+site's `config.toml` file.
 
-1. In your site's `themes/bilberry-hugo-theme` directory, execute `npm install`.
-2. Modify the `assets/sass/_variables.scss` file to customize your colors.
-   If you want to change the header's color, only edit the `$base-color` variable.
-3. Use `npm run dev` for development and preview purposes and `npm run production` when you're done with the changes.
+```sass
+$base-color: {{ .Param "baseColor" | default "#1d1f38" }};
+```
+
+```toml
+[params]
+  baseColor = "#ff8080"
+```
 
 ### CSS and JS modules
 
-This theme supports hot-swappable CSS and JavaScript extensions.
-Modules can be specified using the `(css|js)_modules` list parameter.
-Modules can be specified either relative to the `static` directory (e.g. `exampleSite/static/css/custom.css`) or as a
-URL.
+This theme supports hot-swappable CSS and JavaScript extensions, which can be specified using the `css_modules`
+and `js_modules` list parameters in your site's `config.toml` file. Modules can be specified either relative to the `static`
+directory (e.g. `exampleSite/static/css/custom.css`) or as a URL.
 
 Modules are imported in the order they appear in the list, and immediately after the default Bilberry CSS and JS files
 are imported.
