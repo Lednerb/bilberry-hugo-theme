@@ -162,7 +162,7 @@ hugo mod vendor
 If you need more details on how to use Hugo modules, please read
 the [Hugo documentation](https://gohugo.io/hugo-modules/use-modules/).
 
-#### Option 2: Adding the Theme Files as a Git submodule 
+#### Option 2: Adding the Theme as a Git submodule 
 
 Use this option if you want to pull in the theme files as a Git submodule from the main Bilberry Hugo theme repository.
 This option also makes it easy to keep the theme up to date in your site.
@@ -178,14 +178,11 @@ This option also makes it easy to keep the theme up to date in your site.
 theme = "bilberry-hugo-theme/v4"
 ```
 
-- Initialize the Bilberry Hugo theme as a Git submodule from the site's root:
+- Add the Bilberry Hugo theme as a Git submodule from the site's root:
 
 ```shell
 $ git submodule add https://github.com/Lednerb/bilberry-hugo-theme.git themes/bilberry-hugo-theme
 ```
-
-- In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Options 2 and 3**, and
-  comment out the `theme` property for **Option 1**:
 
 #### Option 3: Copying the Theme Files
 
