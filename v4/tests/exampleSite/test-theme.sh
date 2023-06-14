@@ -178,7 +178,5 @@ if [[ $DIFF_OUT != "" ]]; then
    failButContinue "Build is instable! expected to receive no differences but was: $DIFF_OUT"
 fi
 
-
-
 echo "Tests finished with $ERROR_COUNT errors"
 exit $ERROR_COUNT
