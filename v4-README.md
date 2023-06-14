@@ -140,7 +140,7 @@ cp -r bilberry-hugo-theme/v4/exampleSite/* my-new-blog
 
 #### Option 1 (recommended): Adding the Theme as a Hugo Module
 
-Use this option if you want to pull in the theme files from the main Bilberry Hugo theme repository.
+Use this option if you want to pull in the theme files as a Hugo module from the main Bilberry Hugo theme repository.
 This option makes it easy to keep the theme up to date in your site.
 
 - Initialize your website as a Hugo module from the site's root:
@@ -162,18 +162,40 @@ hugo mod vendor
 If you need more details on how to use Hugo modules, please read
 the [Hugo documentation](https://gohugo.io/hugo-modules/use-modules/).
 
-#### Option 2: Cloning/Copying the Theme Files
+#### Option 2: Adding the Theme as a Git submodule 
 
-Use this option if you want to directly customize and maintain your own copy of the theme.
+Use this option if you want to pull in the theme files as a Git submodule from the main Bilberry Hugo theme repository.
+This option also makes it easy to keep the theme up to date in your site.
 
-- In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Option 2**, and
+- In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Options 2 and 3**, and
   comment out the `theme` property for **Option 1**:
 
 ```toml
 # Option 1 (recommended): adding the theme as a hugo module
 # theme = "github.com/Lednerb/bilberry-hugo-theme/v4"
 
-# Option 2: cloning/copying the theme files
+# Options 2 and 3: cloning/copying the theme files
+theme = "bilberry-hugo-theme/v4"
+```
+
+- Add the Bilberry Hugo theme as a Git submodule from the site's root:
+
+```shell
+$ git submodule add https://github.com/Lednerb/bilberry-hugo-theme.git themes/bilberry-hugo-theme
+```
+
+#### Option 3: Copying the Theme Files
+
+Use this option if you want to directly customize and maintain your own copy of the theme.
+
+- In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Options 2 and 3**, and
+  comment out the `theme` property for **Option 1**:
+
+```toml
+# Option 1 (recommended): adding the theme as a hugo module
+# theme = "github.com/Lednerb/bilberry-hugo-theme/v4"
+
+# Options 2 and 3: cloning/copying the theme files
 theme = "bilberry-hugo-theme/v4"
 ```
 
