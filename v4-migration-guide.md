@@ -3,6 +3,18 @@
 **IMPORTANT** The Hugo version was bumped to `v0.109.0 extended`. Therefore, you should upgrade Hugo in your local
 development environment and, if necessary, in the corresponding deployment configuration file.
 
+### Theme Installation Options
+
+Depending on your chosen theme installation option, update the theme property in the `config.toml` file as follows:
+
+```toml
+# Option 1 (recommended) : adding the theme as a Hugo module
+theme = "github.com/Lednerb/bilberry-hugo-theme/v4"
+
+# Options 2 and 3: cloning/copying the theme files
+theme = "bilberry-hugo-theme/v4"
+```
+
 ### Top Navigation Bar
 
 1. Remove completely the `excludeFromTopNav` variable from all content files in the `content/page` folder.
