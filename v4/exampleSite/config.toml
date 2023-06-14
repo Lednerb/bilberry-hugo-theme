@@ -4,7 +4,7 @@ baseURL = "https://example.com/"
 # Option 1 (recommended): adding the theme as a Hugo module
 theme = "github.com/Lednerb/bilberry-hugo-theme/v4"
 
-# Option 2: cloning/copying the theme files
+# Options 2 and 3: cloning/copying the theme files
 # theme = "bilberry-hugo-theme/v4"
 
 # Generate the robots.txt file for SEO
@@ -20,7 +20,7 @@ googleAnalytics = ""
 disqusShortname = ""
 
 [params]
-  # Custom CSS / JS modules that will be imported by the template.
+  # Custom CSS/JS modules that will be imported by the template.
   # Files are relative to the static/ directory or a URL.
   # Files are imported in the order they appear here, after
   # theme.css and theme.js, respectively.
