@@ -126,4 +126,11 @@
         height: 30px;
     }
 
+    .highlight {
+        div {
+            width: 100%;
+            overflow: auto;
+        }
+    }
+
 }
