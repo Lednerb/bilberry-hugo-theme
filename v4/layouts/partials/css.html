@@ -1,7 +1,7 @@
 {{ $options := dict "targetPath" "theme.css" "enableSourceMap" true "precision" 6 }}
 {{ $css := resources.Get "sass/theme.scss" | resources.ExecuteAsTemplate "theme.scss" . | toCSS $options }}
 
-{{ if or (.Site.IsServer) (eq .Site.Params.env "LOCAL") }}
+{{ if or (.Site.IsServer) (eq .Site.Params.env "DEV") }}
     <link rel="stylesheet" href="{{ $css.Permalink }}" media="screen">
 {{ else }}
     {{ $css := $css | resources.Minify | resources.Fingerprint }}
