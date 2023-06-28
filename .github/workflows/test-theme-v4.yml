@@ -2,11 +2,11 @@ name: Test Theme v4
 
 on:
   push:
-    branches: "*"
+    branches: '*'
     paths:
       - 'v4/**'
   pull_request:
-    branches: "*"
+    branches: '*'
     paths:
       - 'v4/**'
 
