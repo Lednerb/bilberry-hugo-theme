@@ -131,7 +131,7 @@ hugo new site my-new-blog
 rm my-new-blog/archetypes/default.md
 ```
 
-- Copy the example site content including the `config.toml` file:
+- Copy the example site content, including the `config.toml` file:
 
 ```shell
 cp -r bilberry-hugo-theme/v4/exampleSite/* my-new-blog
@@ -211,7 +211,7 @@ Renaming this folder will break your site.
 
 ### Configuration
 
-To customize website according to your needs, edit the `config.toml` file in the site's root
+To customize your website according to your needs, edit the `config.toml` file in the site's root
 directory by adjusting the settings. All parameters that need to be configured are commented out or
 disabled.
 
@@ -309,9 +309,9 @@ To enable and configure search functionality for your site, follow these steps:
 4. Switch over to `API Keys` and copy your `Application ID`, `Search-Only API Key` and chosen `Index name` to
    your `config.toml` file.
 5. Make sure that the `algolia_search` parameter is set to  `true`.
-6. Follow instructions in the section [Update Algolia Index](#update-algolia-index) and proceed to the next step.
+6. Follow the instructions in the section [Update Algolia Index](#update-algolia-index) and proceed to the next step.
 7. To complete the initial setup, go to the tab `Configuration` of your newly created indices, select the `Facets` in
-   the section `FILTERING AND FACETING` and add the `language` attribute with the `filter only` modifier in
+   the section `FILTERING AND FACETING`, and add the `language` attribute with the `filter only` modifier in
    the `Attributes for faceting` option. If, after adding the `language` attribute, the `Unknown attribute` error is
    shown, ignore it.
 
@@ -324,7 +324,7 @@ Execute the `hugo` command in the site's root directory to generate the `index.j
 ##### Manual Upload
 
 1. Head over to the `public/index.json` file and copy its content.
-2. Login to your Algolia account, open your index and click at `Add records manually`.
+2. Log in to your Algolia account, open your index, and click on `Add records manually`.
 3. Paste the copied text from the `index.json` file.
 4. Verify in the `Browse` tab of your index that the index records were uploaded correctly.
 5. In case you have a multi-language setup, make sure that you repeat the steps above for all `public/{LANG}/index.json`
@@ -332,14 +332,14 @@ Execute the `hugo` command in the site's root directory to generate the `index.j
 
 ##### Automated Upload
 
-1. Switch to the `algolia` directory and install required dependencies by executing the following command:
+1. Switch to the `algolia` directory and install the required dependencies by executing the following command:
 
   ```shell script
   cd algolia
   npm install
   ```
 
-2. Run the `data-upload.js` from from the `algolia` directory as follows:
+2. Run the `data-upload.js` from the `algolia` directory as follows:
 
   ```shell script
   npm run data-upload -- -f ../public/index.json -a <algolia-app-id> -k <algolia-admin-api-key> -n <algolia-index-name>
@@ -349,7 +349,7 @@ Execute the `hugo` command in the site's root directory to generate the `index.j
    delete indices, and it should be kept secret.
 4. Add the `-c` or `--clear-index` option if you want to clear the corresponding Algolia index before starting a new
    upload.
-5. Login to your Algolia account and verify in the `Browse` tab of your index that the index records were uploaded
+5. Log in to your Algolia account and verify in the `Browse` tab of your index that the index records were uploaded
    correctly.
 6. In case you have a multi-language setup, make sure that you repeat the steps above for all `public/{LANG}/index.json`
    files.
@@ -362,7 +362,7 @@ Actions.
 
 ### Keyboard Shortcuts
 
-Type `s` to open the navigation bar and set focus to the search input field.
+Type `s` to open the navigation bar and set the focus to the search input field.
 To remove focus, press the `Esc` key.
 
 ### Reposted Article/Duplicated Content
@@ -378,7 +378,7 @@ original_url: "https://example.org/path/to/content"
 ### Estimated Reading Time
 
 To show an article's estimated reading time, set the `showReadingTime` parameter to `true` in the `config.toml` file.
-You can override the estimated reading time by setting article's `readingTime` front matter variable to a value you
+You can override the estimated reading time by setting the article's `readingTime` front matter variable to a value you
 want. If you set this variable to `0`, the reading time will not be shown.
 
 ```
@@ -393,7 +393,7 @@ views, such as a home page and tags or categories pages.
 
 #### Automatic Summary Split
 
-Using first 70 words of your content, Hugo automatically generates the summary followed by the _Continue reading_ link.
+Using the first 70 words of your content, Hugo automatically generates the summary followed by the _Continue reading_ link.
 
 #### Manual Summary Split
 
@@ -490,7 +490,7 @@ gallery: [
 
 ### Image Modal Zoom
 
-When you include an image that is larger than the content area, the image becomes interactive and a larger version can
+When you include an image that is larger than the content area, the image becomes interactive, and a larger version can
 be opened in a lightbox.
 
 ### Featured Image
@@ -547,7 +547,7 @@ mp4video: "<video-file-url>"             # location of video file (only mp4)
 mp4videoImage: "<image-video-file-url>"  # location of poster image 
 ```
 
-For example, if an `MP4` video and its image are stored in the `static` folder, you can set corresponding front matter
+For example, if an `MP4` video and its image are stored in the `static` folder, you can set the corresponding front matter
 variables as follows:
 
 ```markdown
@@ -686,10 +686,10 @@ Then uncomment the `commentoJsURL` parameter in the `config.toml` file:
 ```toml
 #[...]
 [params]
-#[...]
+  #[...]
 
-# Commento
-commentoJsURL = "http://localhost:8080/js/commento.js"
+  # Commento
+  commentoJsURL = "http://localhost:8080/js/commento.js"
 ```
 
 #### Disqus
@@ -700,10 +700,10 @@ Then create a new site and set the `disqusShortname` parameter to your site's sh
 ```toml
 #[...]
 [params]
-#[...]
+  #[...]
 
-# Disqus
-disqusShortname = "lednerb"
+  # Disqus
+  disqusShortname = "lednerb"
 ```
 
 You can manage and moderate the comments either on your website or using the Disqus management panel.
@@ -718,21 +718,21 @@ Then, in the `config.toml` file, set the `giscus` parameter to `true` and the pr
 ```toml
 #[...]
 [params]
-#[...]
+  #[...]
 
-# Giscus
-giscus = true
-giscusJsUrl = "https://giscus.app/client.js"
-giscusRepository = "Lednerb/bilberry-hugo-theme"
-giscusRepositoryId = "R_kgDOGX153A" # generated by Giscus website
-giscusMapping = "pathname"
-giscusCategory = "General"
-giscusCategoryId = "DIC_kwDOGX153M4B_2Vz" # generated by Giscus website
-giscusTheme = "light"
-giscusReactions = "1"
-giscusEmitMetadata = "0"
-giscusLanguage = "en"
-giscusCrossOrigin = "anonymous"
+  # Giscus
+  giscus = true
+  giscusJsUrl = "https://giscus.app/client.js"
+  giscusRepository = "Lednerb/bilberry-hugo-theme"
+  giscusRepositoryId = "R_kgDOGX153A" # generated by Giscus website
+  giscusMapping = "pathname"
+  giscusCategory = "General"
+  giscusCategoryId = "DIC_kwDOGX153M4B_2Vz" # generated by Giscus website
+  giscusTheme = "light"
+  giscusReactions = "1"
+  giscusEmitMetadata = "0"
+  giscusLanguage = "en"
+  giscusCrossOrigin = "anonymous"
 ```
 
 #### Utterances
@@ -744,22 +744,22 @@ the `config.toml` file:
 ```toml
 #[...]
 [params]
-#[...]
+  #[...]
 
-# Utterances
-utterances = true
-utterancesJsUrl = "https://utteranc.es/client.js"
-utterancesRepository = "Lednerb/bilberry-hugo-theme"
-utterancesIssueTerm = "pathname"
-utterancesLabel = "Comment"
-utterancesTheme = "github-light"
-utterancesCrossOrigin = "anonymous"
+  # Utterances
+  utterances = true
+  utterancesJsUrl = "https://utteranc.es/client.js"
+  utterancesRepository = "Lednerb/bilberry-hugo-theme"
+  utterancesIssueTerm = "pathname"
+  utterancesLabel = "Comment"
+  utterancesTheme = "github-light"
+  utterancesCrossOrigin = "anonymous"
 ```
 
 ### Archive Page
 
 The archive page will be available at `<site-base-url>/archive/` as soon as you copy
-the `themes/bilberry-hugo-theme/exampleSite/content/archive.md` file to `content` directory of your
+the `themes/bilberry-hugo-theme/exampleSite/content/archive.md` file to the `content` directory of your
 site. By default, the published content is grouped by year. To group the content by year and month,
 set the `archiveDateGrouping` parameter to the `2006-01` value.
 
@@ -849,7 +849,7 @@ site's `layouts/404.html` and edit the file according to your needs, for example
 
 ### Custom Post Types
 
-With Bilberry theme, you can create new post types easily.
+With the Bilberry theme, you can create new post types easily.
 For example, suppose you want to create a new type named `book`.
 Then you should do the following:
 
@@ -898,11 +898,11 @@ Syntax highlighting for code blocks in your posts is implemented using Hugo's
 built-in [Chrome](https://github.com/alecthomas/chroma) code highlighter. Highlighting for code blocks in your posts can
 be customized at the site level or per code block.
 
-To change the default configuration at the site level, adjust the properties in the  `[markup.highlight]` section of
+To change the default configuration at the site level, adjust the properties in the `[markup.highlight]` section of
 the `config.toml` file. For example, you can change the default `monokai` style to the one from
 the [Chroma Style Gallery](https://xyproto.github.io/splash/docs/all.html).
 
-Per code block, the following parameters can be
+Per the code block, the following parameters can be
 personalized: `linenos`, `hl_lines`, `linenostart`, `anchorlinenos`, `lineanchors`, and `hl_inline`, for example:
 
 \```java {linenos=inline, hl_lines="7-12 21-26"}
@@ -915,8 +915,7 @@ Read Hugo's [documentation](https://gohugo.io/content-management/syntax-highligh
 
 ### Colors and Fonts
 
-Styling is implemented using SCSS along with [npm](https://www.npmjs.com/), which is only used for the development
-dependency management. Colors and fonts can be customized via variables defined in
+Styling is implemented using SCSS along with [npm](https://www.npmjs.com/), which is only used for dependency management. Colors and fonts can be customized via variables defined in
 the [`assets/sass/theme.scss`](v4/assets/sass/theme.scss) file.
 
 For example, if you want to customize the `$base-color` variable, you should define the `baseColor` parameter in your
@@ -935,7 +934,7 @@ $base-color: {{ .Param "baseColor" | default "#1d1f38" }};
 
 This theme supports hot-swappable CSS and JavaScript extensions, which can be specified using the `css_modules`
 and `js_modules` list parameters in your site's `config.toml` file. Modules can be specified either relative to the `static`
-directory (e.g. `exampleSite/static/css/custom.css`) or as a URL.
+directory (e.g., `exampleSite/static/css/custom.css`) or as a URL.
 
 Modules are imported in the order they appear in the list, and immediately after the default Bilberry CSS and JS files
 are imported.
@@ -977,14 +976,14 @@ js_modules = ["..", "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cooki
 
 ## Translations
 
-Bilberry theme has built-in support for multi-language sites, and currently supports translations for more than 20
+Bilberry theme has built-in support for multi-language sites and currently supports translations for more than 20
 languages.
 
 Feel free to submit a request for a new language translation or improve existing ones!
 
 ## Credits
 
-Bilberry theme was inspired by the [WordPress theme Lingonberry](https://en-ca.wordpress.org/themes/lingonberry/)
+The Bilberry theme was inspired by the [WordPress theme Lingonberry](https://en-ca.wordpress.org/themes/lingonberry/)
 created by Anders Norén.
 
 Bilberry is a theme for the great [HUGO static site generator](https://gohugo.io).
