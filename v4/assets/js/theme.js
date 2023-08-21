@@ -76,76 +76,81 @@ $(document).ready(function () {
         pauseOnHover: true,
     });
 
-    // Magnific Popup for images within articles to zoom them
-    // Rendered with Markdown
-    $('p img, figure img').not('p a img').magnificPopup({
-        type: "image",
-        image: {
-            verticalFit: true,
-            titleSrc: 'alt'
-        },
-        zoom: {
-            enabled: true
-        },
-        callbacks: {
-            // Get the src directly from the img-tag instead of an additional tag
-            elementParse: function(item) {
-              // Function will fire for each target element
-              // "item.el" is a target DOM element (if present)
-              // "item.src" is a source that you may modify
-
-              item.src = item.el.attr('src')
-            }
-        },
-        // https://github.com/dimsemenov/Magnific-Popup/pull/1017
-        // Enabled popup only when image size is greater than content area
-        disableOn: function(e) {
-            let img = e.target;
-            return img.naturalWidth > img.clientWidth;
-        }
+    dimbox.setConfig({
+        showDownloadButton: false
     });
+    dimbox.init();
 
-    // Magnific Popup for images within articles to zoom them
-    // Rendered with Asciidoc
-    $('.image-block>img').magnificPopup({
-        type: "image",
-        image: {
-            verticalFit: true,
-            titleSrc: function (item) {
-                return item.el.parent().find('figcaption').text();
-            }
-        },
-        zoom: {
-            enabled: true
-        },
-        callbacks: {
-            elementParse: function(item) {
-                item.src = item.el.attr('src')
-            }
-        },
-        // https://github.com/dimsemenov/Magnific-Popup/pull/1017
-        // Enabled popup only when image size is greater than content area
-        disableOn: function(e) {
-            let img = e.target;
-            return img.naturalWidth > img.clientWidth;
-        }
-    });
-
-    // Magnific Popup for images within articles to zoom them
-    // Rendered with Asciidoc
-    $('.image-block').magnificPopup({
-        type: "image",
-        delegate: "a",
-        image: {
-            titleSrc: function (item) {
-                return item.el.parent().find('figcaption').text();
-            },
-            verticalFit: true
-        },
-        zoom: {
-            enabled: true
-        }
-    });
+    // // Magnific Popup for images within articles to zoom them
+    // // Rendered with Markdown
+    // $('p img, figure img').not('p a img').magnificPopup({
+    //     type: "image",
+    //     image: {
+    //         verticalFit: true,
+    //         titleSrc: 'alt'
+    //     },
+    //     zoom: {
+    //         enabled: true
+    //     },
+    //     callbacks: {
+    //         // Get the src directly from the img-tag instead of an additional tag
+    //         elementParse: function(item) {
+    //           // Function will fire for each target element
+    //           // "item.el" is a target DOM element (if present)
+    //           // "item.src" is a source that you may modify
+    //
+    //           item.src = item.el.attr('src')
+    //         }
+    //     },
+    //     // https://github.com/dimsemenov/Magnific-Popup/pull/1017
+    //     // Enabled popup only when image size is greater than content area
+    //     disableOn: function(e) {
+    //         let img = e.target;
+    //         return img.naturalWidth > img.clientWidth;
+    //     }
+    // });
+    //
+    // // Magnific Popup for images within articles to zoom them
+    // // Rendered with Asciidoc
+    // $('.image-block>img').magnificPopup({
+    //     type: "image",
+    //     image: {
+    //         verticalFit: true,
+    //         titleSrc: function (item) {
+    //             return item.el.parent().find('figcaption').text();
+    //         }
+    //     },
+    //     zoom: {
+    //         enabled: true
+    //     },
+    //     callbacks: {
+    //         elementParse: function(item) {
+    //             item.src = item.el.attr('src')
+    //         }
+    //     },
+    //     // https://github.com/dimsemenov/Magnific-Popup/pull/1017
+    //     // Enabled popup only when image size is greater than content area
+    //     disableOn: function(e) {
+    //         let img = e.target;
+    //         return img.naturalWidth > img.clientWidth;
+    //     }
+    // });
+    //
+    // // Magnific Popup for images within articles to zoom them
+    // // Rendered with Asciidoc
+    // $('.image-block').magnificPopup({
+    //     type: "image",
+    //     delegate: "a",
+    //     image: {
+    //         titleSrc: function (item) {
+    //             return item.el.parent().find('figcaption').text();
+    //         },
+    //         verticalFit: true
+    //     },
+    //     zoom: {
+    //         enabled: true
+    //     }
+    // });
 
     // Back to top button
     $(window).scroll(function() {

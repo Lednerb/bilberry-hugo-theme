@@ -52,6 +52,7 @@ $footer-headline-color: {{ .Param "" | default "#444" }};
 @import '../../assets/sass/_vendor/normalize.scss';
 @import '../../assets/sass/_vendor/skeleton.scss';
 @import '../../assets/sass/_vendor/flexslider.scss';
+@import '../../assets/sass/_vendor/dimbox.scss';
 @import '../../assets/sass/_vendor/tooltipster.scss';
 @import '../../assets/sass/_vendor/tooltipster-sideTip-light.scss';
 @import 'fontface';
