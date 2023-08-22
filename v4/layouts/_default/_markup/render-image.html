@@ -1,0 +1,12 @@
+{{ if .Title }}
+<figure>
+    <a href="{{ .Destination | safeURL }}" data-dimbox data-dimbox-caption="{{ .Text }}">
+        <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" />
+    </a>
+    <figcaption>{{ .Title }}</figcaption>
+</figure>
+{{ else }}
+<a href="{{ .Destination | safeURL }}" data-dimbox data-dimbox-caption="{{ .Text }}">
+    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" />
+</a>
+{{ end }}
