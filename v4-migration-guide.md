@@ -36,4 +36,12 @@ the `_variables.scss` file no longer exists and such customization is done in th
 corresponding parameters from the `assets/sass/theme.scss` file, for example, `baseColor`, `headlineFont` etc.
 Therefore, any changes you made in `_variables.scss` file should be ported to your site's configuration file. Read
 the [Colors and Fonts](v4-README.md#colors-and-fonts) section in the `v4` **README** guide for more details.
+
+### Image Modal Zoom
+
+The Magnific Popup plugin that provided a lightbox for displaying larger images was replaced with
+the [DimBox](https://dimboxjs.com/) plugin. Also, the built-in Hugo's rendering of images added using standard markdown
+annotation was overridden to accommodate the DimBox plugin and images with a figure caption. The `v4` no longer
+supports the modal zoom for the images added using the raw HTML. The modal zoom may work for such images if you enrich
+corresponding raw HTML elements with DimBox's attributes.     
  

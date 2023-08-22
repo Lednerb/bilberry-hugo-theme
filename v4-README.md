@@ -490,8 +490,10 @@ gallery: [
 
 ### Image Modal Zoom
 
-When you include an image that is larger than the content area, the image becomes interactive, and a larger version can
-be opened in a lightbox.
+When you include an image larger than the content area, the image becomes interactive, and a larger version can be
+opened in a lightbox. Modal zoom will work only for images that are added using the standard markdown
+annotation, e.g., `![Image alt text](/my_image.png)` or `![Image alt text](/my_image.png "Image figure caption")` for
+images with a figure caption. Please note that this feature will not work for images added using raw HTML.
 
 ### Featured Image
 
