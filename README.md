@@ -9,10 +9,12 @@
 [![License](https://img.shields.io/github/license/Lednerb/bilberry-hugo-theme.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/blob/master/LICENSE.md)
 
 ----
+
 This guide is for `v4` version. For `v3`, please use this [guide](v3-README.md).
 
-**IMPORTANT** `v3` will be supported until **August 31, 2024**. Only critical bugs will be fixed during this period, no new
-features will be implemented.
+**IMPORTANT** `v3` will be supported until **August 31, 2024**. Only critical bugs will be fixed during this period, no
+new features will be implemented.
+
 ----
 
 **Bilberry** is a premium [Hugo](https://gohugo.io) theme with many great features.
