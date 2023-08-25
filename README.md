@@ -1,12 +1,21 @@
-# Bilberry Hugo Theme
+# Bilberry Hugo Theme v4
 
 [![GitHub version](https://img.shields.io/github/release/Lednerb/bilberry-hugo-theme/all.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/releases)
-[![Hugo Version](https://img.shields.io/badge/Hugo-%5E0.93.3-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
+[![Hugo Version](https://img.shields.io/badge/Hugo-%5E0.109.0-ff4088?style=flat-square&logo=hugo)](https://gohugo.io/)
 [![Hugo Themes](https://img.shields.io/badge/Hugo_Themes-@Bilberry-ff4088)](https://themes.gohugo.io/themes/bilberry-hugo-theme/)
 
 [![Build GH-Pages](https://github.com/Lednerb/bilberry-hugo-theme/workflows/Update%20GitHub%20Pages/badge.svg)](https://github.com/Lednerb/bilberry-hugo-theme/deployments/activity_log?environment=github-pages)
 [![Contributors](https://img.shields.io/badge/contributors-48-orange.svg?style=flat-square)](#contributors)
 [![License](https://img.shields.io/github/license/Lednerb/bilberry-hugo-theme.svg?style=flat-square)](https://github.com/Lednerb/bilberry-hugo-theme/blob/master/LICENSE.md)
+
+----
+
+This guide is for `v4` version. For `v3`, please use this [guide](v3-README.md).
+
+**IMPORTANT** `v3` will be supported until **August 31, 2024**. Only critical bugs will be fixed during this period, no
+new features will be implemented.
+
+----
 
 **Bilberry** is a premium [Hugo](https://gohugo.io) theme with many great features.
 This is an adaptation and further optimization of
@@ -36,7 +45,8 @@ Please use the following guidelines if you want to start a discussion:
   - [Site Initial Setup](#site-initial-setup)
   - [Theme Installation Options](#theme-installation-options)
     - [Option 1 (recommended): Adding the Theme as a Hugo Module](#option-1-recommended-adding-the-theme-as-a-hugo-module)
-    - [Option 2: Cloning/Copying the Theme Files](#option-2-cloningcopying-the-theme-files)
+    - [Option 2: Adding the Theme as a Git submodule](#option-2-adding-the-theme-as-a-git-submodule)
+    - [Option 3: Copying the Theme Files](#option-3-copying-the-theme-files)
   - [Configuration](#configuration)
   - [Webserver](#webserver)
   - [Free Hosting](#free-hosting)
@@ -87,6 +97,7 @@ Please use the following guidelines if you want to start a discussion:
   - [404 Page](#404-page)
   - [Custom Post Types](#custom-post-types)
   - [Individual Posts](#individual-posts)
+  - [Syntax Highlighting](#syntax-highlighting)
   - [Colors and Fonts](#colors-and-fonts)
   - [CSS and JS modules](#css-and-js-modules)
   - [Cookie Disclaimer (GDPR)](#cookie-disclaimer-gdpr)
@@ -99,9 +110,9 @@ Please use the following guidelines if you want to start a discussion:
 
 ## Requirements
 
-- **Hugo** (version >= 0.93.3), see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.
+- **Hugo** (version >= 0.109.0 **extended**), see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.
 - **Git**, see this [guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on how to install Git.
-- **Go** (version >= 1.18), optional, required only when the Bilberry theme is used as a Hugo module; see
+- **Go** (version >= 1.19), optional, required only when the Bilberry theme is used as a Hugo module; see
   this [guide](https://go.dev/doc/install) on how to install Go.
 
 ## Quick Start
@@ -129,17 +140,17 @@ hugo new site my-new-blog
 rm my-new-blog/archetypes/default.md
 ```
 
-- Copy the example site content including the `config.toml` file:
+- Copy the example site content, including the `config.toml` file:
 
 ```shell
-cp -r bilberry-hugo-theme/exampleSite/* my-new-blog
+cp -r bilberry-hugo-theme/v4/exampleSite/* my-new-blog
 ```
 
 ### Theme Installation Options
 
 #### Option 1 (recommended): Adding the Theme as a Hugo Module
 
-Use this option if you want to pull in the theme files from the main Bilberry Hugo theme repository.
+Use this option if you want to pull in the theme files as a Hugo module from the main Bilberry Hugo theme repository.
 This option makes it easy to keep the theme up to date in your site.
 
 - Initialize your website as a Hugo module from the site's root:
@@ -150,7 +161,7 @@ hugo mod init github.com/<your-user>/my-new-blog
 ```
 
 Following the Hugo module initialization, you may have the following warning: module "
-github.com/Lednerb/bilberry-hugo-theme/v3" not found, which should be ignored.
+github.com/Lednerb/bilberry-hugo-theme/v4" not found, which should be ignored.
 
 - Pull theme files to add new content to your website:
 
@@ -161,19 +172,41 @@ hugo mod vendor
 If you need more details on how to use Hugo modules, please read
 the [Hugo documentation](https://gohugo.io/hugo-modules/use-modules/).
 
-#### Option 2: Cloning/Copying the Theme Files
+#### Option 2: Adding the Theme as a Git submodule 
 
-Use this option if you want to directly customize and maintain your own copy of the theme.
+Use this option if you want to pull in the theme files as a Git submodule from the main Bilberry Hugo theme repository.
+This option also makes it easy to keep the theme up to date in your site.
 
-- In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Option 2**, and
+- In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Options 2 and 3**, and
   comment out the `theme` property for **Option 1**:
 
 ```toml
 # Option 1 (recommended): adding the theme as a hugo module
-# theme = "github.com/Lednerb/bilberry-hugo-theme/v3"
+# theme = "github.com/Lednerb/bilberry-hugo-theme/v4"
 
-# Option 2: cloning/copying the theme files
-theme = "bilberry-hugo-theme"
+# Options 2 and 3: cloning/copying the theme files
+theme = "bilberry-hugo-theme/v4"
+```
+
+- Add the Bilberry Hugo theme as a Git submodule from the site's root:
+
+```shell
+$ git submodule add https://github.com/Lednerb/bilberry-hugo-theme.git themes/bilberry-hugo-theme
+```
+
+#### Option 3: Copying the Theme Files
+
+Use this option if you want to directly customize and maintain your own copy of the theme.
+
+- In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Options 2 and 3**, and
+  comment out the `theme` property for **Option 1**:
+
+```toml
+# Option 1 (recommended): adding the theme as a hugo module
+# theme = "github.com/Lednerb/bilberry-hugo-theme/v4"
+
+# Options 2 and 3: cloning/copying the theme files
+theme = "bilberry-hugo-theme/v4"
 ```
 
 - Copy cloned (or unzipped) theme files in previous step to the `my-new-blog/themes` directory:
@@ -187,7 +220,7 @@ Renaming this folder will break your site.
 
 ### Configuration
 
-To customize website according to your needs, edit the `config.toml` file in the site's root
+To customize your website according to your needs, edit the `config.toml` file in the site's root
 directory by adjusting the settings. All parameters that need to be configured are commented out or
 disabled.
 
@@ -285,9 +318,9 @@ To enable and configure search functionality for your site, follow these steps:
 4. Switch over to `API Keys` and copy your `Application ID`, `Search-Only API Key` and chosen `Index name` to
    your `config.toml` file.
 5. Make sure that the `algolia_search` parameter is set to  `true`.
-6. Follow instructions in the section [Update Algolia Index](#update-algolia-index) and proceed to the next step.
+6. Follow the instructions in the section [Update Algolia Index](#update-algolia-index) and proceed to the next step.
 7. To complete the initial setup, go to the tab `Configuration` of your newly created indices, select the `Facets` in
-   the section `FILTERING AND FACETING` and add the `language` attribute with the `filter only` modifier in
+   the section `FILTERING AND FACETING`, and add the `language` attribute with the `filter only` modifier in
    the `Attributes for faceting` option. If, after adding the `language` attribute, the `Unknown attribute` error is
    shown, ignore it.
 
@@ -300,7 +333,7 @@ Execute the `hugo` command in the site's root directory to generate the `index.j
 ##### Manual Upload
 
 1. Head over to the `public/index.json` file and copy its content.
-2. Login to your Algolia account, open your index and click at `Add records manually`.
+2. Log in to your Algolia account, open your index, and click on `Add records manually`.
 3. Paste the copied text from the `index.json` file.
 4. Verify in the `Browse` tab of your index that the index records were uploaded correctly.
 5. In case you have a multi-language setup, make sure that you repeat the steps above for all `public/{LANG}/index.json`
@@ -308,14 +341,14 @@ Execute the `hugo` command in the site's root directory to generate the `index.j
 
 ##### Automated Upload
 
-1. Switch to the `algolia` directory and install required dependencies by executing the following command:
+1. Switch to the `algolia` directory and install the required dependencies by executing the following command:
 
   ```shell script
   cd algolia
   npm install
   ```
 
-2. Run the `data-upload.js` from from the `algolia` directory as follows:
+2. Run the `data-upload.js` from the `algolia` directory as follows:
 
   ```shell script
   npm run data-upload -- -f ../public/index.json -a <algolia-app-id> -k <algolia-admin-api-key> -n <algolia-index-name>
@@ -325,7 +358,7 @@ Execute the `hugo` command in the site's root directory to generate the `index.j
    delete indices, and it should be kept secret.
 4. Add the `-c` or `--clear-index` option if you want to clear the corresponding Algolia index before starting a new
    upload.
-5. Login to your Algolia account and verify in the `Browse` tab of your index that the index records were uploaded
+5. Log in to your Algolia account and verify in the `Browse` tab of your index that the index records were uploaded
    correctly.
 6. In case you have a multi-language setup, make sure that you repeat the steps above for all `public/{LANG}/index.json`
    files.
@@ -338,7 +371,7 @@ Actions.
 
 ### Keyboard Shortcuts
 
-Type `s` to open the navigation bar and set focus to the search input field.
+Type `s` to open the navigation bar and set the focus to the search input field.
 To remove focus, press the `Esc` key.
 
 ### Reposted Article/Duplicated Content
@@ -354,7 +387,7 @@ original_url: "https://example.org/path/to/content"
 ### Estimated Reading Time
 
 To show an article's estimated reading time, set the `showReadingTime` parameter to `true` in the `config.toml` file.
-You can override the estimated reading time by setting article's `readingTime` front matter variable to a value you
+You can override the estimated reading time by setting the article's `readingTime` front matter variable to a value you
 want. If you set this variable to `0`, the reading time will not be shown.
 
 ```
@@ -466,8 +499,10 @@ gallery: [
 
 ### Image Modal Zoom
 
-When you include an image that is larger than the content area, the image becomes interactive and a larger version can
-be opened in a lightbox.
+When you include an image larger than the content area, the image becomes interactive, and a larger version can be
+opened in a lightbox. Modal zoom will work only for images that are added using the standard markdown
+annotation, e.g., `![Image alt text](/my_image.png)` or `![Image alt text](/my_image.png "Image figure caption")` for
+images with a figure caption. Please note that this feature will not work for images added using raw HTML.
 
 ### Featured Image
 
@@ -523,7 +558,7 @@ mp4video: "<video-file-url>"             # location of video file (only mp4)
 mp4videoImage: "<image-video-file-url>"  # location of poster image 
 ```
 
-For example, if an `MP4` video and its image are stored in the `static` folder, you can set corresponding front matter
+For example, if an `MP4` video and its image are stored in the `static` folder, you can set the corresponding front matter
 variables as follows:
 
 ```markdown
@@ -752,7 +787,7 @@ the `/archive/` value and completely remove the `target` variable.
 
 ### Responsive Design
 
-Bilberry theme is optimized to look good on all devices, namely desktops, tablets, and smartphones.
+Bilberry theme is optimized to look good on all devices, namely desktops, tablets and smartphones.
 
 ### MathJAX Markup
 
@@ -770,15 +805,12 @@ your browser.
 
 ### Trimmed JavaScript Size
 
-By default, this theme's JavaScript bundle contains the [highlight.js](https://highlightjs.org/) and [Moment.js](https://momentjs.com/) libraries, which are pretty large, though they add real value.
+By default, this theme's JavaScript bundle contains the [Moment.js](https://momentjs.com/) library, which is large
+enough, though they add real value.
 
-Therefore, to reduce the size of the downloaded JavaScript bundle, you can choose whether these features should remain enabled (which is currently the default) via two configuration parameters
-
-```toml
-[params]
-  enableHighlightJs = true # false would save ~127KiB gzipped
-  enableMomentJs = true    # false would save ~262KiB gzipped
-```
+Therefore, to reduce the size of the downloaded JavaScript bundle, you can choose whether using the Moment.js library
+remains enabled (currently the default) via the `enableMomentJs` configuration parameter. Setting it to `false` would
+reduce the bundle size by ~262 kB gzipped.
 
 ### Raw HTML
 
@@ -871,23 +903,49 @@ You can customize your posts as follows:
    copy the original content type file to your site's `layouts/partials/content-type/` directory and edit it there.
    Otherwise, your changes will be overwritten when you update the theme to the latest version.
 
+### Syntax Highlighting
+
+Syntax highlighting for code blocks in your posts is implemented using Hugo's
+built-in [Chrome](https://github.com/alecthomas/chroma) code highlighter. Highlighting for code blocks in your posts can
+be customized at the site level or per code block.
+
+To change the default configuration at the site level, adjust the properties in the `[markup.highlight]` section of
+the `config.toml` file. For example, you can change the default `monokai` style to the one from
+the [Chroma Style Gallery](https://xyproto.github.io/splash/docs/all.html).
+
+Per the code block, the following parameters can be
+personalized: `linenos`, `hl_lines`, `linenostart`, `anchorlinenos`, `lineanchors`, and `hl_inline`, for example:
+
+\```java {linenos=inline, hl_lines="7-12 21-26"}
+
+// ... code
+
+\```
+
+Read Hugo's [documentation](https://gohugo.io/content-management/syntax-highlighting/) for more details.
+
 ### Colors and Fonts
 
-Bilberry uses SCSS for styling and NPM with [Laravel Mix](https://laravel-mix.com/) for dependency management.
+Styling is implemented using SCSS along with [npm](https://www.npmjs.com/), which is only used for dependency management. Colors and fonts can be customized via variables defined in
+the [`assets/sass/theme.scss`](v4/assets/sass/theme.scss) file.
 
-To change any colors or fonts, you have to follow these steps:
+For example, if you want to customize the `$base-color` variable, you should define the `baseColor` parameter in your
+site's `config.toml` file.
 
-1. In your site's `themes/bilberry-hugo-theme` directory, execute `npm install`.
-2. Modify the `assets/sass/_variables.scss` file to customize your colors.
-   If you want to change the header's color, only edit the `$base-color` variable.
-3. Use `npm run dev` for development and preview purposes and `npm run production` when you're done with the changes.
+```sass
+$base-color: {{ .Param "baseColor" | default "#1d1f38" }};
+```
+
+```toml
+[params]
+  baseColor = "#ff8080"
+```
 
 ### CSS and JS modules
 
-This theme supports hot-swappable CSS and JavaScript extensions.
-Modules can be specified using the `(css|js)_modules` list parameter.
-Modules can be specified either relative to the `static` directory (e.g., `exampleSite/static/css/custom.css`) or as a
-URL.
+This theme supports hot-swappable CSS and JavaScript extensions, which can be specified using the `css_modules`
+and `js_modules` list parameters in your site's `config.toml` file. Modules can be specified either relative to the `static`
+directory (e.g., `exampleSite/static/css/custom.css`) or as a URL.
 
 Modules are imported in the order they appear in the list, and immediately after the default Bilberry CSS and JS files
 are imported.
@@ -929,7 +987,7 @@ js_modules = ["..", "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cooki
 
 ## Translations
 
-Bilberry theme has built-in support for multi-language sites, and currently supports translations for more than 20
+Bilberry theme has built-in support for multi-language sites and currently supports translations for more than 20
 languages.
 
 Feel free to submit a request for a new language translation or improve existing ones!
