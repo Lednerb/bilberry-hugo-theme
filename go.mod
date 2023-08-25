@@ -1,3 +1,3 @@
-module github.com/Lednerb/bilberry-hugo-theme/v3
+module github.com/Lednerb/bilberry-hugo-theme/v4
 
-go 1.18
+go 1.19
