@@ -55,7 +55,11 @@ jobs:
 
       - name: Build
         working-directory: /tmp/demo-site
-        run: hugo && > public/.nojekyll
+        run: |
+          rm -rf themes/bilberry-hugo-theme
+          hugo && > public/.nojekyll
+          sed -i "s~webfonts~bilberry-hugo-theme/webfonts~g" public/theme.css
+          sed -i "s~/fonts~/bilberry-hugo-theme/fonts~g" public/theme.css
 
       - name: Deploy to GitHub Pages
         if: success()
