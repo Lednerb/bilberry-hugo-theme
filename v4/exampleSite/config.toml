@@ -20,6 +20,9 @@ googleAnalytics = ""
 disqusShortname = ""
 
 [params]
+  # theme.css and theme.js will not be minified, and integrity will not be added
+  env = "DEV"
+
   # Custom CSS/JS modules that will be imported by the template.
   # Files are relative to the static/ directory or a URL.
   # Files are imported in the order they appear here, after
