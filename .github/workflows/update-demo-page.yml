@@ -4,6 +4,14 @@ on:
   release:
     types: [published]
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
 jobs:
 
   test:
@@ -57,7 +65,8 @@ jobs:
         working-directory: /tmp/demo-site
         run: |
           rm -rf themes/bilberry-hugo-theme
-          hugo && > public/.nojekyll
+          hugo --environment development 
+          > public/.nojekyll
           sed -i "s~webfonts~bilberry-hugo-theme/webfonts~g" public/theme.css
           sed -i "s~/fonts~/bilberry-hugo-theme/fonts~g" public/theme.css
 
