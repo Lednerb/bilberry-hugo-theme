@@ -10,7 +10,7 @@
 
 ----
 
-This guide is for `v4` version. For `v3`, please use this [guide](v3-README.md).
+This guide is for `v4` version. For `v3`, please use this [guide](../v3-README.md).
 
 **IMPORTANT** `v3` will be supported until **August 31, 2024**. Only critical bugs will be fixed during this period, no
 new features will be implemented.
@@ -927,7 +927,7 @@ Read Hugo's [documentation](https://gohugo.io/content-management/syntax-highligh
 ### Colors and Fonts
 
 Styling is implemented using SCSS along with [npm](https://www.npmjs.com/), which is only used for dependency management. Colors and fonts can be customized via variables defined in
-the [`assets/sass/theme.scss`](v4/assets/sass/theme.scss) file.
+the [`assets/sass/theme.scss`](assets/sass/theme.scss) file.
 
 For example, if you want to customize the `$base-color` variable, you should define the `baseColor` parameter in your
 site's `config.toml` file.
