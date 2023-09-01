@@ -11,7 +11,7 @@ echo "--------------------------------------------------------------------------
 
 echo ">>> Starting Hugo server..."
 
-cd tests/local/exampleSite
+cd tests/local/exampleSite || return
 hugo server --buildDrafts --buildFuture
 
 echo ">>> ... completed."

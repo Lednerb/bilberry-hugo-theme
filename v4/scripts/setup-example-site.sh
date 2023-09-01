@@ -14,7 +14,7 @@ if [ -d "tests/local" ]
 fi
 
 mkdir tests/local
-cd tests/local
+cd tests/local || return
 hugo new site exampleSite
 rm exampleSite/archetypes/default.md
 cp -r ../../exampleSite/* exampleSite

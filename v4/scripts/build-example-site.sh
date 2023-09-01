@@ -11,7 +11,7 @@ echo "--------------------------------------------------------------------------
 
 echo ">>> Building example site..."
 
-cd tests/local/exampleSite
+cd tests/local/exampleSite || return
 hugo --environment development --buildDrafts --buildFuture
 
 echo ">>> ... completed."
