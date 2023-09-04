@@ -24,10 +24,10 @@
     "vue-template-compiler": "^2.6.11"
   },
   "scripts": {
-    "deps": "./scripts/node-deps.sh",
-    "build": "rm -rf public ; hugo",
-    "example": "./scripts/example-site.sh",
-    "stop": "killall hugo"
+    "update-deps": "scripts/update-node-deps.sh",
+    "build-example": "scripts/build-example-site.sh",
+    "serve-example": "scripts/serve-example-site.sh",
+    "stop-hugo": "killall hugo"
   },
   "repository": {
     "type": "git",

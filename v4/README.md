@@ -13,7 +13,9 @@
 This guide is for `v4` version. For `v3`, please use this [guide](../v3-README.md).
 
 **IMPORTANT** `v3` will be supported until **August 31, 2024**. Only critical bugs will be fixed during this period, no
-new features will be implemented.
+new features will be implemented. If you want to migrate from `v3` to `v4`, please read the migration [guide](v4-migration-guide.md).
+
+For those who want to contribute to or customize the Bilberry Hugo theme, please see the developer [guide](v4-developer-guide.md).
 
 ----
 
