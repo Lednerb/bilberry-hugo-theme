@@ -27,7 +27,7 @@
     "update-deps": "scripts/update-node-deps.sh",
     "build-example": "scripts/build-example-site.sh",
     "serve-example": "scripts/serve-example-site.sh",
-    "stop-example": "killall hugo"
+    "stop-hugo": "killall hugo"
   },
   "repository": {
     "type": "git",

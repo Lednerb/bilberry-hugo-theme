@@ -24,6 +24,16 @@ block of `package.json` file.
   examine the location of the new dependency's CSS and JavaScript files in the `v4/node_modules` folder. Dependencies,
   namely CSS and JavaScript artifacts must be copied from the `v4/node_modules` folder to the `v4/assets/sass/_vendor`
   and `v4/assets/js/_vendor` folders, respectively. Therefore, update the `v4/scripts/update-node-deps.sh` script and
-  execute the `npm run update-dep` command again. \
-  For the newly copied SCSS and JavaScript artifacts to be used by Hugo pipes, they should be included in
-  the `v4/assets/sass/theme.scss` and `v4/layouts/partials/js.html` files. Therefore, update these files accordingly.  
+  execute the `npm run update-dep` command again. For the newly copied SCSS and JavaScript artifacts to be used by Hugo
+  pipes, they should be included in the `v4/assets/sass/theme.scss` and `v4/layouts/partials/js.html` files. Therefore,
+  update these files accordingly, and commit the changes.
+
+### Example Site
+
+* To build the example site, execute the `npm run build-example` command. Then, examine the content of
+  the `v4/tests/local/exampleSite/public` folder.
+ 
+* To run the example site, execute the `npm run serve-example` command. The example site will be available
+  at http://localhost:1313/.
+
+* To stop all instances of the Hugo server running in your local dev, you may use the `npm run stop-hugo` command.
