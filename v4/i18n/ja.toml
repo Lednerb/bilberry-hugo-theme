@@ -17,10 +17,10 @@ other = "最近の投稿"
 other = "検索 ..."
 
 [noSearchResults]
-other = "検索結果がありません."
+other = "検索結果がありません。"
 
 [olderPosts]
-other = "過去の投稿"
+other = "古いの投稿"
 
 [newerPosts]
 other = "新しい投稿"
@@ -29,8 +29,16 @@ other = "新しい投稿"
 other = "続きを読む"
 
 [otherLanguages]
-other = "他言語"
+other = "他の言語"
 
 [readingTime]
-other = "読了時間約１分"
+other = "約{{.Count}}分で読めます"
 
+[tableOfContents]
+other = "目次"
+
+[series]
+other = "シリーズ"
+
+[archive]
+other = "アーカイブ"
