@@ -19,7 +19,7 @@
     "instantsearch.js": "^4.39.1",
     "jquery": "^3.5.1",
     "moment": "^2.29.4",
-    "resolve-url-loader": "^3.1.1",
+    "resolve-url-loader": "^5.0.0",
     "sass": "^1.26.10",
     "sass-loader": "^8.0.2",
     "skeleton-css": "^2.0.4",
