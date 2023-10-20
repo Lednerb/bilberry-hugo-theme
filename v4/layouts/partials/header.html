@@ -36,8 +36,13 @@
                 <span class="subtitle">{{ . }}</span>
             {{ end }}
         </div>
-
-        {{ if and (gt .Site.Languages 1) (.Site.Params.showHeaderLanguageChooser | default true) }}
+        <div class="switchbox">
+          {{ if .Site.Params.darkmode | default 1 }}
+          <div class="darkToggleBox">
+            <button id="darkToggleLogo" class="fa fa-moon"></button>
+          </div>
+          {{ end }}
+          {{ if and (gt .Site.Languages 1) (.Site.Params.showHeaderLanguageChooser | default true) }}
             {{- $language := .Language -}}
             {{- $pages := .Page.AllTranslations -}}
             <div class="languages">
@@ -55,6 +60,7 @@
             {{ end }}
             </div>
         {{ end }}
+       </div>
 
         {{ if .Site.Params.permanentTopNav }}
             <div class="toggler permanentTopNav">
