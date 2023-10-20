@@ -1,0 +1,39 @@
+@import "_dk-no-js";
+// @import "_dk-theme";
+.bilberry-hugo-theme {
+    background-color: $dk-page-background-color;
+    color: $dk-text-color;
+    a {
+        color: inherit;
+
+        &:hover {
+            color: $dk-highlight-color;
+        }
+    }
+
+    .highlight {
+        pre {
+            code {
+                background-color: inherit;
+            }
+            .copy-button {
+                background: $dk-page-background-color;
+            }
+        }
+    }
+
+    #back-to-top-button {
+        color: $dk-base-color;
+        background-color: $dk-bubble-color;
+    }
+
+    #back-to-top-button:hover {
+        background-color: $dk-highlight-color;
+    }
+    @import "dk-topnav";
+    @import "dk-header";
+    @import "dk-main";
+    @import "dk-articles";
+    @import "dk-pagination";
+    @import "dk-footer";
+}

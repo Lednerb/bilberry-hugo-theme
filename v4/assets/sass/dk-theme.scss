@@ -1,0 +1,35 @@
+// The variables below are processed in './layouts/partials/css.html'
+// when it's executed as template by Hugo pipes.
+
+// Dark mode
+$dk-page-background-color: {{ .Param "dkPageBackgroundolor" | default "#0a0a0a" }};
+$dk-base-color: {{ .Param "dkBaseColor" | default "#1d1f38" }};
+// $dk-base-color: "#555";
+$dk-special-color: {{ .Param "dkSpecialColor" | default "#2D3642" }};
+$dk-highlight-color: {{ .Param "dkHighlightColor" | default "#5c8b59" }};
+$dk-text-color: {{ .Param "dkTextColor" | default "#222" }};
+
+$dk-nav-background-color: {{ .Param "dkNavBackgroundColor" | default "$dk-special-color" }};
+$dk-nav-text-color: {{ .Param "dkNavTextColor" | default "$dk-page-background-color" }};
+$dk-algolia-search-box-color: {{ .Param "dkAlgoliaSearchBoxColor" | default "#444" }};
+$dk-algolia-search-box-icon-color: {{ .Param "dkAlgoliaSearchBoxIconColor" | default "#888" }};
+$dk-algolia-search-box-background-color: {{ .Param "dkAlgoliaSearchBoxBackgroundColor" | default "#fafafa" }};
+$dk-algolia-border-color: {{ .Param "dkAlgoliaBorderColor" | default "#e4e4e4" }};
+
+$dk-header-text-color: {{ .Param "dkHeaderTextColor" | default "$dk-page-background-color" }};
+$dk-logo-color: {{ .Param "dkLogoColor" | default "darken($dk-page-background-color, 1)" }};
+$dk-bubble-color: {{ .Param "dkBubbleColor" | default "#fff" }};
+$dk-bubble-background-color: {{ .Param "dkBubbleBackgroundColor" | default "#ccc" }};
+$dk-bubble-hover-color: {{ .Param "dkBubbleHoverColor" | default "$dk-highlight-color" }};
+
+$dk-article-background-color: {{ .Param "dkArticleBackgroundColor" | default "#fff" }};
+$dk-meta-text-color: {{ .Param "dkMetaTextColor" | default "#999" }};
+$dk-meta-border-color: {{ .Param "dkMetaBorderColor" | default "#eee" }};
+$dk-continue-reading-hover-color: {{ .Param "dkContinueReadingHoverColor" | default "$dk-meta-text-color" }};
+
+$dk-footer-border-color: {{ .Param "dkFooterBorderColor" | default "#eee" }};
+$dk-footer-background-color: {{ .Param "dkFooterBackgroundColor" | default "rgba(#ffffff, 80)" }};
+$dk-footer-headline-color: {{ .Param "dkFooterHeadlineColor" | default "#444" }};
+
+// Base theme styling
+@import '_dk-bilberry-hugo-theme';

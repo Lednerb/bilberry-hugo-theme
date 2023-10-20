@@ -1,0 +1,10 @@
+.paginator {
+    a {
+       background-color: $dk-bubble-background-color;
+        color: $dk-bubble-color;
+
+        &:hover {
+            background-color: $dk-highlight-color;
+        }
+   }
+}

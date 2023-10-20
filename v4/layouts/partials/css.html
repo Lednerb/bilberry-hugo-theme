@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="screen">
 {{ end }}
 
+{{ $dkoptions := dict "targetPath" "dk-theme.css" "enableSourceMap" true "precision" 6 }}
+{{ $dkTheme := resources.Get "sass/dk-theme.scss" | resources.ExecuteAsTemplate "dkTheme.scss" . | toCSS $dkoptions }}
+<link disabled id="darkTheme" rel="stylesheet" href="{{ $dkTheme.Permalink }}" media="screen">
+
 {{ if isset .Site.Params "css_modules" }}
     {{ range .Site.Params.css_modules }}
         <link rel="stylesheet" href="{{ . | absURL }}">

@@ -1,0 +1,148 @@
+article {
+   background-color: $dk-article-background-color;
+    // :before and :after to generate the < pointer
+    &:before {
+       border-right-color: #ddd;
+   }
+
+    &:after {
+       border-right-color: #fff;
+   }
+
+    .content {
+        h1 {
+            a {
+                &:hover {
+                    color: $dk-highlight-color;
+                }
+            }
+        }
+
+        .meta {
+           color: $dk-meta-text-color;
+            border-bottom: 3px double $dk-meta-border-color;
+
+            a {
+                color: inherit;
+                font-style: normal;
+
+                &:hover {
+                    color: $dk-highlight-color;
+                }
+            }
+
+        }
+
+        a {
+            color: $dk-highlight-color;
+       }
+
+        a.more {
+            color: $dk-highlight-color;
+       }
+
+        .archive-list {
+            ul {
+                li {
+                    border-bottom: 1px solid #eee;
+                }
+                a {
+                    color: $dk-highlight-color;
+
+                    span {
+                        color: $dk-meta-text-color;
+                    }
+
+                    &:hover {
+                        color: $dk-base-color;
+                    }
+                }
+            }
+        }
+
+        blockquote {
+            background-color: lighten($dk-article-background-color,8);
+            border-left: 0.5em solid #ededed;
+       }
+
+        #TableOfContents {
+            li {
+                color: $dk-text-color;
+                a {
+                    &:hover {
+                        color: $dk-highlight-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        // background: transparentize($dk-base-color, 0.2);
+        background: transparentize($dk-page-background-color, 0.2);
+
+        .tags {
+            .links {
+                a:not(:last-child):after {
+                    color: $dk-text-color !important;
+                }
+            }
+        }
+
+        .languages {
+            .links {
+                a:not(:last-child):after {
+                    color: $dk-text-color !important;
+                }
+            }
+        }
+    }
+
+    // Quotes
+    &.quote {
+        background-color: $dk-special-color;
+        &:after {
+            border-right-color: $dk-special-color;
+        }
+        blockquote {
+            color: $dk-text-color;
+       }
+    }
+
+    // Gallery
+    &.gallery {
+        .flexslider {
+           .flex-direction-nav a {
+               &:before {
+                    color: rgba(255, 255, 255, 0.9);
+                    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+
+    // Link
+    &.link {
+        background-color: $dk-special-color;
+        &:after {
+            border-right-color: $dk-special-color;
+        }
+        &:hover {
+            background-color: $dk-highlight-color;
+            color: #fff;
+            a {
+              color: $dk-bubble-background-color;
+            }
+
+            &:after {
+                border-right-color: $dk-highlight-color;
+            }
+        }
+
+        // @include featuredImage();
+        
+        a {
+            color: $dk-text-color;
+       }
+    }
+  }

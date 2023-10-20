@@ -1,0 +1,21 @@
+.main {
+    &:before {
+       background: $dk-bubble-color;
+    }
+
+    &:after {
+       background: $dk-bubble-color;
+    }
+
+    .article-wrapper {
+        .bubble {
+           background-color: $dk-bubble-background-color;
+            border: 3px solid $dk-bubble-color;
+           color: $dk-bubble-color;
+            &:hover {
+                background-color: $dk-highlight-color;
+                color: $dk-bubble-background-color;
+            }
+        }
+    }
+}
