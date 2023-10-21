@@ -1,0 +1,9 @@
+{{ $imageText := .Get 0 }}
+{{ $imageUrl := .Get 1 }}
+{{ $linkUrl := .Get 2 }}
+
+<p>
+    <a href="{{ $linkUrl }}">
+        <img src="{{ $imageUrl }}" alt="{{ $imageText }}">
+    </a>
+</p>
