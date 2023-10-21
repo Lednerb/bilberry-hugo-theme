@@ -544,7 +544,7 @@ cropped and resized.
 If you want to display an image as a hyperlink, use the `hyperlink-image` shortcode as follows:
 
 ```markdown
-{{< hyperlink-image "<image-text>" "<image-url>" "<link-url" >}}
+{{< hyperlink-image "<image-text>" "<image-url>" "<link-url>" >}}
 ```
 
 ### Video
