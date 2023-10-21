@@ -477,7 +477,9 @@ markdown, you can use the `series` shortcode with the series name in question, f
 {{< series "My New Super Series" >}}
 ```
 
-### External Images
+### Images
+
+#### External Images
 
 If you would like to use external images, such as those stored on another server or in the cloud, as
 a featured image for your article or in the `gallery` post type, you can use them by setting the
@@ -499,14 +501,14 @@ gallery: [
 ]
 ```
 
-### Image Modal Zoom
+#### Image Modal Zoom
 
 When you include an image larger than the content area, the image becomes interactive, and a larger version can be
 opened in a lightbox. Modal zoom will work only for images that are added using the standard markdown
 annotation, e.g., `![Image alt text](/my_image.png)` or `![Image alt text](/my_image.png "Image figure caption")` for
 images with a figure caption. Please note that this feature will not work for images added using raw HTML.
 
-### Featured Image
+#### Featured Image
 
 There are two options for adding a featured image to a post. The first approach is to use a [single-page](#single-page)
 post with the `featuredImage` front matter variable, where the value for this variable should be either the path
@@ -524,16 +526,26 @@ content
         └── index.md
 ```
 
-### Automatic Image Resizing
+#### Automatic Image Resizing
 
-Bilberry theme includes built-in automatic cropping and resizing only for **featured** and **gallery** images, activated
-by default. However, if you want to disable it, set the `resizeImages` parameter to `false` in the `config.toml` file.
-Also, this feature can be disabled at the post level by setting the `resizeImages` front matter variable to `false`.
+Bilberry theme includes built-in automatic cropping and resizing only for **featured** and **gallery**
+ images, activated by default. However, if you want to disable it, set the `resizeImages`
+parameter to `false` in the `config.toml` file. Also, this feature can be disabled at the post level
+by setting the `resizeImages` front matter variable to `false`.
 
-For a featured image to be cropped and resized, it should be named `featuredImage.*` and placed within the page bundle
-folder.
+For a featured image to be cropped and resized, it should be named `featuredImage.*` and placed
+within the page bundle's folder.
 
-**NOTE**: a featured image defined via the `featuredImage` front matter parameter will **NOT** be cropped and resized.
+**NOTE**: a featured image defined via the `featuredImage` front matter parameter will **NOT** be
+cropped and resized.
+
+#### Hyperlink Image
+
+If you want to display an image as a hyperlink, use the `hyperlink-image` shortcode as follows:
+
+```markdown
+{{< hyperlink-image "<image-text>" "<image-url>" "<link-url>" >}}
+```
 
 ### Video
 
