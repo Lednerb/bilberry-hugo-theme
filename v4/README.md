@@ -10,9 +10,9 @@
 
 ----
 
-This guide is for `v4` version. For `v3`, please use this [guide](../v3-README.md).
+This guide is for the `v4` version. For `v3`, please use this [guide](../v3-README.md).
 
-**IMPORTANT** `v3` will be supported until **August 31, 2024**. Only critical bugs will be fixed during this period, no
+**IMPORTANT** `v3` will be supported until **August 31, 2024**. Only critical bugs will be fixed during this period, and no
 new features will be implemented. If you want to migrate from `v3` to `v4`, please read the migration [guide](v4-migration-guide.md).
 
 For those who want to contribute to or customize the Bilberry Hugo theme, please see the developer [guide](v4-developer-guide.md).
@@ -35,8 +35,8 @@ Please use the following guidelines if you want to start a discussion:
 
 - For any questions regarding a specific feature, or if you need help using or customizing the theme, use the **Questions & Answers** (**Q&A**) category.
 - To propose a new feature or any other improvements, use the **Ideas** category.
-- To showcase your blog or website powered by Bilberry theme, use the **Show and tell** category.
-- For any other inquiries, please use the **General** type discussion.
+- To showcase your blog or website powered by the Bilberry theme, use the **Show and tell** category.
+- Please use the **General** type discussion for any other inquiries.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -198,7 +198,7 @@ $ git submodule add https://github.com/Lednerb/bilberry-hugo-theme.git themes/bi
 
 #### Option 3: Copying the Theme Files
 
-Use this option if you want to directly customize and maintain your own copy of the theme.
+Use this option if you want to customize and maintain your own copy of the theme directly.
 
 - In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Options 2 and 3**, and
   comment out the `theme` property for **Option 1**:
@@ -211,7 +211,7 @@ Use this option if you want to directly customize and maintain your own copy of 
 theme = "bilberry-hugo-theme/v4"
 ```
 
-- Copy cloned (or unzipped) theme files in previous step to the `my-new-blog/themes` directory:
+- Copy cloned (or unzipped) theme files in the previous step to the `my-new-blog/themes` directory:
 
 ```shell
 cp -r bilberry-hugo-theme my-new-blog/themes/bilberry-hugo-theme
@@ -257,7 +257,7 @@ the [issue](https://github.com/Lednerb/bilberry-hugo-theme/discussions/448) with
 ### Default Post Types
 
 Bilberry theme comes with a set of predefined post types, namely `article`, `audio`, `code`, `gallery`, `link`, `page`
-, `quote`, `status`, and `video` where the `article` type is the default one.
+, `quote`, `status`, and `video`, where the `article` type is the default.
 
 To create a new content, use the `hugo new` command. Content can be created in two ways: a single page or
 a [page bundle](https://gohugo.io/content-management/page-bundles/).
@@ -314,10 +314,10 @@ and typing something in the search text field, such as "support."
 
 To enable and configure search functionality for your site, follow these steps:
 
-1. Register for a free Algolia Search account on https://www.algolia.com/.
+1. Register for a free Algolia Search account at https://www.algolia.com/.
 2. Add a `New Application`. You can choose the `COMMUNITY` plan.
 3. Switch over to `Indices` and create a new index.
-4. Switch over to `API Keys` and copy your `Application ID`, `Search-Only API Key` and chosen `Index name` to
+4. Switch over to `API Keys` and copy your `Application ID`, `Search-Only API Key`, and chosen `Index name` to
    your `config.toml` file.
 5. Make sure that the `algolia_search` parameter is set to  `true`.
 6. Follow the instructions in the section [Update Algolia Index](#update-algolia-index) and proceed to the next step.
@@ -399,7 +399,7 @@ readingTime: 0 # reading time will not be shown
 
 ### Summary Splits
 
-There are three options for how Hugo can generate summaries of content which will be used as a short version in summary
+There are three options for how Hugo can generate summaries of content which will be used as a short version in the summary
 views, such as a home page and tags or categories pages.
 
 #### Automatic Summary Split
@@ -451,7 +451,7 @@ series: ["My Cool Series"]
 
 To enable the automatic creation of a table of contents (TOC), set the `toc` front matter variable to `true` in your
 article.
-If the article's markdown contains appropriate headings, Hugo will generate a table of content at the beginning of the
+If the article's markdown contains appropriate headings, Hugo will generate a table of contents at the beginning of the
 article.
 
 By default, a TOC is generated if the content's word count is greater than **400**.
@@ -680,7 +680,7 @@ Such value for Universal Analytics v3 is prefixed with the `UA` letters.
 So, suppose you migrate your existing website to the Bilberry theme, and your website is already tracked in Universal
 Analytics, given that the corresponding property was created before October 14, 2020.
 In that case, you should continue using the v3 value in the `config.toml` file.
-But given that Universal Analytics will no longer process new data in standard properties beginning July 1, 2023, you
+However given that Universal Analytics will no longer process new data in standard properties beginning July 1, 2023, you
 will have to create a Google Analytics v4 property linked to your v3 property.
 
 If you created your property after October 14, 2020, you're likely using a Google Analytics v4 property already, and the
@@ -801,7 +801,7 @@ the `/archive/` value and completely remove the `target` variable.
 
 ### Responsive Design
 
-Bilberry theme is optimized to look good on all devices, namely desktops, tablets and smartphones.
+Bilberry theme is optimized to look good on all devices, namely desktops, tablets, and smartphones.
 
 ### MathJAX Markup
 
@@ -961,7 +961,7 @@ This theme supports hot-swappable CSS and JavaScript extensions, which can be sp
 and `js_modules` list parameters in your site's `config.toml` file. Modules can be specified either relative to the `static`
 directory (e.g., `exampleSite/static/css/custom.css`) or as a URL.
 
-Modules are imported in the order they appear in the list, and immediately after the default Bilberry CSS and JS files
+Modules are imported in the order they appear in the list and immediately after the default Bilberry CSS and JS files
 are imported.
 
 ### Cookie Disclaimer (GDPR)
