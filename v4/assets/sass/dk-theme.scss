@@ -1,13 +1,40 @@
 // The variables below are processed in './layouts/partials/css.html'
 // when it's executed as template by Hugo pipes.
+$page-background-color: {{ .Param "pageBackgroundColor" | default "#f1f1f1" }};
+$base-color: {{ .Param "baseColor" | default "#1d1f38" }};
+$special-color: {{ .Param "specialColor" | default "#2D3642" }};
+$highlight-color: {{ .Param "highlightColor" | default "#5c8b59" }};
+$text-color: {{ .Param "textColor" | default "#222" }};
+
+$nav-background-color: {{ .Param "navBackgroundColor" | default "$special-color" }};
+$nav-text-color: {{ .Param "navTextColor" | default "$page-background-color" }};
+$algolia-search-box-color: {{ .Param "algoliaSearchBoxColor" | default "#444" }};
+$algolia-search-box-icon-color: {{ .Param "algoliaSearchBoxIconColor" | default "#888" }};
+$algolia-search-box-background-color: {{ .Param "algoliaSearchBoxBackgroundColor" | default "#fafafa" }};
+$algolia-border-color: {{ .Param "algoliaBorderColor" | default "#e4e4e4" }};
+
+$header-text-color: {{ .Param "headerTextColor" | default "$page-background-color" }};
+$logo-color: {{ .Param "logoColor" | default "darken($page-background-color, 1)" }};
+$bubble-color: {{ .Param "bubbleColor" | default "#fff" }};
+$bubble-background-color: {{ .Param "bubbleBackgroundColor" | default "#ccc" }};
+$bubble-hover-color: {{ .Param "bubbleHoverColor" | default "$highlight-color" }};
+
+$article-background-color: {{ .Param "articleBackgroundColor" | default "#fff" }};
+$meta-text-color: {{ .Param "metaTextColor" | default "#999" }};
+$meta-border-color: {{ .Param "metaBorderColor" | default "#eee" }};
+$continue-reading-hover-color: {{ .Param "continueReadingHoverColor" | default "$meta-text-color" }};
+
+$footer-border-color: {{ .Param "footerBorderColor" | default "#eee" }};
+$footer-background-color: {{ .Param "footerBackgroundColor" | default "rgba(#ffffff, 80)" }};
+$footer-headline-color: {{ .Param "footerHeadlineColor" | default "#444" }};
 
 // Dark mode
-$dk-page-background-color: {{ .Param "dkPageBackgroundolor" | default "#0a0a0a" }};
-$dk-base-color: {{ .Param "dkBaseColor" | default "#1d1f38" }};
+$dk-page-background-color: {{ .Param "dkPageBackgroundolor" | default "invert($page-background-color)" }};
+$dk-base-color: {{ .Param "dkBaseColor" | default "$base-color" }};
 // $dk-base-color: "#555";
-$dk-special-color: {{ .Param "dkSpecialColor" | default "#2D3642" }};
-$dk-highlight-color: {{ .Param "dkHighlightColor" | default "#5c8b59" }};
-$dk-text-color: {{ .Param "dkTextColor" | default "#222" }};
+$dk-special-color: {{ .Param "dkSpecialColor" | default "$special-color" }};
+$dk-highlight-color: {{ .Param "dkHighlightColor" | default "saturate($highlight-color,20)" }};
+$dk-text-color: {{ .Param "dkTextColor" | default "darken(invert($text-color),20)" }};
 
 $dk-nav-background-color: {{ .Param "dkNavBackgroundColor" | default "$dk-special-color" }};
 $dk-nav-text-color: {{ .Param "dkNavTextColor" | default "$dk-page-background-color" }};
@@ -16,20 +43,20 @@ $dk-algolia-search-box-icon-color: {{ .Param "dkAlgoliaSearchBoxIconColor" | def
 $dk-algolia-search-box-background-color: {{ .Param "dkAlgoliaSearchBoxBackgroundColor" | default "#fafafa" }};
 $dk-algolia-border-color: {{ .Param "dkAlgoliaBorderColor" | default "#e4e4e4" }};
 
-$dk-header-text-color: {{ .Param "dkHeaderTextColor" | default "$dk-page-background-color" }};
-$dk-logo-color: {{ .Param "dkLogoColor" | default "darken($dk-page-background-color, 1)" }};
-$dk-bubble-color: {{ .Param "dkBubbleColor" | default "#fff" }};
-$dk-bubble-background-color: {{ .Param "dkBubbleBackgroundColor" | default "#ccc" }};
+$dk-header-text-color: {{ .Param "dkHeaderTextColor" | default "darken($header-text-color,20)" }};
+$dk-logo-color: {{ .Param "dkLogoColor" | default "darken(invert($dk-page-background-color),70)" }};
+$dk-bubble-color: {{ .Param "dkBubbleColor" | default "$dk-logo-color" }};
+$dk-bubble-background-color: {{ .Param "dkBubbleBackgroundColor" | default "lighter(invert($bubble-background-color),5)" }};
 $dk-bubble-hover-color: {{ .Param "dkBubbleHoverColor" | default "$dk-highlight-color" }};
 
-$dk-article-background-color: {{ .Param "dkArticleBackgroundColor" | default "#fff" }};
-$dk-meta-text-color: {{ .Param "dkMetaTextColor" | default "#999" }};
-$dk-meta-border-color: {{ .Param "dkMetaBorderColor" | default "#eee" }};
+$dk-article-background-color: {{ .Param "dkArticleBackgroundColor" | default "invert($article-background-color)" }};
+$dk-meta-text-color: {{ .Param "dkMetaTextColor" | default "invert($meta-text-color)" }};
+$dk-meta-border-color: {{ .Param "dkMetaBorderColor" | default "invert($meta-text-color)" }};
 $dk-continue-reading-hover-color: {{ .Param "dkContinueReadingHoverColor" | default "$dk-meta-text-color" }};
 
-$dk-footer-border-color: {{ .Param "dkFooterBorderColor" | default "#eee" }};
-$dk-footer-background-color: {{ .Param "dkFooterBackgroundColor" | default "rgba(#ffffff, 80)" }};
-$dk-footer-headline-color: {{ .Param "dkFooterHeadlineColor" | default "#444" }};
+$dk-footer-border-color: {{ .Param "dkFooterBorderColor" | default "invert($footer-border-color)" }};
+$dk-footer-background-color: {{ .Param "dkFooterBackgroundColor" | default "invert($footer-background-color)" }};
+$dk-footer-headline-color: {{ .Param "dkFooterHeadlineColor" | default "darken(invert($footer-headline-color),5)" }};
 
 // Base theme styling
 @import '_dk-bilberry-hugo-theme';
