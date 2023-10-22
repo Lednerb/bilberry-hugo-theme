@@ -16,19 +16,20 @@ header {
        }
     }
 
-    .darkToggle {
-      background-color: $dk-special-color;
-      a {
-        color: $dk-header-text-color;
-      }
-   }
-
-    .languages {
-       background-color: $dk-special-color;
-        a {
-           color: $dk-header-text-color;
+    .switchbox {
+        .darkToggleBox {
+          background-color: $dk-special-color;
+            button {
+              color: $dk-header-text-color;
+            }
         }
-    }
+        .languages {
+          background-color: $dk-special-color;
+          a {
+            color: $dk-header-text-color;
+            }
+          }
+        }
 
     .toggler {
        background: $dk-special-color;
