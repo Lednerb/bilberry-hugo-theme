@@ -31,7 +31,6 @@ $footer-headline-color: {{ .Param "footerHeadlineColor" | default "#444" }};
 // Dark mode
 $dk-page-background-color: {{ .Param "dkPageBackgroundolor" | default "invert($page-background-color)" }};
 $dk-base-color: {{ .Param "dkBaseColor" | default "$base-color" }};
-// $dk-base-color: "#555";
 $dk-special-color: {{ .Param "dkSpecialColor" | default "$special-color" }};
 $dk-highlight-color: {{ .Param "dkHighlightColor" | default "saturate($highlight-color,20)" }};
 $dk-text-color: {{ .Param "dkTextColor" | default "darken(invert($text-color),20)" }};
