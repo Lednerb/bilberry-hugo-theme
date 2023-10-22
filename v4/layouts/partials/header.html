@@ -39,7 +39,7 @@
         <div class="switchbox">
           {{ if .Site.Params.darkmode | default 1 }}
           <div class="darkToggleBox">
-            <button id="darkToggleLogo" class="fa fa-moon"></button>
+            <button id="darkToggleLogo" class="fa-solid fa-hourglass"></button>
           </div>
           {{ end }}
           {{ if and (gt .Site.Languages 1) (.Site.Params.showHeaderLanguageChooser | default true) }}
