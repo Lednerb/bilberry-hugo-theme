@@ -943,6 +943,17 @@ $base-color: {{ .Param "baseColor" | default "#1d1f38" }};
   baseColor = "#ff8080"
 ```
 
+Switching light/dark theme is supported.
+
+Colors for dark theme with a prefix `dk-` are stored in [`assets/sass/dk-theme.scss`](assets/sass/dk-theme.scss).
+You can customize them via the same way with light (default) colors.
+
+*Note* that the dark theme can be disabled:
+```toml
+[params]
+    darkmode = false
+```
+
 ### CSS and JS modules
 
 This theme supports hot-swappable CSS and JavaScript extensions, which can be specified using the `css_modules`
