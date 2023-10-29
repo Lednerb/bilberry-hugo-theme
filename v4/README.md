@@ -940,9 +940,9 @@ personalized: `linenos`, `hl_lines`, `linenostart`, `anchorlinenos`, `lineanchor
 
 Read Hugo's [documentation](https://gohugo.io/content-management/syntax-highlighting/) for more details.
 
-### Colors and Fonts
+### Layout, Colors and Fonts
 
-Styling is implemented using SCSS along with [npm](https://www.npmjs.com/), which is only used for dependency management. Colors and fonts can be customized via variables defined in
+Site layout and styling are implemented using SCSS along with [npm](https://www.npmjs.com/), which is only used for dependency management. Layout, colors and fonts can be customized via variables defined in
 the [`assets/sass/theme.scss`](assets/sass/theme.scss) file.
 
 For example, if you want to customize the `$base-color` variable, you should define the `baseColor` parameter in your
@@ -961,10 +961,14 @@ $base-color: {{ .Param "baseColor" | default "#1d1f38" }};
 
 This theme supports hot-swappable CSS and JavaScript extensions, which can be specified using the `css_modules`
 and `js_modules` list parameters in your site's `config.toml` file. Modules can be specified either relative to the `static`
-directory (e.g., `exampleSite/static/css/custom.css`) or as a URL.
+directory (e.g., `exampleSite/static/custom.css`) or as a URL:
 
-Modules are imported in the order they appear in the list and immediately after the default Bilberry CSS and JS files
-are imported.
+```toml
+[params]
+  css_modules = ["custom.css","//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"]
+```
+
+Modules are imported in the order they appear in the list and processed immediately after the default Bilberry CSS and JS files.
 
 ### Cookie Disclaimer (GDPR)
 
@@ -997,8 +1001,8 @@ Storing these files on your website reduces external dependencies, increases pri
 website in an offline environment.
 
 ```toml
-css_modules = ["..", "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"]
-js_modules = ["..", "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js", "init-cookieconsent.js"]
+css_modules = ["//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"]
+js_modules = ["//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js","init-cookieconsent.js"]
 ```
 
 ## Translations
