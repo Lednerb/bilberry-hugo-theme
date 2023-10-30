@@ -304,6 +304,13 @@ this will only work when the `permanentTopNav` is also set to `true`.
 
 Please note that the top navigation bar is minimized by default on mobile devices.
 
+### Light/Dark Theme Mode
+Switching between light and dark theme mode can be enabled by setting the `enableLightDarkMode` parameter to `true`:
+```toml
+[params]
+    darkmode = false
+```
+
 ### Algolia Search
 
 Bilberry theme includes built-in content search via [Algolia SAAS](https://www.algolia.com/).
@@ -941,17 +948,6 @@ $base-color: {{ .Param "baseColor" | default "#1d1f38" }};
 ```toml
 [params]
   baseColor = "#ff8080"
-```
-
-Switching light/dark theme is supported.
-
-Colors for dark theme with a prefix `dk-` are stored in [`assets/sass/dk-theme.scss`](assets/sass/dk-theme.scss).
-You can customize them via the same way with light (default) colors.
-
-*Note* that the dark theme can be disabled:
-```toml
-[params]
-    darkmode = false
 ```
 
 ### CSS and JS modules
