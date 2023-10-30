@@ -82,12 +82,12 @@ header {
         }
     }
 
-    .switchbox {
+    .selectors {
       position: absolute;
       right: 0;
       bottom: 0;
       display: flex;
-        .darkToggleBox {
+        .light-dark-mode {
           background-color: $special-color;
           margin-right: 1em;
           display: flex;

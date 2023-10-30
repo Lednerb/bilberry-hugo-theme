@@ -1,16 +1,17 @@
 {{ $options := dict "targetPath" "theme.css" "enableSourceMap" true "precision" 6 }}
 {{ $css := resources.Get "sass/theme.scss" | resources.ExecuteAsTemplate "theme.scss" . | toCSS $options }}
+{{ $darkOptions := dict "targetPath" "dark-theme.css" "enableSourceMap" true "precision" 6 }}
+{{ $darkCss := resources.Get "sass/dark-theme.scss" | resources.ExecuteAsTemplate "dark-theme.scss" . | toCSS $darkOptions }}
 
 {{ if or (.Site.IsServer) (eq hugo.Environment "development") }}
-    <link rel="stylesheet" href="{{ $css.Permalink }}" media="screen">
+  <link rel="stylesheet" href="{{ $css.Permalink }}" media="screen">
+  <link rel="stylesheet" disabled id="dark-theme-css" href="{{ $darkCss.Permalink }}" media="screen">
 {{ else }}
-    {{ $css := $css | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="screen">
+  {{ $css := $css | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="screen">
+  {{ $darkCss := $darkCss | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" disabled id="dark-theme-css" href="{{ $darkCss.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="screen">
 {{ end }}
-
-{{ $dkoptions := dict "targetPath" "dk-theme.css" "enableSourceMap" true "precision" 6 }}
-{{ $dkTheme := resources.Get "sass/dk-theme.scss" | resources.ExecuteAsTemplate "dkTheme.scss" . | toCSS $dkoptions }}
-<link disabled id="darkTheme" rel="stylesheet" href="{{ $dkTheme.Permalink }}" media="screen">
 
 {{ if isset .Site.Params "css_modules" }}
     {{ range .Site.Params.css_modules }}

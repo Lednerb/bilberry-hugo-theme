@@ -1,35 +1,31 @@
-const dkToggle = document.getElementById("darkToggleLogo");
-const darkTheme = document.getElementById("darkTheme");
-const PCS = window.matchMedia("(prefers-color-scheme: dark)");
+const lightDarkToggle = document.getElementById("light-dark-toggle");
+const darkThemeCss = document.getElementById("dark-theme-css");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-dkToggle.addEventListener("click", () => {
-  if (dkToggle.className === "fa fa-sun") {
-    setTheme("dark");
-  }
-  else {
-    setTheme("light");
+lightDarkToggle.addEventListener("click", () => {
+  if (lightDarkToggle.className === "fa fa-sun") {
+    setThemeMode("dark");
+  } else {
+    setThemeMode("light");
   }
 });
 
-function setTheme(mode) {
+function setThemeMode(mode) {
   if (mode === "dark") {
-    darkTheme.disabled = false;
-    dkToggle.className = "fa fa-moon";
+    darkThemeCss.disabled = false;
+    lightDarkToggle.className = "fa fa-moon";
   } else {
-    darkTheme.disabled = true;
-    dkToggle.className = "fa fa-sun";
+    darkThemeCss.disabled = true;
+    lightDarkToggle.className = "fa fa-sun";
   }
 }
 
 const listener = (event) => {
   if (event.matches) {
-    setTheme("dark");
-  }
-  else {
-    setTheme("light");
+    setThemeMode("dark");
+  } else {
+    setThemeMode("light");
   }
 };
 
-// PCS.addEventListerner("change", listener);
-listener(PCS);
-
+listener(prefersDark);
