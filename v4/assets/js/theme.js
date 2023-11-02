@@ -95,36 +95,39 @@ $(document).ready(function () {
         $('html, body').animate({scrollTop:0}, '300');
     });
 
-  // Light dark theme mode switcher
-  const lightDarkToggle = document.getElementById("light-dark-toggle");
-  const darkThemeCss = document.getElementById("dark-theme-css");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+    // Light dark theme mode switcher
+    const lightDarkToggle = document.getElementById("light-dark-toggle");
+    const lightThemeCss = document.getElementById("light-theme-css");
+    const darkThemeCss = document.getElementById("dark-theme-css");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 
-  lightDarkToggle.addEventListener("click", () => {
-    if (lightDarkToggle.className === "fa fa-sun") {
-      setThemeMode("dark");
-    } else {
-      setThemeMode("light");
+    lightDarkToggle.addEventListener("click", () => {
+        if (lightDarkToggle.className === "fa fa-sun") {
+            setThemeMode("light");
+        } else {
+            setThemeMode("dark");
+        }
+    });
+
+    function setThemeMode(mode) {
+        if (mode === "dark") {
+            lightThemeCss.disabled = true;
+            darkThemeCss.disabled = false;
+            lightDarkToggle.className = "fa fa-sun";
+        } else {
+            lightThemeCss.disabled = false;
+            darkThemeCss.disabled = true;
+            lightDarkToggle.className = "fa fa-moon";
+        }
     }
-  });
 
-  function setThemeMode(mode) {
-    if (mode === "dark") {
-      darkThemeCss.disabled = false;
-      lightDarkToggle.className = "fa fa-moon";
-    } else {
-      darkThemeCss.disabled = true;
-      lightDarkToggle.className = "fa fa-sun";
-    }
-  }
+    const themeModeListener = (event) => {
+        if (event.matches) {
+            setThemeMode("dark");
+        } else {
+            setThemeMode("light");
+        }
+    };
 
-  const listener = (event) => {
-    if (event.matches) {
-      setThemeMode("dark");
-    } else {
-      setThemeMode("light");
-    }
-  };
-
-  listener(prefersDark);
+    themeModeListener(prefersDark);
 });

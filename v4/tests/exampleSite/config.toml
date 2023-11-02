@@ -25,6 +25,7 @@ disqusShortname = "bilberry-hugo-theme"
   # theme.css and theme.js, respectively.
   css_modules = []
   js_modules = []
+
   enableLightDarkThemeMode = true
 
   # Description and meta data for the search engines

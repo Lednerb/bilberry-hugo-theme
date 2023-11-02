@@ -4,17 +4,18 @@
 {{ $darkCss := resources.Get "sass/dark-theme.scss" | resources.ExecuteAsTemplate "dark-theme.scss" . | toCSS $darkOptions }}
 
 {{ if or (.Site.IsServer) (eq hugo.Environment "development") }}
-    <link rel="stylesheet" href="{{ $css.Permalink }}" media="screen">
+    <link id="light-theme-css" rel="stylesheet" href="{{ $css.Permalink }}" media="screen">
     <link disabled id="dark-theme-css" rel="stylesheet" href="{{ $darkCss.Permalink }}" media="screen">
 {{ else }}
     {{ $css := $css | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="screen">
+    <link id="light-theme-css" rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="screen">
+
     {{ $darkCss := $darkCss | resources.Minify | resources.Fingerprint }}
-    <link disabled id="dark-theme-css" rel="stylesheet" href="{{ $darkCss.Permalink }}" integrity="{{ $darkCss.Data.Integrity }}" media="screen">
+    <link disabled id="dark-theme-css" rel="alterante stylesheet" href="{{ $darkCss.Permalink }}" integrity="{{ $darkCss.Data.Integrity }}" media="screen">
 {{ end }}
 
 {{ if isset .Site.Params "css_modules" }}
     {{ range .Site.Params.css_modules }}
-        <link rel="stylesheet" href="{{ . | absURL }}">
+    <link rel="stylesheet" href="{{ . | absURL }}">
     {{ end }}
 {{ end }}

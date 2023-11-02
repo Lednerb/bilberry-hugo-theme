@@ -308,7 +308,7 @@ Please note that the top navigation bar is minimized by default on mobile device
 Switching between light and dark theme mode can be enabled by setting the `enableLightDarkMode` parameter to `true`:
 ```toml
 [params]
-    darkmode = false
+  enableLightDarkThemeMode = true
 ```
 
 ### Algolia Search
