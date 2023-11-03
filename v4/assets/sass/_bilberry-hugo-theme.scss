@@ -135,6 +135,15 @@
             list-style: none;
         }
     }
+    .flex-control-paging li a {
+        background: rgba($text-color,0.5);
+    }
+    .flex-control-paging li a:hover {
+        background: rgba($text-color,0.7);
+    }
+    .flex-control-paging li a.flex-active {
+        background: rgba($text-color,0.9);
+    }
 
     .fa-youtube-adblock-proof:before {
         content: "\F167";

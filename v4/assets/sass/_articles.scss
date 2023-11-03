@@ -341,7 +341,7 @@ article {
             padding: 5.5%;
             margin: 0;
             text-align: center;
-            color: #fff;
+            color: $header-text-color;
             background: none;
             font-size: 1.2em;
             position: relative;
@@ -442,7 +442,7 @@ article {
         @include featuredImage();
 
         a {
-            color: #fff;
+            color: $header-text-color;
             text-decoration: none;
             display: flex;
             flex-direction: column;
