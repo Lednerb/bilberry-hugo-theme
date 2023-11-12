@@ -119,12 +119,17 @@ nav {
                     font-size: 0.75em;
                     text-align: right;
                     padding: 0.5em 1em;
-                    background-color: $page-background-color;
+                    border-radius: 0.5em;
+                    background-color: rgba($page-background-color,0.6);
 
                     img {
                         width: 3.5em;
                         position: relative;
-                        top: 0.1em;
+                        // top: 0.1em;
+                        display: inline-block;
+                        vertical-align: middle;
+                        padding: 0.5em;
+                        background: rgba(#fff,0.5);
                     }
                 }
             }
@@ -138,7 +143,7 @@ nav {
 
                     &:hover,
                     &:focus {
-                        background-color: darken($algolia-search-box-background-color, 2);
+                        background-color: darken($algolia-search-box-background-color, 5);
                     }
 
                     .title {
@@ -197,8 +202,8 @@ nav {
         }
 
         .aa-dropdown-menu {
-            background-color: #fff;
-            border: 1px solid rgba($algolia-border-color, 0.6);
+            background-color: $algolia-search-box-background-color;
+            border: 1px solid rgba($algolia-border-color, 0.2);
             min-width: 300px;
             margin-top: 10px;
             box-sizing: border-box;
@@ -210,12 +215,12 @@ nav {
         }
 
         .aa-suggestion + .aa-suggestion {
-            border-top: 1px solid rgba($algolia-border-color, 0.6);
+            border-top: 1px solid rgba($algolia-border-color, 0.2);
         }
 
         .aa-suggestions-category {
-            border-bottom: 1px solid rgba($algolia-border-color, 0.6);
-            border-top: 1px solid rgba($algolia-border-color, 0.6);
+            border-bottom: 1px solid rgba($algolia-border-color, 0.2);
+            border-top: 1px solid rgba($algolia-border-color, 0.2);
             padding: 6px 12px;
         }
     }
