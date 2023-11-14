@@ -11,7 +11,7 @@ article {
         content: "";
         display: block;
         border: 11px solid transparent;
-        border-right-color: $con-line-colorB;
+        border-right-color: $connection-dot-color;
         position: absolute;
         top: 49px;
         left: -22px;
@@ -21,7 +21,7 @@ article {
         content: "";
         display: block;
         border: 10px solid transparent;
-        border-right-color: #con-line-colorA;
+        border-right-color: $connection-line-color;
         position: absolute;
         top: 50px;
         left: -20px;

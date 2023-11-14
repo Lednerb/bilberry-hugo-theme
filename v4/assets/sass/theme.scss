@@ -28,8 +28,8 @@ $logo-color: {{ .Param "logoColor" | default "darken($page-background-color, 1)"
 $bubble-color: {{ .Param "bubbleColor" | default "#fff" }};
 $bubble-background-color: {{ .Param "bubbleBackgroundColor" | default "#ccc" }};
 $bubble-hover-color: {{ .Param "bubbleHoverColor" | default "$highlight-color" }};
-$con-line-colorA: {{ .Param "conLineColorA" | default "rgba(#000,0.05)" }};
-$con-line-colorB: {{ .Param "conLineColorB" | default "#ddd" }};
+$connection-line-color: {{ .Param "connectionLineColor" | default "rgba(#000,0.05)" }};
+$connection-dot-color: {{ .Param "connectionDotColor" | default "#ddd" }};
 
 $article-background-color: {{ .Param "articleBackgroundColor" | default "#fff" }};
 $meta-text-color: {{ .Param "metaTextColor" | default "#999" }};
