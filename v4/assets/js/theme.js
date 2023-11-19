@@ -97,27 +97,28 @@ $(document).ready(function () {
 
     // Light dark theme mode switcher
     const lightDarkToggle = document.getElementById("light-dark-toggle");
-    const lightThemeCss = document.getElementById("light-theme-css");
-    const darkThemeCss = document.getElementById("dark-theme-css");
-    const darkStore = localStorage.getItem("dark-store");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+        if (lightDarkToggle) {
+            const lightThemeCss = document.getElementById("light-theme-css");
+            const darkThemeCss = document.getElementById("dark-theme-css");
+            const darkStore = localStorage.getItem("dark-store");
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+            
+            if (darkStore === "dark") {
+                setThemeMode("dark");
+            } else if (darkStore === "light") {
+                setThemeMode("light");
+            } else if (prefersDark.matches) {
+                setThemeMode("dark");
+            }
 
-    // Detect preference in last visit
-    if (darkStore === "dark") {
-        setThemeMode("dark");
-    } else if (darkStore === "light") {
-        setThemeMode("light");
-    } else if (prefersDark.matches) {
-        setThemeMode("dark");
-    }
-
-    lightDarkToggle.addEventListener("click", () => {
-        if (lightDarkToggle.className === "fa fa-moon") {
-            setThemeMode("light");
-        } else {
-            setThemeMode("dark");
-        }
-    });
+            lightDarkToggle.addEventListener("click", () => {
+                if (lightDarkToggle.className === "fa fa-moon") {
+                    setThemeMode("light");
+                } else {
+                    setThemeMode("dark");
+                }
+            });
+        };
 
     function setThemeMode(mode) {
         if (mode === "dark") {

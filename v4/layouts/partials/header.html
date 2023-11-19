@@ -3,8 +3,8 @@
 {{ else }}
     <header>
 {{ end }}
+{{ if .Site.Params.enableLightDarkMode | default false }}
     <script>
-    const lightDarkToggle = document.getElementById("light-dark-toggle");
     const lightThemeCss = document.getElementById("light-theme-css");
     const darkThemeCss = document.getElementById("dark-theme-css");
     const darkStore = localStorage.getItem("dark-store");
@@ -22,16 +22,13 @@
         if (mode === "dark") {
             lightThemeCss.disabled = true;
             darkThemeCss.disabled = false;
-            lightDarkToggle.className = "fa fa-moon";
-            localStorage.setItem("dark-store", mode);
         } else {
             lightThemeCss.disabled = false;
             darkThemeCss.disabled = true;
-            lightDarkToggle.className = "fa fa-sun";
-            localStorage.setItem("dark-store", mode);
         }
     }
     </script>
+{{ end }}
     <a id="back-to-top-button">
         <i class="fas fa-angle-up"></i>
     </a>
@@ -66,7 +63,7 @@
             {{ end }}
         </div>
         <div class="selectors">
-          {{ if .Site.Params.enableLightDarkMode | default 1 }}
+          {{ if .Site.Params.enableLightDarkMode | default false }}
           <div class="light-dark-mode">
             <button id="light-dark-toggle" class="fa-solid fa-sun"></button>
           </div>
