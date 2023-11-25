@@ -3,32 +3,6 @@
 {{ else }}
     <header>
 {{ end }}
-{{ if .Site.Params.enableLightDarkMode | default false }}
-    <script>
-    const lightThemeCss = document.getElementById("light-theme-css");
-    const darkThemeCss = document.getElementById("dark-theme-css");
-    const darkStore = localStorage.getItem("dark-store");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-
-    if (darkStore === "dark") {
-        setThemeMode("dark");
-    } else if (darkStore === "light") {
-        setThemeMode("light");
-    } else if (prefersDark.matches) {
-        setThemeMode("dark");
-    }
-
-    function setThemeMode(mode) {
-        if (mode === "dark") {
-            lightThemeCss.disabled = true;
-            darkThemeCss.disabled = false;
-        } else {
-            lightThemeCss.disabled = false;
-            darkThemeCss.disabled = true;
-        }
-    }
-    </script>
-{{ end }}
     <a id="back-to-top-button">
         <i class="fas fa-angle-up"></i>
     </a>
