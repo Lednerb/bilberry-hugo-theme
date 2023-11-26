@@ -19,7 +19,6 @@
 {{ if .Site.Params.enableLightDarkMode | default false }}
     <script class="giscusThemeSwitcher">
         const lightDarkToggle = document.getElementById("light-dark-toggle");
-
         function handleGiscusMessage(event) {
             if (event.origin !== 'https://giscus.app') {
                 return;
@@ -27,13 +26,13 @@
             if (!(typeof event.data === 'object' && event.data.giscus)) {
                 return;
             }
-            if (lightDarkToggle.className === "fa fa-moon") {
+            if (document.documentElement.classList.contains("dark-mode")) {
                 setGiscusTheme("{{ .Site.Params.giscusDarkTheme | default "dark" }}");
             }
             window.removeEventListener("message", handleGiscusMessage);
         };
 
-        function setGiscusTheme(mode){
+        function setGiscusTheme(giscusTheme){
             function sendGiscusMsg(message) {
                 const iframe = document.querySelector("iframe.giscus-frame");
                 if (!iframe) return;
@@ -43,7 +42,7 @@
             }
             sendGiscusMsg({
                 setConfig: {
-                    theme: mode,
+                    theme: giscusTheme,
                 },
             });
         };

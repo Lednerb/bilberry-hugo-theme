@@ -85,6 +85,10 @@
     <link rel="canonical" href="{{ .Permalink }}">
     {{ end }}
 
+    {{ if .Site.Params.enableLightDarkMode | default false }}
+        {{ partial "check-theme-prefer.html" . }}
+    {{ end }}
+
     {{ partial "css.html" . }}
 
     {{ partial "twitter-card.html" . }}

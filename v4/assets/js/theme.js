@@ -95,42 +95,27 @@ $(document).ready(function () {
         $('html, body').animate({scrollTop:0}, '300');
     });
 
-    // Light dark theme mode switcher
+// Light dark theme mode switcher
     const lightDarkToggle = document.getElementById("light-dark-toggle");
-        if (lightDarkToggle) {
-            const lightThemeCss = document.getElementById("light-theme-css");
-            const darkThemeCss = document.getElementById("dark-theme-css");
-            const darkStore = localStorage.getItem("dark-store");
-            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-            
-            if (darkStore === "dark") {
-                setThemeMode("dark");
-            } else if (darkStore === "light") {
-                setThemeMode("light");
-            } else if (prefersDark.matches) {
-                setThemeMode("dark");
-            }
+    const docEle = document.documentElement;
+    if (lightDarkToggle) {
+        updateToggle();
+        switchTheme();
+    };
 
-            lightDarkToggle.addEventListener("click", () => {
-                if (lightDarkToggle.className === "fa fa-moon") {
-                    setThemeMode("light");
-                } else {
-                    setThemeMode("dark");
-                }
-            });
-        };
+    function switchTheme() {
+        lightDarkToggle.addEventListener("click", () => {
+            docEle.classList.toggle("dark-mode");
+            localStorage.setItem("dark-store", docEle.classList.contains("dark-mode"));
+            updateToggle();
+        });
+    }
 
-    function setThemeMode(mode) {
-        if (mode === "dark") {
-            lightThemeCss.disabled = true;
-            darkThemeCss.disabled = false;
+    function updateToggle() {
+        if (docEle.classList.contains("dark-mode")) {
             lightDarkToggle.className = "fa fa-moon";
-            localStorage.setItem("dark-store", mode);
         } else {
-            lightThemeCss.disabled = false;
-            darkThemeCss.disabled = true;
             lightDarkToggle.className = "fa fa-sun";
-            localStorage.setItem("dark-store", mode);
         }
     }
 });
