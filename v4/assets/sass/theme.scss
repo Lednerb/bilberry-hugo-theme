@@ -95,7 +95,7 @@ $logo-color: {{ .Param "logoColor" | default "darken(#f1f1f1, 60)" }};
 $bubble-color: {{ .Param "bubbleColor" | default "$logo-color" }};
 $bubble-background-color: {{ .Param "bubbleBackgroundColor" | default "#373737" }};
 $bubble-hover-color: {{ .Param "bubbleHoverColor" | default "$highlight-color" }};
-$connection-line-color: {{ .Param "connectionLineColor" | default "rgba(invert(#000),0.05)" }};
+$connection-line-color: {{ .Param "connectionLineColor" | default "#444" }};
 $connection-dot-color: {{ .Param "connectionDotColor" | default "#444" }};
 
 $article-background-color: {{ .Param "articleBackgroundColor" | default "#222" }};
