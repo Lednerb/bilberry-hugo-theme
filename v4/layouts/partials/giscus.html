@@ -16,7 +16,7 @@
         crossorigin="{{ .Site.Params.giscusCrossOrigin }}"
         async>
     </script>
-{{ if .Site.Params.enableLightDarkMode | default false }}
+{{ if .Site.Params.enableLightDarkTheme | default false }}
     <script class="giscusThemeSwitcher">
         const lightDarkToggle = document.getElementById("light-dark-toggle");
         function handleGiscusMessage(event) {

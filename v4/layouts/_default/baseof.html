@@ -85,7 +85,7 @@
     <link rel="canonical" href="{{ .Permalink }}">
     {{ end }}
 
-    {{ if .Site.Params.enableLightDarkMode | default false }}
+    {{ if .Site.Params.enableLightDarkTheme | default false }}
         {{ partial "check-theme-prefer.html" . }}
     {{ end }}
 
