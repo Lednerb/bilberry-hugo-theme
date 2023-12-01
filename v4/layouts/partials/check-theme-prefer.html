@@ -1,6 +1,4 @@
-{{ $jsToConcat := resources.Get "js/check-theme-prefer.js" }}
-{{ $checkThemePrefer := slice $jsToConcat | resources.Concat "check-theme-prefer.js" }}
-
+{{ $checkThemePrefer := resources.Get "js/check-theme-prefer.js" }}
 {{ if or (.Site.IsServer) (eq hugo.Environment "development") }}
     <script src="{{ $checkThemePrefer.Permalink }}"></script>
 {{ else }}

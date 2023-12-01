@@ -1,6 +1,5 @@
     const darkStore = localStorage.getItem("dark-store");
     const docEle = document.documentElement;
-    console.log(darkStore);
         const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
         if (darkStore === "true") {
             docEle.classList.add("dark-mode");
