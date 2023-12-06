@@ -58,6 +58,7 @@ Please use the following guidelines if you want to start a discussion:
     - [Single Page](#single-page)
     - [Page Bundle](#page-bundle)
   - [Top Navigation Bar](#top-navigation-bar)
+  - [Light/Dark Theme Mode](#lightdark-theme-mode)
   - [Algolia Search](#algolia-search)
     - [Initial Setup](#initial-setup)
     - [Update Algolia Index](#update-algolia-index)
