@@ -10,7 +10,7 @@
         bottom: 50px;
         width: 2px;
         height: 100%;
-        background: rgba(0, 0, 0, 0.05);
+        background: $connection-line-color;
         z-index: 1;
     }
 
@@ -22,7 +22,7 @@
         bottom: 32px;
         height: 20px;
         width: 20px;
-        background: #ddd;
+        background: $connection-dot-color;
         border-radius: 999px;
         z-index: 10;
     }

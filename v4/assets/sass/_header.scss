@@ -84,20 +84,41 @@ header {
         }
     }
 
-    .languages {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        background-color: $special-color;
-        padding: 0.5em 1em;
-        display: flex;
-        border-top-right-radius: 4px;
-        border-top-left-radius: 4px;
+    .selectors {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: flex;
+        .light-dark-mode {
+          background-color: $special-color;
+          margin-right: 1em;
+          display: flex;
+          border-top-right-radius: 4px;
+          border-top-left-radius: 4px;
+              button {
+                  margin-top: 0;
+                  margin-bottom: 0;
+                  padding: 0.375em 0.75em;
+                  font-size: 1.125em;
+                  min-width: 2em;
+                  border: transparent;
+                  color: $header-text-color;
+                  &:hover {
+                      color: $highlight-color;
+                  }
+              }
+        }
+        .languages {
+          background-color: $special-color;
+          padding: 0.5em 1em;
+          display: flex;
+          border-top-right-radius: 4px;
+          border-top-left-radius: 4px;
 
-        a {
+          a {
             text-transform: uppercase;
             font-size: 0.8em;
-            color: $page-background-color;
+            color: $header-text-color;
             letter-spacing: 0.1em;
 
             &.active {
@@ -108,8 +129,12 @@ header {
                 content: " | ";
                 color: inherit;
             }
+            &:hover {
+                color: $highlight-color;
+            }
+          }
         }
-    }
+      }
 
     .toggler {
         position: absolute;
@@ -124,6 +149,9 @@ header {
 
         &.permanentTopNav {
             display: none;
+        }
+        &:hover {
+            color: $highlight-color;
         }
     }
 }

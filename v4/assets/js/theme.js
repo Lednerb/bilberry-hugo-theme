@@ -95,4 +95,27 @@ $(document).ready(function () {
         $('html, body').animate({scrollTop:0}, '300');
     });
 
+// Light dark theme mode switcher
+    const lightDarkToggle = document.getElementById("light-dark-toggle");
+    const docEle = document.documentElement;
+    if (lightDarkToggle) {
+        updateToggle();
+        switchTheme();
+    };
+
+    function switchTheme() {
+        lightDarkToggle.addEventListener("click", () => {
+            docEle.classList.toggle("dark-mode");
+            localStorage.setItem("dark-store", docEle.classList.contains("dark-mode"));
+            updateToggle();
+        });
+    }
+
+    function updateToggle() {
+        if (docEle.classList.contains("dark-mode")) {
+            lightDarkToggle.className = "fa fa-moon";
+        } else {
+            lightDarkToggle.className = "fa fa-sun";
+        }
+    }
 });

@@ -1,0 +1,7 @@
+{{ $checkThemePrefer := resources.Get "js/check-theme-prefer.js" }}
+{{ if or (.Site.IsServer) (eq hugo.Environment "development") }}
+    <script src="{{ $checkThemePrefer.Permalink }}"></script>
+{{ else }}
+    {{ $checkThemePrefer := $checkThemePrefer | resources.Minify | resources.Fingerprint }}
+    <script src="{{ $checkThemePrefer.Permalink }}" integrity="{{ $checkThemePrefer.Data.Integrity }}"></script>
+{{ end }}

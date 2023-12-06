@@ -11,7 +11,7 @@ article {
         content: "";
         display: block;
         border: 11px solid transparent;
-        border-right-color: #ddd;
+        border-right-color: $connection-dot-color;
         position: absolute;
         top: 49px;
         left: -22px;
@@ -21,7 +21,7 @@ article {
         content: "";
         display: block;
         border: 10px solid transparent;
-        border-right-color: #fff;
+        border-right-color: $connection-line-color;
         position: absolute;
         top: 50px;
         left: -20px;
@@ -151,7 +151,7 @@ article {
                 margin-top: 1.25em;
 
                 li {
-                    border-bottom: 1px solid #eee;
+                    border-bottom: 1px solid $footer-border-color;
                     padding-right: 10px;
                 }
 
@@ -170,19 +170,23 @@ article {
 
                     &:hover {
                         left: 10px;
-                        color: $base-color;
+                        color: $text-color;
                         text-decoration: none;
                     }
                 }
             }
         }
+        code {
+            background-color: rgba(150,150,160,0.2);
+            border: none;
+        }
 
         blockquote {
-            background-color: #f6f6f6;
+            background-color: $blockquote-background-color;
             font-family: $headline-font;
             margin: 1.5em 0;
             padding: 2em;
-            border-left: 0.5em solid #ededed;
+            border-left: 0.5em solid rgba(invert($blockquote-background-color),0.2);
             font-size: 1.05em;
 
             cite {
@@ -226,7 +230,7 @@ article {
 
             li {
                 display: inherit;
-                color: $text-color;
+                color: $highlight-color;
 
                 a {
                     color: inherit;
@@ -234,7 +238,7 @@ article {
                     padding: 0;
 
                     &:hover {
-                        color: $highlight-color;
+                        color: $text-color;
                         background-color: transparent;
                     }
                 }
@@ -341,7 +345,7 @@ article {
             padding: 5.5%;
             margin: 0;
             text-align: center;
-            color: #fff;
+            color: $header-text-color;
             background: none;
             font-size: 1.2em;
             position: relative;
@@ -442,7 +446,7 @@ article {
         @include featuredImage();
 
         a {
-            color: #fff;
+            color: $header-text-color;
             text-decoration: none;
             display: flex;
             flex-direction: column;
@@ -478,4 +482,5 @@ article {
 #comments-container {
     margin-left: 100px;
     padding-bottom: 1.2em;
+    color: #fff;
 }

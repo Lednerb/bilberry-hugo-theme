@@ -16,5 +16,47 @@
         crossorigin="{{ .Site.Params.giscusCrossOrigin }}"
         async>
     </script>
+{{ if .Site.Params.enableLightDarkTheme | default false }}
+    <script class="giscusThemeSwitcher">
+        const lightDarkToggle = document.getElementById("light-dark-toggle");
+        function handleGiscusMessage(event) {
+            if (event.origin !== 'https://giscus.app') {
+                return;
+            }
+            if (!(typeof event.data === 'object' && event.data.giscus)) {
+                return;
+            }
+            if (document.documentElement.classList.contains("dark-mode")) {
+                setGiscusTheme("{{ .Site.Params.giscusDarkTheme | default "dark" }}");
+            }
+            window.removeEventListener("message", handleGiscusMessage);
+        };
+
+        function setGiscusTheme(giscusTheme){
+            function sendGiscusMsg(message) {
+                const iframe = document.querySelector("iframe.giscus-frame");
+                if (!iframe) return;
+                iframe.contentWindow.postMessage(
+                    { giscus: message }, "{{ .Site.Params.giscusJsUrl | strings.TrimSuffix "/client.js" }}"
+                );
+            }
+            sendGiscusMsg({
+                setConfig: {
+                    theme: giscusTheme,
+                },
+            });
+        };
+
+        window.addEventListener("message", handleGiscusMessage);
+
+        lightDarkToggle.addEventListener("click", () => {
+            if (lightDarkToggle.className === "fa fa-moon") {
+                setGiscusTheme("{{ .Site.Params.giscusTheme }}");
+            } else {
+                setGiscusTheme("{{ .Site.Params.giscusDarkTheme | default "dark" }}");
+            }
+        });
+    </script>
+{{ end }}
     <div id="giscus"></div>
 {{ end }}

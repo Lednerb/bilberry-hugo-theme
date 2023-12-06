@@ -24,6 +24,15 @@ footer {
             text-transform: uppercase;
             color: $footer-headline-color;
             padding-bottom: 0.75em;
+            display: block;
+        }
+
+        a {
+            strong{
+                &:hover {
+                    color: $highlight-color;
+                }
+            }
         }
 
         ul {
@@ -31,7 +40,7 @@ footer {
             margin-top: 1.25em;
 
             li {
-                border-bottom: 1px solid #eee;
+                border-bottom: 1px solid $footer-border-color;
                 padding-right: 10px;
             }
 
@@ -45,7 +54,7 @@ footer {
 
                 &:hover {
                     left: 10px;
-                    color: $base-color;
+                    color: $text-color;
                 }
             }
         }
@@ -112,10 +121,6 @@ footer {
             .archive {
                 width: 100%;
                 margin-left: 0;
-            }
-
-            strong {
-                display: block;
             }
         }
     }
