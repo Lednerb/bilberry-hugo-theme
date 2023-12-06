@@ -308,7 +308,7 @@ this will only work when the `permanentTopNav` is also set to `true`.
 Please note that the top navigation bar is minimized by default on mobile devices.
 
 ### Light/Dark Theme Mode
-Switching between light and dark theme mode can be enabled by setting the `enableLightDarkMode` parameter to `true`:
+Switching between light and dark theme mode can be enabled by setting the `enableLightDarkTheme` parameter to `true`:
 ```toml
 [params]
   enableLightDarkTheme = true
