@@ -3,5 +3,5 @@
     <script src="{{ $checkThemePrefer.Permalink }}"></script>
 {{ else }}
     {{ $checkThemePrefer := $checkThemePrefer | resources.Minify | resources.Fingerprint }}
-    <script src="{{ $checkThemePrefer.Permalink }}" integrity="{{ $checkThemePrefer.Data.Integrity }}"></script>
+    <script src="{{ $checkThemePrefer.Permalink }}" integrity="{{ $checkThemePrefer.Data.Integrity }}" crossorigin="anonymous"></script>
 {{ end }}
