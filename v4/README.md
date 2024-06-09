@@ -145,7 +145,7 @@ hugo new site my-new-blog
 rm my-new-blog/archetypes/default.md
 ```
 
-- Copy the example site content, including the `config.toml` file:
+- Copy the example site content, including the `hugo.toml` file:
 
 ```shell
 cp -r bilberry-hugo-theme/v4/exampleSite/* my-new-blog
@@ -182,7 +182,7 @@ the [Hugo documentation](https://gohugo.io/hugo-modules/use-modules/).
 Use this option if you want to pull in the theme files as a Git submodule from the main Bilberry Hugo theme repository.
 This option also makes it easy to keep the theme up to date in your site.
 
-- In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Options 2 and 3**, and
+- In the `my-new-blog/hugo.toml` file, uncomment the `theme` property for **Options 2 and 3**, and
   comment out the `theme` property for **Option 1**:
 
 ```toml
@@ -203,7 +203,7 @@ $ git submodule add https://github.com/Lednerb/bilberry-hugo-theme.git themes/bi
 
 Use this option if you want to customize and maintain your own copy of the theme directly.
 
-- In the `my-new-blog/config.toml` file, uncomment the `theme` property for **Options 2 and 3**, and
+- In the `my-new-blog/hugo.toml` file, uncomment the `theme` property for **Options 2 and 3**, and
   comment out the `theme` property for **Option 1**:
 
 ```toml
@@ -225,11 +225,11 @@ Renaming this folder will break your site.
 
 ### Configuration
 
-To customize your website according to your needs, edit the `config.toml` file in the site's root
+To customize your website according to your needs, edit the `hugo.toml` file in the site's root
 directory by adjusting the settings. All parameters that need to be configured are commented out or
 disabled.
 
-The Algolia Search is enabled in the `config.toml` file that comes with the example site; therefore,
+The Algolia Search is enabled in the `hugo.toml` file that comes with the example site; therefore,
 if you don't plan to use it, disable it by setting the `algolia_search` property to `false`.
 
 ### Webserver
@@ -300,7 +300,7 @@ The `link` post type always links to an external site and can be used with or wi
 ### Top Navigation Bar
 
 If you want to permanently display the top navigation bar with the search text field and `page` items, set
-the `permanentTopNav` parameter to `true` in the `config.toml` file.
+the `permanentTopNav` parameter to `true` in the `hugo.toml` file.
 
 If you want to display the top navigation bar when scrolling down the page, set the `stickyNav` parameter to `true`. But
 this will only work when the `permanentTopNav` is also set to `true`.
@@ -328,7 +328,7 @@ To enable and configure search functionality for your site, follow these steps:
 2. Add a `New Application`. You can choose the `COMMUNITY` plan.
 3. Switch over to `Indices` and create a new index.
 4. Switch over to `API Keys` and copy your `Application ID`, `Search-Only API Key`, and chosen `Index name` to
-   your `config.toml` file.
+   your `hugo.toml` file.
 5. Make sure that the `algolia_search` parameter is set to  `true`.
 6. Follow the instructions in the section [Update Algolia Index](#update-algolia-index) and proceed to the next step.
 7. To complete the initial setup, go to the tab `Configuration` of your newly created indices, select the `Facets` in
@@ -398,7 +398,7 @@ original_url: "https://example.org/path/to/content"
 
 ### Estimated Reading Time
 
-To show an article's estimated reading time, set the `showReadingTime` parameter to `true` in the `config.toml` file.
+To show an article's estimated reading time, set the `showReadingTime` parameter to `true` in the `hugo.toml` file.
 You can override the estimated reading time by setting the article's `readingTime` front matter variable to a value you
 want. If you set this variable to `0`, the reading time will not be shown.
 
@@ -465,7 +465,7 @@ If the article's markdown contains appropriate headings, Hugo will generate a ta
 article.
 
 By default, a TOC is generated if the content's word count is greater than **400**.
-The `tocMinWordCount` parameter defines this value in the `config.toml` configuration file.
+The `tocMinWordCount` parameter defines this value in the `hugo.toml` configuration file.
 
 The headings that are taken into account for a TOC are from _H2_ (##) to _H5_ (#####) inclusive.
 Also, if you want to display a TOC at a specific point in your article, set the `toc` front matter variable to `false`,
@@ -540,7 +540,7 @@ content
 
 Bilberry theme includes built-in automatic cropping and resizing only for **featured** and **gallery**
  images, activated by default. However, if you want to disable it, set the `resizeImages`
-parameter to `false` in the `config.toml` file. Also, this feature can be disabled at the post level
+parameter to `false` in the `hugo.toml` file. Also, this feature can be disabled at the post level
 by setting the `resizeImages` front matter variable to `false`.
 
 For a featured image to be cropped and resized, it should be named `featuredImage.*` and placed
@@ -684,18 +684,18 @@ The second option is to use the `audio` shortcode within markdown content in a p
 
 Bilberry theme comes with built-in support for both v3 and v4
 of [Google Analytics](https://analytics.google.com/analytics/web/).
-You should set the value of the `googleAnalytics` property in the `config.toml` file to enable it.
+You should set the value of the `googleAnalytics` property in the `hugo.toml` file to enable it.
 
 Such value for Universal Analytics v3 is prefixed with the `UA` letters.
 So, suppose you migrate your existing website to the Bilberry theme, and your website is already tracked in Universal
 Analytics, given that the corresponding property was created before October 14, 2020.
-In that case, you should continue using the v3 value in the `config.toml` file.
+In that case, you should continue using the v3 value in the `hugo.toml` file.
 However given that Universal Analytics will no longer process new data in standard properties beginning July 1, 2023, you
 will have to create a Google Analytics v4 property linked to your v3 property.
 
 If you created your property after October 14, 2020, you're likely using a Google Analytics v4 property already, and the
 value for such property is prefixed with the `G` letter.
-In that case, you should use the v4 value in the `config.toml` file.
+In that case, you should use the v4 value in the `hugo.toml` file.
 
 ### Comments
 
@@ -705,7 +705,7 @@ To allow readers to comment under your articles, you can use either [Commento](h
 **Note to developers/contributors**: if you want to submit a new commenting engine for integration with the Bilberry theme, it must meet the following criteria:
 1. The engine should be offered as a SAAS, i.e., you only need to create an account and configure the necessary settings on the engine's website.
 2. If the engine is offered as a SAAS, it must have a free tier plan.
-3. All the configuration steps needed to integrate a third-party commenting service must occur only in the `config.toml` file and not within additional configuration in the partial files or any other.
+3. All the configuration steps needed to integrate a third-party commenting service must occur only in the `hugo.toml` file and not within additional configuration in the partial files or any other.
 
 
 #### Commento
@@ -716,7 +716,7 @@ which is not free of cost.
 In case you want to use Self-hosting Commento, follow
 these [instructions](https://docs.commento.io/installation/self-hosting/).
 
-Then uncomment the `commentoJsURL` parameter in the `config.toml` file:
+Then uncomment the `commentoJsURL` parameter in the `hugo.toml` file:
 
 ```toml
 #[...]
@@ -730,7 +730,7 @@ Then uncomment the `commentoJsURL` parameter in the `config.toml` file:
 #### Disqus
 
 To allow readers to leave comments under your articles, sign up for free on [Disqus](https://disqus.com) website.
-Then create a new site and set the `disqusShortname` parameter to your site's short name in the `config.toml` file:
+Then create a new site and set the `disqusShortname` parameter to your site's short name in the `hugo.toml` file:
 
 ```toml
 #[...]
@@ -748,7 +748,7 @@ You can manage and moderate the comments either on your website or using the Dis
 Follow instructions on [Giscus](https://giscus.app/) website.
 Once you complete the prerequisites for your GitHub repository and select a discussion category, values
 for `giscusRepositoryId` and `giscusCategoryId` will be automatically generated.
-Then, in the `config.toml` file, set the `giscus` parameter to `true` and the properties mentioned above, respectively:
+Then, in the `hugo.toml` file, set the `giscus` parameter to `true` and the properties mentioned above, respectively:
 
 ```toml
 #[...]
@@ -775,7 +775,7 @@ Then, in the `config.toml` file, set the `giscus` parameter to `true` and the pr
 
 Follow instructions on [Utterances](https://utteranc.es/) website.
 Once you complete the prerequisites for your GitHub repository, set the `utterances` parameter to `true` in
-the `config.toml` file:
+the `hugo.toml` file:
 
 ```toml
 #[...]
@@ -817,7 +817,7 @@ Bilberry theme is optimized to look good on all devices, namely desktops, tablet
 ### MathJAX Markup
 
 To enable the [MathJAX](https://www.mathjax.org) markup support, set the `enable_mathjax` parameter to `true` in
-the `config.toml` file.
+the `hugo.toml` file.
 
 ### Disabled JavaScript Support
 
@@ -839,7 +839,7 @@ reduce the bundle size by ~262 kB gzipped.
 
 ### Raw HTML
 
-If you want to include raw HTML in your markdown content, set the `unsafe` setting in the `config.toml` file to `true`:
+If you want to include raw HTML in your markdown content, set the `unsafe` setting in the `hugo.toml` file to `true`:
 
 ```toml
 [markup.goldmark]
@@ -914,7 +914,7 @@ You can customize your posts as follows:
 1. To exclude posts from your blog's index but still show up in categories, add `excludeFromIndex: true` to your post's
    front matter.
 
-2. To pin one or more posts to the top of the index page, uncomment the `pinnedPost` parameter in the `config.toml`
+2. To pin one or more posts to the top of the index page, uncomment the `pinnedPost` parameter in the `hugo.toml`
    file.
    Then set its value to the post's relative URL, for example, `/article/installing-bilberry-theme/`.
    When pinning multiple posts, the relative URL values should be separated by a comma.
@@ -935,7 +935,7 @@ built-in [Chrome](https://github.com/alecthomas/chroma) code highlighter. Highli
 be customized at the site level or per code block.
 
 To change the default configuration at the site level, adjust the properties in the `[markup.highlight]` section of
-the `config.toml` file. For example, you can change the default `monokai` style to the one from
+the `hugo.toml` file. For example, you can change the default `monokai` style to the one from
 the [Chroma Style Gallery](https://xyproto.github.io/splash/docs/all.html).
 
 Per the code block, the following parameters can be
@@ -955,7 +955,7 @@ Site layout and styling are implemented using SCSS along with [npm](https://www.
 the [`assets/sass/theme.scss`](assets/sass/theme.scss) file.
 
 For example, if you want to customize the `$base-color` variable, you should define the `baseColor` parameter in your
-site's `config.toml` file.
+site's `hugo.toml` file.
 
 ```sass
 $base-color: {{ .Param "baseColor" | default "#1d1f38" }};
@@ -969,7 +969,7 @@ $base-color: {{ .Param "baseColor" | default "#1d1f38" }};
 ### CSS and JS modules
 
 This theme supports hot-swappable CSS and JavaScript extensions, which can be specified using the `css_modules`
-and `js_modules` list parameters in your site's `config.toml` file. Modules can be specified either relative to the `static`
+and `js_modules` list parameters in your site's `hugo.toml` file. Modules can be specified either relative to the `static`
 directory (e.g., `exampleSite/static/custom.css`) or as a URL:
 
 ```toml
@@ -1003,7 +1003,7 @@ window.addEventListener('load', function () {
 })
 ```
 
-Then you only need to modify the `config.toml` file to load the local init script and the libraries.
+Then you only need to modify the `hugo.toml` file to load the local init script and the libraries.
 You can either download the files and put them in your site's `/static` directory or reference them directly using a
 CDN.
 Storing these files on your website reduces external dependencies, increases privacy, and allows you to develop your
