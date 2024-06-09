@@ -1,6 +1,6 @@
 ## v4 Migration Guide
 
-**IMPORTANT** The Hugo version was bumped to `v0.109.0 extended`. Therefore, you should upgrade Hugo in your local
+**IMPORTANT** The Hugo version was bumped to `v0.110.0 extended`. Therefore, you should upgrade Hugo in your local
 development environment and, if necessary, in the corresponding deployment configuration file.
 
 ### Theme Installation Options

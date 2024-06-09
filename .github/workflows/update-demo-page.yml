@@ -22,7 +22,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.109.0'
+          hugo-version: '0.110.0'
           extended: true
 
       - name: Run tests
@@ -37,7 +37,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.109.0'
+          hugo-version: '0.110.0'
           extended: true
 
       - name: Create new demo site
