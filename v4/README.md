@@ -155,8 +155,8 @@ cp -r bilberry-hugo-theme/v4/exampleSite/* my-new-blog
 
 #### Option 1 (recommended): Adding the Theme as a Hugo Module
 
-Use this option if you want to pull in the theme files as a Hugo module from the main Bilberry Hugo theme repository.
-This option makes it easy to keep the theme up to date in your site.
+Use this option if you want to pull in the theme files as a Hugo module from the main Bilberry Hugo
+theme repository. This option makes it easy to keep the theme up to date in your site.
 
 - Initialize your website as a Hugo module from the site's root:
 
@@ -182,15 +182,17 @@ the [Hugo documentation](https://gohugo.io/hugo-modules/use-modules/).
 Use this option if you want to pull in the theme files as a Git submodule from the main Bilberry Hugo theme repository.
 This option also makes it easy to keep the theme up to date in your site.
 
-- In the `my-new-blog/hugo.toml` file, uncomment the `theme` property for **Options 2 and 3**, and
-  comment out the `theme` property for **Option 1**:
+- In the `my-new-blog/hugo.toml` file, uncomment the `path` property for **Options 2 and 3**, and
+  comment out the `path` property for **Option 1**:
 
 ```toml
-# Option 1 (recommended): adding the theme as a hugo module
-# theme = "github.com/Lednerb/bilberry-hugo-theme/v4"
+[module]
+  [[module.imports]]
+    # Option 1 (recommended): adding the theme as a Hugo module
+    # path = "github.com/Lednerb/bilberry-hugo-theme/v4"
 
-# Options 2 and 3: cloning/copying the theme files
-theme = "bilberry-hugo-theme/v4"
+    # Options 2 and 3: cloning/copying the theme files
+    path = "bilberry-hugo-theme/v4"
 ```
 
 - Add the Bilberry Hugo theme as a Git submodule from the site's root:
@@ -203,15 +205,17 @@ $ git submodule add https://github.com/Lednerb/bilberry-hugo-theme.git themes/bi
 
 Use this option if you want to customize and maintain your own copy of the theme directly.
 
-- In the `my-new-blog/hugo.toml` file, uncomment the `theme` property for **Options 2 and 3**, and
-  comment out the `theme` property for **Option 1**:
+- In the `my-new-blog/hugo.toml` file, uncomment the `path` property for **Options 2 and 3**, and
+  comment out the `path` property for **Option 1**:
 
 ```toml
-# Option 1 (recommended): adding the theme as a hugo module
-# theme = "github.com/Lednerb/bilberry-hugo-theme/v4"
+[module]
+  [[module.imports]]
+    # Option 1 (recommended): adding the theme as a Hugo module
+    # path = "github.com/Lednerb/bilberry-hugo-theme/v4"
 
-# Options 2 and 3: cloning/copying the theme files
-theme = "bilberry-hugo-theme/v4"
+    # Options 2 and 3: cloning/copying the theme files
+    path = "bilberry-hugo-theme/v4"
 ```
 
 - Copy cloned (or unzipped) theme files in the previous step to the `my-new-blog/themes` directory:

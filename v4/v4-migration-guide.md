@@ -8,14 +8,17 @@ Rename the site's configuration file from `config.toml` to `hugo.toml`.
 
 ### Theme Installation Options
 
-Depending on your chosen theme installation option, update the theme property in the `hugo.toml` file as follows:
+Depending on your chosen theme installation option, replace the `theme` property with
+the `module.imports.path` property in the `hugo.toml` file as follows:
 
 ```toml
-# Option 1 (recommended): adding the theme as a Hugo module
-theme = "github.com/Lednerb/bilberry-hugo-theme/v4"
+[module]
+  [[module.imports]]
+    # Option 1 (recommended): adding the theme as a Hugo module
+    # path = "github.com/Lednerb/bilberry-hugo-theme/v4"
 
-# Options 2 and 3: cloning/copying the theme files
-theme = "bilberry-hugo-theme/v4"
+    # Options 2 and 3: cloning/copying the theme files
+    path = "bilberry-hugo-theme/v4"
 ```
 
 ### Top Navigation Bar
