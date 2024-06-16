@@ -17,7 +17,7 @@ block of `package.json` file.
   project's `v4` folder:
 
   ```bash
-  $ npm run update-dep 
+  $ npm run update-deps 
   ```
 
 * To add a new dependency, add it to the `devDependencies` bloc and execute the `npm run update-dep` command. Then,

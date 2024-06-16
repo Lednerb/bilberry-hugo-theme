@@ -161,15 +161,16 @@ disqusShortname = ""
     creditsUrl = "https://github.com/Lednerb/bilberry-hugo-theme"
 
 
-# customize your available languages for your multi-lingual site
-# or delete one of the [Languages.xx] blocks to use the theme with only one supported language
-[Languages]
-  [Languages.en]
+# customize your available languages for your multilingual site
+# or delete one of the [languages.xx] blocks to use the theme with only one supported language
+[languages]
+  [languages.en]
     weight = 1
-  [Languages.de]
+  [languages.de]
     weight = 2
     title = "Mein cooler neuer Blog"
-    subtitle = "Hallo Welt! Dies ist der epischste Untertitel aller Zeiten."
+    [languages.de.params]
+      subtitle = "Hallo Welt! Dies ist der epischste Untertitel aller Zeiten."
 
 [markup]
   defaultMarkdownHandler = 'goldmark'
