@@ -26,7 +26,7 @@ jobs:
           extended: true
 
       - name: Run tests
-        run: ./testing/testing-example-site/test-theme.sh
+        run: ./v4/tests/exampleSite/test-theme.sh
 
   deploy:
     runs-on: ubuntu-latest
