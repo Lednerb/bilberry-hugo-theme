@@ -1,6 +1,9 @@
 title = "My cool new Blog"
 baseURL = "https://example.com/"
-theme = "bilberry-hugo-theme/v4"
+
+[module]
+  [[module.imports]]
+    path = "bilberry-hugo-theme/v4"
 
 # Generate the robots.txt file for SEO
 enableRobotsTXT = true
