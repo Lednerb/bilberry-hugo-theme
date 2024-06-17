@@ -54,6 +54,7 @@ jobs:
         run: cp -r ./v4/exampleSite/* /tmp/demo-site
 
       - name: Pull theme's Hugo module
+        working-directory: /tmp/demo-site
         run: |
           hugo mod get -u
           cat go.mod
