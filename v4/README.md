@@ -165,7 +165,7 @@ hugo mod init github.com/<your-user>/my-new-blog
 cp -r bilberry-hugo-theme/v4/exampleSite/* my-new-blog
 ```
 
-- Pull theme files to add new content to your website:
+- Pull theme files by updating theme's module:
 
 ```shell
 hugo mod get -u
