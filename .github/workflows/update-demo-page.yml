@@ -49,23 +49,22 @@ jobs:
         working-directory: /tmp/demo-site
         run: |
           hugo mod init github.com/Lednerb/bilberry-hugo-theme/exampleSite
-          hugo mod get -u
-          cat go.mod
 
       - name: Copy exampleSite content to new site
         run: cp -r ./v4/exampleSite/* /tmp/demo-site
+
+      - name: Pull theme's Hugo module
+        run: |
+          hugo mod get -u
+          cat go.mod
 
       - name: Adjust hugo.toml
         working-directory: /tmp/demo-site
         run: |
           sed -i "s/baseURL = .*$/baseURL = \"https:\/\/lednerb.github.io\/bilberry-hugo-theme\/\"/" hugo.toml
-          cat hugo.toml | grep baseURL
           version=$(grep -Po "(?<=v4\s)[^\s//]+" go.mod)
-          echo $version
           sed -i "s/creditsText = .*$/creditsText = \"Bilberry Hugo Theme $version\"/" hugo.toml
-          cat hugo.toml | grep creditsText
           sed -i "s/creditsUrl = .*$/creditsUrl = \"https:\/\/github.com\/Lednerb\/bilberry-hugo-theme\/tree\/$version\"/" hugo.toml
-          cat hugo.toml | grep creditsUrl
 
       - name: Build
         working-directory: /tmp/demo-site
