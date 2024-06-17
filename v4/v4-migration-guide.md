@@ -15,10 +15,10 @@ the `module.imports.path` property in the `hugo.toml` file as follows:
 [module]
   [[module.imports]]
     # Option 1 (recommended): adding the theme as a Hugo module
-    # path = "github.com/Lednerb/bilberry-hugo-theme/v4"
+    path = "github.com/Lednerb/bilberry-hugo-theme/v4"
 
     # Options 2 and 3: cloning/copying the theme files
-    path = "bilberry-hugo-theme/v4"
+    # path = "bilberry-hugo-theme/v4"
 ```
 
 ### Top Navigation Bar
@@ -41,7 +41,7 @@ In `v3`, color and font customizations were handled directly in the `assets/sass
 the `_variables.scss` file no longer exists and such customization is done in the `config.toml` by defining
 corresponding parameters from the `assets/sass/theme.scss` file, for example, `baseColor`, `headlineFont` etc.
 Therefore, any changes you made in `_variables.scss` file should be ported to your site's configuration file `hugo.toml`. Read
-the [Colors and Fonts](README.md#colors-and-fonts) section in the `v4` **README** guide for more details.
+the [Layouts, Colors and Fonts](README.md#layout-colors-and-fonts) section in the `v4` **README** guide for more details.
 
 ### Image Modal Zoom
 

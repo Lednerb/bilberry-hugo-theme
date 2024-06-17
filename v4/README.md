@@ -117,7 +117,7 @@ Please use the following guidelines if you want to start a discussion:
 
 - **Hugo** (version >= 0.125.7 **extended**), see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.
 - **Git**, see this [guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on how to install Git.
-- **Go** (version >= 1.19), optional, required only when the Bilberry theme is used as a Hugo module; see
+- **Go** (version >= 1.21), optional, required only when the Bilberry theme is used as a Hugo module; see
   this [guide](https://go.dev/doc/install) on how to install Go.
 
 ## Quick Start
@@ -145,12 +145,6 @@ hugo new site my-new-blog
 rm my-new-blog/archetypes/default.md
 ```
 
-- Copy the example site content, including the `hugo.toml` file:
-
-```shell
-cp -r bilberry-hugo-theme/v4/exampleSite/* my-new-blog
-```
-
 ### Theme Installation Options
 
 #### Option 1 (recommended): Adding the Theme as a Hugo Module
@@ -165,13 +159,16 @@ cd my-new-blog
 hugo mod init github.com/<your-user>/my-new-blog
 ```
 
-Following the Hugo module initialization, you may have the following warning: module "
-github.com/Lednerb/bilberry-hugo-theme/v4" not found, which should be ignored.
+- Copy the example site content, including the `hugo.toml` file:
+
+```shell
+cp -r bilberry-hugo-theme/v4/exampleSite/* my-new-blog
+```
 
 - Pull theme files to add new content to your website:
 
 ```shell
-hugo mod vendor
+hugo mod get -u
 ```
 
 If you need more details on how to use Hugo modules, please read
