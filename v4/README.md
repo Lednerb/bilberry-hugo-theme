@@ -179,6 +179,12 @@ the [Hugo documentation](https://gohugo.io/hugo-modules/use-modules/).
 Use this option if you want to pull in the theme files as a Git submodule from the main Bilberry Hugo theme repository.
 This option also makes it easy to keep the theme up to date in your site.
 
+- Copy the example site content, including the `hugo.toml` file:
+
+```shell
+cp -r bilberry-hugo-theme/v4/exampleSite/* my-new-blog
+```
+
 - In the `my-new-blog/hugo.toml` file, uncomment the `path` property for **Options 2 and 3**, and
   comment out the `path` property for **Option 1**:
 
@@ -201,6 +207,12 @@ $ git submodule add https://github.com/Lednerb/bilberry-hugo-theme.git themes/bi
 #### Option 3: Copying the Theme Files
 
 Use this option if you want to customize and maintain your own copy of the theme directly.
+
+- Copy the example site content, including the `hugo.toml` file:
+
+```shell
+cp -r bilberry-hugo-theme/v4/exampleSite/* my-new-blog
+```
 
 - In the `my-new-blog/hugo.toml` file, uncomment the `path` property for **Options 2 and 3**, and
   comment out the `path` property for **Option 1**:
