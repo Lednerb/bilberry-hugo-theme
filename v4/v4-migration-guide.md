@@ -1,18 +1,24 @@
 ## v4 Migration Guide
 
-**IMPORTANT** The Hugo version was bumped to `v0.109.0 extended`. Therefore, you should upgrade Hugo in your local
+**IMPORTANT** The Hugo version was bumped to `v0.125.7 extended`. Therefore, you should upgrade Hugo in your local
 development environment and, if necessary, in the corresponding deployment configuration file.
+
+### Site Configuration File
+Rename the site's configuration file from `config.toml` to `hugo.toml`.
 
 ### Theme Installation Options
 
-Depending on your chosen theme installation option, update the theme property in the `config.toml` file as follows:
+Depending on your chosen theme installation option, replace the `theme` property with
+the `module.imports.path` property in the `hugo.toml` file as follows:
 
 ```toml
-# Option 1 (recommended) : adding the theme as a Hugo module
-theme = "github.com/Lednerb/bilberry-hugo-theme/v4"
+[module]
+  [[module.imports]]
+    # Option 1 (recommended): adding the theme as a Hugo module
+    path = "github.com/Lednerb/bilberry-hugo-theme/v4"
 
-# Options 2 and 3: cloning/copying the theme files
-theme = "bilberry-hugo-theme/v4"
+    # Options 2 and 3: cloning/copying the theme files
+    # path = "bilberry-hugo-theme/v4"
 ```
 
 ### Top Navigation Bar
@@ -34,8 +40,8 @@ guide for customization options.
 In `v3`, color and font customizations were handled directly in the `assets/sass/_variables.scss` file. In v4,
 the `_variables.scss` file no longer exists and such customization is done in the `config.toml` by defining
 corresponding parameters from the `assets/sass/theme.scss` file, for example, `baseColor`, `headlineFont` etc.
-Therefore, any changes you made in `_variables.scss` file should be ported to your site's configuration file. Read
-the [Colors and Fonts](README.md#colors-and-fonts) section in the `v4` **README** guide for more details.
+Therefore, any changes you made in `_variables.scss` file should be ported to your site's configuration file `hugo.toml`. Read
+the [Layouts, Colors and Fonts](README.md#layout-colors-and-fonts) section in the `v4` **README** guide for more details.
 
 ### Image Modal Zoom
 

@@ -1,11 +1,9 @@
 title = "My cool new Blog"
 baseURL = "https://example.com/"
 
-# Option 1 (recommended): adding the theme as a Hugo module
-theme = "github.com/Lednerb/bilberry-hugo-theme/v4"
-
-# Options 2 and 3: cloning/copying the theme files
-# theme = "bilberry-hugo-theme/v4"
+[module]
+  [[module.imports]]
+    path = "bilberry-hugo-theme/v4"
 
 # Generate the robots.txt file for SEO
 enableRobotsTXT = true
@@ -17,15 +15,21 @@ DefaultContentLanguage = "en"
 googleAnalytics = ""
 
 # Enable / Disable comments on the articles via Disqus.
-disqusShortname = ""
+disqusShortname = "bilberry-hugo-theme"
+
+# Enable / Disable open link with a new tab.
+[blackfriday]
+  hrefTargetBlank = false
 
 [params]
-  # Custom CSS/JS modules that will be imported by the template.
+  # Custom CSS / JS modules that will be imported by the template.
   # Files are relative to the static/ directory or a URL.
   # Files are imported in the order they appear here, after
   # theme.css and theme.js, respectively.
   css_modules = []
   js_modules = []
+
+  enableLightDarkTheme = true
 
   # Description and meta data for the search engines
   author = "Lednerb"
@@ -40,37 +44,11 @@ disqusShortname = ""
 
   # Enable / Disable algolia search
   algolia_search    = true
-  algolia_appId     = "45CEN6X6AT"
-  algolia_apiKey    = "16030625f1a4d0dd3b8aefd794fd4cf1"
-  algolia_indexName = "bilberry-hugo-theme"
-  # Set this option to false if you want to search within all articles in all languages at once
-  algolia_currentLanguageOnly = true
-
-  # Enable / Disable comments on the articles via commento
-  # commentoJsURL = "https://commento.lednerb.de/js/commento.js"
-
-  # Enable / Disable Giscus comments
-  giscus             = false
-  giscusJsUrl        = "https://giscus.app/client.js"
-  giscusRepository   = "[ENTER REPO HERE]"
-  giscusRepositoryId = "[ENTER REPO ID HERE]"
-  giscusMapping      = "pathname"
-  giscusCategory     = "[ENTER CATEGORY NAME HERE]"
-  giscusCategoryId   = "[ENTER CATEGORY ID HERE]"
-  giscusTheme        = "light"
-  giscusReactions    = "1"
-  giscusEmitMetadata = "0"
-  giscusLanguage     = "en"
-  giscusCrossOrigin  = "anonymous"
-
-  # Enable / Disable Utterances comments
-  utterances            = false
-  utterancesJsUrl       = "https://utteranc.es/client.js"
-  utterancesRepository  = "[ENTER REPO HERE]"
-  utterancesIssueTerm   = "pathname"
-  utterancesLabel       = "Comment"
-  utterancesTheme       = "github-light"
-  utterancesCrossOrigin = "anonymous"
+  algolia_appId     = "Y2C4RWMPXW"
+  algolia_apiKey    = "50ea7f8c41c0ad233926e0be2b769ed1"
+  algolia_indexName = "default-content"
+    # Set this option to false if you want to search within all articles in all languages at once
+    algolia_currentLanguageOnly = true
 
   # Media configuration
     # let hugo automatically resize and crop your images to the correct sizes
@@ -82,13 +60,13 @@ disqusShortname = ""
     # your subtitle if you want to use any
     subtitle = "Hello World! This is the most epic subtitle ever."
 
-    # if you want to use libravatar or gravatar for the header image
-    avatarEmail = "code@lednerb.de"
+    # if you want to use gravatar for the header image
+    gravatarEMail = "code@lednerb.de"
 
-    # set an path to the image file you want to use | overwrites avatar by email
+    # set an path to the image file you want to use | overwrites gravatar
     customImage = ""
 
-    # define the icon you want to use for the overlay for the customImage or avatar.
+    # define the icon you want to use for the overlay for the customImage or gravatar.
     overlayIcon = "fa-home"
 
     # always display the top navigation (with pages and search) on non-mobile screens
@@ -107,10 +85,10 @@ disqusShortname = ""
     # Set to true to pin only to the first page, false to all pages
     # pinOnlyToFirstPage = true
 
-    # enable automatic localization of the article's published date using Moment.js
+    # enable automatic localization of the article's PublishedDate with momentjs
     enableMomentJs = true
 
-    # customize the date format | only works if Moment.js is disabled | only works with English month names
+    # customize the date format | only works if momentjs is disabled | only works with English month names
     # you can customize it with the options you find here:
     # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
     dateFormat = "2006-01-02"
@@ -154,22 +132,23 @@ disqusShortname = ""
 
     # credits line configuration
     copyrightBy = "by Lednerb"
-    copyrightUseCurrentYear = true  # set to true to always display the current year in the copyright
+    copyrightUseCurrentYear = false  # set to true to always display the current year in the copyright
     copyrightYearOverride = "2017"
     copyrightUrl = "https://github.com/Lednerb"
     creditsText = "Bilberry Hugo Theme"
     creditsUrl = "https://github.com/Lednerb/bilberry-hugo-theme"
 
 
-# customize your available languages for your multi-lingual site
-# or delete one of the [Languages.xx] blocks to use the theme with only one supported language
-[Languages]
-  [Languages.en]
+# customize your available languages for your multilingual site
+# or delete the [languages] blog to use the theme with only one supported language
+[languages]
+  [languages.en]
     weight = 1
-  [Languages.de]
+  [languages.de]
     weight = 2
     title = "Mein cooler neuer Blog"
-    subtitle = "Hallo Welt! Dies ist der epischste Untertitel aller Zeiten."
+    [languages.de.params]
+      subtitle = "Hallo Welt! Dies ist der epischste Untertitel aller Zeiten."
 
 [markup]
   defaultMarkdownHandler = 'goldmark'
@@ -177,26 +156,26 @@ disqusShortname = ""
     [markup.goldmark.renderer]
       # change to 'true' if you need to render raw HTML within your markdown content
       unsafe = false
-  [markup.highlight]
-    anchorLineNos = false
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ''
-    hl_inline = false
-    lineAnchors = ''
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = true
-    noHl = false
-    style = 'monokai'
-    tabWidth = 4
-  [markup.tableOfContents]
-    endLevel = 5
-    ordered = false
-    startLevel = 2
+    [markup.highlight]
+      anchorLineNos = false
+      codeFences = true
+      guessSyntax = false
+      hl_Lines = ''
+      hl_inline = false
+      lineAnchors = ''
+      lineNoStart = 1
+      lineNos = false
+      lineNumbersInTable = true
+      noClasses = true
+      noHl = false
+      style = 'monokai'
+      tabWidth = 4
+    [markup.tableOfContents]
+      endLevel = 5
+      ordered = false
+      startLevel = 2
 
-# do NOT change anything below
+# don't change anything below
 [taxonomies]
   author   = "author"
   tag      = "tags"

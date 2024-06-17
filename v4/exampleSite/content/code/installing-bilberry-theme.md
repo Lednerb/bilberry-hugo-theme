@@ -39,5 +39,5 @@ cd ../
 hugo server -D
 ```
 
-- Configure the `config.toml` file according to your needs
+- Configure the `hugo.toml` file according to your needs
 - Start blogging
