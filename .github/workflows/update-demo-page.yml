@@ -59,9 +59,13 @@ jobs:
         working-directory: /tmp/demo-site
         run: |
           sed -i "s/baseURL = .*$/baseURL = \"https:\/\/lednerb.github.io\/bilberry-hugo-theme\/\"/" hugo.toml
+          cat hugo.toml | grep baseURL
           version=$(grep -Po "(?<=v4\s)[^\s//]+" go.mod)
+          echo $version
           sed -i "s/creditsText = .*$/creditsText = \"Bilberry Hugo Theme $version\"/" hugo.toml
+          cat hugo.toml | grep creditsText
           sed -i "s/creditsUrl = .*$/creditsUrl = \"https:\/\/github.com\/Lednerb\/bilberry-hugo-theme\/tree\/$version\"/" hugo.toml
+          cat hugo.toml | grep creditsUrl
 
       - name: Build
         working-directory: /tmp/demo-site
