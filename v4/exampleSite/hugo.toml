@@ -1,11 +1,13 @@
 title = "My cool new Blog"
 baseURL = "https://example.com/"
 
-# Option 1 (recommended): adding the theme as a Hugo module
-theme = "github.com/Lednerb/bilberry-hugo-theme/v4"
+[module]
+  [[module.imports]]
+    # Option 1 (recommended): adding the theme as a Hugo module
+    path = "github.com/Lednerb/bilberry-hugo-theme/v4"
 
-# Options 2 and 3: cloning/copying the theme files
-# theme = "bilberry-hugo-theme/v4"
+    # Options 2 and 3: cloning/copying the theme files
+    # path = "bilberry-hugo-theme/v4"
 
 # Generate the robots.txt file for SEO
 enableRobotsTXT = true
@@ -27,7 +29,7 @@ disqusShortname = ""
   css_modules = []
   js_modules = []
 
-  # Description and meta data for the search engines
+  # Description and metadata for the search engines
   author = "Lednerb"
   description = "Bilberry Premium Theme for Hugo."
   keywords = "blog,personal,responsive,search,font awesome,pages,posts,multilingual,syntax highlighting,premium,shortcuts"

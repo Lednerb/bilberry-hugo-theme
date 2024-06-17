@@ -41,17 +41,19 @@ jobs:
           extended: true
 
       - name: Create new demo site
-        run: hugo new site /tmp/demo-site
-
-      - name: Copy exampleSite content to new site
-        run: cp -r ./v4/exampleSite/* /tmp/demo-site
+        run: | 
+          hugo new site /tmp/demo-site
+          rm /tmp/demo-site/archetypes/default.md
 
       - name: Init Hugo module
         working-directory: /tmp/demo-site
         run: |
           hugo mod init github.com/Lednerb/bilberry-hugo-theme/exampleSite
-          hugo mod get
+          hugo mod get -u
           cat go.mod
+
+      - name: Copy exampleSite content to new site
+        run: cp -r ./v4/exampleSite/* /tmp/demo-site
 
       - name: Adjust hugo.toml
         working-directory: /tmp/demo-site

@@ -23,7 +23,7 @@ echo ">>> Updating 'hugo.toml'..."
 
 sed -i "s/title = .*$/title = \"Dev Bilberry Test\"/" exampleSite/hugo.toml
 sed -i "s/subtitle = .*$/subtitle = \"Running locally!\"/" exampleSite/hugo.toml
-sed -i "s/theme = .*$/theme = \"..\/..\/..\/..\/..\/v4\"/" exampleSite/hugo.toml
+sed -i "s/path = .*$/path = \"..\/..\/..\/..\/..\/v4\"/" exampleSite/hugo.toml
 
 echo ">>> ... completed."
 exit 0
