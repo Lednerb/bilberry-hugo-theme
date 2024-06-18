@@ -35,3 +35,11 @@ other = "Outros Idiomas"
 one = "1 min de leitura"
 other = "{{ .Count }} mins. de leitura"
 
+[tableOfContents]
+other = "Sumário"
+
+[series]
+other = "Séries"
+
+[archive]
+other = "Arquivo"
