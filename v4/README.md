@@ -705,17 +705,6 @@ To enable it, set the value of the `services.googleAnalytics.ID` property in the
     ID = 'G-XXXXXXXXXX'
 ```
 
-Such value for Universal Analytics v3 is prefixed with the `UA` letters.
-So, suppose you migrate your existing website to the Bilberry theme, and your website is already tracked in Universal
-Analytics, given that the corresponding property was created before October 14, 2020.
-In that case, you should continue using the v3 value in the `hugo.toml` file.
-However, given that Universal Analytics will no longer process new data in standard properties beginning July 1, 2023, you
-will have to create a Google Analytics v4 property linked to your v3 property.
-
-If you created your property after October 14, 2020, you're likely using a Google Analytics v4 property already, and the
-value for such property is prefixed with the `G` letter.
-In that case, you should use the v4 value in the `hugo.toml` file.
-
 ### Comments
 
 To allow readers to comment under your articles, you can use either [Commento](https://commento.io/)
