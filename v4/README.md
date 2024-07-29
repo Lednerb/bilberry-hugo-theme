@@ -697,13 +697,19 @@ The second option is to use the `audio` shortcode within markdown content in a p
 
 Bilberry theme comes with built-in support for both v3 and v4
 of [Google Analytics](https://analytics.google.com/analytics/web/).
-You should set the value of the `googleAnalytics` property in the `hugo.toml` file to enable it.
+To enable it, set the value of the `services.googleAnalytics.ID` property in the `hugo.toml`.
+
+```yaml
+[services]
+  [services.googleAnalytics]
+    ID = 'G-XXXXXXXXXX'
+```
 
 Such value for Universal Analytics v3 is prefixed with the `UA` letters.
 So, suppose you migrate your existing website to the Bilberry theme, and your website is already tracked in Universal
 Analytics, given that the corresponding property was created before October 14, 2020.
 In that case, you should continue using the v3 value in the `hugo.toml` file.
-However given that Universal Analytics will no longer process new data in standard properties beginning July 1, 2023, you
+However, given that Universal Analytics will no longer process new data in standard properties beginning July 1, 2023, you
 will have to create a Google Analytics v4 property linked to your v3 property.
 
 If you created your property after October 14, 2020, you're likely using a Google Analytics v4 property already, and the

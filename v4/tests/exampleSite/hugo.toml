@@ -11,9 +11,6 @@ enableRobotsTXT = true
 # Change to one of your content languages defined at the end.
 DefaultContentLanguage = "en"
 
-# Enable / Disable Google Analytics statistics for your site
-googleAnalytics = ""
-
 # Enable / Disable comments on the articles via Disqus.
 disqusShortname = "bilberry-hugo-theme"
 
@@ -138,6 +135,10 @@ disqusShortname = "bilberry-hugo-theme"
     creditsText = "Bilberry Hugo Theme"
     creditsUrl = "https://github.com/Lednerb/bilberry-hugo-theme"
 
+# Enable/Disable Google Analytics statistics for your site
+[services]
+  [services.googleAnalytics]
+    ID = ''
 
 # customize your available languages for your multilingual site
 # or delete the [languages] blog to use the theme with only one supported language
