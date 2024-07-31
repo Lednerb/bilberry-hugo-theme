@@ -17,13 +17,13 @@ other = "Últimas publicaciones"
 other = "Buscar ..."
 
 [noSearchResults]
-other = "Nada encontrado."
+other = "No se ha encontrado nada."
 
 [olderPosts]
-other = "Publicaciones anteriores"
+other = "Publicaciones más antiguas"
 
 [newerPosts]
-other = "Publicaciones recientes"
+other = "Publicaciones más recientes"
 
 [continueReading]
 other = "Seguir leyendo"
@@ -32,8 +32,8 @@ other = "Seguir leyendo"
 other = "Otros idiomas"
 
 [readingTime]
-one = "1 minuto de lectura"
-other = "{{ .Count }} minutos de lectura"
+one = "Leerlo te llevará 1 minuto"
+other = "Leerlo te llevará {{ .Count }} minutos"
 
 [tableOfContents]
 other = "Tabla de contenidos"
