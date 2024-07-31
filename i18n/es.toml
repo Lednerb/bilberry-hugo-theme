@@ -32,11 +32,14 @@ other = "Seguir leyendo"
 other = "Otros idiomas"
 
 [readingTime]
-one = "Leerlo te llevará 1 minuto"
-other = "Leerlo te llevará {{ .Count }} minutos"
+one = "Tardarás 1 minuto en leerlo"
+other = "Tardarás {{ .Count }} minutos en leerlo"
 
 [tableOfContents]
 other = "Tabla de contenidos"
 
 [series]
 other = "Series"
+
+[archive]
+other = "Archivo"
