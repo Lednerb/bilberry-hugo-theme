@@ -1,0 +1,45 @@
+[categories]
+other = "Categories"
+
+[authors]
+other = "Autors"
+
+[tags]
+other = "Etiquetes"
+
+[socialMedia]
+other = "Xarxes socials"
+
+[latestPosts]
+other = "Últimes publicacions"
+
+[search]
+other = "Cercar ..."
+
+[noSearchResults]
+other = "No s'ha trobat res."
+
+[olderPosts]
+other = "Publicacions més antigues"
+
+[newerPosts]
+other = "Publicacions més recents"
+
+[continueReading]
+other = "Seguir llegint"
+
+[otherLanguages]
+other = "Altres idiomes"
+
+[readingTime]
+one = "Trigaràs 1 minut en llegir-lo"
+other = "Trigaràs {{.Count}} minuts en llegir-lo"
+
+[tableOfContents]
+other = "Taula de continguts"
+
+[series]
+other = "Sèrie"
+
+[archive]
+other = "Arxiu"
