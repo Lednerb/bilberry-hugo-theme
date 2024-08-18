@@ -27,7 +27,7 @@
 
 {{ $js := $jsToConcat | resources.Concat "theme.js" }}
 
-{{ if or (.Site.IsServer) (eq hugo.Environment "development") }}
+{{ if or (hugo.IsServer) (eq hugo.Environment "development") }}
     <script src="{{ $js.Permalink }}"></script>
 {{ else }}
     {{ $js := $js | resources.Minify | resources.Fingerprint }}

@@ -1,7 +1,7 @@
 {{ $options := dict "targetPath" "theme.css" "enableSourceMap" true "precision" 6 }}
 {{ $css := resources.Get "sass/theme.scss" | resources.ExecuteAsTemplate "theme.scss" . | toCSS $options }}
 
-{{ if or (.Site.IsServer) (eq hugo.Environment "development") }}
+{{ if or (hugo.IsServer) (eq hugo.Environment "development") }}
     <link id="theme-css" rel="stylesheet" href="{{ $css.Permalink }}" media="screen">
 {{ else }}
     {{ $css := $css | resources.Minify | resources.Fingerprint }}
