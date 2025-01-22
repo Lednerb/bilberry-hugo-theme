@@ -116,7 +116,7 @@ Please use the following guidelines if you want to start a discussion:
 
 - **Hugo** (version >= 0.139.4 **extended**), see this [guide](https://gohugo.io/getting-started/installing/) on how to install Hugo.
 - **Git**, see this [guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) on how to install Git.
-- **Go** (version >= 1.21), optional, required only when the Bilberry theme is used as a Hugo module; see
+- **Go** (version >= 1.22.6), optional, required only when the Bilberry theme is used as a Hugo module; see
   this [guide](https://go.dev/doc/install) on how to install Go.
 
 ## Quick Start
