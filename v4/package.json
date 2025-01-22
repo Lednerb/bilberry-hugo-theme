@@ -4,7 +4,7 @@
   "description": "Bilberry Hugo theme",
   "dependencies": {},
   "devDependencies": {
-    "hugo-extended": "^0.125.7",
+    "hugo-extended": "^0.139.4",
     "clipboard": "^2.0.6",
     "dimbox": "^1.0.2",
     "normalize.css": "^8.0.1",
