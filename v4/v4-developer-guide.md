@@ -1,10 +1,10 @@
 ## v4 Developer Guide
 
 ### Prerequisites
-- **Hugo** (version >= 0.109.0 **extended**), see this installation [guide](https://gohugo.io/getting-started/installing/).
+- **Hugo** (version >= 0.139.4 **extended**), see this installation [guide](https://gohugo.io/getting-started/installing/).
 - **Git**, see this installation [guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-- **Go** (version >= 1.19), see this installation [guide](https://go.dev/doc/install).
-- **Node.js** (version >= 20.5.0) with **npm** (version >= 9.8.0), see this
+- **Go** (version >= 1.22.6), see this installation [guide](https://go.dev/doc/install).
+- **Node.js** (version >= v23.6.1) with **npm** (version >= 10.9.2), see this
   installation [guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
 ### Third-party Dependencies
