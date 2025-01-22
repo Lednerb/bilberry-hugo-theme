@@ -13,7 +13,7 @@ baseURL = "https://example.com/"
 enableRobotsTXT = true
 
 # Change to one of your content languages defined at the end.
-DefaultContentLanguage = "en"
+defaultContentLanguage = "en"
 
 # Enable / Disable comments on the articles via Disqus.
 disqusShortname = ""
