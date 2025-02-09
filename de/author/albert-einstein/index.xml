@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Albert Einstein on Mein Cooler Neuer Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/de/author/albert-einstein/</link>
+    <description>Recent content in Albert Einstein on Mein Cooler Neuer Blog</description>
+    <generator>Hugo</generator>
+    <language>de</language>
+    <lastBuildDate>Mon, 01 Nov 2021 14:40:32 +0100</lastBuildDate>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/de/author/albert-einstein/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Albert Einstein - Sinn Des Lebens</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/quote/einstein-sinn-des-lebens/</link>
+      <pubDate>Mon, 01 Nov 2021 14:40:32 +0100</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/quote/einstein-sinn-des-lebens/</guid>
+      <description>Der Sinn des Lebens besteht nicht darin ein erfolgreicher Mensch zu sein, sondern ein wertvoller.</description>
+    </item>
+  </channel>
+</rss>

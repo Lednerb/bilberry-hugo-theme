@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Mein Cooler Neuer Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/de/series/</link>
+    <description>Recent content in Series on Mein Cooler Neuer Blog</description>
+    <generator>Hugo</generator>
+    <language>de</language>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/de/series/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

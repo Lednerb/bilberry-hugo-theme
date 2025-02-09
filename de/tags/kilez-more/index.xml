@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kilez More on Mein Cooler Neuer Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/de/tags/kilez-more/</link>
+    <description>Recent content in Kilez More on Mein Cooler Neuer Blog</description>
+    <generator>Hugo</generator>
+    <language>de</language>
+    <lastBuildDate>Mon, 01 Nov 2021 16:23:40 +0100</lastBuildDate>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/de/tags/kilez-more/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kilez More - Leben und Tod des Imperialismus</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/video/kilez-more-leben-und-tod-des-imperialismus/</link>
+      <pubDate>Mon, 01 Nov 2021 16:23:40 +0100</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/video/kilez-more-leben-und-tod-des-imperialismus/</guid>
+      <description>&lt;p&gt;Kilez More ist ein großartiger österreichischer Musiker.&#xA;Die meisten seiner Songs haben einen politischen Hintergrund und geniale Texte!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kilez More - New World Order</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/audio/kilez-more-new-world-order/</link>
+      <pubDate>Mon, 01 Nov 2021 16:12:47 +0100</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/audio/kilez-more-new-world-order/</guid>
+      <description>Mit dem audio Post Type kann sehr einfach ein Spotify, SoundCloud, TuneIn oder Mixcloud Player integriert werden.&#xA;Falls kein Player integriert werden soll, kann optional ein Titelbild mit Hilfe der featuredImage Option in der Markdown Datei verwendet werden.</description>
+    </item>
+  </channel>
+</rss>

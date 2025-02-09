@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Support on Mein Cooler Neuer Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/de/tags/support/</link>
+    <description>Recent content in Support on Mein Cooler Neuer Blog</description>
+    <generator>Hugo</generator>
+    <language>de</language>
+    <lastBuildDate>Mon, 01 Nov 2021 18:10:14 +0100</lastBuildDate>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/de/tags/support/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unterstützung und Diskussionen</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/article/support-and-discussions/</link>
+      <pubDate>Mon, 01 Nov 2021 18:10:14 +0100</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/article/support-and-discussions/</guid>
+      <description>Unterstützung für dieses Theme erhalten Sie über GitHub Issues und GitHub Discussions. Bitte verwenden Sie GitHub Issues, wenn Sie einen Fehler melden möchten. Für alle anderen Anfragen verwenden Sie GitHub Discussions.&#xA;Bitte verwenden Sie die folgenden Kategorien, wenn Sie eine Diskussion beginnen möchten:&#xA;Wenn Sie Fragen zu einer bestimmten Funktion haben oder Hilfe bei der Verwendung oder Anpassung des Designs benötigen, verwenden Sie die Kategorie Q&amp;amp;A (Fragen &amp;amp; Antworten). Verwenden Sie für einen neuen Funktionsvorschlag oder andere Verbesserungen die Kategorie Ideas.</description>
+    </item>
+  </channel>
+</rss>

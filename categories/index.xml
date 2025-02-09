@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on My Cool New Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/categories/</link>
+    <description>Recent content in Categories on My Cool New Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Nov 2021 18:01:26 +0100</lastBuildDate>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Holidays</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/categories/holidays/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/categories/holidays/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Travelling</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/categories/travelling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/categories/travelling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Music</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/categories/music/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/categories/music/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Politics</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/categories/politics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/categories/politics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Video</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/categories/video/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/categories/video/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Privacy</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/categories/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/categories/privacy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Society</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/categories/society/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/categories/society/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Code</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/categories/code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/categories/code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorials</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/categories/tutorials/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/categories/tutorials/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
