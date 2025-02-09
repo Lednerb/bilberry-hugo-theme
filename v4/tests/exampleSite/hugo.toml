@@ -1,10 +1,6 @@
 title = "My cool new Blog"
 baseURL = "https://example.com/"
 
-[module]
-  [[module.imports]]
-    path = "bilberry-hugo-theme/v4"
-
 # Generate the robots.txt file for SEO
 enableRobotsTXT = true
 
@@ -14,9 +10,9 @@ defaultContentLanguage = "en"
 # Enable / Disable comments on the articles via Disqus.
 disqusShortname = "bilberry-hugo-theme"
 
-# Enable / Disable open link with a new tab.
-[blackfriday]
-  hrefTargetBlank = false
+[module]
+  [[module.imports]]
+    path = "bilberry-hugo-theme/v4"
 
 [params]
   # Custom CSS / JS modules that will be imported by the template.
@@ -28,7 +24,7 @@ disqusShortname = "bilberry-hugo-theme"
 
   enableLightDarkTheme = true
 
-  # Description and meta data for the search engines
+  # Description and metadata for the search engines
   author = "Lednerb"
   description = "Bilberry Premium Theme for Hugo."
   keywords = "blog,personal,responsive,search,font awesome,pages,posts,multilingual,syntax highlighting,premium,shortcuts"
@@ -141,7 +137,7 @@ disqusShortname = "bilberry-hugo-theme"
     ID = ''
 
 # customize your available languages for your multilingual site
-# or delete the [languages] blog to use the theme with only one supported language
+# or delete the [languages.xx] block to use the theme with only one supported language
 [languages]
   [languages.en]
     weight = 1
