@@ -1,13 +1,5 @@
-title = "My cool new Blog"
+title = "My Cool New Blog"
 baseURL = "https://example.com/"
-
-[module]
-  [[module.imports]]
-    # Option 1 (recommended): adding the theme as a Hugo module
-    path = "github.com/Lednerb/bilberry-hugo-theme/v4"
-
-    # Options 2 and 3: cloning/copying the theme files
-    # path = "bilberry-hugo-theme/v4"
 
 # Generate the robots.txt file for SEO
 enableRobotsTXT = true
@@ -17,6 +9,14 @@ defaultContentLanguage = "en"
 
 # Enable / Disable comments on the articles via Disqus.
 disqusShortname = ""
+
+[module]
+  [[module.imports]]
+    # Option 1 (recommended): adding the theme as a Hugo module
+    path = "github.com/Lednerb/bilberry-hugo-theme/v4"
+
+    # Options 2 and 3: cloning/copying the theme files
+    # path = "bilberry-hugo-theme/v4"
 
 [params]
   # Custom CSS/JS modules that will be imported by the template.
@@ -171,7 +171,7 @@ disqusShortname = ""
     weight = 1
   [languages.de]
     weight = 2
-    title = "Mein cooler neuer Blog"
+    title = "Mein Cooler Neuer Blog"
     [languages.de.params]
       subtitle = "Hallo Welt! Dies ist der epischste Untertitel aller Zeiten."
 
