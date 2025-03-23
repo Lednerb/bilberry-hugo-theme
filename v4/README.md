@@ -963,7 +963,7 @@ is only used for dependency management. Layout, colors, fonts and font sizes can
 variables defined in the [`assets/sass/theme.scss`](assets/sass/theme.scss) file. Please note that
 currently only the content font size can be customized. If you want to customize other font sizes,
 you may add a new variable to the theme's `v4/assets/sass/theme.scss` file by submitting a pull
-request. For more details see this [PR](https://github.com/Lednerb/bilberry-hugo-theme/pull/689).
+request. For more details, see this [PR](https://github.com/Lednerb/bilberry-hugo-theme/pull/689).
 
 For example, if you want to customize the `$base-color` variable, you should define the `baseColor`
 parameter in your site's `hugo.toml` file.
