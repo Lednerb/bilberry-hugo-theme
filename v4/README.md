@@ -956,7 +956,7 @@ personalized: `linenos`, `hl_lines`, `linenostart`, `anchorlinenos`, `lineanchor
 
 Read Hugo's [documentation](https://gohugo.io/content-management/syntax-highlighting/) for more details.
 
-### Layout, Colors, Fonts and Font Sizes
+### Layout, Colors and Fonts
 
 Site layout and styling are implemented using SCSS along with [npm](https://www.npmjs.com/), which
 is only used for dependency management. Layout, colors, fonts and font sizes can be customized via
