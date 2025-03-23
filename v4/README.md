@@ -1024,6 +1024,12 @@ example, the [Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont/)
   contentFont = "Atkinson"
 ```
 
+4. Add your `customfonts.css` to the `css_modules` parameter (see the [CSS and JS modules](#css-and-js-modules) section for more information):
+```toml
+[params]
+  css_modules = ["customfonts.css"]
+```
+
 ### CSS and JS modules
 
 This theme supports hot-swappable CSS and JavaScript extensions, which can be specified using the `css_modules`
