@@ -6,6 +6,7 @@ $site-width: {{ .Param "siteWidth" | default "800px" }};
 
 $headline-font: {{ .Param "headlineFont" | default "'Comfortaa',sans-serif" }};
 $content-font: {{ .Param "contentFont" | default "'Open Sans',sans-serif" }};
+$content-font-size: {{ .Param "contentFontSize" | default "1.6em" }};
 $article-footer-font: {{ .Param "articleFooterFont" | default "'Fira Code',monospace" }};
 $code-block-font: {{ .Param "codeBlockFont" | default "'Fira Code',monospace" }};
 
