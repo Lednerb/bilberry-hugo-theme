@@ -50,9 +50,9 @@
                 <div class="languages">
                     <strong>{{ i18n "otherLanguages" }}</strong>
                     {{ range $.Site.Home.AllTranslations }}
-                        {{ $url := .RelPermalink }}
+                        {{ $url := .Permalink }}
                         {{ range where $pages "Lang" .Language.Lang }}
-                            {{ $url = .RelPermalink }}
+                            {{ $url = .Permalink }}
                         {{ end }}
 
                         {{ if eq $language .Language }}
