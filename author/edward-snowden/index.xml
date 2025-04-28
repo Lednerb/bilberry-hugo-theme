@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Edward Snowden on My Cool New Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/author/edward-snowden/</link>
+    <description>Recent content in Edward Snowden on My Cool New Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Nov 2021 13:01:14 +0100</lastBuildDate>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/author/edward-snowden/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Edward Snowden About Privacy</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/quote/edward-snowden-privacy/</link>
+      <pubDate>Mon, 01 Nov 2021 13:01:14 +0100</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/quote/edward-snowden-privacy/</guid>
+      <description>Arguing that you don&amp;rsquo;t care about the right to privacy because you have nothing to hide is no different than saying you don&amp;rsquo;t care about free speech because you have nothing to say.</description>
+    </item>
+  </channel>
+</rss>

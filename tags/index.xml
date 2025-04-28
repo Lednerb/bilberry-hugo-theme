@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on My Cool New Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/tags/</link>
+    <description>Recent content in Tags on My Cool New Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Nov 2021 18:10:14 +0100</lastBuildDate>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Discussions</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/tags/discussions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/tags/discussions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ideas</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/tags/ideas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/tags/ideas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Q&amp;A</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/tags/qa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/tags/qa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Show and Tell</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/tags/show-and-tell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/tags/show-and-tell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Support</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/tags/support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/tags/support/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Eilean Donan Castle</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/tags/eilean-donan-castle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/tags/eilean-donan-castle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Glennfinnan Viaduct</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/tags/glennfinnan-viaduct/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/tags/glennfinnan-viaduct/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scotland</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/tags/scotland/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/tags/scotland/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kilez More</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/tags/kilez-more/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/tags/kilez-more/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Truth Rap</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/tags/truth-rap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/tags/truth-rap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Search Engine</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/tags/search-engine/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/tags/search-engine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Free Speech</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/tags/free-speech/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/tags/free-speech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bilberry Theme</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/tags/bilberry-theme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/tags/bilberry-theme/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/tags/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/tags/hugo/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

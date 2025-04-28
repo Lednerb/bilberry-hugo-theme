@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Video on My Cool New Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/categories/video/</link>
+    <description>Recent content in Video on My Cool New Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Nov 2021 16:23:40 +0100</lastBuildDate>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/categories/video/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kilez More - Life And Death Of The Hegemony</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/video/kilez-more-leben-und-tod-des-imperialismus/</link>
+      <pubDate>Mon, 01 Nov 2021 16:23:40 +0100</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/video/kilez-more-leben-und-tod-des-imperialismus/</guid>
+      <description>&lt;p&gt;Kilez More is a great Austrian musician.&#xA;Most of his songs have a political background and have amazing lyrics!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

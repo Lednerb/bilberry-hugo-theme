@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Search Engine on My Cool New Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/tags/search-engine/</link>
+    <description>Recent content in Search Engine on My Cool New Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Nov 2021 13:05:27 +0100</lastBuildDate>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/tags/search-engine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Duckduckgo.com</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/link/duckduckgo/</link>
+      <pubDate>Mon, 01 Nov 2021 13:05:27 +0100</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/link/duckduckgo/</guid>
+      <description>A search engine that respects your privacy.</description>
+    </item>
+  </channel>
+</rss>

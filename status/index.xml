@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Statuses on My Cool New Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/status/</link>
+    <description>Recent content in Statuses on My Cool New Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 15 Dec 2021 10:45:44 +0200</lastBuildDate>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/status/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/status/bilberry-theme-released/</link>
+      <pubDate>Wed, 15 Dec 2021 10:45:44 +0200</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/status/bilberry-theme-released/</guid>
+      <description>I&amp;rsquo;m glad to announce the release of the Bilberry Hugo theme. This premium theme is published under an open-source license (MIT), and you can use it free of charge. It took me a significant amount of time to create and refine this theme. This theme is a collaborative effort of numerous volunteers.</description>
+    </item>
+  </channel>
+</rss>
