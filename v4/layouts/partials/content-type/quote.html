@@ -12,10 +12,10 @@
         <cite>
             {{ if .ctx.Params.quoteAuthorLink }}
                 <a href="{{ .ctx.Params.quoteAuthorLink }}" target="_blank" rel="noopener noreferrer">
-                    {{ .ctx.Params.author }}
+                    {{ .ctx.Params.quoteAuthor }}
                 </a>
             {{ else }}
-                {{ .ctx.Params.author }}
+                {{ .ctx.Params.quoteAuthor }}
             {{ end }}
         </cite>
     </blockquote>
