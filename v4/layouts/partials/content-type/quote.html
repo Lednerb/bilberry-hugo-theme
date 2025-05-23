@@ -10,8 +10,8 @@
     <blockquote>
         {{ .ctx.Content }}
         <cite>
-            {{ if .ctx.Params.authorLink }}
-                <a href="{{ .ctx.Params.authorLink }}">
+            {{ if .ctx.Params.quoteAuthorLink }}
+                <a href="{{ .ctx.Params.quoteAuthorLink }}" target="_blank" rel="noopener noreferrer">
                     {{ .ctx.Params.author }}
                 </a>
             {{ else }}

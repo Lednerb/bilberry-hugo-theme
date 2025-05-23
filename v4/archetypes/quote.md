@@ -4,7 +4,7 @@ date: {{ .Date }}
 draft: true
 
 author: ""
-authorLink: ""
+quoteAuthorLink: ""
 categories: []
 tags: []
 ---
