@@ -9,11 +9,14 @@
 
     <blockquote>
         {{ .ctx.Content }}
-        {{ $urlValue := replace .ctx.Params.author " " "-" | lower}}
         <cite>
-            <a href="{{ (print "/author/" $urlValue) | relLangURL }}">
+            {{ if .ctx.Params.authorLink }}
+                <a href="{{ .ctx.Params.authorLink }}">
+                    {{ .ctx.Params.author }}
+                </a>
+            {{ else }}
                 {{ .ctx.Params.author }}
-            </a>
+            {{ end }}
         </cite>
     </blockquote>
 </article>

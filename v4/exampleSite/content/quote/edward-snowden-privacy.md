@@ -3,6 +3,7 @@ title: "Edward Snowden About Privacy"
 date: 2021-11-01T13:01:14+01:00
 
 author: "Edward Snowden"
+authorLink: "https://en.wikipedia.org/wiki/Edward_Snowden"
 categories: ['Privacy', 'Society']
 tags: ['free speech']
 ---
