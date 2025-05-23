@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Videoes on Mein Cooler Neuer Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/de/video/</link>
+    <description>Recent content in Videoes on Mein Cooler Neuer Blog</description>
+    <generator>Hugo</generator>
+    <language>de</language>
+    <lastBuildDate>Mon, 01 Nov 2021 16:23:40 +0100</lastBuildDate>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/de/video/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kilez More - Leben und Tod des Imperialismus</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/video/kilez-more-leben-und-tod-des-imperialismus/</link>
+      <pubDate>Mon, 01 Nov 2021 16:23:40 +0100</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/video/kilez-more-leben-und-tod-des-imperialismus/</guid>
+      <description>&lt;p&gt;Kilez More ist ein großartiger österreichischer Musiker.&#xA;Die meisten seiner Songs haben einen politischen Hintergrund und geniale Texte!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
