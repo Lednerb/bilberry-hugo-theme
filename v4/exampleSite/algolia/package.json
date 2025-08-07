@@ -11,5 +11,5 @@
     "data-upload": "node data-upload.js"
   },
   "author": "Igor Baiborodine",
-  "license": "ISC"
+  "license": "MIT"
 }
