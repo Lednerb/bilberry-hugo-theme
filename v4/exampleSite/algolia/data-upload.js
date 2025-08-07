@@ -9,9 +9,8 @@ const argv = require("yargs/yargs")(process.argv.slice(2))
   .alias("h", "help")
   .argv;
 
-const algoliaSearch = require("algoliasearch");
-const client = algoliaSearch(argv["app-id"], argv["admin-api-key"]);
-const algoliaIndex = client.initIndex(argv["index-name"]);
+const algoliaPackage = require("algoliasearch");
+const client = algoliaPackage.algoliasearch(argv["app-id"], argv["admin-api-key"]);
 const jsonfile = require("jsonfile");
 
 const saveObjects = () => {
@@ -19,7 +18,10 @@ const saveObjects = () => {
     if (err) {
       console.error(err);
     } else {
-      algoliaIndex.saveObjects(indices).then(() => {
+      client.saveObjects({
+        indexName: argv["index-name"],
+        objects: indices
+      }).then(() => {
         console.log("Uploaded data to index %s", argv["index-name"]);
       })
       .catch(err => {
@@ -30,7 +32,9 @@ const saveObjects = () => {
 };
 
 if (argv["clear-index"]) {
-  algoliaIndex.clearObjects().then(() => {
+  client.clearObjects({
+    indexName: argv["index-name"]
+  }).then(() => {
     console.log("Cleared data from index %s", argv["index-name"]);
     saveObjects();
   });

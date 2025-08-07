@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Algolia helper for sending and managing data",
   "dependencies": {
-    "algoliasearch": "^4.8.5",
+    "algoliasearch": "^5.35.0",
     "jsonfile": "^6.1.0",
     "yargs": "^16.2.0"
   },
