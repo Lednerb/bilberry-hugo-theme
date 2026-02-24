@@ -27,7 +27,9 @@ disqusShortname = ""
   js_modules = []
 
   # Description and metadata for the search engines
-  author = "Lednerb"
+  [params.author]
+    name = "Lednerb"
+    email = ""
   description = "Bilberry Premium Theme for Hugo."
   keywords = "blog,personal,responsive,search,font awesome,pages,posts,multilingual,syntax highlighting,premium,shortcuts"
 
