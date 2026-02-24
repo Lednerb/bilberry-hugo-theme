@@ -1,9 +1,9 @@
 ## v4 Developer Guide
 
 ### Prerequisites
-- **Hugo** (version >= 0.139.4 **extended**), see this installation [guide](https://gohugo.io/getting-started/installing/).
+- **Hugo** (version >= 0.153.5 **extended**), see this installation [guide](https://gohugo.io/getting-started/installing/).
 - **Git**, see this installation [guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-- **Go** (version >= 1.22.6), see this installation [guide](https://go.dev/doc/install).
+- **Go** (version >= 1.25.7), see this installation [guide](https://go.dev/doc/install).
 - **Node.js** (version >= v23.6.1) with **npm** (version >= 10.9.2), see this
   installation [guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
@@ -13,8 +13,8 @@ Third-party dependencies are managed using `npm` and listed in
 the [`devDependencies`](https://github.com/Lednerb/bilberry-hugo-theme/blob/3776287f2e4494c1308593bde531dbe944de6ddd/v4/package.json#L6)
 block of `package.json` file.
 
-* To update dependencies, adjust version numbers in the `devDependencies` bloc and execute the following command from
-  project's `v4` folder:
+* To update dependencies, adjust version numbers in the `devDependencies` bloc and execute the
+  following command from project's `v4` folder:
 
   ```bash
   $ npm run update-deps 

@@ -1,3 +1,3 @@
 module github.com/Lednerb/bilberry-hugo-theme/v4
 
-go 1.22.6
+go 1.25.7
