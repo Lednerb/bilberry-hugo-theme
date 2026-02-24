@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on My Cool New Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/categories/code/</link>
+    <description>Recent content in Code on My Cool New Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Nov 2021 09:31:27 +0100</lastBuildDate>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installing Bilberry Theme</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/code/installing-bilberry-theme/</link>
+      <pubDate>Mon, 01 Nov 2021 09:31:27 +0100</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/code/installing-bilberry-theme/</guid>
+      <description>&lt;p&gt;You will find all information to setup this theme with your hugo site&#xA;on the official &lt;!-- raw HTML omitted --&gt; &lt;a href=&#34;https://github.com/Lednerb/bilberry-hugo-theme&#34;&gt;Github Repository&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

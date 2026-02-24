@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Truth Rap on My Cool New Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/tags/truth-rap/</link>
+    <description>Recent content in Truth Rap on My Cool New Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Nov 2021 16:12:47 +0100</lastBuildDate>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/tags/truth-rap/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kilez More - New World Order</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/audio/kilez-more-new-world-order/</link>
+      <pubDate>Mon, 01 Nov 2021 16:12:47 +0100</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/audio/kilez-more-new-world-order/</guid>
+      <description>With the audio post type you can easily integrate a Spotify, SoundCloud, TuneIn or Mixcloud player to your post.&#xA;If you don&amp;rsquo;t want to embed sound but use a header image you can set it with the featuredImage option in your markdown file.</description>
+    </item>
+  </channel>
+</rss>
