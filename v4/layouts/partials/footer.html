@@ -92,7 +92,7 @@
             </a>
             {{ with  .OutputFormats.Get "rss" -}}
             -
-            <a href="{{ .Permalink }}">{{ .Name }}</a>
+            <a href="{{ .Permalink }}">{{ .Name | upper }}</a>
             {{- end }}
         </div>
         <div class="author">
