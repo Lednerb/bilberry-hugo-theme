@@ -1,0 +1,48 @@
+{{ define "main" }}
+{{ $pages := where .Pages "Type" "ne" "page" }}
+{{ $paginator := .Paginate $pages (index .Site.Params "paginate" | default 7) }}
+
+{{/* .Data.Plural is the taxonomy’s plural name in URLs: tags, categories, author, series */}}
+{{ $plural := .Data.Plural }}
+
+{{ $termsURL := printf "/%s/" $plural | relLangURL }}
+
+{{ $icon := "fa-list" }}
+{{ if eq $plural "author" }}
+{{ $icon = "fa-users" }}
+{{ else if eq $plural "tags" }}
+{{ $icon = "fa-tag" }}
+{{ else if eq $plural "categories" }}
+{{ $icon = "fa-list" }}
+{{ else if eq $plural "series" }}
+{{ $icon = "fa-list-alt" }}
+{{ end }}
+
+<div class="content">
+    <div class="article-wrapper u-cf single">
+        <a class="bubble" href="{{ $termsURL }}">
+            <i class="fa fa-fw {{ $icon }}"></i>
+        </a>
+
+        <article class="article">
+            <div class="content">
+                <h3>{{ .Title }}</h3>
+                <hr>
+            </div>
+        </article>
+    </div>
+</div>
+
+{{ range $paginator.Pages }}
+<div class="article-wrapper u-cf">
+    {{ if or (fileExists (print "layouts/partials/content-type/" .Type ".html"))
+    (fileExists (print "themes/bilberry-hugo-theme/layouts/partials/content-type/" .Type ".html")) }}
+    {{ partial (print "content-type/" .Type ".html") (dict "ctx" . "template_type" "multiple") }}
+    {{ else }}
+    {{ partial "content-type/article.html" (dict "ctx" . "template_type" "multiple") }}
+    {{ end }}
+</div>
+{{ end }}
+
+{{ partial "paginator.html" . }}
+{{ end }}

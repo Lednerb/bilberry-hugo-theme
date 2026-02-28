@@ -25,7 +25,8 @@ disqusShortname = "bilberry-hugo-theme"
   enableLightDarkTheme = true
 
   # Description and metadata for the search engines
-  author = "Lednerb"
+  authorName = "Lednerb"
+  authorEmail = ""
   description = "Bilberry Premium Theme for Hugo."
   keywords = "blog,personal,responsive,search,font awesome,pages,posts,multilingual,syntax highlighting,premium,shortcuts"
 
