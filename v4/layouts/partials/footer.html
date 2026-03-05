@@ -89,13 +89,13 @@
                 {{ .Site.Params.copyrightYearOverride | default 2018 }}
                 {{ end }}
                 {{ .Site.Params.copyrightBy | default "by Lednerb" }}
-            </a>
-            {{ with .OutputFormats.Get "RSS" -}}
-            -
-            <a href="{{ .Permalink }}">{{ .Name }}</a>
-            {{- end }}
-        </div>
-        <div class="author">
+                </a>
+                {{ with .OutputFormats.Get "RSS" -}}
+                -
+                <a href="{{ .Permalink }}">{{ .Name | upper }}</a>
+                {{- end }}
+            </div>
+            <div class="author">
             <a href="{{ .Site.Params.creditsUrl | default "https://github.com/Lednerb/bilberry-hugo-theme" }}"
                 target="_blank">{{ .Site.Params.creditsText | default "Bilberry Hugo Theme" }}</a>
         </div>
