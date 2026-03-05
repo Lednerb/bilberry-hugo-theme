@@ -90,7 +90,7 @@
                 {{ end }}
                 {{ .Site.Params.copyrightBy | default "by Lednerb" }}
                 </a>
-                {{ with .OutputFormats.Get "RSS" -}}
+                {{ with .OutputFormats.Get "rss" -}}
                 -
                 <a href="{{ .Permalink }}">{{ .Name | upper }}</a>
                 {{- end }}
