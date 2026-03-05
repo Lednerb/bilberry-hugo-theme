@@ -17,5 +17,5 @@ An unserem letzten Tag besuchten wir Dover Castle - eine Antike Burganlage. Die 
 
 Bester Urlaub aller Zeiten!
 
-*Ja, ich könnte ein ganzes Buch über diese fantastische Reise schreiben... <br>
+*Ja, ich könnte ein ganzes Buch über diese fantastische Reise schreiben...  
 Aber hier geht's um eine Demo für das coole [__Bilberry Theme__](https://github.com/Lednerb/bilberry-hugo-theme) ;-)*

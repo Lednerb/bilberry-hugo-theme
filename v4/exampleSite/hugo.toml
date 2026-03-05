@@ -10,6 +10,8 @@ defaultContentLanguage = "en"
 # Enable / Disable comments on the articles via Disqus.
 disqusShortname = ""
 
+ignoreLogs = ['warning-goldmark-raw-html']
+
 [module]
   [[module.imports]]
     # Option 1 (recommended): adding the theme as a Hugo module
