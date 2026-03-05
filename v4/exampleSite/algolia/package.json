@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Algolia helper for sending and managing data",
   "dependencies": {
-    "algoliasearch": "^5.35.0",
-    "jsonfile": "^6.1.0",
-    "yargs": "^16.2.0"
+    "algoliasearch": "^5.49.1",
+    "jsonfile": "^6.2.0",
+    "yargs": "^18.0.0"
   },
   "scripts": {
     "data-upload": "node data-upload.js"
