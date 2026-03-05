@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Mein Cooler Neuer Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/de/categories/</link>
+    <description>Recent content in Categories on Mein Cooler Neuer Blog</description>
+    <generator>Hugo</generator>
+    <language>de</language>
+    <lastBuildDate>Mon, 01 Nov 2021 18:01:26 +0100</lastBuildDate>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/de/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reise</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/categories/reise/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/categories/reise/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Urlaub</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/categories/urlaub/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/categories/urlaub/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Musik</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/categories/musik/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/categories/musik/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Politik</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/categories/politik/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/categories/politik/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Video</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/categories/video/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/categories/video/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zitate</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/categories/zitate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/categories/zitate/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

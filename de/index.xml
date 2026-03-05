@@ -1,0 +1,74 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mein Cooler Neuer Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/de/</link>
+    <description>Recent content on Mein Cooler Neuer Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de</language>
+    <lastBuildDate>Wed, 15 Dec 2021 10:45:44 +0200</lastBuildDate>
+    
+        <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/de/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/status/bilberry-theme-released/</link>
+      <pubDate>Wed, 15 Dec 2021 10:45:44 +0200</pubDate>
+      
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/status/bilberry-theme-released/</guid>
+      <description>Ich freue mich, die Veröffentlichung des Bilberry Hugo-Themes ankündigen zu können. Dieses Premium-Theme wird unter einer Open-Source-Lizenz (MIT) veröffentlicht und Sie können es kostenlos verwenden. Ich habe viel Zeit gebraucht, um dieses Thema zu erstellen und zu verfeinern. Dieses Theme ist eine Gemeinschaftsarbeit zahlreicher Freiwilliger.</description>
+    </item>
+    
+    <item>
+      <title>Unterstützung und Diskussionen</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/article/support-and-discussions/</link>
+      <pubDate>Mon, 01 Nov 2021 18:10:14 +0100</pubDate>
+      
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/article/support-and-discussions/</guid>
+      <description>Unterstützung für dieses Theme erhalten Sie über GitHub Issues und GitHub Discussions. Bitte verwenden Sie GitHub Issues, wenn Sie einen Fehler melden möchten. Für alle anderen Anfragen verwenden Sie GitHub Discussions.
+Bitte verwenden Sie die folgenden Kategorien, wenn Sie eine Diskussion beginnen möchten:
+Wenn Sie Fragen zu einer bestimmten Funktion haben oder Hilfe bei der Verwendung oder Anpassung des Designs benötigen, verwenden Sie die Kategorie Q&amp;amp;A (Fragen &amp;amp; Antworten). Verwenden Sie für einen neuen Funktionsvorschlag oder andere Verbesserungen die Kategorie Ideas.</description>
+    </item>
+    
+    <item>
+      <title>Meine Reise nach Schottland</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/gallery/my-trip-to-scotland/</link>
+      <pubDate>Mon, 01 Nov 2021 18:01:26 +0100</pubDate>
+      
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/gallery/my-trip-to-scotland/</guid>
+      <description>Im Juni 2017 habe ich mit meinem besten Freund Schottland für 2 Wochen besucht und bereist. Wir fuhren viel durch das schöne Land und sahen eine Reihe verschiedener Tiere: Rinder, Hirsche, Vögel, Delfine und Schafe. Überall Schafe!
+Auf einem schönen, kleinen Campingplatz sahen wir am frühen Morgen Rinder im Nebel und machten ein Foto. Dieses Bild hat seither den Titel &amp;ldquo;Rindviecher im Nebel&amp;rdquo;.
+Wir fuhren mit dem Auto durch den Eurotunnel Calais-Folkstone nach Großbritannien und fuhren die Westküste nach Norden und besuchten die Isle of Skye - eine wunderschöne Insel, die man in seinem Leben auf jeden Fall gesehen haben sollte.</description>
+    </item>
+    
+    <item>
+      <title>Kilez More - Leben und Tod des Imperialismus</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/video/kilez-more-leben-und-tod-des-imperialismus/</link>
+      <pubDate>Mon, 01 Nov 2021 16:23:40 +0100</pubDate>
+      
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/video/kilez-more-leben-und-tod-des-imperialismus/</guid>
+      <description>&lt;p&gt;Kilez More ist ein großartiger österreichischer Musiker.
+Die meisten seiner Songs haben einen politischen Hintergrund und geniale Texte!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Kilez More - New World Order</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/audio/kilez-more-new-world-order/</link>
+      <pubDate>Mon, 01 Nov 2021 16:12:47 +0100</pubDate>
+      
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/audio/kilez-more-new-world-order/</guid>
+      <description>Mit dem audio Post Type kann sehr einfach ein Spotify, SoundCloud, TuneIn oder Mixcloud Player integriert werden.
+Falls kein Player integriert werden soll, kann optional ein Titelbild mit Hilfe der featuredImage Option in der Markdown Datei verwendet werden.</description>
+    </item>
+    
+    <item>
+      <title>Albert Einstein - Sinn Des Lebens</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/de/quote/einstein-sinn-des-lebens/</link>
+      <pubDate>Mon, 01 Nov 2021 14:40:32 +0100</pubDate>
+      
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/de/quote/einstein-sinn-des-lebens/</guid>
+      <description>Der Sinn des Lebens besteht nicht darin ein erfolgreicher Mensch zu sein, sondern ein wertvoller.</description>
+    </item>
+    
+  </channel>
+</rss>

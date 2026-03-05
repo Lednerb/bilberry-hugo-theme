@@ -1,0 +1,92 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Cool New Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/</link>
+    <description>Recent content on My Cool New Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 15 Dec 2021 10:45:44 +0200</lastBuildDate>
+    
+        <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/status/bilberry-theme-released/</link>
+      <pubDate>Wed, 15 Dec 2021 10:45:44 +0200</pubDate>
+      
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/status/bilberry-theme-released/</guid>
+      <description>I&amp;rsquo;m glad to announce the release of the Bilberry Hugo theme. This premium theme is published under an open-source license (MIT), and you can use it free of charge. It took me a significant amount of time to create and refine this theme. This theme is a collaborative effort of numerous volunteers.</description>
+    </item>
+    
+    <item>
+      <title>Support and Discussions</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/article/support-and-discussions/</link>
+      <pubDate>Mon, 01 Nov 2021 18:10:14 +0100</pubDate>
+      
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/article/support-and-discussions/</guid>
+      <description>Support for this theme is provided through the Issues and Discussions sections of the project. Please use the Issues section if you would like to report a defect or bug. For any other requests, use the Discussions section.
+Please use the following guidelines if you want to start a discussion:
+For any questions regarding a specific feature, or if you need help using or customizing the theme, use the Questions &amp;amp; Answers (Q&amp;amp;A) category.</description>
+    </item>
+    
+    <item>
+      <title>My Trip to Scotland</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/gallery/my-trip-to-scotland/</link>
+      <pubDate>Mon, 01 Nov 2021 18:01:26 +0100</pubDate>
+      
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/gallery/my-trip-to-scotland/</guid>
+      <description>In June 2017 I&amp;rsquo;ve visited Scotland with my best friend for two weeks. We drove a lot through the beautiful countryside and saw a lot of different animals: cattle, deer, birds, dolphins, and sheep. Sheep everywhere!
+At one beautiful camping site, we saw cattle in fog in the very early morning and took a picture of it. The image now has the title &amp;ldquo;Rindviecher im Nebel&amp;rdquo;, a quite funny German phrase that means cattle in the fog.</description>
+    </item>
+    
+    <item>
+      <title>Kilez More - Life And Death Of The Hegemony</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/video/kilez-more-leben-und-tod-des-imperialismus/</link>
+      <pubDate>Mon, 01 Nov 2021 16:23:40 +0100</pubDate>
+      
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/video/kilez-more-leben-und-tod-des-imperialismus/</guid>
+      <description>&lt;p&gt;Kilez More is a great Austrian musician.
+Most of his songs have a political background and have amazing lyrics!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Kilez More - New World Order</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/audio/kilez-more-new-world-order/</link>
+      <pubDate>Mon, 01 Nov 2021 16:12:47 +0100</pubDate>
+      
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/audio/kilez-more-new-world-order/</guid>
+      <description>With the audio post type you can easily integrate a Spotify, SoundCloud, TuneIn or Mixcloud player to your post.
+If you don&amp;rsquo;t want to embed sound but use a header image you can set it with the featuredImage option in your markdown file.</description>
+    </item>
+    
+    <item>
+      <title>Duckduckgo.com</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/link/duckduckgo/</link>
+      <pubDate>Mon, 01 Nov 2021 13:05:27 +0100</pubDate>
+      
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/link/duckduckgo/</guid>
+      <description>A search engine that respects your privacy.</description>
+    </item>
+    
+    <item>
+      <title>Edward Snowden About Privacy</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/quote/edward-snowden-privacy/</link>
+      <pubDate>Mon, 01 Nov 2021 13:01:14 +0100</pubDate>
+      
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/quote/edward-snowden-privacy/</guid>
+      <description>Arguing that you don&amp;rsquo;t care about the right to privacy because you have nothing to hide is no different than saying you don&amp;rsquo;t care about free speech because you have nothing to say.</description>
+    </item>
+    
+    <item>
+      <title>Installing Bilberry Theme</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/code/installing-bilberry-theme/</link>
+      <pubDate>Mon, 01 Nov 2021 09:31:27 +0100</pubDate>
+      
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/code/installing-bilberry-theme/</guid>
+      <description>&lt;p&gt;You will find all information to setup this theme with your hugo site
+on the official &lt;!-- raw HTML omitted --&gt; &lt;a href=&#34;https://github.com/Lednerb/bilberry-hugo-theme&#34;&gt;Github Repository&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
