@@ -36,4 +36,8 @@ block of `package.json` file.
 * To run the example site, execute the `npm run serve-example` command. The example site will be available
   at http://localhost:1313/.
 
+  This command first rewrites the example site's `module.imports.path` to the local `v4` directory and then
+  starts `hugo server`. Avoid running `hugo server` directly from `v4/exampleSite` while the config still points
+  to `github.com/Lednerb/bilberry-hugo-theme/v4`, because local theme edits will not be picked up in real time.
+
 * To stop all instances of the Hugo server running in your local dev, you may use the `npm run stop-hugo` command.
