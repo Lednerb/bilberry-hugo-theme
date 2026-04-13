@@ -5,7 +5,7 @@ menu: topnav
 weight: 20
 
 # set the link if you want to redirect the user.
-link: "https://github.com/Lednerb/bilberry-hugo-theme"
+link: "https://github.com/robertifpb"
 # set the html target parameter if you want to change default behavior
 target: "_blank"
 ---

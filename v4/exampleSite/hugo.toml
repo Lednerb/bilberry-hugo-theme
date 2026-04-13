@@ -1,4 +1,4 @@
-title = "My Cool New Blog"
+title = "Álex Dev Blog"
 baseURL = "https://example.com/"
 
 # Generate the robots.txt file for SEO
@@ -13,6 +13,10 @@ disqusShortname = ""
 [module]
   [[module.imports]]
     # Option 1 (recommended): adding the theme as a Hugo module
+    # NOTE: when developing this repository locally, do not run `hugo server`
+    # from `v4/exampleSite` with this remote path enabled, otherwise local
+    # theme edits will not be reflected in real time. Use `cd v4 && npm run
+    # serve-example`, which rewrites the path to the local `v4` folder first.
     path = "github.com/Lednerb/bilberry-hugo-theme/v4"
 
     # Options 2 and 3: cloning/copying the theme files
@@ -27,9 +31,9 @@ disqusShortname = ""
   js_modules = []
 
   # Description and metadata for the search engines
-  authorName = "Lednerb"
+  authorName = "Álex Robert"
   authorEmail = ""
-  description = "Bilberry Premium Theme for Hugo."
+  description = "Personal blog using Hugo's theme."
   keywords = "blog,personal,responsive,search,font awesome,pages,posts,multilingual,syntax highlighting,premium,shortcuts"
 
   # How many articles should be displayed at once?
@@ -80,13 +84,13 @@ disqusShortname = ""
 
   # Header configuration
     # your subtitle if you want to use any
-    subtitle = "Hello World! This is the most epic subtitle ever."
+    subtitle = "Hello World! Welcome to my space."
 
     # if you want to use libravatar or gravatar for the header image
-    avatarEmail = "code@lednerb.de"
+    avatarEmail = "alexrobert.dev@hotmail.com"
 
     # set an path to the image file you want to use | overwrites avatar by email
-    customImage = ""
+    customImage = "perfil_img.png"
 
     # define the icon you want to use for the overlay for the customImage or avatar.
     overlayIcon = "fa-home"
@@ -142,8 +146,8 @@ disqusShortname = ""
     # all icons https://fontawesome.com/icons?d=gallery&m=free
     # brand icons https://fontawesome.com/icons?d=gallery&s=brands&m=free
     socialMediaLinks = [
-      { link = "https://twitter.com/TheRealLednerb", icon = "fab fa-twitter", rel = "me" },
-      { link = "https://github.com/Lednerb", icon = "fab fa-github" },
+      { link = "https://www.linkedin.com/in/arobertdev/", icon = "fab fa-linkedin", rel = "me" },
+      { link = "https://github.com/robertifpb", icon = "fab fa-github" },
     ]
 
     # show an archive link in the footer
@@ -153,10 +157,10 @@ disqusShortname = ""
     archiveDateGrouping = "2006-01"
 
     # credits line configuration
-    copyrightBy = "by Lednerb"
+    copyrightBy = "by Álex"
     copyrightUseCurrentYear = true  # set to true to always display the current year in the copyright
-    copyrightYearOverride = "2017"
-    copyrightUrl = "https://github.com/Lednerb"
+    copyrightYearOverride = "2026"
+    copyrightUrl = "https://github.com/robertifpb"
     creditsText = "Bilberry Hugo Theme"
     creditsUrl = "https://github.com/Lednerb/bilberry-hugo-theme"
 
@@ -170,11 +174,12 @@ disqusShortname = ""
 [languages]
   [languages.en]
     weight = 1
-  [languages.de]
+
+  [languages.pt-br]
     weight = 2
-    title = "Mein Cooler Neuer Blog"
-    [languages.de.params]
-      subtitle = "Hallo Welt! Dies ist der epischste Untertitel aller Zeiten."
+    title = "Meu Blog Pessoal"
+    [languages.pt-br.params]
+      subtitle = "Olá mundo! Este é um subtítulo épico."
 
 [markup]
   defaultMarkdownHandler = 'goldmark'
