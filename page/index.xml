@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on My Cool New Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/page/</link>
+    <description>Recent content in Pages on My Cool New Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Nov 2021 13:18:45 +0100</lastBuildDate>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Bilberry</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/page/about-bilberry/</link>
+      <pubDate>Mon, 01 Nov 2021 13:18:45 +0100</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/page/about-bilberry/</guid>
+      <description>Bilberry is a premium theme for the Hugo Static Website Builder.&#xA;It is full of little nice features, such as:&#xA;built-in integration for the wonderful algolia search built-in integration for the powerful disqus comments gravatar and custom image integration for the header keyboard shortcut for the search (press the s key, type something and hit enter or esc) responsive design - optimized for desktop and mobile devices full internationalization (i18n) support (en, de, fr, ru, es out of the box!</description>
+    </item>
+    <item>
+      <title>Github</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/page/github/</link>
+      <pubDate>Mon, 01 Nov 2021 13:17:56 +0100</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/page/github/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

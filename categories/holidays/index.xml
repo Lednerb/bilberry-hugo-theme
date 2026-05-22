@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Holidays on My Cool New Blog</title>
+    <link>https://lednerb.github.io/bilberry-hugo-theme/categories/holidays/</link>
+    <description>Recent content in Holidays on My Cool New Blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Nov 2021 18:01:26 +0100</lastBuildDate>
+    <atom:link href="https://lednerb.github.io/bilberry-hugo-theme/categories/holidays/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Trip to Scotland</title>
+      <link>https://lednerb.github.io/bilberry-hugo-theme/gallery/my-trip-to-scotland/</link>
+      <pubDate>Mon, 01 Nov 2021 18:01:26 +0100</pubDate>
+      <guid>https://lednerb.github.io/bilberry-hugo-theme/gallery/my-trip-to-scotland/</guid>
+      <description>In June 2017 I&amp;rsquo;ve visited Scotland with my best friend for two weeks. We drove a lot through the beautiful countryside and saw a lot of different animals: cattle, deer, birds, dolphins, and sheep. Sheep everywhere!&#xA;At one beautiful camping site, we saw cattle in fog in the very early morning and took a picture of it. The image now has the title &amp;ldquo;Rindviecher im Nebel&amp;rdquo;, a quite funny German phrase that means cattle in the fog.</description>
+    </item>
+  </channel>
+</rss>
